@@ -1,0 +1,90 @@
+// footer styles
+
+.site-footer {
+  background: $gray;
+  color: $gray-medium;
+  @extend %container-width;
+  padding-bottom: 0;
+  overflow: hidden;
+
+  .widget {
+    background: $gray-dark;
+  }
+}
+.design-credit {
+  background: $gray-dark;
+  color: $gray-medium;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.08em;
+  padding: $baseline-height * 0.5;
+  margin-top: $baseline-height * 2;
+  position: relative;
+  left: -4%;
+  width: 108%;
+
+  a {
+    color: $gray-medium;
+    text-decoration: none;
+
+    &:link,
+    &:visited {
+      color: $gray-medium;
+    }
+    &:hover,
+    &:active {
+      color: $orange;
+    }
+  }
+}
+
+/* 600px */
+@media all and (min-width: 37.5em) {
+
+  .design-credit {
+    left: -9%;
+    width: 118%;
+  }
+}
+/* 700px */
+@media all and (min-width: 43.75em){
+
+  .site-footer {
+    padding: 1.5em 3.703% 0;
+
+    .widget {
+      float: left;
+      width: 42.493%;
+      margin: $baseline-height 3.703%;
+    }
+  }
+  .sidebar-subsidiary {
+
+    &:after {
+      @include clearfix;
+    }
+  }
+  .design-credit {
+    clear: both;
+  }
+}
+
+/* 800px */
+@media all and (min-width: 50em) {
+
+  .site-footer {
+    padding: $baseline-height 7.407% 0;
+  }
+}
+
+/* 900px */
+@media all and (min-width: 56.25em) {
+
+  .site-footer {
+    padding: $baseline-height 3.703% 0;
+  }
+  .design-credit {
+    left: -4%;
+    width: 108%;
+  }
+}

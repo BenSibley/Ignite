@@ -1,0 +1,144 @@
+// comments styling
+
+.comments {
+  background: white;
+  margin: -$baseline-height 0 $baseline-height * 2;
+  padding: 0 8% $baseline-height * 1.5;
+}
+.comments-number {
+  border-top: solid 2px $gray-light;
+  padding-top: $baseline-height - 0.125;
+}
+.comment-list {
+  list-style: none;
+  margin: $baseline-height 0;
+
+  ul {
+    list-style: none;
+    margin: $baseline-height 0 $baseline-height $baseline-height;
+
+    li:first-child:before {
+      content: "\2192";
+      position: absolute;
+      left: -$baseline-height;
+      top: 1em;
+    }
+  }
+}
+li.comment,
+li.pingback {
+  margin-bottom: $baseline-height * 2;
+  position: relative;
+}
+.comment-content {
+  margin-left: $baseline-height * 2.5;
+
+  p:first-child {
+    margin-top: 0;
+  }
+  p:last-child {
+    margin-bottom: $baseline-height - 0.063; /* b/c comment meta border */
+  }
+}
+.comment-author {
+
+  &:after {
+    @include clearfix;
+  }
+
+  img {
+    width: $baseline-height * 2;
+    height: auto;
+    @include border-radius(50%);
+    float: left;
+    margin-right: $baseline-height * 0.5;
+  }
+  .author-name {
+    font-weight: 700;
+
+    a {
+      color: $orange;
+      text-decoration: none;
+
+      &:link,
+      &:visited {
+        color: $orange;
+      }
+      &:hover,
+      &:active {
+        color: $orange-dark;
+      }
+    }
+  }
+}
+.comment-meta {
+  font-size: 0.813em;
+  line-height: 1.85;
+  display: inline-block;
+  border-top: solid 1px $gray-light;
+  margin-left: $baseline-height * 3.075;
+}
+.comment-date {
+  display: inline-block;
+}
+.comment-reply-link,
+.comment-edit-link {
+  text-decoration: none;
+
+  &:before {
+    content: ' | ';
+    color: $gray;
+  }
+}
+.bypostauthor {
+
+  .comment-author {
+
+    img {
+      border: solid 2px $orange;
+    }
+  }
+}
+.comment-respond {
+  margin-top: $baseline-height * 2;
+}
+
+/* 500px */
+@media all and (min-width: 31.25em) {
+
+  .comment-pagination {
+
+    p {
+      width: 50%;
+      display: inline-block;
+      vertical-align: top;
+    }
+    .next-comment {
+      text-align: right;
+    }
+  }
+}
+
+/* 800px */
+@media all and (min-width: 50em) {
+
+  .comments {
+    padding: 0 14.333% $baseline-height * 1.5;
+  }
+}
+
+/* 900px */
+@media all and (min-width: 56.25em) {
+
+  .comments {
+    padding: 0 13.333% $baseline-height * 1.5;
+  }
+}
+
+/* 1100px */
+@media all and (min-width: 68.75em) {
+
+  .comments {
+    padding: 0 12.5% $baseline-height * 1.5;
+  }
+}

@@ -1,0 +1,71 @@
+// post styles
+
+.entry {
+  @extend .excerpt;
+}
+.entry-meta-top {
+  @extend .excerpt-meta-top;
+}
+.entry-title {
+  @extend .excerpt-title;
+}
+.entry-content {
+  margin-top: $baseline-height;
+}
+.further-reading {
+  margin: $baseline-height * 2 0;
+
+  span {
+    border-bottom: solid 1px $orange;
+    font-weight: 700;
+    position: relative;
+  }
+  a {
+    color: $gray;
+    text-decoration: none;
+    display: block;
+
+    &:link,
+    &:visited {
+      color: $gray;
+    }
+    &:hover,
+    &:active {
+      color: $orange;
+    }
+  }
+}
+.entry-categories {
+  @extend .excerpt-categories;
+}
+.entry-tags {
+  @extend .excerpt-tags;
+}
+
+/* 700px */
+@media all and (min-width: 43.75em){
+
+  .further-reading {
+    margin-bottom: $baseline-height * 1.5;
+
+    p {
+      width: 50%;
+      display: inline-block;
+      vertical-align: top;
+      padding-right: 4%;
+    }
+    .next {
+      text-align: right;
+      padding: 0 0 0 4%;
+
+    }
+  }
+}
+
+/* 1100px */
+@media all and (min-width: 68.75em) {
+
+  .entry {
+    margin-bottom: $baseline-height;
+  }
+}

@@ -1,0 +1,249 @@
+/*
+Theme Name: Ignite
+Theme URI: http://competethemes.com/ignite
+Author: Ben Sibley
+Author URI: http://competethemes.com/
+Description: This is the core for compete themes
+Version: 1.00
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+/*===== Basic Styles =====*/
+
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+body {
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: $body-font-stack;
+  line-height: 1.5;
+  background: $background;
+  color: $gray;
+  -webkit-font-smoothing: antialiased;
+}
+
+.overflow-container {
+  overflow: hidden;
+}
+.main {
+  background: $background;
+  margin: 0 auto;
+  @include transition(all 0.3s ease);
+
+  /* for when the menu is toggled open */
+  &:after {
+    content: '';
+    position: absolute;
+    top: -12em; /* to guarantee covering up breadcrumb trail if present*/
+    left: 0;
+    width: 100%;
+    background: $gray;
+    opacity: 0;
+    @include transition(opacity 0.3s ease);
+  }
+}
+p {
+  margin: $baseline-height 0;
+}
+a {
+  color: $orange;
+  @include transition(color 0.2s ease);
+
+  &:link {
+    color: $orange;
+  }
+  &:visited,
+  &:hover,
+  &:active {
+    color: $orange-dark;
+  }
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: $body-font-stack;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 2.625em; /* 42px / 16px */
+  line-height: 1.143;
+}
+h2 {
+  font-size: 2.25em; /* 36px / 16px */
+  line-height: 1.34;
+}
+h3 {
+  font-size: 1.625em; /* 26px / 16px */
+  line-height: 1.85;
+}
+h4 {
+  font-size: 1.313em; /* 21px / 16px */
+  line-height: 1.143;
+}
+h5 {
+  font-size: 1.125em; /* 18px / 16px */
+  line-height: 1.34;
+}
+h6 {
+  font-size: 1em;
+}
+ul,
+ol {
+  font-size: 1em;
+  padding: 0;
+  margin: $baseline-height;
+
+  ul,ol {
+    margin: 0 $baseline-height;
+  }
+}
+ul ul,
+ol ol,
+ul ol,
+ol ul,
+li li {
+  font-size: 1em;
+}
+
+/* Markup styles */
+
+pre {
+  word-wrap: break-word;
+  background: $off-white;
+  padding: $baseline-height / 2;
+}
+code {
+  background: $off-white;
+  padding: 0 $baseline-height / 4;
+}
+blockquote {
+  margin: $baseline-height $baseline-height $baseline-height 0;
+  padding-left: $baseline-height;
+  border-left: solid 3px $orange;
+
+  cite {
+    display: block;
+    text-align: right;
+  }
+}
+hr {
+  margin: $baseline-height * 0.46 0;
+}
+/* Table styles */
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  margin: $baseline-height 0;
+}
+td {
+  padding: 0.5em 0.75em;
+  border: solid 1px black;
+}
+th {
+  padding: 0.5em 0.75em;
+  border: solid 1px black;
+}
+
+/* Images */
+
+.alignleft {
+  float: left;
+  margin: 0 $baseline-height $baseline-height 0;
+}
+.alignright {
+  float: right;
+  margin: 0 0 $baseline-height $baseline-height;
+}
+.aligncenter {
+  text-align: center;
+  margin: $baseline-height auto;
+}
+.alignnone {
+  margin: $baseline-height;
+}
+img,
+.alignright,
+.alignleft,
+.aligncenter,
+.alignnone,
+.size-auto,
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
+  max-width: 100%;
+  height: auto;
+}
+.wp-caption-text {
+  margin: 0 0 $baseline-height / 0.813;
+  font-size: 0.813em;
+  line-height: 1.85;
+  color: $gray-medium;
+}
+
+/* Form styles */
+
+input,
+textarea {
+  padding: 0.8em;
+  width: 100%;
+  max-width: $baseline-height * 10 * 1.85;
+  background: $background;
+  color: $gray-medium;
+  outline: solid 1px $gray-light;
+  border: none;
+  font-family: $body-font-stack;
+  font-size: 0.813em;
+  line-height: 1.85;
+  @include border-radius(0);
+  @include transition(background 0.2s ease);
+  -webkit-appearance: none;
+}
+textarea {
+  max-width: $baseline-height * 15 * 1.85;
+}
+input[type="submit"] {
+  color: white;
+  background: $orange;
+  outline: none;
+  max-width: $baseline-height * 5 * 1.85;
+}
+input[type="submit"]:hover {
+  cursor: pointer;
+  background: $orange-dark;
+}
+input[type="search"] {
+  margin-right: $baseline-height;
+  padding-right: $baseline-height / 4; /* so safari 'x' doesn't get cut off */
+}
+::-webkit-input-placeholder {
+  color: $gray-medium;
+}
+:-moz-placeholder /* Firefox 18- */ {
+  color: $gray-medium;
+}
+::-moz-placeholder /* Firefox 19+ */ {
+  color: $gray-medium;
+}
+:-ms-input-placeholder {
+  color: $gray-medium;
+}
+
+/* sticky */
+.excerpt.sticky {
+  outline: solid 3px $orange;
+}
+
+/* ie image border fix */
+
+a img {
+  border: none;
+}
+

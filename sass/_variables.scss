@@ -1,0 +1,123 @@
+
+/*===== Variables =====*/
+
+
+$body-font-stack: 'lusitana', serif;
+
+$baseline-height: 1.5em;
+
+/* Theme Colors */
+
+$orange: #e6a117;
+$orange-dark: #A87227;
+
+$gray: #373B41;
+$gray-dark: #303338;
+$gray-medium: #7C7D7F;
+$gray-light: #D9DCDF;
+
+$off-white: #E8EAEE;
+$background: #EEEDE8;
+
+/* Social Media Brand Colors */
+
+$twitter: #00aced;
+$facebook: #3b5998;
+$googleplus: #dd4b39;
+$pinterest: #cb2027;
+$linkedin: #007bb6;
+$youtube: #bb0000;
+$vimeo: #aad450;
+$tumblr: #32506d;
+$instagram: #517fa4;
+$flickr: #ff0084;
+$dribbble: #ea4c89;
+$quora: #a82400;
+$foursquare: #0072b1;
+$forrst: #5B9A68;
+$vk: #45668e;
+$wordpress: #21759b;
+$stumbleupon: #EB4823;
+$yahoo: #7B0099;
+$blogger: #fb8f3d;
+$soundcloud: #ff3a00;
+$rss: #fa9b39;
+
+/*===== Mixins =====*/
+
+@mixin clearfix {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin grayscale {
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+  -moz-backface-visibility: hidden;
+}
+
+@mixin remove-grayscale {
+  filter: none;
+  -webkit-filter: grayscale(0%);
+}
+@mixin transition($value) {
+  -webkit-transition: $value;
+  -moz-transition: $value;
+  -o-transition: $value;
+  transition: $value;
+}
+
+@mixin blur($value) {
+  filter: blur($value);
+  // Browser Specific
+  -webkit-filter: blur($value);
+  -moz-filter: blur($value);
+  -o-filter: blur($value);
+  -ms-filter: blur($value);
+}
+@mixin column-count($value) {
+  -webkit-column-count: $value;
+  -moz-column-count: $value;
+  column-count: $value;
+}
+@mixin column-gap($value) {
+  -webkit-column-gap: $value;
+  -moz-column-gap: $value;
+  column-gap: $value;
+}
+@mixin column-break-inside($value) {
+  -webkit-column-break-inside: $value;
+  -moz-column-break-inside: $value;
+  -ms-column-break-inside: $value;
+  column-break-inside: $value;
+}
+@mixin sticky {
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
+  position: sticky;
+}
+@mixin background-clip($value) {
+  -moz-background-clip: $value;     /* Firefox 3.6 */
+  -webkit-background-clip: $value;  /* Safari 4? Chrome 6? */
+  background-clip: $value;      /* Firefox 4, Safari 5, Opera 10, IE 9 */
+}
+@mixin backface-visibility($value) {
+  -webkit-backface-visibility: $value;
+  -moz-backface-visibility: $value;
+  -ms-backface-visibility: $value;
+  -o-backface-visibility: $value;
+  backface-visibility: $value;
+}

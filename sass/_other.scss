@@ -1,0 +1,174 @@
+// plain page
+
+.page.not-front {
+
+  /* because of breadcrumbs */
+  .entry {
+    padding-top:  $baseline-height;
+  }
+}
+
+/* 700px */
+@media all and (min-width: 43.75em) {
+
+  .page.not-front {
+
+    .entry-title {
+      font-size: 2.625em;
+      line-height: 1.14;
+    }
+  }
+}
+
+/* 800px */
+@media all and (min-width: 50em) {
+
+  .page.not-front {
+
+    .entry {
+      padding-top: $baseline-height * 2;
+    }
+  }
+}
+
+// breadcrumbs
+
+.breadcrumbs {
+  text-transform: uppercase;
+  color: $gray-medium;
+  letter-spacing: 0.08em;
+  padding: $baseline-height * 2 3.703% 0;
+  background: $background;
+  @include transition(all 0.3s ease);
+
+  a {
+    text-decoration: none;
+    color: $orange;
+
+    &:link,
+    &:visited {
+      color: $orange;
+    }
+    &:hover,
+    &:active {
+      color: $orange-dark;
+    }
+  }
+  span {
+    opacity: 0.7;
+  }
+
+  + div {
+
+    .excerpt {
+      margin-top: 0;
+    }
+  }
+}
+.not-front .main {
+
+}
+
+/* 600px  breadcrumbs */
+@media all and (min-width: 37.5em){
+
+  .breadcrumbs {
+    padding: $baseline-height * 2 7.407% 0;
+  }
+}
+
+/* 800px  breadcrumbs */
+@media all and (min-width: 50em){
+
+  .breadcrumbs {
+    padding: $baseline-height * 2 11.11% 0;
+  }
+}
+
+/* 900px  breadcrumbs */
+@media all and (min-width: 56.25em){
+
+  .breadcrumbs {
+    padding: $baseline-height * 2 7.407% 0;
+
+    /* remove margin top on sidebar (and main which didn't have any anyway)*/
+    ~ div {
+      margin-top: 0;
+    }
+  }
+}
+
+// 404 & search results
+
+.error404,
+.search-results {
+
+  .entry {
+    margin-bottom: 0;
+  }
+  .entry-header {
+    padding-top: $baseline-height;
+  }
+}
+.search-form {
+  margin-top: $baseline-height;
+
+  input[type="submit"] {
+    max-width: $baseline-height * 10 * 1.85;
+    margin-top: $baseline-height;
+  }
+}
+.search-results {
+
+  .container {
+    background: white;
+    margin-top: $baseline-height;
+  }
+  .search-end {
+    padding: $baseline-height 8% $baseline-height * 1.5;
+  }
+  .search-end.bottom {
+    padding-top: 0;
+  }
+}
+
+/* 500px */
+@media all and (min-width: 31.25em) {
+
+  .search-form {
+    input[type="submit"] {
+      max-width: $baseline-height * 5 * 1.85;
+    }
+  }
+}
+
+/* 800px */
+@media all and (min-width: 50em) {
+
+  .error404 {
+
+    .entry-header {
+      padding-top: $baseline-height * 1.5;
+    }
+  }
+  .search-results {
+
+    .container {
+      padding: $baseline-height 0;
+    }
+    .search-end {
+      padding: $baseline-height 14.333% $baseline-height * 1.5;
+    }
+  }
+}
+
+/* 1100px */
+@media all and (min-width: 68.75em){
+
+  .search-results {
+
+    .search-end {
+      padding: $baseline-height 12.5% $baseline-height * 1.5;
+    }
+  }
+}
