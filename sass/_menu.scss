@@ -39,6 +39,8 @@
   line-height: 1.35;
   position: absolute;
   z-index: 1;
+  background: none;
+  border: none;
   @include transition(color 0.2s ease);
 
   &:hover {
@@ -66,7 +68,8 @@
     padding: $baseline-height 0;
   }
 }
-.menu-primary-items {
+.menu-primary-items,
+.menu-unset {
   list-style: none;
 
   li {
@@ -108,7 +111,8 @@
   ul {
     list-style: none;
   }
-  .current-menu-item > a {
+  .current-menu-item > a,
+  .current_page_item > a {
     color: $orange;
   }
 }
@@ -199,7 +203,8 @@
       display: none;
     }
   }
-  .menu-primary-items {
+  .menu-primary-items,
+  .menu-unset {
     margin: 0;
     line-height: 0;
 
@@ -218,7 +223,8 @@
         @include backface-visibility(hidden); /* remove slight wiggle caused by opacity change */
         @include transition(opacity 0.2s ease);
 
-        &:hover {
+        &:hover,
+        &:focus {
 
           ul {
             top: 0;
@@ -227,7 +233,8 @@
         }
       }
       &:hover,
-      &:active {
+      &:active,
+      &:focus {
 
         > a {
           color: white;
@@ -245,7 +252,8 @@
               white-space: nowrap;
             }
             &:hover,
-            &:active {
+            &:active,
+            &:focus {
 
               > a {
                 color: white;
@@ -261,7 +269,8 @@
         line-height: 5.231em; /* 68px */
         letter-spacing: 0.1em;
 
-        &:hover {
+        &:hover,
+        &:focus {
           color: white;
         }
       }
@@ -276,10 +285,13 @@
   .social-media-icons {
     display: none;
   }
-  #menu-primary-items {
+  #menu-primary-items,
+  .menu-unset {
 
     /* using id to avoid annoying selector competition */
     .current-menu-item,
+    .current_page_ancestor,
+    .current_page_item,
     .current_page_ancestor {
       background: $orange;
 
@@ -287,6 +299,35 @@
         color: white;
       }
     }
+  }
+  /* because .menu-primary-items is a 'ul' this needs to be declared separately */
+  .menu-unset {
+
+    ul {
+    margin: 0;
+
+      &:after {
+        @include clearfix;
+      }
+    }
+  }
+  /* show drop down items when accessed with keyboard too */
+  ul.focused {
+    left: 0;
+    top: $baseline-height * 2.833 !important;
+    opacity: 1 !important;
+
+    > li {
+
+      > a {
+        margin-top: 0 !important;
+        color: $gray;
+        white-space: nowrap;
+      }
+    }
+  }
+  li.focused {
+    background: $orange;
   }
 }
 
@@ -321,9 +362,11 @@
 /* 1200px */
 @media all and (min-width: 75em) {
 
-  .menu {
+  .menu-primary-items,
+  .menu-unset {
     float: left; /* for the social media buttons */
   }
+
   // add social media buttons again
   .social-media-icons {
     display: inline-block;

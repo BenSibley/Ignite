@@ -4,18 +4,17 @@
 function ct_load_javascript_files() {
 
     wp_register_style( 'google-fonts', '//fonts.googleapis.com/css?family=Lusitana:400,700');
-    wp_register_style( 'font-awesome', '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css');
 
     // enqueues media query support polyfill for ie8 
     if(! is_admin() ) {
-        wp_enqueue_script('functions', get_template_directory_uri() . '/js/functions.min.js', array('jquery'),'', true);
+        wp_enqueue_script('functions', get_template_directory_uri() . '/js/functions.js', array('jquery'),'', true);
         wp_enqueue_script('fitvids', get_template_directory_uri() . '/js/fitvids.min.js', array('jquery'),'', true);
         wp_enqueue_script('placeholders', get_template_directory_uri() . '/js/placeholders.min.js', array('jquery'),'', true);
         wp_enqueue_script('media-query-polyfill', get_template_directory_uri() . '/js/respond.min.js', array('jquery'),'', true);
         wp_enqueue_script('tappy', get_template_directory_uri() . '/js/tappy.min.js', array('jquery'),'', true);
 
         wp_enqueue_style('google-fonts');
-        wp_enqueue_style('font-awesome');
+        wp_enqueue_style('font-awesome', get_template_directory_uri() . '/assets/font-awesome/css/font-awesome.min.css');
     }
     // enqueues the comment-reply script on posts & pages.  This script is included in WP by default
     if( is_singular() && comments_open() && get_option('thread_comments') ) wp_enqueue_script( 'comment-reply' ); 
@@ -44,7 +43,7 @@ function ct_theme_setup() {
     
 	/* Theme-supported features go here. */
     add_theme_support( 'hybrid-core-menus', array( 'primary' ));
-    add_theme_support( 'hybrid-core-sidebars', array( 'subsidiary', 'primary' ) );
+    add_theme_support( 'hybrid-core-sidebars', array( 'primary' ) );
     add_theme_support( 'hybrid-core-widgets' );
     add_theme_support( 'hybrid-core-template-hierarchy' );
     add_theme_support( 'hybrid-core-styles', array( 'style','reset', 'gallery' ) );
@@ -74,7 +73,7 @@ function ct_social_media_icons() {
     }
     
     // for each active social site, add it as a list item 
-    if($active_sites) {
+    if(!empty($active_sites)) {
         echo "<ul class='social-media-icons'>";
 		foreach ($active_sites as $active_site) {?>
 			<li>
@@ -182,11 +181,11 @@ function ct_customize_comments( $comment, $args, $depth ) {
                 <span class="author-name"><?php comment_author_link(); ?></span>
                 <span> said:</span>
             </div>
-            <?php if ($comment->comment_approved == '0') : ?>
-                <em><?php _e('Your comment is awaiting moderation.', 'ignite') ?></em>
-                <br />
-            <?php endif; ?>
             <div class="comment-content">
+                <?php if ($comment->comment_approved == '0') : ?>
+                    <em><?php _e('Your comment is awaiting moderation.', 'ignite') ?></em>
+                    <br />
+                <?php endif; ?>
                 <?php comment_text(); ?>
             </div>
             <div class="comment-meta">
@@ -209,18 +208,21 @@ function ct_update_fields($fields) {
 
 	$fields['author'] = 
 		'<p class="comment-form-author">
-			<input required placeholder="Your Name*" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
+		    <label class="screen-reader-text">Your Name</label>
+			<input required placeholder="Your Name*" id="author" name="author" type="text" aria-required="true" value="' . esc_attr( $commenter['comment_author'] ) .
     '" size="30"' . $aria_req . ' />
     	</p>';
     
     $fields['email'] = 
     	'<p class="comment-form-email">
-    		<input required placeholder="Your Email*" id="email" name="email" type="email" value="' . esc_attr(  $commenter['comment_author_email'] ) .
+    	    <label class="screen-reader-text">Your Email</label>
+    		<input required placeholder="Your Email*" id="email" name="email" type="email" aria-required="true" value="' . esc_attr(  $commenter['comment_author_email'] ) .
     '" size="30"' . $aria_req . ' />
     	</p>';
 	
 	$fields['url'] = 
 		'<p class="comment-form-url">
+		    <label class="screen-reader-text">Your Website URL</label>
 			<input placeholder="Your URL" id="url" name="url" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) .
     '" size="30" />
     	</p>';
@@ -233,6 +235,7 @@ function ct_update_comment_field($comment_field) {
 	
 	$comment_field = 
 		'<p class="comment-form-comment">
+            <label class="screen-reader-text">Your Comment</label>
 			<textarea required placeholder="Enter Your Comment&#8230;" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>
 		</p>';
 	
@@ -251,7 +254,7 @@ function ct_excerpt() {
 	*  works for both manual excerpts and read more tags
 	*/
     if($ismore) {
-        the_content("Read More");
+        the_content("Read More <span class='screen-reader-text'>" . get_the_title() . "</span>");
     }
     // otherwise the excerpt is automatic, so output it
     else {
@@ -262,7 +265,7 @@ function ct_excerpt() {
 // for custom & automatic excerpts
 function ct_excerpt_read_more_link($output) {
 	global $post;
-	return $output . "<p><a class='more-link' href='". get_permalink() ."'>Read More</a></p>";
+	return $output . "<p><a class='more-link' href='". get_permalink() ."'>Read More <span class='screen-reader-text'>" . get_the_title() . "</span></a></p>";
 }
 
 add_filter('the_excerpt', 'ct_excerpt_read_more_link');
@@ -292,24 +295,6 @@ function ct_post_navigation() { ?>
     <div class="loop-pagination-container">
         <?php if ( current_theme_supports( 'loop-pagination' ) ) loop_pagination(); ?>
     </div><?php
-}
-
-// displays the social icons in the .entry-author div
-function ct_author_social_icons() {
-
-	$social_sites = ct_create_social_array();
-    
-    foreach($social_sites as $key => $social_site) {
-    	if(get_the_author_meta( $social_site, $user->ID )) {
-    		if($key == 'googleplus') {
-				echo "<a href='".esc_attr(get_the_author_meta( $social_site, $user->ID ))."'><i class=\"fa fa-google-plus\"></i></a>";   
-			} elseif($key == 'vimeo') {
-				echo "<a href='".esc_attr(get_the_author_meta( $social_site, $user->ID ))."'><i class=\"fa fa-vimeo-square\"></i></a>";   
-			} else {
-	    		echo "<a href='".esc_attr(get_the_author_meta( $social_site, $user->ID ))."'><i class=\"fa fa-$key\"></i></a>";   
-	    	}
-    	}
-    }
 }
 
 // adds the url from the image credit box to the post and makes it clickable
@@ -364,6 +349,7 @@ function ct_category_count_add_span($links) {
     return $links;
 }
 
+// adds title to homepage
 add_filter( 'wp_title', 'ct_add_homepage_title' );
 function ct_add_homepage_title( $title )
 {
@@ -372,5 +358,11 @@ function ct_add_homepage_title( $title )
     }
     return $title;
 }
+
+// calls pages for menu if menu not set
+function ct_wp_page_menu() {
+    wp_page_menu(array("menu_class" => "menu-unset"));
+}
+
 
 ?>

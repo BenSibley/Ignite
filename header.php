@@ -13,7 +13,7 @@
     <!--[if (gt IE 9)|!(IE)]><!--> <html> <!--<![endif]-->
     
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
-    <title><?php wp_title(""); ?></title>
+    <title><?php wp_title("",true); ?></title>
 
     <!-- set width to the device viewing the site -->
     <meta name="viewport" content="width=device-width" />
@@ -30,7 +30,11 @@ if (is_front_page() ) {
     ?><body id="<?php print get_stylesheet(); ?>" <?php body_class(array('ct-body', 'not-front')); ?>><?php
 }
 ?>
-<header class="site-header" id="site-header">
+
+<!--skip to content link-->
+<a class="skip-content" href="#main">Skip to content</a>
+
+<header class="site-header" id="site-header" role="banner">
 
 	<div class="title-info">
 		<?php get_template_part('logo')  ?>
@@ -50,4 +54,4 @@ if (is_front_page() ) {
         );
     }
     ?>
-    <div id="main" class="main">
+    <div id="main" class="main" role="main">

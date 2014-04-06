@@ -2,7 +2,7 @@
 
 <div class="container">
 
-    <div class="entry-header search-end">
+    <div class="entry-header search-end top">
         <h1 class='entry-title'>Search Results for "<?php echo $s ?>"</h1>
         <?php get_search_form(); ?>
     </div>

@@ -6,22 +6,7 @@
   @extend %container-width;
   padding-bottom: 0;
   overflow: hidden;
-
-  .widget {
-    background: $gray-dark;
-  }
-}
-.design-credit {
-  background: $gray-dark;
-  color: $gray-medium;
-  text-transform: uppercase;
   text-align: center;
-  letter-spacing: 0.08em;
-  padding: $baseline-height * 0.5;
-  margin-top: $baseline-height * 2;
-  position: relative;
-  left: -4%;
-  width: 108%;
 
   a {
     color: $gray-medium;
@@ -37,6 +22,18 @@
     }
   }
 }
+.design-credit {
+  background: $gray-dark;
+  color: $gray-medium;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.08em;
+  padding: $baseline-height * 0.5;
+  margin-top: $baseline-height * 2;
+  position: relative;
+  left: -4%;
+  width: 108%;
+}
 
 /* 600px */
 @media all and (min-width: 37.5em) {
@@ -51,12 +48,6 @@
 
   .site-footer {
     padding: 1.5em 3.703% 0;
-
-    .widget {
-      float: left;
-      width: 42.493%;
-      margin: $baseline-height 3.703%;
-    }
   }
   .sidebar-subsidiary {
 

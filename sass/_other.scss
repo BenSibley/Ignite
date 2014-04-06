@@ -1,3 +1,35 @@
+/* screen reader styling */
+
+// hiding screen reader text
+.screen-reader-text {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+}
+
+/* skip content link */
+
+.skip-content {
+  position: absolute;
+  top: -$baseline-height * 3;
+  width: 100%;
+  left: 0;
+  display: block;
+  text-align: center;
+  color: white !important;
+  z-index: 99;
+  padding: $baseline-height;
+  background: $gray;
+  @include transition(top 0.2s ease);
+
+  &:focus {
+    top: 0;
+  }
+}
+
 // plain page
 
 .page.not-front {
@@ -101,7 +133,7 @@
 // 404 & search results
 
 .error404,
-.search-results {
+.search {
 
   .entry {
     margin-bottom: 0;
@@ -118,7 +150,7 @@
     margin-top: $baseline-height;
   }
 }
-.search-results {
+.search {
 
   .container {
     background: white;
@@ -129,6 +161,12 @@
   }
   .search-end.bottom {
     padding-top: 0;
+  }
+}
+.search-no-results {
+
+  .search-end.top .search-form-container {
+    display: none;
   }
 }
 
@@ -151,7 +189,7 @@
       padding-top: $baseline-height * 1.5;
     }
   }
-  .search-results {
+  .search {
 
     .container {
       padding: $baseline-height 0;
@@ -165,7 +203,7 @@
 /* 1100px */
 @media all and (min-width: 68.75em){
 
-  .search-results {
+  .search {
 
     .search-end {
       padding: $baseline-height 12.5% $baseline-height * 1.5;
