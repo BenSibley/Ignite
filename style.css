@@ -4,10 +4,13 @@ Theme URI: http://competethemes.com/ignite
 Author: Compete Themes
 Author URI: http://competethemes.com/
 Description: Ignite is a responsive blog theme.
-Version: 1.01
+Version: 1.02
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: orange, white, light, two-columns, right-sidebar, responsive-layout, custom-menu, featured-images, sticky-post, theme-options, threaded-comments
+
+Ignite WordPress Theme, Copyright 2014 Compete Themes
+Ignite is distributed under the terms of the GNU GPL
 */
 /*===== Variables =====*/
 /* Theme Colors */
@@ -32,14 +35,19 @@ body {
   background: #eeede8;
   color: #373b41;
   -webkit-font-smoothing: antialiased;
+  word-wrap: break-word;
+  -ms-word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
 }
 
-/* line 19, sass/_base.scss */
+/* line 24, sass/_base.scss */
 .overflow-container {
   overflow: hidden;
 }
 
-/* line 22, sass/_base.scss */
+/* line 27, sass/_base.scss */
 .main {
   background: #eeede8;
   margin: 0 auto;
@@ -49,7 +57,7 @@ body {
   transition: all 0.3s ease;
   /* for when the menu is toggled open */
 }
-/* line 28, sass/_base.scss */
+/* line 33, sass/_base.scss */
 .main:after {
   content: '';
   position: absolute;
@@ -65,12 +73,12 @@ body {
   transition: opacity 0.3s ease;
 }
 
-/* line 39, sass/_base.scss */
+/* line 44, sass/_base.scss */
 p {
   margin: 1.5em 0;
 }
 
-/* line 42, sass/_base.scss */
+/* line 47, sass/_base.scss */
 a {
   color: #e6a117;
   -webkit-transition: color 0.2s ease;
@@ -78,16 +86,16 @@ a {
   -o-transition: color 0.2s ease;
   transition: color 0.2s ease;
 }
-/* line 46, sass/_base.scss */
+/* line 51, sass/_base.scss */
 a:link {
   color: #e6a117;
 }
-/* line 51, sass/_base.scss */
+/* line 56, sass/_base.scss */
 a:visited, a:hover, a:active {
   color: #a87227;
 }
 
-/* line 56, sass/_base.scss */
+/* line 61, sass/_base.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "lusitana", serif;
   margin: 0;
@@ -95,61 +103,61 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
 }
 
-/* line 63, sass/_base.scss */
+/* line 68, sass/_base.scss */
 h1 {
   font-size: 2.625em;
   /* 42px / 16px */
   line-height: 1.143;
 }
 
-/* line 67, sass/_base.scss */
+/* line 72, sass/_base.scss */
 h2 {
   font-size: 2.25em;
   /* 36px / 16px */
   line-height: 1.34;
 }
 
-/* line 71, sass/_base.scss */
+/* line 76, sass/_base.scss */
 h3 {
   font-size: 1.625em;
   /* 26px / 16px */
   line-height: 1.85;
 }
 
-/* line 75, sass/_base.scss */
+/* line 80, sass/_base.scss */
 h4 {
   font-size: 1.313em;
   /* 21px / 16px */
   line-height: 1.143;
 }
 
-/* line 79, sass/_base.scss */
+/* line 84, sass/_base.scss */
 h5 {
   font-size: 1.125em;
   /* 18px / 16px */
   line-height: 1.34;
 }
 
-/* line 83, sass/_base.scss */
+/* line 88, sass/_base.scss */
 h6 {
   font-size: 1em;
 }
 
-/* line 87, sass/_base.scss */
+/* line 92, sass/_base.scss */
 ul,
 ol {
   font-size: 1em;
   padding: 0;
   margin: 1.5em;
 }
-/* line 92, sass/_base.scss */
+/* line 97, sass/_base.scss */
 ul ul, ul ol,
 ol ul,
 ol ol {
   margin: 0 1.5em;
 }
 
-/* line 100, sass/_base.scss */
+/* line 105, sass/_base.scss */
 ul ul,
 ol ol,
 ul ol,
@@ -159,81 +167,81 @@ li li {
 }
 
 /* Markup styles */
-/* line 106, sass/_base.scss */
+/* line 111, sass/_base.scss */
 pre {
   word-wrap: break-word;
   background: #e8eaee;
   padding: 0.75em;
 }
 
-/* line 111, sass/_base.scss */
+/* line 116, sass/_base.scss */
 code {
   background: #e8eaee;
   padding: 0 0.375em;
 }
 
-/* line 115, sass/_base.scss */
+/* line 120, sass/_base.scss */
 blockquote {
   margin: 1.5em 1.5em 1.5em 0;
   padding-left: 1.5em;
   border-left: solid 3px #e6a117;
 }
-/* line 120, sass/_base.scss */
+/* line 125, sass/_base.scss */
 blockquote cite {
   display: block;
   text-align: right;
 }
 
-/* line 125, sass/_base.scss */
+/* line 130, sass/_base.scss */
 hr {
   margin: 0.69em 0;
 }
 
 /* Table styles */
-/* line 129, sass/_base.scss */
+/* line 134, sass/_base.scss */
 table {
   border-spacing: 0;
   border-collapse: collapse;
   margin: 1.5em 0;
 }
 
-/* line 134, sass/_base.scss */
+/* line 139, sass/_base.scss */
 td {
   padding: 0.5em 0.75em;
   border: solid 1px black;
 }
 
-/* line 138, sass/_base.scss */
+/* line 143, sass/_base.scss */
 th {
   padding: 0.5em 0.75em;
   border: solid 1px black;
 }
 
 /* Images */
-/* line 145, sass/_base.scss */
+/* line 150, sass/_base.scss */
 .alignleft {
   float: left;
   margin: 0 1.5em 1.5em 0;
 }
 
-/* line 149, sass/_base.scss */
+/* line 154, sass/_base.scss */
 .alignright {
   float: right;
   margin: 0 0 1.5em 1.5em;
 }
 
-/* line 153, sass/_base.scss */
+/* line 158, sass/_base.scss */
 .aligncenter {
   text-align: center;
   margin: 1.5em auto;
 }
 
-/* line 157, sass/_base.scss */
+/* line 162, sass/_base.scss */
 .alignnone {
   margin: 1.5em;
 }
 
-/* line 169, sass/_base.scss */
+/* line 174, sass/_base.scss */
 img,
 .alignright,
 .alignleft,
@@ -248,7 +256,7 @@ img,
   height: auto;
 }
 
-/* line 173, sass/_base.scss */
+/* line 178, sass/_base.scss */
 .wp-caption-text {
   margin: 0 0 1.84502em;
   font-size: 0.813em;
@@ -257,7 +265,7 @@ img,
 }
 
 /* Form styles */
-/* line 183, sass/_base.scss */
+/* line 188, sass/_base.scss */
 input,
 textarea {
   padding: 0.8em;
@@ -280,12 +288,12 @@ textarea {
   -webkit-appearance: none;
 }
 
-/* line 198, sass/_base.scss */
+/* line 203, sass/_base.scss */
 textarea {
   max-width: 41.625em;
 }
 
-/* line 201, sass/_base.scss */
+/* line 206, sass/_base.scss */
 input[type="submit"] {
   color: white;
   background: #e6a117;
@@ -293,47 +301,47 @@ input[type="submit"] {
   max-width: 13.875em;
 }
 
-/* line 207, sass/_base.scss */
+/* line 212, sass/_base.scss */
 input[type="submit"]:hover {
   cursor: pointer;
   background: #a87227;
 }
 
-/* line 211, sass/_base.scss */
+/* line 216, sass/_base.scss */
 input[type="search"] {
   margin-right: 1.5em;
   padding-right: 0.375em;
   /* so safari 'x' doesn't get cut off */
 }
 
-/* line 215, sass/_base.scss */
+/* line 220, sass/_base.scss */
 ::-webkit-input-placeholder {
   color: #7c7d7f;
 }
 
-/* line 218, sass/_base.scss */
+/* line 223, sass/_base.scss */
 :-moz-placeholder {
   color: #7c7d7f;
 }
 
-/* line 221, sass/_base.scss */
+/* line 226, sass/_base.scss */
 ::-moz-placeholder {
   color: #7c7d7f;
 }
 
-/* line 224, sass/_base.scss */
+/* line 229, sass/_base.scss */
 :-ms-input-placeholder {
   color: #7c7d7f;
 }
 
 /* sticky */
-/* line 229, sass/_base.scss */
+/* line 234, sass/_base.scss */
 .excerpt.sticky, .sticky.entry {
   outline: solid 3px #e6a117;
 }
 
 /* ie image border fix */
-/* line 235, sass/_base.scss */
+/* line 240, sass/_base.scss */
 a img {
   border: none;
 }
@@ -1287,46 +1295,55 @@ a img {
 .entry-content {
   margin-top: 1.5em;
 }
-
 /* line 15, sass/_post.scss */
+.entry-content:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+/* line 19, sass/_post.scss */
 .further-reading {
   margin: 3em 0;
 }
-/* line 18, sass/_post.scss */
+/* line 22, sass/_post.scss */
 .further-reading span {
   border-bottom: solid 1px #e6a117;
   font-weight: 700;
   position: relative;
 }
-/* line 23, sass/_post.scss */
+/* line 27, sass/_post.scss */
 .further-reading a {
   color: #373b41;
   text-decoration: none;
   display: block;
 }
-/* line 29, sass/_post.scss */
+/* line 33, sass/_post.scss */
 .further-reading a:link, .further-reading a:visited {
   color: #373b41;
 }
-/* line 33, sass/_post.scss */
+/* line 37, sass/_post.scss */
 .further-reading a:hover, .further-reading a:active {
   color: #e6a117;
 }
 
 /* 700px */
 @media all and (min-width: 43.75em) {
-  /* line 48, sass/_post.scss */
+  /* line 52, sass/_post.scss */
   .further-reading {
     margin-bottom: 2.25em;
   }
-  /* line 51, sass/_post.scss */
+  /* line 55, sass/_post.scss */
   .further-reading p {
     width: 50%;
     display: inline-block;
     vertical-align: top;
     padding-right: 4%;
   }
-  /* line 57, sass/_post.scss */
+  /* line 61, sass/_post.scss */
   .further-reading .next {
     text-align: right;
     padding: 0 0 0 4%;
@@ -1334,7 +1351,7 @@ a img {
 }
 /* 1100px */
 @media all and (min-width: 68.75em) {
-  /* line 68, sass/_post.scss */
+  /* line 72, sass/_post.scss */
   .entry {
     margin-bottom: 1.5em;
   }
@@ -1620,18 +1637,18 @@ li.pingback {
 }
 
 /* line 35, sass/_other.scss */
-.page.not-front {
+.page {
   /* because of breadcrumbs */
 }
 /* line 38, sass/_other.scss */
-.page.not-front .entry {
+.page .entry {
   padding-top: 1.5em;
 }
 
 /* 700px */
 @media all and (min-width: 43.75em) {
   /* line 48, sass/_other.scss */
-  .page.not-front .entry-title {
+  .page .entry-title {
     font-size: 2.625em;
     line-height: 1.14;
   }
@@ -1639,7 +1656,7 @@ li.pingback {
 /* 800px */
 @media all and (min-width: 50em) {
   /* line 60, sass/_other.scss */
-  .page.not-front .entry {
+  .page .entry {
     padding-top: 3em;
   }
 }
@@ -1679,96 +1696,96 @@ li.pingback {
 
 /* 600px  breadcrumbs */
 @media all and (min-width: 37.5em) {
-  /* line 107, sass/_other.scss */
+  /* line 104, sass/_other.scss */
   .breadcrumbs {
     padding: 3em 7.407% 0;
   }
 }
 /* 800px  breadcrumbs */
 @media all and (min-width: 50em) {
-  /* line 115, sass/_other.scss */
+  /* line 112, sass/_other.scss */
   .breadcrumbs {
     padding: 3em 11.11% 0;
   }
 }
 /* 900px  breadcrumbs */
 @media all and (min-width: 56.25em) {
-  /* line 123, sass/_other.scss */
+  /* line 120, sass/_other.scss */
   .breadcrumbs {
     padding: 3em 7.407% 0;
     /* remove margin top on sidebar (and main which didn't have any anyway)*/
   }
-  /* line 127, sass/_other.scss */
+  /* line 124, sass/_other.scss */
   .breadcrumbs ~ div {
     margin-top: 0;
   }
 }
-/* line 138, sass/_other.scss */
+/* line 135, sass/_other.scss */
 .error404 .entry,
 .search .entry {
   margin-bottom: 0;
 }
-/* line 141, sass/_other.scss */
+/* line 138, sass/_other.scss */
 .error404 .entry-header,
 .search .entry-header {
   padding-top: 1.5em;
 }
 
-/* line 145, sass/_other.scss */
+/* line 142, sass/_other.scss */
 .search-form {
   margin-top: 1.5em;
 }
-/* line 148, sass/_other.scss */
+/* line 145, sass/_other.scss */
 .search-form input[type="submit"] {
   max-width: 27.75em;
   margin-top: 1.5em;
 }
 
-/* line 155, sass/_other.scss */
+/* line 152, sass/_other.scss */
 .search .container {
   background: white;
   margin-top: 1.5em;
 }
-/* line 159, sass/_other.scss */
+/* line 156, sass/_other.scss */
 .search .search-end {
   padding: 1.5em 8% 2.25em;
 }
-/* line 162, sass/_other.scss */
+/* line 159, sass/_other.scss */
 .search .search-end.bottom {
   padding-top: 0;
 }
 
-/* line 168, sass/_other.scss */
+/* line 165, sass/_other.scss */
 .search-no-results .search-end.top .search-form-container {
   display: none;
 }
 
 /* 500px */
 @media all and (min-width: 31.25em) {
-  /* line 177, sass/_other.scss */
+  /* line 174, sass/_other.scss */
   .search-form input[type="submit"] {
     max-width: 13.875em;
   }
 }
 /* 800px */
 @media all and (min-width: 50em) {
-  /* line 188, sass/_other.scss */
+  /* line 185, sass/_other.scss */
   .error404 .entry-header {
     padding-top: 2.25em;
   }
 
-  /* line 194, sass/_other.scss */
+  /* line 191, sass/_other.scss */
   .search .container {
     padding: 1.5em 0;
   }
-  /* line 197, sass/_other.scss */
+  /* line 194, sass/_other.scss */
   .search .search-end {
     padding: 1.5em 14.333% 2.25em;
   }
 }
 /* 1100px */
 @media all and (min-width: 68.75em) {
-  /* line 208, sass/_other.scss */
+  /* line 205, sass/_other.scss */
   .search .search-end {
     padding: 1.5em 12.5% 2.25em;
   }

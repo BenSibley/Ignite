@@ -7,7 +7,7 @@
 </div> <!-- .overflow-container -->
 
 <footer class="site-footer" role="contentinfo">
-    <h3><a href="<?php echo home_url(); ?>"><?php bloginfo('title'); ?></a></h3>
+    <h3><a href="<?php echo esc_url(home_url()); ?>"><?php bloginfo('title'); ?></a></h3>
     <span><?php bloginfo('description'); ?></span>
     <div class="design-credit">
         <span>Designed by <a href="http://www.competethemes.com">Compete Themes</a></span>

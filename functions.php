@@ -55,9 +55,6 @@ function ct_theme_setup() {
     
     // adds the file with the customizer functionality
     require_once( trailingslashit( get_template_directory() ) . 'functions-admin.php' );
-    
-    // adds cmb meta box functionality
-    if ( is_admin() && ! class_exists( 'cmb_Meta_Box' ) ) require_once( trailingslashit( get_template_directory() ) . 'assets/meta-boxes/init.php' );
 }
 
 // takes user input from the customizer and outputs linked social media icons
@@ -295,16 +292,6 @@ function ct_post_navigation() { ?>
     <div class="loop-pagination-container">
         <?php if ( current_theme_supports( 'loop-pagination' ) ) loop_pagination(); ?>
     </div><?php
-}
-
-// adds the url from the image credit box to the post and makes it clickable
-function ct_add_image_credit_link() {
-    
-    global $post;
-    $link = get_post_meta( $post->ID, 'ct-image-credit-link', true );
-    if(!empty($link)) {
-        echo "<p id='image-credit' class='image-credit'>image credit: ".make_clickable($link)."</p>";    
-    }
 }
 
 // for displaying featured images including mobile versions and default versions

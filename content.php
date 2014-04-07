@@ -33,7 +33,6 @@ if( is_home() ) { ?>
 			<article>
 				<?php the_content(); ?>
 				<?php wp_link_pages(array('before' => '<p class="singular-pagination">' . __('Pages:','ignite'), 'after' => '</p>', ) ); ?>
-				<?php ct_add_image_credit_link(); ?>
 			</article>
 		</div>
 		<div class='entry-meta-bottom'>

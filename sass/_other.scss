@@ -32,7 +32,7 @@
 
 // plain page
 
-.page.not-front {
+.page {
 
   /* because of breadcrumbs */
   .entry {
@@ -43,7 +43,7 @@
 /* 700px */
 @media all and (min-width: 43.75em) {
 
-  .page.not-front {
+  .page {
 
     .entry-title {
       font-size: 2.625em;
@@ -55,7 +55,7 @@
 /* 800px */
 @media all and (min-width: 50em) {
 
-  .page.not-front {
+  .page {
 
     .entry {
       padding-top: $baseline-height * 2;
@@ -96,9 +96,6 @@
       margin-top: 0;
     }
   }
-}
-.not-front .main {
-
 }
 
 /* 600px  breadcrumbs */

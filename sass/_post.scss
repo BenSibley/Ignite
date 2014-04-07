@@ -11,6 +11,10 @@
 }
 .entry-content {
   margin-top: $baseline-height;
+
+  &:after {
+    @include clearfix;
+  }
 }
 .further-reading {
   margin: $baseline-height * 2 0;
