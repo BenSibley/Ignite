@@ -22,14 +22,7 @@
 
 </head>
 
-<?php 
-//adds class to body of 'not-front' if other than the front page
-if (is_front_page() ) {
-    ?><body id="<?php print get_stylesheet(); ?>" <?php body_class('ct-body'); ?>><?php
-} else {
-    ?><body id="<?php print get_stylesheet(); ?>" <?php body_class(array('ct-body', 'not-front')); ?>><?php
-}
-?>
+<body id="<?php print get_stylesheet(); ?>" <?php body_class(); ?>>
 
 <!--skip to content link-->
 <a class="skip-content" href="#main">Skip to content</a>

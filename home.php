@@ -11,6 +11,6 @@ if ( have_posts() ) :
 endif; ?>
 
            
-<?php ct_post_navigation(); ?>
+<?php ct_ignite_post_navigation(); ?>
     
 <?php get_footer(); ?>
