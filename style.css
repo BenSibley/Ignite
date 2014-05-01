@@ -4,7 +4,7 @@ Theme URI: http://competethemes.com/ignite
 Author: Compete Themes
 Author URI: http://competethemes.com/
 Description: Ignite is a responsive blog theme.
-Version: 1.02
+Version: 1.03
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: orange, white, light, two-columns, right-sidebar, responsive-layout, custom-menu, featured-images, sticky-post, theme-options, threaded-comments
@@ -18,14 +18,14 @@ Ignite is distributed under the terms of the GNU GPL
 /*===== Mixins =====*/
 /*===== Basic Styles =====*/
 /* apply a natural box layout model to all elements */
-/* line 4, sass/_base.scss */
+/* line 4, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_base.scss */
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 8, sass/_base.scss */
+/* line 8, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_base.scss */
 body {
   font-size: 100%;
   margin: 0;
@@ -42,12 +42,12 @@ body {
   hyphens: auto;
 }
 
-/* line 24, sass/_base.scss */
+/* line 24, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_base.scss */
 .overflow-container {
   overflow: hidden;
 }
 
-/* line 27, sass/_base.scss */
+/* line 27, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_base.scss */
 .main {
   background: #eeede8;
   margin: 0 auto;
@@ -57,7 +57,7 @@ body {
   transition: all 0.3s ease;
   /* for when the menu is toggled open */
 }
-/* line 33, sass/_base.scss */
+/* line 33, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_base.scss */
 .main:after {
   content: '';
   position: absolute;
@@ -73,12 +73,12 @@ body {
   transition: opacity 0.3s ease;
 }
 
-/* line 44, sass/_base.scss */
+/* line 44, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_base.scss */
 p {
   margin: 1.5em 0;
 }
 
-/* line 47, sass/_base.scss */
+/* line 47, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_base.scss */
 a {
   color: #e6a117;
   -webkit-transition: color 0.2s ease;
@@ -86,16 +86,16 @@ a {
   -o-transition: color 0.2s ease;
   transition: color 0.2s ease;
 }
-/* line 51, sass/_base.scss */
+/* line 51, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_base.scss */
 a:link {
   color: #e6a117;
 }
-/* line 56, sass/_base.scss */
+/* line 56, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_base.scss */
 a:visited, a:hover, a:active {
   color: #a87227;
 }
 
-/* line 61, sass/_base.scss */
+/* line 61, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_base.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "lusitana", serif;
   margin: 0;
@@ -103,61 +103,61 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
 }
 
-/* line 68, sass/_base.scss */
+/* line 68, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_base.scss */
 h1 {
   font-size: 2.625em;
   /* 42px / 16px */
   line-height: 1.143;
 }
 
-/* line 72, sass/_base.scss */
+/* line 72, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_base.scss */
 h2 {
   font-size: 2.25em;
   /* 36px / 16px */
   line-height: 1.34;
 }
 
-/* line 76, sass/_base.scss */
+/* line 76, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_base.scss */
 h3 {
   font-size: 1.625em;
   /* 26px / 16px */
   line-height: 1.85;
 }
 
-/* line 80, sass/_base.scss */
+/* line 80, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_base.scss */
 h4 {
   font-size: 1.313em;
   /* 21px / 16px */
   line-height: 1.143;
 }
 
-/* line 84, sass/_base.scss */
+/* line 84, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_base.scss */
 h5 {
   font-size: 1.125em;
   /* 18px / 16px */
   line-height: 1.34;
 }
 
-/* line 88, sass/_base.scss */
+/* line 88, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_base.scss */
 h6 {
   font-size: 1em;
 }
 
-/* line 92, sass/_base.scss */
+/* line 92, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_base.scss */
 ul,
 ol {
   font-size: 1em;
   padding: 0;
   margin: 1.5em;
 }
-/* line 97, sass/_base.scss */
+/* line 97, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_base.scss */
 ul ul, ul ol,
 ol ul,
 ol ol {
   margin: 0 1.5em;
 }
 
-/* line 105, sass/_base.scss */
+/* line 105, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_base.scss */
 ul ul,
 ol ol,
 ul ol,
@@ -167,81 +167,81 @@ li li {
 }
 
 /* Markup styles */
-/* line 111, sass/_base.scss */
+/* line 111, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_base.scss */
 pre {
   word-wrap: break-word;
   background: #e8eaee;
   padding: 0.75em;
 }
 
-/* line 116, sass/_base.scss */
+/* line 116, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_base.scss */
 code {
   background: #e8eaee;
   padding: 0 0.375em;
 }
 
-/* line 120, sass/_base.scss */
+/* line 120, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_base.scss */
 blockquote {
   margin: 1.5em 1.5em 1.5em 0;
   padding-left: 1.5em;
   border-left: solid 3px #e6a117;
 }
-/* line 125, sass/_base.scss */
+/* line 125, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_base.scss */
 blockquote cite {
   display: block;
   text-align: right;
 }
 
-/* line 130, sass/_base.scss */
+/* line 130, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_base.scss */
 hr {
   margin: 0.69em 0;
 }
 
 /* Table styles */
-/* line 134, sass/_base.scss */
+/* line 134, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_base.scss */
 table {
   border-spacing: 0;
   border-collapse: collapse;
   margin: 1.5em 0;
 }
 
-/* line 139, sass/_base.scss */
+/* line 139, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_base.scss */
 td {
   padding: 0.5em 0.75em;
   border: solid 1px black;
 }
 
-/* line 143, sass/_base.scss */
+/* line 143, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_base.scss */
 th {
   padding: 0.5em 0.75em;
   border: solid 1px black;
 }
 
 /* Images */
-/* line 150, sass/_base.scss */
+/* line 150, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_base.scss */
 .alignleft {
   float: left;
   margin: 0 1.5em 1.5em 0;
 }
 
-/* line 154, sass/_base.scss */
+/* line 154, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_base.scss */
 .alignright {
   float: right;
   margin: 0 0 1.5em 1.5em;
 }
 
-/* line 158, sass/_base.scss */
+/* line 158, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_base.scss */
 .aligncenter {
   text-align: center;
   margin: 1.5em auto;
 }
 
-/* line 162, sass/_base.scss */
+/* line 162, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_base.scss */
 .alignnone {
   margin: 1.5em;
 }
 
-/* line 174, sass/_base.scss */
+/* line 174, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_base.scss */
 img,
 .alignright,
 .alignleft,
@@ -256,7 +256,7 @@ img,
   height: auto;
 }
 
-/* line 178, sass/_base.scss */
+/* line 178, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_base.scss */
 .wp-caption-text {
   margin: 0 0 1.84502em;
   font-size: 0.813em;
@@ -265,7 +265,7 @@ img,
 }
 
 /* Form styles */
-/* line 188, sass/_base.scss */
+/* line 188, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_base.scss */
 input,
 textarea {
   padding: 0.8em;
@@ -288,12 +288,12 @@ textarea {
   -webkit-appearance: none;
 }
 
-/* line 203, sass/_base.scss */
+/* line 203, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_base.scss */
 textarea {
   max-width: 41.625em;
 }
 
-/* line 206, sass/_base.scss */
+/* line 206, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_base.scss */
 input[type="submit"] {
   color: white;
   background: #e6a117;
@@ -301,52 +301,52 @@ input[type="submit"] {
   max-width: 13.875em;
 }
 
-/* line 212, sass/_base.scss */
+/* line 212, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_base.scss */
 input[type="submit"]:hover {
   cursor: pointer;
   background: #a87227;
 }
 
-/* line 216, sass/_base.scss */
+/* line 216, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_base.scss */
 input[type="search"] {
   margin-right: 1.5em;
   padding-right: 0.375em;
   /* so safari 'x' doesn't get cut off */
 }
 
-/* line 220, sass/_base.scss */
+/* line 220, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_base.scss */
 ::-webkit-input-placeholder {
   color: #7c7d7f;
 }
 
-/* line 223, sass/_base.scss */
+/* line 223, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_base.scss */
 :-moz-placeholder {
   color: #7c7d7f;
 }
 
-/* line 226, sass/_base.scss */
+/* line 226, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_base.scss */
 ::-moz-placeholder {
   color: #7c7d7f;
 }
 
-/* line 229, sass/_base.scss */
+/* line 229, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_base.scss */
 :-ms-input-placeholder {
   color: #7c7d7f;
 }
 
 /* sticky */
-/* line 234, sass/_base.scss */
+/* line 234, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_base.scss */
 .excerpt.sticky, .sticky.entry {
   outline: solid 3px #e6a117;
 }
 
 /* ie image border fix */
-/* line 240, sass/_base.scss */
+/* line 240, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_base.scss */
 a img {
   border: none;
 }
 
-/* line 3, sass/_menu.scss */
+/* line 3, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
 .site-header {
   background: white;
   height: 4.5em;
@@ -355,7 +355,7 @@ a img {
   position: relative;
 }
 
-/* line 10, sass/_menu.scss */
+/* line 10, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
 .site-title {
   font-size: 1.625em;
   line-height: 1.85;
@@ -364,28 +364,28 @@ a img {
   right: 3.703%;
   z-index: 1;
 }
-/* line 18, sass/_menu.scss */
+/* line 18, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
 .site-title a {
   text-decoration: none;
   color: #373b41;
 }
-/* line 22, sass/_menu.scss */
+/* line 22, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
 .site-title a:hover {
   color: #e6a117;
 }
-/* line 26, sass/_menu.scss */
+/* line 26, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
 .site-title img {
   max-width: 6em;
   max-height: 2.25em;
 }
-/* line 30, sass/_menu.scss */
+/* line 30, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
 .site-title span {
   position: absolute;
   opacity: 0;
   z-index: -1;
 }
 
-/* line 36, sass/_menu.scss */
+/* line 36, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
 .toggle-navigation {
   color: #373b41;
   font-size: 1.625em;
@@ -399,12 +399,12 @@ a img {
   -o-transition: color 0.2s ease;
   transition: color 0.2s ease;
 }
-/* line 46, sass/_menu.scss */
+/* line 46, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
 .toggle-navigation:hover {
   cursor: pointer;
 }
 
-/* line 51, sass/_menu.scss */
+/* line 51, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
 .menu-primary {
   background: #373b41;
   width: 100%;
@@ -418,7 +418,7 @@ a img {
   text-align: center;
   z-index: -1;
 }
-/* line 63, sass/_menu.scss */
+/* line 63, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
 .menu-primary p {
   color: #e6a117;
   display: inline-block;
@@ -427,12 +427,12 @@ a img {
   padding: 1.5em 0;
 }
 
-/* line 72, sass/_menu.scss */
+/* line 72, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
 .menu-primary-items,
 .menu-unset {
   list-style: none;
 }
-/* line 77, sass/_menu.scss */
+/* line 77, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
 .menu-primary-items li a,
 .menu-unset li a {
   text-decoration: none;
@@ -442,34 +442,34 @@ a img {
   margin: 1.5em 0;
   display: block;
 }
-/* line 85, sass/_menu.scss */
+/* line 85, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
 .menu-primary-items li a:hover,
 .menu-unset li a:hover {
   color: #e6a117;
 }
-/* line 93, sass/_menu.scss */
+/* line 93, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
 .menu-primary-items li ul li a,
 .menu-unset li ul li a {
   font-size: 0.813em;
   color: #d9dcdf;
   margin-top: -1.5em;
 }
-/* line 98, sass/_menu.scss */
+/* line 98, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
 .menu-primary-items li ul li a:hover,
 .menu-unset li ul li a:hover {
   color: white;
 }
-/* line 103, sass/_menu.scss */
+/* line 103, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
 .menu-primary-items li ul li ul a,
 .menu-unset li ul li ul a {
   color: #7c7d7f;
 }
-/* line 111, sass/_menu.scss */
+/* line 111, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
 .menu-primary-items ul,
 .menu-unset ul {
   list-style: none;
 }
-/* line 115, sass/_menu.scss */
+/* line 115, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
 .menu-primary-items .current-menu-item > a,
 .menu-primary-items .current_page_item > a,
 .menu-unset .current-menu-item > a,
@@ -477,36 +477,36 @@ a img {
   color: #e6a117;
 }
 
-/* line 119, sass/_menu.scss */
+/* line 119, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
 .social-media-icons {
   margin-top: 3em;
 }
-/* line 122, sass/_menu.scss */
+/* line 122, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
 .social-media-icons li {
   display: inline-block;
 }
-/* line 125, sass/_menu.scss */
+/* line 125, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
 .social-media-icons li a {
   color: white;
   margin: 0 0.375em;
   text-decoration: none;
   /* for IE9 */
 }
-/* line 130, sass/_menu.scss */
+/* line 130, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
 .social-media-icons li a:hover {
   color: #e6a117;
 }
 
-/* line 141, sass/_menu.scss */
+/* line 141, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
 .site-header.toggled .menu-primary {
   z-index: 0;
 }
-/* line 146, sass/_menu.scss */
+/* line 146, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
 .site-header.toggled + div .main:after {
   bottom: 0;
   opacity: 0.4;
 }
-/* line 150, sass/_menu.scss */
+/* line 150, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
 .site-header.toggled + div .sidebar-primary-container:after {
   bottom: 0;
   opacity: 0.4;
@@ -514,25 +514,25 @@ a img {
 
 /* 600px */
 @media all and (min-width: 37.5em) {
-  /* line 160, sass/_menu.scss */
+  /* line 160, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
   .site-header {
     padding: 1.25em 7.407% 0;
   }
 
-  /* line 163, sass/_menu.scss */
+  /* line 163, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
   .site-title {
     right: 7.407%;
   }
 }
 /* 800px */
 @media all and (min-width: 50em) {
-  /* line 171, sass/_menu.scss */
+  /* line 171, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
   .site-header {
     height: auto;
     min-height: 4.5em;
     padding: 0 11.11%;
   }
-  /* line 176, sass/_menu.scss */
+  /* line 176, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
   .site-header:after {
     content: ".";
     display: block;
@@ -542,26 +542,26 @@ a img {
     height: 0;
   }
 
-  /* line 180, sass/_menu.scss */
+  /* line 180, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
   .toggle-navigation {
     display: none;
   }
 
-  /* line 183, sass/_menu.scss */
+  /* line 183, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
   .title-info {
     float: left;
     margin-right: 3em;
     margin-top: 1.125em;
   }
 
-  /* line 188, sass/_menu.scss */
+  /* line 188, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
   .site-title {
     position: static;
     line-height: 1;
     margin-right: 0.225em;
   }
 
-  /* line 193, sass/_menu.scss */
+  /* line 193, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
   .menu-primary {
     position: static;
     max-width: none;
@@ -571,18 +571,18 @@ a img {
     text-align: left;
     background: none;
   }
-  /* line 202, sass/_menu.scss */
+  /* line 202, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
   .menu-primary p {
     display: none;
   }
 
-  /* line 207, sass/_menu.scss */
+  /* line 207, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
   .menu-primary-items,
   .menu-unset {
     margin: 0;
     line-height: 0;
   }
-  /* line 211, sass/_menu.scss */
+  /* line 211, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
   .menu-primary-items li,
   .menu-unset li {
     float: left;
@@ -593,7 +593,7 @@ a img {
     -o-transition: background 0.2s ease;
     transition: background 0.2s ease;
   }
-  /* line 217, sass/_menu.scss */
+  /* line 217, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
   .menu-primary-items li ul,
   .menu-unset li ul {
     position: absolute;
@@ -612,21 +612,21 @@ a img {
     -o-transition: opacity 0.2s ease;
     transition: opacity 0.2s ease;
   }
-  /* line 229, sass/_menu.scss */
+  /* line 229, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
   .menu-primary-items li ul:hover ul, .menu-primary-items li ul:focus ul,
   .menu-unset li ul:hover ul,
   .menu-unset li ul:focus ul {
     top: 0;
     left: 100%;
   }
-  /* line 239, sass/_menu.scss */
+  /* line 239, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
   .menu-primary-items li:hover > a, .menu-primary-items li:active > a, .menu-primary-items li:focus > a,
   .menu-unset li:hover > a,
   .menu-unset li:active > a,
   .menu-unset li:focus > a {
     color: white;
   }
-  /* line 242, sass/_menu.scss */
+  /* line 242, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
   .menu-primary-items li:hover > ul, .menu-primary-items li:active > ul, .menu-primary-items li:focus > ul,
   .menu-unset li:hover > ul,
   .menu-unset li:active > ul,
@@ -634,14 +634,14 @@ a img {
     top: 4.2495em;
     opacity: 1;
   }
-  /* line 246, sass/_menu.scss */
+  /* line 246, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
   .menu-primary-items li:hover > ul li, .menu-primary-items li:active > ul li, .menu-primary-items li:focus > ul li,
   .menu-unset li:hover > ul li,
   .menu-unset li:active > ul li,
   .menu-unset li:focus > ul li {
     min-width: 100%;
   }
-  /* line 249, sass/_menu.scss */
+  /* line 249, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
   .menu-primary-items li:hover > ul li a, .menu-primary-items li:active > ul li a, .menu-primary-items li:focus > ul li a,
   .menu-unset li:hover > ul li a,
   .menu-unset li:active > ul li a,
@@ -650,7 +650,7 @@ a img {
     color: #373b41;
     white-space: nowrap;
   }
-  /* line 258, sass/_menu.scss */
+  /* line 258, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
   .menu-primary-items li:hover > ul li:hover > a, .menu-primary-items li:hover > ul li:active > a, .menu-primary-items li:hover > ul li:focus > a, .menu-primary-items li:active > ul li:hover > a, .menu-primary-items li:active > ul li:active > a, .menu-primary-items li:active > ul li:focus > a, .menu-primary-items li:focus > ul li:hover > a, .menu-primary-items li:focus > ul li:active > a, .menu-primary-items li:focus > ul li:focus > a,
   .menu-unset li:hover > ul li:hover > a,
   .menu-unset li:hover > ul li:active > a,
@@ -663,7 +663,7 @@ a img {
   .menu-unset li:focus > ul li:focus > a {
     color: white;
   }
-  /* line 265, sass/_menu.scss */
+  /* line 265, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
   .menu-primary-items li a,
   .menu-unset li a {
     color: #373b41;
@@ -673,18 +673,18 @@ a img {
     /* 68px */
     letter-spacing: 0.1em;
   }
-  /* line 273, sass/_menu.scss */
+  /* line 273, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
   .menu-primary-items li a:hover, .menu-primary-items li a:focus,
   .menu-unset li a:hover,
   .menu-unset li a:focus {
     color: white;
   }
-  /* line 277, sass/_menu.scss */
+  /* line 277, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
   .menu-primary-items li:hover,
   .menu-unset li:hover {
     background: #e6a117;
   }
-  /* line 281, sass/_menu.scss */
+  /* line 281, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
   .menu-primary-items:after,
   .menu-unset:after {
     content: ".";
@@ -695,17 +695,17 @@ a img {
     height: 0;
   }
 
-  /* line 285, sass/_menu.scss */
+  /* line 285, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
   .social-media-icons {
     display: none;
   }
 
-  /* line 289, sass/_menu.scss */
+  /* line 289, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
   #menu-primary-items,
   .menu-unset {
     /* using id to avoid annoying selector competition */
   }
-  /* line 295, sass/_menu.scss */
+  /* line 295, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
   #menu-primary-items .current-menu-item,
   #menu-primary-items .current_page_ancestor,
   #menu-primary-items .current_page_item,
@@ -716,7 +716,7 @@ a img {
   .menu-unset .current_page_ancestor {
     background: #e6a117;
   }
-  /* line 298, sass/_menu.scss */
+  /* line 298, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
   #menu-primary-items .current-menu-item > a,
   #menu-primary-items .current_page_ancestor > a,
   #menu-primary-items .current_page_item > a,
@@ -729,11 +729,11 @@ a img {
   }
 
   /* because .menu-primary-items is a 'ul' this needs to be declared separately */
-  /* line 306, sass/_menu.scss */
+  /* line 306, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
   .menu-unset ul {
     margin: 0;
   }
-  /* line 309, sass/_menu.scss */
+  /* line 309, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
   .menu-unset ul:after {
     content: ".";
     display: block;
@@ -744,34 +744,34 @@ a img {
   }
 
   /* show drop down items when accessed with keyboard too */
-  /* line 315, sass/_menu.scss */
+  /* line 315, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
   ul.focused {
     left: 0;
     top: 4.2495em !important;
     opacity: 1 !important;
   }
-  /* line 322, sass/_menu.scss */
+  /* line 322, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
   ul.focused > li > a {
     margin-top: 0 !important;
     color: #373b41;
     white-space: nowrap;
   }
 
-  /* line 329, sass/_menu.scss */
+  /* line 329, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
   li.focused {
     background: #e6a117;
   }
 }
 /* 900px */
 @media all and (min-width: 56.25em) {
-  /* line 337, sass/_menu.scss */
+  /* line 337, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
   .site-header {
     padding: 0 7.407%;
   }
 }
 /* 1000px */
 @media all and (min-width: 62.5em) {
-  /* line 347, sass/_menu.scss */
+  /* line 347, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
   .menu-primary p {
     margin: 1.0625em 3em 0 -3em;
     display: inline-block;
@@ -782,61 +782,61 @@ a img {
     float: left;
   }
 
-  /* line 357, sass/_menu.scss */
+  /* line 357, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
   .site-title {
     float: left;
   }
 }
 /* 1200px */
 @media all and (min-width: 75em) {
-  /* line 366, sass/_menu.scss */
+  /* line 366, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
   .menu-primary-items,
   .menu-unset {
     float: left;
     /* for the social media buttons */
   }
 
-  /* line 371, sass/_menu.scss */
+  /* line 371, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
   .social-media-icons {
     display: inline-block;
     margin: 0;
     float: right;
   }
-  /* line 378, sass/_menu.scss */
+  /* line 378, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
   .social-media-icons li a {
     color: #373b41;
     line-height: 4.25em;
     /* 68px */
   }
-  /* line 382, sass/_menu.scss */
+  /* line 382, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
   .social-media-icons li a:hover {
     color: #e6a117;
   }
-  /* line 388, sass/_menu.scss */
+  /* line 388, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_menu.scss */
   .social-media-icons li:last-child a {
     margin-right: 0;
   }
 }
-/* line 4, sass/_blog.scss */
+/* line 4, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_blog.scss */
 .main,
 .sidebar-primary-container,
 .site-footer {
   padding: 1.5em 3.703%;
 }
 
-/* line 8, sass/_blog.scss */
+/* line 8, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_blog.scss */
 .excerpt, .entry {
   background: white;
   margin: 1.5em auto;
   padding: 0 8% 2.25em;
 }
 
-/* line 13, sass/_blog.scss */
+/* line 13, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_blog.scss */
 .excerpt.no-featured-image, .no-featured-image.entry {
   padding-top: 1.5em;
 }
 
-/* line 16, sass/_blog.scss */
+/* line 16, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_blog.scss */
 .featured-image {
   height: 12em;
   background-size: cover;
@@ -847,13 +847,13 @@ a img {
   margin-bottom: 1.5em;
 }
 
-/* line 25, sass/_blog.scss */
+/* line 25, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_blog.scss */
 .excerpt-meta-top, .entry-meta-top {
   margin-bottom: 0.75em;
   padding-bottom: 0.75em;
   position: relative;
 }
-/* line 30, sass/_blog.scss */
+/* line 30, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_blog.scss */
 .excerpt-meta-top:after, .entry-meta-top:after {
   content: '';
   position: absolute;
@@ -863,21 +863,21 @@ a img {
   bottom: 0;
   left: 0;
 }
-/* line 39, sass/_blog.scss */
+/* line 39, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_blog.scss */
 .excerpt-meta-top a, .entry-meta-top a {
   text-decoration: none;
   color: #373b41;
 }
-/* line 44, sass/_blog.scss */
+/* line 44, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_blog.scss */
 .excerpt-meta-top a:link, .entry-meta-top a:link, .excerpt-meta-top a:visited, .entry-meta-top a:visited {
   color: #373b41;
 }
-/* line 48, sass/_blog.scss */
+/* line 48, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_blog.scss */
 .excerpt-meta-top a:hover, .entry-meta-top a:hover, .excerpt-meta-top a:active, .entry-meta-top a:active {
   color: #e6a117;
 }
 
-/* line 53, sass/_blog.scss */
+/* line 53, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_blog.scss */
 .excerpt-title, .entry-title {
   font-weight: 700;
   font-size: 1.625em;
@@ -885,26 +885,26 @@ a img {
   word-wrap: break-word;
   -ms-word-wrap: break-word;
 }
-/* line 60, sass/_blog.scss */
+/* line 60, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_blog.scss */
 .excerpt-title a, .entry-title a {
   color: #373b41;
   text-decoration: none;
 }
-/* line 65, sass/_blog.scss */
+/* line 65, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_blog.scss */
 .excerpt-title a:link, .entry-title a:link, .excerpt-title a:visited, .entry-title a:visited {
   color: #373b41;
 }
-/* line 69, sass/_blog.scss */
+/* line 69, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_blog.scss */
 .excerpt-title a:hover, .entry-title a:hover, .excerpt-title a:active, .entry-title a:active {
   color: #7c7d7f;
 }
 
-/* line 74, sass/_blog.scss */
+/* line 74, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_blog.scss */
 .excerpt-content {
   border-bottom: solid 2px #d9dcdf;
 }
 
-/* line 77, sass/_blog.scss */
+/* line 77, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_blog.scss */
 .more-link {
   text-decoration: none;
   display: block;
@@ -920,35 +920,35 @@ a img {
   -o-transition: background 0.2s ease;
   transition: background 0.2s ease;
 }
-/* line 89, sass/_blog.scss */
+/* line 89, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_blog.scss */
 .more-link:link, .more-link:visited {
   color: white;
 }
-/* line 93, sass/_blog.scss */
+/* line 93, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_blog.scss */
 .more-link:hover, .more-link:active {
   background: #a87227;
 }
 
-/* line 98, sass/_blog.scss */
+/* line 98, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_blog.scss */
 .excerpt-categories, .entry-categories,
 .excerpt-tags,
 .entry-tags {
   color: #7c7d7f;
 }
-/* line 101, sass/_blog.scss */
+/* line 101, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_blog.scss */
 .excerpt-categories p, .entry-categories p,
 .excerpt-tags p,
 .entry-tags p {
   margin: 0.75em 0 0;
   padding-left: 1.5em;
 }
-/* line 105, sass/_blog.scss */
+/* line 105, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_blog.scss */
 .excerpt-categories i, .entry-categories i,
 .excerpt-tags i,
 .entry-tags i {
   margin-left: -1.5em;
 }
-/* line 108, sass/_blog.scss */
+/* line 108, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_blog.scss */
 .excerpt-categories a, .entry-categories a,
 .excerpt-tags a,
 .entry-tags a {
@@ -959,7 +959,7 @@ a img {
   line-height: 1.7;
   margin-right: 0.75em;
 }
-/* line 117, sass/_blog.scss */
+/* line 117, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_blog.scss */
 .excerpt-categories a:link, .entry-categories a:link, .excerpt-categories a:visited, .entry-categories a:visited,
 .excerpt-tags a:link,
 .entry-tags a:link,
@@ -967,7 +967,7 @@ a img {
 .entry-tags a:visited {
   color: #7c7d7f;
 }
-/* line 121, sass/_blog.scss */
+/* line 121, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_blog.scss */
 .excerpt-categories a:hover, .entry-categories a:hover, .excerpt-categories a:active, .entry-categories a:active,
 .excerpt-tags a:hover,
 .entry-tags a:hover,
@@ -976,17 +976,17 @@ a img {
   color: #e6a117;
 }
 
-/* line 126, sass/_blog.scss */
+/* line 126, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_blog.scss */
 .excerpt-categories i, .entry-categories i {
   margin-right: 0.4375em;
 }
 
-/* line 129, sass/_blog.scss */
+/* line 129, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_blog.scss */
 .excerpt-tags i, .entry-tags i {
   margin-right: 0.625em;
 }
 
-/* line 132, sass/_blog.scss */
+/* line 132, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_blog.scss */
 .loop-pagination {
   background: white;
   padding: 0.75em;
@@ -994,38 +994,38 @@ a img {
   text-align: center;
   margin-bottom: 1.5em;
 }
-/* line 140, sass/_blog.scss */
+/* line 140, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_blog.scss */
 .loop-pagination span,
 .loop-pagination a {
   margin: 0 0.375em;
 }
-/* line 143, sass/_blog.scss */
+/* line 143, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_blog.scss */
 .loop-pagination a {
   text-decoration: none;
 }
 
 /* 500px */
 @media all and (min-width: 31.25em) {
-  /* line 151, sass/_blog.scss */
+  /* line 151, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_blog.scss */
   .featured-image {
     height: 15em;
   }
 
-  /* line 156, sass/_blog.scss */
+  /* line 156, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_blog.scss */
   .excerpt-meta-top:after, .entry-meta-top:after {
     width: 20%;
   }
 }
 /* 600px */
 @media all and (min-width: 37.5em) {
-  /* line 168, sass/_blog.scss */
+  /* line 168, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_blog.scss */
   .main,
   .sidebar-primary-container,
   .site-footer {
     padding: 1.5em 7.407%;
   }
 
-  /* line 174, sass/_blog.scss */
+  /* line 174, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_blog.scss */
   .loop-pagination span,
   .loop-pagination a {
     margin: 0 0.75em;
@@ -1033,26 +1033,26 @@ a img {
 }
 /* 700px */
 @media all and (min-width: 43.75em) {
-  /* line 183, sass/_blog.scss */
+  /* line 183, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_blog.scss */
   .featured-image {
     height: 18em;
   }
 }
 /* 800px */
 @media all and (min-width: 50em) {
-  /* line 193, sass/_blog.scss */
+  /* line 193, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_blog.scss */
   .main,
   .sidebar-primary-container,
   .site-footer {
     padding: 1.5em 11.11%;
   }
 
-  /* line 197, sass/_blog.scss */
+  /* line 197, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_blog.scss */
   .excerpt, .entry {
     padding: 0 14.333% 2.25em;
   }
 
-  /* line 200, sass/_blog.scss */
+  /* line 200, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_blog.scss */
   .featured-image {
     left: -20%;
     width: 140%;
@@ -1061,7 +1061,7 @@ a img {
 /* 900px */
 @media all and (min-width: 56.25em) {
   /* switch from padding to width */
-  /* line 210, sass/_blog.scss */
+  /* line 210, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_blog.scss */
   .main {
     width: 55.55%;
     padding: 1.5em 0;
@@ -1069,66 +1069,66 @@ a img {
     margin: 0 3.703% 0 7.407%;
   }
 
-  /* line 216, sass/_blog.scss */
+  /* line 216, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_blog.scss */
   .sidebar-primary-container, .site-footer {
     padding: 1.5em 7.407%;
   }
 
-  /* line 219, sass/_blog.scss */
+  /* line 219, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_blog.scss */
   .excerpt, .entry {
     padding: 0 13.333% 2.25em;
   }
 
-  /* line 222, sass/_blog.scss */
+  /* line 222, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_blog.scss */
   .featured-image {
     left: -18%;
     width: 136%;
   }
 
-  /* line 226, sass/_blog.scss */
+  /* line 226, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_blog.scss */
   .loop-pagination {
     margin-bottom: 3em;
   }
 }
 /* 1000px */
 @media all and (min-width: 62.5em) {
-  /* line 234, sass/_blog.scss */
+  /* line 234, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_blog.scss */
   .excerpt.no-featured-image, .no-featured-image.entry {
     padding-top: 3em;
   }
 
-  /* line 237, sass/_blog.scss */
+  /* line 237, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_blog.scss */
   .excerpt-title, .entry-title {
     font-size: 2.625em;
     line-height: 1.143;
   }
 
-  /* line 242, sass/_blog.scss */
+  /* line 242, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_blog.scss */
   .excerpt-categories, .entry-categories,
   .excerpt-tags,
   .entry-tags {
     display: inline-block;
   }
 
-  /* line 245, sass/_blog.scss */
+  /* line 245, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_blog.scss */
   .excerpt-categories, .entry-categories {
     margin-right: 0.75em;
   }
 }
 /* 1100px */
 @media all and (min-width: 68.75em) {
-  /* line 253, sass/_blog.scss */
+  /* line 253, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_blog.scss */
   .main {
     width: 59.253%;
   }
 
-  /* line 256, sass/_blog.scss */
+  /* line 256, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_blog.scss */
   .excerpt, .entry {
     margin: 3em 0;
     padding: 0 12.5% 2.25em;
   }
 
-  /* line 260, sass/_blog.scss */
+  /* line 260, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_blog.scss */
   .featured-image {
     height: 21em;
     left: -16.67%;
@@ -1137,12 +1137,12 @@ a img {
 }
 /* 1200px */
 @media all and (min-width: 75em) {
-  /* line 270, sass/_blog.scss */
+  /* line 270, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_blog.scss */
   .featured-image {
     height: 22.5em;
   }
 }
-/* line 3, sass/_sidebar.scss */
+/* line 3, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_sidebar.scss */
 .sidebar-primary-container {
   position: relative;
   /* used to set neg z-index so main overlay covers it */
@@ -1154,7 +1154,7 @@ a img {
   /* for when the menu is toggled open */
   /* widget-specific styling */
 }
-/* line 11, sass/_sidebar.scss */
+/* line 11, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_sidebar.scss */
 .sidebar-primary-container:after {
   content: '';
   position: absolute;
@@ -1169,7 +1169,7 @@ a img {
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
 }
-/* line 22, sass/_sidebar.scss */
+/* line 22, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_sidebar.scss */
 .sidebar-primary-container .widget {
   background: white;
   border-top: solid 3px #e6a117;
@@ -1178,12 +1178,12 @@ a img {
   margin: 1.84502em 0;
   padding: 1.615em 8% 0.923em;
 }
-/* line 30, sass/_sidebar.scss */
+/* line 30, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_sidebar.scss */
 .sidebar-primary-container .widget ul {
   list-style: none;
   margin: 1em 0 1.84502em;
 }
-/* line 34, sass/_sidebar.scss */
+/* line 34, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_sidebar.scss */
 .sidebar-primary-container .widget ul li {
   padding: 0.846em 0.5em 0.923em 0;
   /* subtracted 1px for border */
@@ -1194,44 +1194,44 @@ a img {
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-/* line 40, sass/_sidebar.scss */
+/* line 40, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_sidebar.scss */
 .sidebar-primary-container .widget ul li:last-child {
   border: none;
 }
-/* line 44, sass/_sidebar.scss */
+/* line 44, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_sidebar.scss */
 .sidebar-primary-container .widget ul li a {
   display: block;
   text-decoration: none;
 }
-/* line 49, sass/_sidebar.scss */
+/* line 49, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_sidebar.scss */
 .sidebar-primary-container .widget ul li:hover {
   background: rgba(240, 240, 240, 0.15);
   padding-left: 0.5em;
   padding-right: 0;
   /* added above to be removed now so the space doesn't decrease at all */
 }
-/* line 55, sass/_sidebar.scss */
+/* line 55, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_sidebar.scss */
 .sidebar-primary-container .widget ul ul {
   margin: 0 0 0 1em;
 }
-/* line 58, sass/_sidebar.scss */
+/* line 58, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_sidebar.scss */
 .sidebar-primary-container .widget ul ul li:last-child {
   margin-bottom: 0;
   padding-bottom: 0;
 }
-/* line 64, sass/_sidebar.scss */
+/* line 64, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_sidebar.scss */
 .sidebar-primary-container .widget a {
   color: #373b41;
 }
-/* line 68, sass/_sidebar.scss */
+/* line 68, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_sidebar.scss */
 .sidebar-primary-container .widget a:link, .sidebar-primary-container .widget a:visited {
   color: #373b41;
 }
-/* line 72, sass/_sidebar.scss */
+/* line 72, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_sidebar.scss */
 .sidebar-primary-container .widget a:hover, .sidebar-primary-container .widget a:active {
   color: #e6a117;
 }
-/* line 77, sass/_sidebar.scss */
+/* line 77, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_sidebar.scss */
 .sidebar-primary-container .widget-title {
   text-transform: uppercase;
   font-weight: 700;
@@ -1240,12 +1240,12 @@ a img {
   line-height: 1.85;
   margin-bottom: 1.84502em;
 }
-/* line 91, sass/_sidebar.scss */
+/* line 91, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_sidebar.scss */
 .sidebar-primary-container .widget-archives ul li,
 .sidebar-primary-container .widget-categories ul li {
   position: relative;
 }
-/* line 94, sass/_sidebar.scss */
+/* line 94, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_sidebar.scss */
 .sidebar-primary-container .widget-archives ul li span,
 .sidebar-primary-container .widget-categories ul li span {
   float: right;
@@ -1255,7 +1255,7 @@ a img {
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-/* line 101, sass/_sidebar.scss */
+/* line 101, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_sidebar.scss */
 .sidebar-primary-container .widget-archives ul li:hover span,
 .sidebar-primary-container .widget-categories ul li:hover span {
   padding-right: 0.75em;
@@ -1263,14 +1263,14 @@ a img {
 
 /* 800px */
 @media all and (min-width: 50em) {
-  /* line 114, sass/_sidebar.scss */
+  /* line 114, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_sidebar.scss */
   .sidebar-primary-container .widget {
     padding: 1.615em 14.33% 0.923em;
   }
 }
 /* 900px */
 @media all and (min-width: 56.25em) {
-  /* line 123, sass/_sidebar.scss */
+  /* line 123, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_sidebar.scss */
   .sidebar-primary-container {
     width: 25.923%;
     padding: 1.5em 0;
@@ -1278,24 +1278,24 @@ a img {
     margin-top: 1.5em;
   }
 
-  /* line 131, sass/_sidebar.scss */
+  /* line 131, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_sidebar.scss */
   .widget:first-child {
     margin-top: 0;
   }
 }
 /* 1100px */
 @media all and (min-width: 68.75em) {
-  /* line 140, sass/_sidebar.scss */
+  /* line 140, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_sidebar.scss */
   .sidebar-primary-container {
     width: 22.222%;
     margin-top: 3em;
   }
 }
-/* line 12, sass/_post.scss */
+/* line 12, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_post.scss */
 .entry-content {
   margin-top: 1.5em;
 }
-/* line 15, sass/_post.scss */
+/* line 15, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_post.scss */
 .entry-content:after {
   content: ".";
   display: block;
@@ -1305,45 +1305,45 @@ a img {
   height: 0;
 }
 
-/* line 19, sass/_post.scss */
+/* line 19, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_post.scss */
 .further-reading {
   margin: 3em 0;
 }
-/* line 22, sass/_post.scss */
+/* line 22, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_post.scss */
 .further-reading span {
   border-bottom: solid 1px #e6a117;
   font-weight: 700;
   position: relative;
 }
-/* line 27, sass/_post.scss */
+/* line 27, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_post.scss */
 .further-reading a {
   color: #373b41;
   text-decoration: none;
   display: block;
 }
-/* line 33, sass/_post.scss */
+/* line 33, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_post.scss */
 .further-reading a:link, .further-reading a:visited {
   color: #373b41;
 }
-/* line 37, sass/_post.scss */
+/* line 37, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_post.scss */
 .further-reading a:hover, .further-reading a:active {
   color: #e6a117;
 }
 
 /* 700px */
 @media all and (min-width: 43.75em) {
-  /* line 52, sass/_post.scss */
+  /* line 52, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_post.scss */
   .further-reading {
     margin-bottom: 2.25em;
   }
-  /* line 55, sass/_post.scss */
+  /* line 55, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_post.scss */
   .further-reading p {
     width: 50%;
     display: inline-block;
     vertical-align: top;
     padding-right: 4%;
   }
-  /* line 61, sass/_post.scss */
+  /* line 61, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_post.scss */
   .further-reading .next {
     text-align: right;
     padding: 0 0 0 4%;
@@ -1351,35 +1351,35 @@ a img {
 }
 /* 1100px */
 @media all and (min-width: 68.75em) {
-  /* line 72, sass/_post.scss */
+  /* line 72, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_post.scss */
   .entry {
     margin-bottom: 1.5em;
   }
 }
-/* line 3, sass/_comments.scss */
+/* line 3, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_comments.scss */
 .comments {
   background: white;
   margin: -1.5em 0 3em;
   padding: 0 8% 2.25em;
 }
 
-/* line 8, sass/_comments.scss */
+/* line 8, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_comments.scss */
 .comments-number {
   border-top: solid 2px #d9dcdf;
   padding-top: 1.375em;
 }
 
-/* line 12, sass/_comments.scss */
+/* line 12, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_comments.scss */
 .comment-list {
   list-style: none;
   margin: 1.5em 0;
 }
-/* line 16, sass/_comments.scss */
+/* line 16, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_comments.scss */
 .comment-list ul {
   list-style: none;
   margin: 1.5em 0 1.5em 1.5em;
 }
-/* line 20, sass/_comments.scss */
+/* line 20, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_comments.scss */
 .comment-list ul li:first-child:before {
   content: "\2192";
   position: absolute;
@@ -1387,28 +1387,28 @@ a img {
   top: 1em;
 }
 
-/* line 29, sass/_comments.scss */
+/* line 29, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_comments.scss */
 li.comment,
 li.pingback {
   margin-bottom: 3em;
   position: relative;
 }
 
-/* line 33, sass/_comments.scss */
+/* line 33, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_comments.scss */
 .comment-content {
   margin-left: 3.75em;
 }
-/* line 36, sass/_comments.scss */
+/* line 36, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_comments.scss */
 .comment-content p:first-child {
   margin-top: 0;
 }
-/* line 39, sass/_comments.scss */
+/* line 39, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_comments.scss */
 .comment-content p:last-child {
   margin-bottom: 1.437em;
   /* b/c comment meta border */
 }
 
-/* line 45, sass/_comments.scss */
+/* line 45, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_comments.scss */
 .comment-author:after {
   content: ".";
   display: block;
@@ -1417,7 +1417,7 @@ li.pingback {
   line-height: 0;
   height: 0;
 }
-/* line 49, sass/_comments.scss */
+/* line 49, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_comments.scss */
 .comment-author img {
   width: 3em;
   height: auto;
@@ -1427,25 +1427,25 @@ li.pingback {
   float: left;
   margin-right: 0.75em;
 }
-/* line 56, sass/_comments.scss */
+/* line 56, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_comments.scss */
 .comment-author .author-name {
   font-weight: 700;
 }
-/* line 59, sass/_comments.scss */
+/* line 59, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_comments.scss */
 .comment-author .author-name a {
   color: #e6a117;
   text-decoration: none;
 }
-/* line 64, sass/_comments.scss */
+/* line 64, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_comments.scss */
 .comment-author .author-name a:link, .comment-author .author-name a:visited {
   color: #e6a117;
 }
-/* line 68, sass/_comments.scss */
+/* line 68, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_comments.scss */
 .comment-author .author-name a:hover, .comment-author .author-name a:active {
   color: #a87227;
 }
 
-/* line 74, sass/_comments.scss */
+/* line 74, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_comments.scss */
 .comment-meta {
   font-size: 0.813em;
   line-height: 1.85;
@@ -1454,68 +1454,68 @@ li.pingback {
   margin-left: 4.6125em;
 }
 
-/* line 81, sass/_comments.scss */
+/* line 81, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_comments.scss */
 .comment-date {
   display: inline-block;
 }
 
-/* line 85, sass/_comments.scss */
+/* line 85, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_comments.scss */
 .comment-reply-link,
 .comment-edit-link {
   text-decoration: none;
 }
-/* line 88, sass/_comments.scss */
+/* line 88, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_comments.scss */
 .comment-reply-link:before,
 .comment-edit-link:before {
   content: ' | ';
   color: #373b41;
 }
 
-/* line 97, sass/_comments.scss */
+/* line 97, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_comments.scss */
 .bypostauthor .comment-author img {
   border: solid 2px #e6a117;
 }
 
-/* line 102, sass/_comments.scss */
+/* line 102, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_comments.scss */
 .comment-respond {
   margin-top: 3em;
 }
 
 /* 500px */
 @media all and (min-width: 31.25em) {
-  /* line 111, sass/_comments.scss */
+  /* line 111, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_comments.scss */
   .comment-pagination p {
     width: 50%;
     display: inline-block;
     vertical-align: top;
   }
-  /* line 116, sass/_comments.scss */
+  /* line 116, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_comments.scss */
   .comment-pagination .next-comment {
     text-align: right;
   }
 }
 /* 800px */
 @media all and (min-width: 50em) {
-  /* line 125, sass/_comments.scss */
+  /* line 125, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_comments.scss */
   .comments {
     padding: 0 14.333% 2.25em;
   }
 }
 /* 900px */
 @media all and (min-width: 56.25em) {
-  /* line 133, sass/_comments.scss */
+  /* line 133, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_comments.scss */
   .comments {
     padding: 0 13.333% 2.25em;
   }
 }
 /* 1100px */
 @media all and (min-width: 68.75em) {
-  /* line 141, sass/_comments.scss */
+  /* line 141, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_comments.scss */
   .comments {
     padding: 0 12.5% 2.25em;
   }
 }
-/* line 3, sass/_footer.scss */
+/* line 3, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_footer.scss */
 .site-footer {
   background: #373b41;
   color: #7c7d7f;
@@ -1523,21 +1523,21 @@ li.pingback {
   overflow: hidden;
   text-align: center;
 }
-/* line 11, sass/_footer.scss */
+/* line 11, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_footer.scss */
 .site-footer a {
   color: #7c7d7f;
   text-decoration: none;
 }
-/* line 16, sass/_footer.scss */
+/* line 16, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_footer.scss */
 .site-footer a:link, .site-footer a:visited {
   color: #7c7d7f;
 }
-/* line 20, sass/_footer.scss */
+/* line 20, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_footer.scss */
 .site-footer a:hover, .site-footer a:active {
   color: #e6a117;
 }
 
-/* line 25, sass/_footer.scss */
+/* line 25, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_footer.scss */
 .design-credit {
   background: #303338;
   color: #7c7d7f;
@@ -1553,7 +1553,7 @@ li.pingback {
 
 /* 600px */
 @media all and (min-width: 37.5em) {
-  /* line 41, sass/_footer.scss */
+  /* line 41, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_footer.scss */
   .design-credit {
     left: -9%;
     width: 118%;
@@ -1561,12 +1561,12 @@ li.pingback {
 }
 /* 700px */
 @media all and (min-width: 43.75em) {
-  /* line 49, sass/_footer.scss */
+  /* line 49, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_footer.scss */
   .site-footer {
     padding: 1.5em 3.703% 0;
   }
 
-  /* line 54, sass/_footer.scss */
+  /* line 54, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_footer.scss */
   .sidebar-subsidiary:after {
     content: ".";
     display: block;
@@ -1576,33 +1576,33 @@ li.pingback {
     height: 0;
   }
 
-  /* line 58, sass/_footer.scss */
+  /* line 58, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_footer.scss */
   .design-credit {
     clear: both;
   }
 }
 /* 800px */
 @media all and (min-width: 50em) {
-  /* line 66, sass/_footer.scss */
+  /* line 66, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_footer.scss */
   .site-footer {
     padding: 1.5em 7.407% 0;
   }
 }
 /* 900px */
 @media all and (min-width: 56.25em) {
-  /* line 74, sass/_footer.scss */
+  /* line 74, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_footer.scss */
   .site-footer {
     padding: 1.5em 3.703% 0;
   }
 
-  /* line 77, sass/_footer.scss */
+  /* line 77, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_footer.scss */
   .design-credit {
     left: -4%;
     width: 108%;
   }
 }
 /* screen reader styling */
-/* line 4, sass/_other.scss */
+/* line 4, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_other.scss */
 .screen-reader-text {
   position: absolute;
   clip: rect(1px 1px 1px 1px);
@@ -1614,7 +1614,7 @@ li.pingback {
 }
 
 /* skip content link */
-/* line 15, sass/_other.scss */
+/* line 15, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_other.scss */
 .skip-content {
   position: absolute;
   top: -4.5em;
@@ -1631,23 +1631,23 @@ li.pingback {
   -o-transition: top 0.2s ease;
   transition: top 0.2s ease;
 }
-/* line 28, sass/_other.scss */
+/* line 28, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_other.scss */
 .skip-content:focus {
   top: 0;
 }
 
-/* line 35, sass/_other.scss */
+/* line 35, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_other.scss */
 .page {
   /* because of breadcrumbs */
 }
-/* line 38, sass/_other.scss */
+/* line 38, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_other.scss */
 .page .entry {
   padding-top: 1.5em;
 }
 
 /* 700px */
 @media all and (min-width: 43.75em) {
-  /* line 48, sass/_other.scss */
+  /* line 48, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_other.scss */
   .page .entry-title {
     font-size: 2.625em;
     line-height: 1.14;
@@ -1655,12 +1655,12 @@ li.pingback {
 }
 /* 800px */
 @media all and (min-width: 50em) {
-  /* line 60, sass/_other.scss */
+  /* line 60, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_other.scss */
   .page .entry {
     padding-top: 3em;
   }
 }
-/* line 68, sass/_other.scss */
+/* line 68, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_other.scss */
 .breadcrumbs {
   text-transform: uppercase;
   color: #7c7d7f;
@@ -1672,120 +1672,120 @@ li.pingback {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-/* line 76, sass/_other.scss */
+/* line 76, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_other.scss */
 .breadcrumbs a {
   text-decoration: none;
   color: #e6a117;
 }
-/* line 81, sass/_other.scss */
+/* line 81, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_other.scss */
 .breadcrumbs a:link, .breadcrumbs a:visited {
   color: #e6a117;
 }
-/* line 85, sass/_other.scss */
+/* line 85, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_other.scss */
 .breadcrumbs a:hover, .breadcrumbs a:active {
   color: #a87227;
 }
-/* line 89, sass/_other.scss */
+/* line 89, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_other.scss */
 .breadcrumbs span {
   opacity: 0.7;
 }
-/* line 95, sass/_other.scss */
+/* line 95, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_other.scss */
 .breadcrumbs + div .excerpt, .breadcrumbs + div .entry {
   margin-top: 0;
 }
 
 /* 600px  breadcrumbs */
 @media all and (min-width: 37.5em) {
-  /* line 104, sass/_other.scss */
+  /* line 104, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_other.scss */
   .breadcrumbs {
     padding: 3em 7.407% 0;
   }
 }
 /* 800px  breadcrumbs */
 @media all and (min-width: 50em) {
-  /* line 112, sass/_other.scss */
+  /* line 112, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_other.scss */
   .breadcrumbs {
     padding: 3em 11.11% 0;
   }
 }
 /* 900px  breadcrumbs */
 @media all and (min-width: 56.25em) {
-  /* line 120, sass/_other.scss */
+  /* line 120, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_other.scss */
   .breadcrumbs {
     padding: 3em 7.407% 0;
     /* remove margin top on sidebar (and main which didn't have any anyway)*/
   }
-  /* line 124, sass/_other.scss */
+  /* line 124, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_other.scss */
   .breadcrumbs ~ div {
     margin-top: 0;
   }
 }
-/* line 135, sass/_other.scss */
+/* line 135, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_other.scss */
 .error404 .entry,
 .search .entry {
   margin-bottom: 0;
 }
-/* line 138, sass/_other.scss */
+/* line 138, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_other.scss */
 .error404 .entry-header,
 .search .entry-header {
   padding-top: 1.5em;
 }
 
-/* line 142, sass/_other.scss */
+/* line 142, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_other.scss */
 .search-form {
   margin-top: 1.5em;
 }
-/* line 145, sass/_other.scss */
+/* line 145, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_other.scss */
 .search-form input[type="submit"] {
   max-width: 27.75em;
   margin-top: 1.5em;
 }
 
-/* line 152, sass/_other.scss */
+/* line 152, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_other.scss */
 .search .container {
   background: white;
   margin-top: 1.5em;
 }
-/* line 156, sass/_other.scss */
+/* line 156, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_other.scss */
 .search .search-end {
   padding: 1.5em 8% 2.25em;
 }
-/* line 159, sass/_other.scss */
+/* line 159, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_other.scss */
 .search .search-end.bottom {
   padding-top: 0;
 }
 
-/* line 165, sass/_other.scss */
+/* line 165, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_other.scss */
 .search-no-results .search-end.top .search-form-container {
   display: none;
 }
 
 /* 500px */
 @media all and (min-width: 31.25em) {
-  /* line 174, sass/_other.scss */
+  /* line 174, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_other.scss */
   .search-form input[type="submit"] {
     max-width: 13.875em;
   }
 }
 /* 800px */
 @media all and (min-width: 50em) {
-  /* line 185, sass/_other.scss */
+  /* line 185, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_other.scss */
   .error404 .entry-header {
     padding-top: 2.25em;
   }
 
-  /* line 191, sass/_other.scss */
+  /* line 191, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_other.scss */
   .search .container {
     padding: 1.5em 0;
   }
-  /* line 194, sass/_other.scss */
+  /* line 194, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_other.scss */
   .search .search-end {
     padding: 1.5em 14.333% 2.25em;
   }
 }
 /* 1100px */
 @media all and (min-width: 68.75em) {
-  /* line 205, sass/_other.scss */
+  /* line 205, /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite/sass/_other.scss */
   .search .search-end {
     padding: 1.5em 12.5% 2.25em;
   }
