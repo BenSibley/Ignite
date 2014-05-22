@@ -20,8 +20,8 @@ if ( comments_open() ) { ?>
                     <p class="previous-comment"><?php previous_comments_link(); ?></p><p class="next-comment"><?php next_comments_link(); ?></p>
                 </nav>
             <?php } ?>
-            <?php comment_form(); ?>       
-<?php 
+            <?php comment_form(); ?>
+<?php
 } elseif(!comments_open() && have_comments() && pings_open() ) { ?>
     <section id="comments" class="comments">
         <div class="comments-number">

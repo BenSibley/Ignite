@@ -359,4 +359,9 @@ function ct_ignite_body_class( $classes ) {
 }
 add_filter( 'body_class', 'ct_ignite_body_class' );
 
+
+// fix for bug with Disqus saying comments are closed
+remove_filter( 'comments_template', 'dsq_comments_template' );
+add_filter( 'comments_template', 'dsq_comments_template', 99 ); // You can use any priority higher than '10'
+
 ?>

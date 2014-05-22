@@ -117,12 +117,24 @@ add_action( 'wp_dashboard_setup', 'ct_ignite_add_dashboard_widget' );
 function ct_ignite_widget_contents() { ?>
 
     <ol>
-        <li>For self-help, <a target="_blank" href="http://competethemes.com/documentation">visit the knowledgebase</a></li>
-        <li>For support, <a target="_blank" href="http://wordpress.org/support/theme/ignite">visit the support forum</a></li>
+        <li>For self-help, <a target="_blank" href="http://www.competethemes.com/documentation/ignite-knowledgebase/?utm_source=WordPress%20Dashboard&utm_medium=User%20Admin&utm_content=Ignite&utm_campaign=Admin%20Support%20Widgets">visit the knowledgebase</a></li>
+        <li>For community support, <a target="_blank" href="http://wordpress.org/support/theme/ignite">visit the support forum</a></li>
         <li>If you like Ignite, <a target="_blank" href="http://wordpress.org/support/view/theme-reviews/ignite">take 1 minute to leave a review</a></li>
     </ol>
 
 	<?php
-} 
+}
+
+function ct_ignite_support_widget_styles() {
+
+    echo "
+    <style>
+        #ct_ignite_dashboard_widget{background: white;}
+        #ct_ignite_dashboard_widget h3{background: #E54C56; color: white;}
+    </style>";
+
+}
+
+add_action('admin_head', 'ct_ignite_support_widget_styles');
 
 ?>
