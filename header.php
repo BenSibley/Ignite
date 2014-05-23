@@ -1,17 +1,15 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
-
 <head>
 
-    <!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
-    <!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
-    <!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+    <!--[if lt IE 7 ]> <html class="ie6" <?php language_attributes(); ?>> <![endif]-->
+    <!--[if IE 7 ]>    <html class="ie7" <?php language_attributes(); ?>> <![endif]-->
+    <!--[if IE 8 ]>    <html class="ie8" <?php language_attributes(); ?>> <![endif]-->
     <!--[if lt IE 9]>
-        <script src="<?php echo get_template_directory_uri(); ?>/js/html5shiv/html5shiv.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/html5shiv/html5shiv.js"></script>
     <![endif]-->
-    <!--[if IE 9 ]><html class="ie9"> <![endif]-->
-    <!--[if (gt IE 9)|!(IE)]><!--> <html> <!--<![endif]-->
-    
+    <!--[if IE 9 ]><html class="ie9" <?php language_attributes(); ?>> <![endif]-->
+    <!--[if (gt IE 9)|!(IE)]><!--> <html <?php language_attributes(); ?>> <!--<![endif]-->
+
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
     <title><?php wp_title("",true); ?></title>
 
