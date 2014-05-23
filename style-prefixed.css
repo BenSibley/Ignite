@@ -37,6 +37,7 @@ body {
   -ms-word-wrap: break-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
+  -ms-hyphens: auto;
   hyphens: auto;
 }
 
@@ -48,8 +49,6 @@ body {
   background: #eeede8;
   margin: 0 auto;
   -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
   /* for when the menu is toggled open */
 }
@@ -63,8 +62,6 @@ body {
   background: #373b41;
   opacity: 0;
   -webkit-transition: opacity 0.3s ease;
-  -moz-transition: opacity 0.3s ease;
-  -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
 }
 
@@ -75,8 +72,6 @@ p {
 a {
   color: #e6a117;
   -webkit-transition: color 0.2s ease;
-  -moz-transition: color 0.2s ease;
-  -o-transition: color 0.2s ease;
   transition: color 0.2s ease;
 }
 a:link {
@@ -244,12 +239,8 @@ textarea {
   font-family: "lusitana", serif;
   font-size: 0.813em;
   line-height: 1.85;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
   border-radius: 0;
   -webkit-transition: background 0.2s ease;
-  -moz-transition: background 0.2s ease;
-  -o-transition: background 0.2s ease;
   transition: background 0.2s ease;
   -webkit-appearance: none;
 }
@@ -344,8 +335,6 @@ a img {
   background: none;
   border: none;
   -webkit-transition: color 0.2s ease;
-  -moz-transition: color 0.2s ease;
-  -o-transition: color 0.2s ease;
   transition: color 0.2s ease;
 }
 .toggle-navigation:hover {
@@ -509,8 +498,6 @@ a img {
     background: white;
     position: relative;
     -webkit-transition: background 0.2s ease;
-    -moz-transition: background 0.2s ease;
-    -o-transition: background 0.2s ease;
     transition: background 0.2s ease;
   }
   .menu-primary-items li ul,
@@ -521,14 +508,11 @@ a img {
     margin: 0;
     z-index: 3;
     -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
     -ms-backface-visibility: hidden;
     -o-backface-visibility: hidden;
     backface-visibility: hidden;
     /* remove slight wiggle caused by opacity change */
     -webkit-transition: opacity 0.2s ease;
-    -moz-transition: opacity 0.2s ease;
-    -o-transition: opacity 0.2s ease;
     transition: opacity 0.2s ease;
   }
   .menu-primary-items li ul:hover ul, .menu-primary-items li ul:focus ul,
@@ -727,6 +711,7 @@ a img {
 
 .featured-image {
   height: 12em;
+  -webkit-background-size: cover;
   background-size: cover;
   background-position: 50%;
   position: relative;
@@ -793,8 +778,6 @@ a img {
   margin: 2.625em 0 2.5005em;
   /* subtracted 2px border on excerpt-content */
   -webkit-transition: background 0.2s ease;
-  -moz-transition: background 0.2s ease;
-  -o-transition: background 0.2s ease;
   transition: background 0.2s ease;
 }
 .more-link:link, .more-link:visited {
@@ -990,8 +973,6 @@ a img {
   /* used to set neg z-index so main overlay covers it */
   background: #eeede8;
   -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
   /* for when the menu is toggled open */
   /* widget-specific styling */
@@ -1006,8 +987,6 @@ a img {
   background: #373b41;
   opacity: 0;
   -webkit-transition: opacity 0.3s ease;
-  -moz-transition: opacity 0.3s ease;
-  -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
 }
 .sidebar-primary-container .widget {
@@ -1028,8 +1007,6 @@ a img {
   margin: 0;
   border-bottom: solid 1px #d9dcdf;
   -webkit-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 .sidebar-primary-container .widget ul li:last-child {
@@ -1078,8 +1055,6 @@ a img {
   float: right;
   margin-top: -1.75em;
   -webkit-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 .sidebar-primary-container .widget-archives ul li:hover span,
@@ -1221,8 +1196,6 @@ li.pingback {
 .comment-author img {
   width: 3em;
   height: auto;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
   border-radius: 50%;
   float: left;
   margin-right: 0.75em;
@@ -1398,8 +1371,6 @@ li.pingback {
   padding: 1.5em;
   background: #373b41;
   -webkit-transition: top 0.2s ease;
-  -moz-transition: top 0.2s ease;
-  -o-transition: top 0.2s ease;
   transition: top 0.2s ease;
 }
 .skip-content:focus {
@@ -1433,8 +1404,6 @@ li.pingback {
   padding: 3em 3.703% 0;
   background: #eeede8;
   -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 .breadcrumbs a {
