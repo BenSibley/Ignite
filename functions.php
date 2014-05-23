@@ -7,11 +7,7 @@ function ct_ignite_load_javascript_files() {
 
     // enqueues media query support polyfill for ie8 
     if(! is_admin() ) {
-        wp_enqueue_script('functions', get_template_directory_uri() . '/js/functions.min.js', array('jquery'),'', true);
-        wp_enqueue_script('fitvids', get_template_directory_uri() . '/js/fitvids.min.js', array('jquery'),'', true);
-        wp_enqueue_script('placeholders', get_template_directory_uri() . '/js/placeholders.min.js', array('jquery'),'', true);
-        wp_enqueue_script('media-query-polyfill', get_template_directory_uri() . '/js/respond.min.js', array('jquery'),'', true);
-        wp_enqueue_script('tappy', get_template_directory_uri() . '/js/tappy.min.js', array('jquery'),'', true);
+        wp_enqueue_script('production', get_template_directory_uri() . '/js/build/production.min.js', array('jquery'),'', true);
 
         wp_enqueue_style('google-fonts');
         wp_enqueue_style('font-awesome', get_template_directory_uri() . '/assets/font-awesome/css/font-awesome.min.css');
