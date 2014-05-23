@@ -27,7 +27,7 @@ function ct_ignite_customize_register_logo( $wp_customize ) {
 			'default'           => '',
 			'type'              => 'theme_mod',
 			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'esc_url',
+			'sanitize_callback' => 'esc_url_raw',
 			//'transport'         => 'postMessage'
 		)
 	);
@@ -58,6 +58,19 @@ add_action('customize_register', 'ct_ignite_add_social_sites_customizer');
 
 function ct_ignite_add_social_sites_customizer($wp_customize) {
 
+    /* create custom control for url input so http:// is automatically added */
+    class ct_ignite_url_input_control extends WP_Customize_Control {
+        public $type = 'url';
+
+        public function render_content() {
+            ?>
+            <label>
+                <span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
+                <input type="url" <?php $this->link(); ?> value="<?php echo esc_url_raw( $this->value() ); ?>" />
+            </label>
+        <?php
+        }
+    }
 	$wp_customize->add_section( 'ct_ignite_social_settings', array(
 			'title'          => 'Social Media Icons',
 			'priority'       => 35,
@@ -71,15 +84,19 @@ function ct_ignite_add_social_sites_customizer($wp_customize) {
 		$wp_customize->add_setting( "$social_site", array(
                 'type'              => 'theme_mod',
                 'capability'        => 'edit_theme_options',
-                'sanitize_callback' => 'esc_url'
+                'sanitize_callback' => 'esc_url_raw'
 		) );
 
-		$wp_customize->add_control( $social_site, array(
+		$wp_customize->add_control(
+            new ct_ignite_url_input_control(
+            $wp_customize, $social_site, array(
 				'label'   => __( "$social_site url:", 'ct_ignite_icon' ),
 				'section' => 'ct_ignite_social_settings',
 				'type'    => 'text',
 				'priority'=> $priority,
-		) );
+		    )
+            )
+        );
 	
 		$priority = $priority + 5;
 	}

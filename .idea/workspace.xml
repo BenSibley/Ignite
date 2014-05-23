@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/comments.php" afterPath="$PROJECT_DIR$/comments.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions-admin.php" afterPath="$PROJECT_DIR$/functions-admin.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -28,12 +27,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="functions.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="functions.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="344" column="5" selection-start="12655" selection-end="12655" vertical-scroll-proportion="0.335" vertical-offset="4959" max-vertical-offset="5580">
+            <state line="360" column="0" selection-start="13002" selection-end="13002" vertical-scroll-proportion="-18.625" vertical-offset="4953" max-vertical-offset="5595">
               <folding>
-                <marker date="1400735394000" expanded="true" signature="9074:9290" placeholder="..." />
+                <marker date="1400806935000" expanded="true" signature="3282:3650" placeholder="..." />
+                <marker date="1400806935000" expanded="true" signature="3351:3641" placeholder="..." />
+                <marker date="1400806935000" expanded="true" signature="6658:7666" placeholder="..." />
+                <marker date="1400806935000" expanded="true" signature="6728:7656" placeholder="..." />
+                <marker date="1400806935000" expanded="true" signature="6769:6960" placeholder="..." />
+                <marker date="1400806935000" expanded="true" signature="7002:7278" placeholder="..." />
+                <marker date="1400806935000" expanded="true" signature="7317:7636" placeholder="..." />
+                <marker date="1400806935000" expanded="true" signature="9074:9290" placeholder="..." />
+                <marker date="1400806935000" expanded="true" signature="10980:11078" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -57,12 +64,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="functions-admin.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="functions-admin.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/functions-admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="127" column="0" selection-start="4171" selection-end="4451" vertical-scroll-proportion="0.0" vertical-offset="1905" max-vertical-offset="2175">
+            <state line="90" column="25" selection-start="2577" selection-end="2577" vertical-scroll-proportion="0.86984813" vertical-offset="949" max-vertical-offset="2430">
               <folding>
-                <marker date="1400276749000" expanded="true" signature="4238:4382" placeholder="..." />
+                <marker date="1400807208000" expanded="true" signature="4868:5012" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -180,18 +187,16 @@
         <option value="$PROJECT_DIR$/header.php" />
         <option value="$PROJECT_DIR$/sass/_info.scss" />
         <option value="$PROJECT_DIR$/readme.txt" />
-        <option value="$PROJECT_DIR$/functions-admin.php" />
         <option value="$PROJECT_DIR$/comments.php" />
         <option value="$PROJECT_DIR$/functions.php" />
+        <option value="$PROJECT_DIR$/functions-admin.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="87" />
-    <option name="y" value="22" />
-    <option name="width" value="1193" />
-    <option name="height" value="778" />
+    <option name="width" value="1280" />
+    <option name="height" value="800" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -219,6 +224,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -281,7 +287,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -289,9 +294,9 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../uptown-compete-themes" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../drop" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="FullScreen" value="false" />
+    <property name="FullScreen" value="true" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -361,19 +366,23 @@
       <created>1399053241205</created>
       <updated>1399053241205</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="added fix for Disqus saying 'comments are closed'">
+      <created>1400735783403</created>
+      <updated>1400735783403</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="87" y="22" width="1193" height="778" extended-state="0" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2479452" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25456125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24878837" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -407,7 +416,8 @@
     <MESSAGE value="small updates from additional review" />
     <MESSAGE value="v1.03" />
     <MESSAGE value="loop-pagination update, removed CMB from licenses, added missing files. v1.04" />
-    <option name="LAST_COMMIT_MESSAGE" value="loop-pagination update, removed CMB from licenses, added missing files. v1.04" />
+    <MESSAGE value="added fix for Disqus saying 'comments are closed'" />
+    <option name="LAST_COMMIT_MESSAGE" value="added fix for Disqus saying 'comments are closed'" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -618,6 +628,27 @@
         <state line="18" column="7" selection-start="549" selection-end="549" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="360" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/content-page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="18" selection-start="362" selection-end="362" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="240">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="74" selection-start="716" selection-end="716" vertical-scroll-proportion="0.0" vertical-offset="116" max-vertical-offset="1080">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comments.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="17" selection-start="506" selection-end="506" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="1170">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/functions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="43" column="4" selection-start="1696" selection-end="2093" vertical-scroll-proportion="0.0" vertical-offset="223" max-vertical-offset="1125">
@@ -647,50 +678,37 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/readme.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="25" selection-start="284" selection-end="284" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="540">
-          <folding />
-        </state>
-      </provider>
       <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/content-page.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="18" selection-start="362" selection-end="362" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="240">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/content.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="74" selection-start="716" selection-end="716" vertical-scroll-proportion="0.0" vertical-offset="116" max-vertical-offset="1080">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions-admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="127" column="0" selection-start="4171" selection-end="4451" vertical-scroll-proportion="0.0" vertical-offset="1905" max-vertical-offset="2175">
-          <folding>
-            <marker date="1400276749000" expanded="true" signature="4238:4382" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/comments.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="17" selection-start="506" selection-end="506" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="1170">
+        <state line="7" column="25" selection-start="284" selection-end="284" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="540">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="344" column="5" selection-start="12655" selection-end="12655" vertical-scroll-proportion="0.335" vertical-offset="4959" max-vertical-offset="5580">
+        <state line="360" column="0" selection-start="13002" selection-end="13002" vertical-scroll-proportion="-18.625" vertical-offset="4953" max-vertical-offset="5595">
           <folding>
-            <marker date="1400735394000" expanded="true" signature="9074:9290" placeholder="..." />
+            <marker date="1400806935000" expanded="true" signature="3282:3650" placeholder="..." />
+            <marker date="1400806935000" expanded="true" signature="3351:3641" placeholder="..." />
+            <marker date="1400806935000" expanded="true" signature="6658:7666" placeholder="..." />
+            <marker date="1400806935000" expanded="true" signature="6728:7656" placeholder="..." />
+            <marker date="1400806935000" expanded="true" signature="6769:6960" placeholder="..." />
+            <marker date="1400806935000" expanded="true" signature="7002:7278" placeholder="..." />
+            <marker date="1400806935000" expanded="true" signature="7317:7636" placeholder="..." />
+            <marker date="1400806935000" expanded="true" signature="9074:9290" placeholder="..." />
+            <marker date="1400806935000" expanded="true" signature="10980:11078" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions-admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="90" column="25" selection-start="2577" selection-end="2577" vertical-scroll-proportion="0.86984813" vertical-offset="949" max-vertical-offset="2430">
+          <folding>
+            <marker date="1400807208000" expanded="true" signature="4868:5012" placeholder="..." />
           </folding>
         </state>
       </provider>
