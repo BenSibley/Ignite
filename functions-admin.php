@@ -221,7 +221,6 @@ function ct_ignite_add_social_sites_customizer($wp_customize) {
             $wp_customize, $social_site, array(
 				'label'   => __( "$social_site url:", 'ct_ignite_icon' ),
 				'section' => 'ct_ignite_social_settings',
-				'type'    => 'text',
 				'priority'=> $priority,
 		    )
             )
