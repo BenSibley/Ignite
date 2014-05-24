@@ -102,56 +102,44 @@ function ct_ignite_add_social_sites_customizer($wp_customize) {
 	}
 }
 
-// adds widget that aside uses to give people access to support
-function ct_ignite_add_dashboard_widget() {
-
-	wp_add_dashboard_widget(
-                 'ct_ignite_dashboard_widget',    // Widget slug.
-                 'Support Dashboard',   // Title.
-                 'ct_ignite_widget_contents' 	  // Display function.
-        );	
-        
-    // Globalize the metaboxes array, this holds all the widgets for wp-admin
- 	global $wp_meta_boxes;
- 	
- 	// Get the regular dashboard widgets array 
- 	// (which has our new widget already but at the end)
- 	$normal_dashboard = $wp_meta_boxes['dashboard']['normal']['core'];
- 	
- 	// Backup and delete our new dashboard widget from the end of the array
- 	$example_widget_backup = array( 'ct_ignite_dashboard_widget' => $normal_dashboard['ct_ignite_dashboard_widget'] );
- 	unset( $normal_dashboard['ct_ignite_dashboard_widget'] );
- 
- 	// Merge the two arrays together so our widget is at the beginning
- 	$sorted_dashboard = array_merge( $example_widget_backup, $normal_dashboard );
- 
- 	// Save the sorted array back into the original metaboxes 
- 	$wp_meta_boxes['dashboard']['normal']['core'] = $sorted_dashboard;
+/* create theme options page */
+function ct_ignite_register_menu_pages(){
+    add_menu_page( 'Ignite Theme Options', 'Ignite', 'manage_options', 'ignite-options', 'ct_ignite_options_content', plugins_url( 'myplugin/images/icon.png' ), 81 );
+    add_submenu_page( 'ignite-options', 'Options', 'Dashboard', 'manage_options', 'ignite-options', 'ct_ignite_options_content' );
+    add_submenu_page( 'ignite-options', 'Get Ignite Plus', 'Premium', 'manage_options', 'ignite-premium', 'ct_ignite_premium_callback' );
 }
-add_action( 'wp_dashboard_setup', 'ct_ignite_add_dashboard_widget' );
+add_action( 'admin_menu', 'ct_ignite_register_menu_pages' );
 
-// outputs contents for widget created by aside_add_dashboard_widget
-function ct_ignite_widget_contents() { ?>
-
-    <ol>
-        <li>For self-help, <a target="_blank" href="http://www.competethemes.com/documentation/ignite-knowledgebase/?utm_source=WordPress%20Dashboard&utm_medium=User%20Admin&utm_content=Ignite&utm_campaign=Admin%20Support%20Widgets">visit the knowledgebase</a></li>
-        <li>For community support, <a target="_blank" href="http://wordpress.org/support/theme/ignite">visit the support forum</a></li>
-        <li>If you like Ignite, <a target="_blank" href="http://wordpress.org/support/view/theme-reviews/ignite">take 1 minute to leave a review</a></li>
-    </ol>
-
-	<?php
+/* callback used to add content to options page */
+function ct_ignite_options_content(){
+    ?>
+    <div id="ignite-dashboard-wrap" class="wrap" style="max-width: 600px"><div id="icon-tools" class="icon32"></div>
+        <h2>Ignite Dashboard</h2>
+        <p>Thanks for downloading Ignite!</p>
+        <p>If you can, please take a minute to leave a review so other users know what to expect from this theme.</p>
+        <p><a target="_blank" href="http://wordpress.org/support/view/theme-reviews/ignite"><strong>Leave a review</strong></a></p>
+        <hr />
+        <h3>Customization</h3>
+        <p>If you're looking to customize your site, you can upload your logo and add your social media profiles with the customizer.</p>
+        <p><a href="customize.php"><strong>Use the customizer</strong></a></p>
+        <hr />
+        <h3>Support</h3>
+        <ol>
+            <li><a target="_blank" href="http://www.competethemes.com/documentation/ignite-knowledgebase/?utm_source=WordPress%20Dashboard&utm_medium=User%20Admin&utm_content=Ignite&utm_campaign=Admin%20Support%20Widgets">Visit the knowledgebase</a> for self-help.</li>
+            <li><a target="_blank" href="http://wordpress.org/support/theme/ignite">Visit the support forum</a> for community support.</li>
+        </ol>
+        <p>I (Ben) visit the support forum everyday, so I will find and answer any questions you have there.</p>
+        <hr />
+        <h3>Premium</h3>
+        <p>There is a premium version of Ignite called "Ignite Plus" available. If you're interested in more customization options and functionality for Ignite, take a minute to check out the "Premium" page.</p>
+        <p><a href="?page=ignite-premium"><strong>View Premium Page</strong></a></p>
+    </div>
+    <?php
 }
 
-function ct_ignite_support_widget_styles() {
+function ct_ignite_premium_callback(){
 
-    echo "
-    <style>
-        #ct_ignite_dashboard_widget{background: white;}
-        #ct_ignite_dashboard_widget h3{background: #E54C56; color: white;}
-    </style>";
-
+    echo '<div class="wrap"><div id="icon-tools" class="icon32"></div>';
+    echo '<h2>Premium</h2>';
+    echo '</div>';
 }
-
-add_action('admin_head', 'ct_ignite_support_widget_styles');
-
-?>
