@@ -17,7 +17,7 @@
   }
 }
 .further-reading {
-  margin: $baseline-height * 2 0;
+  margin: $baseline-height 0;
 
   span {
     border-bottom: solid 1px $orange;
@@ -39,6 +39,43 @@
     }
   }
 }
+.author-meta {
+  background: #f5f5f5;
+  border: solid 1px $off-white;
+  padding: $baseline-height;
+  margin: $baseline-height 0;
+
+  h4 {
+    font-weight: 700;
+    border-bottom: solid 1px $orange;
+    display: inline-block;
+    padding-bottom: 3px;
+
+    a {
+      text-decoration: none;
+      color: $gray;
+
+      &:link,
+      &:visited {
+        color: $gray;
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        color: $orange;
+      }
+    }
+  }
+  img {
+    border-radius: 50%;
+    float: left;
+    margin-right: $baseline-height;
+  }
+  p {
+    margin-top: $baseline-height / 2;
+    margin-left: $baseline-height * 4;
+  }
+}
 .entry-categories {
   @extend .excerpt-categories;
 }
@@ -50,7 +87,6 @@
 @media all and (min-width: 43.75em){
 
   .further-reading {
-    margin-bottom: $baseline-height * 1.5;
 
     p {
       width: 50%;

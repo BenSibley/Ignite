@@ -1,0 +1,23 @@
+/* styles for Ignite menus */
+
+#ignite-dashboard-wrap > div {
+    margin-bottom: 36px;
+}
+#ignite-dashboard-wrap hr {
+    margin-bottom: 24px;
+}
+
+/* 900px */
+@media all and (min-width: 56.25em){
+
+    #ignite-dashboard-wrap > div {
+        width: 29%;
+        float: left;
+    }
+    #ignite-dashboard-wrap .support {
+        margin: 0 3%;
+        padding: 0 2%;
+        border-left: solid 1px #ddd;
+        border-right: solid 1px #ddd;
+    }
+}

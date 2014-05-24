@@ -1101,7 +1101,7 @@ a img {
 }
 
 .further-reading {
-  margin: 3em 0;
+  margin: 1.5em 0;
 }
 .further-reading span {
   border-bottom: solid 1px #e6a117;
@@ -1120,11 +1120,40 @@ a img {
   color: #e6a117;
 }
 
+.author-meta {
+  background: #f5f5f5;
+  border: solid 1px #e8eaee;
+  padding: 1.5em;
+  margin: 1.5em 0;
+}
+.author-meta h4 {
+  font-weight: 700;
+  border-bottom: solid 1px #e6a117;
+  display: inline-block;
+  padding-bottom: 3px;
+}
+.author-meta h4 a {
+  text-decoration: none;
+  color: #373b41;
+}
+.author-meta h4 a:link, .author-meta h4 a:visited {
+  color: #373b41;
+}
+.author-meta h4 a:hover, .author-meta h4 a:active, .author-meta h4 a:focus {
+  color: #e6a117;
+}
+.author-meta img {
+  border-radius: 50%;
+  float: left;
+  margin-right: 1.5em;
+}
+.author-meta p {
+  margin-top: 0.75em;
+  margin-left: 6em;
+}
+
 /* 700px */
 @media all and (min-width: 43.75em) {
-  .further-reading {
-    margin-bottom: 2.25em;
-  }
   .further-reading p {
     width: 50%;
     display: inline-block;

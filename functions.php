@@ -15,8 +15,16 @@ function ct_ignite_load_javascript_files() {
     // enqueues the comment-reply script on posts & pages.  This script is included in WP by default
     if( is_singular() && comments_open() && get_option('thread_comments') ) wp_enqueue_script( 'comment-reply' ); 
 }
-
 add_action('wp_enqueue_scripts', 'ct_ignite_load_javascript_files' );
+
+/* enqueue styles used on theme options page */
+function ct_ignite_enqueue_admin_styles($hook){
+
+    if ( 'toplevel_page_ignite-options' == $hook) {
+        wp_enqueue_style('style-admin', get_template_directory_uri() . '/style-admin.css');
+    }
+}
+add_action('admin_enqueue_scripts',	'ct_ignite_enqueue_admin_styles' );
 
 /* Load the core theme framework. */
 require_once( trailingslashit( get_template_directory() ) . 'library/hybrid.php' );
@@ -354,6 +362,62 @@ function ct_ignite_body_class( $classes ) {
     return $classes;
 }
 add_filter( 'body_class', 'ct_ignite_body_class' );
+
+/* outputs the inline css to position the logo */
+function ct_ignite_logo_positioning_css(){
+
+    $updown =  get_theme_mod( 'logo_positioning_updown_setting');
+    $leftright =  get_theme_mod( 'logo_positioning_leftright_setting');
+
+    if($updown || $leftright){
+
+        $css = "
+            #site-header .logo {
+                position: relative;
+                bottom: " . $updown . "px;
+                left: " . $leftright . "px;
+                right: auto;
+                top: auto;
+        }";
+        wp_add_inline_style('style', $css);
+    }
+}
+add_action('wp_enqueue_scripts','ct_ignite_logo_positioning_css');
+
+/* outputs the inline css to position the logo */
+function ct_ignite_logo_size_css(){
+
+    $width =  get_theme_mod( 'logo_size_width_setting');
+    $height =  get_theme_mod( 'logo_size_height_setting');
+
+    if($width || $height){
+
+        $max_width = 156 + $width;
+        $max_height = 59 + $height;
+
+        $css = "
+            #site-header .logo {
+                max-width: " . $max_width . "px;
+                max-height: " . $max_height . "px;
+        }";
+        wp_add_inline_style('style', $css);
+    }
+}
+add_action('wp_enqueue_scripts','ct_ignite_logo_size_css');
+
+/* outputs the inline css to switch the layout if sidebar on left radio button is active */
+function ct_ignite_author_meta_css(){
+
+    $show_author_meta = get_theme_mod('ct_ignite_author_meta_settings');
+
+    /* if the sidebar is on the left then add the necessary inline styles */
+    if($show_author_meta == 'hide') {
+        $css = ".author-meta {display: none;}";
+        wp_add_inline_style('style', $css);
+    }
+}
+add_action('wp_enqueue_scripts','ct_ignite_author_meta_css');
+
 
 // fix for bug with Disqus saying comments are closed
 if ( function_exists( 'dsq_options' ) ) {
