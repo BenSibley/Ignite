@@ -1,7 +1,7 @@
 <?php 
 
 if( is_home() ) { ?>
-    <div class='excerpt <?php hybrid_post_class(); ct_ignite_contains_featured(); ?>'>
+    <div <?php post_class(); ?>>
     	<?php ct_ignite_featured_image(); ?>
         <div class="excerpt-meta-top">
             Published <?php echo get_the_date('F jS, Y'); ?> by <?php the_author_posts_link(); ?>
@@ -21,7 +21,7 @@ if( is_home() ) { ?>
 	</div>
 <?php     
 } elseif( is_single() ) { ?>
-    <div class='entry <?php hybrid_post_class(); ct_ignite_contains_featured(); ?>'>
+    <div <?php post_class(); ?>>
         <?php ct_ignite_featured_image(); ?>
         <div class="entry-meta-top">
             Published <?php echo get_the_date('F jS, Y'); ?> by <?php the_author_posts_link(); ?>
@@ -58,7 +58,7 @@ if( is_home() ) { ?>
     </div>
 <?php 
 } else { ?>
-    <div class='excerpt <?php hybrid_post_class(); ct_ignite_contains_featured(); ?>'>
+    <div <?php post_class(); ?>>
         <?php ct_ignite_featured_image(); ?>
         <div class="excerpt-meta-top">
             Published <?php echo get_the_date('F jS, Y'); ?> by <?php the_author_posts_link(); ?>

@@ -7,7 +7,7 @@
  * @package    HybridCore
  * @subpackage Functions
  * @author     Justin Tadlock <justin@justintadlock.com>
- * @copyright  Copyright (c) 2008 - 2013, Justin Tadlock
+ * @copyright  Copyright (c) 2008 - 2014, Justin Tadlock
  * @link       http://themehybrid.com/hybrid-core
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
@@ -99,7 +99,7 @@ function hybrid_get_parent_textdomain() {
 
 		$textdomain = $theme->get( 'TextDomain' ) ? $theme->get( 'TextDomain' ) : get_template();
 
-		$hybrid->parent_textdomain = sanitize_key( apply_filters( hybrid_get_prefix() . '_parent_textdomain', $textdomain ) );
+		$hybrid->parent_textdomain = sanitize_key( apply_filters( 'hybrid_parent_textdomain', $textdomain ) );
 	}
 
 	/* Return the expected textdomain of the parent theme. */
@@ -133,7 +133,7 @@ function hybrid_get_child_textdomain() {
 
 		$textdomain = $theme->get( 'TextDomain' ) ? $theme->get( 'TextDomain' ) : get_stylesheet();
 
-		$hybrid->child_textdomain = sanitize_key( apply_filters( hybrid_get_prefix() . '_child_textdomain', $textdomain ) );
+		$hybrid->child_textdomain = sanitize_key( apply_filters( 'hybrid_child_textdomain', $textdomain ) );
 	}
 
 	/* Return the expected textdomain of the child theme. */
@@ -411,4 +411,36 @@ function hybrid_extensions_ngettext_with_context( $translated, $single, $plural,
 	return $translated;
 }
 
-?>
+/**
+ * Gets the language for the currently-viewed page.  It strips the region from the locale if needed 
+ * and just returns the language code.
+ *
+ * @since  2.0.0
+ * @access public
+ * @param  string  $locale
+ * @return string
+ */
+function hybrid_get_language( $locale = '' ) {
+
+	if ( empty( $locale ) )
+		$locale = get_locale();
+
+	return preg_replace( '/(.*?)_.*?$/i', '$1', $locale );
+}
+
+/**
+ * Gets the region for the currently viewed page.  It strips the language from the locale if needed.  Note that 
+ * not all locales will have a region, so this might actually return the same thing as `hybrid_get_language()`.
+ *
+ * @since  2.0.0
+ * @access public
+ * @param  string  $locale
+ * @return string
+ */
+function hybrid_get_region( $locale = '' ) {
+
+	if ( empty( $locale ) )
+		$locale = get_locale();
+
+	return preg_replace( '/.*?_(.*?)$/i', '$1', $locale );
+}

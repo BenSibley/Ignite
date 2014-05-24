@@ -6,7 +6,7 @@
  * @package    HybridCore
  * @subpackage Functions
  * @author     Justin Tadlock <justin@justintadlock.com>
- * @copyright  Copyright (c) 2008 - 2013, Justin Tadlock
+ * @copyright  Copyright (c) 2008 - 2014, Justin Tadlock
  * @link       http://themehybrid.com/hybrid-core
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
@@ -21,20 +21,6 @@ add_action( 'init', 'hybrid_register_meta' );
  * @return void
  */
 function hybrid_register_meta() {
-
-	/* Register meta if the theme supports the 'hybrid-core-seo' feature. */
-	if ( current_theme_supports( 'hybrid-core-seo' ) ) {
-
-		/* Register 'Title', 'Description', and 'Keywords' meta for posts. */
-		register_meta( 'post', 'Title', 'hybrid_sanitize_meta' );
-		register_meta( 'post', 'Description', 'hybrid_sanitize_meta' );
-		register_meta( 'post', 'Keywords', 'hybrid_sanitize_meta' );
-
-		/* Register 'Title', 'Description', and 'Keywords' meta for users. */
-		register_meta( 'user', 'Title', 'hybrid_sanitize_meta' );
-		register_meta( 'user', 'Description', 'hybrid_sanitize_meta' );
-		register_meta( 'user', 'Keywords', 'hybrid_sanitize_meta' );
-	}
 
 	/* Register meta if the theme supports the 'hybrid-core-template-hierarchy' feature. */
 	if ( current_theme_supports( 'hybrid-core-template-hierarchy' ) ) {
@@ -62,5 +48,3 @@ function hybrid_register_meta() {
 function hybrid_sanitize_meta( $meta_value, $meta_key, $meta_type ) {
 	return strip_tags( $meta_value );
 }
-
-?>

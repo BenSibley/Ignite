@@ -8,10 +8,10 @@
 .excerpt {
   background: white;
   margin: $baseline-height auto;
-  padding: 0 8% $baseline-height * 1.5;
+  padding: $baseline-height 8% $baseline-height * 1.5;
 }
-.excerpt.no-featured-image {
-  padding-top: $baseline-height;
+.excerpt.has-post-thumbnail {
+  padding-top: 0;
 }
 .featured-image {
   height: $baseline-height * 8;
@@ -231,8 +231,11 @@
 /* 1000px */
 @media all and (min-width: 62.5em) {
 
-  .excerpt.no-featured-image {
+  .excerpt {
     padding-top: $baseline-height * 2;
+  }
+  .excerpt.has-post-thumbnail {
+    padding-top: 0;
   }
   .excerpt-title {
     font-size: 2.625em;
@@ -255,7 +258,10 @@
   }
   .excerpt {
     margin: $baseline-height * 2 0;
-    padding: 0 12.5% $baseline-height * 1.5;
+    padding: $baseline-height * 2 12.5% $baseline-height * 1.5;
+  }
+  .excerpt.has-post-thumbnail {
+    padding-top: 0;
   }
   .featured-image {
     height: $baseline-height * 14;

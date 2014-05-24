@@ -47,7 +47,6 @@ function ct_ignite_theme_setup() {
     
 	/* Theme-supported features go here. */
     add_theme_support( 'hybrid-core-menus', array( 'primary' ));
-    add_theme_support( 'hybrid-core-sidebars', array( 'primary' ) );
     add_theme_support( 'hybrid-core-widgets' );
     add_theme_support( 'hybrid-core-template-hierarchy' );
     add_theme_support( 'hybrid-core-styles', array( 'style','reset', 'gallery' ) );
@@ -56,10 +55,20 @@ function ct_ignite_theme_setup() {
     add_theme_support( 'cleaner-gallery' );
     add_theme_support( 'breadcrumb-trail' );
     add_theme_support( 'automatic-feed-links' ); //from WordPress core not theme hybrid
-    
+
     // adds the file with the customizer functionality
     require_once( trailingslashit( get_template_directory() ) . 'functions-admin.php' );
 }
+
+/* register primary sidebar */
+function ct_ignite_register_sidebar(){
+    hybrid_register_sidebar( array(
+        'name'         => __( 'Primary Sidebar' ),
+        'id'           => 'primary',
+        'description'  => __( 'The main sidebar' ),
+    ) );
+}
+add_action('widgets_init','ct_ignite_register_sidebar');
 
 // takes user input from the customizer and outputs linked social media icons
 function ct_ignite_social_media_icons() {
@@ -314,18 +323,6 @@ function ct_ignite_featured_image() {
     }
 }
 
-// does it contain a featured image?
-function ct_ignite_contains_featured() {
-
-    global $post;
-	
-	if(has_post_thumbnail( $post->ID ) ) {
-		echo " has-featured-image";
-	} else {
-		echo " no-featured-image";
-	}
-}
-
 // functions to allow styling of post count in widgets
 add_filter('get_archives_link', 'ct_ignite_archive_count_add_span');
 function ct_ignite_archive_count_add_span($links) {
@@ -362,6 +359,24 @@ function ct_ignite_body_class( $classes ) {
     return $classes;
 }
 add_filter( 'body_class', 'ct_ignite_body_class' );
+
+function ct_ignite_post_class_update($classes){
+
+    $remove = [];
+    $remove[] = 'entry';
+
+    if ( ! is_singular() ) {
+        foreach ( $classes as $key => $class ) {
+
+            if ( in_array( $class, $remove ) ){
+                unset( $classes[ $key ] );
+                $classes[] = 'excerpt';
+            }
+        }
+    }
+    return $classes;
+}
+add_filter( 'post_class', 'ct_ignite_post_class_update' );
 
 /* outputs the inline css to position the logo */
 function ct_ignite_logo_positioning_css(){
@@ -424,5 +439,3 @@ if ( function_exists( 'dsq_options' ) ) {
     remove_filter( 'comments_template', 'dsq_comments_template' );
     add_filter( 'comments_template', 'dsq_comments_template', 99 ); // You can use any priority higher than '10'
 }
-
-?>

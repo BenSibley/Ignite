@@ -7,19 +7,22 @@
  * @package    HybridCore
  * @subpackage Functions
  * @author     Justin Tadlock <justin@justintadlock.com>
- * @copyright  Copyright (c) 2008 - 2013, Justin Tadlock
+ * @copyright  Copyright (c) 2008 - 2014, Justin Tadlock
  * @link       http://themehybrid.com/hybrid-core
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
 /* Register Hybrid Core styles. */
-add_action( 'wp_enqueue_scripts', 'hybrid_register_styles', 1 );
+add_action( 'wp_enqueue_scripts', 'hybrid_register_styles', 0 );
 
 /* Load Hybrid Core styles. */
 add_action( 'wp_enqueue_scripts', 'hybrid_enqueue_styles', 5 );
 
 /* Load the development stylsheet in script debug mode. */
-add_filter( 'stylesheet_uri', 'hybrid_min_stylesheet_uri', 10, 2 );
+add_filter( 'stylesheet_uri', 'hybrid_min_stylesheet_uri', 5, 2 );
+
+/* Filters the WP locale stylesheet. */
+add_filter( 'locale_stylesheet_uri', 'hybrid_locale_stylesheet_uri', 5 );
 
 /**
  * Registers stylesheets for the framework.  This function merely registers styles with WordPress using
@@ -77,15 +80,9 @@ function hybrid_enqueue_styles() {
 	if ( !is_array( $supports[0] ) )
 		return;
 
-	/* Get framework styles. */
-	$styles = hybrid_get_styles();
-
 	/* Loop through each of the core framework styles and enqueue them if supported. */
-	foreach ( $supports[0] as $style ) {
-
-		if ( isset( $styles[$style] ) )
-			wp_enqueue_style( $style );
-	}
+	foreach ( $supports[0] as $style )
+		wp_enqueue_style( $style );
 }
 
 /**
@@ -102,15 +99,7 @@ function hybrid_get_styles() {
 
 	/* Default styles available. */
 	$styles = array(
-		'one-five'   => array( 'version' => '20130523' ),
-		'18px'       => array( 'version' => '20130526' ),
-		'20px'       => array( 'version' => '20130526' ),
-		'21px'       => array( 'version' => '20130526' ),
-		'22px'       => array( 'version' => '20130526' ),
-		'24px'       => array( 'version' => '20130526' ),
-		'25px'       => array( 'version' => '20130526' ),
-		'drop-downs' => array( 'version' => '20110919' ),
-		'nav-bar'    => array( 'version' => '20110519' ),
+		'one-five'   => array( 'version' => '20131105' ),
 		'gallery'    => array( 'version' => '20130526' ),
 	);
 
@@ -132,7 +121,7 @@ function hybrid_get_styles() {
 	$styles['style'] = array( 'src' => get_stylesheet_uri(), 'version' => wp_get_theme()->get( 'Version' ) );
 
 	/* Return the array of styles. */
-	return apply_filters( hybrid_get_prefix() . '_styles', $styles );
+	return apply_filters( 'hybrid_styles', $styles );
 }
 
 /**
@@ -167,4 +156,49 @@ function hybrid_min_stylesheet_uri( $stylesheet_uri, $stylesheet_dir_uri ) {
 	return $stylesheet_uri;
 }
 
-?>
+/**
+ * Filters `locale_stylesheet_uri` with a more robust version for checking locale/language/region/direction 
+ * stylesheets.
+ *
+ * @since  2.0.0
+ * @access public
+ * @param  string  $stylesheet_uri
+ * @return string
+ */
+function hybrid_locale_stylesheet_uri( $stylesheet_uri ) {
+
+	$locale_style = hybrid_get_locale_style();
+
+	return !empty( $locale_style ) ? $locale_style : $stylesheet_uri;
+}
+
+/**
+ * Searches for a locale stylesheet.  This function looks for stylesheets in the `css` folder in the following 
+ * order:  1) $lang-$region.css, 2) $region.css, 3) $lang.css, and 4) $text_direction.css.  It first checks 
+ * the child theme for these files.  If they are not present, it will check the parent theme.  This is much 
+ * more robust than the WordPress locale stylesheet, allowing for multiple variations and a more flexible 
+ * hierarchy.
+ *
+ * @since  2.0.0
+ * @access public
+ * @return string
+ */
+function hybrid_get_locale_style() {
+
+	$locale = strtolower( str_replace( '_', '-', get_locale() ) );
+	$lang   = strtolower( hybrid_get_language() );
+	$region = strtolower( hybrid_get_region() );
+	$styles = array();
+
+	$styles[] = "css/{$locale}.css";
+
+	if ( $region !== $locale )
+		$styles[] = "css/{$region}.css";
+
+	if ( $lang !== $locale )
+		$styles[] = "css/{$lang}.css";
+
+	$styles[] = is_rtl() ? 'css/rtl.css' : 'css/ltr.css';
+
+	return hybrid_locate_theme_file( $styles );
+}
