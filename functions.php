@@ -46,7 +46,6 @@ function ct_ignite_theme_setup() {
 	$prefix = hybrid_get_prefix();
     
 	/* Theme-supported features go here. */
-    add_theme_support( 'hybrid-core-menus', array( 'primary' ));
     add_theme_support( 'hybrid-core-widgets' );
     add_theme_support( 'hybrid-core-template-hierarchy' );
     add_theme_support( 'hybrid-core-styles', array( 'style','reset', 'gallery' ) );
@@ -69,6 +68,12 @@ function ct_ignite_register_sidebar(){
     ) );
 }
 add_action('widgets_init','ct_ignite_register_sidebar');
+
+// register primary menu
+function ct_ignite_register_menu() {
+    register_nav_menu('primary', __('Primary'));
+}
+add_action('init', 'ct_ignite_register_menu');
 
 // takes user input from the customizer and outputs linked social media icons
 function ct_ignite_social_media_icons() {
