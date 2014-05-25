@@ -258,6 +258,16 @@ function ct_ignite_update_comment_field($comment_field) {
 }
 add_filter('comment_form_field_comment','ct_ignite_update_comment_field');
 
+
+// remove allowed tags text after comment form
+function ct_ignite_remove_comments_notes_after($defaults){
+
+    $defaults['comment_notes_after']='';
+    return $defaults;
+}
+
+add_action('comment_form_defaults', 'ct_ignite_remove_comments_notes_after');
+
 // for 'read more' tag excerpts
 function ct_ignite_excerpt() {
 	
