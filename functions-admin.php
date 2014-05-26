@@ -302,7 +302,7 @@ function ct_ignite_options_content(){
         <div>
             <h3>Customization</h3>
             <p>Ignite now has more customization options! Try out the new logo size & position tools with the customizer.</p>
-            <p><a class="button-primary" href="customize.php"><strong>Use the customizer</strong></a></p>
+            <p><a class="button-primary" href="customize.php">Use the customizer</a></p>
         </div>
         <div class="support">
             <h3>Support</h3>
@@ -315,7 +315,7 @@ function ct_ignite_options_content(){
         <div>
             <h3>Premium</h3>
             <p>There is now a premium version of Ignite called "Ignite Plus" available.</p>
-            <p><a class="button-primary" href="?page=ignite-premium"><strong>View Ignite Plus</strong></a></p>
+            <p><a target="_blank" class="button-primary" href="http://www.competethemes.com/ignite-plus/">View Ignite Plus</a></p>
         </div>
     </div>
     <?php
@@ -323,7 +323,42 @@ function ct_ignite_options_content(){
 
 function ct_ignite_premium_callback(){
 
-    echo '<div class="wrap"><div id="icon-tools" class="icon32"></div>';
-    echo '<h2>Premium</h2>';
-    echo '</div>';
+    ?>
+    <div id="ignite-premium-wrap" class="wrap"><div id="icon-tools" class="icon32"></div>
+        <h2>Ignite Plus</h2>
+        <p>Enjoy greater customization and functionality with the Ignite Plus upgrade.</p>
+        <div class="odd">
+            <h2>Custom Colors</h2>
+            <p>Change the colors of Ignite to match your brand or personal preference and watch your site update instantly.</p>
+            <img src="<?php echo get_template_directory_uri() . '/assets/images/ignite-custom-colors.jpg'; ?>" />
+        </div>
+        <div class="even">
+            <h2>3 New Widgets</h2>
+            <p>Ignite Plus includes a social media icons, recent posts w/ thumbnails, and recent comments w/ thumbnails widgets.</p>
+            <img src="<?php echo get_template_directory_uri() . '/assets/images/ignite-new-widgets.jpg'; ?>" />
+        </div>
+        <div class="odd">
+            <h2>Layout Options</h2>
+            <p>Switch between a left-sidebar and right-sidebar layout with a click of a button.</p>
+            <img src="<?php echo get_template_directory_uri() . '/assets/images/ignite-layout.jpg'; ?>" />
+        </div>
+        <div class="even">
+            <h2>Author-specific Social Icons</h2>
+            <p>Allow every author on your site to include social icons after every post.</p>
+            <img src="<?php echo get_template_directory_uri() . '/assets/images/ignite-author-social-icons.jpg'; ?>" />
+        </div>
+        <div class="odd">
+            <h2>After-content Widget Area</h2>
+            <p>Use the after-content widget area to add email signup forms or other widgets after every blog post.</p>
+            <img src="<?php echo get_template_directory_uri() . '/assets/images/ignite-after-content-widget.jpg'; ?>" />
+        </div>
+        <div class="even">
+            <h2>Footer Menu</h2>
+            <p>The additional footer menu is perfect for your TOS, privacy policy, and other required pages that don't need a lot of visibility.</p>
+            <img src="<?php echo get_template_directory_uri() . '/assets/images/ignite-footer-menu.jpg'; ?>" />
+        </div>
+        <p class="button-wrap"><a target="_blank" class="button-primary" href="http://www.competethemes.com/ignite-plus/">Download Ignite Plus</a></p>
+    </div>
+
+    <?php
 }
