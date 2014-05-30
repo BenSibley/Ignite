@@ -20,7 +20,7 @@ add_action('wp_enqueue_scripts', 'ct_ignite_load_javascript_files' );
 /* enqueue styles used on theme options page */
 function ct_ignite_enqueue_admin_styles($hook){
 
-    if ( 'toplevel_page_ignite-options' == $hook || 'ignite_page_ignite-premium' == $hook) {
+    if ( 'appearance_page_ignite-options' == $hook ) {
         wp_enqueue_style('style-admin', get_template_directory_uri() . '/style-admin.css');
     }
 }
@@ -377,7 +377,7 @@ add_filter( 'body_class', 'ct_ignite_body_class' );
 
 function ct_ignite_post_class_update($classes){
 
-    $remove = [];
+    $remove = array();
     $remove[] = 'entry';
 
     if ( ! is_singular() ) {

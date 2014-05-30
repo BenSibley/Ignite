@@ -284,12 +284,10 @@ function ct_ignite_sanitize_author_meta_settings($input){
 
 
 /* create theme options page */
-function ct_ignite_register_menu_pages(){
-    add_menu_page( 'Ignite Theme Options', 'Ignite', 'manage_options', 'ignite-options', 'ct_ignite_options_content', get_template_directory_uri() . '/assets/images/ignite-logo-small.png', 81 );
-    add_submenu_page( 'ignite-options', 'Options', 'Dashboard', 'manage_options', 'ignite-options', 'ct_ignite_options_content' );
-    add_submenu_page( 'ignite-options', 'Get Ignite Plus', 'Premium', 'manage_options', 'ignite-premium', 'ct_ignite_premium_callback' );
+function ct_ignite_register_theme_page(){
+    add_theme_page( 'Theme Options', 'Theme Options', 'edit_theme_options', 'ignite-options', 'ct_ignite_options_content', 'ct_ignite_options_content');
 }
-add_action( 'admin_menu', 'ct_ignite_register_menu_pages' );
+add_action( 'admin_menu', 'ct_ignite_register_theme_page' );
 
 /* callback used to add content to options page */
 function ct_ignite_options_content(){
@@ -318,12 +316,7 @@ function ct_ignite_options_content(){
             <p><a target="_blank" class="button-primary" href="http://www.competethemes.com/ignite-plus/">View Ignite Plus</a></p>
         </div>
     </div>
-    <?php
-}
-
-function ct_ignite_premium_callback(){
-
-    ?>
+    <hr />
     <div id="ignite-premium-wrap" class="wrap">
         <h2>Ignite Plus</h2>
         <p>Enjoy greater customization and functionality with the Ignite Plus upgrade.</p>
@@ -359,6 +352,5 @@ function ct_ignite_premium_callback(){
         </div>
         <p class="button-wrap"><a target="_blank" class="button-primary" href="http://www.competethemes.com/ignite-plus/">Download Ignite Plus</a></p>
     </div>
-
     <?php
 }

@@ -1,5 +1,8 @@
 /* Dashboard styles */
 
+#ignite-dashboard-wrap {
+    margin-bottom: 24px;
+}
 #ignite-dashboard-wrap > div {
     margin-bottom: 36px;
 }
@@ -10,6 +13,14 @@
 /* 900px */
 @media all and (min-width: 56.25em){
 
+    #ignite-dashboard-wrap:after {
+        content: ".";
+        display: block;
+        clear: both;
+        visibility: hidden;
+        line-height: 0;
+        height: 0;
+    }
     #ignite-dashboard-wrap > div {
         width: 29%;
         float: left;
@@ -24,6 +35,9 @@
 
 /* Premium styles */
 
+#ignite-premium-wrap {
+    margin-top: 24px;
+}
 #ignite-premium-wrap,
 #ignite-premium-wrap * {
     -moz-box-sizing: border-box;
@@ -52,6 +66,9 @@
 /* 900px */
 @media all and (min-width: 56.25em){
 
+    #ignite-premium-wrap {
+        clear: both;
+    }
     #ignite-premium-wrap div {
         width: 49%;
         float: left;
