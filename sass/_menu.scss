@@ -220,6 +220,7 @@
         opacity: 0;
         margin: 0;
         z-index: 3;
+        min-width: 100%;
         @include backface-visibility(hidden); /* remove slight wiggle caused by opacity change */
         @include transition(opacity 0.2s ease);
 
