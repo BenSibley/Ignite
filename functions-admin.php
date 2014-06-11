@@ -322,7 +322,7 @@ function ct_ignite_options_content(){
         <div class="odd">
             <h2>Custom Background</h2>
             <p>Change the background of Ignite to any color, any image, or one of 21 bundled textures.</p>
-            <img src="<?php echo get_template_directory_uri() . '/assets/images/ignite-custom-background.jpg'; ?>" />
+            <img src="<?php echo get_template_directory_uri() . '/assets/images/custom-background.png'; ?>" />
         </div>
         <div class="even">
             <h2>Custom Colors</h2>
