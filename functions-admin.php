@@ -126,8 +126,7 @@ function ct_ignite_customize_logo_size( $wp_customize ) {
         array(
             'title'      => esc_html__( 'Logo Size', 'ignite' ),
             'priority'   => 32,
-            'capability' => 'edit_theme_options',
-            'description'=> 'This will not stretch or pixelate your logo. You may need to increase both values to increase the size.'
+            'capability' => 'edit_theme_options'
         )
     );
     /* logo increase/decrease width setting. */
@@ -151,7 +150,7 @@ function ct_ignite_customize_logo_size( $wp_customize ) {
         new ct_ignite_number_input_control(
             $wp_customize, 'logo_size_width_setting',
             array(
-                'label' => 'Width (increase/decrease)',
+                'label' => 'Increase/decrease',
                 'section' => 'ct-logo-size',
                 'settings' => 'logo_size_width_setting',
                 'type' => 'number',
@@ -163,7 +162,7 @@ function ct_ignite_customize_logo_size( $wp_customize ) {
         new ct_ignite_number_input_control(
             $wp_customize, 'logo_size_height_setting',
             array(
-                'label' => 'Height (increase/decrease)',
+                'label' => 'Increase/decrease',
                 'section' => 'ct-logo-size',
                 'settings' => 'logo_size_height_setting',
                 'type' => 'number',
