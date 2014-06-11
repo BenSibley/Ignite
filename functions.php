@@ -426,7 +426,7 @@ function ct_ignite_logo_size_css(){
         $max_height = 59 + $height;
 
         $css = "
-            #site-header .logo {
+            #logo {
                 max-width: " . $max_width . "px;
                 max-height: " . $max_height . "px;
         }";
