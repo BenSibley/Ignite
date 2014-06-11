@@ -32,18 +32,21 @@
 
 // plain page
 
-.page {
+.singular-page {
 
   /* because of breadcrumbs */
   .entry {
     padding-top:  $baseline-height;
+  }
+  .featured-image {
+    margin-top: -$baseline-height;
   }
 }
 
 /* 700px */
 @media all and (min-width: 43.75em) {
 
-  .page {
+  .singular-page {
 
     .entry-title {
       font-size: 2.625em;
@@ -55,10 +58,13 @@
 /* 800px */
 @media all and (min-width: 50em) {
 
-  .page {
+  .singular-page {
 
     .entry {
       padding-top: $baseline-height * 2;
+    }
+    .featured-image {
+      margin-top: -$baseline-height * 2;
     }
   }
 }
@@ -129,7 +135,7 @@
 
 // 404 & search results
 
-.error404,
+.error-404,
 .search {
 
   .entry {
@@ -180,7 +186,7 @@
 /* 800px */
 @media all and (min-width: 50em) {
 
-  .error404 {
+  .error-404 {
 
     .entry-header {
       padding-top: $baseline-height * 1.5;
