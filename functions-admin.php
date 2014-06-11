@@ -320,31 +320,36 @@ function ct_ignite_options_content(){
         <h2>Ignite Plus</h2>
         <p>Enjoy greater customization and functionality with the Ignite Plus upgrade.</p>
         <div class="odd">
+            <h2>Custom Background</h2>
+            <p>Change the background of Ignite to any color, any image, or one of 21 bundled textures.</p>
+            <img src="<?php echo get_template_directory_uri() . '/assets/images/ignite-custom-background.jpg'; ?>" />
+        </div>
+        <div class="even">
             <h2>Custom Colors</h2>
             <p>Change the colors of Ignite to match your brand or personal preference and watch your site update instantly.</p>
             <img src="<?php echo get_template_directory_uri() . '/assets/images/ignite-custom-colors.jpg'; ?>" />
         </div>
-        <div class="even">
+        <div class="odd">
             <h2>3 New Widgets</h2>
             <p>Ignite Plus includes a social media icons, recent posts w/ thumbnails, and recent comments w/ thumbnails widgets.</p>
             <img src="<?php echo get_template_directory_uri() . '/assets/images/ignite-new-widgets.jpg'; ?>" />
         </div>
-        <div class="odd">
+        <div class="even">
             <h2>Layout Options</h2>
             <p>Switch between a left-sidebar and right-sidebar layout with a click of a button.</p>
             <img src="<?php echo get_template_directory_uri() . '/assets/images/ignite-layout.jpg'; ?>" />
         </div>
-        <div class="even">
+        <div class="odd">
             <h2>Author-specific Social Icons</h2>
             <p>Allow every author on your site to include social icons after every post.</p>
             <img src="<?php echo get_template_directory_uri() . '/assets/images/ignite-author-social-icons.jpg'; ?>" />
         </div>
-        <div class="odd">
+        <div class="even">
             <h2>After-content Widget Area</h2>
             <p>Use the after-content widget area to add email signup forms or other widgets after every blog post.</p>
             <img src="<?php echo get_template_directory_uri() . '/assets/images/ignite-after-content-widget.jpg'; ?>" />
         </div>
-        <div class="even">
+        <div class="odd">
             <h2>Footer Menu</h2>
             <p>The additional footer menu is perfect for your TOS, privacy policy, and other required pages that don't need a lot of visibility.</p>
             <img src="<?php echo get_template_directory_uri() . '/assets/images/ignite-footer-menu.jpg'; ?>" />
