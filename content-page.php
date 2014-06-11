@@ -1,4 +1,5 @@
 <div class='entry'>
+    <?php ct_ignite_featured_image(); ?>
 	<div class='entry-header'>
             <h1 class='entry-title'><?php the_title(); ?></h1>
     </div>
