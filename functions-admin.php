@@ -356,5 +356,4 @@ function ct_ignite_options_content(){
         </div>
         <p class="button-wrap"><a target="_blank" class="button-primary" href="http://www.competethemes.com/ignite-plus/">Download Ignite Plus</a></p>
     </div>
-    <?php
-}
+    <?php }
