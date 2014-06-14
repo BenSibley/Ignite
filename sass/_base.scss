@@ -184,7 +184,7 @@ img,
 
 /* Form styles */
 
-input,
+input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type=file]),
 textarea {
   padding: 0.8em;
   width: 100%;
@@ -204,10 +204,19 @@ textarea {
   max-width: $baseline-height * 15 * 1.85;
 }
 input[type="submit"] {
+  padding: 0.8em;
+  width: 100%;
   color: white;
   background: $orange;
   outline: none;
+  border: none;
   max-width: $baseline-height * 5 * 1.85;
+  font-family: $body-font-stack;
+  font-size: 0.813em;
+  line-height: 1.85;
+  @include border-radius(0);
+  @include transition(background 0.2s ease);
+  -webkit-appearance: none;
 }
 input[type="submit"]:hover {
   cursor: pointer;

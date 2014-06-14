@@ -43,6 +43,5 @@
             'show_browse' => false,
             'show_on_front' => false)
         );
-    }
-    ?>
+    } ?>
     <div id="main" class="main" role="main">
