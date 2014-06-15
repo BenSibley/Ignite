@@ -285,8 +285,8 @@ function ct_ignite_excerpt() {
     // check for the more tag
     $ismore = strpos( $post->post_content, '<!--more-->');
 
-    // if show full post is on, show full post
-    if($setting == 'yes'){
+    // if show full post is on, show full post unless on search page
+    if(($setting == 'yes') && !is_search()){
 
         // set read more value for all posts to 'off'
         $more = -1;

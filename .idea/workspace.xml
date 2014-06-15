@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="added show full post option">
+    <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -56,9 +56,9 @@
       <file leaf-file-name="functions.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="292" column="0" selection-start="10361" selection-end="10361" vertical-scroll-proportion="0.56790125" vertical-offset="3966" max-vertical-offset="7155">
+            <state line="289" column="0" selection-start="10326" selection-end="10326" vertical-scroll-proportion="0.50617284" vertical-offset="3966" max-vertical-offset="7155">
               <folding>
-                <marker date="1402838272000" expanded="true" signature="9263:9479" placeholder="..." />
+                <marker date="1402838379000" expanded="true" signature="9263:9479" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -426,7 +426,11 @@
       <created>1402836339557</created>
       <updated>1402836339557</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="added show full post output">
+      <created>1402838289949</created>
+      <updated>1402838289949</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -466,7 +470,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="* js files unminifed and one concatenated, minified js file enqueued" />
     <MESSAGE value="tagging as v1.04" />
     <MESSAGE value="tagging as v1.05" />
     <MESSAGE value="* removed admin dashboard widget&#10;* created theme options pages&#10;* added content for dashboard page" />
@@ -491,7 +494,8 @@
     <MESSAGE value="fixed html validation errors" />
     <MESSAGE value="tagging as v1.16" />
     <MESSAGE value="added show full post option" />
-    <option name="LAST_COMMIT_MESSAGE" value="added show full post option" />
+    <MESSAGE value="added show full post output" />
+    <option name="LAST_COMMIT_MESSAGE" value="added show full post output" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -764,9 +768,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="292" column="0" selection-start="10361" selection-end="10361" vertical-scroll-proportion="0.56790125" vertical-offset="3966" max-vertical-offset="7155">
+        <state line="289" column="0" selection-start="10326" selection-end="10326" vertical-scroll-proportion="0.50617284" vertical-offset="3966" max-vertical-offset="7155">
           <folding>
-            <marker date="1402838272000" expanded="true" signature="9263:9479" placeholder="..." />
+            <marker date="1402838379000" expanded="true" signature="9263:9479" placeholder="..." />
           </folding>
         </state>
       </provider>
