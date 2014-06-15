@@ -229,7 +229,7 @@ function ct_ignite_add_social_sites_customizer($wp_customize) {
 	}
 }
 
-/* allow sidebar to be placed on left or right side */
+/* show/hide the post author info after posts */
 function ct_ignite_show_author_meta( $wp_customize ) {
 
     /* Add the layout section. */
@@ -272,6 +272,58 @@ function ct_ignite_sanitize_author_meta_settings($input){
     $valid = array(
         'show' => 'Show',
         'hide' => 'Hide'
+    );
+
+    if ( array_key_exists( $input, $valid ) ) {
+        return $input;
+    } else {
+        return '';
+    }
+}
+
+/* show full post or excerpt on homepage */
+function ct_ignite_additional_options( $wp_customize ) {
+
+    /* Add the layout section. */
+    $wp_customize->add_section(
+        'ct-additional-options',
+        array(
+            'title'      => esc_html__( 'Additional Options', 'ignite' ),
+            'priority'   => 80,
+            'capability' => 'edit_theme_options'
+        )
+    );
+    /* Add the color setting. */
+    $wp_customize->add_setting(
+        'ct_ignite_show_full_post_setting',
+        array(
+            'default'           => 'no',
+            'type'              => 'theme_mod',
+            'capability'        => 'edit_theme_options',
+            'sanitize_callback' => 'ct_ignite_sanitize_show_full_post_setting',
+        )
+    );
+    $wp_customize->add_control(
+        'ct_ignite_show_full_post',
+        array(
+            'label'          => __( 'Show full post on blog?', 'ignite' ),
+            'section'        => 'ct-additional-options',
+            'settings'       => 'ct_ignite_show_full_post_setting',
+            'type'           => 'radio',
+            'choices'        => array(
+                'yes'   => 'Yes',
+                'no'  => 'No'
+            )
+        )
+    );
+}
+add_action( 'customize_register', 'ct_ignite_additional_options' );
+
+/* sanitize the radio button input */
+function ct_ignite_sanitize_show_full_post_setting($input){
+    $valid = array(
+        'yes' => 'Yes',
+        'no' => 'No'
     );
 
     if ( array_key_exists( $input, $valid ) ) {
