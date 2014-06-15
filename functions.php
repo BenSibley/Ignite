@@ -272,15 +272,30 @@ add_action('comment_form_defaults', 'ct_ignite_remove_comments_notes_after');
 
 // for 'read more' tag excerpts
 function ct_ignite_excerpt() {
-	
+
+    // make post variable available
 	global $post;
-	// check for the more tag
+
+    // make 'read more' setting available
+    global $more;
+
+    // get the show full post setting
+    $setting = get_theme_mod('ct_ignite_show_full_post_setting');
+
+    // check for the more tag
     $ismore = strpos( $post->post_content, '<!--more-->');
-    
-	/* if there is a more tag, edit the link to keep reading
-	*  works for both manual excerpts and read more tags
-	*/
-    if($ismore) {
+
+    // if show full post is on, show full post
+    if($setting == 'yes'){
+
+        // set read more value for all posts to 'off'
+        $more = -1;
+
+        // output the full content
+        the_content();
+    }
+    // use the read more link if present
+    elseif($ismore) {
         the_content("Read More <span class='screen-reader-text'>" . get_the_title() . "</span>");
     }
     // otherwise the excerpt is automatic, so output it
@@ -289,9 +304,8 @@ function ct_ignite_excerpt() {
     }
 }
 
-// for custom & automatic excerpts
+// filter the link on excerpts
 function ct_ignite_excerpt_read_more_link($output) {
-	global $post;
 	return $output . "<p><a class='more-link' href='". get_permalink() ."'>Read More <span class='screen-reader-text'>" . get_the_title() . "</span></a></p>";
 }
 
@@ -449,7 +463,6 @@ function ct_ignite_author_meta_css(){
     }
 }
 add_action('wp_enqueue_scripts','ct_ignite_author_meta_css');
-
 
 // fix for bug with Disqus saying comments are closed
 if ( function_exists( 'dsq_options' ) ) {
