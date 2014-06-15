@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/89dd20b9664d73b402baf66e5b92c781ea03dc64/_info.scssc" afterPath="$PROJECT_DIR$/.sass-cache/89dd20b9664d73b402baf66e5b92c781ea03dc64/_info.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/_info.scss" afterPath="$PROJECT_DIR$/sass/_info.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style-prefixed.css" afterPath="$PROJECT_DIR$/style-prefixed.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="compete core.iws" />
@@ -26,10 +29,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_info.scss" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="_info.scss" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sass/_info.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="24" selection-start="467" selection-end="467" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="285">
+            <state line="11" column="30" selection-start="698" selection-end="698" vertical-scroll-proportion="0.22633745" vertical-offset="0" max-vertical-offset="729">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="253" column="5" selection-start="4539" selection-end="4539" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="23985">
               <folding />
             </state>
           </provider>
@@ -53,10 +65,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="functions.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="functions.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="289" column="0" selection-start="10326" selection-end="10326" vertical-scroll-proportion="0.50617284" vertical-offset="3966" max-vertical-offset="7155">
+            <state line="289" column="0" selection-start="10326" selection-end="10326" vertical-scroll-proportion="-15.375" vertical-offset="3966" max-vertical-offset="7155">
               <folding>
                 <marker date="1402838379000" expanded="true" signature="9263:9479" placeholder="..." />
               </folding>
@@ -143,9 +155,9 @@
         <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/sass/_base.scss" />
         <option value="$PROJECT_DIR$/header.php" />
-        <option value="$PROJECT_DIR$/sass/_info.scss" />
         <option value="$PROJECT_DIR$/functions-admin.php" />
         <option value="$PROJECT_DIR$/functions.php" />
+        <option value="$PROJECT_DIR$/sass/_info.scss" />
       </list>
     </option>
   </component>
@@ -430,7 +442,11 @@
       <created>1402838289949</created>
       <updated>1402838289949</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="added conditional to show excerpts always on search pages">
+      <created>1402838417743</created>
+      <updated>1402838417743</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -447,7 +463,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31855956" sideWeight="0.50306" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32409972" sideWeight="0.50306" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -470,7 +486,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="tagging as v1.04" />
     <MESSAGE value="tagging as v1.05" />
     <MESSAGE value="* removed admin dashboard widget&#10;* created theme options pages&#10;* added content for dashboard page" />
     <MESSAGE value="* added logo positioning and size adjustment functionality&#10;* added styles and finalized content for Ignite Dashboard page" />
@@ -495,7 +510,8 @@
     <MESSAGE value="tagging as v1.16" />
     <MESSAGE value="added show full post option" />
     <MESSAGE value="added show full post output" />
-    <option name="LAST_COMMIT_MESSAGE" value="added show full post output" />
+    <MESSAGE value="added conditional to show excerpts always on search pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="added conditional to show excerpts always on search pages" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -719,13 +735,6 @@
         <state line="185" column="0" selection-start="3034" selection-end="3034" vertical-scroll-proportion="0.273794" vertical-offset="2565" max-vertical-offset="3870" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="253" column="5" selection-start="4539" selection-end="4539" vertical-scroll-proportion="0.13496144" vertical-offset="3690" max-vertical-offset="23985">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="67" column="31" selection-start="1776" selection-end="1776" vertical-scroll-proportion="0.7107969" vertical-offset="452" max-vertical-offset="1230" />
@@ -734,13 +743,6 @@
     <entry file="file://$PROJECT_DIR$/header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="0" selection-start="565" selection-end="565" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="705">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sass/_info.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="24" selection-start="467" selection-end="467" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="285">
           <folding />
         </state>
       </provider>
@@ -768,10 +770,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="289" column="0" selection-start="10326" selection-end="10326" vertical-scroll-proportion="0.50617284" vertical-offset="3966" max-vertical-offset="7155">
+        <state line="289" column="0" selection-start="10326" selection-end="10326" vertical-scroll-proportion="-15.375" vertical-offset="3966" max-vertical-offset="7155">
           <folding>
             <marker date="1402838379000" expanded="true" signature="9263:9479" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="253" column="5" selection-start="4539" selection-end="4539" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="23985">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sass/_info.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="30" selection-start="698" selection-end="698" vertical-scroll-proportion="0.22633745" vertical-offset="0" max-vertical-offset="729">
+          <folding />
         </state>
       </provider>
     </entry>
