@@ -22,7 +22,7 @@
 
 <header class="site-header" id="site-header" role="banner">
 
-	<div class="title-info">
+	<div id="title-info" class="title-info">
 		<?php get_template_part('logo')  ?>
 	</div>
 	

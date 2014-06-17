@@ -41,6 +41,32 @@ jQuery(document).ready(function($){
         }
     }
 
+    /* see if social media icons can fit and display if they can */
+    function showSocialIcons() {
+
+        // get widths of all elements involved
+        var siteHeaderWidth = $('#site-header').width();
+        var menuWidth = $('#menu-primary-items').width();
+        var titleInfoWidth = $('#title-info').width();
+        var siteDescriptionWidth = $('#site-description').width();
+
+        /* multiply # of icons by 68 b/c each is 68px wide */
+        var socialIconsWidth = $('#menu-primary').find('.social-media-icons li').length * 68;
+
+        /* If site-header has space for social icons, show them */
+        if ( (siteHeaderWidth - menuWidth - titleInfoWidth - siteDescriptionWidth) > socialIconsWidth) {
+            $('#menu-primary').find('.social-media-icons').addClass('visible');
+        } else {
+            $('#menu-primary').find('.social-media-icons').removeClass('visible');
+        }
+    }
+    showSocialIcons();
+
+    /* check to see if social icons can be displayed on resize */
+    $(window).on('resize', function(){
+        showSocialIcons();
+    });
+
     /* allow keyboard access/visibility for dropdown menu items */
     $('.menu-item a, .page_item a').focus(function(){
         $(this).parent('li').addClass('focused');

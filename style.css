@@ -682,6 +682,34 @@ a img {
   .site-header {
     padding: 0 7.407%;
   }
+
+  .menu-primary-items,
+  .menu-unset {
+    float: left;
+  }
+
+  .social-media-icons {
+    display: inline-block;
+    visibility: hidden;
+    margin: 0;
+    float: right;
+    position: absolute;
+  }
+  .social-media-icons li a {
+    color: #373b41;
+    line-height: 4.25em;
+    /* 68px */
+  }
+  .social-media-icons li a:hover {
+    color: #e6a117;
+  }
+  .social-media-icons li:last-child a {
+    margin-right: 0;
+  }
+  .social-media-icons.visible {
+    position: relative;
+    visibility: visible;
+  }
 }
 /* 1000px */
 @media all and (min-width: 62.5em) {
@@ -697,31 +725,6 @@ a img {
 
   .site-title {
     float: left;
-  }
-}
-/* 1200px */
-@media all and (min-width: 75em) {
-  .menu-primary-items,
-  .menu-unset {
-    float: left;
-    /* for the social media buttons */
-  }
-
-  .social-media-icons {
-    display: inline-block;
-    margin: 0;
-    float: right;
-  }
-  .social-media-icons li a {
-    color: #373b41;
-    line-height: 4.25em;
-    /* 68px */
-  }
-  .social-media-icons li a:hover {
-    color: #e6a117;
-  }
-  .social-media-icons li:last-child a {
-    margin-right: 0;
   }
 }
 .main,
@@ -741,10 +744,11 @@ a img {
 }
 
 .featured-image {
-  height: 12em;
   background-size: cover;
   background-position: 50%;
   position: relative;
+  height: 0;
+  padding-bottom: 63%;
   left: -9.5%;
   width: 119%;
   margin-bottom: 1.5em;
@@ -885,10 +889,6 @@ a img {
 
 /* 500px */
 @media all and (min-width: 31.25em) {
-  .featured-image {
-    height: 15em;
-  }
-
   .excerpt-meta-top:after, .entry-meta-top:after {
     width: 20%;
   }
@@ -904,12 +904,6 @@ a img {
   .loop-pagination span,
   .loop-pagination a {
     margin: 0 0.75em;
-  }
-}
-/* 700px */
-@media all and (min-width: 43.75em) {
-  .featured-image {
-    height: 18em;
   }
 }
 /* 800px */
@@ -997,15 +991,8 @@ a img {
   }
 
   .featured-image {
-    height: 21em;
     left: -16.67%;
     width: 133.33%;
-  }
-}
-/* 1200px */
-@media all and (min-width: 75em) {
-  .featured-image {
-    height: 22.5em;
   }
 }
 .sidebar-primary-container {

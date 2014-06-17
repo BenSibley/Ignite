@@ -338,6 +338,39 @@
   .site-header {
     padding: 0 7.407%;
   }
+  .menu-primary-items,
+  .menu-unset {
+    float: left;
+  }
+  .social-media-icons {
+    display: inline-block;
+    visibility: hidden;
+    margin: 0;
+    float: right;
+    position: absolute;
+
+    li {
+
+      a {
+        color: $gray;
+        line-height: 4.25em; /* 68px */
+
+        &:hover {
+          color: $orange;
+        }
+      }
+      &:last-child {
+
+        a {
+          margin-right: 0;
+        }
+      }
+    }
+    &.visible {
+      position: relative;
+      visibility: visible;
+    }
+  }
 }
 
 /* 1000px */
@@ -359,37 +392,4 @@
     float: left;
   }
 
-}
-/* 1200px */
-@media all and (min-width: 75em) {
-
-  .menu-primary-items,
-  .menu-unset {
-    float: left; /* for the social media buttons */
-  }
-
-  // add social media buttons again
-  .social-media-icons {
-    display: inline-block;
-    margin: 0;
-    float: right;
-
-    li {
-
-      a {
-        color: $gray;
-        line-height: 4.25em; /* 68px */
-
-        &:hover {
-          color: $orange;
-        }
-      }
-      &:last-child {
-
-        a {
-          margin-right: 0;
-        }
-      }
-    }
-  }
 }
