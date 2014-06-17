@@ -50,7 +50,6 @@ jQuery(document).ready(function($){
         $(this).parent('li').removeClass('focused');
         $(this).parents('ul').removeClass('focused');
     });
-
 });
 
 
