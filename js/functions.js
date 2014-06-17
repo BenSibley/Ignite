@@ -51,47 +51,6 @@ jQuery(document).ready(function($){
         $(this).parents('ul').removeClass('focused');
     });
 
-    /* logo size tools */
-    function displayLogoSizeInputs(){
-
-        var logoSelector = $('#logo');
-        var maxWidth = 156;
-        var maxHeight = 59;
-
-        // set max-width & max-height to initial values
-        $(logoSelector).css({
-            'max-width': maxWidth,
-            'max-height': maxHeight
-        });
-
-        // if initially constrained by width, hide height input
-        if($(logoSelector).width() == maxWidth){
-            $('html', window.parent.document).find('#customize-control-logo_size_height_setting').hide();
-            $('html', window.parent.document).find('#customize-control-logo_size_width_setting').show();
-
-            // remove max-width applied to check constraint
-            $(logoSelector).removeAttr('style');
-
-            // reset max-height adjustment so it doesn't interfere. This will be save when the user saves.
-            $('html', window.parent.document).find('#customize-control-logo_size_height_setting input').val(0);
-
-            // return b/c height could also be true after adjustment
-            return;
-        }
-
-        // if initially constrained by height, hide width input
-        if($(logoSelector).height() == maxHeight){
-            $('html', window.parent.document).find('#customize-control-logo_size_width_setting').hide();
-            $('html', window.parent.document).find('#customize-control-logo_size_height_setting').show();
-
-            // remove max-width applied to check constraint
-            $(logoSelector).removeAttr('style');
-
-            // reset max-width adjustment so it doesn't interfere. This will be save when the user saves.
-            $('html', window.parent.document).find('#customize-control-logo_size_width_setting input').val(0);
-        }
-    }
-    displayLogoSizeInputs();
 });
 
 

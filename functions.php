@@ -270,7 +270,7 @@ function ct_ignite_remove_comments_notes_after($defaults){
 
 add_action('comment_form_defaults', 'ct_ignite_remove_comments_notes_after');
 
-// for 'read more' tag excerpts
+// excerpt handling
 function ct_ignite_excerpt() {
 
     // make post variable available

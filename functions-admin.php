@@ -150,7 +150,7 @@ function ct_ignite_customize_logo_size( $wp_customize ) {
         new ct_ignite_number_input_control(
             $wp_customize, 'logo_size_width_setting',
             array(
-                'label' => 'Increase/decrease',
+                'label' => 'Increase max-width',
                 'section' => 'ct-logo-size',
                 'settings' => 'logo_size_width_setting',
                 'type' => 'number',
@@ -162,7 +162,7 @@ function ct_ignite_customize_logo_size( $wp_customize ) {
         new ct_ignite_number_input_control(
             $wp_customize, 'logo_size_height_setting',
             array(
-                'label' => 'Increase/decrease',
+                'label' => 'Increase max-height',
                 'section' => 'ct-logo-size',
                 'settings' => 'logo_size_height_setting',
                 'type' => 'number',
@@ -332,7 +332,6 @@ function ct_ignite_sanitize_show_full_post_setting($input){
         return '';
     }
 }
-
 
 /* create theme options page */
 function ct_ignite_register_theme_page(){
