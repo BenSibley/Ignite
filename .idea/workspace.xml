@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/_menu.scss" afterPath="$PROJECT_DIR$/sass/_menu.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/89dd20b9664d73b402baf66e5b92c781ea03dc64/_menu.scssc" afterPath="$PROJECT_DIR$/.sass-cache/89dd20b9664d73b402baf66e5b92c781ea03dc64/_menu.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/_info.scss" afterPath="$PROJECT_DIR$/sass/_info.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gruntfile.js" afterPath="$PROJECT_DIR$/gruntfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/build/production.js" afterPath="$PROJECT_DIR$/js/build/production.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/build/production.min.js" afterPath="$PROJECT_DIR$/js/build/production.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style-prefixed.css" afterPath="$PROJECT_DIR$/style-prefixed.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.min.css" afterPath="$PROJECT_DIR$/style.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="compete core.iws" />
@@ -35,10 +42,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_menu.scss" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_menu.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sass/_menu.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="192" column="21" selection-start="3075" selection-end="3075" vertical-scroll-proportion="0.42798355" vertical-offset="2568" max-vertical-offset="6030">
+            <state line="192" column="21" selection-start="3075" selection-end="3075" vertical-scroll-proportion="-13.0" vertical-offset="2568" max-vertical-offset="6030">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gruntfile.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gruntfile.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="59" column="44" selection-start="1562" selection-end="1562" vertical-scroll-proportion="0.0" vertical-offset="406" max-vertical-offset="1230">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_info.scss" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sass/_info.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="2" selection-start="777" selection-end="777" vertical-scroll-proportion="0.2674897" vertical-offset="0" max-vertical-offset="729">
               <folding />
             </state>
           </provider>
@@ -84,15 +109,6 @@
         <entry file="file://$PROJECT_DIR$/sass/_other.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state line="77" column="40" selection-start="1239" selection-end="1239" vertical-scroll-proportion="0.0" vertical-offset="736" max-vertical-offset="3300">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="functions-admin.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/functions-admin.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="164" column="47" selection-start="4898" selection-end="4898" vertical-scroll-proportion="0.0" vertical-offset="1841" max-vertical-offset="6225">
               <folding />
             </state>
           </provider>
@@ -148,7 +164,6 @@
         <option value="$PROJECT_DIR$/readme.txt" />
         <option value="$PROJECT_DIR$/comments.php" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/gruntfile.js" />
         <option value="$PROJECT_DIR$/js/fitvids.min.js" />
         <option value="$PROJECT_DIR$/js/placeholders.min.js" />
         <option value="$PROJECT_DIR$/js/respond.min.js" />
@@ -163,7 +178,6 @@
         <option value="$PROJECT_DIR$/sass/_other.scss" />
         <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/sass/_base.scss" />
-        <option value="$PROJECT_DIR$/sass/_info.scss" />
         <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/functions-admin.php" />
         <option value="$PROJECT_DIR$/sass/_blog.scss" />
@@ -171,6 +185,8 @@
         <option value="$PROJECT_DIR$/header.php" />
         <option value="$PROJECT_DIR$/js/functions.js" />
         <option value="$PROJECT_DIR$/sass/_menu.scss" />
+        <option value="$PROJECT_DIR$/gruntfile.js" />
+        <option value="$PROJECT_DIR$/sass/_info.scss" />
       </list>
     </option>
   </component>
@@ -479,7 +495,11 @@
       <created>1403094405431</created>
       <updated>1403094405431</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="updated styling to work better with social icons">
+      <created>1403094467722</created>
+      <updated>1403094467722</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -496,7 +516,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24668705" sideWeight="0.50306" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24668705" sideWeight="0.50306" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -516,10 +536,11 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="* added filter to remove text after comments form" />
     <MESSAGE value="* updated footer link" />
     <MESSAGE value="* added content/style to premium page" />
     <MESSAGE value="* added menu icon logo&#10;* tagging as 1.1" />
@@ -544,7 +565,8 @@
     <MESSAGE value="updated featured image to padding-bottom %" />
     <MESSAGE value="updated social icon display to work based on available space" />
     <MESSAGE value="updated social icon display to work better" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated social icon display to work better" />
+    <MESSAGE value="updated styling to work better with social icons" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated styling to work better with social icons" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -753,16 +775,6 @@
         <state line="207" column="14" selection-start="3601" selection-end="3601" vertical-scroll-proportion="0.46414602" vertical-offset="2749" max-vertical-offset="3870" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gruntfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="13" selection-start="1192" selection-end="1192" vertical-scroll-proportion="0.5192802" vertical-offset="271" max-vertical-offset="1230" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sass/_info.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="2" selection-start="777" selection-end="777" vertical-scroll-proportion="0.25862068" vertical-offset="0" max-vertical-offset="754" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/functions-admin.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="164" column="47" selection-start="4898" selection-end="4898" vertical-scroll-proportion="0.0" vertical-offset="1841" max-vertical-offset="6225">
@@ -821,7 +833,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sass/_menu.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="192" column="21" selection-start="3075" selection-end="3075" vertical-scroll-proportion="0.42798355" vertical-offset="2568" max-vertical-offset="6030">
+        <state line="192" column="21" selection-start="3075" selection-end="3075" vertical-scroll-proportion="-13.0" vertical-offset="2568" max-vertical-offset="6030">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gruntfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="44" selection-start="1562" selection-end="1562" vertical-scroll-proportion="0.0" vertical-offset="406" max-vertical-offset="1230">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sass/_info.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="2" selection-start="777" selection-end="777" vertical-scroll-proportion="0.2674897" vertical-offset="0" max-vertical-offset="729">
           <folding />
         </state>
       </provider>

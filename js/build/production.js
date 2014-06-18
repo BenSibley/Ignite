@@ -132,15 +132,21 @@ jQuery(document).ready(function($){
         var menuWidth = $('#menu-primary-items').width();
         var titleInfoWidth = $('#title-info').width();
         var siteDescriptionWidth = $('#site-description').width();
+        var socialIcons = $('#menu-primary').find('.social-media-icons');
+
+        // remove the classes
+        $(socialIcons).removeClass('visible visible-top');
 
         /* multiply # of icons by 68 b/c each is 68px wide */
-        var socialIconsWidth = $('#menu-primary').find('.social-media-icons li').length * 68;
+        var socialIconsWidth = $('#menu-primary').find('.social-media-icons li').length * 26;
 
-        /* If site-header has space for social icons, show them */
-        if ( (siteHeaderWidth - menuWidth - titleInfoWidth - siteDescriptionWidth) > socialIconsWidth) {
-            $('#menu-primary').find('.social-media-icons').addClass('visible');
-        } else {
-            $('#menu-primary').find('.social-media-icons').removeClass('visible');
+        /* If site-header has space for social icons + 48 margin + 48 extra margin, show them */
+        if ( (siteHeaderWidth - menuWidth - titleInfoWidth - siteDescriptionWidth) > socialIconsWidth + 96) {
+            $(socialIcons).addClass('visible');
+        }
+        /* if the menu is on the next line, display the social icons */
+        if( $('#menu-primary-items').offset().top > $('#title-info').offset().top ){
+            $(socialIcons).addClass('visible-top');
         }
     }
     showSocialIcons();

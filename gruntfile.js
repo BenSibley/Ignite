@@ -51,13 +51,13 @@ module.exports = function(grunt) {
                     browsers: ['last 1 version', '> 1%', 'ie 8']
                 },
                 src: 'style.css',
-                dest: 'style-prefixed.css'
+                dest: 'style.css'
             }
         },
         cssmin: {
             combine: {
                 files: {
-                    'style.min.css': ['style-prefixed.css']
+                    'style.min.css': ['style.css']
                 }
             }
         }

@@ -474,8 +474,7 @@ a img {
 
   .title-info {
     float: left;
-    margin-right: 3em;
-    margin-top: 1.125em;
+    padding: 1.125em 3em 0 0;
   }
 
   .site-title {
@@ -688,6 +687,9 @@ a img {
   }
   .social-media-icons.visible {
     position: relative;
+    visibility: visible;
+  }
+  .social-media-icons.visible-top {
     visibility: visible;
   }
 }
