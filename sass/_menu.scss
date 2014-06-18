@@ -282,7 +282,7 @@
       @include clearfix;
     }
   }
-  .social-media-icons {
+  .site-header .social-media-icons {
     display: none;
   }
   #menu-primary-items,
@@ -341,7 +341,7 @@
   .menu-unset {
     float: left;
   }
-  .social-media-icons {
+  .site-header .social-media-icons {
     display: inline-block;
     visibility: hidden;
     margin: 0;
