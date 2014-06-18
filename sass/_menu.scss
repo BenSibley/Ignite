@@ -370,6 +370,9 @@
       position: relative;
       visibility: visible;
     }
+    &.visible-top {
+      visibility: visible;
+    }
   }
 }
 
