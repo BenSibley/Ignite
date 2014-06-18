@@ -182,8 +182,7 @@
   }
   .title-info {
     float: left;
-    margin-right: $baseline-height * 2;
-    margin-top: $baseline-height * 0.75;
+    padding: $baseline-height * 0.75 $baseline-height * 2 0 0;
   }
   .site-title {
     position: static;
