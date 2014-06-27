@@ -598,7 +598,7 @@ a img {
     height: 0;
   }
 
-  .social-media-icons {
+  .site-header .social-media-icons {
     display: none;
   }
 
@@ -667,29 +667,29 @@ a img {
     float: left;
   }
 
-  .social-media-icons {
+  .site-header .social-media-icons {
     display: inline-block;
     visibility: hidden;
     margin: 0;
     float: right;
     position: absolute;
   }
-  .social-media-icons li a {
+  .site-header .social-media-icons li a {
     color: #373b41;
     line-height: 4.25em;
     /* 68px */
   }
-  .social-media-icons li a:hover {
+  .site-header .social-media-icons li a:hover {
     color: #e6a117;
   }
-  .social-media-icons li:last-child a {
+  .site-header .social-media-icons li:last-child a {
     margin-right: 0;
   }
-  .social-media-icons.visible {
+  .site-header .social-media-icons.visible {
     position: relative;
     visibility: visible;
   }
-  .social-media-icons.visible-top {
+  .site-header .social-media-icons.visible-top {
     visibility: visible;
   }
 }
