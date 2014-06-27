@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/89dd20b9664d73b402baf66e5b92c781ea03dc64/_menu.scssc" afterPath="$PROJECT_DIR$/.sass-cache/89dd20b9664d73b402baf66e5b92c781ea03dc64/_menu.scssc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content-attachment.php" afterPath="$PROJECT_DIR$/content-attachment.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.min.css" afterPath="$PROJECT_DIR$/style.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="compete core.iws" />
@@ -77,7 +74,7 @@
       <file leaf-file-name="header.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="23" selection-start="836" selection-end="836" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="705">
+            <state line="25" column="43" selection-start="895" selection-end="895" vertical-scroll-proportion="-15.625" vertical-offset="0" max-vertical-offset="705">
               <folding />
             </state>
           </provider>
@@ -95,7 +92,7 @@
       <file leaf-file-name="functions.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="89" column="5" selection-start="3274" selection-end="3274" vertical-scroll-proportion="-13.833333" vertical-offset="1003" max-vertical-offset="7155">
+            <state line="87" column="37" selection-start="3252" selection-end="3252" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="7155">
               <folding>
                 <marker date="1402851514000" expanded="true" signature="9263:9479" placeholder="..." />
               </folding>
@@ -106,7 +103,7 @@
       <file leaf-file-name="content-attachment.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/content-attachment.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="6" selection-start="512" selection-end="512" vertical-scroll-proportion="0.2872777" vertical-offset="0" max-vertical-offset="731">
+            <state line="14" column="6" selection-start="503" selection-end="503" vertical-scroll-proportion="0.2872777" vertical-offset="0" max-vertical-offset="731">
               <folding />
             </state>
           </provider>
@@ -190,8 +187,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-359" />
-    <option name="y" value="-1056" />
+    <option name="x" value="542" />
+    <option name="y" value="-1058" />
     <option name="width" value="1023" />
     <option name="height" value="1056" />
   </component>
@@ -505,11 +502,15 @@
       <created>1403096734636</created>
       <updated>1403096734636</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="updated content-attachment page to work with galleries">
+      <created>1403874590974</created>
+      <updated>1403874590974</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-359" y="-1056" width="1023" height="1056" extended-state="0" />
+    <frame x="542" y="-1058" width="1023" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -517,7 +518,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26197758" sideWeight="0.49694002" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2670744" sideWeight="0.49694002" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -525,12 +526,12 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3285124" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3285124" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -547,7 +548,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="* added menu icon logo&#10;* tagging as 1.1" />
     <MESSAGE value="* made update for PHP version 5.3 compatability" />
     <MESSAGE value="* added min-width to sub-menu" />
     <MESSAGE value="* adjusted logo size function for new single input approach" />
@@ -572,7 +572,8 @@
     <MESSAGE value="updated styling to work better with social icons" />
     <MESSAGE value="no longer using styles-prefixed.css" />
     <MESSAGE value="social media icon styling restricted to site-header icons" />
-    <option name="LAST_COMMIT_MESSAGE" value="social media icon styling restricted to site-header icons" />
+    <MESSAGE value="updated content-attachment page to work with galleries" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated content-attachment page to work with galleries" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -654,11 +655,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/readme.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="25" selection-start="284" selection-end="284" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="540" />
-      </provider>
       <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
         <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="25" selection-start="284" selection-end="284" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="540" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
@@ -783,9 +784,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sass/_post.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="4" selection-start="1350" selection-end="1351" vertical-scroll-proportion="0.0" vertical-offset="999" max-vertical-offset="1740">
-          <folding />
-        </state>
+        <state line="88" column="4" selection-start="1350" selection-end="1351" vertical-scroll-proportion="0.0" vertical-offset="999" max-vertical-offset="1740" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sass/_other.scss">
@@ -823,13 +822,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="23" selection-start="836" selection-end="836" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="705">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="59" column="44" selection-start="1562" selection-end="1562" vertical-scroll-proportion="0.0" vertical-offset="294" max-vertical-offset="1230">
@@ -846,16 +838,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="5" selection-start="3274" selection-end="3274" vertical-scroll-proportion="-13.833333" vertical-offset="1003" max-vertical-offset="7155">
+        <state line="87" column="37" selection-start="3252" selection-end="3252" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="7155">
           <folding>
             <marker date="1402851514000" expanded="true" signature="9263:9479" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="43" selection-start="895" selection-end="895" vertical-scroll-proportion="-15.625" vertical-offset="0" max-vertical-offset="705">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/content-attachment.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="6" selection-start="512" selection-end="512" vertical-scroll-proportion="0.2872777" vertical-offset="0" max-vertical-offset="731">
+        <state line="14" column="6" selection-start="503" selection-end="503" vertical-scroll-proportion="0.2872777" vertical-offset="0" max-vertical-offset="731">
           <folding />
         </state>
       </provider>
