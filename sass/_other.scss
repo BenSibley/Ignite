@@ -213,3 +213,13 @@
     }
   }
 }
+
+/* Password-protected post */
+
+.post-password-form {
+
+  input[type="password"]{
+    display: block;
+    margin: $baseline-height / 2 0;
+  }
+}
