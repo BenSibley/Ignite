@@ -5,12 +5,13 @@ function ct_ignite_load_javascript_files() {
 
     wp_register_style( 'ct-ignite-google-fonts', '//fonts.googleapis.com/css?family=Lusitana:400,700');
 
-    // enqueues media query support polyfill for ie8 
+    // enqueues scripts & styles
     if(! is_admin() ) {
         wp_enqueue_script('ct-ignite-production', get_template_directory_uri() . '/js/build/production.min.js', array('jquery'),'', true);
 
         wp_enqueue_style('ct-ignite-google-fonts');
         wp_enqueue_style('ct-ignite-font-awesome', get_template_directory_uri() . '/assets/font-awesome/css/font-awesome.min.css');
+        wp_enqueue_style('style', get_template_directory_uri() . 'style.min.css');
     }
     // enqueues the comment-reply script on posts & pages.  This script is included in WP by default
     if( is_singular() && comments_open() && get_option('thread_comments') ) wp_enqueue_script( 'comment-reply' ); 
@@ -48,7 +49,6 @@ function ct_ignite_theme_setup() {
 	/* Theme-supported features go here. */
     add_theme_support( 'hybrid-core-widgets' );
     add_theme_support( 'hybrid-core-template-hierarchy' );
-    add_theme_support( 'hybrid-core-styles', array( 'style','reset', 'gallery' ) );
     add_theme_support( 'loop-pagination' );
     add_theme_support( 'cleaner-gallery' );
     add_theme_support( 'breadcrumb-trail' );
