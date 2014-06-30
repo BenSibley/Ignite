@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="now enqueueing style without hybrid core and removed gallery and reset.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/_gallery.scss" />
+    <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions-admin.php" afterPath="$PROJECT_DIR$/functions-admin.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/style.scss" afterPath="$PROJECT_DIR$/sass/style.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="compete core.iws" />
@@ -28,13 +27,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="functions.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="functions.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="58" selection-start="1968" selection-end="1968" vertical-scroll-proportion="-19.375" vertical-offset="285" max-vertical-offset="7155">
+            <state line="97" column="432" selection-start="4022" selection-end="4022" vertical-scroll-proportion="0.42958748" vertical-offset="1153" max-vertical-offset="7155">
               <folding>
-                <marker date="1404151845000" expanded="true" signature="9311:9527" placeholder="..." />
+                <marker date="1404152373000" expanded="true" signature="9634:9850" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="functions-admin.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/functions-admin.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="178" column="315" selection-start="5547" selection-end="5547" vertical-scroll-proportion="57.416668" vertical-offset="4048" max-vertical-offset="6240">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -48,10 +56,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_gallery.scss" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="header.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/header.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="30" selection-start="353" selection-end="353" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="615">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="menu-primary.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/menu-primary.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="27" selection-start="200" selection-end="200" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="240">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_gallery.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sass/_gallery.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="19" selection-start="147" selection-end="147" vertical-scroll-proportion="0.1764706" vertical-offset="0" max-vertical-offset="1185">
+            <state line="14" column="16" selection-start="201" selection-end="201" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="1185">
               <folding />
             </state>
           </provider>
@@ -119,7 +145,6 @@
         <option value="$PROJECT_DIR$/menu-primary.php" />
         <option value="$PROJECT_DIR$/js/functions.js" />
         <option value="$PROJECT_DIR$/sass/_info.scss" />
-        <option value="$PROJECT_DIR$/functions-admin.php" />
         <option value="$PROJECT_DIR$/content-attachment.php" />
         <option value="$PROJECT_DIR$/gruntfile.js" />
         <option value="$PROJECT_DIR$/sass/_menu.scss" />
@@ -127,9 +152,10 @@
         <option value="$PROJECT_DIR$/sass/_blog.scss" />
         <option value="$PROJECT_DIR$/header.php" />
         <option value="$PROJECT_DIR$/sass/_other.scss" />
-        <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/sass/style.scss" />
         <option value="$PROJECT_DIR$/sass/_gallery.scss" />
+        <option value="$PROJECT_DIR$/functions-admin.php" />
+        <option value="$PROJECT_DIR$/functions.php" />
       </list>
     </option>
   </component>
@@ -500,7 +526,15 @@
       <created>1404151710371</created>
       <updated>1404151710371</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="now enqueueing style without hybrid core. HC reset removed and gallery styles moved to _gallery.scss.">
+      <created>1404151983762</created>
+      <updated>1404151983762</updated>
+    </task>
+    <task id="LOCAL-00056" summary="updated Font Awesome to 4.1">
+      <created>1404152199216</created>
+      <updated>1404152199217</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -517,7 +551,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2423945" sideWeight="0.50306" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2423945" sideWeight="0.50306" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -542,8 +576,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="changed page and 404 classes to work with hybrid. added styles for featured images on pages." />
-    <MESSAGE value="added space between opening php tag and bracket at bottom of functions-admin" />
     <MESSAGE value="fixed input styling issues" />
     <MESSAGE value="tagging as v1.15" />
     <MESSAGE value="fixed html validation errors" />
@@ -567,7 +599,9 @@
     <MESSAGE value="removed unneeded JS for supporting IE8 and older browsers." />
     <MESSAGE value="improved password-protected post styling" />
     <MESSAGE value="gave enqueued styles/scripts more unique handles" />
-    <option name="LAST_COMMIT_MESSAGE" value="gave enqueued styles/scripts more unique handles" />
+    <MESSAGE value="now enqueueing style without hybrid core. HC reset removed and gallery styles moved to _gallery.scss." />
+    <MESSAGE value="updated Font Awesome to 4.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated Font Awesome to 4.1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -751,19 +785,9 @@
         <state line="49" column="36" selection-start="1992" selection-end="1992" vertical-scroll-proportion="0.38247013" vertical-offset="447" max-vertical-offset="1590" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions-admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="220" column="38" selection-start="6789" selection-end="6789" vertical-scroll-proportion="0.9725652" vertical-offset="2591" max-vertical-offset="6225" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sass/_info.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="2" selection-start="777" selection-end="777" vertical-scroll-proportion="0.2674897" vertical-offset="0" max-vertical-offset="729" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/menu-primary.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="27" selection-start="200" selection-end="200" vertical-scroll-proportion="0.07978723" vertical-offset="0" max-vertical-offset="752" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sass/_other.scss">
@@ -776,13 +800,6 @@
     <entry file="file://$PROJECT_DIR$/gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="42" selection-start="411" selection-end="411" vertical-scroll-proportion="0.3187251" vertical-offset="0" max-vertical-offset="1440">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="30" selection-start="353" selection-end="353" vertical-scroll-proportion="0.28301886" vertical-offset="0" max-vertical-offset="742">
           <folding />
         </state>
       </provider>
@@ -834,15 +851,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="58" selection-start="1968" selection-end="1968" vertical-scroll-proportion="-19.375" vertical-offset="285" max-vertical-offset="7155">
-          <folding>
-            <marker date="1404151845000" expanded="true" signature="9311:9527" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/library/css/gallery.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="0" selection-start="430" selection-end="430" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1395">
@@ -859,8 +867,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sass/_gallery.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="19" selection-start="147" selection-end="147" vertical-scroll-proportion="0.1764706" vertical-offset="0" max-vertical-offset="1185">
+        <state line="14" column="16" selection-start="201" selection-end="201" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="1185">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions-admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="178" column="315" selection-start="5547" selection-end="5547" vertical-scroll-proportion="57.416668" vertical-offset="4048" max-vertical-offset="6240">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="30" selection-start="353" selection-end="353" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/menu-primary.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="27" selection-start="200" selection-end="200" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="240">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="97" column="432" selection-start="4022" selection-end="4022" vertical-scroll-proportion="0.42958748" vertical-offset="1153" max-vertical-offset="7155">
+          <folding>
+            <marker date="1404152373000" expanded="true" signature="9634:9850" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
