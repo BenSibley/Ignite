@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/search.php" afterPath="$PROJECT_DIR$/search.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/style-prefixed.css" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="compete core.iws" />
@@ -37,10 +37,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="search.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/search.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="52" selection-start="412" selection-end="412" vertical-scroll-proportion="0.2425876" vertical-offset="0" max-vertical-offset="742">
+            <state line="28" column="6" selection-start="745" selection-end="745" vertical-scroll-proportion="-17.5" vertical-offset="0" max-vertical-offset="660">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gruntfile.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gruntfile.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="54" column="13" selection-start="1440" selection-end="1440" vertical-scroll-proportion="0.57768923" vertical-offset="375" max-vertical-offset="1440">
               <folding />
             </state>
           </provider>
@@ -546,7 +555,11 @@
       <created>1404152382636</created>
       <updated>1404152382636</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="add conditional logic for search results page title">
+      <created>1404152733776</created>
+      <updated>1404152733776</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -588,7 +601,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="tagging as v1.15" />
     <MESSAGE value="fixed html validation errors" />
     <MESSAGE value="tagging as v1.16" />
     <MESSAGE value="added show full post option" />
@@ -613,7 +625,8 @@
     <MESSAGE value="now enqueueing style without hybrid core. HC reset removed and gallery styles moved to _gallery.scss." />
     <MESSAGE value="updated Font Awesome to 4.1" />
     <MESSAGE value="updated to include new FA social icons" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated to include new FA social icons" />
+    <MESSAGE value="add conditional logic for search results page title" />
+    <option name="LAST_COMMIT_MESSAGE" value="add conditional logic for search results page title" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -804,13 +817,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gruntfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="42" selection-start="411" selection-end="411" vertical-scroll-proportion="0.3187251" vertical-offset="0" max-vertical-offset="1440">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/content.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="49" column="25" selection-start="1844" selection-end="1844" vertical-scroll-proportion="0.48285323" vertical-offset="383" max-vertical-offset="1305">
@@ -911,7 +917,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/search.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="52" selection-start="412" selection-end="412" vertical-scroll-proportion="0.2425876" vertical-offset="0" max-vertical-offset="742">
+        <state line="28" column="6" selection-start="745" selection-end="745" vertical-scroll-proportion="-17.5" vertical-offset="0" max-vertical-offset="660">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gruntfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="13" selection-start="1440" selection-end="1440" vertical-scroll-proportion="0.57768923" vertical-offset="375" max-vertical-offset="1440">
           <folding />
         </state>
       </provider>
