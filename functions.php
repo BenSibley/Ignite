@@ -7,7 +7,7 @@ function ct_ignite_load_javascript_files() {
 
     // enqueues scripts & styles
     if(! is_admin() ) {
-        wp_enqueue_script('ct-ignite-production', get_template_directory_uri() . '/js/build/production.min.js', array('jquery'),'', true);
+        wp_enqueue_script('ct-ignite-production', get_template_directory_uri() . '/js/build/production.min.js#ct_ignite_asyncload', array('jquery'),'', true);
 
         wp_enqueue_style('ct-ignite-google-fonts');
         wp_enqueue_style('ct-ignite-font-awesome', get_template_directory_uri() . '/assets/font-awesome/css/font-awesome.min.css');
@@ -26,6 +26,18 @@ function ct_ignite_enqueue_admin_styles($hook){
     }
 }
 add_action('admin_enqueue_scripts',	'ct_ignite_enqueue_admin_styles' );
+
+// load all scripts enqueued by theme asynchronously
+function ct_ignite_add_async_script($url) {
+
+    // if async parameter not present, do nothing
+    if (strpos($url, '#ct_ignite_asyncload') === false){
+        return $url;
+    }
+    // if async parameter present, add async attribute
+    return str_replace('#ct_ignite_asyncload', '', $url)."' async='async";
+}
+add_filter('clean_url', 'ct_ignite_add_async_script', 11, 1);
 
 /* Load the core theme framework. */
 require_once( trailingslashit( get_template_directory() ) . 'library/hybrid.php' );

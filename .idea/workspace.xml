@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/style-prefixed.css" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="compete core.iws" />
@@ -26,12 +26,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="functions.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="functions.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="92" column="31" selection-start="3418" selection-end="3418" vertical-scroll-proportion="-4.54" vertical-offset="1153" max-vertical-offset="7155">
+            <state line="24" column="42" selection-start="1188" selection-end="1188" vertical-scroll-proportion="0.49075392" vertical-offset="15" max-vertical-offset="7335">
               <folding>
-                <marker date="1404152373000" expanded="true" signature="9634:9850" placeholder="..." />
+                <marker date="1404153270000" expanded="true" signature="10081:10297" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -46,10 +46,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gruntfile.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="gruntfile.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gruntfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="13" selection-start="1440" selection-end="1440" vertical-scroll-proportion="0.57768923" vertical-offset="375" max-vertical-offset="1440">
+            <state line="54" column="13" selection-start="1440" selection-end="1440" vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="1440">
               <folding />
             </state>
           </provider>
@@ -171,8 +171,8 @@
         <option value="$PROJECT_DIR$/sass/style.scss" />
         <option value="$PROJECT_DIR$/sass/_gallery.scss" />
         <option value="$PROJECT_DIR$/functions-admin.php" />
-        <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/search.php" />
+        <option value="$PROJECT_DIR$/functions.php" />
       </list>
     </option>
   </component>
@@ -559,7 +559,11 @@
       <created>1404152733776</created>
       <updated>1404152733776</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="never removed style-prefixed.css after stopped using with autoprefixer">
+      <created>1404153106649</created>
+      <updated>1404153106649</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -601,7 +605,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="fixed html validation errors" />
     <MESSAGE value="tagging as v1.16" />
     <MESSAGE value="added show full post option" />
     <MESSAGE value="added show full post output" />
@@ -626,7 +629,8 @@
     <MESSAGE value="updated Font Awesome to 4.1" />
     <MESSAGE value="updated to include new FA social icons" />
     <MESSAGE value="add conditional logic for search results page title" />
-    <option name="LAST_COMMIT_MESSAGE" value="add conditional logic for search results page title" />
+    <MESSAGE value="never removed style-prefixed.css after stopped using with autoprefixer" />
+    <option name="LAST_COMMIT_MESSAGE" value="never removed style-prefixed.css after stopped using with autoprefixer" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -906,15 +910,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="31" selection-start="3418" selection-end="3418" vertical-scroll-proportion="-4.54" vertical-offset="1153" max-vertical-offset="7155">
-          <folding>
-            <marker date="1404152373000" expanded="true" signature="9634:9850" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/search.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="6" selection-start="745" selection-end="745" vertical-scroll-proportion="-17.5" vertical-offset="0" max-vertical-offset="660">
@@ -924,8 +919,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="13" selection-start="1440" selection-end="1440" vertical-scroll-proportion="0.57768923" vertical-offset="375" max-vertical-offset="1440">
+        <state line="54" column="13" selection-start="1440" selection-end="1440" vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="1440">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="42" selection-start="1188" selection-end="1188" vertical-scroll-proportion="0.49075392" vertical-offset="15" max-vertical-offset="7335">
+          <folding>
+            <marker date="1404153270000" expanded="true" signature="10081:10297" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
