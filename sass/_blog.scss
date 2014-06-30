@@ -84,7 +84,8 @@
   background: $orange;
   color: white;
   margin: $baseline-height * 1.75 0 $baseline-height * 1.667; /* subtracted 2px border on excerpt-content */
-  @include transition(background 0.2s ease);
+  transition: background 0.2s ease;
+  clear: both;
 
   &:link,
   &:visited {

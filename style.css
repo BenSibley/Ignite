@@ -796,6 +796,7 @@ a img {
   /* subtracted 2px border on excerpt-content */
   -webkit-transition: background 0.2s ease;
   transition: background 0.2s ease;
+  clear: both;
 }
 .more-link:link, .more-link:visited {
   color: white;
