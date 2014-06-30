@@ -3,7 +3,18 @@
 <div class="container">
 
     <div class="entry-header search-end top">
-        <h1 class='entry-title'>Search Results for "<?php echo $s ?>"</h1>
+        <h1 class="entry-title">
+            <?php
+            global $wp_query;
+            $total_results = $wp_query->found_posts;
+            if($total_results) {
+                printf(__('%d search results for','ignite'),$total_results);
+            } else {
+                _e("No search results for ", 'ignite');
+            }
+            ?>
+            <span>"<?php echo $s ?>"</span>
+        </h1>
         <?php get_search_form(); ?>
     </div>
 

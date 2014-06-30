@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions-admin.php" afterPath="$PROJECT_DIR$/functions-admin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/search.php" afterPath="$PROJECT_DIR$/search.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="compete core.iws" />
@@ -27,10 +26,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="functions.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="functions.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="97" column="432" selection-start="4022" selection-end="4022" vertical-scroll-proportion="0.42958748" vertical-offset="1153" max-vertical-offset="7155">
+            <state line="92" column="31" selection-start="3418" selection-end="3418" vertical-scroll-proportion="-4.54" vertical-offset="1153" max-vertical-offset="7155">
               <folding>
                 <marker date="1404152373000" expanded="true" signature="9634:9850" placeholder="..." />
               </folding>
@@ -38,10 +37,19 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="search.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/search.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="52" selection-start="412" selection-end="412" vertical-scroll-proportion="0.2425876" vertical-offset="0" max-vertical-offset="742">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="functions-admin.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/functions-admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="178" column="315" selection-start="5547" selection-end="5547" vertical-scroll-proportion="57.416668" vertical-offset="4048" max-vertical-offset="6240">
+            <state line="178" column="315" selection-start="5236" selection-end="5547" vertical-scroll-proportion="-9.458333" vertical-offset="2443" max-vertical-offset="6240">
               <folding />
             </state>
           </provider>
@@ -115,7 +123,6 @@
         <option value="$PROJECT_DIR$/sass/_comments.scss" />
         <option value="$PROJECT_DIR$/sass/_footer.scss" />
         <option value="$PROJECT_DIR$/sass/_sidebar.scss" />
-        <option value="$PROJECT_DIR$/search.php" />
         <option value="$PROJECT_DIR$/sidebar-primary.php" />
         <option value="$PROJECT_DIR$/searchform.php" />
         <option value="$PROJECT_DIR$/js/functions.min.js" />
@@ -156,6 +163,7 @@
         <option value="$PROJECT_DIR$/sass/_gallery.scss" />
         <option value="$PROJECT_DIR$/functions-admin.php" />
         <option value="$PROJECT_DIR$/functions.php" />
+        <option value="$PROJECT_DIR$/search.php" />
       </list>
     </option>
   </component>
@@ -534,7 +542,11 @@
       <created>1404152199216</created>
       <updated>1404152199217</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="updated to include new FA social icons">
+      <created>1404152382636</created>
+      <updated>1404152382636</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -576,7 +588,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="fixed input styling issues" />
     <MESSAGE value="tagging as v1.15" />
     <MESSAGE value="fixed html validation errors" />
     <MESSAGE value="tagging as v1.16" />
@@ -601,7 +612,8 @@
     <MESSAGE value="gave enqueued styles/scripts more unique handles" />
     <MESSAGE value="now enqueueing style without hybrid core. HC reset removed and gallery styles moved to _gallery.scss." />
     <MESSAGE value="updated Font Awesome to 4.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated Font Awesome to 4.1" />
+    <MESSAGE value="updated to include new FA social icons" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated to include new FA social icons" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -723,11 +735,6 @@
     <entry file="file://$PROJECT_DIR$/logo.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="68" selection-start="313" selection-end="313" vertical-scroll-proportion="0.1875" vertical-offset="0" max-vertical-offset="720" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/search.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="43" selection-start="92" selection-end="92" vertical-scroll-proportion="0.08185539" vertical-offset="0" max-vertical-offset="733" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/footer.php">
@@ -872,13 +879,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions-admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="178" column="315" selection-start="5547" selection-end="5547" vertical-scroll-proportion="57.416668" vertical-offset="4048" max-vertical-offset="6240">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="30" selection-start="353" selection-end="353" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="615">
@@ -893,12 +893,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/functions-admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="178" column="315" selection-start="5236" selection-end="5547" vertical-scroll-proportion="-9.458333" vertical-offset="2443" max-vertical-offset="6240">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="432" selection-start="4022" selection-end="4022" vertical-scroll-proportion="0.42958748" vertical-offset="1153" max-vertical-offset="7155">
+        <state line="92" column="31" selection-start="3418" selection-end="3418" vertical-scroll-proportion="-4.54" vertical-offset="1153" max-vertical-offset="7155">
           <folding>
             <marker date="1404152373000" expanded="true" signature="9634:9850" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/search.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="52" selection-start="412" selection-end="412" vertical-scroll-proportion="0.2425876" vertical-offset="0" max-vertical-offset="742">
+          <folding />
         </state>
       </provider>
     </entry>
