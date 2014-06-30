@@ -184,7 +184,11 @@
     padding: $baseline-height 11.11%;
   }
   .excerpt {
-    padding: 0 14.333% $baseline-height * 1.5;
+    padding: $baseline-height * 1.5 14.333%;
+
+    &.has-post-thumbnail {
+      padding-top: 0;
+    }
   }
   .featured-image {
     left: -20%;
@@ -206,7 +210,11 @@
     padding: $baseline-height 7.407%;
   }
   .excerpt {
-    padding: 0 13.333% $baseline-height * 1.5;
+    padding: $baseline-height * 1.5 13.333%;
+
+    &.has-post-thumbnail {
+      padding-top: 0;
+    }
   }
   .featured-image {
     left: -18%;

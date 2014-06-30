@@ -897,7 +897,10 @@ a img {
   }
 
   .excerpt, .entry {
-    padding: 0 14.333% 2.25em;
+    padding: 2.25em 14.333%;
+  }
+  .excerpt.has-post-thumbnail, .has-post-thumbnail.entry {
+    padding-top: 0;
   }
 
   .featured-image {
@@ -920,7 +923,10 @@ a img {
   }
 
   .excerpt, .entry {
-    padding: 0 13.333% 2.25em;
+    padding: 2.25em 13.333%;
+  }
+  .excerpt.has-post-thumbnail, .has-post-thumbnail.entry {
+    padding-top: 0;
   }
 
   .featured-image {

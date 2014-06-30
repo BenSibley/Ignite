@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/89dd20b9664d73b402baf66e5b92c781ea03dc64/_blog.scssc" afterPath="$PROJECT_DIR$/.sass-cache/89dd20b9664d73b402baf66e5b92c781ea03dc64/_blog.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/_blog.scss" afterPath="$PROJECT_DIR$/sass/_blog.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.min.css" afterPath="$PROJECT_DIR$/style.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="compete core.iws" />
@@ -26,10 +29,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="functions.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_blog.scss" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sass/_blog.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="233" column="24" selection-start="3888" selection-end="3888" vertical-scroll-proportion="0.5555556" vertical-offset="3090" max-vertical-offset="4080">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="functions.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="42" selection-start="1188" selection-end="1188" vertical-scroll-proportion="0.49075392" vertical-offset="15" max-vertical-offset="7335">
+            <state line="23" column="21" selection-start="1112" selection-end="1112" vertical-scroll-proportion="-6.6" vertical-offset="15" max-vertical-offset="7335">
               <folding>
                 <marker date="1404153270000" expanded="true" signature="10081:10297" placeholder="..." />
               </folding>
@@ -165,7 +177,6 @@
         <option value="$PROJECT_DIR$/gruntfile.js" />
         <option value="$PROJECT_DIR$/sass/_menu.scss" />
         <option value="$PROJECT_DIR$/library/extensions/breadcrumb-trail.php" />
-        <option value="$PROJECT_DIR$/sass/_blog.scss" />
         <option value="$PROJECT_DIR$/header.php" />
         <option value="$PROJECT_DIR$/sass/_other.scss" />
         <option value="$PROJECT_DIR$/sass/style.scss" />
@@ -173,6 +184,7 @@
         <option value="$PROJECT_DIR$/functions-admin.php" />
         <option value="$PROJECT_DIR$/search.php" />
         <option value="$PROJECT_DIR$/functions.php" />
+        <option value="$PROJECT_DIR$/sass/_blog.scss" />
       </list>
     </option>
   </component>
@@ -563,7 +575,11 @@
       <created>1404153106649</created>
       <updated>1404153106649</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="now loading production.min.js asynchronously.">
+      <created>1404153312213</created>
+      <updated>1404153312213</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -580,7 +596,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2423945" sideWeight="0.50306" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2423945" sideWeight="0.50306" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -605,7 +621,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="tagging as v1.16" />
     <MESSAGE value="added show full post option" />
     <MESSAGE value="added show full post output" />
     <MESSAGE value="added conditional to show excerpts always on search pages" />
@@ -630,7 +645,8 @@
     <MESSAGE value="updated to include new FA social icons" />
     <MESSAGE value="add conditional logic for search results page title" />
     <MESSAGE value="never removed style-prefixed.css after stopped using with autoprefixer" />
-    <option name="LAST_COMMIT_MESSAGE" value="never removed style-prefixed.css after stopped using with autoprefixer" />
+    <MESSAGE value="now loading production.min.js asynchronously." />
+    <option name="LAST_COMMIT_MESSAGE" value="now loading production.min.js asynchronously." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -840,13 +856,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sass/_blog.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="12" selection-start="1165" selection-end="1165" vertical-scroll-proportion="0.18218085" vertical-offset="883" max-vertical-offset="3960">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/library/extensions/breadcrumb-trail.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="178" column="46" selection-start="5834" selection-end="5834" vertical-scroll-proportion="0.0" vertical-offset="2670" max-vertical-offset="18525">
@@ -926,10 +935,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="42" selection-start="1188" selection-end="1188" vertical-scroll-proportion="0.49075392" vertical-offset="15" max-vertical-offset="7335">
+        <state line="23" column="21" selection-start="1112" selection-end="1112" vertical-scroll-proportion="-6.6" vertical-offset="15" max-vertical-offset="7335">
           <folding>
             <marker date="1404153270000" expanded="true" signature="10081:10297" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sass/_blog.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="233" column="24" selection-start="3888" selection-end="3888" vertical-scroll-proportion="0.5555556" vertical-offset="3090" max-vertical-offset="4080">
+          <folding />
         </state>
       </provider>
     </entry>
