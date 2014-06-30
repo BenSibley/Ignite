@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/89dd20b9664d73b402baf66e5b92c781ea03dc64/_blog.scssc" afterPath="$PROJECT_DIR$/.sass-cache/89dd20b9664d73b402baf66e5b92c781ea03dc64/_blog.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/_blog.scss" afterPath="$PROJECT_DIR$/sass/_blog.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/89dd20b9664d73b402baf66e5b92c781ea03dc64/_base.scssc" afterPath="$PROJECT_DIR$/.sass-cache/89dd20b9664d73b402baf66e5b92c781ea03dc64/_base.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/_base.scss" afterPath="$PROJECT_DIR$/sass/_base.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.min.css" afterPath="$PROJECT_DIR$/style.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="compete core.iws" />
@@ -29,10 +28,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_blog.scss" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_blog.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sass/_blog.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="233" column="24" selection-start="3888" selection-end="3888" vertical-scroll-proportion="0.5555556" vertical-offset="3090" max-vertical-offset="4080">
+            <state line="226" column="0" selection-start="3756" selection-end="3756" vertical-scroll-proportion="-12.5" vertical-offset="3090" max-vertical-offset="4080">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_base.scss" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sass/_base.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="213" column="24" selection-start="3742" selection-end="3742" vertical-scroll-proportion="0.60107815" vertical-offset="2749" max-vertical-offset="3870">
               <folding />
             </state>
           </provider>
@@ -71,15 +79,6 @@
         <entry file="file://$PROJECT_DIR$/functions-admin.php">
           <provider selected="true" editor-type-id="text-editor">
             <state line="178" column="315" selection-start="5236" selection-end="5547" vertical-scroll-proportion="-9.458333" vertical-offset="2443" max-vertical-offset="6240">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gallery.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/library/css/gallery.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="0" selection-start="430" selection-end="430" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1395">
               <folding />
             </state>
           </provider>
@@ -169,7 +168,6 @@
         <option value="$PROJECT_DIR$/logo.php" />
         <option value="$PROJECT_DIR$/content-page.php" />
         <option value="$PROJECT_DIR$/style.css" />
-        <option value="$PROJECT_DIR$/sass/_base.scss" />
         <option value="$PROJECT_DIR$/menu-primary.php" />
         <option value="$PROJECT_DIR$/js/functions.js" />
         <option value="$PROJECT_DIR$/sass/_info.scss" />
@@ -185,6 +183,7 @@
         <option value="$PROJECT_DIR$/search.php" />
         <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/sass/_blog.scss" />
+        <option value="$PROJECT_DIR$/sass/_base.scss" />
       </list>
     </option>
   </component>
@@ -579,7 +578,11 @@
       <created>1404153312213</created>
       <updated>1404153312213</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="fixed missing padding-top on excerpts without a title between 800-100px">
+      <created>1404153629500</created>
+      <updated>1404153629500</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -621,7 +624,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="added show full post option" />
     <MESSAGE value="added show full post output" />
     <MESSAGE value="added conditional to show excerpts always on search pages" />
     <MESSAGE value="tagging as v1.17 and added more color tags" />
@@ -646,7 +648,8 @@
     <MESSAGE value="add conditional logic for search results page title" />
     <MESSAGE value="never removed style-prefixed.css after stopped using with autoprefixer" />
     <MESSAGE value="now loading production.min.js asynchronously." />
-    <option name="LAST_COMMIT_MESSAGE" value="now loading production.min.js asynchronously." />
+    <MESSAGE value="fixed missing padding-top on excerpts without a title between 800-100px" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed missing padding-top on excerpts without a title between 800-100px" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -805,11 +808,6 @@
         <state line="253" column="5" selection-start="4558" selection-end="4558" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="23985" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sass/_base.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="207" column="14" selection-start="3601" selection-end="3601" vertical-scroll-proportion="0.46414602" vertical-offset="2749" max-vertical-offset="3870" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sass/_post.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="88" column="4" selection-start="1350" selection-end="1351" vertical-scroll-proportion="0.0" vertical-offset="999" max-vertical-offset="1740" />
@@ -944,7 +942,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sass/_blog.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="233" column="24" selection-start="3888" selection-end="3888" vertical-scroll-proportion="0.5555556" vertical-offset="3090" max-vertical-offset="4080">
+        <state line="226" column="0" selection-start="3756" selection-end="3756" vertical-scroll-proportion="-12.5" vertical-offset="3090" max-vertical-offset="4080">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sass/_base.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="213" column="24" selection-start="3742" selection-end="3742" vertical-scroll-proportion="0.60107815" vertical-offset="2749" max-vertical-offset="3870">
           <folding />
         </state>
       </provider>
