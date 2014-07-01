@@ -30,10 +30,17 @@
 
     <?php if ( current_theme_supports( 'loop-pagination' ) ) loop_pagination(); ?>
 
-    <div class="search-end bottom">
-        <p>Can't find what you're looking for?  Try refining your search:</p>
-        <?php get_search_form(); ?>
-    </div>
-
+    <?php
+    // only display bottom search bar if there are search results
+    $total_results = $wp_query->found_posts;
+    if($total_results) {
+        ?>
+        <div class="search-end bottom">
+            <p>Can't find what you're looking for?  Try refining your search:</p>
+            <?php get_search_form(); ?>
+        </div>
+        <?php
+    }
+    ?>
 </div>
 <?php get_footer(); ?>

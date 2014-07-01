@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/89dd20b9664d73b402baf66e5b92c781ea03dc64/_base.scssc" afterPath="$PROJECT_DIR$/.sass-cache/89dd20b9664d73b402baf66e5b92c781ea03dc64/_base.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/89dd20b9664d73b402baf66e5b92c781ea03dc64/_other.scssc" afterPath="$PROJECT_DIR$/.sass-cache/89dd20b9664d73b402baf66e5b92c781ea03dc64/_other.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/_base.scss" afterPath="$PROJECT_DIR$/sass/_base.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/_other.scss" afterPath="$PROJECT_DIR$/sass/_other.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.min.css" afterPath="$PROJECT_DIR$/style.min.css" />
+    <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="updated search to only">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/search.php" afterPath="$PROJECT_DIR$/search.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="compete core.iws" />
@@ -49,10 +44,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_other.scss" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_other.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sass/_other.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="207" column="29" selection-start="3222" selection-end="3222" vertical-scroll-proportion="0.5660377" vertical-offset="2685" max-vertical-offset="3645">
+            <state line="186" column="37" selection-start="2921" selection-end="2921" vertical-scroll-proportion="-4.375" vertical-offset="2685" max-vertical-offset="3645">
               <folding />
             </state>
           </provider>
@@ -61,17 +56,9 @@
       <file leaf-file-name="functions.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="34" selection-start="1451" selection-end="1451" vertical-scroll-proportion="-20.0" vertical-offset="0" max-vertical-offset="7335">
+            <state line="16" column="36" selection-start="842" selection-end="842" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="7335">
               <folding>
-                <marker date="1404154609000" expanded="true" signature="3966:4657" placeholder="..." />
-                <marker date="1404154609000" expanded="true" signature="4035:4648" placeholder="..." />
-                <marker date="1404154609000" expanded="true" signature="7665:8673" placeholder="..." />
-                <marker date="1404154609000" expanded="true" signature="7735:8663" placeholder="..." />
-                <marker date="1404154609000" expanded="true" signature="7776:7967" placeholder="..." />
-                <marker date="1404154609000" expanded="true" signature="8009:8285" placeholder="..." />
-                <marker date="1404154609000" expanded="true" signature="8324:8643" placeholder="..." />
                 <marker date="1404154609000" expanded="true" signature="10081:10297" placeholder="..." />
-                <marker date="1404154609000" expanded="true" signature="12593:12691" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -86,10 +73,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="search.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/search.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="6" selection-start="745" selection-end="745" vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="660">
+            <state line="31" column="0" selection-start="830" selection-end="830" vertical-scroll-proportion="0.62668467" vertical-offset="0" max-vertical-offset="765">
               <folding />
             </state>
           </provider>
@@ -189,12 +176,12 @@
         <option value="$PROJECT_DIR$/sass/style.scss" />
         <option value="$PROJECT_DIR$/sass/_gallery.scss" />
         <option value="$PROJECT_DIR$/functions-admin.php" />
-        <option value="$PROJECT_DIR$/search.php" />
         <option value="$PROJECT_DIR$/sass/_blog.scss" />
         <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/js/functions.js" />
         <option value="$PROJECT_DIR$/sass/_base.scss" />
         <option value="$PROJECT_DIR$/sass/_other.scss" />
+        <option value="$PROJECT_DIR$/search.php" />
       </list>
     </option>
   </component>
@@ -583,7 +570,11 @@
       <created>1404229710011</created>
       <updated>1404229710011</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="updated search page styling.">
+      <created>1404230820433</created>
+      <updated>1404230820433</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -600,7 +591,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24730128" sideWeight="0.50306" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24730128" sideWeight="0.50306" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -625,7 +616,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="tagging as v1.17 and added more color tags" />
     <MESSAGE value="simplified logo size tools to just use a max-width and max-height both visible at all times to users" />
     <MESSAGE value="updated featured image to padding-bottom %" />
     <MESSAGE value="updated social icon display to work based on available space" />
@@ -650,7 +640,8 @@
     <MESSAGE value="fixed missing padding-top on excerpts without a title between 800-100px" />
     <MESSAGE value="was missing quotes around input[type=&quot;file&quot;]" />
     <MESSAGE value="stopped using tappy.js and removed it." />
-    <option name="LAST_COMMIT_MESSAGE" value="stopped using tappy.js and removed it." />
+    <MESSAGE value="updated search page styling." />
+    <option name="LAST_COMMIT_MESSAGE" value="updated search page styling." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -889,13 +880,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/search.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="6" selection-start="745" selection-end="745" vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="660">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sass/_blog.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="226" column="0" selection-start="3756" selection-end="3756" vertical-scroll-proportion="0.0" vertical-offset="3090" max-vertical-offset="4080">
@@ -907,23 +891,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="30" selection-start="435" selection-end="435" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1590">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="34" selection-start="1451" selection-end="1451" vertical-scroll-proportion="-20.0" vertical-offset="0" max-vertical-offset="7335">
-          <folding>
-            <marker date="1404154609000" expanded="true" signature="3966:4657" placeholder="..." />
-            <marker date="1404154609000" expanded="true" signature="4035:4648" placeholder="..." />
-            <marker date="1404154609000" expanded="true" signature="7665:8673" placeholder="..." />
-            <marker date="1404154609000" expanded="true" signature="7735:8663" placeholder="..." />
-            <marker date="1404154609000" expanded="true" signature="7776:7967" placeholder="..." />
-            <marker date="1404154609000" expanded="true" signature="8009:8285" placeholder="..." />
-            <marker date="1404154609000" expanded="true" signature="8324:8643" placeholder="..." />
-            <marker date="1404154609000" expanded="true" signature="10081:10297" placeholder="..." />
-            <marker date="1404154609000" expanded="true" signature="12593:12691" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -943,7 +910,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sass/_other.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="207" column="29" selection-start="3222" selection-end="3222" vertical-scroll-proportion="0.5660377" vertical-offset="2685" max-vertical-offset="3645">
+        <state line="186" column="37" selection-start="2921" selection-end="2921" vertical-scroll-proportion="-4.375" vertical-offset="2685" max-vertical-offset="3645">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="36" selection-start="842" selection-end="842" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="7335">
+          <folding>
+            <marker date="1404154609000" expanded="true" signature="10081:10297" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/search.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="0" selection-start="830" selection-end="830" vertical-scroll-proportion="0.62668467" vertical-offset="0" max-vertical-offset="765">
           <folding />
         </state>
       </provider>
