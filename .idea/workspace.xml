@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/tappy.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/functions.js" afterPath="$PROJECT_DIR$/js/functions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/build/production.js" afterPath="$PROJECT_DIR$/js/build/production.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/build/production.min.js" afterPath="$PROJECT_DIR$/js/build/production.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/89dd20b9664d73b402baf66e5b92c781ea03dc64/_base.scssc" afterPath="$PROJECT_DIR$/.sass-cache/89dd20b9664d73b402baf66e5b92c781ea03dc64/_base.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/89dd20b9664d73b402baf66e5b92c781ea03dc64/_other.scssc" afterPath="$PROJECT_DIR$/.sass-cache/89dd20b9664d73b402baf66e5b92c781ea03dc64/_other.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/_base.scss" afterPath="$PROJECT_DIR$/sass/_base.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/_other.scss" afterPath="$PROJECT_DIR$/sass/_other.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.min.css" afterPath="$PROJECT_DIR$/style.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="compete core.iws" />
@@ -41,7 +43,16 @@
       <file leaf-file-name="_base.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sass/_base.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="213" column="24" selection-start="3742" selection-end="3742" vertical-scroll-proportion="0.0" vertical-offset="2749" max-vertical-offset="3870">
+            <state line="192" column="14" selection-start="3253" selection-end="3253" vertical-scroll-proportion="-5.4583335" vertical-offset="2749" max-vertical-offset="3885">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_other.scss" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sass/_other.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="207" column="29" selection-start="3222" selection-end="3222" vertical-scroll-proportion="0.5660377" vertical-offset="2685" max-vertical-offset="3645">
               <folding />
             </state>
           </provider>
@@ -52,7 +63,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state line="32" column="34" selection-start="1451" selection-end="1451" vertical-scroll-proportion="-20.0" vertical-offset="0" max-vertical-offset="7335">
               <folding>
+                <marker date="1404154609000" expanded="true" signature="3966:4657" placeholder="..." />
+                <marker date="1404154609000" expanded="true" signature="4035:4648" placeholder="..." />
+                <marker date="1404154609000" expanded="true" signature="7665:8673" placeholder="..." />
+                <marker date="1404154609000" expanded="true" signature="7735:8663" placeholder="..." />
+                <marker date="1404154609000" expanded="true" signature="7776:7967" placeholder="..." />
+                <marker date="1404154609000" expanded="true" signature="8009:8285" placeholder="..." />
+                <marker date="1404154609000" expanded="true" signature="8324:8643" placeholder="..." />
                 <marker date="1404154609000" expanded="true" signature="10081:10297" placeholder="..." />
+                <marker date="1404154609000" expanded="true" signature="12593:12691" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -76,10 +95,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gruntfile.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="gruntfile.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gruntfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="44" selection-start="612" selection-end="612" vertical-scroll-proportion="0.45816734" vertical-offset="0" max-vertical-offset="1440">
+            <state line="16" column="33" selection-start="402" selection-end="402" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1440">
               <folding />
             </state>
           </provider>
@@ -107,15 +126,6 @@
         <entry file="file://$PROJECT_DIR$/menu-primary.php">
           <provider selected="true" editor-type-id="text-editor">
             <state line="4" column="27" selection-start="200" selection-end="200" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="240">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_gallery.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sass/_gallery.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="16" selection-start="201" selection-end="201" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="1185">
               <folding />
             </state>
           </provider>
@@ -176,15 +186,15 @@
         <option value="$PROJECT_DIR$/sass/_menu.scss" />
         <option value="$PROJECT_DIR$/library/extensions/breadcrumb-trail.php" />
         <option value="$PROJECT_DIR$/header.php" />
-        <option value="$PROJECT_DIR$/sass/_other.scss" />
         <option value="$PROJECT_DIR$/sass/style.scss" />
         <option value="$PROJECT_DIR$/sass/_gallery.scss" />
         <option value="$PROJECT_DIR$/functions-admin.php" />
         <option value="$PROJECT_DIR$/search.php" />
         <option value="$PROJECT_DIR$/sass/_blog.scss" />
-        <option value="$PROJECT_DIR$/sass/_base.scss" />
         <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/js/functions.js" />
+        <option value="$PROJECT_DIR$/sass/_base.scss" />
+        <option value="$PROJECT_DIR$/sass/_other.scss" />
       </list>
     </option>
   </component>
@@ -569,13 +579,18 @@
       <created>1404153892341</created>
       <updated>1404153892341</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="stopped using tappy.js and removed it.">
+      <created>1404229710011</created>
+      <updated>1404229710011</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="500" y="-1058" width="1061" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15248963" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -585,13 +600,12 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2423945" sideWeight="0.50306" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24730128" sideWeight="0.50306" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3285124" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -611,7 +625,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="added conditional to show excerpts always on search pages" />
     <MESSAGE value="tagging as v1.17 and added more color tags" />
     <MESSAGE value="simplified logo size tools to just use a max-width and max-height both visible at all times to users" />
     <MESSAGE value="updated featured image to padding-bottom %" />
@@ -636,7 +649,8 @@
     <MESSAGE value="now loading production.min.js asynchronously." />
     <MESSAGE value="fixed missing padding-top on excerpts without a title between 800-100px" />
     <MESSAGE value="was missing quotes around input[type=&quot;file&quot;]" />
-    <option name="LAST_COMMIT_MESSAGE" value="was missing quotes around input[type=&quot;file&quot;]" />
+    <MESSAGE value="stopped using tappy.js and removed it." />
+    <option name="LAST_COMMIT_MESSAGE" value="stopped using tappy.js and removed it." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -810,11 +824,6 @@
         <state line="13" column="2" selection-start="777" selection-end="777" vertical-scroll-proportion="0.2674897" vertical-offset="0" max-vertical-offset="729" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sass/_other.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="193" column="3" selection-start="2977" selection-end="2977" vertical-scroll-proportion="0.2722372" vertical-offset="2693" max-vertical-offset="3450" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/content.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="49" column="25" selection-start="1844" selection-end="1844" vertical-scroll-proportion="0.48285323" vertical-offset="383" max-vertical-offset="1305" />
@@ -894,13 +903,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sass/_base.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="213" column="24" selection-start="3742" selection-end="3742" vertical-scroll-proportion="0.0" vertical-offset="2749" max-vertical-offset="3870">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/functions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="30" selection-start="435" selection-end="435" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1590">
@@ -912,14 +914,36 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="32" column="34" selection-start="1451" selection-end="1451" vertical-scroll-proportion="-20.0" vertical-offset="0" max-vertical-offset="7335">
           <folding>
+            <marker date="1404154609000" expanded="true" signature="3966:4657" placeholder="..." />
+            <marker date="1404154609000" expanded="true" signature="4035:4648" placeholder="..." />
+            <marker date="1404154609000" expanded="true" signature="7665:8673" placeholder="..." />
+            <marker date="1404154609000" expanded="true" signature="7735:8663" placeholder="..." />
+            <marker date="1404154609000" expanded="true" signature="7776:7967" placeholder="..." />
+            <marker date="1404154609000" expanded="true" signature="8009:8285" placeholder="..." />
+            <marker date="1404154609000" expanded="true" signature="8324:8643" placeholder="..." />
             <marker date="1404154609000" expanded="true" signature="10081:10297" placeholder="..." />
+            <marker date="1404154609000" expanded="true" signature="12593:12691" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="44" selection-start="612" selection-end="612" vertical-scroll-proportion="0.45816734" vertical-offset="0" max-vertical-offset="1440">
+        <state line="16" column="33" selection-start="402" selection-end="402" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1440">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sass/_base.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="192" column="14" selection-start="3253" selection-end="3253" vertical-scroll-proportion="-5.4583335" vertical-offset="2749" max-vertical-offset="3885">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sass/_other.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="207" column="29" selection-start="3222" selection-end="3222" vertical-scroll-proportion="0.5660377" vertical-offset="2685" max-vertical-offset="3645">
           <folding />
         </state>
       </provider>

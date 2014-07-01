@@ -202,6 +202,7 @@ textarea {
 }
 textarea {
   max-width: $baseline-height * 15 * 1.85;
+  overflow: auto; /* to hide scrollbar in IE */
 }
 input[type="submit"] {
   padding: 0.8em;

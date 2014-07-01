@@ -162,8 +162,18 @@
   .search-end {
     padding: $baseline-height 8% $baseline-height * 1.5;
   }
+  .search-end.top {
+    padding-bottom: $baseline-height * 2;
+  }
   .search-end.bottom {
     padding-top: 0;
+  }
+  .excerpt {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  .excerpt-content {
+    padding-bottom: $baseline-height;
   }
 }
 .search-no-results {
@@ -199,6 +209,9 @@
     }
     .search-end {
       padding: $baseline-height 14.333% $baseline-height * 1.5;
+    }
+    .search-end.top {
+      padding-bottom: $baseline-height * 3;
     }
   }
 }
