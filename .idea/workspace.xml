@@ -103,7 +103,7 @@
       <file leaf-file-name="functions-admin.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/functions-admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="348" column="163" selection-start="10942" selection-end="10942" vertical-scroll-proportion="0.3415638" vertical-offset="4971" max-vertical-offset="6240">
+            <state line="347" column="141" selection-start="10874" selection-end="10874" vertical-scroll-proportion="0.3415638" vertical-offset="4956" max-vertical-offset="6225">
               <folding />
             </state>
           </provider>
@@ -578,7 +578,11 @@
       <created>1404231558343</created>
       <updated>1404231558343</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="slight adjustment to copy asking for review">
+      <created>1404231914632</created>
+      <updated>1404231914632</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -620,7 +624,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="updated featured image to padding-bottom %" />
     <MESSAGE value="updated social icon display to work based on available space" />
     <MESSAGE value="updated social icon display to work better" />
     <MESSAGE value="updated styling to work better with social icons" />
@@ -645,7 +648,8 @@
     <MESSAGE value="stopped using tappy.js and removed it." />
     <MESSAGE value="updated search page styling." />
     <MESSAGE value="updated search to only show bottom search bar if there are results." />
-    <option name="LAST_COMMIT_MESSAGE" value="updated search to only show bottom search bar if there are results." />
+    <MESSAGE value="slight adjustment to copy asking for review" />
+    <option name="LAST_COMMIT_MESSAGE" value="slight adjustment to copy asking for review" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -932,7 +936,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/functions-admin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="348" column="163" selection-start="10942" selection-end="10942" vertical-scroll-proportion="0.3415638" vertical-offset="4971" max-vertical-offset="6240">
+        <state line="347" column="141" selection-start="10874" selection-end="10874" vertical-scroll-proportion="0.3415638" vertical-offset="4956" max-vertical-offset="6225">
           <folding />
         </state>
       </provider>

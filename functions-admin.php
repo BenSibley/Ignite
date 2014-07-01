@@ -345,8 +345,7 @@ function ct_ignite_options_content(){
     ?>
     <div id="ignite-dashboard-wrap" class="wrap">
         <h2>Ignite Dashboard</h2>
-        <p>Thanks for downloading Ignite!</p>
-        <p>If you can, take one minute to <a target="_blank" href="http://wordpress.org/support/view/theme-reviews/ignite"><strong>leave a review</strong></a>.</p>
+        <p>Thanks for downloading Ignite! If you can, please take one minute to <a target="_blank" href="http://wordpress.org/support/view/theme-reviews/ignite"><strong>leave a review</strong></a>.</p>
         <hr />
         <div>
             <h3>Customization</h3>
