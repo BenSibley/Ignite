@@ -3,8 +3,8 @@ jQuery(document).ready(function($){
     $(".entry-content").fitVids();
     $(".excerpt-content").fitVids();
 
-    // use the tappy library here to remove 300ms click delay
-    $('#toggle-navigation').bind('tap', onTap)
+    // no longer using tappy library here b/c doesn't work when loaded asynchronously
+    $('#toggle-navigation').bind('click', onTap);
 
     function onTap() {
         // do work
