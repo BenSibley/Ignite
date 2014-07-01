@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="updated search to only">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/search.php" afterPath="$PROJECT_DIR$/search.php" />
+    <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions-admin.php" afterPath="$PROJECT_DIR$/functions-admin.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="compete core.iws" />
@@ -73,10 +73,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="search.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/search.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="0" selection-start="830" selection-end="830" vertical-scroll-proportion="0.62668467" vertical-offset="0" max-vertical-offset="765">
+            <state line="31" column="0" selection-start="830" selection-end="830" vertical-scroll-proportion="-19.375" vertical-offset="0" max-vertical-offset="765">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="249" column="17" selection-start="4315" selection-end="4315" vertical-scroll-proportion="0.0" vertical-offset="3420" max-vertical-offset="26190">
               <folding />
             </state>
           </provider>
@@ -91,19 +100,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="functions-admin.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="functions-admin.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/functions-admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="178" column="315" selection-start="5236" selection-end="5547" vertical-scroll-proportion="0.0" vertical-offset="2443" max-vertical-offset="6240">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/header.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="30" selection-start="353" selection-end="353" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="615">
+            <state line="348" column="163" selection-start="10942" selection-end="10942" vertical-scroll-proportion="0.3415638" vertical-offset="4971" max-vertical-offset="6240">
               <folding />
             </state>
           </provider>
@@ -175,13 +175,13 @@
         <option value="$PROJECT_DIR$/header.php" />
         <option value="$PROJECT_DIR$/sass/style.scss" />
         <option value="$PROJECT_DIR$/sass/_gallery.scss" />
-        <option value="$PROJECT_DIR$/functions-admin.php" />
         <option value="$PROJECT_DIR$/sass/_blog.scss" />
         <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/js/functions.js" />
         <option value="$PROJECT_DIR$/sass/_base.scss" />
         <option value="$PROJECT_DIR$/sass/_other.scss" />
         <option value="$PROJECT_DIR$/search.php" />
+        <option value="$PROJECT_DIR$/functions-admin.php" />
       </list>
     </option>
   </component>
@@ -574,7 +574,11 @@
       <created>1404230820433</created>
       <updated>1404230820433</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="updated search to only show bottom search bar if there are results.">
+      <created>1404231558343</created>
+      <updated>1404231558343</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -616,7 +620,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="simplified logo size tools to just use a max-width and max-height both visible at all times to users" />
     <MESSAGE value="updated featured image to padding-bottom %" />
     <MESSAGE value="updated social icon display to work based on available space" />
     <MESSAGE value="updated social icon display to work better" />
@@ -641,7 +644,8 @@
     <MESSAGE value="was missing quotes around input[type=&quot;file&quot;]" />
     <MESSAGE value="stopped using tappy.js and removed it." />
     <MESSAGE value="updated search page styling." />
-    <option name="LAST_COMMIT_MESSAGE" value="updated search page styling." />
+    <MESSAGE value="updated search to only show bottom search bar if there are results." />
+    <option name="LAST_COMMIT_MESSAGE" value="updated search to only show bottom search bar if there are results." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -795,11 +799,6 @@
         <state line="13" column="6" selection-start="219" selection-end="219" vertical-scroll-proportion="0.26209676" vertical-offset="0" max-vertical-offset="744" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="253" column="5" selection-start="4558" selection-end="4558" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="23985" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sass/_post.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="88" column="4" selection-start="1350" selection-end="1351" vertical-scroll-proportion="0.0" vertical-offset="999" max-vertical-offset="1740" />
@@ -873,13 +872,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions-admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="178" column="315" selection-start="5236" selection-end="5547" vertical-scroll-proportion="0.0" vertical-offset="2443" max-vertical-offset="6240">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sass/_blog.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="226" column="0" selection-start="3756" selection-end="3756" vertical-scroll-proportion="0.0" vertical-offset="3090" max-vertical-offset="4080">
@@ -926,7 +918,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/search.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="0" selection-start="830" selection-end="830" vertical-scroll-proportion="0.62668467" vertical-offset="0" max-vertical-offset="765">
+        <state line="31" column="0" selection-start="830" selection-end="830" vertical-scroll-proportion="-19.375" vertical-offset="0" max-vertical-offset="765">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="249" column="17" selection-start="4315" selection-end="4315" vertical-scroll-proportion="0.0" vertical-offset="3420" max-vertical-offset="26190">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions-admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="348" column="163" selection-start="10942" selection-end="10942" vertical-scroll-proportion="0.3415638" vertical-offset="4971" max-vertical-offset="6240">
           <folding />
         </state>
       </provider>
