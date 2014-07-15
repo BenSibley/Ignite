@@ -233,6 +233,11 @@ img,
   color: #7c7d7f;
 }
 
+a[rel~="attachment"] {
+  display: block;
+  text-align: center;
+}
+
 /* Form styles */
 input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="file"]),
 textarea {

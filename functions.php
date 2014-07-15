@@ -494,3 +494,20 @@ function ct_ignite_show_avatars_check($classes){
 }
 
 add_action('comment_class', 'ct_ignite_show_avatars_check');
+
+/**
+ * Attach a class to linked images' parent anchors
+ * e.g. a img => a.img img
+ */
+function ct_ignite_give_linked_images_class($html, $id, $caption, $title, $align, $url, $size, $alt = '' ){
+    $classes = 'img-link'; // separated by spaces, e.g. 'img image-link'
+
+    // check if there are already classes assigned to the anchor
+    if ( preg_match('/<a.*? class=".*?">/', $html) ) {
+        $html = preg_replace('/(<a.*? class=".*?)(".*?>)/', '$1 ' . $classes . '$2', $html);
+    } else {
+        $html = preg_replace('/(<a.*?)>/', '$1 class="' . $classes . '" >', $html);
+    }
+    return $html;
+}
+add_filter('image_send_to_editor','ct_ignite_give_linked_images_class',10,8);
