@@ -1263,6 +1263,11 @@ li.pingback {
   /* b/c comment meta border */
 }
 
+.no-avatars .comment-content,
+.no-avatars .comment-meta {
+  margin-left: 0;
+}
+
 .comment-author:after {
   content: ".";
   display: block;

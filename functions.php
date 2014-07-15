@@ -481,3 +481,16 @@ if ( function_exists( 'dsq_options' ) ) {
     remove_filter( 'comments_template', 'dsq_comments_template' );
     add_filter( 'comments_template', 'dsq_comments_template', 99 ); // You can use any priority higher than '10'
 }
+
+// add class if no avatars are being shown in the comments
+function ct_ignite_show_avatars_check($classes){
+
+    if(get_option('show_avatars')){
+        $classes[] = 'avatars';
+    } else {
+        $classes[] = 'no-avatars';
+    }
+    return $classes;
+}
+
+add_action('comment_class', 'ct_ignite_show_avatars_check');

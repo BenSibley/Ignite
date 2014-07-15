@@ -40,6 +40,13 @@ li.pingback {
     margin-bottom: $baseline-height - 0.063; /* b/c comment meta border */
   }
 }
+.no-avatars {
+
+  .comment-content,
+  .comment-meta {
+    margin-left: 0;
+  }
+}
 .comment-author {
 
   &:after {

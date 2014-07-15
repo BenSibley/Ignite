@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/89dd20b9664d73b402baf66e5b92c781ea03dc64/_base.scssc" afterPath="$PROJECT_DIR$/.sass-cache/89dd20b9664d73b402baf66e5b92c781ea03dc64/_base.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/89dd20b9664d73b402baf66e5b92c781ea03dc64/_menu.scssc" afterPath="$PROJECT_DIR$/.sass-cache/89dd20b9664d73b402baf66e5b92c781ea03dc64/_menu.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/_base.scss" afterPath="$PROJECT_DIR$/sass/_base.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/_menu.scss" afterPath="$PROJECT_DIR$/sass/_menu.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/functions.js" afterPath="$PROJECT_DIR$/js/functions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/89dd20b9664d73b402baf66e5b92c781ea03dc64/_comments.scssc" afterPath="$PROJECT_DIR$/.sass-cache/89dd20b9664d73b402baf66e5b92c781ea03dc64/_comments.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/_comments.scss" afterPath="$PROJECT_DIR$/sass/_comments.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.min.css" afterPath="$PROJECT_DIR$/style.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -50,10 +49,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="searchform.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/searchform.php">
+      <file leaf-file-name="_comments.scss" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sass/_comments.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="6" selection-start="403" selection-end="403" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="180">
+            <state line="45" column="16" selection-start="885" selection-end="885" vertical-scroll-proportion="0.18881118" vertical-offset="540" max-vertical-offset="2340">
               <folding />
             </state>
           </provider>
@@ -71,8 +70,10 @@
       <file leaf-file-name="functions.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="89" column="22" selection-start="3315" selection-end="3315" vertical-scroll-proportion="0.0" vertical-offset="945" max-vertical-offset="7335">
-              <folding />
+            <state line="473" column="24" selection-start="16407" selection-end="16407" vertical-scroll-proportion="-12.375" vertical-offset="6798" max-vertical-offset="7515">
+              <folding>
+                <marker date="1405433762000" expanded="true" signature="10081:10297" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -113,10 +114,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_base.scss" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_base.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sass/_base.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="0" selection-start="548" selection-end="548" vertical-scroll-proportion="0.44871795" vertical-offset="90" max-vertical-offset="4215">
+            <state line="26" column="0" selection-start="547" selection-end="547" vertical-scroll-proportion="-13.125" vertical-offset="75" max-vertical-offset="4200">
               <folding />
             </state>
           </provider>
@@ -141,7 +142,6 @@
         <option value="$PROJECT_DIR$/singular.php" />
         <option value="$PROJECT_DIR$/js/tappy.js" />
         <option value="$PROJECT_DIR$/content-404.php" />
-        <option value="$PROJECT_DIR$/sass/_comments.scss" />
         <option value="$PROJECT_DIR$/sass/_footer.scss" />
         <option value="$PROJECT_DIR$/sass/_sidebar.scss" />
         <option value="$PROJECT_DIR$/sidebar-primary.php" />
@@ -177,7 +177,6 @@
         <option value="$PROJECT_DIR$/sass/style.scss" />
         <option value="$PROJECT_DIR$/sass/_gallery.scss" />
         <option value="$PROJECT_DIR$/sass/_blog.scss" />
-        <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/sass/_other.scss" />
         <option value="$PROJECT_DIR$/search.php" />
         <option value="$PROJECT_DIR$/functions-admin.php" />
@@ -186,6 +185,8 @@
         <option value="$PROJECT_DIR$/js/functions.js" />
         <option value="$PROJECT_DIR$/sass/_menu.scss" />
         <option value="$PROJECT_DIR$/sass/_base.scss" />
+        <option value="$PROJECT_DIR$/functions.php" />
+        <option value="$PROJECT_DIR$/sass/_comments.scss" />
       </list>
     </option>
   </component>
@@ -683,11 +684,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/library/extensions/theme-layouts.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="152" column="51" selection-start="5576" selection-end="5576" vertical-scroll-proportion="-7.4583335" vertical-offset="1726" max-vertical-offset="10440" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/library/functions/template-hierarchy.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="175" column="45" selection-start="5949" selection-end="5949" vertical-scroll-proportion="-7.7916665" vertical-offset="2258" max-vertical-offset="3555" />
@@ -902,13 +898,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="22" selection-start="3315" selection-end="3315" vertical-scroll-proportion="0.0" vertical-offset="945" max-vertical-offset="7335">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sidebar-primary.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="15" selection-start="235" selection-end="235" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="210">
@@ -960,7 +949,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sass/_base.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="548" selection-end="548" vertical-scroll-proportion="0.44871795" vertical-offset="90" max-vertical-offset="4215">
+        <state line="26" column="0" selection-start="547" selection-end="547" vertical-scroll-proportion="-13.125" vertical-offset="75" max-vertical-offset="4200">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="473" column="24" selection-start="16407" selection-end="16407" vertical-scroll-proportion="-12.375" vertical-offset="6798" max-vertical-offset="7515">
+          <folding>
+            <marker date="1405433762000" expanded="true" signature="10081:10297" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sass/_comments.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="16" selection-start="885" selection-end="885" vertical-scroll-proportion="0.18881118" vertical-offset="540" max-vertical-offset="2340">
           <folding />
         </state>
       </provider>
