@@ -242,7 +242,7 @@ function ct_ignite_show_author_meta( $wp_customize ) {
             'capability' => 'edit_theme_options'
         )
     );
-    /* Add the color setting. */
+    /* setting */
     $wp_customize->add_setting(
         'ct_ignite_author_meta_settings',
         array(
@@ -252,6 +252,7 @@ function ct_ignite_show_author_meta( $wp_customize ) {
             'sanitize_callback' => 'ct_ignite_sanitize_author_meta_settings',
         )
     );
+    /* control */
     $wp_customize->add_control(
         'ct_ignite_show_author_meta',
         array(

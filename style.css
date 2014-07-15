@@ -1161,6 +1161,7 @@ a img {
   border-bottom: solid 1px #e6a117;
   font-weight: 700;
   position: relative;
+  display: inline-block;
 }
 .further-reading a {
   color: #373b41;
@@ -1613,6 +1614,11 @@ li.pingback {
 .post-password-form input[type="password"] {
   display: block;
   margin: 0.75em 0;
+}
+
+/* attachment page */
+.singular-attachment .further-reading p {
+  width: 49.5%;
 }
 
 /**
