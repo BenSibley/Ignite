@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="added CSS to turn off input zoom-in in iOS">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/89dd20b9664d73b402baf66e5b92c781ea03dc64/_base.scssc" afterPath="$PROJECT_DIR$/.sass-cache/89dd20b9664d73b402baf66e5b92c781ea03dc64/_base.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/89dd20b9664d73b402baf66e5b92c781ea03dc64/style.scssc" afterPath="$PROJECT_DIR$/.sass-cache/89dd20b9664d73b402baf66e5b92c781ea03dc64/style.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/functions.js" afterPath="$PROJECT_DIR$/js/functions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/build/production.js" afterPath="$PROJECT_DIR$/js/build/production.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/build/production.min.js" afterPath="$PROJECT_DIR$/js/build/production.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.min.css" afterPath="$PROJECT_DIR$/style.min.css" />
+    <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="compete core.iws" />
@@ -602,16 +595,20 @@
       <created>1405431331082</created>
       <updated>1405431331082</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="updated JS functions to work with the menu unset">
+      <created>1405431936748</created>
+      <updated>1405431936748</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="585" y="-1058" width="976" height="1052" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.153125" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.153125" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -644,7 +641,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="social media icon styling restricted to site-header icons" />
     <MESSAGE value="updated content-attachment page to work with galleries" />
     <MESSAGE value="fixed problem with date" />
     <MESSAGE value="added missing text domains" />
@@ -669,7 +665,8 @@
     <MESSAGE value="tagging as v1.19" />
     <MESSAGE value="added .gitignore" />
     <MESSAGE value="added CSS to turn off input zoom-in in iOS" />
-    <option name="LAST_COMMIT_MESSAGE" value="added CSS to turn off input zoom-in in iOS" />
+    <MESSAGE value="updated JS functions to work with the menu unset" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated JS functions to work with the menu unset" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
