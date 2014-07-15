@@ -251,3 +251,18 @@ a img {
   border: none;
 }
 
+// stop iphone from zooming in on landscape view
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape)
+{
+  html {
+    -webkit-text-size-adjust: none;   /* none for no scaling */
+  }
+}
+
+// stop ipad from zooming in on landscape view
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape)
+{
+  html {
+    -webkit-text-size-adjust: none;   /* none for no scaling */
+  }
+}
