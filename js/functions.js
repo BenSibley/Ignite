@@ -87,8 +87,10 @@ jQuery(document).ready(function($){
 
     /* allow keyboard access/visibility for dropdown menu items */
     $('.menu-item a, .page_item a').focus(function(){
-        $(this).parent('li').addClass('focused');
-        $(this).parents('ul').addClass('focused');
+        setTimeout(function() {
+            $(this).parent('li').addClass('focused');
+            $(this).parents('ul').addClass('focused');
+        }, 0);
     });
     $('.menu-item a, .page_item a').focusout(function(){
         $(this).parent('li').removeClass('focused');
