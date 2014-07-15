@@ -1,0 +1,5 @@
+.sass-cache
+.DS_Store
+.idea
+.idea/*
+.idea/workspace.xml
