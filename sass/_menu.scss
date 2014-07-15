@@ -19,7 +19,13 @@
     text-decoration: none;
     color: $gray;
 
-    &:hover {
+    &:link,
+    &:visited {
+      color: $gray;
+    }
+    &:hover,
+    &:active,
+    &:focus {
       color: $orange;
     }
   }
@@ -49,6 +55,7 @@
 }
 
 .menu-primary {
+  transform: translateZ(0); // hardware acceleration
   background: $gray;
   width: 100%;
   min-height: 75em;
@@ -58,7 +65,9 @@
   left: 0;
   padding-top: $baseline-height;
   text-align: center;
-  z-index: -1;
+  z-index: 0;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
 
   p {
     color: $orange;
@@ -139,9 +148,9 @@
 .site-header.toggled {
 
   .menu-primary {
-    z-index: 0;
+    transform: translateX(0);
   }
-  + div {
+  ~ div {
 
     .main:after {
       bottom: 0;
@@ -197,6 +206,7 @@
     padding: 0;
     text-align: left;
     background: none;
+    transform: none;
 
     p {
       display: none;
@@ -220,8 +230,8 @@
         margin: 0;
         z-index: 3;
         min-width: 100%;
-        @include backface-visibility(hidden); /* remove slight wiggle caused by opacity change */
-        @include transition(opacity 0.2s ease);
+        backface-visibility: hidden; /* remove slight wiggle caused by opacity change */
+        transition: opacity 0.2s ease;
 
         &:hover,
         &:focus {

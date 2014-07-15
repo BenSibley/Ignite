@@ -12,7 +12,7 @@ jQuery(document).ready(function($){
         var newMenuHeight = $('#overflow-container').height();
 
         if ($('#site-header').hasClass('toggled')) {
-            $('#site-header').removeClass('toggled')
+            $('#site-header').removeClass('toggled');
             $('#main').css('transform', 'translateX(' + 0 + 'px)');
             $('.breadcrumbs').css('transform', 'translateX(' + 0 + 'px)');
             $('#sidebar-primary-container').css('transform', 'translateX(' + 0 + 'px)');
@@ -22,7 +22,7 @@ jQuery(document).ready(function($){
                 $('#menu-primary').removeAttr('style');
             }, 400);
         } else {
-            $('#site-header').addClass('toggled')
+            $('#site-header').addClass('toggled');
             $('#menu-primary').css('height', newMenuHeight);
             $('#main').css('transform', 'translateX(' + menuWidth + 'px)');
             $('.breadcrumbs').css('transform', 'translateX(' + menuWidth + 'px)');

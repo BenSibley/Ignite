@@ -344,7 +344,10 @@ a img {
   text-decoration: none;
   color: #373b41;
 }
-.site-title a:hover {
+.site-title a:link, .site-title a:visited {
+  color: #373b41;
+}
+.site-title a:hover, .site-title a:active, .site-title a:focus {
   color: #e6a117;
 }
 .site-title img {
@@ -373,6 +376,8 @@ a img {
 }
 
 .menu-primary {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
   background: #373b41;
   width: 100%;
   min-height: 75em;
@@ -383,7 +388,12 @@ a img {
   left: 0;
   padding-top: 1.5em;
   text-align: center;
-  z-index: -1;
+  z-index: 0;
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
 }
 .menu-primary p {
   color: #e6a117;
@@ -452,13 +462,15 @@ a img {
 }
 
 .site-header.toggled .menu-primary {
-  z-index: 0;
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
 }
-.site-header.toggled + div .main:after {
+.site-header.toggled ~ div .main:after {
   bottom: 0;
   opacity: 0.4;
 }
-.site-header.toggled + div .sidebar-primary-container:after {
+.site-header.toggled ~ div .sidebar-primary-container:after {
   bottom: 0;
   opacity: 0.4;
 }
@@ -512,6 +524,9 @@ a img {
     padding: 0;
     text-align: left;
     background: none;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
   }
   .menu-primary p {
     display: none;
@@ -539,8 +554,6 @@ a img {
     z-index: 3;
     min-width: 100%;
     -webkit-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
-    -o-backface-visibility: hidden;
     backface-visibility: hidden;
     /* remove slight wiggle caused by opacity change */
     -webkit-transition: opacity 0.2s ease;
