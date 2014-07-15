@@ -31,7 +31,12 @@ jQuery(document).ready(function($){
         }
     }
     function onScroll() {
-        var menuItemsBottom = $('#menu-primary-items').offset().top + $('#menu-primary-items').height();
+
+        if($('#menu-primary-items').length){
+            var menuItemsBottom = $('#menu-primary-items').offset().top + $('#menu-primary-items').height();
+        } else {
+            var menuItemsBottom = $('.menu-unset').offset().top + $('.menu-unset').height();
+        }
 
         // keep updating var on scroll
         var topDistance = $(window).scrollTop();
@@ -44,9 +49,16 @@ jQuery(document).ready(function($){
     /* see if social media icons can fit and display if they can */
     function showSocialIcons() {
 
+        if($('#menu-primary-items').length){
+            var menu = $('#menu-primary-items');
+        } else {
+            var menu = $('.menu-unset');
+        }
         // get widths of all elements involved
         var siteHeaderWidth = $('#site-header').width();
-        var menuWidth = $('#menu-primary-items').width();
+
+        var menuWidth = menu.width();
+
         var titleInfoWidth = $('#title-info').width();
         var siteDescriptionWidth = $('#site-description').width();
         var socialIcons = $('#menu-primary').find('.social-media-icons');
@@ -62,7 +74,7 @@ jQuery(document).ready(function($){
             $(socialIcons).addClass('visible');
         }
         /* if the menu is on the next line, display the social icons */
-        if( $('#menu-primary-items').offset().top > $('#title-info').offset().top ){
+        if( menu.offset().top > $('#title-info').offset().top ){
             $(socialIcons).addClass('visible-top');
         }
     }
