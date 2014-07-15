@@ -5,7 +5,11 @@
   -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
 body {
+  height: 100%;
   font-size: 100%;
   margin: 0;
   padding: 0;
@@ -23,6 +27,8 @@ body {
 
 .overflow-container {
   overflow: hidden;
+  height: auto;
+  min-height: 100%;
 }
 .main {
   background: $background;
