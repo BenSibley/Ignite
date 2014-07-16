@@ -164,6 +164,7 @@ th {
 .aligncenter {
   text-align: center;
   margin: $baseline-height auto;
+  display: block;
 }
 .alignnone {
   margin: $baseline-height;
