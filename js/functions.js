@@ -96,8 +96,66 @@ jQuery(document).ready(function($){
         $(this).parent('li').removeClass('focused');
         $(this).parents('ul').removeClass('focused');
     });
+
+    // reapply closed class for touch device usage
+    // doesn't have any impact unless 'touchstart' fired
+    function reApplyClosedClass(e) {
+
+        var container = $('.menu-item-has-children');
+
+        if (!container.is(e.target) // if the target of the click isn't the container...
+            && container.has(e.target).length === 0) // ... nor a descendant of the container
+        {
+            container.addClass('closed');
+        }
+    }
+    $(document).on('click', reApplyClosedClass);
+
 });
 
+// wait to see if a touch event is fired
+var hasTouch;
+window.addEventListener('touchstart', function setHasTouch () {
+    hasTouch = true;
+
+    // Remove event listener once fired
+    window.removeEventListener('touchstart', setHasTouch);
+
+    // since touch events are definitely being used, turn on the functionality
+    // to require a double-click on parent dropdown items
+    enableTouchDropdown();
+
+}, false);
+
+// require a second click to visit parent navigation items
+function enableTouchDropdown(){
+
+    // get all the parent menu items
+    var menuParents = document.getElementsByClassName('menu-item-has-children');
+
+    // add a 'closed' class to each and add an event listener to them
+    for (i = 0; i < menuParents.length; i++) {
+        menuParents[i].className = menuParents[i].className + " closed";
+        menuParents[i].addEventListener('click', openDropdown);
+    }
+}
+
+// check if an element has a class
+function hasClass(element, cls) {
+    return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
+}
+
+// open the dropdown without visiting parent link
+function openDropdown(e){
+
+    // if has 'closed' class...
+    if(hasClass(this, 'closed')){
+        // prevent link from being visited
+        e.preventDefault();
+        // remove 'closed' class to enable link
+        this.className = this.className.replace('closed', '');
+    }
+}
 
 /* fix for skip-to-content link bug in Chrome & IE9 */
 window.addEventListener("hashchange", function(event) {
