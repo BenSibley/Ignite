@@ -408,8 +408,8 @@ a img {
 .menu-unset {
   list-style: none;
 }
-.menu-primary-items li a,
-.menu-unset li a {
+.menu-primary-items a,
+.menu-unset a {
   text-decoration: none;
   color: white;
   text-transform: uppercase;
@@ -417,27 +417,27 @@ a img {
   margin: 1.5em 0;
   display: block;
 }
-.menu-primary-items li a:hover,
-.menu-unset li a:hover {
+.menu-primary-items a:hover,
+.menu-unset a:hover {
   color: #e6a117;
-}
-.menu-primary-items li ul li a,
-.menu-unset li ul li a {
-  font-size: 0.813em;
-  color: #d9dcdf;
-  margin-top: -1.5em;
-}
-.menu-primary-items li ul li a:hover,
-.menu-unset li ul li a:hover {
-  color: white;
-}
-.menu-primary-items li ul li ul a,
-.menu-unset li ul li ul a {
-  color: #7c7d7f;
 }
 .menu-primary-items ul,
 .menu-unset ul {
   list-style: none;
+}
+.menu-primary-items ul a,
+.menu-unset ul a {
+  font-size: 0.813em;
+  color: #d9dcdf;
+  margin-top: -1.5em;
+}
+.menu-primary-items ul a:hover,
+.menu-unset ul a:hover {
+  color: white;
+}
+.menu-primary-items ul ul a,
+.menu-unset ul ul a {
+  color: #7c7d7f;
 }
 .menu-primary-items .current-menu-item > a,
 .menu-primary-items .current_page_item > a,
@@ -541,13 +541,42 @@ a img {
   .menu-primary-items li,
   .menu-unset li {
     float: left;
-    background: white;
     position: relative;
+  }
+  .menu-primary-items a,
+  .menu-unset a {
+    color: #373b41;
+    margin: 0;
+    padding: 0 0.75em;
+    font-size: 0.813em;
+    line-height: 5.231em;
+    /* 68px */
+    letter-spacing: 0.1em;
+    background: white;
     -webkit-transition: background 0.2s ease;
     transition: background 0.2s ease;
   }
-  .menu-primary-items li ul,
-  .menu-unset li ul {
+  .menu-primary-items a:link, .menu-primary-items a:visited,
+  .menu-unset a:link,
+  .menu-unset a:visited {
+    color: #373b41;
+  }
+  .menu-primary-items a:hover, .menu-primary-items a:active, .menu-primary-items a:focus,
+  .menu-unset a:hover,
+  .menu-unset a:active,
+  .menu-unset a:focus {
+    color: white;
+    background: #e6a117;
+  }
+  .menu-primary-items a:hover + ul, .menu-primary-items a:active + ul, .menu-primary-items a:focus + ul,
+  .menu-unset a:hover + ul,
+  .menu-unset a:active + ul,
+  .menu-unset a:focus + ul {
+    top: 4.2495em;
+    opacity: 1;
+  }
+  .menu-primary-items ul,
+  .menu-unset ul {
     position: absolute;
     top: -999em;
     opacity: 0;
@@ -560,68 +589,38 @@ a img {
     -webkit-transition: opacity 0.2s ease;
     transition: opacity 0.2s ease;
   }
-  .menu-primary-items li ul:hover ul, .menu-primary-items li ul:focus ul,
-  .menu-unset li ul:hover ul,
-  .menu-unset li ul:focus ul {
-    top: 0;
-    left: 100%;
-  }
-  .menu-primary-items li:hover > a, .menu-primary-items li:active > a, .menu-primary-items li:focus > a,
-  .menu-unset li:hover > a,
-  .menu-unset li:active > a,
-  .menu-unset li:focus > a {
-    color: white;
-  }
-  .menu-primary-items li:hover > ul, .menu-primary-items li:active > ul, .menu-primary-items li:focus > ul,
-  .menu-unset li:hover > ul,
-  .menu-unset li:active > ul,
-  .menu-unset li:focus > ul {
-    top: 4.2495em;
-    opacity: 1;
-  }
-  .menu-primary-items li:hover > ul li, .menu-primary-items li:active > ul li, .menu-primary-items li:focus > ul li,
-  .menu-unset li:hover > ul li,
-  .menu-unset li:active > ul li,
-  .menu-unset li:focus > ul li {
+  .menu-primary-items ul li,
+  .menu-unset ul li {
     min-width: 100%;
   }
-  .menu-primary-items li:hover > ul li a, .menu-primary-items li:active > ul li a, .menu-primary-items li:focus > ul li a,
-  .menu-unset li:hover > ul li a,
-  .menu-unset li:active > ul li a,
-  .menu-unset li:focus > ul li a {
+  .menu-primary-items ul a,
+  .menu-unset ul a {
     margin-top: 0;
     color: #373b41;
     white-space: nowrap;
   }
-  .menu-primary-items li:hover > ul li:hover > a, .menu-primary-items li:hover > ul li:active > a, .menu-primary-items li:hover > ul li:focus > a, .menu-primary-items li:active > ul li:hover > a, .menu-primary-items li:active > ul li:active > a, .menu-primary-items li:active > ul li:focus > a, .menu-primary-items li:focus > ul li:hover > a, .menu-primary-items li:focus > ul li:active > a, .menu-primary-items li:focus > ul li:focus > a,
-  .menu-unset li:hover > ul li:hover > a,
-  .menu-unset li:hover > ul li:active > a,
-  .menu-unset li:hover > ul li:focus > a,
-  .menu-unset li:active > ul li:hover > a,
-  .menu-unset li:active > ul li:active > a,
-  .menu-unset li:active > ul li:focus > a,
-  .menu-unset li:focus > ul li:hover > a,
-  .menu-unset li:focus > ul li:active > a,
-  .menu-unset li:focus > ul li:focus > a {
+  .menu-primary-items ul a:hover, .menu-primary-items ul a:active, .menu-primary-items ul a:focus,
+  .menu-unset ul a:hover,
+  .menu-unset ul a:active,
+  .menu-unset ul a:focus {
     color: white;
   }
-  .menu-primary-items li a,
-  .menu-unset li a {
-    color: #373b41;
-    margin: 0 0.75em;
-    font-size: 0.813em;
-    line-height: 5.231em;
-    /* 68px */
-    letter-spacing: 0.1em;
+  .menu-primary-items ul a:hover + ul, .menu-primary-items ul a:active + ul, .menu-primary-items ul a:focus + ul,
+  .menu-unset ul a:hover + ul,
+  .menu-unset ul a:active + ul,
+  .menu-unset ul a:focus + ul {
+    top: 0;
+    left: 100%;
   }
-  .menu-primary-items li a:hover, .menu-primary-items li a:focus,
-  .menu-unset li a:hover,
-  .menu-unset li a:focus {
-    color: white;
+  .menu-primary-items ul:hover,
+  .menu-unset ul:hover {
+    top: 4.2495em;
+    opacity: 1;
   }
-  .menu-primary-items li:hover,
-  .menu-unset li:hover {
-    background: #e6a117;
+  .menu-primary-items ul ul:hover,
+  .menu-unset ul ul:hover {
+    top: 0;
+    left: 100%;
   }
   .menu-primary-items:after,
   .menu-unset:after {
@@ -641,16 +640,6 @@ a img {
   .menu-unset {
     /* using id to avoid annoying selector competition */
   }
-  #menu-primary-items .current-menu-item,
-  #menu-primary-items .current_page_ancestor,
-  #menu-primary-items .current_page_item,
-  #menu-primary-items .current_page_ancestor,
-  .menu-unset .current-menu-item,
-  .menu-unset .current_page_ancestor,
-  .menu-unset .current_page_item,
-  .menu-unset .current_page_ancestor {
-    background: #e6a117;
-  }
   #menu-primary-items .current-menu-item > a,
   #menu-primary-items .current_page_ancestor > a,
   #menu-primary-items .current_page_item > a,
@@ -660,6 +649,7 @@ a img {
   .menu-unset .current_page_item > a,
   .menu-unset .current_page_ancestor > a {
     color: white;
+    background: #e6a117;
   }
 
   /* because .menu-primary-items is a 'ul' this needs to be declared separately */
@@ -676,19 +666,15 @@ a img {
   }
 
   /* show drop down items when accessed with keyboard too */
-  ul.focused {
-    left: 0;
-    top: 4.2495em !important;
-    opacity: 1 !important;
+  .menu-primary-items ul.focused,
+  .menu-unset ul.focused {
+    top: 4.2495em;
+    opacity: 1;
   }
-  ul.focused > li > a {
-    margin-top: 0 !important;
-    color: #373b41;
-    white-space: nowrap;
-  }
-
-  li.focused {
-    background: #e6a117;
+  .menu-primary-items ul.focused ul.focused,
+  .menu-unset ul.focused ul.focused {
+    top: 0;
+    left: 100%;
   }
 }
 /* 900px */

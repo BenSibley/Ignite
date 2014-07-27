@@ -81,44 +81,36 @@
 .menu-unset {
   list-style: none;
 
-  li {
+  a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: $baseline-height 0;
+    display: block;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+  ul {
+    list-style: none;
 
     a {
-      text-decoration: none;
-      color: white;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin: $baseline-height 0;
-      display: block;
+      font-size: 0.813em;
+      color: $gray-light;
+      margin-top: -$baseline-height;
 
       &:hover {
-        color: $orange;
+        color: white;
       }
     }
     ul {
 
-      li {
-
-        a {
-          font-size: 0.813em;
-          color: $gray-light;
-          margin-top: -$baseline-height;
-
-          &:hover {
-            color: white;
-          }
-        }
-        ul {
-          a {
-            color: $gray-medium
-          }
-        }
+      a {
+        color: $gray-medium
       }
     }
-  }
-
-  ul {
-    list-style: none;
   }
   .current-menu-item > a,
   .current_page_item > a {
@@ -219,73 +211,77 @@
 
     li {
       float: left;
-      background: white;
       position: relative;
-      @include transition(background 0.2s ease);
+    }
+    a {
+      color: $gray;
+      margin: 0;
+      padding: 0 $baseline-height * 0.5;
+      font-size: 0.813em;
+      line-height: 5.231em; /* 68px */
+      letter-spacing: 0.1em;
+      background: white;
+      transition: background 0.2s ease;
 
-      ul {
-        position: absolute;
-        top: -999em;
-        opacity: 0;
-        margin: 0;
-        z-index: 3;
+      &:link,
+      &:visited {
+        color: $gray;
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        color: white;
+        background: $orange;
+
+        // tier 2
+        + ul {
+          top: $baseline-height * 2.833;
+          opacity: 1;
+        }
+      }
+    }
+    // tier 2
+    ul {
+      position: absolute;
+      top: -999em;
+      opacity: 0;
+      margin: 0;
+      z-index: 3;
+      min-width: 100%;
+      backface-visibility: hidden; /* remove slight wiggle caused by opacity change */
+      transition: opacity 0.2s ease;
+
+      li {
         min-width: 100%;
-        backface-visibility: hidden; /* remove slight wiggle caused by opacity change */
-        transition: opacity 0.2s ease;
+      }
+      a {
+        margin-top: 0;
+        color: $gray;
+        white-space: nowrap;
 
         &:hover,
+        &:active,
         &:focus {
+          color: white;
 
-          ul {
+          // tier 3
+          + ul {
             top: 0;
             left: 100%;
           }
         }
       }
-      &:hover,
-      &:active,
-      &:focus {
-
-        > a {
-          color: white;
-        }
-        > ul {
-          top: $baseline-height * 2.833;
-          opacity: 1;
-
-          li {
-            min-width: 100%;
-
-            a {
-              margin-top: 0;
-              color: $gray;
-              white-space: nowrap;
-            }
-            &:hover,
-            &:active,
-            &:focus {
-
-              > a {
-                color: white;
-              }
-            }
-          }
-        }
-      }
-      a {
-        color: $gray;
-        margin: 0 $baseline-height * 0.5;
-        font-size: 0.813em;
-        line-height: 5.231em; /* 68px */
-        letter-spacing: 0.1em;
-
-        &:hover,
-        &:focus {
-          color: white;
-        }
-      }
       &:hover {
-        background: $orange;
+        top: $baseline-height * 2.833;
+        opacity: 1;
+      }
+      // tier 3
+      ul {
+
+        &:hover {
+          top: 0;
+          left: 100%;
+        }
       }
     }
     &:after {
@@ -303,10 +299,10 @@
     .current_page_ancestor,
     .current_page_item,
     .current_page_ancestor {
-      background: $orange;
 
       > a {
         color: white;
+        background: $orange;
       }
     }
   }
@@ -322,22 +318,22 @@
     }
   }
   /* show drop down items when accessed with keyboard too */
-  ul.focused {
-    left: 0;
-    top: $baseline-height * 2.833 !important;
-    opacity: 1 !important;
 
-    > li {
+  // need menu selectors or they are included as a tier of ul.focused
+  .menu-primary-items,
+  .menu-unset {
 
-      > a {
-        margin-top: 0 !important;
-        color: $gray;
-        white-space: nowrap;
+    // tier 2
+    ul.focused {
+      top: $baseline-height * 2.833;
+      opacity: 1;
+
+      // tier 3
+      ul.focused {
+        top: 0;
+        left: 100%;
       }
     }
-  }
-  li.focused {
-    background: $orange;
   }
 }
 
