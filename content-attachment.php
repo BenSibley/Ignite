@@ -1,5 +1,8 @@
 <div class='entry'>
-    <div class='entry-meta-top'><?php the_date('F jS, Y', 'Published: '); ?></div>
+    <div class='entry-meta-top'>
+        <?php _e('Published', 'ignite'); ?>
+        <?php the_date('F jS, Y'); ?>
+    </div>
 	<div class='entry-header'>
         <h1 class='entry-title'><?php the_title(); ?></h1>
 	</div>

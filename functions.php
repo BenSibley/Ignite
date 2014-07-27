@@ -131,36 +131,36 @@ function ct_ignite_further_reading() {
     if(get_the_title($previous_blog_post)) {
         $previous_title = get_the_title($previous_blog_post);
     } else {
-        $previous_title = "The Previous Post";
+        $previous_title = __("The Previous Post", 'ignite');
     }
     if(get_the_title($next_blog_post)) {
         $next_title = get_the_title($next_blog_post);
     } else {
-        $next_title = "The Next Post";
+        $next_title = __("The Next Post", 'ignite');
     }
 
     echo "<nav class='further-reading'>";
     if($previous_blog_post) {
         echo "<p class='prev'>
-        		<span>Previous Post</span>
+        		<span>" . __('Previous Post', 'ignite') . "</span>
         		<a href='".get_permalink($previous_blog_post)."'>".$previous_title."</a>
 	        </p>";
     } else {
         echo "<p class='prev'>
-                <span>Return to Blog</span>
-        		<a href='".esc_url(home_url())."'>This is the oldest post</a>
+                <span>" . __('Return to Blog', 'ignite') . "</span>
+        		<a href='".esc_url(home_url())."'>" . __('This is the oldest post', 'ignite') . "</a>
         	</p>";
     }
     if($next_blog_post) {
 
         echo "<p class='next'>
-        		<span>Next Post</span>
+        		<span>" . __('Next', 'ignite') . "</span>
         		<a href='".get_permalink($next_blog_post)."'>".$next_title."</a>
 	        </p>";
     } else {
         echo "<p class='next'>
-                <span>Return to Blog</span>
-        		<a href='".esc_url(home_url())."'>This is the newest post</a>
+                <span>" . __('Return to Blog', 'ignite') . "</span>
+        		<a href='".esc_url(home_url())."'>" . __('This is the oldest post', 'ignite') . "</a>
         	 </p>";
     }
     echo "</nav>";
@@ -208,7 +208,7 @@ function ct_ignite_customize_comments( $comment, $args, $depth ) {
         <article id="comment-<?php comment_ID(); ?>" class="comment">
             <div class="comment-author"><?php echo get_avatar( get_comment_author_email() ); ?>
                 <span class="author-name"><?php comment_author_link(); ?></span>
-                <span> said:</span>
+                <span> <?php _e('said:', 'ignite'); ?></span>
             </div>
             <div class="comment-content">
                 <?php if ($comment->comment_approved == '0') : ?>
@@ -235,28 +235,28 @@ function ct_ignite_update_fields($fields) {
     $req = get_option( 'require_name_email' );
     $aria_req = ( $req ? " aria-required='true'" : '' );
 
-	$fields['author'] = 
-		'<p class="comment-form-author">
-		    <label class="screen-reader-text">Your Name</label>
-			<input required placeholder="Your Name*" id="author" name="author" type="text" aria-required="true" value="' . esc_attr( $commenter['comment_author'] ) .
-    '" size="30"' . $aria_req . ' />
+    $fields['author'] =
+        '<p class="comment-form-author">
+            <label class="screen-reader-text">' . __('Your Name', 'ignite') . '</label>
+			<input required placeholder="' . __('Your Name*', 'ignite') . '" id="author" name="author" type="text" aria-required="true" value="' . esc_attr( $commenter['comment_author'] ) .
+        '" size="30"' . $aria_req . ' />
     	</p>';
-    
-    $fields['email'] = 
-    	'<p class="comment-form-email">
-    	    <label class="screen-reader-text">Your Email</label>
-    		<input required placeholder="Your Email*" id="email" name="email" type="email" aria-required="true" value="' . esc_attr(  $commenter['comment_author_email'] ) .
-    '" size="30"' . $aria_req . ' />
+
+    $fields['email'] =
+        '<p class="comment-form-email">
+            <label class="screen-reader-text">' . __('Your Email', 'ignite') . '</label>
+    		<input required placeholder="' . __('Your Email*', 'ignite') . '" id="email" name="email" type="email" aria-required="true" value="' . esc_attr(  $commenter['comment_author_email'] ) .
+        '" size="30"' . $aria_req . ' />
     	</p>';
-	
-	$fields['url'] = 
-		'<p class="comment-form-url">
-		    <label class="screen-reader-text">Your Website URL</label>
-			<input placeholder="Your URL" id="url" name="url" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) .
-    '" size="30" />
-    	</p>';
-    
-	return $fields;
+
+    $fields['url'] =
+        '<p class="comment-form-url">
+            <label class="screen-reader-text">' . __('Your Website URL', 'ignite') . '</label>
+			<input placeholder="' . __('Your URL', 'ignite') . '" id="url" name="url" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) .
+        '" size="30" />
+            </p>';
+
+    return $fields;
 }
 add_filter('comment_form_default_fields','ct_ignite_update_fields');
 
@@ -264,8 +264,8 @@ function ct_ignite_update_comment_field($comment_field) {
 	
 	$comment_field = 
 		'<p class="comment-form-comment">
-            <label class="screen-reader-text">Your Comment</label>
-			<textarea required placeholder="Enter Your Comment&#8230;" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>
+            <label class="screen-reader-text">' . __('Your Comment', 'ignite') . '</label>
+			<textarea required placeholder="' . __('Enter Your Comment', 'ignite') . '&#8230;" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>
 		</p>';
 	
 	return $comment_field;
@@ -308,7 +308,7 @@ function ct_ignite_excerpt() {
     }
     // use the read more link if present
     elseif($ismore) {
-        the_content("Read More <span class='screen-reader-text'>" . get_the_title() . "</span>");
+        the_content( __('Read More', 'ignite') . " <span class='screen-reader-text'>" . get_the_title() . "</span>");
     }
     // otherwise the excerpt is automatic, so output it
     else {
@@ -318,7 +318,7 @@ function ct_ignite_excerpt() {
 
 // filter the link on excerpts
 function ct_ignite_excerpt_read_more_link($output) {
-	return $output . "<p><a class='more-link' href='". get_permalink() ."'>Read More <span class='screen-reader-text'>" . get_the_title() . "</span></a></p>";
+    return $output . "<p><a class='more-link' href='". get_permalink() ."'>" . __('Read More', 'ignite') . " <span class='screen-reader-text'>" . get_the_title() . "</span></a></p>";
 }
 
 add_filter('the_excerpt', 'ct_ignite_excerpt_read_more_link');
@@ -385,7 +385,7 @@ add_filter( 'wp_title', 'ct_ignite_add_homepage_title' );
 function ct_ignite_add_homepage_title( $title )
 {
     if( empty( $title ) && ( is_home() || is_front_page() ) ) {
-        return __( get_bloginfo( 'title' ), 'theme_domain' ) . ' | ' . get_bloginfo( 'description' );
+        return get_bloginfo( 'title' ) . ' | ' . get_bloginfo( 'description' );
     }
     return $title;
 }
@@ -463,7 +463,7 @@ function ct_ignite_logo_size_css(){
 }
 add_action('wp_enqueue_scripts','ct_ignite_logo_size_css');
 
-/* outputs the inline css to switch the layout if sidebar on left radio button is active */
+/* outputs the inline css to hide the post author box */
 function ct_ignite_author_meta_css(){
 
     $show_author_meta = get_theme_mod('ct_ignite_author_meta_settings');

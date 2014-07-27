@@ -4,7 +4,12 @@ if( is_home() ) { ?>
     <div <?php post_class(); ?>>
     	<?php ct_ignite_featured_image(); ?>
         <div class="excerpt-meta-top">
-            Published <?php echo get_the_date('F jS, Y'); ?> by <?php the_author_posts_link(); ?>
+            <?php
+            _e('Published', 'ignite');
+            echo get_the_date('F jS, Y');
+            _e('by', 'ignite');
+            the_author_posts_link();
+            ?>
         </div>
 		<div class='excerpt-header'>
 			<h1 class='excerpt-title'>
@@ -24,7 +29,12 @@ if( is_home() ) { ?>
     <div <?php post_class(); ?>>
         <?php ct_ignite_featured_image(); ?>
         <div class="entry-meta-top">
-            Published <?php echo get_the_date('F jS, Y'); ?> by <?php the_author_posts_link(); ?>
+            <?php
+            _e('Published', 'ignite');
+            echo get_the_date('F jS, Y');
+            _e('by', 'ignite');
+            the_author_posts_link();
+            ?>
         </div>
 		<div class='entry-header'>
 			<h1 class='entry-title'><?php the_title(); ?></h1>
@@ -61,7 +71,12 @@ if( is_home() ) { ?>
     <div <?php post_class(); ?>>
         <?php ct_ignite_featured_image(); ?>
         <div class="excerpt-meta-top">
-            Published <?php echo get_the_date('F jS, Y'); ?> by <?php the_author_posts_link(); ?>
+            <?php
+            _e('Published', 'ignite');
+            echo get_the_date('F jS, Y');
+            _e('by', 'ignite');
+            the_author_posts_link();
+            ?>
         </div>
         <div class='excerpt-header'>
             <h1 class='excerpt-title'>
