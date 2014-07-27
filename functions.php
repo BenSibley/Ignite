@@ -463,19 +463,6 @@ function ct_ignite_logo_size_css(){
 }
 add_action('wp_enqueue_scripts','ct_ignite_logo_size_css');
 
-/* outputs the inline css to hide the post author box */
-function ct_ignite_author_meta_css(){
-
-    $show_author_meta = get_theme_mod('ct_ignite_author_meta_settings');
-
-    /* if the sidebar is on the left then add the necessary inline styles */
-    if($show_author_meta == 'hide') {
-        $css = ".author-meta {display: none;}";
-        wp_add_inline_style('style', $css);
-    }
-}
-add_action('wp_enqueue_scripts','ct_ignite_author_meta_css');
-
 // fix for bug with Disqus saying comments are closed
 if ( function_exists( 'dsq_options' ) ) {
     remove_filter( 'comments_template', 'dsq_comments_template' );
