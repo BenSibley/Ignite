@@ -12,7 +12,7 @@
 <body id="<?php print get_stylesheet(); ?>" <?php body_class(); ?>>
 
 <!--skip to content link-->
-<a class="skip-content" href="#main">Skip to content</a>
+<a class="skip-content" href="#main"><?php _e('Skip to content', 'ignite'); ?></a>
 
 <header class="site-header" id="site-header" role="banner">
 
@@ -20,7 +20,7 @@
 		<?php get_template_part('logo')  ?>
 	</div>
 	
-	<?php get_template_part( 'menu', 'primary' ); // adds the primary menu ?>
+	<?php get_template_part( 'menu', 'primary' ); ?>
 
 </header>
 <div id="overflow-container" class="overflow-container">

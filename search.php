@@ -8,7 +8,7 @@
             global $wp_query;
             $total_results = $wp_query->found_posts;
             if($total_results) {
-                printf(__('%d search results for','ignite'),$total_results);
+                printf(__('%d search results for','ignite'), $total_results);
             } else {
                 _e("No search results for ", 'ignite');
             }
@@ -36,7 +36,7 @@
     if($total_results) {
         ?>
         <div class="search-end bottom">
-            <p>Can't find what you're looking for?  Try refining your search:</p>
+            <p><?php _e("Can't find what you're looking for?  Try refining your search:", "ignite"); ?></p>
             <?php get_search_form(); ?>
         </div>
         <?php
