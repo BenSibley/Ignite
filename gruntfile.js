@@ -73,6 +73,15 @@ module.exports = function(grunt) {
                     }
                 ]
             }
+        },
+        makepot: {
+            target: {
+                options: {
+                    domainPath: '/languages',
+                    potFilename: 'ignite.pot',
+                    type: 'wp-theme'
+                }
+            }
         }
     });
 
@@ -84,8 +93,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-compress');
+    grunt.loadNpmTasks('grunt-wp-i18n');
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['concat', 'uglify', 'watch', 'sass', 'autoprefixer', 'cssmin', 'compress']);
+    grunt.registerTask('default', ['concat', 'uglify', 'watch', 'sass', 'autoprefixer', 'cssmin', 'compress', 'makepot']);
 
 };

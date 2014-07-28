@@ -7,7 +7,7 @@ if( is_home() ) { ?>
             <?php
             _e('Published', 'ignite');
             echo get_the_date('F jS, Y');
-            _e('by', 'ignite');
+            _ex('by', 'Published by whom?', 'ignite');
             the_author_posts_link();
             ?>
         </div>
@@ -32,7 +32,7 @@ if( is_home() ) { ?>
             <?php
             _e('Published', 'ignite');
             echo get_the_date('F jS, Y');
-            _e('by', 'ignite');
+            _ex('by', 'Published by whom?', 'ignite');
             the_author_posts_link();
             ?>
         </div>
@@ -77,7 +77,7 @@ if( is_home() ) { ?>
             <?php
             _e('Published', 'ignite');
             echo get_the_date('F jS, Y');
-            _e('by', 'ignite');
+            _ex('by', 'Published by whom?', 'ignite');
             the_author_posts_link();
             ?>
         </div>
