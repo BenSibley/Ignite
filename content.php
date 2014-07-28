@@ -5,9 +5,7 @@ if( is_home() ) { ?>
     	<?php ct_ignite_featured_image(); ?>
         <div class="excerpt-meta-top">
             <?php
-            _e('Published', 'ignite');
-            echo get_the_date('F jS, Y');
-            _ex('by', 'Published by whom?', 'ignite');
+            echo __('Published', 'ignite') . " " . get_the_date('F jS, Y') . " " . _x('by', 'Published by whom?', 'ignite') . " ";
             the_author_posts_link();
             ?>
         </div>
@@ -30,9 +28,7 @@ if( is_home() ) { ?>
         <?php ct_ignite_featured_image(); ?>
         <div class="entry-meta-top">
             <?php
-            _e('Published', 'ignite');
-            echo get_the_date('F jS, Y');
-            _ex('by', 'Published by whom?', 'ignite');
+            echo __('Published', 'ignite') . " " . get_the_date('F jS, Y') . " " . _x('by', 'Published by whom?', 'ignite') . " ";
             the_author_posts_link();
             ?>
         </div>
@@ -75,9 +71,7 @@ if( is_home() ) { ?>
         <?php ct_ignite_featured_image(); ?>
         <div class="excerpt-meta-top">
             <?php
-            _e('Published', 'ignite');
-            echo get_the_date('F jS, Y');
-            _ex('by', 'Published by whom?', 'ignite');
+            echo __('Published', 'ignite') . " " . get_the_date('F jS, Y') . " " . _x('by', 'Published by whom?', 'ignite') . " ";
             the_author_posts_link();
             ?>
         </div>
