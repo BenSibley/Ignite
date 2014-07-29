@@ -143,7 +143,7 @@ jQuery(document).ready(function($){
         var menuWidth = menu.width();
 
         var titleInfoWidth = $('#title-info').width();
-        var siteDescriptionWidth = $('#site-description').width();
+        var siteDescriptionWidth = $('#site-header').children('#site-description').width();
         var socialIcons = $('#menu-primary').find('.social-media-icons');
 
         // remove the classes
