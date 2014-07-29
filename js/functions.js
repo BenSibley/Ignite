@@ -58,10 +58,14 @@ jQuery(document).ready(function($){
         var siteHeaderWidth = $('#site-header').width();
 
         var menuWidth = menu.width();
-
         var titleInfoWidth = $('#title-info').width();
-        var siteDescriptionWidth = $('#site-header').children('#site-description').width();
         var socialIcons = $('#menu-primary').find('.social-media-icons');
+
+        if($('#site-description').css('display') == 'none'){
+            var siteDescriptionWidth = 0;
+        } else {
+            var siteDescriptionWidth = $('#site-description').width();
+        }
 
         // remove the classes
         $(socialIcons).removeClass('visible visible-top');
