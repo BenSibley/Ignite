@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Ignite 1.20\n"
+"Project-Id-Version: Ignite 1.21\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2014-07-28 13:58:17+00:00\n"
+"POT-Creation-Date: 2014-07-29 13:20:45+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -45,7 +45,7 @@ msgid ""
 "correct or try the search form below to find what you were looking for."
 msgstr ""
 
-#: content-attachment.php:3 content.php:8 content.php:33 content.php:78
+#: content-attachment.php:3 content.php:8 content.php:31 content.php:74
 msgid "Published"
 msgstr ""
 
@@ -57,7 +57,7 @@ msgstr ""
 msgid "Next Image"
 msgstr ""
 
-#: content-page.php:9 content.php:45
+#: content-page.php:9 content.php:41
 msgid "Pages:"
 msgstr ""
 
@@ -1002,7 +1002,7 @@ msgstr ""
 msgid "http://competethemes.com/"
 msgstr ""
 
-#: content.php:10 content.php:35 content.php:80
+#: content.php:8 content.php:31 content.php:74
 msgctxt "Published by whom?"
 msgid "by"
 msgstr ""

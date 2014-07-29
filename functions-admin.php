@@ -357,7 +357,7 @@ function ct_ignite_options_content(){
             <p><?php _e('Get more flexibility and customizations for your site, with Ignite Plus ($29).', 'ignite'); ?></p>
             <p><?php _e('Custom colors, custom backgrounds, over 600+ fonts, and more...', 'ignite'); ?></p>
             <p>
-                <a target="_blank" class="button-primary" href="http://www.competethemes.com/ignite-plus/"><?php _e('View Ignite Plus', 'ignite'); ?></a>
+                <a target="_blank" class="button-primary" href="https://www.competethemes.com/ignite-plus/"><?php _e('View Ignite Plus', 'ignite'); ?></a>
             </p>
         </div>
         <div class="support">
