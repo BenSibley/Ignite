@@ -218,7 +218,7 @@ function ct_ignite_add_social_sites_customizer($wp_customize) {
 		$wp_customize->add_control(
             new ct_ignite_url_input_control(
             $wp_customize, $social_site, array(
-				'label'   => __( $social_site . " url:", 'ignite' ),
+				'label'   => $social_site . " " . __("url:", 'ignite' ),
 				'section' => 'ct_ignite_social_settings',
 				'priority'=> $priority,
 		    )
