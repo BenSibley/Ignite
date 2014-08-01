@@ -1,0 +1,1392 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Ignite v1.22\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2014-07-31 23:02+0100\n"
+"Last-Translator: Hervé Campion\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n>1;\n"
+"X-Generator: Poedit 1.6.7\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: ../\n"
+"X-Textdomain-Support: yes\n"
+"Language: fr_FR\n"
+"X-Poedit-SearchPath-0: .\n"
+
+# @ ignite
+#: comments.php:11 comments.php:29 comments.php:49
+msgid "Be First to Comment"
+msgstr "Soyez le premier à commenter"
+
+# @ ignite
+#: comments.php:11 comments.php:29 comments.php:49
+msgid "One Comment"
+msgstr "Un commentaire"
+
+# @ ignite
+#: comments.php:11 comments.php:29 comments.php:49
+msgid "% Comments"
+msgstr "% commentaires"
+
+# @ ignite
+#: comments.php:42
+#, php-format
+msgid ""
+"Comments are closed, but <a href=\"%s\" title=\"Trackback URL for this post"
+"\">trackbacks</a> and pingbacks are open."
+msgstr ""
+"Les commentaires dont fermés, cependant les <a href=\"%s\" title=\"Trackback "
+"URL for this post\">trackbacks</a> et les pingbacks sont ouverts."
+
+# @ ignite
+#: comments.php:62 comments.php:68
+msgid "Comments are closed."
+msgstr "Les commentaires sont fermés."
+
+# @ ignite
+#: content-404.php:3
+msgid "404: Page Not Found"
+msgstr "404: Page non trouvée"
+
+# @ ignite
+#: content-404.php:8
+msgid ""
+"Looks like nothing was found on this url.  Double-check that the url is "
+"correct or try the search form below to find what you were looking for."
+msgstr ""
+"On dirait que rien n'a pu être trouvé avec cette URL. Vérifiez que l'URL est "
+"correcte ou utilisez le formulaire ci-dessous afin d'obtenir des résultats "
+"relatifs à votre recherche."
+
+# @ ignite
+#: content-attachment.php:3 content.php:8 content.php:31 content.php:74
+msgid "Published"
+msgstr "Publié"
+
+# @ ignite
+#: content-attachment.php:19
+msgid "Previous Image"
+msgstr "Image précédente"
+
+# @ ignite
+#: content-attachment.php:22
+msgid "Next Image"
+msgstr "Image suivante"
+
+# @ ignite
+#: content-page.php:9 content.php:41
+msgid "Pages:"
+msgstr "Pages:"
+
+# @ ignite
+#: content.php:8 content.php:31 content.php:74
+msgctxt "Published by whom?"
+msgid "by"
+msgstr "par"
+
+# @ ignite
+#: footer.php:16
+#, php-format
+msgid ""
+"<a target=\"_blank\" href=\"%s\">Ignite WordPress Theme</a> by Compete "
+"Themes."
+msgstr ""
+"<a target=\"_blank\" href=\"%s\">Ignite WordPress Theme</a> par Compete "
+"Themes."
+
+# @ ignite
+#: functions-admin.php:17
+msgid "Logo"
+msgstr "Logo"
+
+# @ ignite
+#: functions-admin.php:38
+msgid "Upload custom logo."
+msgstr "Téléchargez le logo personnalisé"
+
+# @ ignite
+#: functions-admin.php:66
+msgid "Logo Positioning"
+msgstr "Positionnement du logo"
+
+# @ ignite
+#: functions-admin.php:92
+msgid "Up/down"
+msgstr "Haut/Bas"
+
+# @ ignite
+#: functions-admin.php:104
+msgid "Left/right"
+msgstr "Gauche/Droite"
+
+# @ ignite
+#: functions-admin.php:126
+msgid "Logo Size"
+msgstr "Dimention du logo"
+
+# @ ignite
+#: functions-admin.php:152
+msgid "Increase max-width"
+msgstr "Augmenter la largeur max"
+
+# @ ignite
+#: functions-admin.php:164
+msgid "Increase max-height"
+msgstr "Augmenter la hauteur max"
+
+# @ ignite
+#: functions-admin.php:203
+msgid "Social Media Icons"
+msgstr "Icônes Réseaux Sociaux"
+
+# @ ignite
+#: functions-admin.php:221
+msgid "url:"
+msgstr "url:"
+
+# @ ignite
+#: functions-admin.php:239
+msgid "Post Author Info"
+msgstr "Informations relatives à l'auteur de l'article"
+
+# @ ignite
+#: functions-admin.php:258
+msgid "Show post author info after posts?"
+msgstr "Afficher les informations relatives à l'auteur après l'article?"
+
+# @ ignite
+#: functions-admin.php:263 functions-admin.php:274
+msgid "Show"
+msgstr "Afficher"
+
+# @ ignite
+#: functions-admin.php:264 functions-admin.php:275
+msgid "Hide"
+msgstr "Masquer"
+
+# @ ignite
+#: functions-admin.php:292
+msgid "Additional Options"
+msgstr "Options additionnelles"
+
+# @ ignite
+#: functions-admin.php:310
+msgid "Show full post on blog?"
+msgstr "Afficher l'article entier?"
+
+# @ ignite
+#: functions-admin.php:315 functions-admin.php:326
+msgid "Yes"
+msgstr "Oui"
+
+# @ ignite
+#: functions-admin.php:316 functions-admin.php:327
+msgid "No"
+msgstr "Non"
+
+# @ ignite
+#: functions-admin.php:347
+msgid "Ignite Dashboard"
+msgstr "Tableau de bord Ignite"
+
+# @ ignite
+#: functions-admin.php:351
+#, php-format
+msgid ""
+"Thanks for downloading Ignite! If you can, please take one minute to <a "
+"target=\"_blank\" href=\"%s\"><strong>leave a review</strong></a>."
+msgstr ""
+"Merci d'avoir téléchargé Ignite! Si vous le souhaitez, merci de prendre une "
+"minute pour <a target=\"_blank\" href=\"%s\"><strong>laisser un avis</"
+"strong></a>."
+
+# @ ignite
+#: functions-admin.php:356
+msgid "Premium Upgrade"
+msgstr "Passer en Premium"
+
+# @ ignite
+#: functions-admin.php:357
+msgid ""
+"Get more flexibility and customizations for your site, with Ignite Plus "
+"($29)."
+msgstr ""
+"Optez pour plus de flexibilités et de personnalisation pour votre site avec "
+"Ignite Plus (29$)."
+
+# @ ignite
+#: functions-admin.php:358
+msgid "Custom colors, custom backgrounds, over 600+ fonts, and more..."
+msgstr ""
+"Couleurs, fonds personnalisés et + de 600 polices de caractères et bien "
+"plus..."
+
+# @ ignite
+#: functions-admin.php:360
+msgid "View Ignite Plus"
+msgstr "Voir Ignite Plus"
+
+# @ ignite
+#: functions-admin.php:364
+msgid "Support"
+msgstr "Support"
+
+# @ ignite
+#: functions-admin.php:369
+#, php-format
+msgid ""
+"<a target=\"_blank\" href=\"%s\">Visit the knowledgebase</a> for self-help."
+msgstr ""
+"<a target=\"_blank\" href=\"%s\">Consultez la base de connaissance</a> pour "
+"obtenir de l'aide."
+
+# @ ignite
+#: functions-admin.php:376
+#, php-format
+msgid ""
+"<a target=\"_blank\" href=\"%s\">Visit the support forum</a> for community "
+"support."
+msgstr ""
+"<a target=\"_blank\" href=\"%s\">Visitez le forum du support</a> pour "
+"obtenir de l'aide de la communauté."
+
+# @ ignite
+#: functions-admin.php:381
+msgid ""
+"I (Ben) visit the support forum everyday, so any questions you have will be "
+"answered there."
+msgstr ""
+"Je (Ben) consulte le forum du support tous les jours.  Toutes les questions "
+"que vous y poserez y seront répondues."
+
+# @ ignite
+#: functions-admin.php:384
+msgid "Customize"
+msgstr "Personnaliser"
+
+# @ ignite
+#: functions-admin.php:385
+msgid ""
+"Customize your site with your logo, social profiles, and more with the built-"
+"in Customizer."
+msgstr ""
+"Personnalisez votre site avec votre logo, profils sociaux et plus encore "
+"avec le module de personnalisation inclus."
+
+# @ ignite
+#: functions-admin.php:386
+msgid "Use the customizer"
+msgstr "Utiliser le module de personnalisation"
+
+# @ ignite
+#: functions.php:79
+msgid "Primary Sidebar"
+msgstr "Barre latérale principale"
+
+# @ ignite
+#: functions.php:81
+msgid "The main sidebar"
+msgstr "La barre latérale principale"
+
+# @ ignite
+#: functions.php:88
+msgid "Primary"
+msgstr "Principal"
+
+# @ ignite
+#: functions.php:134
+msgid "The Previous Post"
+msgstr "L'article précédent"
+
+# @ ignite
+#: functions.php:139
+msgid "The Next Post"
+msgstr "L'article suivant"
+
+# @ ignite
+#: functions.php:145
+msgid "Previous Post"
+msgstr "Article précédent"
+
+# @ ignite
+#: functions.php:150 functions.php:162
+msgid "Return to Blog"
+msgstr "Revenir au Blog"
+
+# @ ignite
+#: functions.php:151 functions.php:163
+msgid "This is the oldest post"
+msgstr "Ceci est l'article le plus ancien"
+
+# @ ignite
+#: functions.php:157
+msgid "Next"
+msgstr "Suivant"
+
+# @ ignite
+#: functions.php:179
+#, php-format
+msgid "View all posts in %s"
+msgstr "Afficher tous les articles dans %s"
+
+# @ ignite
+#: functions.php:195
+#, php-format
+msgid "View all posts tagged %s"
+msgstr "Afficher tous les articles taggés %s"
+
+# @ ignite
+#: functions.php:211
+msgid "said:"
+msgstr "a dit:"
+
+# @ ignite
+#: functions.php:215
+msgid "Your comment is awaiting moderation."
+msgstr "Votre commentaire est en cours de relecture."
+
+# @ ignite
+#: functions.php:223
+msgid "Reply"
+msgstr "Répondre"
+
+# @ ignite
+#: functions.php:240
+msgid "Your Name"
+msgstr "Votre nom"
+
+# @ ignite
+#: functions.php:241
+msgid "Your Name*"
+msgstr "Votre Nom*"
+
+# @ ignite
+#: functions.php:247
+msgid "Your Email"
+msgstr "Votre adresse mail"
+
+# @ ignite
+#: functions.php:248
+msgid "Your Email*"
+msgstr "Votre adresse mail*"
+
+# @ ignite
+#: functions.php:254
+msgid "Your Website URL"
+msgstr "L'URL de votre site"
+
+# @ ignite
+#: functions.php:255
+msgid "Your URL"
+msgstr "Voter URL"
+
+# @ ignite
+#: functions.php:267
+msgid "Your Comment"
+msgstr "Votre commentaire"
+
+# @ ignite
+#: functions.php:268
+msgid "Enter Your Comment"
+msgstr "Saisissez votre commentaire"
+
+# @ ignite
+#: functions.php:311 functions.php:321
+msgid "Read More"
+msgstr "Continuer la lecture"
+
+# @ ignite
+#: header.php:15
+msgid "Skip to content"
+msgstr "Aller au commentaire"
+
+# @ hybrid-core
+#: library/admin/meta-box-post-template.php:48
+msgid "Template"
+msgstr "Modèle"
+
+# @ hybrid-core
+#. Translators: %s is the theme name.
+#: library/admin/theme-settings.php:134 library/admin/theme-settings.php:199
+#, php-format
+msgid "%s Theme Settings"
+msgstr "%s paramètres du Thème"
+
+# @ hybrid-core
+#: library/admin/theme-settings.php:135
+msgid "Theme Settings"
+msgstr "Paramètres du Thème"
+
+# @ hybrid-core
+#: library/classes/customize-control-background-image.php:49
+msgctxt "theme customizer tab"
+msgid "Default"
+msgstr "Défaut"
+
+# @ hybrid-core
+#. Translators: Media dimensions - 1 is width and 2 is height.
+#. Translators: Media dimensions - 1 is width and 2 is height.
+#: library/classes/hybrid-media-meta.php:154
+#: library/classes/hybrid-media-meta.php:282
+#: library/functions/template-media.php:102
+#, php-format
+msgid "%1$s &#215; %2$s"
+msgstr "%1$s &#215; %2$s"
+
+# @ hybrid-core
+#: library/classes/hybrid-media-meta.php:155
+#: library/classes/hybrid-media-meta.php:282
+msgid "Dimensions"
+msgstr "Dimensions"
+
+# @ hybrid-core
+#: library/classes/hybrid-media-meta.php:161
+#: library/classes/widget-pages.php:191
+msgid "Date"
+msgstr "Date"
+
+# @ hybrid-core
+#: library/classes/hybrid-media-meta.php:165
+msgid "Camera"
+msgstr "Caméra"
+
+# @ hybrid-core
+#: library/classes/hybrid-media-meta.php:169
+msgid "Aperture"
+msgstr "Ouverture"
+
+# @ hybrid-core
+#. Translators: Camera focal length.
+#: library/classes/hybrid-media-meta.php:174
+#, php-format
+msgid "%s mm"
+msgstr "%s mm"
+
+# @ hybrid-core
+#: library/classes/hybrid-media-meta.php:174
+msgid "Focal Length"
+msgstr "Longueur de focale"
+
+# @ hybrid-core
+#: library/classes/hybrid-media-meta.php:180
+msgid "International Organization for Standardization"
+msgstr "International Organization for Standardization"
+
+# @ hybrid-core
+#: library/classes/hybrid-media-meta.php:180
+msgid "ISO"
+msgstr "ISO"
+
+# @ hybrid-core
+#. Translators: Camera shutter speed. "sec" is an abbreviation for "seconds".
+#: library/classes/hybrid-media-meta.php:199
+#, php-format
+msgid "%s sec"
+msgstr "%s sec"
+
+# @ hybrid-core
+#: library/classes/hybrid-media-meta.php:199
+msgid "Shutter Speed"
+msgstr "Vitesse de l'opturateur"
+
+# @ hybrid-core
+#: library/classes/hybrid-media-meta.php:248
+#: library/classes/hybrid-media-meta.php:285
+msgid "File Name"
+msgstr "Nom du fichier"
+
+# @ hybrid-core
+#: library/classes/hybrid-media-meta.php:256
+#: library/classes/hybrid-media-meta.php:293
+msgid "File Type"
+msgstr "Type de fichier"
+
+# @ hybrid-core
+#: library/classes/widget-archives.php:43
+msgid ""
+"An advanced widget that gives you total control over the output of your "
+"archives."
+msgstr ""
+"Un Widget avancé qui vous donne un contrôle complet de la restitution de vos "
+"archives"
+
+# @ hybrid-core
+# @ breadcrumb-trail
+#: library/classes/widget-archives.php:55
+#: library/classes/widget-archives.php:62
+#: library/extensions/breadcrumb-trail.php:181
+#: library/functions/template-general.php:339
+msgid "Archives"
+msgstr "Archives"
+
+# @ hybrid-core
+#: library/classes/widget-archives.php:105
+msgid "Select Year"
+msgstr "Sélectionner l'année"
+
+# @ hybrid-core
+#: library/classes/widget-archives.php:108
+msgid "Select Month"
+msgstr "Sélectionner le mois"
+
+# @ hybrid-core
+#: library/classes/widget-archives.php:111
+msgid "Select Week"
+msgstr "Sélectionner la semaine"
+
+# @ hybrid-core
+#: library/classes/widget-archives.php:114
+msgid "Select Day"
+msgstr "Sélectionner le jour"
+
+# @ hybrid-core
+#: library/classes/widget-archives.php:117
+msgid "Select Post"
+msgstr "Sélectionner l'article"
+
+# @ hybrid-core
+#: library/classes/widget-archives.php:194
+msgid "Alphabetical"
+msgstr "Alphabétique"
+
+# @ hybrid-core
+#: library/classes/widget-archives.php:195
+msgid "Daily"
+msgstr "Quotidien"
+
+# @ hybrid-core
+#: library/classes/widget-archives.php:196
+msgid "Monthly"
+msgstr "Mensuel"
+
+# @ hybrid-core
+#: library/classes/widget-archives.php:197
+msgid "Post By Post"
+msgstr "Article par article"
+
+# @ hybrid-core
+#: library/classes/widget-archives.php:198
+msgid "Weekly"
+msgstr "Hebdomadaire"
+
+# @ hybrid-core
+#: library/classes/widget-archives.php:199
+msgid "Yearly"
+msgstr "Annuel"
+
+# @ hybrid-core
+#: library/classes/widget-archives.php:204
+#: library/classes/widget-authors.php:181
+#: library/classes/widget-bookmarks.php:220
+#: library/classes/widget-categories.php:210
+#: library/classes/widget-pages.php:185 library/classes/widget-tags.php:227
+msgid "Ascending"
+msgstr "Ascendant"
+
+# @ hybrid-core
+#: library/classes/widget-archives.php:205
+#: library/classes/widget-authors.php:182
+#: library/classes/widget-bookmarks.php:221
+#: library/classes/widget-categories.php:211
+#: library/classes/widget-pages.php:186 library/classes/widget-tags.php:228
+msgid "Descending"
+msgstr "Descendant"
+
+# @ hybrid-core
+#: library/classes/widget-archives.php:210
+msgid "Custom"
+msgstr "Personnalisé"
+
+# @ hybrid-core
+#: library/classes/widget-archives.php:211
+msgid "HTML"
+msgstr "HTML"
+
+# @ hybrid-core
+#: library/classes/widget-archives.php:212
+msgid "Option"
+msgstr "Option"
+
+# @ hybrid-core
+#: library/classes/widget-archives.php:218
+#: library/classes/widget-authors.php:205
+#: library/classes/widget-bookmarks.php:250
+#: library/classes/widget-calendar.php:137
+#: library/classes/widget-categories.php:234
+#: library/classes/widget-nav-menu.php:173
+#: library/classes/widget-pages.php:211 library/classes/widget-search.php:128
+#: library/classes/widget-tags.php:248
+msgid "Title:"
+msgstr "Titre:"
+
+# @ hybrid-core
+#: library/classes/widget-archives.php:262
+#: library/classes/widget-authors.php:261
+msgid "Show post count?"
+msgstr "Afficher le nombre d'articles?"
+
+# @ hybrid-core
+#: library/classes/widget-authors.php:43
+msgid ""
+"An advanced widget that gives you total control over the output of your "
+"author lists."
+msgstr ""
+"Un Widget avancé vous donnant un contrôle total de l'affichage de votre "
+"liste d'auteurs"
+
+# @ hybrid-core
+#: library/classes/widget-authors.php:55 library/classes/widget-authors.php:62
+msgid "Authors"
+msgstr "Auteurs"
+
+# @ hybrid-core
+#: library/classes/widget-authors.php:186
+msgid "Display Name"
+msgstr "Nom d'affichage"
+
+# @ hybrid-core
+#: library/classes/widget-authors.php:187
+msgid "Email"
+msgstr "Email"
+
+# @ hybrid-core
+#: library/classes/widget-authors.php:188
+#: library/classes/widget-bookmarks.php:226
+#: library/classes/widget-bookmarks.php:232
+#: library/classes/widget-categories.php:216
+#: library/classes/widget-pages.php:192
+msgid "ID"
+msgstr "ID"
+
+# @ hybrid-core
+#: library/classes/widget-authors.php:189
+msgid "Nice Name"
+msgstr "Nom agréable"
+
+# @ hybrid-core
+#: library/classes/widget-authors.php:190
+msgid "Post Count"
+msgstr "Nombre d'articles"
+
+# @ hybrid-core
+#: library/classes/widget-authors.php:191
+msgid "Registered"
+msgstr "Enregistré"
+
+# @ hybrid-core
+#: library/classes/widget-authors.php:192
+#: library/classes/widget-bookmarks.php:244
+msgid "URL"
+msgstr "URL"
+
+# @ hybrid-core
+#: library/classes/widget-authors.php:193
+msgid "Login"
+msgstr "Login"
+
+# @ hybrid-core
+#: library/classes/widget-authors.php:197
+#: library/classes/widget-categories.php:205
+#: library/classes/widget-tags.php:223
+msgid "List"
+msgstr "Liste"
+
+# @ hybrid-core
+#: library/classes/widget-authors.php:198
+#: library/classes/widget-categories.php:206
+msgid "None"
+msgstr "Aucun"
+
+# @ hybrid-core
+#: library/classes/widget-authors.php:257
+msgid "<acronym title=\"Hypertext Markup Language\">HTML</acronym>?"
+msgstr "<acronym title=\"Hypertext Markup Language\">HTML</acronym>?"
+
+# @ hybrid-core
+#: library/classes/widget-authors.php:265
+msgid "Exclude admin?"
+msgstr "Exclure l'admin?"
+
+# @ hybrid-core
+#: library/classes/widget-authors.php:269
+msgid "Show full name?"
+msgstr "Afficher le nom complet?"
+
+# @ hybrid-core
+#: library/classes/widget-authors.php:273
+#: library/classes/widget-categories.php:337
+#: library/classes/widget-tags.php:367
+msgid "Hide empty?"
+msgstr "Masquer si vide?"
+
+# @ hybrid-core
+#: library/classes/widget-bookmarks.php:43
+msgid ""
+"An advanced widget that gives you total control over the output of your "
+"bookmarks (links)."
+msgstr ""
+"Un Widget avancé qui vous donne un contrôle complet de l'affichage de vos "
+"bookmarks (lens)."
+
+# @ hybrid-core
+#: library/classes/widget-bookmarks.php:55
+#: library/classes/widget-bookmarks.php:62
+#: library/classes/widget-bookmarks.php:127
+msgid "Bookmarks"
+msgstr "Bookmarks"
+
+# @ hybrid-core
+#: library/classes/widget-bookmarks.php:225
+#: library/classes/widget-categories.php:215
+#: library/classes/widget-tags.php:233
+msgid "Count"
+msgstr "Nombre"
+
+# @ hybrid-core
+#: library/classes/widget-bookmarks.php:227
+#: library/classes/widget-bookmarks.php:235
+#: library/classes/widget-categories.php:217
+#: library/classes/widget-tags.php:234
+msgid "Name"
+msgstr "Nom"
+
+# @ hybrid-core
+#: library/classes/widget-bookmarks.php:228
+#: library/classes/widget-categories.php:218
+#: library/classes/widget-pages.php:195
+msgid "Slug"
+msgstr "Url simplifiée (slug)"
+
+# @ hybrid-core
+#: library/classes/widget-bookmarks.php:233
+msgid "Description"
+msgstr "Description"
+
+# @ hybrid-core
+#: library/classes/widget-bookmarks.php:234
+msgid "Length"
+msgstr "Longueur"
+
+# @ hybrid-core
+#: library/classes/widget-bookmarks.php:236
+msgid "Notes"
+msgstr "Notes"
+
+# @ hybrid-core
+#: library/classes/widget-bookmarks.php:237
+msgid "Owner"
+msgstr "Propriétaire"
+
+# @ hybrid-core
+#: library/classes/widget-bookmarks.php:238
+#: library/classes/widget-tags.php:229
+msgid "Random"
+msgstr "Aléatoire"
+
+# @ hybrid-core
+#: library/classes/widget-bookmarks.php:239
+msgid "Rating"
+msgstr "Notation"
+
+# @ hybrid-core
+#: library/classes/widget-bookmarks.php:240
+msgid "Rel"
+msgstr "Rel"
+
+# @ hybrid-core
+#: library/classes/widget-bookmarks.php:241
+#: library/classes/widget-categories.php:226
+msgid "RSS"
+msgstr "RSS"
+
+# @ hybrid-core
+#: library/classes/widget-bookmarks.php:242
+msgid "Target"
+msgstr "Target"
+
+# @ hybrid-core
+#: library/classes/widget-bookmarks.php:243
+msgid "Updated"
+msgstr "Mis à jour"
+
+# @ hybrid-core
+#: library/classes/widget-bookmarks.php:352
+msgid "Categorize?"
+msgstr "Catégorisé?"
+
+# @ hybrid-core
+#: library/classes/widget-bookmarks.php:356
+msgid "Show description?"
+msgstr "Afficher la description?"
+
+# @ hybrid-core
+#: library/classes/widget-bookmarks.php:360
+msgid "Hide invisible?"
+msgstr "Masquer invisible?"
+
+# @ hybrid-core
+#: library/classes/widget-bookmarks.php:364
+msgid "Show rating?"
+msgstr "Afficher la notation?"
+
+# @ hybrid-core
+#: library/classes/widget-bookmarks.php:368
+msgid "Show updated?"
+msgstr "Afficher Mis à jour?"
+
+# @ hybrid-core
+#: library/classes/widget-bookmarks.php:372
+msgid "Show images?"
+msgstr "Afficher les images?"
+
+# @ hybrid-core
+#: library/classes/widget-bookmarks.php:376
+msgid "Show name?"
+msgstr "Afficher le nom?"
+
+# @ hybrid-core
+#: library/classes/widget-bookmarks.php:380
+msgid "Show private?"
+msgstr "Affiché privés?"
+
+# @ hybrid-core
+#: library/classes/widget-calendar.php:43
+msgid ""
+"An advanced widget that gives you total control over the output of your "
+"calendar."
+msgstr ""
+"Un Widget avancé pour vous donner un contrôle total sur l'affichage de votre "
+"calendrier."
+
+# @ hybrid-core
+#: library/classes/widget-calendar.php:55
+#: library/classes/widget-calendar.php:62
+msgid "Calendar"
+msgstr "Calendrier"
+
+# @ hybrid-core
+#: library/classes/widget-calendar.php:142
+msgid "One-letter abbreviation?"
+msgstr "Abréviation à une lettre?"
+
+# @ hybrid-core
+#: library/classes/widget-categories.php:43
+msgid ""
+"An advanced widget that gives you total control over the output of your "
+"category links."
+msgstr ""
+"Un Widget avancé qui vous donne un contrôle total su r l'affichage de vos "
+"liens de catégories."
+
+# @ hybrid-core
+#: library/classes/widget-categories.php:55
+#: library/classes/widget-categories.php:62
+msgid "Categories"
+msgstr "Catégories"
+
+# @ hybrid-core
+#: library/classes/widget-categories.php:219
+msgid "Term Group"
+msgstr "Term Group"
+
+# @ hybrid-core
+#: library/classes/widget-categories.php:224
+msgid "Atom"
+msgstr "Atom"
+
+# @ hybrid-core
+#: library/classes/widget-categories.php:225
+msgid "RDF"
+msgstr "RDF"
+
+# @ hybrid-core
+#: library/classes/widget-categories.php:227
+msgid "RSS 2.0"
+msgstr "RSS 2.0"
+
+# @ hybrid-core
+#: library/classes/widget-categories.php:325
+#: library/classes/widget-pages.php:310
+msgid "Hierarchical?"
+msgstr "Hiérarchique?"
+
+# @ hybrid-core
+#: library/classes/widget-categories.php:329
+msgid "Use description?"
+msgstr "Utiliser la description?"
+
+# @ hybrid-core
+#: library/classes/widget-categories.php:333
+msgid "Show count?"
+msgstr "Afficher le nombre?"
+
+# @ hybrid-core
+#: library/classes/widget-nav-menu.php:43
+msgid ""
+"An advanced widget that gives you total control over the output of your "
+"menus."
+msgstr ""
+"un widget avancé qui vous donne un contrôle total de l'affichage de vos "
+"menus."
+
+# @ hybrid-core
+#: library/classes/widget-nav-menu.php:55
+msgid "Navigation Menu"
+msgstr "Menu de Navigation"
+
+# @ hybrid-core
+#: library/classes/widget-nav-menu.php:62
+msgid "Navigation"
+msgstr "Navigation"
+
+# @ hybrid-core
+#: library/classes/widget-pages.php:43
+msgid ""
+"An advanced widget that gives you total control over the output of your page "
+"links."
+msgstr ""
+"Un Widget avancé qui vous donne un contrôle total de l'affichage de vos "
+"liens de pages."
+
+# @ hybrid-core
+#: library/classes/widget-pages.php:55 library/classes/widget-pages.php:62
+msgid "Pages"
+msgstr "Pages"
+
+# @ hybrid-core
+#: library/classes/widget-pages.php:190
+msgid "Author"
+msgstr "Auteur"
+
+# @ hybrid-core
+#: library/classes/widget-pages.php:193
+msgid "Menu Order"
+msgstr "Ordre Menu"
+
+# @ hybrid-core
+#: library/classes/widget-pages.php:194 library/classes/widget-pages.php:202
+msgid "Modified"
+msgstr "Modifié"
+
+# @ hybrid-core
+#: library/classes/widget-pages.php:196
+msgid "Title"
+msgstr "Titre"
+
+# @ hybrid-core
+#: library/classes/widget-pages.php:201
+msgid "Created"
+msgstr "Créé"
+
+# @ hybrid-core
+#: library/classes/widget-search.php:44
+msgid ""
+"An advanced widget that gives you total control over the output of your "
+"search form."
+msgstr ""
+"Un Widget avancé qui vous donné un contrôle total sur l'affichage de votre "
+"formulaire de recherche."
+
+# @ hybrid-core
+#: library/classes/widget-search.php:56 library/classes/widget-search.php:63
+msgid "Search"
+msgstr "Rechercher"
+
+# @ hybrid-core
+#: library/classes/widget-tags.php:43
+msgid ""
+"An advanced widget that gives you total control over the output of your tags."
+msgstr ""
+"Un Widget avancé qui vous donne un contrôle total sur l'affichage de vos "
+"tags."
+
+# @ hybrid-core
+#: library/classes/widget-tags.php:55 library/classes/widget-tags.php:64
+msgid "Tags"
+msgstr "Tags"
+
+# @ ignite
+#: library/classes/widget-tags.php:61
+#, php-format
+msgid "%s topic"
+msgid_plural "%s topics"
+msgstr[0] "%s sujet"
+msgstr[1] "%s sujets"
+
+# @ hybrid-core
+#: library/classes/widget-tags.php:217
+msgid "View"
+msgstr "Afficher"
+
+# @ hybrid-core
+# @ breadcrumb-trail
+#: library/classes/widget-tags.php:218
+#: library/extensions/breadcrumb-trail.php:1135
+#: library/extensions/breadcrumb-trail.php:1171
+#: library/extensions/breadcrumb-trail.php:1188
+#: library/extensions/breadcrumb-trail.php:1219
+msgid "Edit"
+msgstr "Modifier"
+
+# @ hybrid-core
+#: library/classes/widget-tags.php:222
+msgid "Flat"
+msgstr "A plat"
+
+# @ hybrid-core
+#: library/classes/widget-tags.php:363
+msgid "Pad counts?"
+msgstr "Nombre de Pad?"
+
+# @ breadcrumb-trail
+#: library/extensions/breadcrumb-trail.php:178
+msgid "Browse:"
+msgstr "Naviguer:"
+
+# @ breadcrumb-trail
+#: library/extensions/breadcrumb-trail.php:179
+msgid "Home"
+msgstr "Accueil"
+
+# @ breadcrumb-trail
+# @ hybrid-core
+#: library/extensions/breadcrumb-trail.php:180
+#: library/functions/template-general.php:494
+msgid "404 Not Found"
+msgstr "404 non trouvé"
+
+# @ breadcrumb-trail
+# @ hybrid-core
+#. Translators: %s is the search query. The HTML entities are opening and closing curly quotes.
+#. Translators: %s is the search query. The HTML entities are opening and closing curly quotes.
+#: library/extensions/breadcrumb-trail.php:183
+#: library/functions/template-general.php:475
+#, php-format
+msgid "Search results for &#8220;%s&#8221;"
+msgstr "Résultats de la recherche pour &#8220;%s&#8221;"
+
+# @ breadcrumb-trail
+#. Translators: %s is the page number.
+#: library/extensions/breadcrumb-trail.php:185
+#, php-format
+msgid "Page %s"
+msgstr "Page %s"
+
+# @ breadcrumb-trail
+# @ hybrid-core
+#. Translators: Minute archive title. %s is the minute time format.
+#. Translators: Minute archive title. %s is the minute time format.
+#: library/extensions/breadcrumb-trail.php:187
+#: library/functions/template-general.php:436
+#, php-format
+msgid "Minute %s"
+msgstr "Minute %s"
+
+# @ breadcrumb-trail
+#. Translators: Weekly archive title. %s is the week date format.
+#: library/extensions/breadcrumb-trail.php:189
+#, php-format
+msgid "Week %s"
+msgstr "Semaine %s"
+
+# @ breadcrumb-trail
+# @ hybrid-core
+#: library/extensions/breadcrumb-trail.php:716
+#: library/functions/template-general.php:455
+msgctxt "minute and hour archives time format"
+msgid "g:i a"
+msgstr "G:i"
+
+# @ breadcrumb-trail
+# @ hybrid-core
+#: library/extensions/breadcrumb-trail.php:733
+#: library/functions/template-general.php:436
+msgctxt "minute archives time format"
+msgid "i"
+msgstr "i"
+
+# @ breadcrumb-trail
+# @ hybrid-core
+#: library/extensions/breadcrumb-trail.php:750
+#: library/functions/template-general.php:416
+msgctxt "hour archives time format"
+msgid "g a"
+msgstr "G"
+
+# @ breadcrumb-trail
+# @ hybrid-core
+#: library/extensions/breadcrumb-trail.php:766
+#: library/extensions/breadcrumb-trail.php:795
+#: library/extensions/breadcrumb-trail.php:822
+#: library/extensions/breadcrumb-trail.php:849
+#: library/extensions/breadcrumb-trail.php:1036
+#: library/functions/template-general.php:358
+#: library/functions/template-general.php:378
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Y"
+
+# @ breadcrumb-trail
+#: library/extensions/breadcrumb-trail.php:767
+#: library/extensions/breadcrumb-trail.php:823
+#: library/extensions/breadcrumb-trail.php:1040
+msgctxt "monthly archives date format"
+msgid "F"
+msgstr "F"
+
+# @ breadcrumb-trail
+#: library/extensions/breadcrumb-trail.php:768
+#: library/extensions/breadcrumb-trail.php:1044
+msgctxt "daily archives date format"
+msgid "j"
+msgstr "j"
+
+# @ breadcrumb-trail
+# @ hybrid-core
+#: library/extensions/breadcrumb-trail.php:796
+#: library/functions/template-general.php:378
+msgctxt "weekly archives date format"
+msgid "W"
+msgstr "W"
+
+# @ breadcrumb-trail
+#: library/extensions/breadcrumb-trail.php:1163
+msgid "Split"
+msgstr "Fractionner"
+
+# @ breadcrumb-trail
+#: library/extensions/breadcrumb-trail.php:1167
+msgid "Merge"
+msgstr "Fusionner"
+
+# @ featured-header
+#: library/extensions/featured-header.php:208
+msgid "Featured Header"
+msgstr "Entête présentée"
+
+# @ post-stylesheets
+#: library/extensions/post-stylesheets.php:286
+msgid "Stylesheet"
+msgstr "Page de style"
+
+# @ ignite
+#: library/extensions/random-custom-background.php:209
+msgctxt ""
+msgid "position_x"
+msgstr "position_x"
+
+# @ theme-fonts
+#: library/extensions/theme-fonts.php:401
+msgid "Fonts"
+msgstr "Polices"
+
+# @ theme-layouts
+#. Translators: Default theme layout option.
+#: library/extensions/theme-layouts.php:363
+msgctxt "theme layout"
+msgid "Default"
+msgstr "Défaut"
+
+# @ theme-layouts
+#: library/extensions/theme-layouts.php:458
+#: library/extensions/theme-layouts.php:567
+#: library/extensions/theme-layouts.php:652
+msgid "Layout"
+msgstr "Mise en page"
+
+# @ theme-layouts
+#: library/extensions/theme-layouts.php:483
+msgid "Layout is a theme-specific structure for the single view of the post."
+msgstr ""
+"La mise en page est une structure spécifique pour l'affichage simple d'un "
+"article"
+
+# @ theme-layouts
+#: library/extensions/theme-layouts.php:685
+msgid "Global Layout"
+msgstr "Mise en page globale"
+
+# @ hybrid-core
+#. Translators: Post date/time "title" attribute.
+#: library/functions/attr.php:414
+msgctxt "post time format"
+msgid "l, F j, Y, g:i a"
+msgstr "l, F j, Y, g:i a"
+
+# @ hybrid-core
+#. Translators: Comment date/time "title" attribute.
+#: library/functions/attr.php:535
+msgctxt "comment time format"
+msgid "l, F j, Y, g:i a"
+msgstr "l, F j, Y, g:i a"
+
+# @ hybrid-core
+#: library/functions/deprecated.php:432 library/functions/deprecated.php:520
+msgid "Permalink"
+msgstr "Permalien"
+
+# @ hybrid-core
+#: library/functions/deprecated.php:861
+#, php-format
+msgid ""
+"<code>%1$s</code> &mdash; This function has been removed or replaced by "
+"another function."
+msgstr ""
+"<code>%1$s</code> &mdash; Cette fonction a été supprimée ou bien a été "
+"remplacée par une autre fonction.."
+
+# @ hybrid-core
+#. Translators: 1 is the page title. 2 is the page number.
+#: library/functions/head.php:149
+#, php-format
+msgid "%1$s Page %2$s"
+msgstr "%1$s Page %2$s"
+
+# @ hybrid-core
+#: library/functions/media.php:32
+msgid "Post Thumbnail"
+msgstr "Miniature de l'article"
+
+# @ hybrid-core
+#: library/functions/media.php:53
+msgid "File Size"
+msgstr "Taille du fichier"
+
+# @ hybrid-core
+#: library/functions/media.php:54
+msgid "Mime Type"
+msgstr "Type Mime"
+
+# @ hybrid-core
+#: library/functions/media.php:55
+msgid "Run Time"
+msgstr "Heure d'exécution"
+
+# @ hybrid-core
+#: library/functions/media.php:60
+msgid "Genre"
+msgstr "Genre"
+
+# @ hybrid-core
+#: library/functions/media.php:61
+msgid "Year"
+msgstr "Année"
+
+# @ hybrid-core
+#: library/functions/media.php:62
+msgid "Composer"
+msgstr "Composer"
+
+# @ hybrid-core
+#: library/functions/media.php:63
+msgid "Track"
+msgstr "Plage"
+
+# @ hybrid-core
+#: library/functions/media.php:66
+msgid "Lyrics"
+msgstr "Paroles"
+
+# @ hybrid-core
+#: library/functions/template-general.php:55
+msgid "State-of-the-art semantic personal publishing platform"
+msgstr "Plateforme de publication sémantique personnelle dernier cri."
+
+# @ hybrid-core
+#: library/functions/template-general.php:55
+msgid "WordPress"
+msgstr "WordPress"
+
+# @ hybrid-core
+#. Translators: Theme name.
+#: library/functions/template-general.php:82
+#: library/functions/template-general.php:115
+#, php-format
+msgid "%s WordPress Theme"
+msgstr "%s Thème WordPress"
+
+# @ hybrid-core
+#: library/functions/template-general.php:305
+#, php-format
+msgid "You are browsing the search results for &#8220;%s&#8221;"
+msgstr "Vous naviguez parmi les résultats de la recherche de &#8220;%s&#8221;"
+
+# @ hybrid-core
+#: library/functions/template-general.php:311
+msgid "You are browsing the site archives by time."
+msgstr "Vous naviguez parmi les archives du site par horodatage."
+
+# @ hybrid-core
+#: library/functions/template-general.php:314
+#: library/functions/template-general.php:317
+#: library/functions/template-general.php:320
+#, php-format
+msgid "You are browsing the site archives for %s."
+msgstr "Vous naviguez parmi les archives du site pour %s."
+
+# @ hybrid-core
+#: library/functions/template-general.php:323
+msgid "You are browsing the site archives."
+msgstr "Vous naviguez parmi les archives du site."
+
+# @ hybrid-core
+#. Translators: 1 is the week number and 2 is the year.
+#: library/functions/template-general.php:378
+#, php-format
+msgid "Week %1$s of %2$s"
+msgstr "Semaine %1$s sur %2$s"
+
+# @ hybrid-core
+#: library/functions/template-general.php:397
+msgctxt "daily archives date format"
+msgid "F j, Y"
+msgstr "j F Y"
+
+# @ hybrid-core
+#. Translators: Separates tags, categories, etc. when displaying a post.
+#: library/functions/template-post.php:144
+msgctxt "taxonomy terms separator"
+msgid ", "
+msgstr ", "
+
+# @ hybrid-core
+#: library/functions/utility.php:86
+msgid "(Untitled)"
+msgstr "(Sans titre)"
+
+# @ ignite
+#: search.php:11
+#, php-format
+msgid "%d search results for"
+msgstr "%d résultats pour"
+
+# @ ignite
+#: search.php:13
+msgid "No search results for "
+msgstr "Aucun résultat pour "
+
+# @ ignite
+#: search.php:39
+msgid "Can't find what you're looking for?  Try refining your search:"
+msgstr "Aucun résultat pour votre recherche? Tentez d'affiner votre recherche:"
+
+# @ ignite
+#: searchform.php:3 searchform.php:4
+msgid "Search for:"
+msgstr "Recherche:"
+
+# @ ignite
+#: searchform.php:4
+msgid "Search..."
+msgstr "Rechercher..."
+
+# @ ignite
+#: searchform.php:5
+msgid "Go"
+msgstr "Allons-y!"
