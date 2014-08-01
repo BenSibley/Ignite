@@ -535,17 +535,17 @@ a img {
   }
 
   .menu-primary-items,
-  .menu-unset {
+  .menu-unset ul {
     margin: 0;
     line-height: 0;
   }
   .menu-primary-items li,
-  .menu-unset li {
+  .menu-unset ul li {
     float: left;
     position: relative;
   }
   .menu-primary-items a,
-  .menu-unset a {
+  .menu-unset ul a {
     color: #373b41;
     margin: 0;
     padding: 0 0.75em;
@@ -558,26 +558,26 @@ a img {
     transition: background 0.2s ease;
   }
   .menu-primary-items a:link, .menu-primary-items a:visited,
-  .menu-unset a:link,
-  .menu-unset a:visited {
+  .menu-unset ul a:link,
+  .menu-unset ul a:visited {
     color: #373b41;
   }
   .menu-primary-items a:hover, .menu-primary-items a:active, .menu-primary-items a:focus,
-  .menu-unset a:hover,
-  .menu-unset a:active,
-  .menu-unset a:focus {
+  .menu-unset ul a:hover,
+  .menu-unset ul a:active,
+  .menu-unset ul a:focus {
     color: white;
     background: #e6a117;
   }
   .menu-primary-items a:hover + ul, .menu-primary-items a:active + ul, .menu-primary-items a:focus + ul,
-  .menu-unset a:hover + ul,
-  .menu-unset a:active + ul,
-  .menu-unset a:focus + ul {
+  .menu-unset ul a:hover + ul,
+  .menu-unset ul a:active + ul,
+  .menu-unset ul a:focus + ul {
     top: 4.2495em;
     opacity: 1;
   }
   .menu-primary-items ul,
-  .menu-unset ul {
+  .menu-unset ul ul {
     position: absolute;
     top: -999em;
     opacity: 0;
@@ -591,40 +591,40 @@ a img {
     transition: opacity 0.2s ease;
   }
   .menu-primary-items ul li,
-  .menu-unset ul li {
+  .menu-unset ul ul li {
     min-width: 100%;
   }
   .menu-primary-items ul a,
-  .menu-unset ul a {
+  .menu-unset ul ul a {
     margin-top: 0;
     color: #373b41;
     white-space: nowrap;
   }
   .menu-primary-items ul a:hover, .menu-primary-items ul a:active, .menu-primary-items ul a:focus,
-  .menu-unset ul a:hover,
-  .menu-unset ul a:active,
-  .menu-unset ul a:focus {
+  .menu-unset ul ul a:hover,
+  .menu-unset ul ul a:active,
+  .menu-unset ul ul a:focus {
     color: white;
   }
   .menu-primary-items ul a:hover + ul, .menu-primary-items ul a:active + ul, .menu-primary-items ul a:focus + ul,
-  .menu-unset ul a:hover + ul,
-  .menu-unset ul a:active + ul,
-  .menu-unset ul a:focus + ul {
+  .menu-unset ul ul a:hover + ul,
+  .menu-unset ul ul a:active + ul,
+  .menu-unset ul ul a:focus + ul {
     top: 0;
     left: 100%;
   }
   .menu-primary-items ul:hover,
-  .menu-unset ul:hover {
+  .menu-unset ul ul:hover {
     top: 4.2495em;
     opacity: 1;
   }
   .menu-primary-items ul ul:hover,
-  .menu-unset ul ul:hover {
+  .menu-unset ul ul ul:hover {
     top: 0;
     left: 100%;
   }
   .menu-primary-items:after,
-  .menu-unset:after {
+  .menu-unset ul:after {
     content: ".";
     display: block;
     clear: both;
