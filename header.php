@@ -26,11 +26,16 @@
 <div id="overflow-container" class="overflow-container">
 
     <?php
-    if ( current_theme_supports( 'breadcrumb-trail' ) && !is_search() ) {
-        breadcrumb_trail(array(
-            'separator' => '>',
-            'show_browse' => false,
-            'show_on_front' => false)
-        );
-    } ?>
+
+    // if not 'no' so it falls back to usage of on default/unset
+    if(get_theme_mod('ct_ignite_show_breadcrumbs_setting') != 'no') {
+        if ( current_theme_supports( 'breadcrumb-trail' ) && !is_search() ) {
+            breadcrumb_trail(array(
+                'separator' => '>',
+                'show_browse' => false,
+                'show_on_front' => false)
+            );
+        }
+    }
+    ?>
     <div id="main" class="main" role="main">
