@@ -282,10 +282,10 @@ function ct_ignite_sanitize_author_meta_settings($input){
     }
 }
 
-/* show full post or excerpt on homepage */
+/* additional options section */
 function ct_ignite_additional_options( $wp_customize ) {
 
-    /* Add the layout section. */
+    /* section */
     $wp_customize->add_section(
         'ct-additional-options',
         array(
@@ -294,7 +294,7 @@ function ct_ignite_additional_options( $wp_customize ) {
             'capability' => 'edit_theme_options'
         )
     );
-    /* Add the color setting. */
+    /* setting */
     $wp_customize->add_setting(
         'ct_ignite_show_full_post_setting',
         array(
@@ -304,12 +304,37 @@ function ct_ignite_additional_options( $wp_customize ) {
             'sanitize_callback' => 'ct_ignite_sanitize_show_full_post_setting',
         )
     );
+    /* control */
     $wp_customize->add_control(
         'ct_ignite_show_full_post',
         array(
             'label'          => __( 'Show full post on blog?', 'ignite' ),
             'section'        => 'ct-additional-options',
             'settings'       => 'ct_ignite_show_full_post_setting',
+            'type'           => 'radio',
+            'choices'        => array(
+                'yes'   => __('Yes', 'ignite'),
+                'no'  => __('No', 'ignite')
+            )
+        )
+    );
+    /* setting */
+    $wp_customize->add_setting(
+        'ct_ignite_show_breadcrumbs_setting',
+        array(
+            'default'           => 'yes',
+            'type'              => 'theme_mod',
+            'capability'        => 'edit_theme_options',
+            'sanitize_callback' => 'ct_ignite_sanitize_show_full_post_setting',
+        )
+    );
+    /* control */
+    $wp_customize->add_control(
+        'ct_ignite_show_breadcrumbs_setting',
+        array(
+            'label'          => __( 'Show breadcrumbs?', 'ignite' ),
+            'section'        => 'ct-additional-options',
+            'settings'       => 'ct_ignite_show_breadcrumbs_setting',
             'type'           => 'radio',
             'choices'        => array(
                 'yes'   => __('Yes', 'ignite'),
