@@ -463,6 +463,17 @@ function ct_ignite_logo_size_css(){
 }
 add_action('wp_enqueue_scripts','ct_ignite_logo_size_css');
 
+function ct_ignite_custom_css_output(){
+
+    $custom_css = get_theme_mod('ct_ignite_custom_css_setting');
+
+    /* output custom css */
+    if($custom_css) {
+        wp_add_inline_style('style', $custom_css);
+    }
+}
+add_action('wp_enqueue_scripts','ct_ignite_custom_css_output');
+
 // fix for bug with Disqus saying comments are closed
 if ( function_exists( 'dsq_options' ) ) {
     remove_filter( 'comments_template', 'dsq_comments_template' );
@@ -479,5 +490,4 @@ function ct_ignite_show_avatars_check($classes){
     }
     return $classes;
 }
-
 add_action('comment_class', 'ct_ignite_show_avatars_check');

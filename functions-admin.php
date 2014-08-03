@@ -359,6 +359,54 @@ function ct_ignite_sanitize_show_full_post_setting($input){
     }
 }
 
+/* Custom CSS Section */
+function ct_ignite_customizer_custom_css( $wp_customize ) {
+
+    // Custom Textarea Control
+    class ct_ignite_Textarea_Control extends WP_Customize_Control {
+        public $type = 'textarea';
+
+        public function render_content() {
+            ?>
+            <label>
+                <span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
+                <textarea rows="8" style="width:100%;" <?php $this->link(); ?>><?php echo esc_textarea( $this->value() ); ?></textarea>
+            </label>
+        <?php
+        }
+    }
+    // section
+    $wp_customize->add_section(
+        'ct-custom-css',
+        array(
+            'title'      => __( 'Custom CSS', 'ignite' ),
+            'priority'   => 90,
+            'capability' => 'edit_theme_options'
+        )
+    );
+    // setting
+    $wp_customize->add_setting(
+        'ct_ignite_custom_css_setting',
+        array(
+            'type'              => 'theme_mod',
+            'capability'        => 'edit_theme_options',
+            'sanitize_callback' => 'esc_textarea',
+        )
+    );
+    // control
+    $wp_customize->add_control(
+        new ct_ignite_Textarea_Control(
+            $wp_customize,
+            'ct_ignite_custom_css_setting',
+            array(
+                'label'          => __( 'Add Custom CSS Here:', 'ignite' ),
+                'section'        => 'ct-custom-css',
+                'settings'       => 'ct_ignite_custom_css_setting',
+            )
+        ) );
+}
+add_action( 'customize_register', 'ct_ignite_customizer_custom_css' );
+
 /* create theme options page */
 function ct_ignite_register_theme_page(){
     add_theme_page( 'Upgrade to Ignite Plus', 'Upgrade', 'edit_theme_options', 'ignite-options', 'ct_ignite_options_content', 'ct_ignite_options_content');
