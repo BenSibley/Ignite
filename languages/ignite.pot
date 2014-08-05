@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Ignite 1.22\n"
+"Project-Id-Version: Ignite 1.23\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2014-08-01 13:54:49+00:00\n"
+"POT-Creation-Date: 2014-08-05 15:03:56+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -127,77 +127,89 @@ msgstr ""
 msgid "Additional Options"
 msgstr ""
 
-#: functions-admin.php:310
+#: functions-admin.php:311
 msgid "Show full post on blog?"
 msgstr ""
 
-#: functions-admin.php:315 functions-admin.php:326
+#: functions-admin.php:316 functions-admin.php:340 functions-admin.php:351
 msgid "Yes"
 msgstr ""
 
-#: functions-admin.php:316 functions-admin.php:327
+#: functions-admin.php:317 functions-admin.php:341 functions-admin.php:352
 msgid "No"
 msgstr ""
 
-#: functions-admin.php:347
+#: functions-admin.php:335
+msgid "Show breadcrumbs?"
+msgstr ""
+
+#: functions-admin.php:382
+msgid "Custom CSS"
+msgstr ""
+
+#: functions-admin.php:402
+msgid "Add Custom CSS Here:"
+msgstr ""
+
+#: functions-admin.php:420
 msgid "Ignite Dashboard"
 msgstr ""
 
-#: functions-admin.php:351
+#: functions-admin.php:424
 msgid ""
 "Thanks for downloading Ignite! If you can, please take one minute to <a "
 "target=\"_blank\" href=\"%s\"><strong>leave a review</strong></a>."
 msgstr ""
 
-#: functions-admin.php:356
+#: functions-admin.php:429
 msgid "Premium Upgrade"
 msgstr ""
 
-#: functions-admin.php:357
+#: functions-admin.php:430
 msgid ""
 "Get more flexibility and customizations for your site, with Ignite Plus "
 "($29)."
 msgstr ""
 
-#: functions-admin.php:358
+#: functions-admin.php:431
 msgid "Custom colors, custom backgrounds, over 600+ fonts, and more..."
 msgstr ""
 
-#: functions-admin.php:360
+#: functions-admin.php:433
 msgid "View Ignite Plus"
 msgstr ""
 
-#: functions-admin.php:364
+#: functions-admin.php:437
 msgid "Support"
 msgstr ""
 
-#: functions-admin.php:369
+#: functions-admin.php:442
 msgid "<a target=\"_blank\" href=\"%s\">Visit the knowledgebase</a> for self-help."
 msgstr ""
 
-#: functions-admin.php:376
+#: functions-admin.php:449
 msgid ""
 "<a target=\"_blank\" href=\"%s\">Visit the support forum</a> for community "
 "support."
 msgstr ""
 
-#: functions-admin.php:381
+#: functions-admin.php:454
 msgid ""
 "I (Ben) visit the support forum everyday, so any questions you have will be "
 "answered there."
 msgstr ""
 
-#: functions-admin.php:384
+#: functions-admin.php:457
 msgid "Customize"
 msgstr ""
 
-#: functions-admin.php:385
+#: functions-admin.php:458
 msgid ""
 "Customize your site with your logo, social profiles, and more with the "
 "built-in Customizer."
 msgstr ""
 
-#: functions-admin.php:386
+#: functions-admin.php:459
 msgid "Use the customizer"
 msgstr ""
 
