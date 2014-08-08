@@ -407,6 +407,44 @@ function ct_ignite_customizer_custom_css( $wp_customize ) {
 }
 add_action( 'customize_register', 'ct_ignite_customizer_custom_css' );
 
+function ct_ignite_user_profile_image_setting( $user ) { ?>
+
+    <table id="profile-image-table" class="form-table">
+
+        <tr>
+            <th><label for="user_profile_image"><?php _e( 'Profile image', 'ignite-plus' ); ?></label></th>
+            <td>
+                <!-- Outputs the image after save -->
+                <img id="image-preview" src="<?php echo esc_url( get_the_author_meta( 'user_profile_image', $user->ID ) ); ?>" style="width:100px;"><br />
+                <!-- Outputs the text field and displays the URL of the image retrieved by the media uploader -->
+                <input type="text" name="user_profile_image" id="user_profile_image" value="<?php echo esc_url_raw( get_the_author_meta( 'user_profile_image', $user->ID ) ); ?>" class="regular-text" />
+                <!-- Outputs the save button -->
+                <input type='button' id="user-profile-upload" class="button-primary" value="<?php _e( 'Upload Image', 'ignite-plus' ); ?>"/><br />
+                <span class="description"><?php _e( 'Upload an image here to use instead of your Gravatar. Perfectly square images will not be cropped.', 'ignite-plus' ); ?></span>
+            </td>
+        </tr>
+
+    </table><!-- end form-table -->
+<?php } // additional_user_fields
+
+add_action( 'show_user_profile', 'ct_ignite_user_profile_image_setting' );
+add_action( 'edit_user_profile', 'ct_ignite_user_profile_image_setting' );
+
+/**
+ * Saves additional user fields to the database
+ */
+function ct_ignite_save_user_profile_image( $user_id ) {
+
+    // only saves if the current user can edit user profiles
+    if ( !current_user_can( 'edit_user', $user_id ) )
+        return false;
+
+    update_user_meta( $user_id, 'user_profile_image', $_POST['user_profile_image'] );
+}
+
+add_action( 'personal_options_update', 'ct_ignite_save_user_profile_image' );
+add_action( 'edit_user_profile_update', 'ct_ignite_save_user_profile_image' );
+
 /* create theme options page */
 function ct_ignite_register_theme_page(){
     add_theme_page( 'Upgrade to Ignite Plus', 'Upgrade', 'edit_theme_options', 'ignite-options', 'ct_ignite_options_content', 'ct_ignite_options_content');
