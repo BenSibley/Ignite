@@ -1190,6 +1190,18 @@ a img {
   margin-left: 6em;
 }
 
+.author-profile-image {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  float: left;
+  margin-right: 1.5em;
+  overflow: hidden;
+}
+.author-profile-image img {
+  border-radius: 0;
+}
+
 /* 700px */
 @media all and (min-width: 43.75em) {
   .further-reading p {
