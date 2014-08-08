@@ -505,3 +505,10 @@ function ct_ignite_show_avatars_check($classes){
     return $classes;
 }
 add_action('comment_class', 'ct_ignite_show_avatars_check');
+
+// retrieves the attachment ID from the file URL
+function ct_ignite_get_image_id($image_url) {
+    global $wpdb;
+    $attachment = $wpdb->get_col($wpdb->prepare("SELECT ID FROM $wpdb->posts WHERE guid='%s';", $image_url ));
+    return $attachment[0];
+}
