@@ -78,6 +78,19 @@ li.pingback {
     }
   }
 }
+.author-profile-image-comment {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  float: left;
+  margin-right: $baseline-height * 0.5;
+  overflow: hidden;
+  border: solid 2px $orange;
+
+  img {
+    border-radius: 0;
+  }
+}
 .comment-meta {
   font-size: 0.813em;
   line-height: 1.85;
@@ -103,6 +116,9 @@ li.pingback {
 
     img {
       border: solid 2px $orange;
+    }
+    .author-profile-image-comment img {
+      border: none;
     }
   }
 }

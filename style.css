@@ -1298,6 +1298,19 @@ li.pingback {
   color: #a87227;
 }
 
+.author-profile-image-comment {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  float: left;
+  margin-right: 0.75em;
+  overflow: hidden;
+  border: solid 2px #e6a117;
+}
+.author-profile-image-comment img {
+  border-radius: 0;
+}
+
 .comment-meta {
   font-size: 0.813em;
   line-height: 1.85;
@@ -1322,6 +1335,9 @@ li.pingback {
 
 .bypostauthor .comment-author img {
   border: solid 2px #e6a117;
+}
+.bypostauthor .comment-author .author-profile-image-comment img {
+  border: none;
 }
 
 .comment-respond {

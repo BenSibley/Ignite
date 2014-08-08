@@ -226,7 +226,8 @@ function ct_ignite_customize_comments( $comment, $args, $depth ) {
                 // if is post author
                 if( $comment->user_id === $post->post_author ) {
                     // if post author has profile image set
-                    if(get_the_author_meta('user_profile_image')){
+                    if(get_the_author_meta('user_profile_image')) {
+
                         echo "<div class='author-profile-image-comment'>";
 
                         // get the id based on the image's URL
@@ -239,6 +240,8 @@ function ct_ignite_customize_comments( $comment, $args, $depth ) {
                         echo $image_thumb;
 
                         echo "</div>";
+                    } else {
+                        echo get_avatar( get_comment_author_email(), 48 );
                     }
                 } else {
                     echo get_avatar( get_comment_author_email(), 48 );
