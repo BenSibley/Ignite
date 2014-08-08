@@ -216,11 +216,34 @@ function ct_ignite_tags_display() {
 /* added to customize the comments. Same as default except -> added use of gravatar images for comment authors */
 function ct_ignite_customize_comments( $comment, $args, $depth ) {
     $GLOBALS['comment'] = $comment;
+    global $post;
  
     ?>
     <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
         <article id="comment-<?php comment_ID(); ?>" class="comment">
-            <div class="comment-author"><?php echo get_avatar( get_comment_author_email() ); ?>
+            <div class="comment-author">
+                <?php
+                // if is post author
+                if( $comment->user_id === $post->post_author ) {
+                    // if post author has profile image set
+                    if(get_the_author_meta('user_profile_image')){
+                        echo "<div class='author-profile-image-comment'>";
+
+                        // get the id based on the image's URL
+                        $image_id = ct_ignite_get_image_id(get_the_author_meta('user_profile_image'));
+
+                        // retrieve the thumbnail size of profile image
+                        $image_thumb = wp_get_attachment_image($image_id, 'thumbnail');
+
+                        // display the image
+                        echo $image_thumb;
+
+                        echo "</div>";
+                    }
+                } else {
+                    echo get_avatar( get_comment_author_email(), 48 );
+                }
+                ?>
                 <span class="author-name"><?php comment_author_link(); ?></span>
                 <span> <?php _e('said:', 'ignite'); ?></span>
             </div>
