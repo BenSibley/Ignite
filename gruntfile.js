@@ -13,9 +13,11 @@ module.exports = function(grunt) {
             }
         },
         uglify: {
-            build: {
-                src: 'js/build/production.js',
-                dest: 'js/build/production.min.js'
+            dist: {
+                files: {
+                    'js/build/production.min.js': 'js/build/production.js',
+                    'js/build/profile-uploader.min.js': 'js/profile-uploader.js'
+                }
             }
         },
         watch: {
