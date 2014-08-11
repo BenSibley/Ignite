@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Ignite 1.23\n"
+"Project-Id-Version: Ignite 1.24\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2014-08-05 15:03:56+00:00\n"
+"POT-Creation-Date: 2014-08-11 18:15:36+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -45,7 +45,7 @@ msgid ""
 "correct or try the search form below to find what you were looking for."
 msgstr ""
 
-#: content-attachment.php:3 content.php:8 content.php:31 content.php:74
+#: content-attachment.php:3 content.php:8 content.php:31 content.php:95
 msgid "Published"
 msgstr ""
 
@@ -151,157 +151,171 @@ msgstr ""
 msgid "Add Custom CSS Here:"
 msgstr ""
 
-#: functions-admin.php:420
+#: functions-admin.php:415
+msgid "Profile image"
+msgstr ""
+
+#: functions-admin.php:422
+msgid "Upload Image"
+msgstr ""
+
+#: functions-admin.php:423
+msgid ""
+"Upload an image here to use instead of your Gravatar. Perfectly square "
+"images will not be cropped."
+msgstr ""
+
+#: functions-admin.php:458
 msgid "Ignite Dashboard"
 msgstr ""
 
-#: functions-admin.php:424
+#: functions-admin.php:462
 msgid ""
 "Thanks for downloading Ignite! If you can, please take one minute to <a "
 "target=\"_blank\" href=\"%s\"><strong>leave a review</strong></a>."
 msgstr ""
 
-#: functions-admin.php:429
+#: functions-admin.php:467
 msgid "Premium Upgrade"
 msgstr ""
 
-#: functions-admin.php:430
+#: functions-admin.php:468
 msgid ""
 "Get more flexibility and customizations for your site, with Ignite Plus "
 "($29)."
 msgstr ""
 
-#: functions-admin.php:431
+#: functions-admin.php:469
 msgid "Custom colors, custom backgrounds, over 600+ fonts, and more..."
 msgstr ""
 
-#: functions-admin.php:433
+#: functions-admin.php:471
 msgid "View Ignite Plus"
 msgstr ""
 
-#: functions-admin.php:437
+#: functions-admin.php:475
 msgid "Support"
 msgstr ""
 
-#: functions-admin.php:442
+#: functions-admin.php:480
 msgid "<a target=\"_blank\" href=\"%s\">Visit the knowledgebase</a> for self-help."
 msgstr ""
 
-#: functions-admin.php:449
+#: functions-admin.php:487
 msgid ""
 "<a target=\"_blank\" href=\"%s\">Visit the support forum</a> for community "
 "support."
 msgstr ""
 
-#: functions-admin.php:454
+#: functions-admin.php:492
 msgid ""
 "I (Ben) visit the support forum everyday, so any questions you have will be "
 "answered there."
 msgstr ""
 
-#: functions-admin.php:457
+#: functions-admin.php:495
 msgid "Customize"
 msgstr ""
 
-#: functions-admin.php:458
+#: functions-admin.php:496
 msgid ""
 "Customize your site with your logo, social profiles, and more with the "
 "built-in Customizer."
 msgstr ""
 
-#: functions-admin.php:459
+#: functions-admin.php:497
 msgid "Use the customizer"
 msgstr ""
 
-#: functions.php:79
+#: functions.php:93
 msgid "Primary Sidebar"
 msgstr ""
 
-#: functions.php:81
+#: functions.php:95
 msgid "The main sidebar"
 msgstr ""
 
-#: functions.php:88
+#: functions.php:102
 msgid "Primary"
 msgstr ""
 
-#: functions.php:134
+#: functions.php:148
 msgid "The Previous Post"
 msgstr ""
 
-#: functions.php:139
+#: functions.php:153
 msgid "The Next Post"
 msgstr ""
 
-#: functions.php:145
+#: functions.php:159
 msgid "Previous Post"
 msgstr ""
 
-#: functions.php:150 functions.php:162
+#: functions.php:164 functions.php:176
 msgid "Return to Blog"
 msgstr ""
 
-#: functions.php:151 functions.php:163
+#: functions.php:165 functions.php:177
 msgid "This is the oldest post"
 msgstr ""
 
-#: functions.php:157
+#: functions.php:171
 msgid "Next"
 msgstr ""
 
-#: functions.php:179
+#: functions.php:193
 msgid "View all posts in %s"
 msgstr ""
 
-#: functions.php:195
+#: functions.php:209
 msgid "View all posts tagged %s"
 msgstr ""
 
-#: functions.php:211
+#: functions.php:251
 msgid "said:"
 msgstr ""
 
-#: functions.php:215
+#: functions.php:255
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:223
+#: functions.php:263
 msgid "Reply"
 msgstr ""
 
-#: functions.php:240
+#: functions.php:280
 msgid "Your Name"
 msgstr ""
 
-#: functions.php:241
+#: functions.php:281
 msgid "Your Name*"
 msgstr ""
 
-#: functions.php:247
+#: functions.php:287
 msgid "Your Email"
 msgstr ""
 
-#: functions.php:248
+#: functions.php:288
 msgid "Your Email*"
 msgstr ""
 
-#: functions.php:254
+#: functions.php:294
 msgid "Your Website URL"
 msgstr ""
 
-#: functions.php:255
+#: functions.php:295
 msgid "Your URL"
 msgstr ""
 
-#: functions.php:267
+#: functions.php:307
 msgid "Your Comment"
 msgstr ""
 
-#: functions.php:268
+#: functions.php:308
 msgid "Enter Your Comment"
 msgstr ""
 
-#: functions.php:311 functions.php:321
+#: functions.php:351 functions.php:361
 msgid "Read More"
 msgstr ""
 
@@ -1018,7 +1032,7 @@ msgstr ""
 msgid "http://competethemes.com/"
 msgstr ""
 
-#: content.php:8 content.php:31 content.php:74
+#: content.php:8 content.php:31 content.php:95
 msgctxt "Published by whom?"
 msgid "by"
 msgstr ""
