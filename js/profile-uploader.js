@@ -30,7 +30,6 @@ jQuery(document).ready(function($){
             attachment = file_frame.state().get('selection').first().toJSON();
 
             // Do something with attachment.id and/or attachment.url here
-            console.log(attachment.url);
             $('#user_profile_image').val(attachment.url);
             $('#image-preview').attr('src', attachment.url);
         });
