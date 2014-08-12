@@ -1,29 +1,6 @@
 <?php 
 
-if( is_home() ) { ?>
-    <div <?php post_class(); ?>>
-    	<?php ct_ignite_featured_image(); ?>
-        <div class="excerpt-meta-top">
-            <?php
-            echo __('Published', 'ignite') . " " . get_the_date('F jS, Y') . " " . _x('by', 'Published by whom?', 'ignite') . " ";
-            the_author_posts_link();
-            ?>
-        </div>
-		<div class='excerpt-header'>
-			<h1 class='excerpt-title'>
-				<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-			</h1>
-		</div>
-		<div class='excerpt-content'>
-			<article>
-				<?php ct_ignite_excerpt(); ?>
-			</article>
-		</div>
-        <div class="excerpt-categories"><?php ct_ignite_category_display(); ?></div>
-        <div class="excerpt-tags"><?php ct_ignite_tags_display(); ?></div>
-	</div>
-<?php     
-} elseif( is_single() ) { ?>
+if( is_single() ) { ?>
     <div <?php post_class(); ?>>
         <?php ct_ignite_featured_image(); ?>
         <div class="entry-meta-top">
