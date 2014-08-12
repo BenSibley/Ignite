@@ -407,6 +407,69 @@ function ct_ignite_customizer_custom_css( $wp_customize ) {
 }
 add_action( 'customize_register', 'ct_ignite_customizer_custom_css' );
 
+/* allow users to change the font to any Google Webfont */
+function ct_ignite_customize_font_family_options( $wp_customize ) {
+
+    // i18n for section description
+    $site_url = 'http://www.google.com/fonts';
+    $site_link = sprintf( __( 'The default font is "Lusitana". Browse available fonts at <a target="_blank" href="%s">Google Fonts</a>.', 'ignite' ), esc_url( $site_url ) );
+
+    /* section. */
+    $wp_customize->add_section(
+        'ct-font-family',
+        array(
+            'title'       => __( 'Font Family', 'ignite' ),
+            'priority'    => 55,
+            'capability'  => 'edit_theme_options',
+            'description' => $site_link
+        )
+    );
+
+    /* font selection setting */
+    $wp_customize->add_setting(
+        'ct_ignite_font_family_settings',
+        array(
+            'default'           => 'lusitana',
+            'type'              => 'theme_mod',
+            'capability'        => 'edit_theme_options',
+            'sanitize_callback' => 'ct_ignite_sanitize_google_font_family'
+        )
+    );
+
+    /* control for font selection */
+    $wp_customize->add_control( 'ct_ignite_font_family_settings', array(
+        'type'     => 'select',
+        'label'    => __( 'Site Font Family', 'ignite-plus' ),
+        'section'  => 'ct-font-family',
+        'choices'  => array(
+            'lusitana' => 'Lusitana',
+            'roboto' => 'Roboto',
+            'lato' => 'Lato',
+            'droidserif' => 'Droid Serif',
+            'robotoslab' => 'Roboto Slab'
+        )
+    ));
+
+}
+add_action( 'customize_register', 'ct_ignite_customize_font_family_options' );
+
+function ct_ignite_sanitize_google_font_family($input){
+
+    $valid = array(
+        'lusitana' => 'Lusitana',
+        'roboto' => 'Roboto',
+        'lato' => 'Lato',
+        'droidserif' => 'Droid Serif',
+        'robotoslab' => 'Roboto Slab'
+    );
+
+    if ( array_key_exists( $input, $valid ) ) {
+        return $input;
+    } else {
+        return '';
+    }
+}
+
 function ct_ignite_user_profile_image_setting( $user ) { ?>
 
     <table id="profile-image-table" class="form-table">
