@@ -429,7 +429,7 @@ function ct_ignite_customize_font_family_options( $wp_customize ) {
     $wp_customize->add_setting(
         'ct_ignite_font_family_settings',
         array(
-            'default'           => 'lusitana',
+            'default'           => 'Lusitana',
             'type'              => 'theme_mod',
             'capability'        => 'edit_theme_options',
             'sanitize_callback' => 'ct_ignite_sanitize_google_font_family'
@@ -442,11 +442,11 @@ function ct_ignite_customize_font_family_options( $wp_customize ) {
         'label'    => __( 'Site Font Family', 'ignite-plus' ),
         'section'  => 'ct-font-family',
         'choices'  => array(
-            'lusitana' => 'Lusitana',
-            'roboto' => 'Roboto',
-            'lato' => 'Lato',
-            'droidserif' => 'Droid Serif',
-            'robotoslab' => 'Roboto Slab'
+            'Lusitana' => 'Lusitana',
+            'Roboto' => 'Roboto',
+            'Lato' => 'Lato',
+            'Droid Serif' => 'Droid Serif',
+            'Roboto Slab' => 'Roboto Slab'
         )
     ));
 
@@ -456,11 +456,11 @@ add_action( 'customize_register', 'ct_ignite_customize_font_family_options' );
 function ct_ignite_sanitize_google_font_family($input){
 
     $valid = array(
-        'lusitana' => 'Lusitana',
-        'roboto' => 'Roboto',
-        'lato' => 'Lato',
-        'droidserif' => 'Droid Serif',
-        'robotoslab' => 'Roboto Slab'
+        'Lusitana' => 'Lusitana',
+        'Roboto' => 'Roboto',
+        'Lato' => 'Lato',
+        'Droid Serif' => 'Droid Serif',
+        'Roboto Slab' => 'Roboto Slab'
     );
 
     if ( array_key_exists( $input, $valid ) ) {
