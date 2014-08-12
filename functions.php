@@ -174,7 +174,7 @@ function ct_ignite_further_reading() {
     } else {
         echo "<p class='next'>
                 <span>" . __('Return to Blog', 'ignite') . "</span>
-        		<a href='".esc_url(home_url())."'>" . __('This is the oldest post', 'ignite') . "</a>
+        		<a href='".esc_url(home_url())."'>" . __('This is the newest post', 'ignite') . "</a>
         	 </p>";
     }
     echo "</nav>";
