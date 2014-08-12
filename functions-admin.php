@@ -410,10 +410,6 @@ add_action( 'customize_register', 'ct_ignite_customizer_custom_css' );
 /* allow users to change the font to any Google Webfont */
 function ct_ignite_customize_font_family_options( $wp_customize ) {
 
-    // i18n for section description
-    $site_url = 'http://www.google.com/fonts';
-    $site_link = sprintf( __( 'The default font is "Lusitana". Browse available fonts at <a target="_blank" href="%s">Google Fonts</a>.', 'ignite' ), esc_url( $site_url ) );
-
     /* section. */
     $wp_customize->add_section(
         'ct-font-family',
@@ -421,7 +417,7 @@ function ct_ignite_customize_font_family_options( $wp_customize ) {
             'title'       => __( 'Font Family', 'ignite' ),
             'priority'    => 55,
             'capability'  => 'edit_theme_options',
-            'description' => $site_link
+            'description' => __('The default font is "Lusitana".', 'ignite')
         )
     );
 
@@ -468,6 +464,76 @@ function ct_ignite_sanitize_google_font_family($input){
     } else {
         return '';
     }
+}
+
+/* allow users to change the font weights */
+function ct_ignite_customize_font_weight_options( $wp_customize ) {
+
+    /* section. */
+    $wp_customize->add_section(
+        'ct-font-weight',
+        array(
+            'title'       => __( 'Font Weight', 'ignite' ),
+            'priority'    => 56,
+            'capability'  => 'edit_theme_options',
+            'description' => __("If you've just changed fonts, please save and refresh the page to update available weights.", "ignite")
+        )
+    );
+
+    // get the weights available based on the current font
+    $font_weights = ct_ignite_get_available_font_weights();
+
+    /* font weight setting */
+    $wp_customize->add_setting( 'ct_ignite_font_weight_settings', array(
+        'default'           => 'regular',
+        'type'              => 'theme_mod',
+        'capability'        => 'edit_theme_options',
+        'sanitize_callback' => 'ct_ignite_sanitize_google_font_weight'
+    ));
+    /* font weight control */
+    $wp_customize->add_control( 'ct_ignite_font_weight_settings', array(
+        'type'     => 'select',
+        'label'    => __( 'Site Font Weight', 'ignite' ),
+        'section'  => 'ct-font-weight',
+        'choices'  => $font_weights
+    ));
+}
+add_action( 'customize_register', 'ct_ignite_customize_font_weight_options' );
+
+function ct_ignite_get_available_font_weights(){
+
+    // current font is the one saved in the db
+    $current_font = get_theme_mod('ct_ignite_font_family_settings');
+
+    if($current_font){
+        $selected_font = $current_font;
+    } else {
+        $selected_font = "Lusitana";
+    }
+    if($selected_font == "Lusitana"){
+        $font_weights = array(
+            'regular' => 'Regular',
+            '700' => 'Bold'
+        );
+    }
+    elseif($selected_font == "Roboto"){
+        $font_weights = array(
+            '100' => 'Thin',
+            '100italic' => 'Thin Italic',
+            '300' => 'Light',
+            '300italic' => 'Light Italic',
+            'regular' => 'Regular',
+            'italic' => 'Italic',
+            '500' => 'Medium',
+            '500italic' => 'Medium Italic',
+            '700' => 'Bold',
+            '700italic' => 'Bold Italic',
+            '900' => 'Ultra-Bold',
+            '900italic' => 'Ultra-Bold Italic',
+        );
+    }
+
+    return $font_weights;
 }
 
 function ct_ignite_user_profile_image_setting( $user ) { ?>
