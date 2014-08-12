@@ -631,6 +631,43 @@ function ct_ignite_sanitize_layout_settings($input){
     }
 }
 
+/* custom background options */
+function ct_ignite_customize_background_options( $wp_customize ) {
+
+    /* section */
+    $wp_customize->add_section(
+        'ct-background',
+        array(
+            'title'      => __( 'Background', 'ignite' ),
+            'priority'   => 60,
+            'capability' => 'edit_theme_options'
+        )
+    );
+    /* background color setting. */
+    $wp_customize->add_setting(
+        'ct_ignite_background_color_setting',
+        array(
+            'default'           => '#eeede8',
+            'type'              => 'theme_mod',
+            'capability'        => 'edit_theme_options',
+            'sanitize_callback' => 'sanitize_hex_color',
+        )
+    );
+    /* background color control */
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
+            'ct_ignite_background_color',
+            array(
+                'label'      => __( 'Background Color', 'ignite' ),
+                'section'    => 'ct-background',
+                'settings'   => 'ct_ignite_background_color_setting',
+                'priority'       => 10,
+            ) )
+    );
+}
+add_action( 'customize_register', 'ct_ignite_customize_background_options' );
+
 function ct_ignite_user_profile_image_setting( $user ) { ?>
 
     <table id="profile-image-table" class="form-table">
