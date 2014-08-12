@@ -601,14 +601,14 @@ function ct_ignite_change_font(){
         wp_add_inline_style('style', $css);
 
         // deregister the default call to Google Fonts
-        wp_deregister_style('ct-ignite-plus-google-fonts');
+        wp_deregister_style('ct-ignite-google-fonts');
 
         // register the new font
-        wp_register_style( 'ct-ignite-plus-google-fonts', '//fonts.googleapis.com/css?family=' . $font . ':' . $font_weight . '');
+        wp_register_style( 'ct-ignite-google-fonts', '//fonts.googleapis.com/css?family=' . $font . ':' . $font_weight . '');
 
         // enqueue the new GF stylesheet on the front-end
         if( !is_admin()){
-            wp_enqueue_style('ct-ignite-plus-google-fonts');
+            wp_enqueue_style('ct-ignite-google-fonts');
         }
     }
 }
