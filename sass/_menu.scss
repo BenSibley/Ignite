@@ -183,6 +183,7 @@
   }
   .title-info {
     float: left;
+    margin-bottom: 5px;
     padding: $baseline-height * 0.75 $baseline-height * 2 0 0;
   }
   .site-title {
@@ -208,6 +209,7 @@
   .menu-unset ul {
     margin: 0;
     line-height: 0;
+    float: left;
 
     li {
       float: left;
@@ -342,10 +344,6 @@
 
   .site-header {
     padding: 0 7.407%;
-  }
-  .menu-primary-items,
-  .menu-unset {
-    float: left;
   }
   .site-header .social-media-icons {
     display: inline-block;

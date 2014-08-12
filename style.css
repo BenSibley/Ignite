@@ -509,6 +509,7 @@ a img {
 
   .title-info {
     float: left;
+    margin-bottom: 5px;
     padding: 1.125em 3em 0 0;
   }
 
@@ -538,6 +539,7 @@ a img {
   .menu-unset ul {
     margin: 0;
     line-height: 0;
+    float: left;
   }
   .menu-primary-items li,
   .menu-unset ul li {
@@ -682,11 +684,6 @@ a img {
 @media all and (min-width: 56.25em) {
   .site-header {
     padding: 0 7.407%;
-  }
-
-  .menu-primary-items,
-  .menu-unset {
-    float: left;
   }
 
   .site-header .social-media-icons {
