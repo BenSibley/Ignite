@@ -436,9 +436,19 @@ function ct_ignite_wp_page_menu() {
 }
 
 function ct_ignite_body_class( $classes ) {
+
     if ( ! is_front_page() ) {
         $classes[] = 'not-front';
     }
+
+    /* get layout chosen by user */
+    $layout = get_theme_mod('ct_ignite_layout_settings');
+
+    /* if sidebar left layout */
+    if($layout == 'left') {
+        $classes[] = 'sidebar-left';
+    }
+
     return $classes;
 }
 add_filter( 'body_class', 'ct_ignite_body_class' );

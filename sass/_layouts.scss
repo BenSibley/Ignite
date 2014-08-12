@@ -1,0 +1,16 @@
+/* Left Sidebar */
+
+@media all and (min-width: 56.25em) {
+
+  .sidebar-left {
+
+    .main {
+      float: right;
+      margin: 0 7.407% 0 3.703%;
+    }
+    .sidebar-primary-container {
+      float: none;
+      margin-left: 7.407%;
+    }
+  }
+}
