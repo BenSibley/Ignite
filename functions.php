@@ -623,3 +623,23 @@ function ct_ignite_change_font(){
     }
 }
 add_action('wp_enqueue_scripts', 'ct_ignite_change_font');
+
+function ct_ignite_background_css(){
+
+    $background_color = get_theme_mod('ct_ignite_background_color_setting');
+
+    if($background_color != '#eeede8'){
+
+        $background_color_css = "
+            .overflow-container {
+                background: $background_color;
+            }
+            .main, .sidebar-primary-container, .breadcrumb-trail {
+                background: none;
+            }
+        ";
+        wp_add_inline_style('style', $background_color_css);
+    }
+
+}
+add_action('wp_enqueue_scripts','ct_ignite_background_css');
