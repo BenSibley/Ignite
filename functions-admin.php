@@ -532,6 +532,36 @@ function ct_ignite_get_available_font_weights(){
             '900italic' => 'Ultra-Bold Italic',
         );
     }
+    elseif($selected_font == "Lato"){
+        $font_weights = array(
+            '100' => 'Thin',
+            '100italic' => 'Thin Italic',
+            '300' => 'Light',
+            '300italic' => 'Light Italic',
+            'regular' => 'Regular',
+            'italic' => 'Italic',
+            '700' => 'Bold',
+            '700italic' => 'Bold Italic',
+            '900' => 'Ultra-Bold',
+            '900italic' => 'Ultra-Bold Italic',
+        );
+    }
+    elseif($selected_font == "Droid Serif"){
+        $font_weights = array(
+            'regular' => 'Regular',
+            'italic' => 'Italic',
+            '700' => 'Bold',
+            '700italic' => 'Bold Italic',
+        );
+    }
+    elseif($selected_font == "Roboto Slab"){
+        $font_weights = array(
+            '100' => 'Thin',
+            '300' => 'Light',
+            'regular' => 'Regular',
+            '700' => 'Bold',
+        );
+    }
 
     return $font_weights;
 }
