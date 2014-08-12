@@ -580,6 +580,57 @@ function ct_ignite_sanitize_google_font_weight($input){
     }
 }
 
+function ct_ignite_customize_layout_options( $wp_customize ) {
+
+    /* Add the layout section. */
+    $wp_customize->add_section(
+        'ct-layout',
+        array(
+            'title'      => __( 'Layout', 'ignite' ),
+            'priority'   => 50,
+            'capability' => 'edit_theme_options'
+        )
+    );
+    /* Add the color setting. */
+    $wp_customize->add_setting(
+        'ct_ignite_layout_settings',
+        array(
+            'default'           => 'right',
+            'type'              => 'theme_mod',
+            'capability'        => 'edit_theme_options',
+            'sanitize_callback' => 'ct_ignite_sanitize_layout_settings',
+        )
+    );
+    $wp_customize->add_control(
+        'ct_ignite_sidebar_layout',
+        array(
+            'label'          => __( 'Pick Your Layout:', 'ignite' ),
+            'section'        => 'ct-layout',
+            'settings'       => 'ct_ignite_layout_settings',
+            'type'           => 'radio',
+            'choices'        => array(
+                'right'   => __('Right sidebar', 'ignite'),
+                'left'  => __('Left sidebar', 'ignite'),
+            )
+        )
+    );
+}
+add_action( 'customize_register', 'ct_ignite_customize_layout_options' );
+
+/* sanitize the radio button input */
+function ct_ignite_sanitize_layout_settings($input){
+    $valid = array(
+        'right'   => __('Right sidebar', 'ignite'),
+        'left'  => __('Left sidebar', 'ignite'),
+    );
+
+    if ( array_key_exists( $input, $valid ) ) {
+        return $input;
+    } else {
+        return '';
+    }
+}
+
 function ct_ignite_user_profile_image_setting( $user ) { ?>
 
     <table id="profile-image-table" class="form-table">
