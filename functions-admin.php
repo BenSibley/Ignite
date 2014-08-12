@@ -566,6 +566,20 @@ function ct_ignite_get_available_font_weights(){
     return $font_weights;
 }
 
+function ct_ignite_sanitize_google_font_weight($input){
+
+    // get the available weights
+    $font_weights = ct_ignite_get_available_font_weights();
+
+    $valid = $font_weights;
+
+    if ( array_key_exists( $input, $valid ) ) {
+        return $input;
+    } else {
+        return '';
+    }
+}
+
 function ct_ignite_user_profile_image_setting( $user ) { ?>
 
     <table id="profile-image-table" class="form-table">
