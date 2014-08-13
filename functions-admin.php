@@ -1,6 +1,6 @@
 <?php 
 
-/* Add layout option in Customize. */
+/* Add logo option in Customize. */
 add_action( 'customize_register', 'ct_ignite_customize_register_logo' );
 
 /**
@@ -10,7 +10,7 @@ add_action( 'customize_register', 'ct_ignite_customize_register_logo' );
  */
 function ct_ignite_customize_register_logo( $wp_customize ) {
 
-	/* Add the layout section. */
+	/* section */
 	$wp_customize->add_section(
 		'ct-ignite-upload',
 		array(
@@ -59,7 +59,7 @@ function ct_ignite_customize_logo_positioning( $wp_customize ) {
         <?php
         }
     }
-    /* Add the layout section. */
+    /* section */
     $wp_customize->add_section(
         'ct-logo-positioning',
         array(
@@ -119,7 +119,7 @@ function ct_ignite_sanitize_integer($input){
 /* allow logo size to be adjusted */
 function ct_ignite_customize_logo_size( $wp_customize ) {
 
-    /* Add the layout section. */
+    /* section */
     $wp_customize->add_section(
         'ct-logo-size',
         array(
@@ -582,7 +582,7 @@ function ct_ignite_sanitize_google_font_weight($input){
 
 function ct_ignite_customize_layout_options( $wp_customize ) {
 
-    /* Add the layout section. */
+    /* section */
     $wp_customize->add_section(
         'ct-layout',
         array(
@@ -591,7 +591,7 @@ function ct_ignite_customize_layout_options( $wp_customize ) {
             'capability' => 'edit_theme_options'
         )
     );
-    /* Add the color setting. */
+    /* setting */
     $wp_customize->add_setting(
         'ct_ignite_layout_settings',
         array(
@@ -601,6 +601,7 @@ function ct_ignite_customize_layout_options( $wp_customize ) {
             'sanitize_callback' => 'ct_ignite_sanitize_layout_settings',
         )
     );
+    /* control */
     $wp_customize->add_control(
         'ct_ignite_sidebar_layout',
         array(
