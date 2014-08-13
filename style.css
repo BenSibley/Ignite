@@ -640,17 +640,17 @@ a img {
   }
 
   #menu-primary-items,
-  .menu-unset {
+  .menu-unset ul {
     /* using id to avoid annoying selector competition */
   }
   #menu-primary-items .current-menu-item > a,
   #menu-primary-items .current_page_ancestor > a,
   #menu-primary-items .current_page_item > a,
   #menu-primary-items .current_page_ancestor > a,
-  .menu-unset .current-menu-item > a,
-  .menu-unset .current_page_ancestor > a,
-  .menu-unset .current_page_item > a,
-  .menu-unset .current_page_ancestor > a {
+  .menu-unset ul .current-menu-item > a,
+  .menu-unset ul .current_page_ancestor > a,
+  .menu-unset ul .current_page_item > a,
+  .menu-unset ul .current_page_ancestor > a {
     color: white;
     background: #e6a117;
   }
@@ -670,12 +670,12 @@ a img {
 
   /* show drop down items when accessed with keyboard too */
   .menu-primary-items ul.focused,
-  .menu-unset ul.focused {
+  .menu-unset ul ul.focused {
     top: 4.2495em;
     opacity: 1;
   }
   .menu-primary-items ul.focused ul.focused,
-  .menu-unset ul.focused ul.focused {
+  .menu-unset ul ul.focused ul.focused {
     top: 0;
     left: 100%;
   }

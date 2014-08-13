@@ -294,7 +294,7 @@
     display: none;
   }
   #menu-primary-items,
-  .menu-unset {
+  .menu-unset ul {
 
     /* using id to avoid annoying selector competition */
     .current-menu-item,
@@ -323,7 +323,7 @@
 
   // need menu selectors or they are included as a tier of ul.focused
   .menu-primary-items,
-  .menu-unset {
+  .menu-unset ul {
 
     // tier 2
     ul.focused {

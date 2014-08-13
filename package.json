@@ -10,6 +10,8 @@
     "grunt-autoprefixer": "^0.7.3",
     "grunt-contrib-cssmin": "^0.9.0",
     "grunt-contrib-compress": "^0.9.1",
-    "grunt-wp-i18n": "^0.4.6"
+    "grunt-wp-i18n": "^0.4.6",
+    "grunt-phpcs": "^0.2.3",
+    "grunt-phpunit": "^0.3.4"
   }
 }
