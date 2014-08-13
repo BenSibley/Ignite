@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Ignite 1.24\n"
+"Project-Id-Version: Ignite 1.25\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2014-08-11 18:15:36+00:00\n"
+"POT-Creation-Date: 2014-08-13 19:21:02+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -45,7 +45,7 @@ msgid ""
 "correct or try the search form below to find what you were looking for."
 msgstr ""
 
-#: content-attachment.php:3 content.php:8 content.php:31 content.php:95
+#: content-attachment.php:3 content.php:8 content.php:72
 msgid "Published"
 msgstr ""
 
@@ -57,7 +57,7 @@ msgstr ""
 msgid "Next Image"
 msgstr ""
 
-#: content-page.php:9 content.php:41
+#: content-page.php:9 content.php:18
 msgid "Pages:"
 msgstr ""
 
@@ -151,79 +151,131 @@ msgstr ""
 msgid "Add Custom CSS Here:"
 msgstr ""
 
-#: functions-admin.php:415
+#: functions-admin.php:417
+msgid "Font Family"
+msgstr ""
+
+#: functions-admin.php:420
+msgid "The default font is \"Lusitana\"."
+msgstr ""
+
+#: functions-admin.php:438
+msgid "Site Font Family"
+msgstr ""
+
+#: functions-admin.php:476
+msgid "Font Weight"
+msgstr ""
+
+#: functions-admin.php:479
+msgid ""
+"If you've just changed fonts, please save and refresh the page to update "
+"available weights."
+msgstr ""
+
+#: functions-admin.php:496
+msgid "Site Font Weight"
+msgstr ""
+
+#: functions-admin.php:589 library/extensions/theme-layouts.php:458
+#: library/extensions/theme-layouts.php:567
+#: library/extensions/theme-layouts.php:652
+msgid "Layout"
+msgstr ""
+
+#: functions-admin.php:608
+msgid "Pick Your Layout:"
+msgstr ""
+
+#: functions-admin.php:613 functions-admin.php:624
+msgid "Right sidebar"
+msgstr ""
+
+#: functions-admin.php:614 functions-admin.php:625
+msgid "Left sidebar"
+msgstr ""
+
+#: functions-admin.php:642
+msgid "Background"
+msgstr ""
+
+#: functions-admin.php:663
+msgid "Background Color"
+msgstr ""
+
+#: functions-admin.php:677
 msgid "Profile image"
 msgstr ""
 
-#: functions-admin.php:422
+#: functions-admin.php:684
 msgid "Upload Image"
 msgstr ""
 
-#: functions-admin.php:423
+#: functions-admin.php:685
 msgid ""
 "Upload an image here to use instead of your Gravatar. Perfectly square "
 "images will not be cropped."
 msgstr ""
 
-#: functions-admin.php:458
+#: functions-admin.php:720
 msgid "Ignite Dashboard"
 msgstr ""
 
-#: functions-admin.php:462
+#: functions-admin.php:724
 msgid ""
 "Thanks for downloading Ignite! If you can, please take one minute to <a "
 "target=\"_blank\" href=\"%s\"><strong>leave a review</strong></a>."
 msgstr ""
 
-#: functions-admin.php:467
+#: functions-admin.php:729
 msgid "Premium Upgrade"
 msgstr ""
 
-#: functions-admin.php:468
+#: functions-admin.php:730
 msgid ""
 "Get more flexibility and customizations for your site, with Ignite Plus "
 "($29)."
 msgstr ""
 
-#: functions-admin.php:469
-msgid "Custom colors, custom backgrounds, over 600+ fonts, and more..."
+#: functions-admin.php:731
+msgid "Custom colors, background images, over 600+ fonts, and more..."
 msgstr ""
 
-#: functions-admin.php:471
+#: functions-admin.php:733
 msgid "View Ignite Plus"
 msgstr ""
 
-#: functions-admin.php:475
+#: functions-admin.php:737
 msgid "Support"
 msgstr ""
 
-#: functions-admin.php:480
+#: functions-admin.php:742
 msgid "<a target=\"_blank\" href=\"%s\">Visit the knowledgebase</a> for self-help."
 msgstr ""
 
-#: functions-admin.php:487
+#: functions-admin.php:749
 msgid ""
 "<a target=\"_blank\" href=\"%s\">Visit the support forum</a> for community "
 "support."
 msgstr ""
 
-#: functions-admin.php:492
+#: functions-admin.php:754
 msgid ""
 "I (Ben) visit the support forum everyday, so any questions you have will be "
 "answered there."
 msgstr ""
 
-#: functions-admin.php:495
+#: functions-admin.php:757
 msgid "Customize"
 msgstr ""
 
-#: functions-admin.php:496
+#: functions-admin.php:758
 msgid ""
 "Customize your site with your logo, social profiles, and more with the "
 "built-in Customizer."
 msgstr ""
 
-#: functions-admin.php:497
+#: functions-admin.php:759
 msgid "Use the customizer"
 msgstr ""
 
@@ -255,12 +307,16 @@ msgstr ""
 msgid "Return to Blog"
 msgstr ""
 
-#: functions.php:165 functions.php:177
+#: functions.php:165
 msgid "This is the oldest post"
 msgstr ""
 
 #: functions.php:171
 msgid "Next"
+msgstr ""
+
+#: functions.php:177
+msgid "This is the newest post"
 msgstr ""
 
 #: functions.php:193
@@ -878,12 +934,6 @@ msgstr ""
 msgid "Fonts"
 msgstr ""
 
-#: library/extensions/theme-layouts.php:458
-#: library/extensions/theme-layouts.php:567
-#: library/extensions/theme-layouts.php:652
-msgid "Layout"
-msgstr ""
-
 #: library/extensions/theme-layouts.php:483
 msgid "Layout is a theme-specific structure for the single view of the post."
 msgstr ""
@@ -1032,7 +1082,7 @@ msgstr ""
 msgid "http://competethemes.com/"
 msgstr ""
 
-#: content.php:8 content.php:31 content.php:95
+#: content.php:8 content.php:72
 msgctxt "Published by whom?"
 msgid "by"
 msgstr ""

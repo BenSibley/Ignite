@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ignite\n"
-"POT-Creation-Date: 2014-08-11 14:15-0500\n"
-"PO-Revision-Date: 2014-08-11 14:16-0500\n"
+"POT-Creation-Date: 2014-08-13 15:21-0500\n"
+"PO-Revision-Date: 2014-08-13 15:22-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -55,7 +55,7 @@ msgstr ""
 "Looks like nothing was found on this url.  Double-check that the url is "
 "correct or try the search form below to find what you were looking for."
 
-#: content-attachment.php:3 content.php:8 content.php:31 content.php:95
+#: content-attachment.php:3 content.php:8 content.php:72
 msgid "Published"
 msgstr "Published"
 
@@ -67,11 +67,11 @@ msgstr "Previous Image"
 msgid "Next Image"
 msgstr "Next Image"
 
-#: content-page.php:9 content.php:41
+#: content-page.php:9 content.php:18
 msgid "Pages:"
 msgstr "Pages:"
 
-#: content.php:8 content.php:31 content.php:95
+#: content.php:8 content.php:72
 msgctxt "Published by whom?"
 msgid "by"
 msgstr "by"
@@ -169,15 +169,69 @@ msgstr "Custom CSS"
 msgid "Add Custom CSS Here:"
 msgstr "Add Custom CSS Here:"
 
-#: functions-admin.php:415
+#: functions-admin.php:417
+msgid "Font Family"
+msgstr "Font Family"
+
+#: functions-admin.php:420
+msgid "The default font is \"Lusitana\"."
+msgstr "The default font is \"Lusitana\"."
+
+#: functions-admin.php:438
+msgid "Site Font Family"
+msgstr "Site Font Family"
+
+#: functions-admin.php:476
+msgid "Font Weight"
+msgstr "Font Weight"
+
+#: functions-admin.php:479
+msgid ""
+"If you've just changed fonts, please save and refresh the page to update "
+"available weights."
+msgstr ""
+"If you've just changed fonts, please save and refresh the page to update "
+"available weights."
+
+#: functions-admin.php:496
+msgid "Site Font Weight"
+msgstr "Site Font Weight"
+
+#: functions-admin.php:589 library/extensions/theme-layouts.php:458
+#: library/extensions/theme-layouts.php:567
+#: library/extensions/theme-layouts.php:652
+msgid "Layout"
+msgstr "Layout"
+
+#: functions-admin.php:608
+msgid "Pick Your Layout:"
+msgstr "Pick Your Layout:"
+
+#: functions-admin.php:613 functions-admin.php:624
+msgid "Right sidebar"
+msgstr "Right sidebar"
+
+#: functions-admin.php:614 functions-admin.php:625
+msgid "Left sidebar"
+msgstr "Left sidebar"
+
+#: functions-admin.php:642
+msgid "Background"
+msgstr "Background"
+
+#: functions-admin.php:663
+msgid "Background Color"
+msgstr "Background Color"
+
+#: functions-admin.php:677
 msgid "Profile image"
 msgstr "Profile image"
 
-#: functions-admin.php:422
+#: functions-admin.php:684
 msgid "Upload Image"
 msgstr "Upload Image"
 
-#: functions-admin.php:423
+#: functions-admin.php:685
 msgid ""
 "Upload an image here to use instead of your Gravatar. Perfectly square "
 "images will not be cropped."
@@ -185,11 +239,11 @@ msgstr ""
 "Upload an image here to use instead of your Gravatar. Perfectly square "
 "images will not be cropped."
 
-#: functions-admin.php:458
+#: functions-admin.php:720
 msgid "Ignite Dashboard"
 msgstr "Ignite Dashboard"
 
-#: functions-admin.php:462
+#: functions-admin.php:724
 #, php-format
 msgid ""
 "Thanks for downloading Ignite! If you can, please take one minute to <a "
@@ -198,11 +252,11 @@ msgstr ""
 "Thanks for downloading Ignite! If you can, please take one minute to <a "
 "target=\"_blank\" href=\"%s\"><strong>leave a review</strong></a>."
 
-#: functions-admin.php:467
+#: functions-admin.php:729
 msgid "Premium Upgrade"
 msgstr "Premium Upgrade"
 
-#: functions-admin.php:468
+#: functions-admin.php:730
 msgid ""
 "Get more flexibility and customizations for your site, with Ignite Plus "
 "($29)."
@@ -210,26 +264,26 @@ msgstr ""
 "Get more flexibility and customizations for your site, with Ignite Plus "
 "($29)."
 
-#: functions-admin.php:469
-msgid "Custom colors, custom backgrounds, over 600+ fonts, and more..."
-msgstr "Custom colors, custom backgrounds, over 600+ fonts, and more..."
+#: functions-admin.php:731
+msgid "Custom colors, background images, over 600+ fonts, and more..."
+msgstr "Custom colors, background images, over 600+ fonts, and more..."
 
-#: functions-admin.php:471
+#: functions-admin.php:733
 msgid "View Ignite Plus"
 msgstr "View Ignite Plus"
 
-#: functions-admin.php:475
+#: functions-admin.php:737
 msgid "Support"
 msgstr "Support"
 
-#: functions-admin.php:480
+#: functions-admin.php:742
 #, php-format
 msgid ""
 "<a target=\"_blank\" href=\"%s\">Visit the knowledgebase</a> for self-help."
 msgstr ""
 "<a target=\"_blank\" href=\"%s\">Visit the knowledgebase</a> for self-help."
 
-#: functions-admin.php:487
+#: functions-admin.php:749
 #, php-format
 msgid ""
 "<a target=\"_blank\" href=\"%s\">Visit the support forum</a> for community "
@@ -238,7 +292,7 @@ msgstr ""
 "<a target=\"_blank\" href=\"%s\">Visit the support forum</a> for community "
 "support."
 
-#: functions-admin.php:492
+#: functions-admin.php:754
 msgid ""
 "I (Ben) visit the support forum everyday, so any questions you have will be "
 "answered there."
@@ -246,11 +300,11 @@ msgstr ""
 "I (Ben) visit the support forum everyday, so any questions you have will be "
 "answered there."
 
-#: functions-admin.php:495
+#: functions-admin.php:757
 msgid "Customize"
 msgstr "Customize"
 
-#: functions-admin.php:496
+#: functions-admin.php:758
 msgid ""
 "Customize your site with your logo, social profiles, and more with the built-"
 "in Customizer."
@@ -258,7 +312,7 @@ msgstr ""
 "Customize your site with your logo, social profiles, and more with the built-"
 "in Customizer."
 
-#: functions-admin.php:497
+#: functions-admin.php:759
 msgid "Use the customizer"
 msgstr "Use the customizer"
 
@@ -290,13 +344,17 @@ msgstr "Previous Post"
 msgid "Return to Blog"
 msgstr "Return to Blog"
 
-#: functions.php:165 functions.php:177
+#: functions.php:165
 msgid "This is the oldest post"
 msgstr "This is the oldest post"
 
 #: functions.php:171
 msgid "Next"
 msgstr "Next"
+
+#: functions.php:177
+msgid "This is the newest post"
+msgstr "This is the newest post"
 
 #: functions.php:193
 #, php-format
@@ -990,12 +1048,6 @@ msgstr "Fonts"
 msgctxt "theme layout"
 msgid "Default"
 msgstr "Default"
-
-#: library/extensions/theme-layouts.php:458
-#: library/extensions/theme-layouts.php:567
-#: library/extensions/theme-layouts.php:652
-msgid "Layout"
-msgstr "Layout"
 
 #: library/extensions/theme-layouts.php:483
 msgid "Layout is a theme-specific structure for the single view of the post."
