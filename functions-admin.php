@@ -407,7 +407,7 @@ function ct_ignite_customizer_custom_css( $wp_customize ) {
 }
 add_action( 'customize_register', 'ct_ignite_customizer_custom_css' );
 
-/* allow users to change the font to any Google Webfont */
+/* allow users to change the font to a Google Webfont */
 function ct_ignite_customize_font_family_options( $wp_customize ) {
 
     /* section. */
@@ -435,7 +435,7 @@ function ct_ignite_customize_font_family_options( $wp_customize ) {
     /* control for font selection */
     $wp_customize->add_control( 'ct_ignite_font_family_settings', array(
         'type'     => 'select',
-        'label'    => __( 'Site Font Family', 'ignite-plus' ),
+        'label'    => __( 'Site Font Family', 'ignite' ),
         'section'  => 'ct-font-family',
         'choices'  => array(
             'Lusitana' => 'Lusitana',
@@ -673,15 +673,15 @@ function ct_ignite_user_profile_image_setting( $user ) { ?>
     <table id="profile-image-table" class="form-table">
 
         <tr>
-            <th><label for="user_profile_image"><?php _e( 'Profile image', 'ignite-plus' ); ?></label></th>
+            <th><label for="user_profile_image"><?php _e( 'Profile image', 'ignite' ); ?></label></th>
             <td>
                 <!-- Outputs the image after save -->
                 <img id="image-preview" src="<?php echo esc_url( get_the_author_meta( 'user_profile_image', $user->ID ) ); ?>" style="width:100px;"><br />
                 <!-- Outputs the text field and displays the URL of the image retrieved by the media uploader -->
                 <input type="text" name="user_profile_image" id="user_profile_image" value="<?php echo esc_url_raw( get_the_author_meta( 'user_profile_image', $user->ID ) ); ?>" class="regular-text" />
                 <!-- Outputs the save button -->
-                <input type='button' id="user-profile-upload" class="button-primary" value="<?php _e( 'Upload Image', 'ignite-plus' ); ?>"/><br />
-                <span class="description"><?php _e( 'Upload an image here to use instead of your Gravatar. Perfectly square images will not be cropped.', 'ignite-plus' ); ?></span>
+                <input type='button' id="user-profile-upload" class="button-primary" value="<?php _e( 'Upload Image', 'ignite' ); ?>"/><br />
+                <span class="description"><?php _e( 'Upload an image here to use instead of your Gravatar. Perfectly square images will not be cropped.', 'ignite' ); ?></span>
             </td>
         </tr>
 
@@ -727,7 +727,7 @@ function ct_ignite_options_content(){
         <div>
             <h3><?php _e('Premium Upgrade', 'ignite'); ?></h3>
             <p><?php _e('Get more flexibility and customizations for your site, with Ignite Plus ($29).', 'ignite'); ?></p>
-            <p><?php _e('Custom colors, custom backgrounds, over 600+ fonts, and more...', 'ignite'); ?></p>
+            <p><?php _e('Custom colors, background images, over 600+ fonts, and more...', 'ignite'); ?></p>
             <p>
                 <a target="_blank" class="button-primary" href="https://www.competethemes.com/ignite-plus/"><?php _e('View Ignite Plus', 'ignite'); ?></a>
             </p>
