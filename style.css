@@ -828,23 +828,27 @@ a img {
 
 .excerpt-categories, .entry-categories,
 .excerpt-tags,
-.entry-tags {
+.entry-tags,
+.excerpt-comments {
   color: #7c7d7f;
 }
 .excerpt-categories p, .entry-categories p,
 .excerpt-tags p,
-.entry-tags p {
+.entry-tags p,
+.excerpt-comments p {
   margin: 0.75em 0 0;
   padding-left: 1.5em;
 }
 .excerpt-categories i, .entry-categories i,
 .excerpt-tags i,
-.entry-tags i {
+.entry-tags i,
+.excerpt-comments i {
   margin-left: -1.5em;
 }
 .excerpt-categories a, .entry-categories a,
 .excerpt-tags a,
-.entry-tags a {
+.entry-tags a,
+.excerpt-comments a {
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -856,18 +860,23 @@ a img {
 .excerpt-tags a:link,
 .entry-tags a:link,
 .excerpt-tags a:visited,
-.entry-tags a:visited {
+.entry-tags a:visited,
+.excerpt-comments a:link,
+.excerpt-comments a:visited {
   color: #7c7d7f;
 }
 .excerpt-categories a:hover, .entry-categories a:hover, .excerpt-categories a:active, .entry-categories a:active,
 .excerpt-tags a:hover,
 .entry-tags a:hover,
 .excerpt-tags a:active,
-.entry-tags a:active {
+.entry-tags a:active,
+.excerpt-comments a:hover,
+.excerpt-comments a:active {
   color: #e6a117;
 }
 
-.excerpt-categories i, .entry-categories i {
+.excerpt-categories i, .entry-categories i,
+.excerpt-comments i {
   margin-right: 0.4375em;
 }
 
@@ -976,11 +985,14 @@ a img {
 
   .excerpt-categories, .entry-categories,
   .excerpt-tags,
-  .entry-tags {
+  .entry-tags,
+  .excerpt-comments {
     display: inline-block;
   }
 
-  .excerpt-categories, .entry-categories {
+  .excerpt-categories, .entry-categories,
+  .excerpt-tags,
+  .entry-tags {
     margin-right: 0.75em;
   }
 }

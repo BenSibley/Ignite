@@ -59,8 +59,14 @@ if( is_single() ) { ?>
                     <p><?php echo get_the_author_meta('description'); ?></p>
                 </div>
             <?php } ?>
-			<div class="entry-categories"><?php ct_ignite_category_display(); ?></div>
-			<div class="entry-tags"><?php ct_ignite_tags_display(); ?></div>
+            <?php
+            if(get_theme_mod('ct_ignite_post_meta_categories_settings') != 'hide'){ ?>
+                <div class="entry-categories"><?php ct_ignite_category_display(); ?></div><?php
+            }
+            if(get_theme_mod('ct_ignite_post_meta_tags_settings') != 'hide'){ ?>
+                <div class="entry-tags"><?php ct_ignite_tags_display(); ?></div><?php
+            }
+            ?>
 		</div>
     </div>
 <?php 
@@ -83,8 +89,15 @@ if( is_single() ) { ?>
                 <?php ct_ignite_excerpt(); ?>
             </article>
         </div>
-        <div class="excerpt-categories"><?php ct_ignite_category_display(); ?></div>
-        <div class="excerpt-tags"><?php ct_ignite_tags_display(); ?></div>
+        <?php
+        if(get_theme_mod('ct_ignite_post_meta_categories_settings') != 'hide'){ ?>
+            <div class="entry-categories"><?php ct_ignite_category_display(); ?></div><?php
+        }
+        if(get_theme_mod('ct_ignite_post_meta_tags_settings') != 'hide'){ ?>
+            <div class="entry-tags"><?php ct_ignite_tags_display(); ?></div><?php
+        }
+        ?>
+        <div class="excerpt-comments"><?php ct_ignite_post_meta_comments(); ?></div>
     </div>
 <?php 
 }

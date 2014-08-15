@@ -97,7 +97,8 @@
   }
 }
 .excerpt-categories,
-.excerpt-tags {
+.excerpt-tags,
+.excerpt-comments {
   color: $gray-medium;
 
   p {
@@ -125,12 +126,14 @@
     }
   }
 }
-.excerpt-categories i {
+.excerpt-categories i,
+.excerpt-comments i {
   margin-right: 0.4375em;
 }
 .excerpt-tags i {
   margin-right: 0.625em;
 }
+
 .loop-pagination {
   background: white;
   padding: $baseline-height * 0.5;
@@ -239,10 +242,12 @@
     line-height: 1.143;
   }
   .excerpt-categories,
-  .excerpt-tags {
+  .excerpt-tags,
+  .excerpt-comments {
     display: inline-block;
   }
-  .excerpt-categories {
+  .excerpt-categories,
+  .excerpt-tags {
     margin-right: $baseline-height * 0.5;
   }
 }

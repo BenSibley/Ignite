@@ -283,7 +283,7 @@ function ct_ignite_sanitize_author_meta_settings($input){
 }
 
 /* show/hide various post meta after posts */
-function ct_ignite_post_meta_display( $wp_customize ) {
+function ct_ignite_post_meta_customizer( $wp_customize ) {
 
     /* section */
     $wp_customize->add_section(
@@ -292,30 +292,6 @@ function ct_ignite_post_meta_display( $wp_customize ) {
             'title'      => __( 'Post Meta', 'ignite' ),
             'priority'   => 75,
             'capability' => 'edit_theme_options'
-        )
-    );
-    /* setting */
-    $wp_customize->add_setting(
-        'ct_ignite_post_meta_tags_settings',
-        array(
-            'default'           => 'show',
-            'type'              => 'theme_mod',
-            'capability'        => 'edit_theme_options',
-            'sanitize_callback' => 'ct_ignite_sanitize_post_meta_settings',
-        )
-    );
-    /* control */
-    $wp_customize->add_control(
-        'ct_ignite_post_meta_tags_settings',
-        array(
-            'label'          => __( 'Show tags after posts?', 'ignite' ),
-            'section'        => 'ct-post-meta',
-            'settings'       => 'ct_ignite_post_meta_tags_settings',
-            'type'           => 'radio',
-            'choices'        => array(
-                'show'   => __('Show', 'ignite'),
-                'hide'  => __('Hide', 'ignite')
-            )
         )
     );
 
@@ -336,6 +312,31 @@ function ct_ignite_post_meta_display( $wp_customize ) {
             'label'          => __( 'Show categories after posts?', 'ignite' ),
             'section'        => 'ct-post-meta',
             'settings'       => 'ct_ignite_post_meta_categories_settings',
+            'type'           => 'radio',
+            'choices'        => array(
+                'show'   => __('Show', 'ignite'),
+                'hide'  => __('Hide', 'ignite')
+            )
+        )
+    );
+
+    /* setting */
+    $wp_customize->add_setting(
+        'ct_ignite_post_meta_tags_settings',
+        array(
+            'default'           => 'show',
+            'type'              => 'theme_mod',
+            'capability'        => 'edit_theme_options',
+            'sanitize_callback' => 'ct_ignite_sanitize_post_meta_settings',
+        )
+    );
+    /* control */
+    $wp_customize->add_control(
+        'ct_ignite_post_meta_tags_settings',
+        array(
+            'label'          => __( 'Show tags after posts?', 'ignite' ),
+            'section'        => 'ct-post-meta',
+            'settings'       => 'ct_ignite_post_meta_tags_settings',
             'type'           => 'radio',
             'choices'        => array(
                 'show'   => __('Show', 'ignite'),
@@ -369,7 +370,7 @@ function ct_ignite_post_meta_display( $wp_customize ) {
         )
     );
 }
-add_action( 'customize_register', 'ct_ignite_post_meta_display' );
+add_action( 'customize_register', 'ct_ignite_post_meta_customizer' );
 
 /* sanitize the radio button input */
 function ct_ignite_sanitize_post_meta_settings($input){
