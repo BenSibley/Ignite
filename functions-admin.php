@@ -446,6 +446,31 @@ function ct_ignite_additional_options( $wp_customize ) {
             )
         )
     );
+
+    /* setting */
+    $wp_customize->add_setting(
+        'ct_ignite_excerpt_length_settings',
+        array(
+            'default'           => 30,
+            'type'              => 'theme_mod',
+            'capability'        => 'edit_theme_options',
+            'sanitize_callback' => 'absint',
+        )
+    );
+    /* control */
+    $wp_customize->add_control(
+
+        // already defined in logo positioning
+        new ct_ignite_number_input_control(
+            $wp_customize, 'ct_ignite_excerpt_length_settings',
+            array(
+                'label' => 'Word count in automatic excerpts',
+                'section' => 'ct-additional-options',
+                'settings' => 'ct_ignite_excerpt_length_settings',
+                'type' => 'number',
+            )
+        )
+    );
 }
 add_action( 'customize_register', 'ct_ignite_additional_options' );
 
