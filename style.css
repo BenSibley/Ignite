@@ -757,6 +757,14 @@ a img {
   width: 119%;
   margin-bottom: 1.5em;
 }
+.featured-image a {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+}
 
 .excerpt-meta-top, .entry-meta-top {
   margin-bottom: 0.75em;

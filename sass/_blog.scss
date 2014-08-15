@@ -22,6 +22,15 @@
   left: -9.5%;
   width: 119%;
   margin-bottom: $baseline-height;
+
+  a {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+  }
 }
 .excerpt-meta-top {
   margin-bottom: $baseline-height * 0.5;
