@@ -96,8 +96,10 @@ if( is_single() ) { ?>
         if(get_theme_mod('ct_ignite_post_meta_tags_settings') != 'hide'){ ?>
             <div class="entry-tags"><?php ct_ignite_tags_display(); ?></div><?php
         }
+        if(get_theme_mod('ct_ignite_post_meta_comments_settings') == 'show'){ ?>
+            <div class="excerpt-comments"><?php ct_ignite_post_meta_comments(); ?></div><?php
+        }
         ?>
-        <div class="excerpt-comments"><?php ct_ignite_post_meta_comments(); ?></div>
     </div>
 <?php 
 }
