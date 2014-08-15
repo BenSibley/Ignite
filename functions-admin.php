@@ -282,6 +282,109 @@ function ct_ignite_sanitize_author_meta_settings($input){
     }
 }
 
+/* show/hide various post meta after posts */
+function ct_ignite_post_meta_display( $wp_customize ) {
+
+    /* section */
+    $wp_customize->add_section(
+        'ct-post-meta',
+        array(
+            'title'      => __( 'Post Meta', 'ignite' ),
+            'priority'   => 75,
+            'capability' => 'edit_theme_options'
+        )
+    );
+    /* setting */
+    $wp_customize->add_setting(
+        'ct_ignite_post_meta_tags_settings',
+        array(
+            'default'           => 'show',
+            'type'              => 'theme_mod',
+            'capability'        => 'edit_theme_options',
+            'sanitize_callback' => 'ct_ignite_sanitize_post_meta_settings',
+        )
+    );
+    /* control */
+    $wp_customize->add_control(
+        'ct_ignite_post_meta_tags_settings',
+        array(
+            'label'          => __( 'Show tags after posts?', 'ignite' ),
+            'section'        => 'ct-post-meta',
+            'settings'       => 'ct_ignite_post_meta_tags_settings',
+            'type'           => 'radio',
+            'choices'        => array(
+                'show'   => __('Show', 'ignite'),
+                'hide'  => __('Hide', 'ignite')
+            )
+        )
+    );
+
+    /* setting */
+    $wp_customize->add_setting(
+        'ct_ignite_post_meta_categories_settings',
+        array(
+            'default'           => 'show',
+            'type'              => 'theme_mod',
+            'capability'        => 'edit_theme_options',
+            'sanitize_callback' => 'ct_ignite_sanitize_post_meta_settings',
+        )
+    );
+    /* control */
+    $wp_customize->add_control(
+        'ct_ignite_post_meta_categories_settings',
+        array(
+            'label'          => __( 'Show categories after posts?', 'ignite' ),
+            'section'        => 'ct-post-meta',
+            'settings'       => 'ct_ignite_post_meta_categories_settings',
+            'type'           => 'radio',
+            'choices'        => array(
+                'show'   => __('Show', 'ignite'),
+                'hide'  => __('Hide', 'ignite')
+            )
+        )
+    );
+
+    /* setting */
+    $wp_customize->add_setting(
+        'ct_ignite_post_meta_comments_settings',
+        array(
+            'default'           => 'hide',
+            'type'              => 'theme_mod',
+            'capability'        => 'edit_theme_options',
+            'sanitize_callback' => 'ct_ignite_sanitize_post_meta_settings',
+        )
+    );
+    /* control */
+    $wp_customize->add_control(
+        'ct_ignite_post_meta_comments_settings',
+        array(
+            'label'          => __( 'Show comment count after posts?', 'ignite' ),
+            'section'        => 'ct-post-meta',
+            'settings'       => 'ct_ignite_post_meta_comments_settings',
+            'type'           => 'radio',
+            'choices'        => array(
+                'show'   => __('Show', 'ignite'),
+                'hide'  => __('Hide', 'ignite')
+            )
+        )
+    );
+}
+add_action( 'customize_register', 'ct_ignite_post_meta_display' );
+
+/* sanitize the radio button input */
+function ct_ignite_sanitize_post_meta_settings($input){
+    $valid = array(
+        'show'   => __('Show', 'ignite'),
+        'hide'  => __('Hide', 'ignite')
+    );
+
+    if ( array_key_exists( $input, $valid ) ) {
+        return $input;
+    } else {
+        return '';
+    }
+}
+
 /* additional options section */
 function ct_ignite_additional_options( $wp_customize ) {
 
