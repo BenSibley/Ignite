@@ -410,7 +410,17 @@ function ct_ignite_featured_image() {
 		$has_image = true;
 	}  
 	if ($has_image == true) {
-	    echo "<div class='featured-image' style=\"background-image: url('".$image."')\"></div>";
+
+        if(is_singular()){
+            echo "<div class='featured-image' style=\"background-image: url('".$image."')\"></div>";
+        } else {
+            echo "
+                <div class='featured-image' style=\"background-image: url('".$image."')\">
+                    <a href='" . get_the_permalink() ."'>" . get_the_title() . "</a>
+                </div>
+                ";
+        }
+
     }
 }
 
