@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ignite\n"
-"POT-Creation-Date: 2014-08-13 15:21-0500\n"
-"PO-Revision-Date: 2014-08-13 15:22-0500\n"
+"POT-Creation-Date: 2014-08-16 11:15-0500\n"
+"PO-Revision-Date: 2014-08-16 11:16-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -22,11 +22,13 @@ msgstr ""
 msgid "Be First to Comment"
 msgstr "Be First to Comment"
 
-#: comments.php:11 comments.php:29 comments.php:49
+#: comments.php:11 comments.php:29 comments.php:49 functions.php:672
+#: functions.php:681
 msgid "One Comment"
 msgstr "One Comment"
 
-#: comments.php:11 comments.php:29 comments.php:49
+#: comments.php:11 comments.php:29 comments.php:49 functions.php:672
+#: functions.php:681
 msgid "% Comments"
 msgstr "% Comments"
 
@@ -55,7 +57,7 @@ msgstr ""
 "Looks like nothing was found on this url.  Double-check that the url is "
 "correct or try the search form below to find what you were looking for."
 
-#: content-attachment.php:3 content.php:8 content.php:72
+#: content-attachment.php:3 content.php:8 content.php:78
 msgid "Published"
 msgstr "Published"
 
@@ -71,7 +73,7 @@ msgstr "Next Image"
 msgid "Pages:"
 msgstr "Pages:"
 
-#: content.php:8 content.php:72
+#: content.php:8 content.php:78
 msgctxt "Published by whom?"
 msgid "by"
 msgstr "by"
@@ -133,59 +135,77 @@ msgstr "Post Author Info"
 msgid "Show post author info after posts?"
 msgstr "Show post author info after posts?"
 
-#: functions-admin.php:263 functions-admin.php:274
+#: functions-admin.php:263 functions-admin.php:274 functions-admin.php:317
+#: functions-admin.php:342 functions-admin.php:367 functions-admin.php:378
 msgid "Show"
 msgstr "Show"
 
-#: functions-admin.php:264 functions-admin.php:275
+#: functions-admin.php:264 functions-admin.php:275 functions-admin.php:318
+#: functions-admin.php:343 functions-admin.php:368 functions-admin.php:379
 msgid "Hide"
 msgstr "Hide"
 
 #: functions-admin.php:292
+msgid "Post Meta"
+msgstr "Post Meta"
+
+#: functions-admin.php:312
+msgid "Show categories after posts?"
+msgstr "Show categories after posts?"
+
+#: functions-admin.php:337
+msgid "Show tags after posts?"
+msgstr "Show tags after posts?"
+
+#: functions-admin.php:362
+msgid "Show comment count after posts?"
+msgstr "Show comment count after posts?"
+
+#: functions-admin.php:396
 msgid "Additional Options"
 msgstr "Additional Options"
 
-#: functions-admin.php:311
+#: functions-admin.php:415
 msgid "Show full post on blog?"
 msgstr "Show full post on blog?"
 
-#: functions-admin.php:316 functions-admin.php:340 functions-admin.php:351
+#: functions-admin.php:420 functions-admin.php:444 functions-admin.php:480
 msgid "Yes"
 msgstr "Yes"
 
-#: functions-admin.php:317 functions-admin.php:341 functions-admin.php:352
+#: functions-admin.php:421 functions-admin.php:445 functions-admin.php:481
 msgid "No"
 msgstr "No"
 
-#: functions-admin.php:335
+#: functions-admin.php:439
 msgid "Show breadcrumbs?"
 msgstr "Show breadcrumbs?"
 
-#: functions-admin.php:382
+#: functions-admin.php:511
 msgid "Custom CSS"
 msgstr "Custom CSS"
 
-#: functions-admin.php:402
+#: functions-admin.php:531
 msgid "Add Custom CSS Here:"
 msgstr "Add Custom CSS Here:"
 
-#: functions-admin.php:417
+#: functions-admin.php:546
 msgid "Font Family"
 msgstr "Font Family"
 
-#: functions-admin.php:420
+#: functions-admin.php:549
 msgid "The default font is \"Lusitana\"."
 msgstr "The default font is \"Lusitana\"."
 
-#: functions-admin.php:438
+#: functions-admin.php:567
 msgid "Site Font Family"
 msgstr "Site Font Family"
 
-#: functions-admin.php:476
+#: functions-admin.php:605
 msgid "Font Weight"
 msgstr "Font Weight"
 
-#: functions-admin.php:479
+#: functions-admin.php:608
 msgid ""
 "If you've just changed fonts, please save and refresh the page to update "
 "available weights."
@@ -193,45 +213,45 @@ msgstr ""
 "If you've just changed fonts, please save and refresh the page to update "
 "available weights."
 
-#: functions-admin.php:496
+#: functions-admin.php:625
 msgid "Site Font Weight"
 msgstr "Site Font Weight"
 
-#: functions-admin.php:589 library/extensions/theme-layouts.php:458
+#: functions-admin.php:718 library/extensions/theme-layouts.php:458
 #: library/extensions/theme-layouts.php:567
 #: library/extensions/theme-layouts.php:652
 msgid "Layout"
 msgstr "Layout"
 
-#: functions-admin.php:608
+#: functions-admin.php:737
 msgid "Pick Your Layout:"
 msgstr "Pick Your Layout:"
 
-#: functions-admin.php:613 functions-admin.php:624
+#: functions-admin.php:742 functions-admin.php:753
 msgid "Right sidebar"
 msgstr "Right sidebar"
 
-#: functions-admin.php:614 functions-admin.php:625
+#: functions-admin.php:743 functions-admin.php:754
 msgid "Left sidebar"
 msgstr "Left sidebar"
 
-#: functions-admin.php:642
+#: functions-admin.php:771
 msgid "Background"
 msgstr "Background"
 
-#: functions-admin.php:663
+#: functions-admin.php:792
 msgid "Background Color"
 msgstr "Background Color"
 
-#: functions-admin.php:677
+#: functions-admin.php:806
 msgid "Profile image"
 msgstr "Profile image"
 
-#: functions-admin.php:684
+#: functions-admin.php:813
 msgid "Upload Image"
 msgstr "Upload Image"
 
-#: functions-admin.php:685
+#: functions-admin.php:814
 msgid ""
 "Upload an image here to use instead of your Gravatar. Perfectly square "
 "images will not be cropped."
@@ -239,11 +259,11 @@ msgstr ""
 "Upload an image here to use instead of your Gravatar. Perfectly square "
 "images will not be cropped."
 
-#: functions-admin.php:720
+#: functions-admin.php:849
 msgid "Ignite Dashboard"
 msgstr "Ignite Dashboard"
 
-#: functions-admin.php:724
+#: functions-admin.php:853
 #, php-format
 msgid ""
 "Thanks for downloading Ignite! If you can, please take one minute to <a "
@@ -252,11 +272,11 @@ msgstr ""
 "Thanks for downloading Ignite! If you can, please take one minute to <a "
 "target=\"_blank\" href=\"%s\"><strong>leave a review</strong></a>."
 
-#: functions-admin.php:729
+#: functions-admin.php:858
 msgid "Premium Upgrade"
 msgstr "Premium Upgrade"
 
-#: functions-admin.php:730
+#: functions-admin.php:859
 msgid ""
 "Get more flexibility and customizations for your site, with Ignite Plus "
 "($29)."
@@ -264,26 +284,26 @@ msgstr ""
 "Get more flexibility and customizations for your site, with Ignite Plus "
 "($29)."
 
-#: functions-admin.php:731
+#: functions-admin.php:860
 msgid "Custom colors, background images, over 600+ fonts, and more..."
 msgstr "Custom colors, background images, over 600+ fonts, and more..."
 
-#: functions-admin.php:733
+#: functions-admin.php:862
 msgid "View Ignite Plus"
 msgstr "View Ignite Plus"
 
-#: functions-admin.php:737
+#: functions-admin.php:866
 msgid "Support"
 msgstr "Support"
 
-#: functions-admin.php:742
+#: functions-admin.php:871
 #, php-format
 msgid ""
 "<a target=\"_blank\" href=\"%s\">Visit the knowledgebase</a> for self-help."
 msgstr ""
 "<a target=\"_blank\" href=\"%s\">Visit the knowledgebase</a> for self-help."
 
-#: functions-admin.php:749
+#: functions-admin.php:878
 #, php-format
 msgid ""
 "<a target=\"_blank\" href=\"%s\">Visit the support forum</a> for community "
@@ -292,7 +312,7 @@ msgstr ""
 "<a target=\"_blank\" href=\"%s\">Visit the support forum</a> for community "
 "support."
 
-#: functions-admin.php:754
+#: functions-admin.php:883
 msgid ""
 "I (Ben) visit the support forum everyday, so any questions you have will be "
 "answered there."
@@ -300,11 +320,11 @@ msgstr ""
 "I (Ben) visit the support forum everyday, so any questions you have will be "
 "answered there."
 
-#: functions-admin.php:757
+#: functions-admin.php:886
 msgid "Customize"
 msgstr "Customize"
 
-#: functions-admin.php:758
+#: functions-admin.php:887
 msgid ""
 "Customize your site with your logo, social profiles, and more with the built-"
 "in Customizer."
@@ -312,7 +332,7 @@ msgstr ""
 "Customize your site with your logo, social profiles, and more with the built-"
 "in Customizer."
 
-#: functions-admin.php:759
+#: functions-admin.php:888
 msgid "Use the customizer"
 msgstr "Use the customizer"
 
@@ -413,6 +433,14 @@ msgstr "Enter Your Comment"
 #: functions.php:351 functions.php:361
 msgid "Read More"
 msgstr "Read More"
+
+#: functions.php:672
+msgid "Comments closed"
+msgstr "Comments closed"
+
+#: functions.php:681
+msgid "Leave a Comment"
+msgstr "Leave a Comment"
 
 #: header.php:15
 msgid "Skip to content"
