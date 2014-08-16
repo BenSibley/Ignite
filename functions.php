@@ -420,7 +420,6 @@ function ct_ignite_featured_image() {
                 </div>
                 ";
         }
-
     }
 }
 
