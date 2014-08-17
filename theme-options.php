@@ -37,24 +37,17 @@ function ct_ignite_options_content(){
         <?php }
         elseif($active_tab == 'premium-upgrade'){ ?>
             <div class="content content-premium-upgrade">
-                <h3><?php _e('Support', 'ignite'); ?></h3>
-                <ol>
-                    <li>
-                        <?php
-                        $docs_url = 'http://www.competethemes.com/documentation/ignite-knowledgebase/?utm_source=WordPress%20Dashboard&utm_medium=User%20Admin&utm_content=Ignite&utm_campaign=Admin%20Support%20Widgets';
-                        $docs_link = sprintf( __( '<a target="_blank" href="%s">Visit the knowledgebase</a> for self-help.', 'ignite' ), esc_url( $docs_url ) );
-                        echo $docs_link;
-                        ?>
-                    </li>
-                    <li>
-                        <?php
-                        $forum_url = 'http://wordpress.org/support/theme/ignite';
-                        $forum_link = sprintf( __( '<a target="_blank" href="%s">Visit the support forum</a> for community support.', 'ignite' ), esc_url( $forum_url ) );
-                        echo $forum_link;
-                        ?>
-                    </li>
-                </ol>
-                <p><?php _e('I (Ben) visit the support forum everyday, so any questions you have will be answered there.', 'ignite'); ?></p>
+                <h3><?php _e('Ignite Plus ($29)', 'ignite'); ?></h3>
+                <p><?php _e('Upgrade to Ignite Plus and get:', 'ignite'); ?></p>
+                <ul style="list-style: disc; margin-left: 36px">
+                    <li><?php _e('Custom colors', 'ignite'); ?></li>
+                    <li><?php _e('Background images & textures', 'ignite'); ?></li>
+                    <li><?php _e('Six new layouts', 'ignite'); ?></li>
+                    <li><?php _e('and much more&#8230;', 'ignite'); ?></li>
+                </ul>
+                <p>
+                    <a target="_blank" class="button-primary" href="https://www.competethemes.com/ignite-plus/"><?php _e('See Ignite Plus', 'ignite'); ?></a>
+                </p>
             </div>
         <?php }
         elseif($active_tab == 'license'){ ?>
