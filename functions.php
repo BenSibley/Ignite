@@ -85,6 +85,9 @@ function ct_ignite_theme_setup() {
 
     // adds the file with the customizer functionality
     require_once( trailingslashit( get_template_directory() ) . 'functions-admin.php' );
+
+    // adds theme options page
+    require_once( trailingslashit( get_template_directory() ) . 'theme-options.php' );
 }
 
 /* register primary sidebar */
