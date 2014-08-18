@@ -24,12 +24,17 @@ function ct_ignite_options_content(){
         if($active_tab == 'getting-started'){ ?>
             <div class="content content-getting-started">
                 <h3><?php _e('Start Customizing', 'ignite'); ?></h3>
-                <p>Thanks for downloading Ignite!</p>
+                <p><?php _e('Thanks for downloading Ignite!', 'ignite'); ?></p>
                 <p><?php _e("To start customizing Ignite, click the 'Customize' option in your menu, or use the button below to get started", 'ignite'); ?>.</p>
                 <p>
                     <a class="button-primary" href="customize.php"><?php _e('Use Customizer', 'ignite') ?></a>
                 </p>
-                <p>If you're not sure where to start, you can follow the Getting Started section in the <a target="_blank" href="http://www.competethemes.com/documentation/ignite-knowledgebase/">Ignite Knowledgebase</a>.</p>
+                <p>
+                    <?php // i18n for knowledgebase link
+                    $link = 'http://www.competethemes.com/documentation/ignite-knowledgebase/';
+                    printf( __( 'If you are not sure where to start, you can follow the Getting Started section in the <a target="_blank" href="%s">Ignite Knowledgebase</a>.', 'ignite' ), esc_url( $link ) );
+                    ?>
+                </p>
             </div>
         <?php }
         elseif($active_tab == 'support'){ ?>
