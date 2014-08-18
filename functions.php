@@ -123,7 +123,7 @@ function ct_ignite_social_media_icons() {
         echo "<ul class='social-media-icons'>";
 		foreach ($active_sites as $active_site) {?>
 			<li>
-				<a href="<?php echo esc_url(get_theme_mod( $active_site )); ?>">
+				<a target="_blank" href="<?php echo esc_url(get_theme_mod( $active_site )); ?>">
                     <?php if( $active_site ==  "flickr" || $active_site ==  "dribbble" || $active_site ==  "instagram" || $active_site ==  "soundcloud" || $active_site ==  "spotify" || $active_site ==  "vine" || $active_site ==  "yahoo" || $active_site ==  "codepen" || $active_site ==  "delicious" || $active_site ==  "stumbleupon" || $active_site ==  "deviantart" || $active_site ==  "digg" || $active_site ==  "hacker-news") { ?>
 						<i class="fa fa-<?php echo $active_site; ?>"></i> <?php
 					} else { ?>
