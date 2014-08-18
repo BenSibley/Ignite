@@ -658,6 +658,14 @@ a img {
   }
 
   /* because .menu-primary-items is a 'ul' this needs to be declared separately */
+  .menu-unset:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+  }
   .menu-unset ul {
     margin: 0;
   }

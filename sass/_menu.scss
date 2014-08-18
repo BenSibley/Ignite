@@ -312,6 +312,10 @@
   /* because .menu-primary-items is a 'ul' this needs to be declared separately */
   .menu-unset {
 
+    &:after {
+      @include clearfix;
+    }
+
     ul {
     margin: 0;
 
@@ -398,5 +402,4 @@
   .site-title {
     float: left;
   }
-
 }
