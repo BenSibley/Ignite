@@ -2,15 +2,15 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Ignite 1.24\n"
+"Project-Id-Version: Ignite 1.25\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2014-08-11 18:15:36+00:00\n"
+"POT-Creation-Date: 2014-08-13 19:21:02+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2014-08-15 15:36+0200\n"
+"PO-Revision-Date: 2014-08-19 12:07+0200\n"
 "Last-Translator: a a <a@a.com>\n"
-"Language-Team: LANGUAGE fi <LL@li.fi>\n"
+"Language-Team: LANGUAGE FI <LL@li.org>\n"
 "X-Generator: Poedit 1.6.7\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Language: fi_FI\n"
@@ -39,7 +39,7 @@ msgstr "Kommentointi on suljettu."
 
 #: content-404.php:3
 msgid "404: Page Not Found"
-msgstr "404: Sivua ei löydy."
+msgstr "404: Sivua ei löydy"
 
 #: content-404.php:8
 msgid ""
@@ -50,9 +50,9 @@ msgstr ""
 "kirjoittamasi url on oikein, tai kokeile alla olevaa hakua etsimäsi "
 "löytämiseen."
 
-#: content-attachment.php:3 content.php:8 content.php:31 content.php:95
+#: content-attachment.php:3 content.php:8 content.php:72
 msgid "Published"
-msgstr "Julkaistu"
+msgstr "Julkaistu:"
 
 #: content-attachment.php:19
 msgid "Previous Image"
@@ -62,7 +62,7 @@ msgstr "Edellinen kuva"
 msgid "Next Image"
 msgstr "Seuraava kuva"
 
-#: content-page.php:9 content.php:41
+#: content-page.php:9 content.php:18
 msgid "Pages:"
 msgstr "Sivut:"
 
@@ -78,7 +78,7 @@ msgstr ""
 
 #: functions-admin.php:38
 msgid "Upload custom logo."
-msgstr "Lataa logo"
+msgstr "Lataa oma logo"
 
 #: functions-admin.php:66
 msgid "Logo Positioning"
@@ -90,7 +90,7 @@ msgstr "Ylös/alas"
 
 #: functions-admin.php:104
 msgid "Left/right"
-msgstr "Vasen/oikea"
+msgstr "Vasemmalle/oikealle"
 
 #: functions-admin.php:126
 msgid "Logo Size"
@@ -98,7 +98,7 @@ msgstr "Logon koko"
 
 #: functions-admin.php:152
 msgid "Increase max-width"
-msgstr "Kasvata maksimikokoa"
+msgstr "Kasvata maksimileveyttä"
 
 #: functions-admin.php:164
 msgid "Increase max-height"
@@ -110,15 +110,15 @@ msgstr "Sosiaalisen median ikonit"
 
 #: functions-admin.php:221
 msgid "url:"
-msgstr ""
+msgstr "url:"
 
 #: functions-admin.php:239
 msgid "Post Author Info"
-msgstr "Julkaisun kirjoittajan tiedot"
+msgstr "Artikkelin tekijän tiedot"
 
 #: functions-admin.php:258
 msgid "Show post author info after posts?"
-msgstr "Näytä julkaisun lopussa julkaisun kirjoittajan tiedot?"
+msgstr "Näytä artikkelin lopussa artikkelin tekijän tiedot?"
 
 #: functions-admin.php:263 functions-admin.php:274
 msgid "Show"
@@ -130,11 +130,11 @@ msgstr "Piilota"
 
 #: functions-admin.php:292
 msgid "Additional Options"
-msgstr "Lisävaihtoehdot"
+msgstr "Lisävalinnat"
 
 #: functions-admin.php:311
 msgid "Show full post on blog?"
-msgstr "Näytä koko julkaisu blogissa?"
+msgstr "Näytä koko artikkeli blogissa?"
 
 #: functions-admin.php:316 functions-admin.php:340 functions-admin.php:351
 msgid "Yes"
@@ -150,92 +150,150 @@ msgstr "Näytä murupolku?"
 
 #: functions-admin.php:382
 msgid "Custom CSS"
-msgstr ""
+msgstr "Kustomoitu CSS"
 
 #: functions-admin.php:402
 msgid "Add Custom CSS Here:"
-msgstr ""
+msgstr "Lisää omat CSS-muokkauksesi tähän:"
 
-#: functions-admin.php:415
+#: functions-admin.php:417
+msgid "Font Family"
+msgstr "Fonttiperhe"
+
+#: functions-admin.php:420
+msgid "The default font is \"Lusitana\"."
+msgstr "Oletusfontti on \"Lusitana\"."
+
+#: functions-admin.php:438
+msgid "Site Font Family"
+msgstr "Sivuston fonttiperhe"
+
+#: functions-admin.php:476
+msgid "Font Weight"
+msgstr "Fontin paksuus"
+
+#: functions-admin.php:479
+msgid ""
+"If you've just changed fonts, please save and refresh the page to update "
+"available weights."
+msgstr ""
+"Jos muutit juuri fontteja, tallenna ja päivitä sivu saadaksesi uudet "
+"fonttipaksuudet näkyviin."
+
+#: functions-admin.php:496
+msgid "Site Font Weight"
+msgstr "Sivuston fontin paksuus"
+
+#: functions-admin.php:589 library/extensions/theme-layouts.php:458
+#: library/extensions/theme-layouts.php:567
+#: library/extensions/theme-layouts.php:652
+msgid "Layout"
+msgstr "Sommittelu"
+
+#: functions-admin.php:608
+msgid "Pick Your Layout:"
+msgstr "Valitse sommittelu:"
+
+#: functions-admin.php:613 functions-admin.php:624
+msgid "Right sidebar"
+msgstr "Oikea valikko"
+
+#: functions-admin.php:614 functions-admin.php:625
+msgid "Left sidebar"
+msgstr "Vasen valikko"
+
+#: functions-admin.php:642
+msgid "Background"
+msgstr "Tausta"
+
+#: functions-admin.php:663
+msgid "Background Color"
+msgstr "Taustan väri"
+
+#: functions-admin.php:677
 msgid "Profile image"
 msgstr "Profiilikuva"
 
-#: functions-admin.php:422
+#: functions-admin.php:684
 msgid "Upload Image"
 msgstr "Lataa kuva"
 
-#: functions-admin.php:423
+#: functions-admin.php:685
 msgid ""
 "Upload an image here to use instead of your Gravatar. Perfectly square "
 "images will not be cropped."
 msgstr ""
 
-#: functions-admin.php:458
+#: functions-admin.php:720
 msgid "Ignite Dashboard"
-msgstr ""
+msgstr "Ignite työpöytä"
 
-#: functions-admin.php:462
+#: functions-admin.php:724
 msgid ""
 "Thanks for downloading Ignite! If you can, please take one minute to <a "
 "target=\"_blank\" href=\"%s\"><strong>leave a review</strong></a>."
 msgstr ""
 
-#: functions-admin.php:467
+#: functions-admin.php:729
 msgid "Premium Upgrade"
-msgstr ""
+msgstr "Premium päivitys"
 
-#: functions-admin.php:468
+#: functions-admin.php:730
 msgid ""
 "Get more flexibility and customizations for your site, with Ignite Plus "
 "($29)."
 msgstr ""
+"Hanki lisää joustavuutta ja yksilöllisyyttä sivustollesi Ignite Plussalla "
+"($29)."
 
-#: functions-admin.php:469
-msgid "Custom colors, custom backgrounds, over 600+ fonts, and more..."
-msgstr ""
+#: functions-admin.php:731
+msgid "Custom colors, background images, over 600+ fonts, and more..."
+msgstr "Vaihdettavat värit, taustakuvat, yli 600 fonttia ja paljon muuta..."
 
-#: functions-admin.php:471
+#: functions-admin.php:733
 msgid "View Ignite Plus"
-msgstr ""
+msgstr "Näytä Ignite Plus"
 
-#: functions-admin.php:475
+#: functions-admin.php:737
 msgid "Support"
-msgstr ""
+msgstr "Tuki"
 
-#: functions-admin.php:480
+#: functions-admin.php:742
 msgid ""
 "<a target=\"_blank\" href=\"%s\">Visit the knowledgebase</a> for self-help."
 msgstr ""
 
-#: functions-admin.php:487
+#: functions-admin.php:749
 msgid ""
 "<a target=\"_blank\" href=\"%s\">Visit the support forum</a> for community "
 "support."
 msgstr ""
 
-#: functions-admin.php:492
+#: functions-admin.php:754
 msgid ""
 "I (Ben) visit the support forum everyday, so any questions you have will be "
 "answered there."
 msgstr ""
 
-#: functions-admin.php:495
+#: functions-admin.php:757
 msgid "Customize"
-msgstr "Muokkaa"
+msgstr "Kustomoi"
 
-#: functions-admin.php:496
+#: functions-admin.php:758
 msgid ""
 "Customize your site with your logo, social profiles, and more with the built-"
 "in Customizer."
 msgstr ""
+"Kustomoi sivustosi logolla, sosiaalisella profiililla jne. sisäänrakennetun "
+"Kustomoijan avulla."
 
-#: functions-admin.php:497
+#: functions-admin.php:759
 msgid "Use the customizer"
-msgstr ""
+msgstr "Käytä kustomoijaa"
 
 #: functions.php:93
 msgid "Primary Sidebar"
-msgstr ""
+msgstr "Ensisijainen sivuvalikko"
 
 #: functions.php:95
 msgid "The main sidebar"
@@ -247,35 +305,39 @@ msgstr ""
 
 #: functions.php:148
 msgid "The Previous Post"
-msgstr "Edellinen julkaisu"
+msgstr "Edellinen artikkeli"
 
 #: functions.php:153
 msgid "The Next Post"
-msgstr "Seuraava julkaisu"
+msgstr "Seuraava artikkeli"
 
 #: functions.php:159
 msgid "Previous Post"
-msgstr "Edellinen julkaisu"
+msgstr "Edellinen artikkeli"
 
 #: functions.php:164 functions.php:176
 msgid "Return to Blog"
 msgstr "Palaa blogiin"
 
-#: functions.php:165 functions.php:177
+#: functions.php:165
 msgid "This is the oldest post"
-msgstr "Tämä on vanhin julkaisu"
+msgstr "Tämä on vanhin artikkeli"
 
 #: functions.php:171
 msgid "Next"
 msgstr "Seuraava"
 
+#: functions.php:177
+msgid "This is the newest post"
+msgstr "Tämä on uusin artikkeli"
+
 #: functions.php:193
 msgid "View all posts in %s"
-msgstr "Näytä kaikki julkaisut %s"
+msgstr "Näytä kaikki artikkelit %s"
 
 #: functions.php:209
 msgid "View all posts tagged %s"
-msgstr "Näytä kaikki %s tagatyt julkaisut"
+msgstr "Näytä kaikki %s tagatyt artikkelit"
 
 #: functions.php:251
 msgid "said:"
@@ -283,7 +345,7 @@ msgstr "sanoi:"
 
 #: functions.php:255
 msgid "Your comment is awaiting moderation."
-msgstr "Kommenttisi odottaa ylläpidon hyväksymistä."
+msgstr "Kommenttisi odottaa ylläpidon tarkastusta."
 
 #: functions.php:263
 msgid "Reply"
@@ -291,27 +353,27 @@ msgstr "Vastaa"
 
 #: functions.php:280
 msgid "Your Name"
-msgstr "Nimi"
+msgstr "Nimesi"
 
 #: functions.php:281
 msgid "Your Name*"
-msgstr "Nimi*"
+msgstr "Nimesi*"
 
 #: functions.php:287
 msgid "Your Email"
-msgstr "Sähköposti"
+msgstr "Sähköpostisi"
 
 #: functions.php:288
 msgid "Your Email*"
-msgstr "Sähköposti*"
+msgstr "Sähköpostisi*"
 
 #: functions.php:294
 msgid "Your Website URL"
-msgstr "Web-sivustosi URL"
+msgstr "Web-sivusi osoite"
 
 #: functions.php:295
 msgid "Your URL"
-msgstr "URL"
+msgstr "URL:si"
 
 #: functions.php:307
 msgid "Your Comment"
@@ -336,11 +398,11 @@ msgstr ""
 #. Translators: %s is the theme name.
 #: library/admin/theme-settings.php:134 library/admin/theme-settings.php:199
 msgid "%s Theme Settings"
-msgstr ""
+msgstr "%s teeman asetukset"
 
 #: library/admin/theme-settings.php:135
 msgid "Theme Settings"
-msgstr ""
+msgstr "Teeman asetukset"
 
 #. Translators: Media dimensions - 1 is width and 2 is height.
 #: library/classes/hybrid-media-meta.php:154
@@ -352,7 +414,7 @@ msgstr ""
 #: library/classes/hybrid-media-meta.php:155
 #: library/classes/hybrid-media-meta.php:282
 msgid "Dimensions"
-msgstr ""
+msgstr "Mitat"
 
 #: library/classes/hybrid-media-meta.php:161
 #: library/classes/widget-pages.php:191
@@ -361,11 +423,11 @@ msgstr "Päivä"
 
 #: library/classes/hybrid-media-meta.php:165
 msgid "Camera"
-msgstr ""
+msgstr "Kamera"
 
 #: library/classes/hybrid-media-meta.php:169
 msgid "Aperture"
-msgstr ""
+msgstr "Aukko"
 
 #. Translators: Camera focal length.
 #: library/classes/hybrid-media-meta.php:174
@@ -374,7 +436,7 @@ msgstr ""
 
 #: library/classes/hybrid-media-meta.php:174
 msgid "Focal Length"
-msgstr ""
+msgstr "Polttoväli"
 
 #: library/classes/hybrid-media-meta.php:180
 msgid "International Organization for Standardization"
@@ -391,17 +453,17 @@ msgstr ""
 
 #: library/classes/hybrid-media-meta.php:199
 msgid "Shutter Speed"
-msgstr ""
+msgstr "Valotusaika"
 
 #: library/classes/hybrid-media-meta.php:248
 #: library/classes/hybrid-media-meta.php:285
 msgid "File Name"
-msgstr ""
+msgstr "Tiedostonimi"
 
 #: library/classes/hybrid-media-meta.php:256
 #: library/classes/hybrid-media-meta.php:293
 msgid "File Type"
-msgstr ""
+msgstr "Tiedostotyyppi"
 
 #: library/classes/widget-archives.php:43
 msgid ""
@@ -434,7 +496,7 @@ msgstr "Valitse päivä"
 
 #: library/classes/widget-archives.php:117
 msgid "Select Post"
-msgstr "Valitse julkaisu"
+msgstr "Valitse artikkeli"
 
 #: library/classes/widget-archives.php:194
 msgid "Alphabetical"
@@ -486,7 +548,7 @@ msgstr ""
 
 #: library/classes/widget-archives.php:212
 msgid "Option"
-msgstr ""
+msgstr "Vaihtoehto"
 
 #: library/classes/widget-archives.php:218
 #: library/classes/widget-authors.php:205
@@ -497,7 +559,7 @@ msgstr ""
 #: library/classes/widget-pages.php:211 library/classes/widget-search.php:128
 #: library/classes/widget-tags.php:248
 msgid "Title:"
-msgstr ""
+msgstr "Otsikko:"
 
 #: library/classes/widget-archives.php:262
 #: library/classes/widget-authors.php:261
@@ -512,15 +574,15 @@ msgstr ""
 
 #: library/classes/widget-authors.php:55 library/classes/widget-authors.php:62
 msgid "Authors"
-msgstr ""
+msgstr "Tekijät"
 
 #: library/classes/widget-authors.php:186
 msgid "Display Name"
-msgstr ""
+msgstr "Näytä nimi"
 
 #: library/classes/widget-authors.php:187
 msgid "Email"
-msgstr ""
+msgstr "Sähköposti"
 
 #: library/classes/widget-authors.php:188
 #: library/classes/widget-bookmarks.php:226
@@ -572,13 +634,13 @@ msgstr ""
 
 #: library/classes/widget-authors.php:269
 msgid "Show full name?"
-msgstr ""
+msgstr "Näytä koko nimi?"
 
 #: library/classes/widget-authors.php:273
 #: library/classes/widget-categories.php:337
 #: library/classes/widget-tags.php:367
 msgid "Hide empty?"
-msgstr ""
+msgstr "Piilota tyhjät?"
 
 #: library/classes/widget-bookmarks.php:43
 msgid ""
@@ -590,7 +652,7 @@ msgstr ""
 #: library/classes/widget-bookmarks.php:62
 #: library/classes/widget-bookmarks.php:127
 msgid "Bookmarks"
-msgstr ""
+msgstr "Kirjanmerkit"
 
 #: library/classes/widget-bookmarks.php:225
 #: library/classes/widget-categories.php:215
@@ -603,7 +665,7 @@ msgstr ""
 #: library/classes/widget-categories.php:217
 #: library/classes/widget-tags.php:234
 msgid "Name"
-msgstr ""
+msgstr "Nimi"
 
 #: library/classes/widget-bookmarks.php:228
 #: library/classes/widget-categories.php:218
@@ -613,19 +675,19 @@ msgstr ""
 
 #: library/classes/widget-bookmarks.php:233
 msgid "Description"
-msgstr ""
+msgstr "Kuvaus"
 
 #: library/classes/widget-bookmarks.php:234
 msgid "Length"
-msgstr ""
+msgstr "Pituus"
 
 #: library/classes/widget-bookmarks.php:236
 msgid "Notes"
-msgstr ""
+msgstr "Muistiinpanot"
 
 #: library/classes/widget-bookmarks.php:237
 msgid "Owner"
-msgstr ""
+msgstr "Omistaja"
 
 #: library/classes/widget-bookmarks.php:238
 #: library/classes/widget-tags.php:229
@@ -634,7 +696,7 @@ msgstr ""
 
 #: library/classes/widget-bookmarks.php:239
 msgid "Rating"
-msgstr ""
+msgstr "Luokitus"
 
 #: library/classes/widget-bookmarks.php:240
 msgid "Rel"
@@ -651,39 +713,39 @@ msgstr ""
 
 #: library/classes/widget-bookmarks.php:243
 msgid "Updated"
-msgstr ""
+msgstr "Päivitetty"
 
 #: library/classes/widget-bookmarks.php:352
 msgid "Categorize?"
-msgstr ""
+msgstr "Kategorioi?"
 
 #: library/classes/widget-bookmarks.php:356
 msgid "Show description?"
-msgstr ""
+msgstr "Näytä kuvaus?"
 
 #: library/classes/widget-bookmarks.php:360
 msgid "Hide invisible?"
-msgstr ""
+msgstr "Piilota näkymättömät?"
 
 #: library/classes/widget-bookmarks.php:364
 msgid "Show rating?"
-msgstr ""
+msgstr "Näytä luokitus?"
 
 #: library/classes/widget-bookmarks.php:368
 msgid "Show updated?"
-msgstr ""
+msgstr "Näytä päivitetyt?"
 
 #: library/classes/widget-bookmarks.php:372
 msgid "Show images?"
-msgstr ""
+msgstr "Näytä kuvat?"
 
 #: library/classes/widget-bookmarks.php:376
 msgid "Show name?"
-msgstr ""
+msgstr "Näytä nimi?"
 
 #: library/classes/widget-bookmarks.php:380
 msgid "Show private?"
-msgstr ""
+msgstr "Näytä yksityiset?"
 
 #: library/classes/widget-calendar.php:43
 msgid ""
@@ -694,7 +756,7 @@ msgstr ""
 #: library/classes/widget-calendar.php:55
 #: library/classes/widget-calendar.php:62
 msgid "Calendar"
-msgstr ""
+msgstr "Kalenteri"
 
 #: library/classes/widget-calendar.php:142
 msgid "One-letter abbreviation?"
@@ -709,7 +771,7 @@ msgstr ""
 #: library/classes/widget-categories.php:55
 #: library/classes/widget-categories.php:62
 msgid "Categories"
-msgstr ""
+msgstr "Kategoriat"
 
 #: library/classes/widget-categories.php:219
 msgid "Term Group"
@@ -730,11 +792,11 @@ msgstr ""
 #: library/classes/widget-categories.php:325
 #: library/classes/widget-pages.php:310
 msgid "Hierarchical?"
-msgstr ""
+msgstr "Hierarkinen?"
 
 #: library/classes/widget-categories.php:329
 msgid "Use description?"
-msgstr ""
+msgstr "Käytä kuvausta?"
 
 #: library/classes/widget-categories.php:333
 msgid "Show count?"
@@ -748,11 +810,11 @@ msgstr ""
 
 #: library/classes/widget-nav-menu.php:55
 msgid "Navigation Menu"
-msgstr ""
+msgstr "Navigaatiovalikko"
 
 #: library/classes/widget-nav-menu.php:62
 msgid "Navigation"
-msgstr ""
+msgstr "Navigaatio"
 
 #: library/classes/widget-pages.php:43
 msgid ""
@@ -762,11 +824,11 @@ msgstr ""
 
 #: library/classes/widget-pages.php:55 library/classes/widget-pages.php:62
 msgid "Pages"
-msgstr ""
+msgstr "Sivut"
 
 #: library/classes/widget-pages.php:190
 msgid "Author"
-msgstr ""
+msgstr "Tekijä"
 
 #: library/classes/widget-pages.php:193
 msgid "Menu Order"
@@ -774,15 +836,15 @@ msgstr ""
 
 #: library/classes/widget-pages.php:194 library/classes/widget-pages.php:202
 msgid "Modified"
-msgstr ""
+msgstr "Muokattu"
 
 #: library/classes/widget-pages.php:196
 msgid "Title"
-msgstr ""
+msgstr "Otsikko"
 
 #: library/classes/widget-pages.php:201
 msgid "Created"
-msgstr ""
+msgstr "Luotu"
 
 #: library/classes/widget-search.php:44
 msgid ""
@@ -831,7 +893,7 @@ msgstr ""
 
 #: library/extensions/breadcrumb-trail.php:178
 msgid "Browse:"
-msgstr ""
+msgstr "Selaa:"
 
 #: library/extensions/breadcrumb-trail.php:179
 msgid "Home"
@@ -847,31 +909,31 @@ msgstr "404 Ei löydy"
 #: library/extensions/breadcrumb-trail.php:183
 #: library/functions/template-general.php:475
 msgid "Search results for &#8220;%s&#8221;"
-msgstr "Hakutulokset haulla &#8220;%s&#8221;"
+msgstr "Hakutulokset haulle: &#8220;%s&#8221;"
 
 #. Translators: %s is the page number.
 #: library/extensions/breadcrumb-trail.php:185
 msgid "Page %s"
-msgstr ""
+msgstr "Sivu %s"
 
 #. Translators: Minute archive title. %s is the minute time format.
 #: library/extensions/breadcrumb-trail.php:187
 #: library/functions/template-general.php:436
 msgid "Minute %s"
-msgstr ""
+msgstr "Minutti %s"
 
 #. Translators: Weekly archive title. %s is the week date format.
 #: library/extensions/breadcrumb-trail.php:189
 msgid "Week %s"
-msgstr ""
+msgstr "Viikko %s"
 
 #: library/extensions/breadcrumb-trail.php:1163
 msgid "Split"
-msgstr ""
+msgstr "Jaa"
 
 #: library/extensions/breadcrumb-trail.php:1167
 msgid "Merge"
-msgstr ""
+msgstr "Liitä"
 
 #: library/extensions/featured-header.php:208
 msgid "Featured Header"
@@ -883,12 +945,6 @@ msgstr ""
 
 #: library/extensions/theme-fonts.php:401
 msgid "Fonts"
-msgstr ""
-
-#: library/extensions/theme-layouts.php:458
-#: library/extensions/theme-layouts.php:567
-#: library/extensions/theme-layouts.php:652
-msgid "Layout"
 msgstr ""
 
 #: library/extensions/theme-layouts.php:483
@@ -920,7 +976,7 @@ msgstr ""
 
 #: library/functions/media.php:53
 msgid "File Size"
-msgstr ""
+msgstr "Tiedostokoko"
 
 #: library/functions/media.php:54
 msgid "Mime Type"
@@ -940,15 +996,15 @@ msgstr "Vuosi"
 
 #: library/functions/media.php:62
 msgid "Composer"
-msgstr ""
+msgstr "Säveltäjä"
 
 #: library/functions/media.php:63
 msgid "Track"
-msgstr ""
+msgstr "Ääniraita"
 
 #: library/functions/media.php:66
 msgid "Lyrics"
-msgstr ""
+msgstr "Sanat"
 
 #: library/functions/template-general.php:55
 msgid "State-of-the-art semantic personal publishing platform"
@@ -962,15 +1018,15 @@ msgstr ""
 #: library/functions/template-general.php:82
 #: library/functions/template-general.php:115
 msgid "%s WordPress Theme"
-msgstr ""
+msgstr "%s WordPress Teema"
 
 #: library/functions/template-general.php:305
 msgid "You are browsing the search results for &#8220;%s&#8221;"
-msgstr ""
+msgstr "Katsot hakutuloksia haulle &#8220;%s&#8221;"
 
 #: library/functions/template-general.php:311
 msgid "You are browsing the site archives by time."
-msgstr ""
+msgstr "Selaat arkistoja ajan perusteella."
 
 #: library/functions/template-general.php:314
 #: library/functions/template-general.php:317
@@ -980,7 +1036,7 @@ msgstr ""
 
 #: library/functions/template-general.php:323
 msgid "You are browsing the site archives."
-msgstr ""
+msgstr "Selaat arkistoja."
 
 #. Translators: 1 is the week number and 2 is the year.
 #: library/functions/template-general.php:378
@@ -989,7 +1045,7 @@ msgstr ""
 
 #: library/functions/utility.php:86
 msgid "(Untitled)"
-msgstr ""
+msgstr "(Nimetön)"
 
 #: search.php:11
 msgid "%d search results for"
@@ -1030,6 +1086,10 @@ msgid ""
 "with the logo size and position tools. Additional features are available "
 "with Ignite Plus."
 msgstr ""
+"Ignite on responsiivinen teema blogeille. Kustomoi sivustosi Igniten omilla "
+"sosisaalisen median ikoneilla ja logon lataimella. Tee logostasi "
+"pikselintarkka koko- ja asemointityökaluilla. Lisää ominaisuuksia löytyy "
+"Ignite Plussassa."
 
 #. Author of the plugin/theme
 msgid "Compete Themes"
@@ -1039,10 +1099,10 @@ msgstr ""
 msgid "http://competethemes.com/"
 msgstr ""
 
-#: content.php:8 content.php:31 content.php:95
+#: content.php:8 content.php:72
 msgctxt "Published by whom?"
 msgid "by"
-msgstr ""
+msgstr "Julkaisija:"
 
 #: library/classes/customize-control-background-image.php:49
 msgctxt "theme customizer tab"
