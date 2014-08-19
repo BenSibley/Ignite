@@ -29,12 +29,6 @@ function ct_ignite_options_content(){
                 <p>
                     <a class="button-primary" href="customize.php"><?php _e('Use Customizer', 'ignite') ?></a>
                 </p>
-                <p>
-                    <?php // i18n for knowledgebase link
-                    $link = 'http://www.competethemes.com/documentation/ignite-knowledgebase/';
-                    printf( __( 'If you are not sure where to start, you can follow the Getting Started section in the <a target="_blank" href="%s">Ignite Knowledgebase</a>.', 'ignite' ), esc_url( $link ) );
-                    ?>
-                </p>
             </div>
         <?php }
         elseif($active_tab == 'support'){ ?>
