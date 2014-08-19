@@ -88,6 +88,9 @@ function ct_ignite_theme_setup() {
 
     // adds theme options page
     require_once( trailingslashit( get_template_directory() ) . 'theme-options.php' );
+
+    // load text domain
+    load_theme_textdomain('ignite', get_template_directory() . '/languages');
 }
 
 /* register primary sidebar */
