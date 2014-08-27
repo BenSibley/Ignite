@@ -6,7 +6,19 @@
 if ( have_posts() ) :
     while (have_posts() ) : 
         the_post();
-        get_template_part('content');
+
+        /* Blog */
+        if( is_home() ) {
+            get_template_part('content');
+        }
+        /* Post */
+        elseif(is_singular('post')){
+            get_template_part('content');
+            comments_template();
+        }
+        else {
+            get_template_part('content');
+        }
     endwhile;
 endif; ?>
 
