@@ -77,18 +77,14 @@ li.pingback {
       }
     }
   }
-}
-.author-profile-image-comment {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  float: left;
-  margin-right: $baseline-height * 0.5;
-  overflow: hidden;
-  border: solid 2px $orange;
-
-  img {
-    border-radius: 0;
+  .author-profile-image {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    float: left;
+    margin-right: $baseline-height * 0.5;
+    overflow: hidden;
+    border: solid 2px $orange;
   }
 }
 .comment-meta {

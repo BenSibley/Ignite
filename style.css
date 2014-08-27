@@ -1324,8 +1324,7 @@ li.pingback {
 .comment-author .author-name a:hover, .comment-author .author-name a:active {
   color: #a87227;
 }
-
-.author-profile-image-comment {
+.comment-author .author-profile-image {
   width: 48px;
   height: 48px;
   border-radius: 50%;
@@ -1333,9 +1332,6 @@ li.pingback {
   margin-right: 0.75em;
   overflow: hidden;
   border: solid 2px #e6a117;
-}
-.author-profile-image-comment img {
-  border-radius: 0;
 }
 
 .comment-meta {

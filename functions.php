@@ -231,24 +231,7 @@ function ct_ignite_customize_comments( $comment, $args, $depth ) {
                 <?php
                 // if is post author
                 if( $comment->user_id === $post->post_author ) {
-                    // if post author has profile image set
-                    if(get_the_author_meta('user_profile_image')) {
-
-                        echo "<div class='author-profile-image-comment'>";
-
-                        // get the id based on the image's URL
-                        $image_id = ct_ignite_get_image_id(get_the_author_meta('user_profile_image'));
-
-                        // retrieve the thumbnail size of profile image
-                        $image_thumb = wp_get_attachment_image($image_id, 'thumbnail');
-
-                        // display the image
-                        echo $image_thumb;
-
-                        echo "</div>";
-                    } else {
-                        echo get_avatar( get_comment_author_email(), 48 );
-                    }
+                    ct_ignite_profile_image_output();
                 } else {
                     echo get_avatar( get_comment_author_email(), 48 );
                 }
@@ -688,5 +671,28 @@ function ct_ignite_post_meta_comments(){
             </a>
         </p>
     <?php
+    }
+}
+
+// outputs the user's uploaded profile picture with Gravatar fallback
+function ct_ignite_profile_image_output(){
+
+    // if post author has profile image set
+    if(get_the_author_meta('user_profile_image')) {
+
+        echo "<div class='author-profile-image'>";
+
+        // get the id based on the image's URL
+        $image_id = ct_ignite_get_image_id(get_the_author_meta('user_profile_image'));
+
+        // retrieve the thumbnail size of profile image
+        $image_thumb = wp_get_attachment_image($image_id, 'thumbnail');
+
+        // display the image
+        echo $image_thumb;
+
+        echo "</div>";
+    } else {
+        echo get_avatar( get_comment_author_email(), 48 );
     }
 }
