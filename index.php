@@ -4,25 +4,30 @@
 
 // The loop
 if ( have_posts() ) :
-    while (have_posts() ) : 
+    while ( have_posts() ) :
         the_post();
 
         /* Blog */
         if( is_home() ) {
-            get_template_part('content');
+            get_template_part( 'content' );
         }
         /* Post */
-        elseif(is_singular('post')){
-            get_template_part('content');
+        elseif( is_singular( 'post' ) ){
+            get_template_part( 'content' );
             comments_template();
         }
         /* Page */
-        elseif(is_page()){
-            get_template_part('content', 'page');
+        elseif( is_page() ){
+            get_template_part( 'content', 'page' );
+            comments_template();
+        }
+        /* Attachment */
+        elseif( is_attachment() ){
+            get_template_part( 'content', 'attachment' );
             comments_template();
         }
         else {
-            get_template_part('content');
+            get_template_part( 'content' );
         }
     endwhile;
 endif; ?>
