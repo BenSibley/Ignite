@@ -174,7 +174,7 @@ function ct_ignite_further_reading() {
     if($next_blog_post) {
 
         echo "<p class='next'>
-        		<span>" . __('Next', 'ignite') . "</span>
+        		<span>" . __('Next Post', 'ignite') . "</span>
         		<a href='".get_permalink($next_blog_post)."'>".$next_title."</a>
 	        </p>";
     } else {
