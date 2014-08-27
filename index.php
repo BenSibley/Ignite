@@ -16,6 +16,11 @@ if ( have_posts() ) :
             get_template_part('content');
             comments_template();
         }
+        /* Page */
+        elseif(is_page()){
+            get_template_part('content', 'page');
+            comments_template();
+        }
         else {
             get_template_part('content');
         }
