@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ignite\n"
-"POT-Creation-Date: 2014-08-20 10:28-0500\n"
-"PO-Revision-Date: 2014-08-20 10:29-0500\n"
+"POT-Creation-Date: 2014-08-28 10:50-0500\n"
+"PO-Revision-Date: 2014-08-28 10:50-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -22,13 +22,13 @@ msgstr ""
 msgid "Be First to Comment"
 msgstr "Be First to Comment"
 
-#: comments.php:11 comments.php:29 comments.php:49 functions.php:678
-#: functions.php:687
+#: comments.php:11 comments.php:29 comments.php:49 functions.php:661
+#: functions.php:670
 msgid "One Comment"
 msgstr "One Comment"
 
-#: comments.php:11 comments.php:29 comments.php:49 functions.php:678
-#: functions.php:687
+#: comments.php:11 comments.php:29 comments.php:49 functions.php:661
+#: functions.php:670
 msgid "% Comments"
 msgstr "% Comments"
 
@@ -57,7 +57,7 @@ msgstr ""
 "Looks like nothing was found on this url.  Double-check that the url is "
 "correct or try the search form below to find what you were looking for."
 
-#: content-attachment.php:3 content.php:8 content.php:78
+#: content-attachment.php:3 content.php:8 content.php:57
 msgid "Published"
 msgstr "Published"
 
@@ -73,7 +73,7 @@ msgstr "Next Image"
 msgid "Pages:"
 msgstr "Pages:"
 
-#: content.php:8 content.php:78
+#: content.php:8 content.php:57
 msgctxt "Published by whom?"
 msgid "by"
 msgstr "by"
@@ -292,8 +292,8 @@ msgid "This is the oldest post"
 msgstr "This is the oldest post"
 
 #: functions.php:177
-msgid "Next"
-msgstr "Next"
+msgid "Next Post"
+msgstr "Next Post"
 
 #: functions.php:183
 msgid "This is the newest post"
@@ -309,59 +309,59 @@ msgstr "View all posts in %s"
 msgid "View all posts tagged %s"
 msgstr "View all posts tagged %s"
 
-#: functions.php:257
+#: functions.php:240
 msgid "said:"
 msgstr "said:"
 
-#: functions.php:261
+#: functions.php:244
 msgid "Your comment is awaiting moderation."
 msgstr "Your comment is awaiting moderation."
 
-#: functions.php:269
+#: functions.php:252
 msgid "Reply"
 msgstr "Reply"
 
-#: functions.php:286
+#: functions.php:269
 msgid "Your Name"
 msgstr "Your Name"
 
-#: functions.php:287
+#: functions.php:270
 msgid "Your Name*"
 msgstr "Your Name*"
 
-#: functions.php:293
+#: functions.php:276
 msgid "Your Email"
 msgstr "Your Email"
 
-#: functions.php:294
+#: functions.php:277
 msgid "Your Email*"
 msgstr "Your Email*"
 
-#: functions.php:300
+#: functions.php:283
 msgid "Your Website URL"
 msgstr "Your Website URL"
 
-#: functions.php:301
+#: functions.php:284
 msgid "Your URL"
 msgstr "Your URL"
 
-#: functions.php:313
+#: functions.php:296
 msgid "Your Comment"
 msgstr "Your Comment"
 
-#: functions.php:314
+#: functions.php:297
 msgid "Enter Your Comment"
 msgstr "Enter Your Comment"
 
-#: functions.php:357 functions.php:367
+#: functions.php:340 functions.php:350
 msgid "Read More"
 msgstr "Read More"
 
-#: functions.php:678
+#: functions.php:661
 msgid "Comments closed"
 msgstr "Comments closed"
 
-#: functions.php:687
+#: functions.php:670
 msgid "Leave a Comment"
 msgstr "Leave a Comment"
 
@@ -1225,6 +1225,9 @@ msgstr "and much more&#8230;"
 #: theme-options.php:54
 msgid "See Full Feature List"
 msgstr "See Full Feature List"
+
+#~ msgid "Next"
+#~ msgstr "Next"
 
 #~ msgid ""
 #~ "Thanks for downloading Ignite! If you can, please take one minute to <a "
