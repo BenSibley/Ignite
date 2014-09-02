@@ -21,7 +21,7 @@ if( is_single() ) { ?>
 		<div class='entry-meta-bottom'>
 			<?php ct_ignite_further_reading(); ?>
             <?php
-            if(get_theme_mod('ct_ignite_author_meta_settings') == 'show'){ ?>
+            if(get_theme_mod('ct_ignite_author_meta_settings') != 'hide'){ ?>
                 <div class="author-meta">
                     <?php ct_ignite_profile_image_output(); ?>
                     <div class="name-container">
