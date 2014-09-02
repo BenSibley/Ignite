@@ -135,7 +135,7 @@ jQuery(document).ready(function($){
         if($('#menu-primary-items').length){
             var menu = $('#menu-primary-items');
         } else {
-            var menu = $('.menu-unset');
+            var menu = $('.menu-unset ul');
         }
         // get widths of all elements involved
         var siteHeaderWidth = $('#site-header').width();
