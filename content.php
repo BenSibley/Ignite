@@ -5,7 +5,7 @@ if( is_single() ) { ?>
         <?php ct_ignite_featured_image(); ?>
         <div class="entry-meta-top">
             <?php
-            echo __('Published', 'ignite') . " " . date_i18n( get_option( 'date_format' ), strtotime( get_the_date('n/j-Y') ) ) . " " . _x('by', 'Published by whom?', 'ignite') . " ";
+            echo __('Published', 'ignite') . " " . date_i18n( get_option( 'date_format' ), strtotime( get_the_date('n/j/Y') ) ) . " " . _x('by', 'Published by whom?', 'ignite') . " ";
             the_author_posts_link();
             ?>
         </div>
@@ -54,7 +54,7 @@ if( is_single() ) { ?>
         <?php ct_ignite_featured_image(); ?>
         <div class="excerpt-meta-top">
             <?php
-            echo __('Published', 'ignite') . " " . date_i18n( get_option( 'date_format' ), strtotime( get_the_date('n/j-Y') ) ) . " " . _x('by', 'Published by whom?', 'ignite') . " ";
+            echo __('Published', 'ignite') . " " . date_i18n( get_option( 'date_format' ), strtotime( get_the_date('n/j/Y') ) ) . " " . _x('by', 'Published by whom?', 'ignite') . " ";
             the_author_posts_link();
             ?>
         </div>
