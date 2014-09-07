@@ -540,6 +540,30 @@ function ct_ignite_sanitize_show_full_post_setting($input){
     }
 }
 
+/* sanitize comment display multi-check */
+function ct_ignite_sanitize_comments_setting($input){
+
+    // valid data
+    $valid = array(
+        'posts'   => __('Posts', 'ignite-plus'),
+        'pages'  => __('Pages', 'ignite-plus'),
+        'attachments'  => __('Attachments', 'ignite-plus'),
+        'none'  => __('Do not show', 'ignite-plus')
+    );
+
+    // loop through array
+    foreach( $input as $selection ) {
+
+        // if it's in the valid data, return it
+        if ( array_key_exists( $selection, $valid ) ) {
+            return $input;
+        } else {
+            return '';
+        }
+    }
+
+}
+
 /* Custom CSS Section */
 function ct_ignite_customizer_custom_css( $wp_customize ) {
 
