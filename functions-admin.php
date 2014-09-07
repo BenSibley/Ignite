@@ -248,6 +248,14 @@ function ct_ignite_add_social_sites_customizer($wp_customize) {
 	}
 }
 
+// sanitize proper email address url
+function ct_ignite_sanitize_email( $input ) {
+
+    esc_url_raw( $input, array('mailto:') );
+
+    return $input;
+}
+
 /* show/hide the post author info after posts */
 function ct_ignite_show_author_meta( $wp_customize ) {
 
