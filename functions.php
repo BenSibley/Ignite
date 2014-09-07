@@ -41,6 +41,14 @@ function ct_ignite_enqueue_profile_image_uploader($hook) {
 }
 add_action('admin_enqueue_scripts', 'ct_ignite_enqueue_profile_image_uploader');
 
+/* enqueues scripts and styles used on customizer page */
+function ct_ignite_enqueue_customizer_scripts(){
+
+    wp_enqueue_script('multiple-select', get_template_directory_uri() . '/js/build/multiple-select.min.js',array('jquery'),'',true);
+    wp_enqueue_style('multiple-select-styles', get_template_directory_uri() . '/styles/multiple-select.css');
+}
+add_action('customize_controls_enqueue_scripts','ct_ignite_enqueue_customizer_scripts');
+
 // load all scripts enqueued by theme asynchronously
 function ct_ignite_add_async_script($url) {
 
