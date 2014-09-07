@@ -175,7 +175,7 @@ add_action( 'customize_register', 'ct_ignite_customize_logo_size' );
 function ct_ignite_customizer_social_media_array() {
 
 	// store social site names in array
-	$social_sites = array('twitter', 'facebook', 'google-plus', 'flickr', 'pinterest', 'youtube', 'vimeo', 'tumblr', 'dribbble', 'rss', 'linkedin', 'instagram', 'reddit', 'soundcloud', 'spotify', 'vine','yahoo', 'behance', 'codepen', 'delicious', 'stumbleupon', 'deviantart', 'digg', 'git', 'hacker-news', 'steam', 'vk');
+	$social_sites = array('twitter', 'facebook', 'google-plus', 'flickr', 'pinterest', 'youtube', 'vimeo', 'tumblr', 'dribbble', 'rss', 'linkedin', 'instagram', 'reddit', 'soundcloud', 'spotify', 'vine','yahoo', 'behance', 'codepen', 'delicious', 'stumbleupon', 'deviantart', 'digg', 'git', 'hacker-news', 'steam', 'email', 'vk');
 	
 	return $social_sites;
 
@@ -209,21 +209,40 @@ function ct_ignite_add_social_sites_customizer($wp_customize) {
 	
 	foreach($social_sites as $social_site) {
 
-		$wp_customize->add_setting( "$social_site", array(
+        if( $social_site == 'email' ) {
+
+            $wp_customize->add_setting( "$social_site", array(
                 'type'              => 'theme_mod',
                 'capability'        => 'edit_theme_options',
-                'sanitize_callback' => 'esc_url_raw'
-		) );
+                'sanitize_callback' => 'ct_ignite_sanitize_email'
+            ) );
 
-		$wp_customize->add_control(
-            new ct_ignite_url_input_control(
-            $wp_customize, $social_site, array(
-				'label'   => $social_site . " " . __("url:", 'ignite' ),
-				'section' => 'ct_ignite_social_settings',
-				'priority'=> $priority,
-		    )
-            )
-        );
+            $wp_customize->add_control(
+                $social_site, array(
+                    'label'   => $social_site . " " . __("address:", 'ignite' ),
+                    'section' => 'ct_ignite_social_settings',
+                    'priority'=> $priority,
+                )
+            );
+
+        } else {
+
+            $wp_customize->add_setting( "$social_site", array(
+                    'type'              => 'theme_mod',
+                    'capability'        => 'edit_theme_options',
+                    'sanitize_callback' => 'esc_url_raw'
+            ) );
+
+            $wp_customize->add_control(
+                new ct_ignite_url_input_control(
+                $wp_customize, $social_site, array(
+                    'label'   => $social_site . " " . __("url:", 'ignite' ),
+                    'section' => 'ct_ignite_social_settings',
+                    'priority'=> $priority,
+                )
+                )
+            );
+        }
 	
 		$priority = $priority + 5;
 	}
