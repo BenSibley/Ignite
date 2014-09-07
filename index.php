@@ -28,7 +28,27 @@ if ( have_posts() ) :
         }
         /* Archive */
         elseif( is_archive() ) {
-            get_template_part( 'content' );
+
+            /* check if bbPress is active */
+            if( function_exists( 'is_bbpress' ) ) {
+
+                /* bbPress forum list */
+                if( is_bbpress() ) {
+                    get_template_part( 'content/bbpress' );
+                }
+                /* normal archive */
+                else {
+                    get_template_part( 'content' );
+                }
+            }
+            /* Archive */
+            else {
+                get_template_part( 'content' );
+            }
+        }
+        /* bbPress */
+        elseif( is_bbpress() ) {
+            get_template_part( 'content/bbpress' );
         }
         /* Custom Post Type */
         else {
