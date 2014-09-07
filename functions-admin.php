@@ -471,6 +471,58 @@ function ct_ignite_additional_options( $wp_customize ) {
             )
         )
     );
+
+    class ct_ignite_Multi_Checkbox_Control extends WP_Customize_Control {
+        public $type = 'multi-checkbox';
+
+        public function render_content() {
+
+            if ( empty( $this->choices ) )
+                return;
+            ?>
+            <label>
+                <span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
+                <select id="comment-display-control" <?php $this->link(); ?> multiple="multiple" style="height: 100%;">
+                    <?php
+                    foreach ( $this->choices as $value => $label ) {
+                        $selected = ( in_array( $value, $this->value() ) ) ? selected( 1, 1, false ) : '';
+                        echo '<option value="' . esc_attr( $value ) . '"' . $selected . '>' . $label . '</option>';
+                    }
+                    ?>
+                </select>
+            </label>
+        <?php }
+    }
+
+    /* setting */
+    $wp_customize->add_setting(
+        'ct_ignite_comments_setting',
+        array(
+            'default'           => 'none',
+            'type'              => 'theme_mod',
+            'capability'        => 'edit_theme_options',
+            'sanitize_callback' => 'ct_ignite_sanitize_comments_setting',
+        )
+    );
+    /* control */
+    $wp_customize->add_control(
+        new ct_ignite_Multi_Checkbox_Control(
+            $wp_customize,
+            'ct_ignite_comments_setting',
+            array(
+                'label'          => __( 'Show comments on:', 'ignite' ),
+                'section'        => 'ct-additional-options',
+                'settings'       => 'ct_ignite_comments_setting',
+                'type'           => 'multi-checkbox',
+                'choices'        => array(
+                    'posts'   => __('Posts', 'ignite'),
+                    'pages'  => __('Pages', 'ignite'),
+                    'attachments'  => __('Attachments', 'ignite'),
+                    'none'  => __('Do not show', 'ignite')
+                )
+            )
+        )
+    );
 }
 add_action( 'customize_register', 'ct_ignite_additional_options' );
 
