@@ -798,6 +798,42 @@ function ct_ignite_customize_background_options( $wp_customize ) {
 }
 add_action( 'customize_register', 'ct_ignite_customize_background_options' );
 
+/* Footer Text Section */
+function ct_ignite_customizer_footer_text( $wp_customize ) {
+
+    // section
+    $wp_customize->add_section(
+        'ct-footer-text',
+        array(
+            'title'      => __( 'Footer Text', 'ignite' ),
+            'priority'   => 95,
+            'capability' => 'edit_theme_options'
+        )
+    );
+
+    // setting
+    $wp_customize->add_setting(
+        'ct_ignite_footer_text_setting',
+        array(
+            'type'              => 'theme_mod',
+            'capability'        => 'edit_theme_options',
+            'sanitize_callback' => 'esc_textarea',
+        )
+    );
+    // control
+    $wp_customize->add_control(
+        new ct_ignite_Textarea_Control(
+            $wp_customize,
+            'ct_ignite_footer_text_setting',
+            array(
+                'label'          => __( 'Edit the text in your footer', 'ignite' ),
+                'section'        => 'ct-footer-text',
+                'settings'       => 'ct_ignite_footer_text_setting',
+            )
+        ) );
+}
+add_action( 'customize_register', 'ct_ignite_customizer_footer_text' );
+
 function ct_ignite_user_profile_image_setting( $user ) { ?>
 
     <table id="profile-image-table" class="form-table">

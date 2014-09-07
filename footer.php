@@ -12,9 +12,19 @@
     <div class="design-credit">
         <span>
             <?php
-            $site_url = 'http://www.competethemes.com/ignite/';
-            $site_link = sprintf( __( '<a target="_blank" href="%s">Ignite WordPress Theme</a> by Compete Themes.', 'ignite' ), esc_url( $site_url ) );
-            echo $site_link;
+            /* Get the user's footer text input */
+            $user_footer_text = get_theme_mod('ct_ignite_footer_text_setting');
+
+            /* If it's not empty, output their text */
+            if( ! empty($user_footer_text) ) {
+                echo $user_footer_text;
+            }
+            /* Otherwise, output the default text */
+            else {
+                $site_url = 'http://www.competethemes.com/ignite/';
+                $footer_text = sprintf( __( '<a target="_blank" href="%s">Ignite WordPress Theme</a> by Compete Themes.', 'ignite' ), esc_url( $site_url ) );
+                echo $footer_text;
+            }
             ?>
         </span>
     </div>
