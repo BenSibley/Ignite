@@ -1,0 +1,16 @@
+/* bbpress styles */
+
+#ignite,
+#ignite-child {
+
+  div.bbp-search-form {
+    float: none;
+  }
+}
+#bbp_search_submit {
+  padding: 0.8em;
+}
+#bbp_search {
+  width: 100% !important;
+  margin: 0 $baseline-height / 4 $baseline-height / 2 0;
+}

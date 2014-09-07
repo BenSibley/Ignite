@@ -1830,3 +1830,18 @@ li.pingback {
 .gallery-col-30 .gallery-item {
   width: 3.33%;
 }
+
+/* bbpress styles */
+#ignite div.bbp-search-form,
+#ignite-child div.bbp-search-form {
+  float: none;
+}
+
+#bbp_search_submit {
+  padding: 0.8em;
+}
+
+#bbp_search {
+  width: 100% !important;
+  margin: 0 0.375em 0.75em 0;
+}
