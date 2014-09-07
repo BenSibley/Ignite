@@ -526,6 +526,19 @@ function ct_ignite_additional_options( $wp_customize ) {
 }
 add_action( 'customize_register', 'ct_ignite_additional_options' );
 
+// sets comment display values on new sites or sites updating to new version with this feature
+function compete_themes_set_comment_display_values() {
+
+    // get the current value
+    $current_settings = get_theme_mod( 'ct_ignite_comments_setting' );
+
+    // if empty, set to all
+    if( empty( $current_settings ) ) {
+        set_theme_mod( 'ct_ignite_comments_setting', array( 'posts', 'pages', 'attachments', 'none' ) );
+    }
+}
+add_action( 'init', 'compete_themes_set_comment_display_values' );
+
 /* sanitize the radio button input */
 function ct_ignite_sanitize_show_full_post_setting($input){
     $valid = array(
