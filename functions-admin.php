@@ -933,7 +933,7 @@ function ct_ignite_customizer_footer_text( $wp_customize ) {
         array(
             'type'              => 'theme_mod',
             'capability'        => 'edit_theme_options',
-            'sanitize_callback' => 'ct_ignite_sanitize_footer_text',
+            'sanitize_callback' => 'wp_kses_post',
         )
     );
     // control
@@ -949,19 +949,6 @@ function ct_ignite_customizer_footer_text( $wp_customize ) {
         ) );
 }
 add_action( 'customize_register', 'ct_ignite_customizer_footer_text' );
-
-/* sanitize the radio button input */
-function ct_ignite_sanitize_footer_text($input){
-
-    wp_kses( $input, array(
-        'a' => array(
-            'href' => array(),
-            'title' => array()
-        )
-    ) );
-
-    return $input;
-}
 
 function ct_ignite_user_profile_image_setting( $user ) { ?>
 
