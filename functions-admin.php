@@ -585,10 +585,10 @@ function ct_ignite_sanitize_comments_setting($input){
 
     // valid data
     $valid = array(
-        'posts'   => __('Posts', 'ignite-plus'),
-        'pages'  => __('Pages', 'ignite-plus'),
-        'attachments'  => __('Attachments', 'ignite-plus'),
-        'none'  => __('Do not show', 'ignite-plus')
+        'posts'   => __('Posts', 'ignite'),
+        'pages'  => __('Pages', 'ignite'),
+        'attachments'  => __('Attachments', 'ignite'),
+        'none'  => __('Do not show', 'ignite')
     );
 
     // loop through array
