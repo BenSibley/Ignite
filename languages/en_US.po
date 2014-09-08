@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ignite\n"
-"POT-Creation-Date: 2014-08-28 10:50-0500\n"
-"PO-Revision-Date: 2014-08-28 10:50-0500\n"
+"POT-Creation-Date: 2014-09-08 11:51-0500\n"
+"PO-Revision-Date: 2014-09-08 11:52-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.8\n"
+"X-Generator: Poedit 1.6.9\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
@@ -22,13 +22,13 @@ msgstr ""
 msgid "Be First to Comment"
 msgstr "Be First to Comment"
 
-#: comments.php:11 comments.php:29 comments.php:49 functions.php:661
-#: functions.php:670
+#: comments.php:11 comments.php:29 comments.php:49 functions.php:677
+#: functions.php:686
 msgid "One Comment"
 msgstr "One Comment"
 
-#: comments.php:11 comments.php:29 comments.php:49 functions.php:661
-#: functions.php:670
+#: comments.php:11 comments.php:29 comments.php:49 functions.php:677
+#: functions.php:686
 msgid "% Comments"
 msgstr "% Comments"
 
@@ -78,7 +78,7 @@ msgctxt "Published by whom?"
 msgid "by"
 msgstr "by"
 
-#: footer.php:16
+#: footer.php:25
 #, php-format
 msgid ""
 "<a target=\"_blank\" href=\"%s\">Ignite WordPress Theme</a> by Compete "
@@ -123,89 +123,114 @@ msgstr "Increase max-height"
 msgid "Social Media Icons"
 msgstr "Social Media Icons"
 
-#: functions-admin.php:221
+#: functions-admin.php:222
+msgid "address:"
+msgstr "address:"
+
+#: functions-admin.php:239
 msgid "url:"
 msgstr " url:"
 
-#: functions-admin.php:239
+#: functions-admin.php:266
 msgid "Post Author Info"
 msgstr "Post Author Info"
 
-#: functions-admin.php:258
+#: functions-admin.php:285
 msgid "Show post author info after posts?"
 msgstr "Show post author info after posts?"
 
-#: functions-admin.php:263 functions-admin.php:274 functions-admin.php:317
-#: functions-admin.php:342 functions-admin.php:367 functions-admin.php:378
+#: functions-admin.php:290 functions-admin.php:301 functions-admin.php:344
+#: functions-admin.php:369 functions-admin.php:394 functions-admin.php:405
 msgid "Show"
 msgstr "Show"
 
-#: functions-admin.php:264 functions-admin.php:275 functions-admin.php:318
-#: functions-admin.php:343 functions-admin.php:368 functions-admin.php:379
+#: functions-admin.php:291 functions-admin.php:302 functions-admin.php:345
+#: functions-admin.php:370 functions-admin.php:395 functions-admin.php:406
 msgid "Hide"
 msgstr "Hide"
 
-#: functions-admin.php:292
+#: functions-admin.php:319
 msgid "Post Meta"
 msgstr "Post Meta"
 
-#: functions-admin.php:312
+#: functions-admin.php:339
 msgid "Show categories after posts?"
 msgstr "Show categories after posts?"
 
-#: functions-admin.php:337
+#: functions-admin.php:364
 msgid "Show tags after posts?"
 msgstr "Show tags after posts?"
 
-#: functions-admin.php:362
+#: functions-admin.php:389
 msgid "Show comment count after posts?"
 msgstr "Show comment count after posts?"
 
-#: functions-admin.php:396
+#: functions-admin.php:423
 msgid "Additional Options"
 msgstr "Additional Options"
 
-#: functions-admin.php:415
+#: functions-admin.php:442
 msgid "Show full post on blog?"
 msgstr "Show full post on blog?"
 
-#: functions-admin.php:420 functions-admin.php:444 functions-admin.php:480
+#: functions-admin.php:447 functions-admin.php:471 functions-admin.php:572
 msgid "Yes"
 msgstr "Yes"
 
-#: functions-admin.php:421 functions-admin.php:445 functions-admin.php:481
+#: functions-admin.php:448 functions-admin.php:472 functions-admin.php:573
 msgid "No"
 msgstr "No"
 
-#: functions-admin.php:439
+#: functions-admin.php:466
 msgid "Show breadcrumbs?"
 msgstr "Show breadcrumbs?"
 
-#: functions-admin.php:511
+#: functions-admin.php:540
+msgid "Show comments on:"
+msgstr "Show comments on:"
+
+#: functions-admin.php:545 functions-admin.php:588
+msgid "Posts"
+msgstr "Posts"
+
+#: functions-admin.php:546 functions-admin.php:589
+#: library/classes/widget-pages.php:55 library/classes/widget-pages.php:62
+msgid "Pages"
+msgstr "Pages"
+
+#: functions-admin.php:547 functions-admin.php:590
+msgid "Attachments"
+msgstr "Attachments"
+
+#: functions-admin.php:548 functions-admin.php:591
+msgid "Do not show"
+msgstr "Do not show"
+
+#: functions-admin.php:627
 msgid "Custom CSS"
 msgstr "Custom CSS"
 
-#: functions-admin.php:531
+#: functions-admin.php:647
 msgid "Add Custom CSS Here:"
 msgstr "Add Custom CSS Here:"
 
-#: functions-admin.php:546
+#: functions-admin.php:662
 msgid "Font Family"
 msgstr "Font Family"
 
-#: functions-admin.php:549
+#: functions-admin.php:665
 msgid "The default font is \"Lusitana\"."
 msgstr "The default font is \"Lusitana\"."
 
-#: functions-admin.php:567
+#: functions-admin.php:683
 msgid "Site Font Family"
 msgstr "Site Font Family"
 
-#: functions-admin.php:605
+#: functions-admin.php:721
 msgid "Font Weight"
 msgstr "Font Weight"
 
-#: functions-admin.php:608
+#: functions-admin.php:724
 msgid ""
 "If you've just changed fonts, please save and refresh the page to update "
 "available weights."
@@ -213,45 +238,53 @@ msgstr ""
 "If you've just changed fonts, please save and refresh the page to update "
 "available weights."
 
-#: functions-admin.php:625
+#: functions-admin.php:741
 msgid "Site Font Weight"
 msgstr "Site Font Weight"
 
-#: functions-admin.php:718 library/extensions/theme-layouts.php:458
+#: functions-admin.php:834 library/extensions/theme-layouts.php:458
 #: library/extensions/theme-layouts.php:567
 #: library/extensions/theme-layouts.php:652
 msgid "Layout"
 msgstr "Layout"
 
-#: functions-admin.php:737
+#: functions-admin.php:853
 msgid "Pick Your Layout:"
 msgstr "Pick Your Layout:"
 
-#: functions-admin.php:742 functions-admin.php:753
+#: functions-admin.php:858 functions-admin.php:869
 msgid "Right sidebar"
 msgstr "Right sidebar"
 
-#: functions-admin.php:743 functions-admin.php:754
+#: functions-admin.php:859 functions-admin.php:870
 msgid "Left sidebar"
 msgstr "Left sidebar"
 
-#: functions-admin.php:771
+#: functions-admin.php:887
 msgid "Background"
 msgstr "Background"
 
-#: functions-admin.php:792
+#: functions-admin.php:908
 msgid "Background Color"
 msgstr "Background Color"
 
-#: functions-admin.php:806
+#: functions-admin.php:924
+msgid "Footer Text"
+msgstr "Footer Text"
+
+#: functions-admin.php:945
+msgid "Edit the text in your footer"
+msgstr "Edit the text in your footer"
+
+#: functions-admin.php:958
 msgid "Profile image"
 msgstr "Profile image"
 
-#: functions-admin.php:813
+#: functions-admin.php:965
 msgid "Upload Image"
 msgstr "Upload Image"
 
-#: functions-admin.php:814
+#: functions-admin.php:966
 msgid ""
 "Upload an image here to use instead of your Gravatar. Perfectly square "
 "images will not be cropped."
@@ -259,109 +292,109 @@ msgstr ""
 "Upload an image here to use instead of your Gravatar. Perfectly square "
 "images will not be cropped."
 
-#: functions.php:99
+#: functions.php:109
 msgid "Primary Sidebar"
 msgstr "Primary Sidebar"
 
-#: functions.php:101
+#: functions.php:111
 msgid "The main sidebar"
 msgstr "The main sidebar"
 
-#: functions.php:108
+#: functions.php:118
 msgid "Primary"
 msgstr "Primary"
 
-#: functions.php:154
+#: functions.php:170
 msgid "The Previous Post"
 msgstr "The Previous Post"
 
-#: functions.php:159
+#: functions.php:175
 msgid "The Next Post"
 msgstr "The Next Post"
 
-#: functions.php:165
+#: functions.php:181
 msgid "Previous Post"
 msgstr "Previous Post"
 
-#: functions.php:170 functions.php:182
+#: functions.php:186 functions.php:198
 msgid "Return to Blog"
 msgstr "Return to Blog"
 
-#: functions.php:171
+#: functions.php:187
 msgid "This is the oldest post"
 msgstr "This is the oldest post"
 
-#: functions.php:177
+#: functions.php:193
 msgid "Next Post"
 msgstr "Next Post"
 
-#: functions.php:183
+#: functions.php:199
 msgid "This is the newest post"
 msgstr "This is the newest post"
 
-#: functions.php:199
+#: functions.php:215
 #, php-format
 msgid "View all posts in %s"
 msgstr "View all posts in %s"
 
-#: functions.php:215
+#: functions.php:231
 #, php-format
 msgid "View all posts tagged %s"
 msgstr "View all posts tagged %s"
 
-#: functions.php:240
+#: functions.php:256
 msgid "said:"
 msgstr "said:"
 
-#: functions.php:244
+#: functions.php:260
 msgid "Your comment is awaiting moderation."
 msgstr "Your comment is awaiting moderation."
 
-#: functions.php:252
+#: functions.php:268
 msgid "Reply"
 msgstr "Reply"
 
-#: functions.php:269
+#: functions.php:285
 msgid "Your Name"
 msgstr "Your Name"
 
-#: functions.php:270
+#: functions.php:286
 msgid "Your Name*"
 msgstr "Your Name*"
 
-#: functions.php:276
+#: functions.php:292
 msgid "Your Email"
 msgstr "Your Email"
 
-#: functions.php:277
+#: functions.php:293
 msgid "Your Email*"
 msgstr "Your Email*"
 
-#: functions.php:283
+#: functions.php:299
 msgid "Your Website URL"
 msgstr "Your Website URL"
 
-#: functions.php:284
+#: functions.php:300
 msgid "Your URL"
 msgstr "Your URL"
 
-#: functions.php:296
+#: functions.php:312
 msgid "Your Comment"
 msgstr "Your Comment"
 
-#: functions.php:297
+#: functions.php:313
 msgid "Enter Your Comment"
 msgstr "Enter Your Comment"
 
-#: functions.php:340 functions.php:350
+#: functions.php:356 functions.php:366
 msgid "Read More"
 msgstr "Read More"
 
-#: functions.php:661
+#: functions.php:677
 msgid "Comments closed"
 msgstr "Comments closed"
 
-#: functions.php:670
+#: functions.php:686
 msgid "Leave a Comment"
 msgstr "Leave a Comment"
 
@@ -818,10 +851,6 @@ msgid ""
 msgstr ""
 "An advanced widget that gives you total control over the output of your page "
 "links."
-
-#: library/classes/widget-pages.php:55 library/classes/widget-pages.php:62
-msgid "Pages"
-msgstr "Pages"
 
 #: library/classes/widget-pages.php:190
 msgid "Author"
