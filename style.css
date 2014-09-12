@@ -537,6 +537,10 @@ a img {
     display: none;
   }
 
+  .menu-unset {
+    float: left;
+  }
+
   .menu-primary-items,
   .menu-unset ul {
     margin: 0;
