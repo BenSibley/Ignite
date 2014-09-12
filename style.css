@@ -593,6 +593,8 @@ a img {
     /* remove slight wiggle caused by opacity change */
     -webkit-transition: opacity 0.2s ease;
     transition: opacity 0.2s ease;
+    -webkit-box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.2);
   }
   .menu-primary-items ul li,
   .menu-unset ul ul li {
