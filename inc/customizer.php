@@ -137,27 +137,23 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
         'sanitize_callback' => 'ct_ignite_sanitize_integer'
     ) );
     // control - logo positioning top/bottom
-    $wp_customize->add_control(
-        new ct_ignite_number_input_control(
-            $wp_customize, 'logo_positioning_updown_setting', array(
-                'label' => __('Up/down', 'ignite'),
-                'section' => 'ct-logo-positioning',
-                'settings' => 'logo_positioning_updown_setting',
-                'type' => 'number',
-            )
+    $wp_customize->add_control( new ct_ignite_number_input_control(
+        $wp_customize, 'logo_positioning_updown_setting', array(
+            'label' => __('Up/down', 'ignite'),
+            'section' => 'ct-logo-positioning',
+            'settings' => 'logo_positioning_updown_setting',
+            'type' => 'number',
         )
-    );
+    ) );
     // control - logo positioning left/right
-    $wp_customize->add_control(
-        new ct_ignite_number_input_control(
-            $wp_customize, 'logo_positioning_leftright_setting', array(
-                'label' => __('Left/right', 'ignite'),
-                'section' => 'ct-logo-positioning',
-                'settings' => 'logo_positioning_leftright_setting',
-                'type' => 'number',
-            )
+    $wp_customize->add_control( new ct_ignite_number_input_control(
+        $wp_customize, 'logo_positioning_leftright_setting', array(
+            'label' => __('Left/right', 'ignite'),
+            'section' => 'ct-logo-positioning',
+            'settings' => 'logo_positioning_leftright_setting',
+            'type' => 'number',
         )
-    );
+    ) );
 
     /***** Logo Size *****/
 
@@ -179,27 +175,23 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
         'sanitize_callback' => 'ct_ignite_sanitize_integer'
     ) );
     // control - logo increase/decrease width
-    $wp_customize->add_control(
-        new ct_ignite_number_input_control(
-            $wp_customize, 'logo_size_width_setting', array(
-                'label' => __('Increase max-width', 'ignite'),
-                'section' => 'ct-logo-size',
-                'settings' => 'logo_size_width_setting',
-                'type' => 'number',
-            )
+    $wp_customize->add_control( new ct_ignite_number_input_control(
+        $wp_customize, 'logo_size_width_setting', array(
+            'label' => __('Increase max-width', 'ignite'),
+            'section' => 'ct-logo-size',
+            'settings' => 'logo_size_width_setting',
+            'type' => 'number',
         )
-    );
+    ) );
     // control - logo increase/decrease height
-    $wp_customize->add_control(
-        new ct_ignite_number_input_control(
-            $wp_customize, 'logo_size_height_setting', array(
-                'label' => __('Increase max-height', 'ignite'),
-                'section' => 'ct-logo-size',
-                'settings' => 'logo_size_height_setting',
-                'type' => 'number',
-            )
+    $wp_customize->add_control( new ct_ignite_number_input_control(
+        $wp_customize, 'logo_size_height_setting', array(
+            'label' => __('Increase max-height', 'ignite'),
+            'section' => 'ct-logo-size',
+            'settings' => 'logo_size_height_setting',
+            'type' => 'number',
         )
-    );
+    ) );
 
     /***** Social Media Icons *****/
 
