@@ -45,36 +45,37 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
         'description'    => 'Upload, position, and resize your logo',
     ) );
 
+    // Font panel
+    $wp_customize->add_panel( 'ct_ignite_font_panel', array(
+        'priority'       => 50,
+        'capability'     => 'edit_theme_options',
+        'title'          => 'Font',
+        'description'    => 'Choose a font family and font weight.',
+    ) );
+
 	/***** Logo Upload *****/
 
     // section
-	$wp_customize->add_section(
-		'ct-ignite-upload',
-		array(
-			'title'      => __( 'Logo Upload', 'ignite' ),
-			'priority'   => 30,
-			'capability' => 'edit_theme_options',
-            'panel'      => 'ct_ignite_logo_panel'
-		)
-	);
+	$wp_customize->add_section( 'ct-ignite-upload', array(
+        'title'      => __( 'Logo Upload', 'ignite' ),
+        'priority'   => 30,
+        'capability' => 'edit_theme_options',
+        'panel'      => 'ct_ignite_logo_panel'
+    ) );
 	// setting
-	$wp_customize->add_setting(
-		'logo_upload',
-		array(
-			'default'           => '',
-			'type'              => 'theme_mod',
-			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'esc_url_raw',
-		)
-	);
+	$wp_customize->add_setting( 'logo_upload', array(
+        'default'           => '',
+        'type'              => 'theme_mod',
+        'capability'        => 'edit_theme_options',
+        'sanitize_callback' => 'esc_url_raw',
+    ) );
     // control
 	$wp_customize->add_control(
 		new WP_Customize_Image_Control(
-			$wp_customize, 'logo_image',
-				array(
-					'label'    => __( 'Upload custom logo.', 'ignite' ),
-					'section'  => 'ct-ignite-upload',
-					'settings' => 'logo_upload',
+			$wp_customize, 'logo_image', array(
+                'label'    => __( 'Upload custom logo.', 'ignite' ),
+                'section'  => 'ct-ignite-upload',
+                'settings' => 'logo_upload',
 			)
 		)
 	);
@@ -82,36 +83,26 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
     /***** Logo Positioning *****/
 
     // section
-    $wp_customize->add_section(
-        'ct-logo-positioning',
-        array(
-            'title'      => __( 'Logo Positioning', 'ignite' ),
-            'priority'   => 31,
-            'capability' => 'edit_theme_options',
-            'panel'      => 'ct_ignite_logo_panel'
-        )
-    );
+    $wp_customize->add_section( 'ct-logo-positioning', array(
+        'title'      => __( 'Logo Positioning', 'ignite' ),
+        'priority'   => 31,
+        'capability' => 'edit_theme_options',
+        'panel'      => 'ct_ignite_logo_panel'
+    ) );
     // setting - logo positioning top/bottom
-    $wp_customize->add_setting(
-        'logo_positioning_updown_setting',
-        array(
-            'default' => 0,
-            'sanitize_callback' => 'ct_ignite_sanitize_integer'
-        )
-    );
+    $wp_customize->add_setting( 'logo_positioning_updown_setting', array(
+        'default' => 0,
+        'sanitize_callback' => 'ct_ignite_sanitize_integer'
+    ) );
     // setting - logo positioning left/right
-    $wp_customize->add_setting(
-        'logo_positioning_leftright_setting',
-        array(
-            'default' => 0,
-            'sanitize_callback' => 'ct_ignite_sanitize_integer'
-        )
-    );
+    $wp_customize->add_setting( 'logo_positioning_leftright_setting', array(
+        'default' => 0,
+        'sanitize_callback' => 'ct_ignite_sanitize_integer'
+    ) );
     // control - logo positioning top/bottom
     $wp_customize->add_control(
         new ct_ignite_number_input_control(
-            $wp_customize, 'logo_positioning_updown_setting',
-            array(
+            $wp_customize, 'logo_positioning_updown_setting', array(
                 'label' => __('Up/down', 'ignite'),
                 'section' => 'ct-logo-positioning',
                 'settings' => 'logo_positioning_updown_setting',
@@ -122,8 +113,7 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
     // control - logo positioning left/right
     $wp_customize->add_control(
         new ct_ignite_number_input_control(
-            $wp_customize, 'logo_positioning_leftright_setting',
-            array(
+            $wp_customize, 'logo_positioning_leftright_setting', array(
                 'label' => __('Left/right', 'ignite'),
                 'section' => 'ct-logo-positioning',
                 'settings' => 'logo_positioning_leftright_setting',
@@ -135,36 +125,26 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
     /***** Logo Size *****/
 
     // section
-    $wp_customize->add_section(
-        'ct-logo-size',
-        array(
-            'title'      => __( 'Logo Size', 'ignite' ),
-            'priority'   => 32,
-            'capability' => 'edit_theme_options',
-            'panel'      => 'ct_ignite_logo_panel'
-        )
-    );
+    $wp_customize->add_section( 'ct-logo-size', array(
+        'title'      => __( 'Logo Size', 'ignite' ),
+        'priority'   => 32,
+        'capability' => 'edit_theme_options',
+        'panel'      => 'ct_ignite_logo_panel'
+    ) );
     // setting - logo increase/decrease width
-    $wp_customize->add_setting(
-        'logo_size_width_setting',
-        array(
-            'default' => 0,
-            'sanitize_callback' => 'ct_ignite_sanitize_integer'
-        )
-    );
+    $wp_customize->add_setting( 'logo_size_width_setting', array(
+        'default' => 0,
+        'sanitize_callback' => 'ct_ignite_sanitize_integer'
+    ) );
     // setting - logo increase/decrease height
-    $wp_customize->add_setting(
-        'logo_size_height_setting',
-        array(
-            'default' => 0,
-            'sanitize_callback' => 'ct_ignite_sanitize_integer'
-        )
-    );
+    $wp_customize->add_setting( 'logo_size_height_setting', array(
+        'default' => 0,
+        'sanitize_callback' => 'ct_ignite_sanitize_integer'
+    ) );
     // control - logo increase/decrease width
     $wp_customize->add_control(
         new ct_ignite_number_input_control(
-            $wp_customize, 'logo_size_width_setting',
-            array(
+            $wp_customize, 'logo_size_width_setting', array(
                 'label' => __('Increase max-width', 'ignite'),
                 'section' => 'ct-logo-size',
                 'settings' => 'logo_size_width_setting',
@@ -175,8 +155,7 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
     // control - logo increase/decrease height
     $wp_customize->add_control(
         new ct_ignite_number_input_control(
-            $wp_customize, 'logo_size_height_setting',
-            array(
+            $wp_customize, 'logo_size_height_setting', array(
                 'label' => __('Increase max-height', 'ignite'),
                 'section' => 'ct-logo-size',
                 'settings' => 'logo_size_height_setting',
@@ -194,11 +173,9 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
     $priority = 5;
 
     // section
-    $wp_customize->add_section(
-        'ct_ignite_social_settings',
-        array(
-            'title'          => __('Social Media Icons', 'ignite'),
-            'priority'       => 35,
+    $wp_customize->add_section( 'ct_ignite_social_settings', array(
+        'title'          => __('Social Media Icons', 'ignite'),
+        'priority'       => 35,
     ) );
 
     // create a setting and control for each social site
@@ -206,30 +183,23 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 
         if( $social_site == 'email' ) {
 
-            $wp_customize->add_setting(
-                "$social_site",
-                array(
-                    'type'              => 'theme_mod',
-                    'capability'        => 'edit_theme_options',
-                    'sanitize_callback' => 'ct_ignite_sanitize_email'
+            $wp_customize->add_setting( "$social_site", array(
+                'type'              => 'theme_mod',
+                'capability'        => 'edit_theme_options',
+                'sanitize_callback' => 'ct_ignite_sanitize_email'
             ) );
 
-            $wp_customize->add_control(
-                $social_site,
-                array(
-                    'label'   => $social_site . " " . __("address:", 'ignite' ),
-                    'section' => 'ct_ignite_social_settings',
-                    'priority'=> $priority,
-                )
-            );
+            $wp_customize->add_control( $social_site, array(
+                'label'   => $social_site . " " . __("address:", 'ignite' ),
+                'section' => 'ct_ignite_social_settings',
+                'priority'=> $priority,
+            ) );
         } else {
 
-            $wp_customize->add_setting(
-                "$social_site",
-                array(
-                    'type'              => 'theme_mod',
-                    'capability'        => 'edit_theme_options',
-                    'sanitize_callback' => 'esc_url_raw'
+            $wp_customize->add_setting( "$social_site", array(
+                'type'              => 'theme_mod',
+                'capability'        => 'edit_theme_options',
+                'sanitize_callback' => 'esc_url_raw'
             ) );
 
             $wp_customize->add_control(
@@ -246,6 +216,179 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
         $priority = $priority + 5;
     }
 
+    /***** Layout *****/
+
+    // section
+    $wp_customize->add_section( 'ct-layout', array(
+        'title'      => __( 'Layout', 'ignite' ),
+        'priority'   => 40,
+        'capability' => 'edit_theme_options'
+    ) );
+    // setting
+    $wp_customize->add_setting( 'ct_ignite_layout_settings', array(
+        'default'           => 'right',
+        'type'              => 'theme_mod',
+        'capability'        => 'edit_theme_options',
+        'sanitize_callback' => 'ct_ignite_sanitize_layout_settings',
+    ) );
+    // control
+    $wp_customize->add_control( 'ct_ignite_sidebar_layout', array(
+        'label'          => __( 'Pick Your Layout:', 'ignite' ),
+        'section'        => 'ct-layout',
+        'settings'       => 'ct_ignite_layout_settings',
+        'type'           => 'radio',
+        'choices'        => array(
+            'right'   => __('Right sidebar', 'ignite'),
+            'left'  => __('Left sidebar', 'ignite'),
+        )
+    ) );
+
+    /***** Font Family *****/
+
+    // section
+    $wp_customize->add_section( 'ct-font-family', array(
+        'title'       => __( 'Font Family', 'ignite' ),
+        'priority'    => 55,
+        'capability'  => 'edit_theme_options',
+        'description' => __('The default font is "Lusitana".', 'ignite'),
+        'panel'       => 'ct_ignite_font_panel'
+    ) );
+    // setting
+    $wp_customize->add_setting( 'ct_ignite_font_family_settings', array(
+        'default'           => 'Lusitana',
+        'type'              => 'theme_mod',
+        'capability'        => 'edit_theme_options',
+        'sanitize_callback' => 'ct_ignite_sanitize_google_font_family'
+    ) );
+    // control
+    $wp_customize->add_control( 'ct_ignite_font_family_settings', array(
+        'type'     => 'select',
+        'label'    => __( 'Site Font Family', 'ignite' ),
+        'section'  => 'ct-font-family',
+        'choices'  => array(
+            'Lusitana' => 'Lusitana',
+            'Roboto' => 'Roboto',
+            'Lato' => 'Lato',
+            'Droid Serif' => 'Droid Serif',
+            'Roboto Slab' => 'Roboto Slab'
+        )
+    ) );
+
+    /***** Font Weight *****/
+
+    // get the weights available based on the current font
+    $font_weights = ct_ignite_get_available_font_weights();
+
+    // section
+    $wp_customize->add_section( 'ct-font-weight', array(
+        'title'       => __( 'Font Weight', 'ignite' ),
+        'priority'    => 56,
+        'capability'  => 'edit_theme_options',
+        'description' => __("If you've just changed fonts, please save and refresh the page to update available weights.", "ignite"),
+        'panel'       => 'ct_ignite_font_panel'
+    ) );
+    // setting
+    $wp_customize->add_setting( 'ct_ignite_font_weight_settings', array(
+        'default'           => 'regular',
+        'type'              => 'theme_mod',
+        'capability'        => 'edit_theme_options',
+        'sanitize_callback' => 'ct_ignite_sanitize_google_font_weight'
+    ) );
+    // control
+    $wp_customize->add_control( 'ct_ignite_font_weight_settings', array(
+        'type'     => 'select',
+        'label'    => __( 'Site Font Weight', 'ignite' ),
+        'section'  => 'ct-font-weight',
+        'choices'  => $font_weights
+    ) );
+
+    /***** Background *****/
+
+    // section
+    $wp_customize->add_section( 'ct-background', array(
+        'title'      => __( 'Background', 'ignite' ),
+        'priority'   => 60,
+        'capability' => 'edit_theme_options'
+    ) );
+    // setting
+    $wp_customize->add_setting( 'ct_ignite_background_color_setting', array(
+        'default'           => '#eeede8',
+        'type'              => 'theme_mod',
+        'capability'        => 'edit_theme_options',
+        'sanitize_callback' => 'sanitize_hex_color',
+    ) );
+    // control
+    $wp_customize->add_control( new WP_Customize_Color_Control(
+        $wp_customize, 'ct_ignite_background_color', array(
+            'label'      => __( 'Background Color', 'ignite' ),
+            'section'    => 'ct-background',
+            'settings'   => 'ct_ignite_background_color_setting',
+            'priority'       => 10,
+        )
+    ) );
+
+    /***** Post Meta Display *****/
+
+    // section
+    $wp_customize->add_section( 'ct-post-meta', array(
+        'title'      => __( 'Post Meta', 'ignite' ),
+        'priority'   => 70,
+        'capability' => 'edit_theme_options'
+    ) );
+    // setting - category
+    $wp_customize->add_setting( 'ct_ignite_post_meta_categories_settings', array(
+        'default'           => 'show',
+        'type'              => 'theme_mod',
+        'capability'        => 'edit_theme_options',
+        'sanitize_callback' => 'ct_ignite_sanitize_post_meta_settings',
+    ) );
+    // control - category
+    $wp_customize->add_control( 'ct_ignite_post_meta_categories_settings', array(
+        'label'          => __( 'Show categories after posts?', 'ignite' ),
+        'section'        => 'ct-post-meta',
+        'settings'       => 'ct_ignite_post_meta_categories_settings',
+        'type'           => 'radio',
+        'choices'        => array(
+            'show'   => __('Show', 'ignite'),
+            'hide'  => __('Hide', 'ignite')
+        )
+    ) );
+    // setting - tags
+    $wp_customize->add_setting( 'ct_ignite_post_meta_tags_settings', array(
+        'default'           => 'show',
+        'type'              => 'theme_mod',
+        'capability'        => 'edit_theme_options',
+        'sanitize_callback' => 'ct_ignite_sanitize_post_meta_settings',
+    ) );
+    // control - tags
+    $wp_customize->add_control( 'ct_ignite_post_meta_tags_settings', array(
+        'label'          => __( 'Show tags after posts?', 'ignite' ),
+        'section'        => 'ct-post-meta',
+        'settings'       => 'ct_ignite_post_meta_tags_settings',
+        'type'           => 'radio',
+        'choices'        => array(
+            'show'   => __('Show', 'ignite'),
+            'hide'  => __('Hide', 'ignite')
+        )
+    ) );
+    // setting - comments
+    $wp_customize->add_setting( 'ct_ignite_post_meta_comments_settings', array(
+        'default'           => 'hide',
+        'type'              => 'theme_mod',
+        'capability'        => 'edit_theme_options',
+        'sanitize_callback' => 'ct_ignite_sanitize_post_meta_settings',
+    ) );
+    // control - comments
+    $wp_customize->add_control( 'ct_ignite_post_meta_comments_settings', array(
+        'label'          => __( 'Show comment count after posts?', 'ignite' ),
+        'section'        => 'ct-post-meta',
+        'settings'       => 'ct_ignite_post_meta_comments_settings',
+        'type'           => 'radio',
+        'choices'        => array(
+            'show'   => __('Show', 'ignite'),
+            'hide'  => __('Hide', 'ignite')
+        )
+    ) );
 }
 
 /***** Custom Sanitization Functions *****/
@@ -281,44 +424,7 @@ function ct_ignite_customizer_social_media_array() {
 
 
 
-/* show/hide the post author info after posts */
-function ct_ignite_show_author_meta( $wp_customize ) {
 
-    /* Add the layout section. */
-    $wp_customize->add_section(
-        'ct-author-meta',
-        array(
-            'title'      => __( 'Post Author Info', 'ignite' ),
-            'priority'   => 70,
-            'capability' => 'edit_theme_options'
-        )
-    );
-    /* setting */
-    $wp_customize->add_setting(
-        'ct_ignite_author_meta_settings',
-        array(
-            'default'           => 'show',
-            'type'              => 'theme_mod',
-            'capability'        => 'edit_theme_options',
-            'sanitize_callback' => 'ct_ignite_sanitize_author_meta_settings',
-        )
-    );
-    /* control */
-    $wp_customize->add_control(
-        'ct_ignite_show_author_meta',
-        array(
-            'label'          => __( 'Show post author info after posts?', 'ignite' ),
-            'section'        => 'ct-author-meta',
-            'settings'       => 'ct_ignite_author_meta_settings',
-            'type'           => 'radio',
-            'choices'        => array(
-                'show'   => __('Show', 'ignite'),
-                'hide'  => __('Hide', 'ignite')
-            )
-        )
-    );
-}
-add_action( 'customize_register', 'ct_ignite_show_author_meta' );
 
 /* sanitize the radio button input */
 function ct_ignite_sanitize_author_meta_settings($input){
@@ -334,95 +440,6 @@ function ct_ignite_sanitize_author_meta_settings($input){
     }
 }
 
-/* show/hide various post meta after posts */
-function ct_ignite_post_meta_customizer( $wp_customize ) {
-
-    /* section */
-    $wp_customize->add_section(
-        'ct-post-meta',
-        array(
-            'title'      => __( 'Post Meta', 'ignite' ),
-            'priority'   => 75,
-            'capability' => 'edit_theme_options'
-        )
-    );
-
-    /* setting */
-    $wp_customize->add_setting(
-        'ct_ignite_post_meta_categories_settings',
-        array(
-            'default'           => 'show',
-            'type'              => 'theme_mod',
-            'capability'        => 'edit_theme_options',
-            'sanitize_callback' => 'ct_ignite_sanitize_post_meta_settings',
-        )
-    );
-    /* control */
-    $wp_customize->add_control(
-        'ct_ignite_post_meta_categories_settings',
-        array(
-            'label'          => __( 'Show categories after posts?', 'ignite' ),
-            'section'        => 'ct-post-meta',
-            'settings'       => 'ct_ignite_post_meta_categories_settings',
-            'type'           => 'radio',
-            'choices'        => array(
-                'show'   => __('Show', 'ignite'),
-                'hide'  => __('Hide', 'ignite')
-            )
-        )
-    );
-
-    /* setting */
-    $wp_customize->add_setting(
-        'ct_ignite_post_meta_tags_settings',
-        array(
-            'default'           => 'show',
-            'type'              => 'theme_mod',
-            'capability'        => 'edit_theme_options',
-            'sanitize_callback' => 'ct_ignite_sanitize_post_meta_settings',
-        )
-    );
-    /* control */
-    $wp_customize->add_control(
-        'ct_ignite_post_meta_tags_settings',
-        array(
-            'label'          => __( 'Show tags after posts?', 'ignite' ),
-            'section'        => 'ct-post-meta',
-            'settings'       => 'ct_ignite_post_meta_tags_settings',
-            'type'           => 'radio',
-            'choices'        => array(
-                'show'   => __('Show', 'ignite'),
-                'hide'  => __('Hide', 'ignite')
-            )
-        )
-    );
-
-    /* setting */
-    $wp_customize->add_setting(
-        'ct_ignite_post_meta_comments_settings',
-        array(
-            'default'           => 'hide',
-            'type'              => 'theme_mod',
-            'capability'        => 'edit_theme_options',
-            'sanitize_callback' => 'ct_ignite_sanitize_post_meta_settings',
-        )
-    );
-    /* control */
-    $wp_customize->add_control(
-        'ct_ignite_post_meta_comments_settings',
-        array(
-            'label'          => __( 'Show comment count after posts?', 'ignite' ),
-            'section'        => 'ct-post-meta',
-            'settings'       => 'ct_ignite_post_meta_comments_settings',
-            'type'           => 'radio',
-            'choices'        => array(
-                'show'   => __('Show', 'ignite'),
-                'hide'  => __('Hide', 'ignite')
-            )
-        )
-    );
-}
-add_action( 'customize_register', 'ct_ignite_post_meta_customizer' );
 
 /* sanitize the radio button input */
 function ct_ignite_sanitize_post_meta_settings($input){
@@ -495,6 +512,31 @@ function ct_ignite_additional_options( $wp_customize ) {
             'choices'        => array(
                 'yes'   => __('Yes', 'ignite'),
                 'no'  => __('No', 'ignite')
+            )
+        )
+    );
+
+    /* setting */
+    $wp_customize->add_setting(
+        'ct_ignite_author_meta_settings',
+        array(
+            'default'           => 'show',
+            'type'              => 'theme_mod',
+            'capability'        => 'edit_theme_options',
+            'sanitize_callback' => 'ct_ignite_sanitize_author_meta_settings',
+        )
+    );
+    /* control */
+    $wp_customize->add_control(
+        'ct_ignite_show_author_meta',
+        array(
+            'label'          => __( 'Show post author info after posts?', 'ignite' ),
+            'section'        => 'ct-additional-options',
+            'settings'       => 'ct_ignite_author_meta_settings',
+            'type'           => 'radio',
+            'choices'        => array(
+                'show'   => __('Show', 'ignite'),
+                'hide'  => __('Hide', 'ignite')
             )
         )
     );
@@ -676,47 +718,7 @@ function ct_ignite_customizer_custom_css( $wp_customize ) {
 }
 add_action( 'customize_register', 'ct_ignite_customizer_custom_css' );
 
-/* allow users to change the font to a Google Webfont */
-function ct_ignite_customize_font_family_options( $wp_customize ) {
 
-    /* section. */
-    $wp_customize->add_section(
-        'ct-font-family',
-        array(
-            'title'       => __( 'Font Family', 'ignite' ),
-            'priority'    => 55,
-            'capability'  => 'edit_theme_options',
-            'description' => __('The default font is "Lusitana".', 'ignite')
-        )
-    );
-
-    /* font selection setting */
-    $wp_customize->add_setting(
-        'ct_ignite_font_family_settings',
-        array(
-            'default'           => 'Lusitana',
-            'type'              => 'theme_mod',
-            'capability'        => 'edit_theme_options',
-            'sanitize_callback' => 'ct_ignite_sanitize_google_font_family'
-        )
-    );
-
-    /* control for font selection */
-    $wp_customize->add_control( 'ct_ignite_font_family_settings', array(
-        'type'     => 'select',
-        'label'    => __( 'Site Font Family', 'ignite' ),
-        'section'  => 'ct-font-family',
-        'choices'  => array(
-            'Lusitana' => 'Lusitana',
-            'Roboto' => 'Roboto',
-            'Lato' => 'Lato',
-            'Droid Serif' => 'Droid Serif',
-            'Roboto Slab' => 'Roboto Slab'
-        )
-    ));
-
-}
-add_action( 'customize_register', 'ct_ignite_customize_font_family_options' );
 
 function ct_ignite_sanitize_google_font_family($input){
 
@@ -735,39 +737,6 @@ function ct_ignite_sanitize_google_font_family($input){
     }
 }
 
-/* allow users to change the font weights */
-function ct_ignite_customize_font_weight_options( $wp_customize ) {
-
-    /* section. */
-    $wp_customize->add_section(
-        'ct-font-weight',
-        array(
-            'title'       => __( 'Font Weight', 'ignite' ),
-            'priority'    => 56,
-            'capability'  => 'edit_theme_options',
-            'description' => __("If you've just changed fonts, please save and refresh the page to update available weights.", "ignite")
-        )
-    );
-
-    // get the weights available based on the current font
-    $font_weights = ct_ignite_get_available_font_weights();
-
-    /* font weight setting */
-    $wp_customize->add_setting( 'ct_ignite_font_weight_settings', array(
-        'default'           => 'regular',
-        'type'              => 'theme_mod',
-        'capability'        => 'edit_theme_options',
-        'sanitize_callback' => 'ct_ignite_sanitize_google_font_weight'
-    ));
-    /* font weight control */
-    $wp_customize->add_control( 'ct_ignite_font_weight_settings', array(
-        'type'     => 'select',
-        'label'    => __( 'Site Font Weight', 'ignite' ),
-        'section'  => 'ct-font-weight',
-        'choices'  => $font_weights
-    ));
-}
-add_action( 'customize_register', 'ct_ignite_customize_font_weight_options' );
 
 function ct_ignite_get_available_font_weights(){
 
@@ -849,44 +818,6 @@ function ct_ignite_sanitize_google_font_weight($input){
     }
 }
 
-function ct_ignite_customize_layout_options( $wp_customize ) {
-
-    /* section */
-    $wp_customize->add_section(
-        'ct-layout',
-        array(
-            'title'      => __( 'Layout', 'ignite' ),
-            'priority'   => 50,
-            'capability' => 'edit_theme_options'
-        )
-    );
-    /* setting */
-    $wp_customize->add_setting(
-        'ct_ignite_layout_settings',
-        array(
-            'default'           => 'right',
-            'type'              => 'theme_mod',
-            'capability'        => 'edit_theme_options',
-            'sanitize_callback' => 'ct_ignite_sanitize_layout_settings',
-        )
-    );
-    /* control */
-    $wp_customize->add_control(
-        'ct_ignite_sidebar_layout',
-        array(
-            'label'          => __( 'Pick Your Layout:', 'ignite' ),
-            'section'        => 'ct-layout',
-            'settings'       => 'ct_ignite_layout_settings',
-            'type'           => 'radio',
-            'choices'        => array(
-                'right'   => __('Right sidebar', 'ignite'),
-                'left'  => __('Left sidebar', 'ignite'),
-            )
-        )
-    );
-}
-add_action( 'customize_register', 'ct_ignite_customize_layout_options' );
-
 /* sanitize the radio button input */
 function ct_ignite_sanitize_layout_settings($input){
     $valid = array(
@@ -900,43 +831,6 @@ function ct_ignite_sanitize_layout_settings($input){
         return '';
     }
 }
-
-/* custom background options */
-function ct_ignite_customize_background_options( $wp_customize ) {
-
-    /* section */
-    $wp_customize->add_section(
-        'ct-background',
-        array(
-            'title'      => __( 'Background', 'ignite' ),
-            'priority'   => 60,
-            'capability' => 'edit_theme_options'
-        )
-    );
-    /* background color setting. */
-    $wp_customize->add_setting(
-        'ct_ignite_background_color_setting',
-        array(
-            'default'           => '#eeede8',
-            'type'              => 'theme_mod',
-            'capability'        => 'edit_theme_options',
-            'sanitize_callback' => 'sanitize_hex_color',
-        )
-    );
-    /* background color control */
-    $wp_customize->add_control(
-        new WP_Customize_Color_Control(
-            $wp_customize,
-            'ct_ignite_background_color',
-            array(
-                'label'      => __( 'Background Color', 'ignite' ),
-                'section'    => 'ct-background',
-                'settings'   => 'ct_ignite_background_color_setting',
-                'priority'       => 10,
-            ) )
-    );
-}
-add_action( 'customize_register', 'ct_ignite_customize_background_options' );
 
 /* Footer Text Section */
 function ct_ignite_customizer_footer_text( $wp_customize ) {
