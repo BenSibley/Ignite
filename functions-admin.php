@@ -7,7 +7,7 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 
     /***** Add Custom Controls *****/
 
-    // create number input
+    // create number input control
     class ct_ignite_number_input_control extends WP_Customize_Control {
         public $type = 'number';
 
@@ -21,7 +21,7 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
         }
     }
 
-    // create url input
+    // create url input control
     class ct_ignite_url_input_control extends WP_Customize_Control {
         public $type = 'url';
 
@@ -35,7 +35,21 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
         }
     }
 
-    // create multi-checkbox/select for comment display
+    // create textarea control
+    class ct_ignite_Textarea_Control extends WP_Customize_Control {
+        public $type = 'textarea';
+
+        public function render_content() {
+            ?>
+            <label>
+                <span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
+                <textarea rows="8" style="width:100%;" <?php $this->link(); ?>><?php echo esc_textarea( $this->value() ); ?></textarea>
+            </label>
+        <?php
+        }
+    }
+
+    // create multi-checkbox/select control
     class ct_ignite_Multi_Checkbox_Control extends WP_Customize_Control {
         public $type = 'multi-checkbox';
 
@@ -363,7 +377,7 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
         'default'           => 'show',
         'type'              => 'theme_mod',
         'capability'        => 'edit_theme_options',
-        'sanitize_callback' => 'ct_ignite_sanitize_post_meta_settings',
+        'sanitize_callback' => 'ct_ignite_sanitize_show_hide_setting',
     ) );
     // control - category
     $wp_customize->add_control( 'ct_ignite_post_meta_categories_settings', array(
@@ -381,7 +395,7 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
         'default'           => 'show',
         'type'              => 'theme_mod',
         'capability'        => 'edit_theme_options',
-        'sanitize_callback' => 'ct_ignite_sanitize_post_meta_settings',
+        'sanitize_callback' => 'ct_ignite_sanitize_show_hide_setting',
     ) );
     // control - tags
     $wp_customize->add_control( 'ct_ignite_post_meta_tags_settings', array(
@@ -399,7 +413,7 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
         'default'           => 'hide',
         'type'              => 'theme_mod',
         'capability'        => 'edit_theme_options',
-        'sanitize_callback' => 'ct_ignite_sanitize_post_meta_settings',
+        'sanitize_callback' => 'ct_ignite_sanitize_show_hide_setting',
     ) );
     // control - comments
     $wp_customize->add_control( 'ct_ignite_post_meta_comments_settings', array(
@@ -443,6 +457,131 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
             )
         )
     ) );
+
+    /***** Footer Text *****/
+
+    // section
+    $wp_customize->add_section( 'ct-footer-text', array(
+        'title'      => __( 'Footer Text', 'ignite' ),
+        'priority'   => 80,
+        'capability' => 'edit_theme_options'
+    ) );
+    // setting
+    $wp_customize->add_setting( 'ct_ignite_footer_text_setting', array(
+        'type'              => 'theme_mod',
+        'capability'        => 'edit_theme_options',
+        'sanitize_callback' => 'wp_kses_post',
+    ) );
+    // control
+    $wp_customize->add_control( new ct_ignite_Textarea_Control(
+        $wp_customize, 'ct_ignite_footer_text_setting', array(
+            'label'          => __( 'Edit the text in your footer', 'ignite' ),
+            'section'        => 'ct-footer-text',
+            'settings'       => 'ct_ignite_footer_text_setting',
+        )
+    ) );
+
+    /***** Custom CSS *****/
+
+    // section
+    $wp_customize->add_section( 'ct-custom-css', array(
+        'title'      => __( 'Custom CSS', 'ignite' ),
+        'priority'   => 85,
+        'capability' => 'edit_theme_options'
+    ) );
+    // setting
+    $wp_customize->add_setting( 'ct_ignite_custom_css_setting', array(
+        'type'              => 'theme_mod',
+        'capability'        => 'edit_theme_options',
+        'sanitize_callback' => 'esc_textarea',
+    ) );
+    // control
+    $wp_customize->add_control( new ct_ignite_Textarea_Control(
+        $wp_customize, 'ct_ignite_custom_css_setting', array(
+            'label'          => __( 'Add Custom CSS Here:', 'ignite' ),
+            'section'        => 'ct-custom-css',
+            'settings'       => 'ct_ignite_custom_css_setting',
+        )
+    ) );
+
+    /***** Additional Options *****/
+
+    // section
+    $wp_customize->add_section( 'ct-additional-options', array(
+        'title'      => __( 'Additional Options', 'ignite' ),
+        'priority'   => 90,
+        'capability' => 'edit_theme_options'
+    ) );
+    // setting - show full post
+    $wp_customize->add_setting( 'ct_ignite_show_full_post_setting', array(
+        'default'           => 'no',
+        'type'              => 'theme_mod',
+        'capability'        => 'edit_theme_options',
+        'sanitize_callback' => 'ct_ignite_sanitize_yes_no_setting',
+    ) );
+    // control - show full post
+    $wp_customize->add_control( 'ct_ignite_show_full_post', array(
+        'label'          => __( 'Show full post on blog?', 'ignite' ),
+        'section'        => 'ct-additional-options',
+        'settings'       => 'ct_ignite_show_full_post_setting',
+        'type'           => 'radio',
+        'choices'        => array(
+            'yes'   => __('Yes', 'ignite'),
+            'no'  => __('No', 'ignite')
+        )
+    ) );
+    // setting - show/hide breadcrumbs
+    $wp_customize->add_setting( 'ct_ignite_show_breadcrumbs_setting', array(
+        'default'           => 'yes',
+        'type'              => 'theme_mod',
+        'capability'        => 'edit_theme_options',
+        'sanitize_callback' => 'ct_ignite_sanitize_yes_no_setting',
+    ) );
+    // control - show/hide breadcrumbs
+    $wp_customize->add_control( 'ct_ignite_show_breadcrumbs_setting', array(
+        'label'          => __( 'Show breadcrumbs?', 'ignite' ),
+        'section'        => 'ct-additional-options',
+        'settings'       => 'ct_ignite_show_breadcrumbs_setting',
+        'type'           => 'radio',
+        'choices'        => array(
+            'yes'   => __('Yes', 'ignite'),
+            'no'  => __('No', 'ignite')
+        )
+    ) );
+    // setting - show/hide author meta
+    $wp_customize->add_setting( 'ct_ignite_author_meta_settings', array(
+        'default'           => 'show',
+        'type'              => 'theme_mod',
+        'capability'        => 'edit_theme_options',
+        'sanitize_callback' => 'ct_ignite_sanitize_show_hide_setting',
+    ) );
+    // control - show/hide author meta
+    $wp_customize->add_control( 'ct_ignite_show_author_meta', array(
+        'label'          => __( 'Show post author info after posts?', 'ignite' ),
+        'section'        => 'ct-additional-options',
+        'settings'       => 'ct_ignite_author_meta_settings',
+        'type'           => 'radio',
+        'choices'        => array(
+            'show'   => __('Show', 'ignite'),
+            'hide'  => __('Hide', 'ignite')
+        )
+    ) );
+    // setting - excerpt length
+    $wp_customize->add_setting( 'ct_ignite_excerpt_length_settings', array(
+        'default'           => 30,
+        'type'              => 'theme_mod',
+        'capability'        => 'edit_theme_options',
+        'sanitize_callback' => 'absint',
+    ) );
+    // control - excerpt length
+    $wp_customize->add_control( new ct_ignite_number_input_control(
+        $wp_customize, 'ct_ignite_excerpt_length_settings', array(
+            'label' => 'Word count in automatic excerpts',
+            'section' => 'ct-additional-options',
+            'settings' => 'ct_ignite_excerpt_length_settings',
+            'type' => 'number',
+        )
+    ) );
 }
 
 /***** Custom Sanitization Functions *****/
@@ -464,27 +603,11 @@ function ct_ignite_sanitize_email( $input ) {
     return sanitize_email( $input );
 }
 
-
-
-
-// create social media site array used in other functions
-function ct_ignite_customizer_social_media_array() {
-
-	// store social site names in array
-	$social_sites = array('twitter', 'facebook', 'google-plus', 'flickr', 'pinterest', 'youtube', 'vimeo', 'tumblr', 'dribbble', 'rss', 'linkedin', 'instagram', 'reddit', 'soundcloud', 'spotify', 'vine','yahoo', 'behance', 'codepen', 'delicious', 'stumbleupon', 'deviantart', 'digg', 'git', 'hacker-news', 'steam', 'vk', 'academia', 'email');
-	
-	return $social_sites;
-}
-
-
-
-
-
-/* sanitize the radio button input */
-function ct_ignite_sanitize_author_meta_settings($input){
+// sanitize layout selection
+function ct_ignite_sanitize_layout_settings($input){
     $valid = array(
-        'show'   => __('Show', 'ignite'),
-        'hide'  => __('Hide', 'ignite')
+        'right'   => __('Right sidebar', 'ignite'),
+        'left'  => __('Left sidebar', 'ignite'),
     );
 
     if ( array_key_exists( $input, $valid ) ) {
@@ -494,12 +617,15 @@ function ct_ignite_sanitize_author_meta_settings($input){
     }
 }
 
+// Sanitize font family
+function ct_ignite_sanitize_google_font_family($input){
 
-/* sanitize the radio button input */
-function ct_ignite_sanitize_post_meta_settings($input){
     $valid = array(
-        'show'   => __('Show', 'ignite'),
-        'hide'  => __('Hide', 'ignite')
+        'Lusitana' => 'Lusitana',
+        'Roboto' => 'Roboto',
+        'Lato' => 'Lato',
+        'Droid Serif' => 'Droid Serif',
+        'Roboto Slab' => 'Roboto Slab'
     );
 
     if ( array_key_exists( $input, $valid ) ) {
@@ -509,139 +635,13 @@ function ct_ignite_sanitize_post_meta_settings($input){
     }
 }
 
-/* additional options section */
-function ct_ignite_additional_options( $wp_customize ) {
+// sanitize font weight
+function ct_ignite_sanitize_google_font_weight($input){
 
-    /* section */
-    $wp_customize->add_section(
-        'ct-additional-options',
-        array(
-            'title'      => __( 'Additional Options', 'ignite' ),
-            'priority'   => 90,
-            'capability' => 'edit_theme_options'
-        )
-    );
-    /* setting */
-    $wp_customize->add_setting(
-        'ct_ignite_show_full_post_setting',
-        array(
-            'default'           => 'no',
-            'type'              => 'theme_mod',
-            'capability'        => 'edit_theme_options',
-            'sanitize_callback' => 'ct_ignite_sanitize_show_full_post_setting',
-        )
-    );
-    /* control */
-    $wp_customize->add_control(
-        'ct_ignite_show_full_post',
-        array(
-            'label'          => __( 'Show full post on blog?', 'ignite' ),
-            'section'        => 'ct-additional-options',
-            'settings'       => 'ct_ignite_show_full_post_setting',
-            'type'           => 'radio',
-            'choices'        => array(
-                'yes'   => __('Yes', 'ignite'),
-                'no'  => __('No', 'ignite')
-            )
-        )
-    );
-    /* setting */
-    $wp_customize->add_setting(
-        'ct_ignite_show_breadcrumbs_setting',
-        array(
-            'default'           => 'yes',
-            'type'              => 'theme_mod',
-            'capability'        => 'edit_theme_options',
-            'sanitize_callback' => 'ct_ignite_sanitize_show_full_post_setting',
-        )
-    );
-    /* control */
-    $wp_customize->add_control(
-        'ct_ignite_show_breadcrumbs_setting',
-        array(
-            'label'          => __( 'Show breadcrumbs?', 'ignite' ),
-            'section'        => 'ct-additional-options',
-            'settings'       => 'ct_ignite_show_breadcrumbs_setting',
-            'type'           => 'radio',
-            'choices'        => array(
-                'yes'   => __('Yes', 'ignite'),
-                'no'  => __('No', 'ignite')
-            )
-        )
-    );
+    // get the available weights
+    $font_weights = ct_ignite_get_available_font_weights();
 
-    /* setting */
-    $wp_customize->add_setting(
-        'ct_ignite_author_meta_settings',
-        array(
-            'default'           => 'show',
-            'type'              => 'theme_mod',
-            'capability'        => 'edit_theme_options',
-            'sanitize_callback' => 'ct_ignite_sanitize_author_meta_settings',
-        )
-    );
-    /* control */
-    $wp_customize->add_control(
-        'ct_ignite_show_author_meta',
-        array(
-            'label'          => __( 'Show post author info after posts?', 'ignite' ),
-            'section'        => 'ct-additional-options',
-            'settings'       => 'ct_ignite_author_meta_settings',
-            'type'           => 'radio',
-            'choices'        => array(
-                'show'   => __('Show', 'ignite'),
-                'hide'  => __('Hide', 'ignite')
-            )
-        )
-    );
-
-    /* setting */
-    $wp_customize->add_setting(
-        'ct_ignite_excerpt_length_settings',
-        array(
-            'default'           => 30,
-            'type'              => 'theme_mod',
-            'capability'        => 'edit_theme_options',
-            'sanitize_callback' => 'absint',
-        )
-    );
-    /* control */
-    $wp_customize->add_control(
-
-        // already defined in logo positioning
-        new ct_ignite_number_input_control(
-            $wp_customize, 'ct_ignite_excerpt_length_settings',
-            array(
-                'label' => 'Word count in automatic excerpts',
-                'section' => 'ct-additional-options',
-                'settings' => 'ct_ignite_excerpt_length_settings',
-                'type' => 'number',
-            )
-        )
-    );
-
-}
-add_action( 'customize_register', 'ct_ignite_additional_options' );
-
-// sets comment display values on new sites or sites updating to new version with this feature
-function compete_themes_set_comment_display_values() {
-
-    // get the current value
-    $current_settings = get_theme_mod( 'ct_ignite_comments_setting' );
-
-    // if empty, set to all
-    if( empty( $current_settings ) ) {
-        set_theme_mod( 'ct_ignite_comments_setting', array( 'posts', 'pages', 'attachments', 'none' ) );
-    }
-}
-add_action( 'init', 'compete_themes_set_comment_display_values' );
-
-/* sanitize the radio button input */
-function ct_ignite_sanitize_show_full_post_setting($input){
-    $valid = array(
-        'yes'   => __('Yes', 'ignite'),
-        'no'  => __('No', 'ignite')
-    );
+    $valid = $font_weights;
 
     if ( array_key_exists( $input, $valid ) ) {
         return $input;
@@ -650,7 +650,9 @@ function ct_ignite_sanitize_show_full_post_setting($input){
     }
 }
 
-/* sanitize comment display multi-check */
+/*
+ * Sanitize Comment display multi-check
+ */
 function ct_ignite_sanitize_comments_setting($input){
 
     // valid data
@@ -673,64 +675,14 @@ function ct_ignite_sanitize_comments_setting($input){
     }
 }
 
-/* Custom CSS Section */
-function ct_ignite_customizer_custom_css( $wp_customize ) {
-
-    // Custom Textarea Control
-    class ct_ignite_Textarea_Control extends WP_Customize_Control {
-        public $type = 'textarea';
-
-        public function render_content() {
-            ?>
-            <label>
-                <span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
-                <textarea rows="8" style="width:100%;" <?php $this->link(); ?>><?php echo esc_textarea( $this->value() ); ?></textarea>
-            </label>
-        <?php
-        }
-    }
-    // section
-    $wp_customize->add_section(
-        'ct-custom-css',
-        array(
-            'title'      => __( 'Custom CSS', 'ignite' ),
-            'priority'   => 90,
-            'capability' => 'edit_theme_options'
-        )
-    );
-    // setting
-    $wp_customize->add_setting(
-        'ct_ignite_custom_css_setting',
-        array(
-            'type'              => 'theme_mod',
-            'capability'        => 'edit_theme_options',
-            'sanitize_callback' => 'esc_textarea',
-        )
-    );
-    // control
-    $wp_customize->add_control(
-        new ct_ignite_Textarea_Control(
-            $wp_customize,
-            'ct_ignite_custom_css_setting',
-            array(
-                'label'          => __( 'Add Custom CSS Here:', 'ignite' ),
-                'section'        => 'ct-custom-css',
-                'settings'       => 'ct_ignite_custom_css_setting',
-            )
-        ) );
-}
-add_action( 'customize_register', 'ct_ignite_customizer_custom_css' );
-
-
-
-function ct_ignite_sanitize_google_font_family($input){
-
+/*
+ * sanitize radio buttons with show/hide as choices
+ * Used in: Post Author Info & Post Meta
+ */
+function ct_ignite_sanitize_show_hide_setting($input){
     $valid = array(
-        'Lusitana' => 'Lusitana',
-        'Roboto' => 'Roboto',
-        'Lato' => 'Lato',
-        'Droid Serif' => 'Droid Serif',
-        'Roboto Slab' => 'Roboto Slab'
+        'show'   => __('Show', 'ignite'),
+        'hide'  => __('Hide', 'ignite')
     );
 
     if ( array_key_exists( $input, $valid ) ) {
@@ -740,7 +692,48 @@ function ct_ignite_sanitize_google_font_family($input){
     }
 }
 
+/*
+ * sanitize radio buttons with yes/no as choices
+ * Used in: Show Full Post & Breadcrumbs
+ */
+function ct_ignite_sanitize_yes_no_setting($input){
+    $valid = array(
+        'yes'   => __('Yes', 'ignite'),
+        'no'  => __('No', 'ignite')
+    );
 
+    if ( array_key_exists( $input, $valid ) ) {
+        return $input;
+    } else {
+        return '';
+    }
+}
+
+/***** Helper Functions *****/
+
+// create social media site array
+function ct_ignite_customizer_social_media_array() {
+
+	// store social site names in array
+	$social_sites = array('twitter', 'facebook', 'google-plus', 'flickr', 'pinterest', 'youtube', 'vimeo', 'tumblr', 'dribbble', 'rss', 'linkedin', 'instagram', 'reddit', 'soundcloud', 'spotify', 'vine','yahoo', 'behance', 'codepen', 'delicious', 'stumbleupon', 'deviantart', 'digg', 'git', 'hacker-news', 'steam', 'vk', 'academia', 'email');
+	
+	return $social_sites;
+}
+
+// set the comment display values on new sites or sites updating to new version with this feature
+function compete_themes_set_comment_display_values() {
+
+    // get the current value
+    $current_settings = get_theme_mod( 'ct_ignite_comments_setting' );
+
+    // if empty, set to all
+    if( empty( $current_settings ) ) {
+        set_theme_mod( 'ct_ignite_comments_setting', array( 'posts', 'pages', 'attachments', 'none' ) );
+    }
+}
+add_action( 'init', 'compete_themes_set_comment_display_values' );
+
+// get the available font weights based on the the font family selection
 function ct_ignite_get_available_font_weights(){
 
     // current font is the one saved in the db
@@ -807,69 +800,6 @@ function ct_ignite_get_available_font_weights(){
     return $font_weights;
 }
 
-function ct_ignite_sanitize_google_font_weight($input){
-
-    // get the available weights
-    $font_weights = ct_ignite_get_available_font_weights();
-
-    $valid = $font_weights;
-
-    if ( array_key_exists( $input, $valid ) ) {
-        return $input;
-    } else {
-        return '';
-    }
-}
-
-/* sanitize the radio button input */
-function ct_ignite_sanitize_layout_settings($input){
-    $valid = array(
-        'right'   => __('Right sidebar', 'ignite'),
-        'left'  => __('Left sidebar', 'ignite'),
-    );
-
-    if ( array_key_exists( $input, $valid ) ) {
-        return $input;
-    } else {
-        return '';
-    }
-}
-
-/* Footer Text Section */
-function ct_ignite_customizer_footer_text( $wp_customize ) {
-
-    // section
-    $wp_customize->add_section(
-        'ct-footer-text',
-        array(
-            'title'      => __( 'Footer Text', 'ignite' ),
-            'priority'   => 95,
-            'capability' => 'edit_theme_options'
-        )
-    );
-
-    // setting
-    $wp_customize->add_setting(
-        'ct_ignite_footer_text_setting',
-        array(
-            'type'              => 'theme_mod',
-            'capability'        => 'edit_theme_options',
-            'sanitize_callback' => 'wp_kses_post',
-        )
-    );
-    // control
-    $wp_customize->add_control(
-        new ct_ignite_Textarea_Control(
-            $wp_customize,
-            'ct_ignite_footer_text_setting',
-            array(
-                'label'          => __( 'Edit the text in your footer', 'ignite' ),
-                'section'        => 'ct-footer-text',
-                'settings'       => 'ct_ignite_footer_text_setting',
-            )
-        ) );
-}
-add_action( 'customize_register', 'ct_ignite_customizer_footer_text' );
 
 function ct_ignite_user_profile_image_setting( $user ) { ?>
 
