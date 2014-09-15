@@ -3,6 +3,22 @@ jQuery(document).ready(function($){
     $(".entry-content").fitVids();
     $(".excerpt-content").fitVids();
 
+
+    // in case user has logo increasing the height of the site-header
+    function menuPositioning() {
+
+        if( $(window).width() < 800 ) {
+            var headerHeight = $('#site-header').outerHeight();
+
+            // reposition menu slider and remove weird gap
+            $('#menu-primary').css('top', headerHeight - 4 )
+        } else {
+            // if < 800 and then resized > 800, remove added style
+            $('#menu-primary').removeAttr('style');
+        }
+    }
+    menuPositioning();
+
     // no longer using tappy library here b/c doesn't work when loaded asynchronously
     $('#toggle-navigation').bind('click', onTap);
 
@@ -87,6 +103,7 @@ jQuery(document).ready(function($){
     /* check to see if social icons can be displayed on resize */
     $(window).on('resize', function(){
         showSocialIcons();
+        menuPositioning();
     });
 
     /* allow keyboard access/visibility for dropdown menu items */

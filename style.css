@@ -5,7 +5,6 @@ Author: Compete Themes
 Author URI: http://competethemes.com/
 Description: Ignite is a responsive blog theme. It includes logo tools, social media icons, a left- or right-sidebar layout, five fonts, custom background colors, and many additional display options. There is also a premium upgrade for Ignite called Ignite Plus. See our fully-setup live demo at http://www.competethemes.com/ignite-live-demo/
 Version: 1.34
-
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: gray, orange, silver, tan, white, light, two-columns, right-sidebar, left-sidebar, responsive-layout, custom-background, custom-menu, featured-images, sticky-post, theme-options, threaded-comments, translation-ready
@@ -329,29 +328,53 @@ a img {
 }
 .site-header {
   background: white;
-  height: 4.5em;
+  min-height: 72px;
   padding: 1.25em 3.703% 0;
   border-top: solid 4px #e6a117;
   position: relative;
+}
+.site-header:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.title-info {
+  float: right;
+}
+.title-info:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
 }
 
 .site-title {
   font-size: 1.625em;
   line-height: 1.85;
-  position: absolute;
-  top: 0.5em;
-  right: 3.703%;
   z-index: 1;
+  float: right;
 }
 .site-title a {
   text-decoration: none;
   color: #373b41;
+  line-height: 0;
 }
 .site-title a:link, .site-title a:visited {
   color: #373b41;
 }
 .site-title a:hover, .site-title a:active, .site-title a:focus {
   color: #e6a117;
+}
+.site-title a:only-child {
+  margin-top: -5px;
+  line-height: 1.5;
+  display: block;
 }
 .site-title img {
   max-width: 6em;
@@ -496,14 +519,6 @@ a img {
     height: auto;
     min-height: 4.5em;
     padding: 0 11.11%;
-  }
-  .site-header:after {
-    content: ".";
-    display: block;
-    clear: both;
-    visibility: hidden;
-    line-height: 0;
-    height: 0;
   }
 
   .toggle-navigation {

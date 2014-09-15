@@ -2,22 +2,32 @@
 
 .site-header {
   background: white;
-  height: $baseline-height * 3;
+  min-height: 72px;
   padding: $baseline-height - 0.25em 3.703% 0;
   border-top: solid 4px $orange;
   position: relative;
+
+  &:after {
+    @include clearfix;
+  }
+}
+.title-info {
+  float: right;
+
+  &:after {
+    @include clearfix;
+  }
 }
 .site-title {
   font-size: 1.625em;
   line-height: 1.85;
-  position: absolute;
-  top: 0.5em;
-  right: 3.703%;
   z-index: 1;
+  float: right;
 
   a {
     text-decoration: none;
     color: $gray;
+    line-height: 0;
 
     &:link,
     &:visited {
@@ -27,6 +37,13 @@
     &:active,
     &:focus {
       color: $orange;
+    }
+
+    // if not using logo
+    &:only-child {
+      margin-top: -5px;
+      line-height: 1.5;
+      display: block;
     }
   }
   img {
@@ -55,7 +72,6 @@
     cursor: pointer;
   }
 }
-
 .menu-primary {
   transform: translateZ(0); // hardware acceleration
   background: $gray;
@@ -174,10 +190,6 @@
     height: auto;
     min-height: $baseline-height * 3;
     padding: 0 11.11%;
-
-    &:after {
-      @include clearfix;
-    }
   }
   .toggle-navigation {
     display: none;
