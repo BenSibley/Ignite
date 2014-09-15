@@ -18,7 +18,7 @@ function ct_ignite_user_profile_image_setting( $user ) { ?>
                 <!-- Outputs the image after save -->
                 <img id="image-preview" src="<?php echo esc_url( get_the_author_meta( 'user_profile_image', $user->ID ) ); ?>" style="width:100px;"><br />
                 <!-- Outputs the text field and displays the URL of the image retrieved by the media uploader -->
-                <input type="text" name="user_profile_image" id="user_profile_image" value="<?php echo esc_url_raw( get_the_author_meta( 'user_profile_image', $user->ID ) ); ?>" class="regular-text" />
+                <input type="text" name="user_profile_image" id="user_profile_image" value="<?php echo esc_url( get_the_author_meta( 'user_profile_image', $user->ID ) ); ?>" class="regular-text" />
                 <!-- Outputs the save button -->
                 <input type='button' id="user-profile-upload" class="button-primary" value="<?php _e( 'Upload Image', 'ignite' ); ?>"/><br />
                 <span class="description"><?php _e( 'Upload an image here to use instead of your Gravatar. Perfectly square images will not be cropped.', 'ignite' ); ?></span>

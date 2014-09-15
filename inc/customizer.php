@@ -231,15 +231,13 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
                 'sanitize_callback' => 'esc_url_raw'
             ) );
 
-            $wp_customize->add_control(
-                new ct_ignite_url_input_control(
-                    $wp_customize, $social_site, array(
-                        'label'   => $social_site . " " . __("url:", 'ignite' ),
-                        'section' => 'ct_ignite_social_settings',
-                        'priority'=> $priority,
-                    )
+            $wp_customize->add_control( new ct_ignite_url_input_control(
+                $wp_customize, $social_site, array(
+                    'label'   => $social_site . " " . __("url:", 'ignite' ),
+                    'section' => 'ct_ignite_social_settings',
+                    'priority'=> $priority,
                 )
-            );
+            ) );
         }
         // increment the priority for next site
         $priority = $priority + 5;
