@@ -78,16 +78,16 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
     $wp_customize->add_panel( 'ct_ignite_logo_panel', array(
         'priority'       => 30,
         'capability'     => 'edit_theme_options',
-        'title'          => 'Logo',
-        'description'    => 'Upload, position, and resize your logo',
+        'title'          => __('Logo', 'ignite'),
+        'description'    => __('Upload, position, and resize your logo', 'ignite' )
     ) );
 
     // Font panel
     $wp_customize->add_panel( 'ct_ignite_font_panel', array(
         'priority'       => 50,
         'capability'     => 'edit_theme_options',
-        'title'          => 'Font',
-        'description'    => 'Choose a font family and font weight.',
+        'title'          => __('Font', 'ignite'),
+        'description'    => __('Choose a font family and font weight.', 'ignite')
     ) );
 
 	/***** Logo Upload *****/
