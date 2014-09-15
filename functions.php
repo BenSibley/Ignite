@@ -93,9 +93,11 @@ function ct_ignite_theme_setup() {
     add_theme_support( 'automatic-feed-links' );
     add_theme_support( 'post-thumbnails' );
 
-    // adds the file with the customizer functionality
-    require_once( trailingslashit( get_template_directory() ) . '/inc/customizer.php' );
-
+    // add inc folder files
+    foreach (glob(trailingslashit( get_template_directory() ) . 'inc/*.php') as $filename)
+    {
+        include $filename;
+    }
     // adds theme options page
     require_once( trailingslashit( get_template_directory() ) . 'theme-options.php' );
 
