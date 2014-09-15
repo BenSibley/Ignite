@@ -1,52 +1,13 @@
 <?php 
 
-/* Add logo option in Customize. */
-add_action( 'customize_register', 'ct_ignite_customize_register_logo' );
+/* Add customizer panels, sections, settings, and controls */
+add_action( 'customize_register', 'ct_ignite_add_customizer_content' );
 
-/**
- * Add logo upload in theme customizer screen.
- *
- * @since 1.0
- */
-function ct_ignite_customize_register_logo( $wp_customize ) {
+function ct_ignite_add_customizer_content( $wp_customize ) {
 
-	/* section */
-	$wp_customize->add_section(
-		'ct-ignite-upload',
-		array(
-			'title'      => __( 'Logo', 'ignite' ),
-			'priority'   => 30,
-			'capability' => 'edit_theme_options'
-		)
-	);
+    /***** Add Custom Controls *****/
 
-	/* Add the 'logo' setting. */
-	$wp_customize->add_setting(
-		'logo_upload',
-		array(
-			'default'           => '',
-			'type'              => 'theme_mod',
-			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'esc_url_raw',
-		)
-	);
-
-	$wp_customize->add_control(
-		new WP_Customize_Image_Control(
-			$wp_customize, 'logo_image',
-				array(
-					'label'    => __( 'Upload custom logo.', 'ignite' ),
-					'section'  => 'ct-ignite-upload',
-					'settings' => 'logo_upload',
-			)
-		)
-	);
-}
-
-/* allow logo position to be adjusted */
-function ct_ignite_customize_logo_positioning( $wp_customize ) {
-
-    /* create custom control for number input */
+    // create number input
     class ct_ignite_number_input_control extends WP_Customize_Control {
         public $type = 'number';
 
@@ -59,134 +20,8 @@ function ct_ignite_customize_logo_positioning( $wp_customize ) {
         <?php
         }
     }
-    /* section */
-    $wp_customize->add_section(
-        'ct-logo-positioning',
-        array(
-            'title'      => __( 'Logo Positioning', 'ignite' ),
-            'priority'   => 31,
-            'capability' => 'edit_theme_options'
-        )
-    );
-    /* logo positioning top setting. */
-    $wp_customize->add_setting(
-        'logo_positioning_updown_setting',
-        array(
-            'default' => 0,
-            'sanitize_callback' => 'ct_ignite_sanitize_integer'
-        )
-    );
-    /* logo positioning right setting. */
-    $wp_customize->add_setting(
-        'logo_positioning_leftright_setting',
-        array(
-            'default' => 0,
-            'sanitize_callback' => 'ct_ignite_sanitize_integer'
-        )
-    );
-    /* top input */
-    $wp_customize->add_control(
-        new ct_ignite_number_input_control(
-            $wp_customize, 'logo_positioning_updown_setting',
-            array(
-                'label' => __('Up/down', 'ignite'),
-                'section' => 'ct-logo-positioning',
-                'settings' => 'logo_positioning_updown_setting',
-                'type' => 'number',
-            )
-        )
-    );
-    /* right input */
-    $wp_customize->add_control(
-        new ct_ignite_number_input_control(
-            $wp_customize, 'logo_positioning_leftright_setting',
-            array(
-                'label' => __('Left/right', 'ignite'),
-                'section' => 'ct-logo-positioning',
-                'settings' => 'logo_positioning_leftright_setting',
-                'type' => 'number',
-            )
-        )
-    );
-}
-add_action( 'customize_register', 'ct_ignite_customize_logo_positioning' );
 
-// simply using 'intval' is throwing an error, so using this custom sanitization function
-function ct_ignite_sanitize_integer($input){
-    return intval( $input );
-}
-
-/* allow logo size to be adjusted */
-function ct_ignite_customize_logo_size( $wp_customize ) {
-
-    /* section */
-    $wp_customize->add_section(
-        'ct-logo-size',
-        array(
-            'title'      => __( 'Logo Size', 'ignite' ),
-            'priority'   => 32,
-            'capability' => 'edit_theme_options'
-        )
-    );
-    /* logo increase/decrease width setting. */
-    $wp_customize->add_setting(
-        'logo_size_width_setting',
-        array(
-            'default' => 0,
-            'sanitize_callback' => 'ct_ignite_sanitize_integer'
-        )
-    );
-    /* logo increase/decrease height setting. */
-    $wp_customize->add_setting(
-        'logo_size_height_setting',
-        array(
-            'default' => 0,
-            'sanitize_callback' => 'ct_ignite_sanitize_integer'
-        )
-    );
-    /* top input */
-    $wp_customize->add_control(
-        new ct_ignite_number_input_control(
-            $wp_customize, 'logo_size_width_setting',
-            array(
-                'label' => __('Increase max-width', 'ignite'),
-                'section' => 'ct-logo-size',
-                'settings' => 'logo_size_width_setting',
-                'type' => 'number',
-            )
-        )
-    );
-    /* right input */
-    $wp_customize->add_control(
-        new ct_ignite_number_input_control(
-            $wp_customize, 'logo_size_height_setting',
-            array(
-                'label' => __('Increase max-height', 'ignite'),
-                'section' => 'ct-logo-size',
-                'settings' => 'logo_size_height_setting',
-                'type' => 'number',
-            )
-        )
-    );
-}
-add_action( 'customize_register', 'ct_ignite_customize_logo_size' );
-
-
-function ct_ignite_customizer_social_media_array() {
-
-	// store social site names in array
-	$social_sites = array('twitter', 'facebook', 'google-plus', 'flickr', 'pinterest', 'youtube', 'vimeo', 'tumblr', 'dribbble', 'rss', 'linkedin', 'instagram', 'reddit', 'soundcloud', 'spotify', 'vine','yahoo', 'behance', 'codepen', 'delicious', 'stumbleupon', 'deviantart', 'digg', 'git', 'hacker-news', 'steam', 'vk', 'academia', 'email');
-	
-	return $social_sites;
-
-}
-
-// add settings to create various social media text areas.
-add_action('customize_register', 'ct_ignite_add_social_sites_customizer');
-
-function ct_ignite_add_social_sites_customizer($wp_customize) {
-
-    /* create custom control for url input so http:// is automatically added */
+    // create url input
     class ct_ignite_url_input_control extends WP_Customize_Control {
         public $type = 'url';
 
@@ -199,35 +34,199 @@ function ct_ignite_add_social_sites_customizer($wp_customize) {
         <?php
         }
     }
-	$wp_customize->add_section( 'ct_ignite_social_settings', array(
-        'title'          => __('Social Media Icons', 'ignite'),
-			'priority'       => 35,
-	) );
-		
-	$social_sites = ct_ignite_customizer_social_media_array();
-	$priority = 5;
-	
-	foreach($social_sites as $social_site) {
+
+    /***** Add Panels *****/
+
+    // Logo panel
+    $wp_customize->add_panel( 'ct_ignite_logo_panel', array(
+        'priority'       => 30,
+        'capability'     => 'edit_theme_options',
+        'title'          => 'Logo',
+        'description'    => 'Upload, position, and resize your logo',
+    ) );
+
+	/***** Logo Upload *****/
+
+    // section
+	$wp_customize->add_section(
+		'ct-ignite-upload',
+		array(
+			'title'      => __( 'Logo Upload', 'ignite' ),
+			'priority'   => 30,
+			'capability' => 'edit_theme_options',
+            'panel'      => 'ct_ignite_logo_panel'
+		)
+	);
+	// setting
+	$wp_customize->add_setting(
+		'logo_upload',
+		array(
+			'default'           => '',
+			'type'              => 'theme_mod',
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'esc_url_raw',
+		)
+	);
+    // control
+	$wp_customize->add_control(
+		new WP_Customize_Image_Control(
+			$wp_customize, 'logo_image',
+				array(
+					'label'    => __( 'Upload custom logo.', 'ignite' ),
+					'section'  => 'ct-ignite-upload',
+					'settings' => 'logo_upload',
+			)
+		)
+	);
+
+    /***** Logo Positioning *****/
+
+    // section
+    $wp_customize->add_section(
+        'ct-logo-positioning',
+        array(
+            'title'      => __( 'Logo Positioning', 'ignite' ),
+            'priority'   => 31,
+            'capability' => 'edit_theme_options',
+            'panel'      => 'ct_ignite_logo_panel'
+        )
+    );
+    // setting - logo positioning top/bottom
+    $wp_customize->add_setting(
+        'logo_positioning_updown_setting',
+        array(
+            'default' => 0,
+            'sanitize_callback' => 'ct_ignite_sanitize_integer'
+        )
+    );
+    // setting - logo positioning left/right
+    $wp_customize->add_setting(
+        'logo_positioning_leftright_setting',
+        array(
+            'default' => 0,
+            'sanitize_callback' => 'ct_ignite_sanitize_integer'
+        )
+    );
+    // control - logo positioning top/bottom
+    $wp_customize->add_control(
+        new ct_ignite_number_input_control(
+            $wp_customize, 'logo_positioning_updown_setting',
+            array(
+                'label' => __('Up/down', 'ignite'),
+                'section' => 'ct-logo-positioning',
+                'settings' => 'logo_positioning_updown_setting',
+                'type' => 'number',
+            )
+        )
+    );
+    // control - logo positioning left/right
+    $wp_customize->add_control(
+        new ct_ignite_number_input_control(
+            $wp_customize, 'logo_positioning_leftright_setting',
+            array(
+                'label' => __('Left/right', 'ignite'),
+                'section' => 'ct-logo-positioning',
+                'settings' => 'logo_positioning_leftright_setting',
+                'type' => 'number',
+            )
+        )
+    );
+
+    /***** Logo Size *****/
+
+    // section
+    $wp_customize->add_section(
+        'ct-logo-size',
+        array(
+            'title'      => __( 'Logo Size', 'ignite' ),
+            'priority'   => 32,
+            'capability' => 'edit_theme_options',
+            'panel'      => 'ct_ignite_logo_panel'
+        )
+    );
+    // setting - logo increase/decrease width
+    $wp_customize->add_setting(
+        'logo_size_width_setting',
+        array(
+            'default' => 0,
+            'sanitize_callback' => 'ct_ignite_sanitize_integer'
+        )
+    );
+    // setting - logo increase/decrease height
+    $wp_customize->add_setting(
+        'logo_size_height_setting',
+        array(
+            'default' => 0,
+            'sanitize_callback' => 'ct_ignite_sanitize_integer'
+        )
+    );
+    // control - logo increase/decrease width
+    $wp_customize->add_control(
+        new ct_ignite_number_input_control(
+            $wp_customize, 'logo_size_width_setting',
+            array(
+                'label' => __('Increase max-width', 'ignite'),
+                'section' => 'ct-logo-size',
+                'settings' => 'logo_size_width_setting',
+                'type' => 'number',
+            )
+        )
+    );
+    // control - logo increase/decrease height
+    $wp_customize->add_control(
+        new ct_ignite_number_input_control(
+            $wp_customize, 'logo_size_height_setting',
+            array(
+                'label' => __('Increase max-height', 'ignite'),
+                'section' => 'ct-logo-size',
+                'settings' => 'logo_size_height_setting',
+                'type' => 'number',
+            )
+        )
+    );
+
+    /***** Social Media Icons *****/
+
+    // get the social sites array
+    $social_sites = ct_ignite_customizer_social_media_array();
+
+    // set a priority used to order the social sites
+    $priority = 5;
+
+    // section
+    $wp_customize->add_section(
+        'ct_ignite_social_settings',
+        array(
+            'title'          => __('Social Media Icons', 'ignite'),
+            'priority'       => 35,
+    ) );
+
+    // create a setting and control for each social site
+    foreach($social_sites as $social_site) {
 
         if( $social_site == 'email' ) {
 
-            $wp_customize->add_setting( "$social_site", array(
-                'type'              => 'theme_mod',
-                'capability'        => 'edit_theme_options',
-                'sanitize_callback' => 'ct_ignite_sanitize_email'
+            $wp_customize->add_setting(
+                "$social_site",
+                array(
+                    'type'              => 'theme_mod',
+                    'capability'        => 'edit_theme_options',
+                    'sanitize_callback' => 'ct_ignite_sanitize_email'
             ) );
 
             $wp_customize->add_control(
-                $social_site, array(
+                $social_site,
+                array(
                     'label'   => $social_site . " " . __("address:", 'ignite' ),
                     'section' => 'ct_ignite_social_settings',
                     'priority'=> $priority,
                 )
             );
-
         } else {
 
-            $wp_customize->add_setting( "$social_site", array(
+            $wp_customize->add_setting(
+                "$social_site",
+                array(
                     'type'              => 'theme_mod',
                     'capability'        => 'edit_theme_options',
                     'sanitize_callback' => 'esc_url_raw'
@@ -235,24 +234,52 @@ function ct_ignite_add_social_sites_customizer($wp_customize) {
 
             $wp_customize->add_control(
                 new ct_ignite_url_input_control(
-                $wp_customize, $social_site, array(
-                    'label'   => $social_site . " " . __("url:", 'ignite' ),
-                    'section' => 'ct_ignite_social_settings',
-                    'priority'=> $priority,
-                )
+                    $wp_customize, $social_site, array(
+                        'label'   => $social_site . " " . __("url:", 'ignite' ),
+                        'section' => 'ct_ignite_social_settings',
+                        'priority'=> $priority,
+                    )
                 )
             );
         }
-	
-		$priority = $priority + 5;
-	}
+        // increment the priority for next site
+        $priority = $priority + 5;
+    }
+
 }
 
-// sanitize proper email address url
+/***** Custom Sanitization Functions *****/
+
+/*
+ * simply using 'intval' is throwing an error, so using this custom sanitization function
+ * Used in: Logo Positioning & Logo Size
+ */
+function ct_ignite_sanitize_integer($input){
+    return intval( $input );
+}
+
+/*
+ * sanitize email address
+ * Used in: Social Media Icons
+ */
 function ct_ignite_sanitize_email( $input ) {
 
     return sanitize_email( $input );
 }
+
+
+
+
+// create social media site array used in other functions
+function ct_ignite_customizer_social_media_array() {
+
+	// store social site names in array
+	$social_sites = array('twitter', 'facebook', 'google-plus', 'flickr', 'pinterest', 'youtube', 'vimeo', 'tumblr', 'dribbble', 'rss', 'linkedin', 'instagram', 'reddit', 'soundcloud', 'spotify', 'vine','yahoo', 'behance', 'codepen', 'delicious', 'stumbleupon', 'deviantart', 'digg', 'git', 'hacker-news', 'steam', 'vk', 'academia', 'email');
+	
+	return $social_sites;
+}
+
+
 
 /* show/hide the post author info after posts */
 function ct_ignite_show_author_meta( $wp_customize ) {
