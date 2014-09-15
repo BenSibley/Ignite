@@ -74,8 +74,12 @@ if ( have_posts() ) :
             }
         }
         /* bbPress */
-        elseif( is_bbpress() ) {
-            get_template_part( 'content/bbpress' );
+        elseif( function_exists( 'is_bbpress' ) ) {
+
+            /* if is bbPress forum list */
+            if( is_bbpress() ) {
+                get_template_part( 'content/bbpress' );
+            }
         }
         /* Custom Post Type */
         else {
