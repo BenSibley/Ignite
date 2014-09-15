@@ -94,7 +94,7 @@ function ct_ignite_theme_setup() {
     add_theme_support( 'post-thumbnails' );
 
     // adds the file with the customizer functionality
-    require_once( trailingslashit( get_template_directory() ) . 'functions-admin.php' );
+    require_once( trailingslashit( get_template_directory() ) . '/inc/customizer.php' );
 
     // adds theme options page
     require_once( trailingslashit( get_template_directory() ) . 'theme-options.php' );
