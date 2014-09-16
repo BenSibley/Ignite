@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Ignite 1.33\n"
+"Project-Id-Version: Ignite 1.34\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2014-09-12 15:37:13+00:00\n"
+"POT-Creation-Date: 2014-09-16 16:09:55+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -17,13 +17,13 @@ msgstr ""
 msgid "Be First to Comment"
 msgstr ""
 
-#: comments.php:11 comments.php:29 comments.php:49 functions.php:680
-#: functions.php:689
+#: comments.php:11 comments.php:29 comments.php:49 functions.php:682
+#: functions.php:691
 msgid "One Comment"
 msgstr ""
 
-#: comments.php:11 comments.php:29 comments.php:49 functions.php:680
-#: functions.php:689
+#: comments.php:11 comments.php:29 comments.php:49 functions.php:682
+#: functions.php:691
 msgid "% Comments"
 msgstr ""
 
@@ -69,313 +69,329 @@ msgid ""
 "Themes."
 msgstr ""
 
-#: functions-admin.php:17
-msgid "Logo"
-msgstr ""
-
-#: functions-admin.php:38
-msgid "Upload custom logo."
-msgstr ""
-
-#: functions-admin.php:66
-msgid "Logo Positioning"
-msgstr ""
-
-#: functions-admin.php:92
-msgid "Up/down"
-msgstr ""
-
-#: functions-admin.php:104
-msgid "Left/right"
-msgstr ""
-
-#: functions-admin.php:126
-msgid "Logo Size"
-msgstr ""
-
-#: functions-admin.php:152
-msgid "Increase max-width"
-msgstr ""
-
-#: functions-admin.php:164
-msgid "Increase max-height"
-msgstr ""
-
-#: functions-admin.php:203
-msgid "Social Media Icons"
-msgstr ""
-
-#: functions-admin.php:222
-msgid "address:"
-msgstr ""
-
-#: functions-admin.php:239
-msgid "url:"
-msgstr ""
-
-#: functions-admin.php:264
-msgid "Post Author Info"
-msgstr ""
-
-#: functions-admin.php:283
-msgid "Show post author info after posts?"
-msgstr ""
-
-#: functions-admin.php:288 functions-admin.php:299 functions-admin.php:342
-#: functions-admin.php:367 functions-admin.php:392 functions-admin.php:403
-msgid "Show"
-msgstr ""
-
-#: functions-admin.php:289 functions-admin.php:300 functions-admin.php:343
-#: functions-admin.php:368 functions-admin.php:393 functions-admin.php:404
-msgid "Hide"
-msgstr ""
-
-#: functions-admin.php:317
-msgid "Post Meta"
-msgstr ""
-
-#: functions-admin.php:337
-msgid "Show categories after posts?"
-msgstr ""
-
-#: functions-admin.php:362
-msgid "Show tags after posts?"
-msgstr ""
-
-#: functions-admin.php:387
-msgid "Show comment count after posts?"
-msgstr ""
-
-#: functions-admin.php:421
-msgid "Additional Options"
-msgstr ""
-
-#: functions-admin.php:440
-msgid "Show full post on blog?"
-msgstr ""
-
-#: functions-admin.php:445 functions-admin.php:469 functions-admin.php:570
-msgid "Yes"
-msgstr ""
-
-#: functions-admin.php:446 functions-admin.php:470 functions-admin.php:571
-msgid "No"
-msgstr ""
-
-#: functions-admin.php:464
-msgid "Show breadcrumbs?"
-msgstr ""
-
-#: functions-admin.php:538
-msgid "Show comments on:"
-msgstr ""
-
-#: functions-admin.php:543 functions-admin.php:586
-msgid "Posts"
-msgstr ""
-
-#: functions-admin.php:544 functions-admin.php:587
-#: library/classes/widget-pages.php:55 library/classes/widget-pages.php:62
-msgid "Pages"
-msgstr ""
-
-#: functions-admin.php:545 functions-admin.php:588
-msgid "Attachments"
-msgstr ""
-
-#: functions-admin.php:546 functions-admin.php:589
-msgid "Do not show"
-msgstr ""
-
-#: functions-admin.php:624
-msgid "Custom CSS"
-msgstr ""
-
-#: functions-admin.php:644
-msgid "Add Custom CSS Here:"
-msgstr ""
-
-#: functions-admin.php:659
-msgid "Font Family"
-msgstr ""
-
-#: functions-admin.php:662
-msgid "The default font is \"Lusitana\"."
-msgstr ""
-
-#: functions-admin.php:680
-msgid "Site Font Family"
-msgstr ""
-
-#: functions-admin.php:718
-msgid "Font Weight"
-msgstr ""
-
-#: functions-admin.php:721
-msgid ""
-"If you've just changed fonts, please save and refresh the page to update "
-"available weights."
-msgstr ""
-
-#: functions-admin.php:738
-msgid "Site Font Weight"
-msgstr ""
-
-#: functions-admin.php:831 library/extensions/theme-layouts.php:458
-#: library/extensions/theme-layouts.php:567
-#: library/extensions/theme-layouts.php:652
-msgid "Layout"
-msgstr ""
-
-#: functions-admin.php:850
-msgid "Pick Your Layout:"
-msgstr ""
-
-#: functions-admin.php:855 functions-admin.php:866
-msgid "Right sidebar"
-msgstr ""
-
-#: functions-admin.php:856 functions-admin.php:867
-msgid "Left sidebar"
-msgstr ""
-
-#: functions-admin.php:884
-msgid "Background"
-msgstr ""
-
-#: functions-admin.php:905
-msgid "Background Color"
-msgstr ""
-
-#: functions-admin.php:921
-msgid "Footer Text"
-msgstr ""
-
-#: functions-admin.php:942
-msgid "Edit the text in your footer"
-msgstr ""
-
-#: functions-admin.php:962
-msgid "Profile image"
-msgstr ""
-
-#: functions-admin.php:969
-msgid "Upload Image"
-msgstr ""
-
-#: functions-admin.php:970
-msgid ""
-"Upload an image here to use instead of your Gravatar. Perfectly square "
-"images will not be cropped."
-msgstr ""
-
-#: functions.php:109
+#: functions.php:111
 msgid "Primary Sidebar"
 msgstr ""
 
-#: functions.php:111
+#: functions.php:113
 msgid "The main sidebar"
 msgstr ""
 
-#: functions.php:118
+#: functions.php:120
 msgid "Primary"
 msgstr ""
 
-#: functions.php:173
+#: functions.php:175
 msgid "The Previous Post"
 msgstr ""
 
-#: functions.php:178
+#: functions.php:180
 msgid "The Next Post"
 msgstr ""
 
-#: functions.php:184
+#: functions.php:186
 msgid "Previous Post"
 msgstr ""
 
-#: functions.php:189 functions.php:201
+#: functions.php:191 functions.php:203
 msgid "Return to Blog"
 msgstr ""
 
-#: functions.php:190
+#: functions.php:192
 msgid "This is the oldest post"
 msgstr ""
 
-#: functions.php:196
+#: functions.php:198
 msgid "Next Post"
 msgstr ""
 
-#: functions.php:202
+#: functions.php:204
 msgid "This is the newest post"
 msgstr ""
 
-#: functions.php:218
+#: functions.php:220
 msgid "View all posts in %s"
 msgstr ""
 
-#: functions.php:234
+#: functions.php:236
 msgid "View all posts tagged %s"
 msgstr ""
 
-#: functions.php:259
+#: functions.php:261
 msgid "said:"
 msgstr ""
 
-#: functions.php:263
+#: functions.php:265
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:271
+#: functions.php:273
 msgid "Reply"
 msgstr ""
 
-#: functions.php:288
+#: functions.php:290
 msgid "Your Name"
 msgstr ""
 
-#: functions.php:289
+#: functions.php:291
 msgid "Your Name*"
 msgstr ""
 
-#: functions.php:295
+#: functions.php:297
 msgid "Your Email"
 msgstr ""
 
-#: functions.php:296
+#: functions.php:298
 msgid "Your Email*"
 msgstr ""
 
-#: functions.php:302
+#: functions.php:304
 msgid "Your Website URL"
 msgstr ""
 
-#: functions.php:303
+#: functions.php:305
 msgid "Your URL"
 msgstr ""
 
-#: functions.php:315
+#: functions.php:317
 msgid "Your Comment"
 msgstr ""
 
-#: functions.php:316
+#: functions.php:318
 msgid "Enter Your Comment"
 msgstr ""
 
-#: functions.php:359 functions.php:369
+#: functions.php:361 functions.php:371
 msgid "Read More"
 msgstr ""
 
-#: functions.php:680
+#: functions.php:682
 msgid "Comments closed"
 msgstr ""
 
-#: functions.php:689
+#: functions.php:691
 msgid "Leave a Comment"
 msgstr ""
 
 #: header.php:15
 msgid "Skip to content"
+msgstr ""
+
+#: inc/customizer.php:81
+msgid "Logo"
+msgstr ""
+
+#: inc/customizer.php:82
+msgid "Upload, position, and resize your logo"
+msgstr ""
+
+#: inc/customizer.php:89
+msgid "Font"
+msgstr ""
+
+#: inc/customizer.php:90
+msgid "Choose a font family and font weight."
+msgstr ""
+
+#: inc/customizer.php:97
+msgid "Logo Upload"
+msgstr ""
+
+#: inc/customizer.php:113
+msgid "Upload custom logo."
+msgstr ""
+
+#: inc/customizer.php:124
+msgid "Logo Positioning"
+msgstr ""
+
+#: inc/customizer.php:142
+msgid "Up/down"
+msgstr ""
+
+#: inc/customizer.php:151
+msgid "Left/right"
+msgstr ""
+
+#: inc/customizer.php:162
+msgid "Logo Size"
+msgstr ""
+
+#: inc/customizer.php:180
+msgid "Increase max-width"
+msgstr ""
+
+#: inc/customizer.php:189
+msgid "Increase max-height"
+msgstr ""
+
+#: inc/customizer.php:206
+msgid "Social Media Icons"
+msgstr ""
+
+#: inc/customizer.php:222
+msgid "address:"
+msgstr ""
+
+#: inc/customizer.php:236
+msgid "url:"
+msgstr ""
+
+#: inc/customizer.php:250 library/extensions/theme-layouts.php:458
+#: library/extensions/theme-layouts.php:567
+#: library/extensions/theme-layouts.php:652
+msgid "Layout"
+msgstr ""
+
+#: inc/customizer.php:263
+msgid "Pick Your Layout:"
+msgstr ""
+
+#: inc/customizer.php:268 inc/customizer.php:599
+msgid "Right sidebar"
+msgstr ""
+
+#: inc/customizer.php:269 inc/customizer.php:600
+msgid "Left sidebar"
+msgstr ""
+
+#: inc/customizer.php:277
+msgid "Font Family"
+msgstr ""
+
+#: inc/customizer.php:280
+msgid "The default font is \"Lusitana\"."
+msgstr ""
+
+#: inc/customizer.php:293
+msgid "Site Font Family"
+msgstr ""
+
+#: inc/customizer.php:311
+msgid "Font Weight"
+msgstr ""
+
+#: inc/customizer.php:314
+msgid ""
+"If you've just changed fonts, please save and refresh the page to update "
+"available weights."
+msgstr ""
+
+#: inc/customizer.php:327
+msgid "Site Font Weight"
+msgstr ""
+
+#: inc/customizer.php:336
+msgid "Background"
+msgstr ""
+
+#: inc/customizer.php:350
+msgid "Background Color"
+msgstr ""
+
+#: inc/customizer.php:361
+msgid "Post Meta"
+msgstr ""
+
+#: inc/customizer.php:374
+msgid "Show categories after posts?"
+msgstr ""
+
+#: inc/customizer.php:379 inc/customizer.php:397 inc/customizer.php:415
+#: inc/customizer.php:555 inc/customizer.php:674
+msgid "Show"
+msgstr ""
+
+#: inc/customizer.php:380 inc/customizer.php:398 inc/customizer.php:416
+#: inc/customizer.php:556 inc/customizer.php:675
+msgid "Hide"
+msgstr ""
+
+#: inc/customizer.php:392
+msgid "Show tags after posts?"
+msgstr ""
+
+#: inc/customizer.php:410
+msgid "Show comment count after posts?"
+msgstr ""
+
+#: inc/customizer.php:424
+msgid "Comments"
+msgstr ""
+
+#: inc/customizer.php:438
+msgid "Show comments on:"
+msgstr ""
+
+#: inc/customizer.php:443 inc/customizer.php:650
+msgid "Posts"
+msgstr ""
+
+#: inc/customizer.php:444 inc/customizer.php:651
+#: library/classes/widget-pages.php:55 library/classes/widget-pages.php:62
+msgid "Pages"
+msgstr ""
+
+#: inc/customizer.php:445 inc/customizer.php:652
+msgid "Attachments"
+msgstr ""
+
+#: inc/customizer.php:446 inc/customizer.php:653
+msgid "Do not show"
+msgstr ""
+
+#: inc/customizer.php:455
+msgid "Footer Text"
+msgstr ""
+
+#: inc/customizer.php:468
+msgid "Edit the text in your footer"
+msgstr ""
+
+#: inc/customizer.php:478
+msgid "Custom CSS"
+msgstr ""
+
+#: inc/customizer.php:491
+msgid "Add Custom CSS Here:"
+msgstr ""
+
+#: inc/customizer.php:501
+msgid "Additional Options"
+msgstr ""
+
+#: inc/customizer.php:514
+msgid "Show full post on blog?"
+msgstr ""
+
+#: inc/customizer.php:519 inc/customizer.php:537 inc/customizer.php:691
+msgid "Yes"
+msgstr ""
+
+#: inc/customizer.php:520 inc/customizer.php:538 inc/customizer.php:692
+msgid "No"
+msgstr ""
+
+#: inc/customizer.php:532
+msgid "Show breadcrumbs?"
+msgstr ""
+
+#: inc/customizer.php:550
+msgid "Show post author info after posts?"
+msgstr ""
+
+#: inc/user-profile.php:16
+msgid "Profile image"
+msgstr ""
+
+#: inc/user-profile.php:23
+msgid "Upload Image"
+msgstr ""
+
+#: inc/user-profile.php:24
+msgid ""
+"Upload an image here to use instead of your Gravatar. Perfectly square "
+"images will not be cropped."
 msgstr ""
 
 #: library/admin/meta-box-post-template.php:48
