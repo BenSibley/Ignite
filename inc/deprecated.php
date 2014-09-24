@@ -1,6 +1,11 @@
 <?php
 
-// Creates the next/previous post section below every post
+/* Avoid use of these functions in favor of newer functions */
+
+/*
+ * @deprecated 1.36
+ * Now template part /content/further-reading.php
+ */
 function ct_ignite_further_reading() {
 
 	global $post;
@@ -45,4 +50,23 @@ function ct_ignite_further_reading() {
         	 </p>";
 	}
 	echo "</nav>";
+}
+
+/*
+ * @deprecated 1.36
+ * Now template part /content/category-links.php
+ */
+function ct_ignite_category_display() {
+
+	$categories = get_the_category();
+	$separator = ' ';
+	$output = '';
+	if($categories){
+		echo "<p><i class='fa fa-folder-open'></i>";
+		foreach($categories as $category) {
+			$output .= '<a href="'.get_category_link( $category->term_id ).'" title="' . esc_attr( sprintf( __( "View all posts in %s", 'ignite' ), $category->name ) ) . '">'.$category->cat_name.'</a>'.$separator;
+		}
+		echo trim($output, $separator);
+		echo "</p>";
+	}
 }

@@ -61,7 +61,7 @@ if( is_single() ) { ?>
             <?php } ?>
             <?php
             if(get_theme_mod('ct_ignite_post_meta_categories_settings') != 'hide'){ ?>
-                <div class="entry-categories"><?php ct_ignite_category_display(); ?></div><?php
+                <div class="entry-categories"><?php get_template_part('content/category-links'); ?></div><?php
             }
             if(get_theme_mod('ct_ignite_post_meta_tags_settings') != 'hide'){ ?>
                 <div class="entry-tags"><?php ct_ignite_tags_display(); ?></div><?php
