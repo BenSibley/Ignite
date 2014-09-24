@@ -74,21 +74,24 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 
     /***** Add Panels *****/
 
-    // Logo panel
-    $wp_customize->add_panel( 'ct_ignite_logo_panel', array(
-        'priority'       => 30,
-        'capability'     => 'edit_theme_options',
-        'title'          => __('Logo', 'ignite'),
-        'description'    => __('Upload, position, and resize your logo', 'ignite' )
-    ) );
+	if( method_exists( 'WP_Customize_Manager', 'add_panel' ) ) {
 
-    // Font panel
-    $wp_customize->add_panel( 'ct_ignite_font_panel', array(
-        'priority'       => 50,
-        'capability'     => 'edit_theme_options',
-        'title'          => __('Font', 'ignite'),
-        'description'    => __('Choose a font family and font weight.', 'ignite')
-    ) );
+		// Logo panel
+		$wp_customize->add_panel( 'ct_ignite_logo_panel', array(
+			'priority'    => 30,
+			'capability'  => 'edit_theme_options',
+			'title'       => __( 'Logo', 'ignite' ),
+			'description' => __( 'Upload, position, and resize your logo', 'ignite' )
+		) );
+
+		// Font panel
+		$wp_customize->add_panel( 'ct_ignite_font_panel', array(
+			'priority'    => 50,
+			'capability'  => 'edit_theme_options',
+			'title'       => __( 'Font', 'ignite' ),
+			'description' => __( 'Choose a font family and font weight.', 'ignite' )
+		) );
+	}
 
 	/***** Logo Upload *****/
 
