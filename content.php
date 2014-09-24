@@ -115,7 +115,7 @@ if( is_single() ) { ?>
             <div class="entry-tags"><?php get_template_part('content/tag-links'); ?></div><?php
         }
         if(get_theme_mod('ct_ignite_post_meta_comments_settings') == 'show'){ ?>
-            <div class="excerpt-comments"><?php ct_ignite_post_meta_comments(); ?></div><?php
+            <div class="excerpt-comments"><?php get_template_part('content/comment-count'); ?></div><?php
         }
         ?>
     </div>
