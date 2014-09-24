@@ -845,14 +845,13 @@ a img {
 
 .more-link {
   text-decoration: none;
-  display: block;
+  display: inline-block;
   text-align: center;
   line-height: 2.25em;
-  width: 6.75em;
   background: #e6a117;
   color: white;
-  margin: 2.625em 0 2.5005em;
-  /* subtracted 2px border on excerpt-content */
+  padding: 0 16.5px;
+  margin: 1.125em 0;
   -webkit-transition: background 0.2s ease;
   transition: background 0.2s ease;
   clear: both;

@@ -86,13 +86,13 @@
 }
 .more-link {
   text-decoration: none;
-  display: block;
+  display: inline-block;
   text-align: center;
   line-height: $baseline-height * 1.5;
-  width: $baseline-height * 4.5;
   background: $orange;
   color: white;
-  margin: $baseline-height * 1.75 0 $baseline-height * 1.667; /* subtracted 2px border on excerpt-content */
+  padding: 0 16.5px; // to mimic old size as closely as possible
+  margin: $baseline-height * 0.75 0;
   transition: background 0.2s ease;
   clear: both;
 
