@@ -97,22 +97,6 @@ function ct_ignite_social_media_icons() {
 	}
 }
 
-// Outputs the tags the post used with their names hyperlinked to their permalink
-function ct_ignite_tags_display() {
-       
-    $tags = get_the_tags();
-    $separator = ' ';
-    $output = '';
-    if($tags){
-        echo "<p><i class='fa fa-tag'></i>";
-        foreach($tags as $tag) {
-            $output .= '<a href="'.get_tag_link( $tag->term_id ).'" title="' . esc_attr( sprintf( __( "View all posts tagged %s", 'ignite' ), $tag->name ) ) . '">'.$tag->name.'</a>'.$separator;
-        }
-        echo trim($output, $separator);
-	    echo "</p>";
-    }
-}
-
 /* added to customize the comments. Same as default except -> added use of gravatar images for comment authors */
 function ct_ignite_customize_comments( $comment, $args, $depth ) {
     $GLOBALS['comment'] = $comment;

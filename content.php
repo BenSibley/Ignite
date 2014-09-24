@@ -64,7 +64,7 @@ if( is_single() ) { ?>
                 <div class="entry-categories"><?php get_template_part('content/category-links'); ?></div><?php
             }
             if(get_theme_mod('ct_ignite_post_meta_tags_settings') != 'hide'){ ?>
-                <div class="entry-tags"><?php ct_ignite_tags_display(); ?></div><?php
+                <div class="entry-tags"><?php get_template_part('content/tag-links'); ?></div><?php
             }
             ?>
 		</div>

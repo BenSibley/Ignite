@@ -70,3 +70,22 @@ function ct_ignite_category_display() {
 		echo "</p>";
 	}
 }
+
+/*
+ * @deprecated 1.36
+ * Now template part /content/tag-links.php
+ */
+function ct_ignite_tags_display() {
+
+	$tags = get_the_tags();
+	$separator = ' ';
+	$output = '';
+	if($tags){
+		echo "<p><i class='fa fa-tag'></i>";
+		foreach($tags as $tag) {
+			$output .= '<a href="'.get_tag_link( $tag->term_id ).'" title="' . esc_attr( sprintf( __( "View all posts tagged %s", 'ignite' ), $tag->name ) ) . '">'.$tag->name.'</a>'.$separator;
+		}
+		echo trim($output, $separator);
+		echo "</p>";
+	}
+}
