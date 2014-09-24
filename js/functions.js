@@ -104,6 +104,11 @@ jQuery(document).ready(function($){
     $(window).on('resize', function(){
         showSocialIcons();
         menuPositioning();
+
+        if( $(window).width() > 799 && $('#site-header').hasClass('toggled') ) {
+            onTap();
+        }
+
     });
 
     /* allow keyboard access/visibility for dropdown menu items */
