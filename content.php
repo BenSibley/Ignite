@@ -73,12 +73,30 @@ if( is_single() ) { ?>
 } else { ?>
     <div <?php post_class(); ?>>
         <?php ct_ignite_featured_image(); ?>
-        <div class="excerpt-meta-top">
-            <?php
-            echo __('Published', 'ignite') . " " . date_i18n( get_option( 'date_format' ), strtotime( get_the_date('n/j/Y') ) ) . " " . _x('by', 'Published by whom?', 'ignite') . " ";
-            the_author_posts_link();
-            ?>
-        </div>
+	    <?php
+	    // as long as one isn't equal to 'hide', display entry-meta-top
+	    if( $date_display != 'hide' || $author_display != 'hide' ) : ?>
+		    <div class="entry-meta-top">
+			    <?php
+			    // Don't display if hidden by Post Meta section
+			    if( $date_display != 'hide' ) {
+				    echo __( 'Published', 'ignite' ) . " " . date_i18n( get_option( 'date_format' ), strtotime( get_the_date( 'n/j/Y' ) ) );
+			    }
+			    // output author name/link if not set to "Hide" in Post Meta section
+			    if( $author_display != 'hide' ) {
+
+				    // if the date is hidden, capitalize "By"
+				    if( $date_display == 'hide' ) {
+					    echo " " . ucfirst( _x( 'by', 'Published by whom?', 'ignite' ) ) . " ";
+					    the_author_posts_link();
+				    } else {
+					    echo " " . _x( 'by', 'Published by whom?', 'ignite' ) . " ";
+					    the_author_posts_link();
+				    }
+			    }
+			    ?>
+		    </div>
+	    <?php endif; ?>
         <div class='excerpt-header'>
             <h1 class='excerpt-title'>
                 <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
