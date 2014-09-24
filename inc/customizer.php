@@ -365,6 +365,42 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
         'priority'   => 70,
         'capability' => 'edit_theme_options'
     ) );
+	// setting - date
+	$wp_customize->add_setting( 'ct_ignite_post_meta_date_settings', array(
+		'default'           => 'show',
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'ct_ignite_sanitize_show_hide_setting',
+	) );
+	// control - date
+	$wp_customize->add_control( 'ct_ignite_post_meta_date_settings', array(
+		'label'          => __( 'Show date before posts?', 'ignite' ),
+		'section'        => 'ct-post-meta',
+		'settings'       => 'ct_ignite_post_meta_date_settings',
+		'type'           => 'radio',
+		'choices'        => array(
+			'show'   => __('Show', 'ignite'),
+			'hide'  => __('Hide', 'ignite')
+		)
+	) );
+	// setting - author
+	$wp_customize->add_setting( 'ct_ignite_post_meta_author_settings', array(
+		'default'           => 'show',
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'ct_ignite_sanitize_show_hide_setting',
+	) );
+	// control - author
+	$wp_customize->add_control( 'ct_ignite_post_meta_author_settings', array(
+		'label'          => __( 'Show author before posts?', 'ignite' ),
+		'section'        => 'ct-post-meta',
+		'settings'       => 'ct_ignite_post_meta_author_settings',
+		'type'           => 'radio',
+		'choices'        => array(
+			'show'   => __('Show', 'ignite'),
+			'hide'  => __('Hide', 'ignite')
+		)
+	) );
     // setting - category
     $wp_customize->add_setting( 'ct_ignite_post_meta_categories_settings', array(
         'default'           => 'show',
