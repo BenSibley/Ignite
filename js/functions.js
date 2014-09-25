@@ -139,17 +139,29 @@ jQuery(document).ready(function($){
 
 // wait to see if a touch event is fired
 var hasTouch;
-window.addEventListener('touchstart', function setHasTouch () {
+window.addEventListener('touchstart', setHasTouch, false);
+
+// require a double-click on parent dropdown items
+function setHasTouch () {
+
+    // since touch events are definitely being used, turn on the functionality
     hasTouch = true;
 
     // Remove event listener once fired
     window.removeEventListener('touchstart', setHasTouch);
 
-    // since touch events are definitely being used, turn on the functionality
-    // to require a double-click on parent dropdown items
-    enableTouchDropdown();
+    // get the width of the window
+    var w = window,
+        d = document,
+        e = d.documentElement,
+        g = d.getElementsByTagName('body')[0],
+        x = w.innerWidth || e.clientWidth || g.clientWidth;
 
-}, false);
+    // don't require double clicks for the toggle menu
+    if (x > 799) {
+        enableTouchDropdown();
+    }
+}
 
 // require a second click to visit parent navigation items
 function enableTouchDropdown(){
