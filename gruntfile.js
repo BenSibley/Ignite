@@ -85,6 +85,7 @@ module.exports = function(grunt) {
             target: {
                 options: {
                     domainPath: '/languages',
+                    exclude: ['library/.*/.*'],
                     potFilename: 'ignite.pot',
                     type: 'wp-theme'
                 }
