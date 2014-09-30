@@ -24,7 +24,7 @@
  * to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
  *
  * @package   HybridCore
- * @version   2.0.0-beta-2
+ * @version   2.0.2
  * @author    Justin Tadlock <justin@justintadlock.com>
  * @copyright Copyright (c) 2008 - 2014, Justin Tadlock
  * @link      http://themehybrid.com/hybrid-core
@@ -76,9 +76,6 @@ if ( !class_exists( 'Hybrid' ) ) {
 			/* Initialize the framework's default actions and filters. */
 			add_action( 'after_setup_theme', array( $this, 'default_filters' ), 3 );
 
-			/* Language functions and translations setup. */
-			add_action( 'after_setup_theme', array( $this, 'i18n' ), 4 );
-
 			/* Handle theme supported features. */
 			add_action( 'after_setup_theme', array( $this, 'theme_support' ), 12 );
 
@@ -87,6 +84,9 @@ if ( !class_exists( 'Hybrid' ) ) {
 
 			/* Load the framework extensions. */
 			add_action( 'after_setup_theme', array( $this, 'extensions' ), 14 );
+
+			/* Language functions and translations setup. */
+			add_action( 'after_setup_theme', array( $this, 'i18n' ), 25 );
 
 			/* Load admin files. */
 			add_action( 'wp_loaded', array( $this, 'admin' ) );
@@ -104,7 +104,7 @@ if ( !class_exists( 'Hybrid' ) ) {
 		function constants() {
 
 			/* Sets the framework version number. */
-			define( 'HYBRID_VERSION', '2.0.0' );
+			define( 'HYBRID_VERSION', '2.0.2' );
 
 			/* Sets the path to the parent theme directory. */
 			define( 'THEME_DIR', get_template_directory() );
@@ -217,14 +217,19 @@ if ( !class_exists( 'Hybrid' ) ) {
 			$parent_textdomain = hybrid_get_parent_textdomain();
 			$child_textdomain  = hybrid_get_child_textdomain();
 
-			/* Load the framework textdomain. */
-			$hybrid->textdomain_loaded['hybrid-core'] = hybrid_load_framework_textdomain( 'hybrid-core' );
-
 			/* Load theme textdomain. */
 			$hybrid->textdomain_loaded[ $parent_textdomain ] = load_theme_textdomain( $parent_textdomain );
 
 			/* Load child theme textdomain. */
 			$hybrid->textdomain_loaded[ $child_textdomain ] = is_child_theme() ? load_child_theme_textdomain( $child_textdomain ) : false;
+
+			/* Load the framework textdomain. */
+			$hybrid->textdomain_loaded['hybrid-core'] = hybrid_load_framework_textdomain( 'hybrid-core' );
+
+			/* Load empty textdomain mofiles for extensions (these will be overwritten). */
+			if ( current_theme_supports( 'breadcrumb-trail' ) ) load_textdomain( 'breadcrumb-trail', '' );
+			if ( current_theme_supports( 'post-stylesheets' ) ) load_textdomain( 'post-stylesheets', '' );
+			if ( current_theme_supports( 'theme-layouts'    ) ) load_textdomain( 'theme-layouts',    '' );
 
 			/* Get the user's locale. */
 			$locale = get_locale();
@@ -248,7 +253,7 @@ if ( !class_exists( 'Hybrid' ) ) {
 		function theme_support() {
 
 			/* Adds core WordPress HTML5 support. */
-			add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list' ) );
+			add_theme_support( 'html5', array( 'caption', 'comment-form', 'comment-list', 'gallery', 'search-form' ) );
 
 			/* Remove support for the the Breadcrumb Trail extension if the plugin is installed. */
 			if ( function_exists( 'breadcrumb_trail' ) || class_exists( 'Breadcrumb_Trail' ) )
@@ -311,9 +316,6 @@ if ( !class_exists( 'Hybrid' ) ) {
 			/* Load the shortcodes if supported. */
 			require_if_theme_supports( 'hybrid-core-shortcodes', trailingslashit( HYBRID_FUNCTIONS ) . 'shortcodes.php' );
 
-			/* Load the widgets if supported. */
-			require_if_theme_supports( 'hybrid-core-widgets', trailingslashit( HYBRID_FUNCTIONS ) . 'widgets.php' );
-
 			/* Load the template hierarchy if supported. */
 			require_if_theme_supports( 'hybrid-core-template-hierarchy', trailingslashit( HYBRID_FUNCTIONS ) . 'template-hierarchy.php' );
 
@@ -362,12 +364,6 @@ if ( !class_exists( 'Hybrid' ) ) {
 
 			/* Load the Random Custom Background extension if supported. */
 			require_if_theme_supports( 'random-custom-background', trailingslashit( HYBRID_EXTENSIONS ) . 'random-custom-background.php' );
-
-			/* Load the Color Palette extension if supported. */
-			require_if_theme_supports( 'color-palette', trailingslashit( HYBRID_EXTENSIONS ) . 'color-palette.php' );
-
-			/* Load the Theme Fonts extension if supported. */
-			require_if_theme_supports( 'theme-fonts', trailingslashit( HYBRID_EXTENSIONS ) . 'theme-fonts.php' );
 		}
 
 		/**
@@ -408,8 +404,11 @@ if ( !class_exists( 'Hybrid' ) ) {
 			remove_action( 'wp_head', 'wp_generator' );
 			add_action( 'wp_head', 'wp_generator', 1 );
 
-			/* Make text widgets and term descriptions shortcode aware. */
+			/* Make text widgets shortcode aware. */
 			add_filter( 'widget_text', 'do_shortcode' );
+
+			/* Don't strip tags on single post titles. */
+			remove_filter( 'single_post_title', 'strip_tags' );
 
 			/* Use same default filters as 'the_content' with a little more flexibility. */
 			add_filter( 'hybrid_loop_description', array( $wp_embed, 'run_shortcode' ),   5 );

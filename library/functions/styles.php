@@ -29,8 +29,8 @@ add_filter( 'locale_stylesheet_uri', 'hybrid_locale_stylesheet_uri', 5 );
  * the wp_register_style() function.  It does not load any stylesheets on the site.  If a theme wants to 
  * register its own custom styles, it should do so on the 'wp_enqueue_scripts' hook.
  *
- * @since 1.5.0
- * @access private
+ * @since  1.5.0
+ * @access public
  * @return void
  */
 function hybrid_register_styles() {
@@ -38,8 +38,8 @@ function hybrid_register_styles() {
 	/* Get framework styles. */
 	$styles = hybrid_get_styles();
 
-	/* Use the .min stylesheet if SCRIPT_DEBUG is turned off. */
-	$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
+	/* Get the minified suffix. */
+	$suffix = hybrid_get_min_suffix();
 
 	/* Loop through each style and register it. */
 	foreach ( $styles as $style => $args ) {
@@ -67,8 +67,8 @@ function hybrid_register_styles() {
 /**
  * Tells WordPress to load the styles needed for the framework using the wp_enqueue_style() function.
  *
- * @since 1.5.0
- * @access private
+ * @since  1.5.0
+ * @access public
  * @return void
  */
 function hybrid_enqueue_styles() {
@@ -88,14 +88,14 @@ function hybrid_enqueue_styles() {
 /**
  * Returns an array of the core framework's available styles for use in themes.
  *
- * @since 1.5.0
- * @access private
- * @return array $styles All the available framework styles.
+ * @since  1.5.0
+ * @access public
+ * @return array
  */
 function hybrid_get_styles() {
 
-	/* Use the .min stylesheet if SCRIPT_DEBUG is turned off. */
-	$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
+	/* Get the minified suffix. */
+	$suffix = hybrid_get_min_suffix();
 
 	/* Default styles available. */
 	$styles = array(
@@ -129,17 +129,19 @@ function hybrid_get_styles() {
  * 'style.css' file.  It will detect if a 'style.min.css' file is available and use it if SCRIPT_DEBUG 
  * is disabled.
  *
- * @since 1.5.0
+ * @since  1.5.0
  * @access public
- * @param  string $stylesheet_uri The URI of the active theme's stylesheet.
- * @param  string $stylesheet_dir_uri The directory URI of the active theme's stylesheet.
- * @return string $stylesheet_uri
+ * @param  string  $stylesheet_uri      The URI of the active theme's stylesheet.
+ * @param  string  $stylesheet_dir_uri  The directory URI of the active theme's stylesheet.
+ * @return string  $stylesheet_uri
  */
 function hybrid_min_stylesheet_uri( $stylesheet_uri, $stylesheet_dir_uri ) {
 
-	/* Use the .min stylesheet if SCRIPT_DEBUG is turned off. */
-	if ( !defined( 'SCRIPT_DEBUG' ) || false === SCRIPT_DEBUG ) {
-		$suffix = '.min';
+	/* Get the minified suffix. */
+	$suffix = hybrid_get_min_suffix();
+
+	/* Use the .min stylesheet if available. */
+	if ( !empty( $suffix ) ) {
 
 		/* Remove the stylesheet directory URI from the file name. */
 		$stylesheet = str_replace( trailingslashit( $stylesheet_dir_uri ), '', $stylesheet_uri );
@@ -185,10 +187,12 @@ function hybrid_locale_stylesheet_uri( $stylesheet_uri ) {
  */
 function hybrid_get_locale_style() {
 
+	$styles = array();
+
+	/* Get the locale, language, and region. */
 	$locale = strtolower( str_replace( '_', '-', get_locale() ) );
 	$lang   = strtolower( hybrid_get_language() );
 	$region = strtolower( hybrid_get_region() );
-	$styles = array();
 
 	$styles[] = "css/{$locale}.css";
 

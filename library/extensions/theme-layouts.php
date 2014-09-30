@@ -19,9 +19,9 @@
  * even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  *
  * @package   ThemeLayouts
- * @version   0.6.0-alpha
+ * @version   0.6.0
  * @author    Justin Tadlock <justin@justintadlock.com>
- * @copyright Copyright (c) 2010 - 2013, Justin Tadlock
+ * @copyright Copyright (c) 2010 - 2014, Justin Tadlock
  * @link      http://justintadlock.com
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
@@ -479,8 +479,6 @@ function theme_layouts_post_meta_box( $post, $box ) {
 	<div class="post-layout">
 
 		<?php wp_nonce_field( basename( __FILE__ ), 'theme-layouts-nonce' ); ?>
-
-		<p><?php _e( 'Layout is a theme-specific structure for the single view of the post.', 'theme-layouts' ); ?></p>
 
 		<div class="post-layout-wrap">
 			<ul>

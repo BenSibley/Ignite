@@ -41,10 +41,10 @@ function hybrid_add_post_type_support() {
  * Checks if a post of any post type has a custom template.  This is the equivalent of WordPress' 
  * is_page_template() function with the exception that it works for all post types.
  *
- * @since 1.2.0
+ * @since  1.2.0
  * @access public
- * @param string $template The name of the template to check for.
- * @return bool Whether the post has a template.
+ * @param  string  $template  The name of the template to check for.
+ * @return bool               Whether the post has a template.
  */
 function hybrid_has_post_template( $template = '' ) {
 
@@ -82,8 +82,11 @@ function hybrid_has_post_template( $template = '' ) {
  */
 function hybrid_untitled_post( $title ) {
 
-	if ( empty( $title ) && !is_singular() && in_the_loop() && !is_admin() )
+	if ( empty( $title ) && !is_singular() && in_the_loop() && !is_admin() ) {
+
+		/* Translators: Used as a placeholder for untitled posts on non-singular views. */
 		$title = __( '(Untitled)', 'hybrid-core' );
+	}
 
 	return $title;
 }
@@ -146,4 +149,45 @@ function hybrid_hex_to_rgb( $hex ) {
 
 	/* Return the RGB colors as an array. */
 	return array( 'r' => $red, 'g' => $green, 'b' => $blue );
+}
+
+/**
+ * Function for grabbing a WP nav menu theme location name.
+ *
+ * @since  2.0.0
+ * @access public
+ * @param  string  $location
+ * @return string
+ */
+function hybrid_get_menu_location_name( $location ) {
+
+	$locations = get_registered_nav_menus();
+
+	return $locations[ $location ];
+}
+
+/**
+ * Function for grabbing a dynamic sidebar name.
+ *
+ * @since  2.0.0
+ * @access public
+ * @param  string  $sidebar_id
+ * @return string
+ */
+function hybrid_get_sidebar_name( $sidebar_id ) {
+	global $wp_registered_sidebars;
+
+	if ( isset( $wp_registered_sidebars[ $sidebar_id ] ) )
+		return $wp_registered_sidebars[ $sidebar_id ]['name'];
+}
+
+/**
+ * Helper function for getting the script/style `.min` suffix for minified files.
+ *
+ * @since  2.0.0
+ * @access public
+ * @return string
+ */
+function hybrid_get_min_suffix() {
+	return defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 }
