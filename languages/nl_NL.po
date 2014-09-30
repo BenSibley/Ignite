@@ -1,0 +1,1212 @@
+# Copyright (C) 2014 Compete Themes
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Ignite 1.28\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
+"POT-Creation-Date: 2014-08-28 14:49:57+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-09-11 07:24+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.6.9\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: nl_NL\n"
+
+#: comments.php:11 comments.php:29 comments.php:49
+msgid "Be First to Comment"
+msgstr "Wees de eerste om te reageren"
+
+#: comments.php:11 comments.php:29 comments.php:49 functions.php:661
+#: functions.php:670
+msgid "One Comment"
+msgstr "1 reactie"
+
+#: comments.php:11 comments.php:29 comments.php:49 functions.php:661
+#: functions.php:670
+msgid "% Comments"
+msgstr "% reacties"
+
+#: comments.php:42
+msgid ""
+"Comments are closed, but <a href=\"%s\" title=\"Trackback URL for this post"
+"\">trackbacks</a> and pingbacks are open."
+msgstr ""
+
+#: comments.php:62 comments.php:68
+msgid "Comments are closed."
+msgstr "Reacties zijn gesloten"
+
+#: content-404.php:3
+msgid "404: Page Not Found"
+msgstr "404: pagina niet gevonden"
+
+#: content-404.php:8
+msgid ""
+"Looks like nothing was found on this url.  Double-check that the url is "
+"correct or try the search form below to find what you were looking for."
+msgstr ""
+"Er kon niets gevonden worden op deze url. Controleer of de url correct is of "
+"probeer het zoekveld om te vinden wat je zoekt."
+
+#: content-attachment.php:3 content.php:8 content.php:57
+msgid "Published"
+msgstr "Gepubliceerd"
+
+#: content-attachment.php:19
+msgid "Previous Image"
+msgstr "Vorige afbeelding"
+
+#: content-attachment.php:22
+msgid "Next Image"
+msgstr "Volgende afbeelding"
+
+#: content-page.php:9 content.php:18
+msgid "Pages:"
+msgstr "Pagina's: "
+
+#: footer.php:16
+msgid ""
+"<a target=\"_blank\" href=\"%s\">Ignite WordPress Theme</a> by Compete "
+"Themes."
+msgstr ""
+
+#: functions-admin.php:17
+msgid "Logo"
+msgstr ""
+
+#: functions-admin.php:38
+msgid "Upload custom logo."
+msgstr "Upload je eigen logo."
+
+#: functions-admin.php:66
+msgid "Logo Positioning"
+msgstr ""
+
+#: functions-admin.php:92
+msgid "Up/down"
+msgstr ""
+
+#: functions-admin.php:104
+msgid "Left/right"
+msgstr ""
+
+#: functions-admin.php:126
+msgid "Logo Size"
+msgstr ""
+
+#: functions-admin.php:152
+msgid "Increase max-width"
+msgstr ""
+
+#: functions-admin.php:164
+msgid "Increase max-height"
+msgstr ""
+
+#: functions-admin.php:203
+msgid "Social Media Icons"
+msgstr ""
+
+#: functions-admin.php:221
+msgid "url:"
+msgstr ""
+
+#: functions-admin.php:239
+msgid "Post Author Info"
+msgstr ""
+
+#: functions-admin.php:258
+msgid "Show post author info after posts?"
+msgstr ""
+
+#: functions-admin.php:263 functions-admin.php:274 functions-admin.php:317
+#: functions-admin.php:342 functions-admin.php:367 functions-admin.php:378
+msgid "Show"
+msgstr "Toon"
+
+#: functions-admin.php:264 functions-admin.php:275 functions-admin.php:318
+#: functions-admin.php:343 functions-admin.php:368 functions-admin.php:379
+msgid "Hide"
+msgstr "Verberg"
+
+#: functions-admin.php:292
+msgid "Post Meta"
+msgstr ""
+
+#: functions-admin.php:312
+msgid "Show categories after posts?"
+msgstr ""
+
+#: functions-admin.php:337
+msgid "Show tags after posts?"
+msgstr ""
+
+#: functions-admin.php:362
+msgid "Show comment count after posts?"
+msgstr ""
+
+#: functions-admin.php:396
+msgid "Additional Options"
+msgstr ""
+
+#: functions-admin.php:415
+msgid "Show full post on blog?"
+msgstr ""
+
+#: functions-admin.php:420 functions-admin.php:444 functions-admin.php:480
+msgid "Yes"
+msgstr "Ja"
+
+#: functions-admin.php:421 functions-admin.php:445 functions-admin.php:481
+msgid "No"
+msgstr "Nee"
+
+#: functions-admin.php:439
+msgid "Show breadcrumbs?"
+msgstr ""
+
+#: functions-admin.php:511
+msgid "Custom CSS"
+msgstr ""
+
+#: functions-admin.php:531
+msgid "Add Custom CSS Here:"
+msgstr ""
+
+#: functions-admin.php:546
+msgid "Font Family"
+msgstr ""
+
+#: functions-admin.php:549
+msgid "The default font is \"Lusitana\"."
+msgstr ""
+
+#: functions-admin.php:567
+msgid "Site Font Family"
+msgstr ""
+
+#: functions-admin.php:605
+msgid "Font Weight"
+msgstr ""
+
+#: functions-admin.php:608
+msgid ""
+"If you've just changed fonts, please save and refresh the page to update "
+"available weights."
+msgstr ""
+
+#: functions-admin.php:625
+msgid "Site Font Weight"
+msgstr ""
+
+#: functions-admin.php:718 library/extensions/theme-layouts.php:458
+#: library/extensions/theme-layouts.php:567
+#: library/extensions/theme-layouts.php:652
+msgid "Layout"
+msgstr ""
+
+#: functions-admin.php:737
+msgid "Pick Your Layout:"
+msgstr ""
+
+#: functions-admin.php:742 functions-admin.php:753
+msgid "Right sidebar"
+msgstr ""
+
+#: functions-admin.php:743 functions-admin.php:754
+msgid "Left sidebar"
+msgstr ""
+
+#: functions-admin.php:771
+msgid "Background"
+msgstr ""
+
+#: functions-admin.php:792
+msgid "Background Color"
+msgstr ""
+
+#: functions-admin.php:806
+msgid "Profile image"
+msgstr "Profiel afbeelding"
+
+#: functions-admin.php:813
+msgid "Upload Image"
+msgstr "Upload afbeelding"
+
+#: functions-admin.php:814
+msgid ""
+"Upload an image here to use instead of your Gravatar. Perfectly square "
+"images will not be cropped."
+msgstr ""
+"Upload hier een afbeelding om in plaats van je Gravatar te gebruiken. "
+"Vierkante afbeeldingen worden niet afgesneden."
+
+#: functions.php:99
+msgid "Primary Sidebar"
+msgstr "Primaire sidebar"
+
+#: functions.php:101
+msgid "The main sidebar"
+msgstr "De hoofd sidebar"
+
+#: functions.php:108
+msgid "Primary"
+msgstr "Primaire"
+
+#: functions.php:154
+msgid "The Previous Post"
+msgstr "Het vorige artikel"
+
+#: functions.php:159
+msgid "The Next Post"
+msgstr "Het volgende artikel"
+
+#: functions.php:165
+msgid "Previous Post"
+msgstr "vorige artikel"
+
+#: functions.php:170 functions.php:182
+msgid "Return to Blog"
+msgstr "Terug naar blog"
+
+#: functions.php:171
+msgid "This is the oldest post"
+msgstr "Dit is het oudste artikel"
+
+#: functions.php:177
+msgid "Next Post"
+msgstr "Volgende artikel"
+
+#: functions.php:183
+msgid "This is the newest post"
+msgstr "Dit is het nieuwste artikel"
+
+#: functions.php:199
+msgid "View all posts in %s"
+msgstr "Bekijk alle artikelen in %s"
+
+#: functions.php:215
+msgid "View all posts tagged %s"
+msgstr "Bekijk alle artikelen getagd %s"
+
+#: functions.php:240
+msgid "said:"
+msgstr "zei:"
+
+#: functions.php:244
+msgid "Your comment is awaiting moderation."
+msgstr "Je reactie wordt beoordeeld"
+
+#: functions.php:252
+msgid "Reply"
+msgstr "Beantwoord"
+
+#: functions.php:269
+msgid "Your Name"
+msgstr "Naam:"
+
+#: functions.php:270
+msgid "Your Name*"
+msgstr "Naam*"
+
+#: functions.php:276
+msgid "Your Email"
+msgstr "E-mail"
+
+#: functions.php:277
+msgid "Your Email*"
+msgstr "E-mail*"
+
+#: functions.php:283
+msgid "Your Website URL"
+msgstr "Website"
+
+#: functions.php:284
+msgid "Your URL"
+msgstr "URL"
+
+#: functions.php:296
+msgid "Your Comment"
+msgstr "Reactie"
+
+#: functions.php:297
+msgid "Enter Your Comment"
+msgstr "typ je reactie"
+
+#: functions.php:340 functions.php:350
+msgid "Read More"
+msgstr "Lees meer"
+
+#: functions.php:661
+msgid "Comments closed"
+msgstr "Reacties gesloten"
+
+#: functions.php:670
+msgid "Leave a Comment"
+msgstr "Plaats een reactie"
+
+#: header.php:15
+msgid "Skip to content"
+msgstr "ga naar content"
+
+#: library/admin/meta-box-post-template.php:48
+msgid "Template"
+msgstr ""
+
+#. Translators: %s is the theme name.
+#: library/admin/theme-settings.php:134 library/admin/theme-settings.php:199
+msgid "%s Theme Settings"
+msgstr "%s Thema instellingen"
+
+#: library/admin/theme-settings.php:135
+msgid "Theme Settings"
+msgstr "Thema instellingen"
+
+#. Translators: Media dimensions - 1 is width and 2 is height.
+#: library/classes/hybrid-media-meta.php:154
+#: library/classes/hybrid-media-meta.php:282
+#: library/functions/template-media.php:102
+msgid "%1$s &#215; %2$s"
+msgstr ""
+
+#: library/classes/hybrid-media-meta.php:155
+#: library/classes/hybrid-media-meta.php:282
+msgid "Dimensions"
+msgstr "Dimensies"
+
+#: library/classes/hybrid-media-meta.php:161
+#: library/classes/widget-pages.php:191
+msgid "Date"
+msgstr "Datum"
+
+#: library/classes/hybrid-media-meta.php:165
+msgid "Camera"
+msgstr "Camera"
+
+#: library/classes/hybrid-media-meta.php:169
+msgid "Aperture"
+msgstr ""
+
+#. Translators: Camera focal length.
+#: library/classes/hybrid-media-meta.php:174
+msgid "%s mm"
+msgstr ""
+
+#: library/classes/hybrid-media-meta.php:174
+msgid "Focal Length"
+msgstr ""
+
+#: library/classes/hybrid-media-meta.php:180
+msgid "International Organization for Standardization"
+msgstr ""
+
+#: library/classes/hybrid-media-meta.php:180
+msgid "ISO"
+msgstr ""
+
+#. Translators: Camera shutter speed. "sec" is an abbreviation for "seconds".
+#: library/classes/hybrid-media-meta.php:199
+msgid "%s sec"
+msgstr ""
+
+#: library/classes/hybrid-media-meta.php:199
+msgid "Shutter Speed"
+msgstr ""
+
+#: library/classes/hybrid-media-meta.php:248
+#: library/classes/hybrid-media-meta.php:285
+msgid "File Name"
+msgstr "Bestandsnaam"
+
+#: library/classes/hybrid-media-meta.php:256
+#: library/classes/hybrid-media-meta.php:293
+msgid "File Type"
+msgstr "Bestands type"
+
+#: library/classes/widget-archives.php:43
+msgid ""
+"An advanced widget that gives you total control over the output of your "
+"archives."
+msgstr ""
+"Een geavanceerde widget die je totale controle over je archieven geeft."
+
+#: library/classes/widget-archives.php:55
+#: library/classes/widget-archives.php:62
+#: library/extensions/breadcrumb-trail.php:181
+#: library/functions/template-general.php:339
+msgid "Archives"
+msgstr "Archieven"
+
+#: library/classes/widget-archives.php:105
+msgid "Select Year"
+msgstr "Selecteer Jaar"
+
+#: library/classes/widget-archives.php:108
+msgid "Select Month"
+msgstr "Selecteer maand"
+
+#: library/classes/widget-archives.php:111
+msgid "Select Week"
+msgstr "Selecteer week"
+
+#: library/classes/widget-archives.php:114
+msgid "Select Day"
+msgstr "Selecteer dag"
+
+#: library/classes/widget-archives.php:117
+msgid "Select Post"
+msgstr "selecteer artikel"
+
+#: library/classes/widget-archives.php:194
+msgid "Alphabetical"
+msgstr "alfabetisch"
+
+#: library/classes/widget-archives.php:195
+msgid "Daily"
+msgstr "Dagelijks"
+
+#: library/classes/widget-archives.php:196
+msgid "Monthly"
+msgstr "Maandelijks"
+
+#: library/classes/widget-archives.php:197
+msgid "Post By Post"
+msgstr "Artikel voor artikel"
+
+#: library/classes/widget-archives.php:198
+msgid "Weekly"
+msgstr "Wekelijks"
+
+#: library/classes/widget-archives.php:199
+msgid "Yearly"
+msgstr "Jaarlijks"
+
+#: library/classes/widget-archives.php:204
+#: library/classes/widget-authors.php:181
+#: library/classes/widget-bookmarks.php:220
+#: library/classes/widget-categories.php:210
+#: library/classes/widget-pages.php:185 library/classes/widget-tags.php:227
+msgid "Ascending"
+msgstr "Oplopend"
+
+#: library/classes/widget-archives.php:205
+#: library/classes/widget-authors.php:182
+#: library/classes/widget-bookmarks.php:221
+#: library/classes/widget-categories.php:211
+#: library/classes/widget-pages.php:186 library/classes/widget-tags.php:228
+msgid "Descending"
+msgstr "Aflopend"
+
+#: library/classes/widget-archives.php:210
+msgid "Custom"
+msgstr "Op maat gemaakt"
+
+#: library/classes/widget-archives.php:211
+msgid "HTML"
+msgstr ""
+
+#: library/classes/widget-archives.php:212
+msgid "Option"
+msgstr "Optioneel"
+
+#: library/classes/widget-archives.php:218
+#: library/classes/widget-authors.php:205
+#: library/classes/widget-bookmarks.php:250
+#: library/classes/widget-calendar.php:137
+#: library/classes/widget-categories.php:234
+#: library/classes/widget-nav-menu.php:173
+#: library/classes/widget-pages.php:211 library/classes/widget-search.php:128
+#: library/classes/widget-tags.php:248
+msgid "Title:"
+msgstr "Titel:"
+
+#: library/classes/widget-archives.php:262
+#: library/classes/widget-authors.php:261
+msgid "Show post count?"
+msgstr "Toon aantal artikelen?"
+
+#: library/classes/widget-authors.php:43
+msgid ""
+"An advanced widget that gives you total control over the output of your "
+"author lists."
+msgstr ""
+
+#: library/classes/widget-authors.php:55 library/classes/widget-authors.php:62
+msgid "Authors"
+msgstr "Auteurs"
+
+#: library/classes/widget-authors.php:186
+msgid "Display Name"
+msgstr "Toon naam"
+
+#: library/classes/widget-authors.php:187
+msgid "Email"
+msgstr "E-mail"
+
+#: library/classes/widget-authors.php:188
+#: library/classes/widget-bookmarks.php:226
+#: library/classes/widget-bookmarks.php:232
+#: library/classes/widget-categories.php:216
+#: library/classes/widget-pages.php:192
+msgid "ID"
+msgstr ""
+
+#: library/classes/widget-authors.php:189
+msgid "Nice Name"
+msgstr "Mooie naam"
+
+#: library/classes/widget-authors.php:190
+msgid "Post Count"
+msgstr "Hoeveelheid artikelen"
+
+#: library/classes/widget-authors.php:191
+msgid "Registered"
+msgstr "Geregistreerd"
+
+#: library/classes/widget-authors.php:192
+#: library/classes/widget-bookmarks.php:244
+msgid "URL"
+msgstr ""
+
+#: library/classes/widget-authors.php:193
+msgid "Login"
+msgstr ""
+
+#: library/classes/widget-authors.php:197
+#: library/classes/widget-categories.php:205
+#: library/classes/widget-tags.php:223
+msgid "List"
+msgstr "Lijst"
+
+#: library/classes/widget-authors.php:198
+#: library/classes/widget-categories.php:206
+msgid "None"
+msgstr "Geen"
+
+#: library/classes/widget-authors.php:257
+msgid "<acronym title=\"Hypertext Markup Language\">HTML</acronym>?"
+msgstr ""
+
+#: library/classes/widget-authors.php:265
+msgid "Exclude admin?"
+msgstr "Admin uitsluiten?"
+
+#: library/classes/widget-authors.php:269
+msgid "Show full name?"
+msgstr "Volledige naam tonen?"
+
+#: library/classes/widget-authors.php:273
+#: library/classes/widget-categories.php:337
+#: library/classes/widget-tags.php:367
+msgid "Hide empty?"
+msgstr "Verberg lege?"
+
+#: library/classes/widget-bookmarks.php:43
+msgid ""
+"An advanced widget that gives you total control over the output of your "
+"bookmarks (links)."
+msgstr ""
+
+#: library/classes/widget-bookmarks.php:55
+#: library/classes/widget-bookmarks.php:62
+#: library/classes/widget-bookmarks.php:127
+msgid "Bookmarks"
+msgstr ""
+
+#: library/classes/widget-bookmarks.php:225
+#: library/classes/widget-categories.php:215
+#: library/classes/widget-tags.php:233
+msgid "Count"
+msgstr "Telling"
+
+#: library/classes/widget-bookmarks.php:227
+#: library/classes/widget-bookmarks.php:235
+#: library/classes/widget-categories.php:217
+#: library/classes/widget-tags.php:234
+msgid "Name"
+msgstr "Naam"
+
+#: library/classes/widget-bookmarks.php:228
+#: library/classes/widget-categories.php:218
+#: library/classes/widget-pages.php:195
+msgid "Slug"
+msgstr ""
+
+#: library/classes/widget-bookmarks.php:233
+msgid "Description"
+msgstr "Beschrijving"
+
+#: library/classes/widget-bookmarks.php:234
+msgid "Length"
+msgstr "Lengte"
+
+#: library/classes/widget-bookmarks.php:236
+msgid "Notes"
+msgstr "Notities"
+
+#: library/classes/widget-bookmarks.php:237
+msgid "Owner"
+msgstr "Eigenaar"
+
+#: library/classes/widget-bookmarks.php:238
+#: library/classes/widget-tags.php:229
+msgid "Random"
+msgstr "Willekeurig"
+
+#: library/classes/widget-bookmarks.php:239
+msgid "Rating"
+msgstr "Beoordeling\v"
+
+#: library/classes/widget-bookmarks.php:240
+msgid "Rel"
+msgstr ""
+
+#: library/classes/widget-bookmarks.php:241
+#: library/classes/widget-categories.php:226
+msgid "RSS"
+msgstr ""
+
+#: library/classes/widget-bookmarks.php:242
+msgid "Target"
+msgstr "Doel"
+
+#: library/classes/widget-bookmarks.php:243
+msgid "Updated"
+msgstr "Bijgewerkt"
+
+#: library/classes/widget-bookmarks.php:352
+msgid "Categorize?"
+msgstr "Categoriseren?"
+
+#: library/classes/widget-bookmarks.php:356
+msgid "Show description?"
+msgstr "Beschrijving tonen?"
+
+#: library/classes/widget-bookmarks.php:360
+msgid "Hide invisible?"
+msgstr "Onzichtbare verbergen?"
+
+#: library/classes/widget-bookmarks.php:364
+msgid "Show rating?"
+msgstr "Toon beoordeling?"
+
+#: library/classes/widget-bookmarks.php:368
+msgid "Show updated?"
+msgstr "Toon bijgewerkte?"
+
+#: library/classes/widget-bookmarks.php:372
+msgid "Show images?"
+msgstr "Toon afbeeldingen?"
+
+#: library/classes/widget-bookmarks.php:376
+msgid "Show name?"
+msgstr "Toon naam?"
+
+#: library/classes/widget-bookmarks.php:380
+msgid "Show private?"
+msgstr "Toon prive?"
+
+#: library/classes/widget-calendar.php:43
+msgid ""
+"An advanced widget that gives you total control over the output of your "
+"calendar."
+msgstr ""
+
+#: library/classes/widget-calendar.php:55
+#: library/classes/widget-calendar.php:62
+msgid "Calendar"
+msgstr "Kalender"
+
+#: library/classes/widget-calendar.php:142
+msgid "One-letter abbreviation?"
+msgstr ""
+
+#: library/classes/widget-categories.php:43
+msgid ""
+"An advanced widget that gives you total control over the output of your "
+"category links."
+msgstr ""
+
+#: library/classes/widget-categories.php:55
+#: library/classes/widget-categories.php:62
+msgid "Categories"
+msgstr "Categorie"
+
+#: library/classes/widget-categories.php:219
+msgid "Term Group"
+msgstr ""
+
+#: library/classes/widget-categories.php:224
+msgid "Atom"
+msgstr ""
+
+#: library/classes/widget-categories.php:225
+msgid "RDF"
+msgstr ""
+
+#: library/classes/widget-categories.php:227
+msgid "RSS 2.0"
+msgstr ""
+
+#: library/classes/widget-categories.php:325
+#: library/classes/widget-pages.php:310
+msgid "Hierarchical?"
+msgstr "Hierargisch"
+
+#: library/classes/widget-categories.php:329
+msgid "Use description?"
+msgstr "Beschrijving gebruiken?"
+
+#: library/classes/widget-categories.php:333
+msgid "Show count?"
+msgstr "Toon hoeveelheid?"
+
+#: library/classes/widget-nav-menu.php:43
+msgid ""
+"An advanced widget that gives you total control over the output of your "
+"menus."
+msgstr ""
+
+#: library/classes/widget-nav-menu.php:55
+msgid "Navigation Menu"
+msgstr "Navigatie menu"
+
+#: library/classes/widget-nav-menu.php:62
+msgid "Navigation"
+msgstr "Navigatie"
+
+#: library/classes/widget-pages.php:43
+msgid ""
+"An advanced widget that gives you total control over the output of your page "
+"links."
+msgstr ""
+
+#: library/classes/widget-pages.php:55 library/classes/widget-pages.php:62
+msgid "Pages"
+msgstr "Pagina's"
+
+#: library/classes/widget-pages.php:190
+msgid "Author"
+msgstr "Auteur"
+
+#: library/classes/widget-pages.php:193
+msgid "Menu Order"
+msgstr "Menu volgorde"
+
+#: library/classes/widget-pages.php:194 library/classes/widget-pages.php:202
+msgid "Modified"
+msgstr "Aangepast"
+
+#: library/classes/widget-pages.php:196
+msgid "Title"
+msgstr "Titel"
+
+#: library/classes/widget-pages.php:201
+msgid "Created"
+msgstr "Aangemaakt"
+
+#: library/classes/widget-search.php:44
+msgid ""
+"An advanced widget that gives you total control over the output of your "
+"search form."
+msgstr ""
+
+#: library/classes/widget-search.php:56 library/classes/widget-search.php:63
+msgid "Search"
+msgstr "Zoeken"
+
+#: library/classes/widget-tags.php:43
+msgid ""
+"An advanced widget that gives you total control over the output of your tags."
+msgstr ""
+
+#: library/classes/widget-tags.php:55 library/classes/widget-tags.php:64
+msgid "Tags"
+msgstr "Tags"
+
+#: library/classes/widget-tags.php:61
+msgid "%s topic"
+msgid_plural "%s topics"
+msgstr[0] "%s onderwerp"
+msgstr[1] "%s onderwerpen"
+
+#: library/classes/widget-tags.php:217
+msgid "View"
+msgstr "Bekijken"
+
+#: library/classes/widget-tags.php:218
+#: library/extensions/breadcrumb-trail.php:1135
+#: library/extensions/breadcrumb-trail.php:1171
+#: library/extensions/breadcrumb-trail.php:1188
+#: library/extensions/breadcrumb-trail.php:1219
+msgid "Edit"
+msgstr "Bewerken"
+
+#: library/classes/widget-tags.php:222
+msgid "Flat"
+msgstr "Plat"
+
+#: library/classes/widget-tags.php:363
+msgid "Pad counts?"
+msgstr ""
+
+#: library/extensions/breadcrumb-trail.php:178
+msgid "Browse:"
+msgstr ""
+
+#: library/extensions/breadcrumb-trail.php:179
+msgid "Home"
+msgstr ""
+
+#: library/extensions/breadcrumb-trail.php:180
+#: library/functions/template-general.php:494
+msgid "404 Not Found"
+msgstr "404 Niet gevonden"
+
+#. Translators: %s is the search query. The HTML entities are opening and
+#. closing curly quotes.
+#: library/extensions/breadcrumb-trail.php:183
+#: library/functions/template-general.php:475
+msgid "Search results for &#8220;%s&#8221;"
+msgstr "Zoekresultaten voor &#8220;%s&#8221;"
+
+#. Translators: %s is the page number.
+#: library/extensions/breadcrumb-trail.php:185
+msgid "Page %s"
+msgstr "Pagina %s"
+
+#. Translators: Minute archive title. %s is the minute time format.
+#: library/extensions/breadcrumb-trail.php:187
+#: library/functions/template-general.php:436
+msgid "Minute %s"
+msgstr "Minuut %s"
+
+#. Translators: Weekly archive title. %s is the week date format.
+#: library/extensions/breadcrumb-trail.php:189
+msgid "Week %s"
+msgstr "Week %s"
+
+#: library/extensions/breadcrumb-trail.php:1163
+msgid "Split"
+msgstr ""
+
+#: library/extensions/breadcrumb-trail.php:1167
+msgid "Merge"
+msgstr ""
+
+#: library/extensions/featured-header.php:208
+msgid "Featured Header"
+msgstr ""
+
+#: library/extensions/post-stylesheets.php:286
+msgid "Stylesheet"
+msgstr ""
+
+#: library/extensions/theme-fonts.php:401
+msgid "Fonts"
+msgstr ""
+
+#: library/extensions/theme-layouts.php:483
+msgid "Layout is a theme-specific structure for the single view of the post."
+msgstr ""
+
+#: library/extensions/theme-layouts.php:685
+msgid "Global Layout"
+msgstr ""
+
+#: library/functions/deprecated.php:432 library/functions/deprecated.php:520
+msgid "Permalink"
+msgstr ""
+
+#: library/functions/deprecated.php:861
+msgid ""
+"<code>%1$s</code> &mdash; This function has been removed or replaced by "
+"another function."
+msgstr ""
+
+#. Translators: 1 is the page title. 2 is the page number.
+#: library/functions/head.php:149
+msgid "%1$s Page %2$s"
+msgstr "%1$s Pagina %2$s"
+
+#: library/functions/media.php:32
+msgid "Post Thumbnail"
+msgstr "Artikel thumbnail"
+
+#: library/functions/media.php:53
+msgid "File Size"
+msgstr "Bestand grootte"
+
+#: library/functions/media.php:54
+msgid "Mime Type"
+msgstr ""
+
+#: library/functions/media.php:55
+msgid "Run Time"
+msgstr ""
+
+#: library/functions/media.php:60
+msgid "Genre"
+msgstr ""
+
+#: library/functions/media.php:61
+msgid "Year"
+msgstr "Jaar"
+
+#: library/functions/media.php:62
+msgid "Composer"
+msgstr ""
+
+#: library/functions/media.php:63
+msgid "Track"
+msgstr ""
+
+#: library/functions/media.php:66
+msgid "Lyrics"
+msgstr ""
+
+#: library/functions/template-general.php:55
+msgid "State-of-the-art semantic personal publishing platform"
+msgstr ""
+
+#: library/functions/template-general.php:55
+msgid "WordPress"
+msgstr ""
+
+#. Translators: Theme name.
+#: library/functions/template-general.php:82
+#: library/functions/template-general.php:115
+msgid "%s WordPress Theme"
+msgstr ""
+
+#: library/functions/template-general.php:305
+msgid "You are browsing the search results for &#8220;%s&#8221;"
+msgstr "Je bent de zoekresultaten voor &#8220;%s&#8221; aan het bekijken."
+
+#: library/functions/template-general.php:311
+msgid "You are browsing the site archives by time."
+msgstr "Je bent de archieven op volgorde van tijd aan het bekijken."
+
+#: library/functions/template-general.php:314
+#: library/functions/template-general.php:317
+#: library/functions/template-general.php:320
+msgid "You are browsing the site archives for %s."
+msgstr "Je bent de archieven van %s aan het bekijken."
+
+#: library/functions/template-general.php:323
+msgid "You are browsing the site archives."
+msgstr "Je bent de archieven aan het bekijken."
+
+#. Translators: 1 is the week number and 2 is the year.
+#: library/functions/template-general.php:378
+msgid "Week %1$s of %2$s"
+msgstr "Week %1$s van %2$s"
+
+#: library/functions/utility.php:86
+msgid "(Untitled)"
+msgstr "(geen titel)"
+
+#: search.php:11
+msgid "%d search results for"
+msgstr "%d zoekresultaat voor"
+
+#: search.php:13
+msgid "No search results for "
+msgstr "Geen zoekresultaat voor"
+
+#: search.php:39
+msgid "Can't find what you're looking for?  Try refining your search:"
+msgstr "Kun je niet vinden wat je zoekt? Probeer andere zoektermen:"
+
+#: searchform.php:3 searchform.php:4
+msgid "Search for:"
+msgstr "Zoek naar:"
+
+#: searchform.php:4
+msgid "Search..."
+msgstr "Zoeken.."
+
+#: searchform.php:5
+msgid "Go"
+msgstr "Gaan"
+
+#: theme-options.php:13
+msgid "Ignite Dashboard"
+msgstr ""
+
+#: theme-options.php:26
+msgid "Start Customizing"
+msgstr ""
+
+#: theme-options.php:27
+msgid "Thanks for downloading Ignite!"
+msgstr ""
+
+#: theme-options.php:28
+msgid ""
+"To start customizing Ignite, click the 'Customize' option in your menu, or "
+"use the button below to get started"
+msgstr ""
+
+#: theme-options.php:30
+msgid "Use Customizer"
+msgstr ""
+
+#: theme-options.php:36
+msgid "Get Support"
+msgstr ""
+
+#: theme-options.php:37
+msgid ""
+"You can find the knowledgebase, tutorials, support forum, and more in the "
+"Ignite Support Center"
+msgstr ""
+
+#: theme-options.php:39
+msgid "Visit Support Center"
+msgstr ""
+
+#: theme-options.php:45
+msgid "Upgrade to Ignite Plus ($29)"
+msgstr ""
+
+#: theme-options.php:46
+msgid ""
+"Ignite Plus is the premium version of Ignite. By upgrading to Ignite Plus, "
+"you get:"
+msgstr ""
+
+#: theme-options.php:48
+msgid "Custom colors"
+msgstr ""
+
+#: theme-options.php:49
+msgid "Background images & textures"
+msgstr ""
+
+#: theme-options.php:50
+msgid "New layouts"
+msgstr ""
+
+#: theme-options.php:51
+msgid "and much more&#8230;"
+msgstr ""
+
+#: theme-options.php:54
+msgid "See Full Feature List"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Ignite"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "http://competethemes.com/ignite/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Ignite is a responsive blog theme. It includes logo tools, social media "
+"icons, a left- or right-sidebar layout, five fonts, custom background "
+"colors, and many additional display options. There is also a premium upgrade "
+"for Ignite called Ignite Plus. See our fully-setup live demo at http://www."
+"competethemes.com/ignite-live-demo/"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Compete Themes"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://competethemes.com/"
+msgstr ""
+
+#: content.php:8 content.php:57
+msgctxt "Published by whom?"
+msgid "by"
+msgstr "door"
+
+#: library/classes/customize-control-background-image.php:49
+msgctxt "theme customizer tab"
+msgid "Default"
+msgstr "standaard"
+
+#: library/extensions/breadcrumb-trail.php:716
+#: library/functions/template-general.php:455
+msgctxt "minute and hour archives time format"
+msgid "g:i a"
+msgstr ""
+
+#: library/extensions/breadcrumb-trail.php:733
+#: library/functions/template-general.php:436
+msgctxt "minute archives time format"
+msgid "i"
+msgstr ""
+
+#: library/extensions/breadcrumb-trail.php:750
+#: library/functions/template-general.php:416
+msgctxt "hour archives time format"
+msgid "g a"
+msgstr ""
+
+#: library/extensions/breadcrumb-trail.php:766
+#: library/extensions/breadcrumb-trail.php:795
+#: library/extensions/breadcrumb-trail.php:822
+#: library/extensions/breadcrumb-trail.php:849
+#: library/extensions/breadcrumb-trail.php:1036
+#: library/functions/template-general.php:358
+#: library/functions/template-general.php:378
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: library/extensions/breadcrumb-trail.php:767
+#: library/extensions/breadcrumb-trail.php:823
+#: library/extensions/breadcrumb-trail.php:1040
+msgctxt "monthly archives date format"
+msgid "F"
+msgstr ""
+
+#: library/extensions/breadcrumb-trail.php:768
+#: library/extensions/breadcrumb-trail.php:1044
+msgctxt "daily archives date format"
+msgid "j"
+msgstr ""
+
+#: library/functions/template-general.php:397
+msgctxt "daily archives date format"
+msgid "F j, Y"
+msgstr ""
+
+#: library/extensions/breadcrumb-trail.php:796
+#: library/functions/template-general.php:378
+msgctxt "weekly archives date format"
+msgid "W"
+msgstr ""
+
+#. Translators: Default theme layout option.
+#: library/extensions/theme-layouts.php:363
+msgctxt "theme layout"
+msgid "Default"
+msgstr ""
+
+#. Translators: Post date/time "title" attribute.
+#: library/functions/attr.php:414
+msgctxt "post time format"
+msgid "l, F j, Y, g:i a"
+msgstr ""
+
+#. Translators: Comment date/time "title" attribute.
+#: library/functions/attr.php:535
+msgctxt "comment time format"
+msgid "l, F j, Y, g:i a"
+msgstr ""
+
+#. Translators: Separates tags, categories, etc. when displaying a post.
+#: library/functions/template-post.php:144
+msgctxt "taxonomy terms separator"
+msgid ", "
+msgstr ""
+
