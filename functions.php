@@ -20,7 +20,6 @@ function ct_ignite_theme_setup() {
 	$prefix = hybrid_get_prefix();
     
 	/* Theme-supported features go here. */
-    add_theme_support( 'hybrid-core-widgets' );
     add_theme_support( 'hybrid-core-template-hierarchy' );
     add_theme_support( 'loop-pagination' );
     add_theme_support( 'cleaner-gallery' );
