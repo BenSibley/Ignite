@@ -1853,6 +1853,13 @@ li.pingback {
 }
 
 /* bbpress styles */
+/* The evil, inane styles of bbPress have left little recourse, so I apologize now
+ * for my CSS sins; for every !important tag and id used to battle the font-size
+ * re-declarations, qualifying selectors, triple id selectors, and other villainy
+ * of bbPress.
+ *
+ * Amen.
+*/
 #ignite div.bbp-search-form,
 #ignite-child div.bbp-search-form {
   float: none;
@@ -1865,4 +1872,26 @@ li.pingback {
 #bbp_search {
   width: 100% !important;
   margin: 0 0.375em 0.75em 0;
+}
+
+#bbpress-forums {
+  font-size: 1em !important;
+  line-height: 1.5 !important;
+}
+#bbpress-forums ul,
+#bbpress-forums .bbp-forum-content,
+#bbpress-forums .bbp-breadcrumb {
+  font-size: 1em !important;
+  line-height: 1.5 !important;
+}
+#bbpress-forums .bbp-topic-meta,
+#bbpress-forums .bbp-forum {
+  font-size: 13px !important;
+  line-height: 16px;
+}
+#bbpress-forums .bbp-forum-title {
+  font-weight: 700;
+}
+#bbpress-forums .entry {
+  padding: 1.5em;
 }

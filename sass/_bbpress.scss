@@ -1,5 +1,13 @@
 /* bbpress styles */
 
+/* The evil, inane styles of bbPress have left little recourse, so I apologize now
+ * for my CSS sins; for every !important tag and id used to battle the font-size
+ * re-declarations, qualifying selectors, triple id selectors, and other villainy
+ * of bbPress.
+ *
+ * Amen.
+*/
+
 #ignite,
 #ignite-child {
 
@@ -13,4 +21,26 @@
 #bbp_search {
   width: 100% !important;
   margin: 0 $baseline-height / 4 $baseline-height / 2 0;
+}
+#bbpress-forums {
+  font-size: 1em !important;
+  line-height: 1.5 !important;
+
+  ul,
+  .bbp-forum-content,
+  .bbp-breadcrumb {
+    font-size: 1em !important;
+    line-height: 1.5 !important;
+  }
+  .bbp-topic-meta,
+  .bbp-forum {
+    font-size: 13px !important;
+    line-height: 16px;
+  }
+  .bbp-forum-title {
+    font-weight: 700;
+  }
+  .entry {
+    padding: $baseline-height;
+  }
 }
