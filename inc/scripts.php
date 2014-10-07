@@ -29,7 +29,7 @@ add_action('wp_enqueue_scripts', 'ct_ignite_load_scripts_styles' );
 // enqueue styles used on theme options page
 function ct_ignite_enqueue_admin_styles($hook){
 
-	if ( 'appearance_page_ignite-options' == $hook ) {
+	if ( 'appearance_page_ignite-options' == $hook || 'widgets.php' ) {
 		wp_enqueue_style('style-admin', get_template_directory_uri() . '/style-admin.css');
 	}
 }
