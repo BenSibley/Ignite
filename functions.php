@@ -34,6 +34,12 @@ function ct_ignite_theme_setup() {
     {
         include $filename;
     }
+
+	// add widget folder files
+	foreach (glob(trailingslashit( get_template_directory() ) . 'inc/widgets/*.php') as $filename)
+	{
+		include $filename;
+	}
     // adds theme options page
     require_once( trailingslashit( get_template_directory() ) . 'theme-options.php' );
 
