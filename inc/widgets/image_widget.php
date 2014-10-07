@@ -36,9 +36,19 @@ class ct_ignite_Image extends WP_Widget {
 		/* the sidebar's $before_widget wrapper. */
 		$html =  $args['before_widget'];
 
+		/* If there is a link, link image */
+		if ($instance['link']) {
+			$html .= "<a href='" . $instance['link'] . "'>";
+		}
+
 		/* If an image was uploaded by the user, display it. */
 		if ($instance['image']) {
 			$html .= "<img title='" . $instance['title'] . "' alt='" . $instance['alt-text'] . "' src='". $instance['image'] ."' />";
+		}
+
+		/* If there is a link, close it */
+		if ($instance['link']) {
+			$html .= "</a>";
 		}
 
 		/* close the widget </section> */
@@ -77,6 +87,13 @@ class ct_ignite_Image extends WP_Widget {
 			$alt_text = __( '', 'ignite' );
 		}
 
+		/* Link */
+		if ( isset( $instance[ 'link' ] ) ) {
+			$link = $instance[ 'link' ];
+		} else {
+			$link = __( '', 'ignite-plus' );
+		}
+
 		?>
 		<p>
 			<label for="<?php echo $this->get_field_id( 'image' ); ?>"><?php _e( 'Image URL:','ignite' ); ?></label>
@@ -91,7 +108,10 @@ class ct_ignite_Image extends WP_Widget {
 			<label for="<?php echo $this->get_field_id( 'alt-text' ); ?>"><?php _e( 'Alternate text','ignite' ); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id( 'alt-text' ); ?>" name="<?php echo $this->get_field_name( 'alt-text' ); ?>" type="text" value="<?php echo esc_attr( $alt_text ); ?>">
 		</p>
-
+		<p>
+			<label for="<?php echo $this->get_field_id( 'link' ); ?>"><?php _e( 'Link (optional)','ignite-plus' ); ?></label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'link' ); ?>" name="<?php echo $this->get_field_name( 'link' ); ?>" type="text" value="<?php echo esc_url( $link ); ?>">
+		</p>
 
 	<?php
 	}
@@ -118,6 +138,9 @@ class ct_ignite_Image extends WP_Widget {
 
 		/* alt text */
 		$instance['alt-text'] = ( ! empty( $new_instance['alt-text'] ) ) ? strip_tags( $new_instance['alt-text'] ) : '';
+
+		/* link */
+		$instance['link'] = ( ! empty( $new_instance['link'] ) ) ? strip_tags( $new_instance['link'] ) : '';
 
 		return $instance;
 	}
