@@ -1,0 +1,34 @@
+@import "variables";
+
+/* Customizer Styles */
+
+.upgrades-ad {
+  background: #43b3c4;
+  color: white;
+  transition: background 0.2s ease-in-out;
+
+  &:hover {
+    background: #3a9cab;
+
+    span {
+      margin-left: 4px;
+    }
+  }
+  a {
+    display: block;
+    padding: $baseline-height / 3;
+    color: white;
+
+    &:link,
+    &:visited,
+    &:hover,
+    &:active,
+    &:focus  {
+      color: white;
+    }
+  }
+  span {
+    margin-left: 0px;
+    transition: margin-left 0.2s ease-in-out;
+  }
+}

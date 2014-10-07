@@ -1,0 +1,30 @@
+/*===== Variables =====*/
+/* Theme Colors */
+/* Social Media Brand Colors */
+/*===== Mixins =====*/
+/* Customizer Styles */
+.upgrades-ad {
+  background: #43b3c4;
+  color: white;
+  -webkit-transition: background 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out;
+}
+.upgrades-ad:hover {
+  background: #3a9cab;
+}
+.upgrades-ad:hover span {
+  margin-left: 4px;
+}
+.upgrades-ad a {
+  display: block;
+  padding: 0.5em;
+  color: white;
+}
+.upgrades-ad a:link, .upgrades-ad a:visited, .upgrades-ad a:hover, .upgrades-ad a:active, .upgrades-ad a:focus {
+  color: white;
+}
+.upgrades-ad span {
+  margin-left: 0px;
+  -webkit-transition: margin-left 0.2s ease-in-out;
+  transition: margin-left 0.2s ease-in-out;
+}
