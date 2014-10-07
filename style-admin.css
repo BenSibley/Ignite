@@ -15,3 +15,10 @@
     list-style: disc;
     margin-left: 36px;
 }
+
+/* styles for widgets page */
+
+/* add space between upload between and url input */
+#image-upload {
+    margin-top: 12px;
+}
