@@ -35,7 +35,7 @@ add_action('wp_enqueue_scripts', 'ct_ignite_load_scripts_styles' );
 function ct_ignite_enqueue_admin_styles($hook){
 
 	if ( 'appearance_page_ignite-options' == $hook || 'widgets.php' ) {
-		wp_enqueue_style('style-admin', get_template_directory_uri() . '/style-admin.css');
+		wp_enqueue_style('admin-style', get_template_directory_uri() . '/styles/admin-style.min.css');
 	}
 
 	// if is user profile page

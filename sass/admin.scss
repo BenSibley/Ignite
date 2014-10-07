@@ -1,24 +1,27 @@
+/* Back-end styles */
+
 /* styles for theme options page */
 
 #ignite-dashboard-wrap .nav-tab-wrapper {
-    padding-top: 24px;
+  padding-top: 24px;
 }
 .content {
-    margin-top: 24px;
-    padding: 12px 24px;
-    border: solid 1px #CCC;
-}
-.content .button-primary {
+  margin-top: 24px;
+  padding: 12px 24px;
+  border: solid 1px #CCC;
+
+  .button-primary {
     margin: 12px 0;
-}
-.content ul {
+  }
+  ul {
     list-style: disc;
     margin-left: 36px;
+  }
 }
 
 /* styles for widgets page */
 
 /* add space between upload between and url input */
 #image-upload {
-    margin-top: 12px;
+  margin-top: 12px;
 }
