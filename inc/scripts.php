@@ -39,7 +39,7 @@ add_action('admin_enqueue_scripts',	'ct_ignite_enqueue_admin_styles' );
 function ct_ignite_enqueue_profile_image_uploader($hook) {
 
 	// if is user profile page
-	if('profile.php' == $hook || 'user-edit.php' == $hook){
+	if('profile.php' == $hook || 'user-edit.php' == $hook || 'widgets.php' == $hook ){
 
 		// Enqueues all scripts, styles, settings, and templates necessary to use all media JavaScript APIs.
 		wp_enqueue_media();
