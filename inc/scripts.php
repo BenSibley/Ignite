@@ -1,5 +1,8 @@
 <?php
-// register and enqueue front-end scripts
+
+/*
+ * Front-end scripts
+ */
 function ct_ignite_load_scripts_styles() {
 
 	wp_register_style( 'ct-ignite-google-fonts', '//fonts.googleapis.com/css?family=Lusitana:400,700');
@@ -26,17 +29,14 @@ function ct_ignite_load_scripts_styles() {
 }
 add_action('wp_enqueue_scripts', 'ct_ignite_load_scripts_styles' );
 
-// enqueue styles used on theme options page
+/*
+ * Back-end scripts
+ */
 function ct_ignite_enqueue_admin_styles($hook){
 
 	if ( 'appearance_page_ignite-options' == $hook || 'widgets.php' ) {
 		wp_enqueue_style('style-admin', get_template_directory_uri() . '/style-admin.css');
 	}
-}
-add_action('admin_enqueue_scripts',	'ct_ignite_enqueue_admin_styles' );
-
-// enqueues files for profile image upload only on profile and user edit screens
-function ct_ignite_enqueue_profile_image_uploader($hook) {
 
 	// if is user profile page
 	if('profile.php' == $hook || 'user-edit.php' == $hook || 'widgets.php' == $hook ){
@@ -48,9 +48,11 @@ function ct_ignite_enqueue_profile_image_uploader($hook) {
 		wp_enqueue_script('ct-profile-uploader', get_template_directory_uri() . '/js/build/profile-uploader.min.js');
 	}
 }
-add_action('admin_enqueue_scripts', 'ct_ignite_enqueue_profile_image_uploader');
+add_action('admin_enqueue_scripts',	'ct_ignite_enqueue_admin_styles' );
 
-// enqueues scripts and styles used on customizer page
+/*
+ * Customizer scripts
+ */
 function ct_ignite_enqueue_customizer_scripts(){
 
 	// stylesheet for Comments display select option
@@ -60,7 +62,10 @@ function ct_ignite_enqueue_customizer_scripts(){
 	wp_enqueue_style('multiple-select-styles', get_template_directory_uri() . '/styles/multiple-select.css');
 
 	// JS for hiding/showing Customizer options
-	wp_enqueue_script('customizer', get_template_directory_uri() . '/js/build/customizer.min.js',array('jquery'),'',true);
+	wp_enqueue_script('customizer-js', get_template_directory_uri() . '/js/build/customizer.min.js',array('jquery'),'',true);
+
+	// CSS for styling upgrade ad
+	wp_enqueue_style('customizer-styles', get_template_directory_uri() . '/styles/customizer-style.min.css');
 }
 add_action('customize_controls_enqueue_scripts','ct_ignite_enqueue_customizer_scripts');
 
