@@ -555,3 +555,47 @@ function ct_ignite_profile_image_output(){
         echo get_avatar( get_the_author_meta( 'ID' ), 72 );
     }
 }
+
+function ct_ignite_toolbar_link( $wp_admin_bar ) {
+
+	// Create parent nod
+	$args = array(
+		'id'    => 'ct_ignite_dashboard',
+		'title' => 'Ignite Dashboard',
+		'href'  => site_url() . '/wp-admin/themes.php?page=ignite-options',
+		'meta'  => array( 'class' => 'ignite-dashboard' )
+	);
+	$wp_admin_bar->add_node( $args );
+
+	// Customize
+	$args = array(
+		'id'    => 'ct_ignite_dashboard_customize',
+		'title' => 'Customize',
+		'parent' => 'ct_ignite_dashboard',
+		'href'  => site_url() . '/wp-admin/customize.php',
+		'meta'  => array( 'class' => 'ignite-dashboard-customize' )
+	);
+	$wp_admin_bar->add_node( $args );
+
+	// Support
+	$args = array(
+		'id'    => 'ct_ignite_dashboard_support',
+		'title' => 'Support',
+		'parent' => 'ct_ignite_dashboard',
+		'href'  => 'http://www.competethemes.com/documentation/ignite-support-center/',
+		'meta'  => array( 'class' => 'ignite-dashboard-support', 'target' => '_blank' )
+	);
+	$wp_admin_bar->add_node( $args );
+
+	// Upgrade
+	$args = array(
+		'id'    => 'ct_ignite_dashboard_upgrade',
+		'title' => 'Upgrade',
+		'parent' => 'ct_ignite_dashboard',
+		'href'  => 'https://www.competethemes.com/ignite-plus/',
+		'meta'  => array( 'class' => 'ignite-dashboard-support', 'target' => '_blank' )
+	);
+	$wp_admin_bar->add_node( $args );
+
+}
+add_action( 'admin_bar_menu', 'ct_ignite_toolbar_link', 999 );
