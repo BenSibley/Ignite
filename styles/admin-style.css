@@ -1,13 +1,14 @@
 /* Back-end styles */
 /* styles for theme options page */
-#ignite-dashboard-wrap .nav-tab-wrapper {
-  padding-top: 24px;
+#ignite-dashboard-wrap h2 {
+  margin-bottom: 24px;
 }
 
 .content {
-  margin-top: 24px;
-  padding: 12px 24px;
-  border: solid 1px #CCC;
+  margin-top: 12px;
+  padding: 12px 24px 24px;
+  border-right: solid 1px #e5e5e5;
+  border-bottom: solid 1px #e5e5e5;
 }
 .content .button-primary {
   margin: 12px 0;
@@ -17,6 +18,48 @@
   margin-left: 36px;
 }
 
+.content-customization,
+.content-support,
+.content-premium-upgrade {
+  background: white;
+}
+
+/* 600px */
+@media all and (min-width: 37.5em) {
+  .content-customization,
+  .content-support,
+  .content-premium-upgrade {
+    width: 39%;
+    float: left;
+  }
+  .content-customization p,
+  .content-support p,
+  .content-premium-upgrade p {
+    min-height: 57px;
+  }
+
+  .content-premium-upgrade p {
+    min-height: 0px;
+  }
+
+  .content-customization,
+  .content-support {
+    margin-right: 2%;
+  }
+}
+/* 1100px */
+@media all and (min-width: 68.75em) {
+  .content-customization,
+  .content-support,
+  .content-premium-upgrade {
+    width: 27%;
+  }
+
+  .content-customization,
+  .content-support {
+    margin-right: 1%;
+  }
+}
 /* styles for widgets page */
 /* add space between upload between and url input */
 #image-upload {
