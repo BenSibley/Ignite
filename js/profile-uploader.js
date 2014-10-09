@@ -5,7 +5,14 @@ jQuery(document).ready(function($){
 // Uploading files
     var file_frame;
 
-    $('#user-profile-upload, #image-upload').on('click', function( event ){
+    // attach event listener for User profile image and About Me widget
+    $('#user-profile-upload, #about-me-upload').on('click', runMediaUploader);
+
+    // add to widget right section for Image widgets
+    $( "#widgets-right" ).on( "click", ".image-upload", runMediaUploader );
+
+    // handle media uploads
+    function runMediaUploader(event){
 
         event.preventDefault();
 
@@ -32,13 +39,10 @@ jQuery(document).ready(function($){
             // change input's value to the attachment url
             $(event.currentTarget).prev().val(attachment.url);
 
-            // Do something with attachment.id and/or attachment.url here
-            $('#user_profile_image').val(attachment.url);
             $('#image-preview').attr('src', attachment.url);
         });
 
         // Finally, open the modal
         file_frame.open();
-    });
-
+    }
 });
