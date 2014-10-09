@@ -374,14 +374,14 @@
     }
   }
   // styling for parent menu icons if enabled
-  .menu-item-has-children {
+  .parent-icons .menu-item-has-children {
 
     > a:after {
       content: '\25BE';
       font-family: 'Arial', 'sans-serif';
-      position: relative;
       color: $gray;
       margin-left: 4px;
+      position: relative;
       top: -1px;
     }
     ul .menu-item-has-children > a:after {

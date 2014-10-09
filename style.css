@@ -734,15 +734,15 @@ a img {
     left: 100%;
   }
 
-  .menu-item-has-children > a:after {
+  .parent-icons .menu-item-has-children > a:after {
     content: '\25BE';
     font-family: 'Arial', 'sans-serif';
-    position: relative;
     color: #373b41;
     margin-left: 4px;
+    position: relative;
     top: -1px;
   }
-  .menu-item-has-children ul .menu-item-has-children > a:after {
+  .parent-icons .menu-item-has-children ul .menu-item-has-children > a:after {
     content: '\25B8';
   }
 }
