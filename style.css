@@ -593,6 +593,12 @@ a img {
     color: white;
     background: #e6a117;
   }
+  .menu-primary-items a:hover:after, .menu-primary-items a:active:after, .menu-primary-items a:focus:after,
+  .menu-unset ul a:hover:after,
+  .menu-unset ul a:active:after,
+  .menu-unset ul a:focus:after {
+    color: white !important;
+  }
   .menu-primary-items a:hover + ul, .menu-primary-items a:active + ul, .menu-primary-items a:focus + ul,
   .menu-unset ul a:hover + ul,
   .menu-unset ul a:active + ul,
@@ -631,6 +637,12 @@ a img {
   .menu-unset ul ul a:active,
   .menu-unset ul ul a:focus {
     color: white;
+  }
+  .menu-primary-items ul a:hover:after, .menu-primary-items ul a:active:after, .menu-primary-items ul a:focus:after,
+  .menu-unset ul ul a:hover:after,
+  .menu-unset ul ul a:active:after,
+  .menu-unset ul ul a:focus:after {
+    color: white !important;
   }
   .menu-primary-items ul a:hover + ul, .menu-primary-items ul a:active + ul, .menu-primary-items ul a:focus + ul,
   .menu-unset ul ul a:hover + ul,
@@ -678,6 +690,16 @@ a img {
     color: white;
     background: #e6a117;
   }
+  #menu-primary-items .current-menu-item > a:after,
+  #menu-primary-items .current_page_ancestor > a:after,
+  #menu-primary-items .current_page_item > a:after,
+  #menu-primary-items .current_page_ancestor > a:after,
+  .menu-unset ul .current-menu-item > a:after,
+  .menu-unset ul .current_page_ancestor > a:after,
+  .menu-unset ul .current_page_item > a:after,
+  .menu-unset ul .current_page_ancestor > a:after {
+    color: white !important;
+  }
 
   /* because .menu-primary-items is a 'ul' this needs to be declared separately */
   .menu-unset:after {
@@ -710,6 +732,18 @@ a img {
   .menu-unset ul ul.focused ul.focused {
     top: 0;
     left: 100%;
+  }
+
+  .menu-item-has-children > a:after {
+    content: '\25BE';
+    font-family: 'Arial', 'sans-serif';
+    position: relative;
+    color: #373b41;
+    margin-left: 4px;
+    top: -1px;
+  }
+  .menu-item-has-children ul .menu-item-has-children > a:after {
+    content: '\25B8';
   }
 }
 /* 900px */

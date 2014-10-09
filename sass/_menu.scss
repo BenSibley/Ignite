@@ -251,6 +251,11 @@
         color: white;
         background: $orange;
 
+        // parent menu triangle icon
+        &:after {
+          color: white !important;
+        }
+
         // tier 2
         + ul {
           top: $baseline-height * 2.833;
@@ -282,6 +287,11 @@
         &:active,
         &:focus {
           color: white;
+
+          // parent menu triangle icon
+          &:after {
+            color: white !important;
+          }
 
           // tier 3
           + ul {
@@ -322,6 +332,11 @@
       > a {
         color: white;
         background: $orange;
+
+        // parent menu triangle icon
+        &:after {
+          color: white !important;
+        }
       }
     }
   }
@@ -356,6 +371,21 @@
         top: 0;
         left: 100%;
       }
+    }
+  }
+  // styling for parent menu icons if enabled
+  .menu-item-has-children {
+
+    > a:after {
+      content: '\25BE';
+      font-family: 'Arial', 'sans-serif';
+      position: relative;
+      color: $gray;
+      margin-left: 4px;
+      top: -1px;
+    }
+    ul .menu-item-has-children > a:after {
+      content: '\25B8';
     }
   }
 }

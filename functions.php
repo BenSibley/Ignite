@@ -338,6 +338,10 @@ function ct_ignite_body_class( $classes ) {
         $classes[] = 'sidebar-left';
     }
 
+	if( get_theme_mod('ct_ignite_parent_menu_icon_settings') == 'show' ) {
+		$classes[] = 'parent-icons';
+	}
+
     return $classes;
 }
 add_filter( 'body_class', 'ct_ignite_body_class' );
