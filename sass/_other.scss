@@ -242,3 +242,17 @@
 .singular-attachment .further-reading p {
   width: 49.5%;
 }
+
+/* Full-width template */
+@media all and (min-width: 56.25em) {
+
+  .page-template-full-width {
+
+    .main {
+      float: none;
+      width: 85.186%;
+      margin-left: 7.407%;
+    }
+  }
+
+}

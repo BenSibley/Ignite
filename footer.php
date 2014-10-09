@@ -1,8 +1,10 @@
 </div> <!-- .main -->
 
-<div id="sidebar-primary-container" class="sidebar-primary-container">
-    <?php get_sidebar( 'primary' ); ?>
-</div>
+<?php if( ! is_page_template('full-width.php') ) : ?>
+	<div id="sidebar-primary-container" class="sidebar-primary-container">
+	    <?php get_sidebar( 'primary' ); ?>
+	</div>
+<?php endif; ?>
 
 </div> <!-- .overflow-container -->
 
