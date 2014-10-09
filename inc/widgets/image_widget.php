@@ -12,7 +12,7 @@ class ct_ignite_Image extends WP_Widget {
 		/* Set up the widget options. */
 		$widget_options = array(
 			'classname'   => 'widget_ct_ignite_image', // Classes
-			'description' => __( 'This widget displays an image', 'ignite' ) // Args
+			'description' => __( 'This Ignite widget displays an image.', 'ignite' ) // Args
 		);
 
 		/* Create the widget. */
