@@ -527,7 +527,7 @@ function ct_ignite_toolbar_link( $wp_admin_bar ) {
 	$args = array(
 		'id'    => 'ct_ignite_dashboard',
 		'title' => 'Ignite Dashboard',
-		'href'  => site_url() . '/wp-admin/themes.php?page=ignite-options',
+		'href'  => admin_url() . 'themes.php?page=ignite-options',
 		'meta'  => array( 'class' => 'ignite-dashboard' )
 	);
 	$wp_admin_bar->add_node( $args );
@@ -537,7 +537,7 @@ function ct_ignite_toolbar_link( $wp_admin_bar ) {
 		'id'    => 'ct_ignite_dashboard_customize',
 		'title' => 'Customize',
 		'parent' => 'ct_ignite_dashboard',
-		'href'  => site_url() . '/wp-admin/customize.php',
+		'href'  => admin_url() . 'customize.php',
 		'meta'  => array( 'class' => 'ignite-dashboard-customize' )
 	);
 	$wp_admin_bar->add_node( $args );
