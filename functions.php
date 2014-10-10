@@ -104,28 +104,40 @@ function ct_ignite_customize_comments( $comment, $args, $depth ) {
 /* added HTML5 placeholders for each default field */
 function ct_ignite_update_fields($fields) {
 
+	// get commenter object
     $commenter = wp_get_current_commenter();
+
+	// are name and email required?
     $req = get_option( 'require_name_email' );
+
+	// required or optional label to be added
+	if( $req == 1 ) {
+		$label = '*';
+	} else {
+		$label = ' (optional)';
+	}
+
+	// adds aria required tag if required
     $aria_req = ( $req ? " aria-required='true'" : '' );
 
     $fields['author'] =
         '<p class="comment-form-author">
             <label class="screen-reader-text">' . __('Your Name', 'ignite') . '</label>
-			<input required placeholder="' . __('Your Name*', 'ignite') . '" id="author" name="author" type="text" aria-required="true" value="' . esc_attr( $commenter['comment_author'] ) .
+			<input placeholder="' . __('Your Name', 'ignite') . $label . '" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
         '" size="30"' . $aria_req . ' />
     	</p>';
 
     $fields['email'] =
         '<p class="comment-form-email">
             <label class="screen-reader-text">' . __('Your Email', 'ignite') . '</label>
-    		<input required placeholder="' . __('Your Email*', 'ignite') . '" id="email" name="email" type="email" aria-required="true" value="' . esc_attr(  $commenter['comment_author_email'] ) .
+    		<input placeholder="' . __('Your Email', 'ignite') . $label . '" id="email" name="email" type="email" value="' . esc_attr(  $commenter['comment_author_email'] ) .
         '" size="30"' . $aria_req . ' />
     	</p>';
 
     $fields['url'] =
         '<p class="comment-form-url">
             <label class="screen-reader-text">' . __('Your Website URL', 'ignite') . '</label>
-			<input placeholder="' . __('Your URL', 'ignite') . '" id="url" name="url" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) .
+			<input placeholder="' . __('Your URL', 'ignite') . ' (optional)" id="url" name="url" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) .
         '" size="30" />
             </p>';
 
