@@ -148,28 +148,38 @@ jQuery(document).ready(function($){
     /* see if social media icons can fit and display if they can */
     function showSocialIcons() {
 
+        // set menu variable to primary or unset
         if($('#menu-primary-items').length){
             var menu = $('#menu-primary-items');
         } else {
             var menu = $('.menu-unset ul');
         }
-        // get widths of all elements involved
+
+        // get width of the menu
+        var menuWidth = menu.width();
+
+        // get widths of site header
         var siteHeaderWidth = $('#site-header').width();
 
-        var menuWidth = menu.width();
+        // get width of the site title/logo container
         var titleInfoWidth = $('#title-info').width();
+
+        // get the social icons
         var socialIcons = $('#menu-primary').find('.social-media-icons');
 
-        if($('#site-description').css('display') == 'none'){
+        // if site description is hidden, 0
+        if( $('#site-description').css('display') == 'none' ){
             var siteDescriptionWidth = 0;
-        } else {
+        }
+        // else get the width
+        else {
             var siteDescriptionWidth = $('#site-description').width();
         }
 
-        // remove the classes
+        // remove visibility classes, so this works on resize
         $(socialIcons).removeClass('visible visible-top');
 
-        /* multiply # of icons by 68 b/c each is 68px wide */
+        // multiply # of icons by 68 b/c each is 68px wide
         var socialIconsWidth = $('#menu-primary').find('.social-media-icons li').length * 26;
 
         /* If site-header has space for social icons + 48 margin + 48 extra margin, show them */
