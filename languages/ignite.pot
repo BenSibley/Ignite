@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Ignite 1.36\n"
+"Project-Id-Version: Ignite 1.38\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2014-10-01 15:26:06+00:00\n"
+"POT-Creation-Date: 2014-10-12 15:22:26+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -108,70 +108,78 @@ msgstr ""
 msgid "Pages:"
 msgstr ""
 
-#: footer.php:25
+#: footer.php:27
 msgid ""
 "<a target=\"_blank\" href=\"%s\">Ignite WordPress Theme</a> by Compete "
 "Themes."
 msgstr ""
 
-#: functions.php:47
+#: functions.php:53
 msgid "Primary Sidebar"
 msgstr ""
 
-#: functions.php:49
+#: functions.php:55
 msgid "The main sidebar"
 msgstr ""
 
-#: functions.php:56
+#: functions.php:62
 msgid "Primary"
 msgstr ""
 
-#: functions.php:117
+#: functions.php:84
 msgid "said:"
 msgstr ""
 
-#: functions.php:121
+#: functions.php:88
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:129
+#: functions.php:96
 msgid "Reply"
 msgstr ""
 
-#: functions.php:146
+#: functions.php:125 functions.php:126
 msgid "Your Name"
 msgstr ""
 
-#: functions.php:147
-msgid "Your Name*"
-msgstr ""
-
-#: functions.php:153
+#: functions.php:132 functions.php:133
 msgid "Your Email"
 msgstr ""
 
-#: functions.php:154
-msgid "Your Email*"
-msgstr ""
-
-#: functions.php:160
+#: functions.php:139
 msgid "Your Website URL"
 msgstr ""
 
-#: functions.php:161
+#: functions.php:140
 msgid "Your URL"
 msgstr ""
 
-#: functions.php:173
+#: functions.php:152
 msgid "Your Comment"
 msgstr ""
 
-#: functions.php:174
+#: functions.php:153
 msgid "Enter Your Comment"
 msgstr ""
 
-#: functions.php:217 functions.php:227
+#: functions.php:196 functions.php:206
 msgid "Read More"
+msgstr ""
+
+#: functions.php:541 theme-options.php:13
+msgid "Ignite Dashboard"
+msgstr ""
+
+#: functions.php:550
+msgid "Customize"
+msgstr ""
+
+#: functions.php:560 theme-options.php:22
+msgid "Support"
+msgstr ""
+
+#: functions.php:570
+msgid "Ignite Plus"
 msgstr ""
 
 #: header.php:15
@@ -246,11 +254,11 @@ msgstr ""
 msgid "Pick Your Layout:"
 msgstr ""
 
-#: inc/customizer.php:271 inc/customizer.php:638
+#: inc/customizer.php:271 inc/customizer.php:656
 msgid "Right sidebar"
 msgstr ""
 
-#: inc/customizer.php:272 inc/customizer.php:639
+#: inc/customizer.php:272 inc/customizer.php:657
 msgid "Left sidebar"
 msgstr ""
 
@@ -298,13 +306,13 @@ msgstr ""
 
 #: inc/customizer.php:382 inc/customizer.php:400 inc/customizer.php:418
 #: inc/customizer.php:436 inc/customizer.php:454 inc/customizer.php:594
-#: inc/customizer.php:713
+#: inc/customizer.php:612 inc/customizer.php:731
 msgid "Show"
 msgstr ""
 
 #: inc/customizer.php:383 inc/customizer.php:401 inc/customizer.php:419
 #: inc/customizer.php:437 inc/customizer.php:455 inc/customizer.php:595
-#: inc/customizer.php:714
+#: inc/customizer.php:613 inc/customizer.php:732
 msgid "Hide"
 msgstr ""
 
@@ -332,19 +340,19 @@ msgstr ""
 msgid "Show comments on:"
 msgstr ""
 
-#: inc/customizer.php:482 inc/customizer.php:689
+#: inc/customizer.php:482 inc/customizer.php:707
 msgid "Posts"
 msgstr ""
 
-#: inc/customizer.php:483 inc/customizer.php:690
+#: inc/customizer.php:483 inc/customizer.php:708
 msgid "Pages"
 msgstr ""
 
-#: inc/customizer.php:484 inc/customizer.php:691
+#: inc/customizer.php:484 inc/customizer.php:709
 msgid "Attachments"
 msgstr ""
 
-#: inc/customizer.php:485 inc/customizer.php:692
+#: inc/customizer.php:485 inc/customizer.php:710
 msgid "Do not show"
 msgstr ""
 
@@ -372,11 +380,11 @@ msgstr ""
 msgid "Show full post on blog?"
 msgstr ""
 
-#: inc/customizer.php:558 inc/customizer.php:576 inc/customizer.php:730
+#: inc/customizer.php:558 inc/customizer.php:576 inc/customizer.php:748
 msgid "Yes"
 msgstr ""
 
-#: inc/customizer.php:559 inc/customizer.php:577 inc/customizer.php:731
+#: inc/customizer.php:559 inc/customizer.php:577 inc/customizer.php:749
 msgid "No"
 msgstr ""
 
@@ -388,11 +396,19 @@ msgstr ""
 msgid "Show post author info after posts?"
 msgstr ""
 
+#: inc/customizer.php:607
+msgid "Add icon to parent menu items?"
+msgstr ""
+
+#: inc/customizer.php:852
+msgid "Premium Upgrade Available!"
+msgstr ""
+
 #: inc/user-profile.php:16
 msgid "Profile image"
 msgstr ""
 
-#: inc/user-profile.php:23
+#: inc/user-profile.php:23 inc/widgets/image_widget.php:101
 msgid "Upload Image"
 msgstr ""
 
@@ -400,6 +416,34 @@ msgstr ""
 msgid ""
 "Upload an image here to use instead of your Gravatar. Perfectly square "
 "images will not be cropped."
+msgstr ""
+
+#: inc/widgets/image_widget.php:15
+msgid "This Ignite widget displays an image."
+msgstr ""
+
+#: inc/widgets/image_widget.php:21
+msgid "Image"
+msgstr ""
+
+#: inc/widgets/image_widget.php:73
+msgid "http://"
+msgstr ""
+
+#: inc/widgets/image_widget.php:99
+msgid "Image URL:"
+msgstr ""
+
+#: inc/widgets/image_widget.php:104
+msgid "Title:"
+msgstr ""
+
+#: inc/widgets/image_widget.php:108
+msgid "Alternate text"
+msgstr ""
+
+#: inc/widgets/image_widget.php:112
+msgid "Link (optional)"
 msgstr ""
 
 #: search.php:11
@@ -426,69 +470,57 @@ msgstr ""
 msgid "Go"
 msgstr ""
 
-#: theme-options.php:13
-msgid "Ignite Dashboard"
+#: theme-options.php:15
+msgid "Customization"
 msgstr ""
 
-#: theme-options.php:26
-msgid "Start Customizing"
-msgstr ""
-
-#: theme-options.php:27
-msgid "Thanks for downloading Ignite!"
-msgstr ""
-
-#: theme-options.php:28
+#: theme-options.php:16
 msgid ""
-"To start customizing Ignite, click the 'Customize' option in your menu, or "
-"use the button below to get started"
+"Click the \"Customize\" link in your menu, or use the button below to get "
+"started customizing Ignite"
 msgstr ""
 
-#: theme-options.php:30
+#: theme-options.php:18
 msgid "Use Customizer"
 msgstr ""
 
-#: theme-options.php:36
-msgid "Get Support"
-msgstr ""
-
-#: theme-options.php:37
+#: theme-options.php:23
 msgid ""
-"You can find the knowledgebase, tutorials, support forum, and more in the "
+"You can find the knowledgebase, changelog, support forum, and more in the "
 "Ignite Support Center"
 msgstr ""
 
-#: theme-options.php:39
+#: theme-options.php:25
 msgid "Visit Support Center"
 msgstr ""
 
-#: theme-options.php:45
+#: theme-options.php:29
 msgid "Upgrade to Ignite Plus ($29)"
 msgstr ""
 
-#: theme-options.php:46
+#: theme-options.php:30
 msgid ""
 "Ignite Plus is the premium version of Ignite. By upgrading to Ignite Plus, "
 "you get:"
 msgstr ""
 
-#: theme-options.php:48
+#: theme-options.php:32
 msgid "Custom colors"
 msgstr ""
 
-#: theme-options.php:49
+#: theme-options.php:33
 msgid "Background images & textures"
 msgstr ""
 
-#: theme-options.php:50
+#: theme-options.php:34
 msgid "New layouts"
 msgstr ""
 
-#: theme-options.php:51
+#: theme-options.php:35
 msgid "and much more&#8230;"
 msgstr ""
 
-#: theme-options.php:54
+#: theme-options.php:38
 msgid "See Full Feature List"
 msgstr ""
 
@@ -515,6 +547,10 @@ msgstr ""
 
 #. Author URI of the plugin/theme
 msgid "http://competethemes.com/"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Full-width"
 msgstr ""
 
 #: content.php:23 content.php:26 content.php:90 content.php:93
