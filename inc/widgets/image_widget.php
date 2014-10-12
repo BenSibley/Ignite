@@ -91,7 +91,7 @@ class ct_ignite_Image extends WP_Widget {
 		if ( isset( $instance[ 'link' ] ) ) {
 			$link = $instance[ 'link' ];
 		} else {
-			$link = __( '', 'ignite-plus' );
+			$link = __( '', 'ignite' );
 		}
 
 		?>
