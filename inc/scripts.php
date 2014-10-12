@@ -34,7 +34,7 @@ add_action('wp_enqueue_scripts', 'ct_ignite_load_scripts_styles' );
  */
 function ct_ignite_enqueue_admin_styles($hook){
 
-	if ( 'appearance_page_ignite-options' == $hook || 'widgets.php' ) {
+	if ( 'appearance_page_ignite-options' == $hook || 'widgets.php' == $hook ) {
 		wp_enqueue_style('admin-style', get_template_directory_uri() . '/styles/admin-style.min.css');
 	}
 
