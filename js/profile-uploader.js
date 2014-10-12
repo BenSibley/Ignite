@@ -5,11 +5,11 @@ jQuery(document).ready(function($){
 // Uploading files
     var file_frame;
 
-    // attach event listener for User profile image and About Me widget
-    $('#user-profile-upload, #about-me-upload').on('click', runMediaUploader);
+    // attach event listener for User profile image
+    $('#user-profile-upload').on('click', runMediaUploader);
 
-    // add to widget right section for Image widgets
-    $( "#widgets-right" ).on( "click", ".image-upload", runMediaUploader );
+    // attach 'live' event listener to widgets panel to dynamically handle click event
+    $( "#widgets-right" ).on( "click", '.image-upload', runMediaUploader );
 
     // handle media uploads
     function runMediaUploader(event){
@@ -36,9 +36,10 @@ jQuery(document).ready(function($){
             // We set multiple to false so only get one image from the uploader
             attachment = file_frame.state().get('selection').first().toJSON();
 
-            // change input's value to the attachment url
+            // change preceding input's value to the attachment url
             $(event.currentTarget).prev().val(attachment.url);
 
+            // add the image to the image preview div (author profile page only)
             $('#image-preview').attr('src', attachment.url);
         });
 
