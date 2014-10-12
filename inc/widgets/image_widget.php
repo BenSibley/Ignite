@@ -131,7 +131,7 @@ class ct_ignite_Image extends WP_Widget {
 		$instance = array();
 
 		/* image */
-		$instance['image'] = ( ! empty( $new_instance['image'] ) ) ? strip_tags( $new_instance['image'] ) : '';
+		$instance['image'] = ( ! empty( $new_instance['image'] ) ) ? esc_url_raw( $new_instance['image'] ) : '';
 
 		/* title */
 		$instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
@@ -140,7 +140,7 @@ class ct_ignite_Image extends WP_Widget {
 		$instance['alt-text'] = ( ! empty( $new_instance['alt-text'] ) ) ? strip_tags( $new_instance['alt-text'] ) : '';
 
 		/* link */
-		$instance['link'] = ( ! empty( $new_instance['link'] ) ) ? strip_tags( $new_instance['link'] ) : '';
+		$instance['link'] = ( ! empty( $new_instance['link'] ) ) ? esc_url_raw( $new_instance['link'] ) : '';
 
 		return $instance;
 	}
