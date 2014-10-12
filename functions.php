@@ -538,7 +538,7 @@ function ct_ignite_toolbar_link( $wp_admin_bar ) {
 	// Create parent nod
 	$args = array(
 		'id'    => 'ct_ignite_dashboard',
-		'title' => 'Ignite Dashboard',
+		'title' => __('Ignite Dashboard', 'ignite'),
 		'href'  => admin_url() . 'themes.php?page=ignite-options',
 		'meta'  => array( 'class' => 'ignite-dashboard' )
 	);
@@ -547,7 +547,7 @@ function ct_ignite_toolbar_link( $wp_admin_bar ) {
 	// Customize
 	$args = array(
 		'id'    => 'ct_ignite_dashboard_customize',
-		'title' => 'Customize',
+		'title' => __('Customize', 'ignite'),
 		'parent' => 'ct_ignite_dashboard',
 		'href'  => admin_url() . 'customize.php',
 		'meta'  => array( 'class' => 'ignite-dashboard-customize' )
@@ -557,7 +557,7 @@ function ct_ignite_toolbar_link( $wp_admin_bar ) {
 	// Support
 	$args = array(
 		'id'    => 'ct_ignite_dashboard_support',
-		'title' => 'Support',
+		'title' => __('Support', 'ignite'),
 		'parent' => 'ct_ignite_dashboard',
 		'href'  => 'http://www.competethemes.com/documentation/ignite-support-center/',
 		'meta'  => array( 'class' => 'ignite-dashboard-support', 'target' => '_blank' )
@@ -567,7 +567,7 @@ function ct_ignite_toolbar_link( $wp_admin_bar ) {
 	// Upgrade
 	$args = array(
 		'id'    => 'ct_ignite_dashboard_upgrade',
-		'title' => 'Upgrade',
+		'title' => __('Ignite Plus', 'ignite'),
 		'parent' => 'ct_ignite_dashboard',
 		'href'  => 'https://www.competethemes.com/ignite-plus/',
 		'meta'  => array( 'class' => 'ignite-dashboard-support', 'target' => '_blank' )
