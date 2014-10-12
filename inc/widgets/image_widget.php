@@ -109,7 +109,7 @@ class ct_ignite_Image extends WP_Widget {
 			<input class="widefat" id="<?php echo $this->get_field_id( 'alt-text' ); ?>" name="<?php echo $this->get_field_name( 'alt-text' ); ?>" type="text" value="<?php echo esc_attr( $alt_text ); ?>">
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'link' ); ?>"><?php _e( 'Link (optional)','ignite-plus' ); ?></label>
+			<label for="<?php echo $this->get_field_id( 'link' ); ?>"><?php _e( 'Link (optional)','ignite' ); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id( 'link' ); ?>" name="<?php echo $this->get_field_name( 'link' ); ?>" type="text" value="<?php echo esc_url( $link ); ?>">
 		</p>
 
