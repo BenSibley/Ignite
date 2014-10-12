@@ -604,7 +604,7 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 	) );
 	// control - parent menu icon
 	$wp_customize->add_control( 'ct_ignite_parent_menu_icon_settings', array(
-		'label'          => __( 'Mark parent menu items in nav bar?', 'ignite' ),
+		'label'          => __( 'Add icon to parent menu items?', 'ignite' ),
 		'section'        => 'ct-additional-options',
 		'settings'       => 'ct_ignite_parent_menu_icon_settings',
 		'type'           => 'radio',
