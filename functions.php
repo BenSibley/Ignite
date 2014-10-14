@@ -576,28 +576,3 @@ function ct_ignite_toolbar_link( $wp_admin_bar ) {
 
 }
 add_action( 'admin_bar_menu', 'ct_ignite_toolbar_link', 999 );
-
-function ct_tracks_compete_themes_logo_svg() {
-
-	$svg = '<svg width="130px" height="131px" viewBox="0 0 130 131" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-			    <title>logo</title>
-			    <desc>logo emblem</desc>
-			    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-			        <g id="final">
-			            <g id="logo-pattern-4" transform="translate(0.000000, 0.059226)">
-			                <rect id="Rectangle-124" fill="#3A9CAB" transform="translate(18.298256, 65.077014) rotate(-45.000000) translate(-18.298256, -65.077014) " x="5.39281551" y="52.2550923" width="25.8108813" height="25.6438435"></rect>
-			                <rect id="Rectangle-123" fill="#3A9CAB" transform="translate(64.932418, 18.221023) rotate(-45.000000) translate(-64.932418, -18.221023) " x="52.0269773" y="5.39910088" width="25.8108813" height="25.6438435"></rect>
-			                <rect id="Rectangle-135" fill="#3A9CAB" transform="translate(88.014847, 41.699442) rotate(-45.000000) translate(-88.014847, -41.699442) " x="75.2576899" y="29.0248437" width="25.8108813" height="25.6438435"></rect>
-			                <rect id="Rectangle-141" fill="#3A9CAB" transform="translate(64.715755, 111.834692) rotate(-45.000000) translate(-64.715755, -111.834692) " x="51.9585979" y="99.1600937" width="25.8108813" height="25.6438435"></rect>
-			                <rect id="Rectangle-139" fill="#3A9CAB" transform="translate(87.929878, 88.483689) rotate(-45.000000) translate(-87.929878, -88.483689) " x="75.1727209" y="75.8090915" width="25.8108813" height="25.6438435"></rect>
-			                <rect id="Rectangle-138" fill="#3A9CAB" transform="translate(110.877822, 65.024312) rotate(-45.000000) translate(-110.877822, -65.024312) " x="98.1206645" y="52.3497141" width="25.8108813" height="25.6438435"></rect>
-			                <rect id="Rectangle-140" fill="#3A9CAB" transform="translate(41.027017, 88.548659) rotate(-45.000000) translate(-41.027017, -88.548659) " x="28.0976324" y="75.7661985" width="25.8108813" height="25.6438435"></rect>
-			                <rect id="Rectangle-136" fill="#3A9CAB" transform="translate(41.038668, 41.764751) rotate(-45.000000) translate(-41.038668, -41.764751) " x="28.1332277" y="28.942829" width="25.8108813" height="25.6438435"></rect>
-			                <rect id="middle" fill="#4BCBDE" transform="translate(64.793850, 65.087699) rotate(-45.000000) translate(-64.793850, -65.087699) " x="56.1546698" y="56.5044288" width="17.4791955" height="17.3660771"></rect>
-			            </g>
-			        </g>
-			    </g>
-			</svg>';
-
-	return $svg;
-}
