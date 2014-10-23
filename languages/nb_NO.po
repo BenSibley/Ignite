@@ -1,0 +1,583 @@
+# Copyright (C) 2014 Compete Themes
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Ignite 1.38\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
+"POT-Creation-Date: 2014-10-12 15:22:26+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-10-17 23:09+0100\n"
+"Last-Translator: Harald Hansen <harald@phyx.org>\n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.6.9\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: nb\n"
+
+#: comments.php:11 comments.php:29 comments.php:49
+msgid "Be First to Comment"
+msgstr "Bli første kommentator"
+
+#: comments.php:11 comments.php:29 comments.php:49
+#: content/comment-count.php:10 content/comment-count.php:19
+#: inc/deprecated.php:104 inc/deprecated.php:113
+msgid "One Comment"
+msgstr "En kommentar"
+
+#: comments.php:11 comments.php:29 comments.php:49
+#: content/comment-count.php:10 content/comment-count.php:19
+#: inc/deprecated.php:104 inc/deprecated.php:113
+msgid "% Comments"
+msgstr "% kommentarer"
+
+#: comments.php:42
+msgid ""
+"Comments are closed, but <a href=\"%s\" title=\"Trackback URL for this post"
+"\">trackbacks</a> and pingbacks are open."
+msgstr ""
+"Kommentafeltet er stengt, men <a href=\"%s\" title=\"Trackback URL for this "
+"post\">trackbacks</a> og pingbacks er tillatt."
+
+#: comments.php:62 comments.php:68
+msgid "Comments are closed."
+msgstr "Kommentafeltet er stengt."
+
+#: content/category-links.php:12 inc/deprecated.php:67
+msgid "View all posts in %s"
+msgstr "Se alle innlegg i %s"
+
+#: content/comment-count.php:10 inc/deprecated.php:104
+msgid "Comments closed"
+msgstr "Kommentarfeltet er blitt stengt."
+
+#: content/comment-count.php:19 inc/deprecated.php:113
+msgid "Leave a Comment"
+msgstr "Legg inn en kommentar"
+
+#: content/further-reading.php:11 inc/deprecated.php:20
+msgid "The Previous Post"
+msgstr "Forrige innlegg"
+
+#: content/further-reading.php:16 inc/deprecated.php:25
+msgid "The Next Post"
+msgstr "Neste innlegg"
+
+#: content/further-reading.php:22 inc/deprecated.php:31
+msgid "Previous Post"
+msgstr "Forrige innlegg"
+
+#: content/further-reading.php:27 content/further-reading.php:39
+#: inc/deprecated.php:36 inc/deprecated.php:48
+msgid "Return to Blog"
+msgstr "Tilbake til blogg"
+
+#: content/further-reading.php:28 inc/deprecated.php:37
+msgid "This is the oldest post"
+msgstr "Dette er det eldste innlegget"
+
+#: content/further-reading.php:34 inc/deprecated.php:43
+msgid "Next Post"
+msgstr "Neste post"
+
+#: content/further-reading.php:40 inc/deprecated.php:49
+msgid "This is the newest post"
+msgstr "Dette er det nyeste innlegget"
+
+#: content/tag-links.php:11 inc/deprecated.php:86
+msgid "View all posts tagged %s"
+msgstr "Vis alle poster merket med stikkord %s"
+
+#: content-404.php:3
+msgid "404: Page Not Found"
+msgstr "404: Siden kan ikke finnes"
+
+#: content-404.php:8
+msgid ""
+"Looks like nothing was found on this url.  Double-check that the url is "
+"correct or try the search form below to find what you were looking for."
+msgstr ""
+"Vi kan ikke finne noe under denne adressen. Kontroller at URL-en er korrekt "
+"eller forsøk søkefeltet under for å finne innholdet du ser etter."
+
+#: content-attachment.php:3 content.php:16 content.php:83
+msgid "Published"
+msgstr "Publisert"
+
+#: content-attachment.php:19
+msgid "Previous Image"
+msgstr "Forrige bilde"
+
+#: content-attachment.php:22
+msgid "Next Image"
+msgstr "Neste bilde"
+
+#: content-page.php:9 content.php:39
+msgid "Pages:"
+msgstr "Sider:"
+
+#: footer.php:27
+msgid ""
+"<a target=\"_blank\" href=\"%s\">Ignite WordPress Theme</a> by Compete "
+"Themes."
+msgstr ""
+"<a target=\"_blank\" href=\"%s\">Ignite WordPress Tema</a> av Compete Themes."
+
+#: functions.php:53
+msgid "Primary Sidebar"
+msgstr "Hovedytterspalte"
+
+#: functions.php:55
+msgid "The main sidebar"
+msgstr "Hoverytterspalten"
+
+#: functions.php:62
+msgid "Primary"
+msgstr "Hoved"
+
+#: functions.php:84
+msgid "said:"
+msgstr "sa:"
+
+#: functions.php:88
+msgid "Your comment is awaiting moderation."
+msgstr "Din kommentar avventer godkjenning"
+
+#: functions.php:96
+msgid "Reply"
+msgstr "Svar"
+
+#: functions.php:125 functions.php:126
+msgid "Your Name"
+msgstr "Navn"
+
+#: functions.php:132 functions.php:133
+msgid "Your Email"
+msgstr "E-post"
+
+#: functions.php:139
+msgid "Your Website URL"
+msgstr "Webside"
+
+#: functions.php:140
+msgid "Your URL"
+msgstr "Din URL"
+
+#: functions.php:152
+msgid "Your Comment"
+msgstr "Kommentar"
+
+#: functions.php:153
+msgid "Enter Your Comment"
+msgstr "Skriv din kommentar"
+
+#: functions.php:196 functions.php:206
+msgid "Read More"
+msgstr "Les mer"
+
+#: functions.php:541 theme-options.php:13
+msgid "Ignite Dashboard"
+msgstr "Ignite kontrollpanel"
+
+#: functions.php:550
+msgid "Customize"
+msgstr "Tilpass"
+
+#: functions.php:560 theme-options.php:22
+msgid "Support"
+msgstr "Support"
+
+#: functions.php:570
+msgid "Ignite Plus"
+msgstr "Ignite pluss"
+
+#: header.php:15
+msgid "Skip to content"
+msgstr "Hopp til innholdet"
+
+#: inc/customizer.php:83
+msgid "Logo"
+msgstr "Logo"
+
+#: inc/customizer.php:84
+msgid "Upload, position, and resize your logo"
+msgstr "Last opp, posisjoner og tilpass din logo"
+
+#: inc/customizer.php:91
+msgid "Font"
+msgstr "Skrift"
+
+#: inc/customizer.php:92
+msgid "Choose a font family and font weight."
+msgstr "Velg en skrifttype og størrelse."
+
+#: inc/customizer.php:100
+msgid "Logo Upload"
+msgstr "Logoopplasting"
+
+#: inc/customizer.php:116
+msgid "Upload custom logo."
+msgstr "Last opp en egendefinert logo."
+
+#: inc/customizer.php:127
+msgid "Logo Positioning"
+msgstr "Posisjonering av logo"
+
+#: inc/customizer.php:145
+msgid "Up/down"
+msgstr "Opp/ned"
+
+#: inc/customizer.php:154
+msgid "Left/right"
+msgstr "Venstre/høyre"
+
+#: inc/customizer.php:165
+msgid "Logo Size"
+msgstr "Logostørrelse"
+
+#: inc/customizer.php:183
+msgid "Increase max-width"
+msgstr "Øk maksimal bredde"
+
+#: inc/customizer.php:192
+msgid "Increase max-height"
+msgstr "Øk maksimal høyde"
+
+#: inc/customizer.php:209
+msgid "Social Media Icons"
+msgstr "Ikoner for sosiale medier"
+
+#: inc/customizer.php:225
+msgid "address:"
+msgstr "adresse:"
+
+#: inc/customizer.php:239
+msgid "url:"
+msgstr "url:"
+
+#: inc/customizer.php:253
+msgid "Layout"
+msgstr "Layout"
+
+#: inc/customizer.php:266
+msgid "Pick Your Layout:"
+msgstr "Velg din layout:"
+
+#: inc/customizer.php:271 inc/customizer.php:656
+msgid "Right sidebar"
+msgstr "Høyre ytterspalte"
+
+#: inc/customizer.php:272 inc/customizer.php:657
+msgid "Left sidebar"
+msgstr "Venstre ytterspalte"
+
+#: inc/customizer.php:280
+msgid "Font Family"
+msgstr "Skrifttype"
+
+#: inc/customizer.php:283
+msgid "The default font is \"Lusitana\"."
+msgstr "Standard skrifttype er \"Lusitana\"."
+
+#: inc/customizer.php:296
+msgid "Site Font Family"
+msgstr "Nettstedets hovedskrifttype"
+
+#: inc/customizer.php:314
+msgid "Font Weight"
+msgstr "Skriftsstørrelse"
+
+#: inc/customizer.php:317
+msgid ""
+"If you've just changed fonts, please save and refresh the page to update "
+"available weights."
+msgstr ""
+"Hvis du har endret skrifttypene må du lagre og laste siden på nytt før du "
+"kan endre skriftstørrelsen."
+
+#: inc/customizer.php:330
+msgid "Site Font Weight"
+msgstr "Nettstedets standardskriftsstørrelse"
+
+#: inc/customizer.php:339
+msgid "Background"
+msgstr "Bakgrunn"
+
+#: inc/customizer.php:353
+msgid "Background Color"
+msgstr "Bakgrunnsfarge"
+
+#: inc/customizer.php:364
+msgid "Post Meta"
+msgstr "Metainformasjon for innlegg"
+
+#: inc/customizer.php:377
+msgid "Show date before posts?"
+msgstr "Vis dato før innlegg?"
+
+#: inc/customizer.php:382 inc/customizer.php:400 inc/customizer.php:418
+#: inc/customizer.php:436 inc/customizer.php:454 inc/customizer.php:594
+#: inc/customizer.php:612 inc/customizer.php:731
+msgid "Show"
+msgstr "Vis"
+
+#: inc/customizer.php:383 inc/customizer.php:401 inc/customizer.php:419
+#: inc/customizer.php:437 inc/customizer.php:455 inc/customizer.php:595
+#: inc/customizer.php:613 inc/customizer.php:732
+msgid "Hide"
+msgstr "Skjul"
+
+#: inc/customizer.php:395
+msgid "Show author before posts?"
+msgstr "Vis forfatter før innlegg?"
+
+#: inc/customizer.php:413
+msgid "Show categories after posts?"
+msgstr "Vis kategorier etter innlegg?"
+
+#: inc/customizer.php:431
+msgid "Show tags after posts?"
+msgstr "Vis stikkord etter innlegg?"
+
+#: inc/customizer.php:449
+msgid "Show comment count after posts?"
+msgstr "Vis antall kommentarer etter innlegg?"
+
+#: inc/customizer.php:463
+msgid "Comments"
+msgstr "Kommentarer"
+
+#: inc/customizer.php:477
+msgid "Show comments on:"
+msgstr "Vis kommentarer på:"
+
+#: inc/customizer.php:482 inc/customizer.php:707
+msgid "Posts"
+msgstr "Innlegg"
+
+#: inc/customizer.php:483 inc/customizer.php:708
+msgid "Pages"
+msgstr "Sider"
+
+#: inc/customizer.php:484 inc/customizer.php:709
+msgid "Attachments"
+msgstr "Vedlegg"
+
+#: inc/customizer.php:485 inc/customizer.php:710
+msgid "Do not show"
+msgstr "Ikke vis"
+
+#: inc/customizer.php:494
+msgid "Footer Text"
+msgstr "Bunntekst"
+
+#: inc/customizer.php:507
+msgid "Edit the text in your footer"
+msgstr "Endre bunnteksten"
+
+#: inc/customizer.php:517
+msgid "Custom CSS"
+msgstr "Egentilpasset CSS"
+
+#: inc/customizer.php:530
+msgid "Add Custom CSS Here:"
+msgstr "Legg inn egentilpasset CSS:"
+
+#: inc/customizer.php:540
+msgid "Additional Options"
+msgstr "Tilleggsvalg"
+
+#: inc/customizer.php:553
+msgid "Show full post on blog?"
+msgstr "Vis hele innlegget i bloggen?"
+
+#: inc/customizer.php:558 inc/customizer.php:576 inc/customizer.php:748
+msgid "Yes"
+msgstr "Ja"
+
+#: inc/customizer.php:559 inc/customizer.php:577 inc/customizer.php:749
+msgid "No"
+msgstr "Nei"
+
+#: inc/customizer.php:571
+msgid "Show breadcrumbs?"
+msgstr "Vis brødsmulesti?"
+
+#: inc/customizer.php:589
+msgid "Show post author info after posts?"
+msgstr "Vis forfatters informasjon etter innlegg?"
+
+#: inc/customizer.php:607
+msgid "Add icon to parent menu items?"
+msgstr "Legg til ikon for foranliggende menyelementer?"
+
+#: inc/customizer.php:852
+msgid "Premium Upgrade Available!"
+msgstr "Utvided funksjonalitet tilgjengelig!"
+
+#: inc/user-profile.php:16
+msgid "Profile image"
+msgstr "Profilbilde"
+
+#: inc/user-profile.php:23 inc/widgets/image_widget.php:101
+msgid "Upload Image"
+msgstr "Last opp bilde"
+
+#: inc/user-profile.php:24
+msgid ""
+"Upload an image here to use instead of your Gravatar. Perfectly square "
+"images will not be cropped."
+msgstr ""
+"Last opp et bilde her i stedet for din Gravatar. Kvadratiske bilder vil ikke "
+"bli beskjært."
+
+#: inc/widgets/image_widget.php:15
+msgid "This Ignite widget displays an image."
+msgstr "Denne Ignite-dingsen (widget) vises som et bilde."
+
+#: inc/widgets/image_widget.php:21
+msgid "Image"
+msgstr "Bilde"
+
+#: inc/widgets/image_widget.php:73
+msgid "http://"
+msgstr "http://"
+
+#: inc/widgets/image_widget.php:99
+msgid "Image URL:"
+msgstr "Bilde-adresse:"
+
+#: inc/widgets/image_widget.php:104
+msgid "Title:"
+msgstr "Tittel:"
+
+#: inc/widgets/image_widget.php:108
+msgid "Alternate text"
+msgstr "Alternativ tekst"
+
+#: inc/widgets/image_widget.php:112
+msgid "Link (optional)"
+msgstr "Lenke (valgfri)"
+
+#: search.php:11
+msgid "%d search results for"
+msgstr "%d søkeresultater for"
+
+#: search.php:13
+msgid "No search results for "
+msgstr "Ingen søkeresultater for"
+
+#: search.php:39
+msgid "Can't find what you're looking for?  Try refining your search:"
+msgstr "Kan du ikke finne det du søker etter? Prøv å forenkle søket ditt:"
+
+#: searchform.php:3 searchform.php:4
+msgid "Search for:"
+msgstr "Søk etter:"
+
+#: searchform.php:4
+msgid "Search..."
+msgstr "Søk ..."
+
+#: searchform.php:5
+msgid "Go"
+msgstr "Gå"
+
+#: theme-options.php:15
+msgid "Customization"
+msgstr "Tilpasning"
+
+#: theme-options.php:16
+msgid ""
+"Click the \"Customize\" link in your menu, or use the button below to get "
+"started customizing Ignite"
+msgstr ""
+"Trykk \"Tilpasningslenken\" i din meny eller bruk knappen under for å "
+"begynne å tilpasse Ignite"
+
+#: theme-options.php:18
+msgid "Use Customizer"
+msgstr "Bruk tilpasning"
+
+#: theme-options.php:23
+msgid ""
+"You can find the knowledgebase, changelog, support forum, and more in the "
+"Ignite Support Center"
+msgstr ""
+"Du kan finne vår kunnskapsbase, endringslogg, supportforum og mer i Ignite "
+"supportsenter"
+
+#: theme-options.php:25
+msgid "Visit Support Center"
+msgstr "Besøk supportsenter"
+
+#: theme-options.php:29
+msgid "Upgrade to Ignite Plus ($29)"
+msgstr "Oppgrader til Ignite Plus($29)"
+
+#: theme-options.php:30
+msgid ""
+"Ignite Plus is the premium version of Ignite. By upgrading to Ignite Plus, "
+"you get:"
+msgstr ""
+"Ignite Plus er en utvidet utgave av Ignite. Når du oppgraderer til Ignite "
+"Plus får du følgende:"
+
+#: theme-options.php:32
+msgid "Custom colors"
+msgstr "Egendefinerte farger"
+
+#: theme-options.php:33
+msgid "Background images & textures"
+msgstr "Bakgrunnsbilder og teksturer"
+
+#: theme-options.php:34
+msgid "New layouts"
+msgstr "Nye planløsninger"
+
+#: theme-options.php:35
+msgid "and much more&#8230;"
+msgstr "og mye, mye mer&#8230;"
+
+#: theme-options.php:38
+msgid "See Full Feature List"
+msgstr "Se en fullstendig oversikt"
+
+#. Theme Name of the plugin/theme
+msgid "Ignite"
+msgstr "Ignite"
+
+#. Theme URI of the plugin/theme
+msgid "http://competethemes.com/ignite/"
+msgstr "http://competethemes.com/ignite/"
+
+#. Description of the plugin/theme
+msgid ""
+"Ignite is a responsive blog theme. It includes logo tools, social media "
+"icons, a left- or right-sidebar layout, five fonts, custom background "
+"colors, and many additional display options. There is also a premium upgrade "
+"for Ignite called Ignite Plus. See our fully-setup live demo at http://www."
+"competethemes.com/ignite-live-demo/"
+msgstr ""
+"Ignite er et adaptivt bloggtema som bl.a. inneholder logoverktøy, ikon for "
+"sosiale media, valgfri ytterspalte på venstre eller høyre side, fem fonter, "
+"valgfri bakgrunnsfarge og flere andre tilpasningsmuligheter. Det er også en "
+"utvidet utgave, Iginite Plus, tilgjengelig. Se en full demonstrasjon på "
+"http://www.competethemes.com/ignite-live-demo/"
+
+#. Author of the plugin/theme
+msgid "Compete Themes"
+msgstr "Compete Themes"
+
+#. Author URI of the plugin/theme
+msgid "http://competethemes.com/"
+msgstr "http://competethemes.com/"
+
+#. Template Name of the plugin/theme
+msgid "Full-width"
+msgstr "Full bredde"
+
+#: content.php:23 content.php:26 content.php:90 content.php:93
+msgctxt "Published by whom?"
+msgid "by"
+msgstr "av"
