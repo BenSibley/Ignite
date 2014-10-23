@@ -781,7 +781,7 @@ a img {
 /* 1000px */
 @media all and (min-width: 62.5em) {
   .menu-primary p {
-    margin: 1.0625em 3em 0 -3em;
+    margin: 1.0625em 3em 8px -3em;
     display: inline-block;
     line-height: 2;
     color: #7c7d7f;
