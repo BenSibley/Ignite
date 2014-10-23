@@ -3,7 +3,7 @@
 // Outputs the categories the post was included in with their names hyperlinked to their permalink
 // separator removed so links site tightly against each other
 
-$categories = get_the_category();
+$categories = get_the_category($post->ID);
 $separator = ' ';
 $output = '';
 if($categories){

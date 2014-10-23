@@ -2,7 +2,7 @@
 
 // Outputs the tags the post used with their names hyperlinked to their permalink
 
-$tags = get_the_tags();
+$tags = get_the_tags($post->ID);
 $separator = ' ';
 $output = '';
 if($tags){
