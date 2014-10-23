@@ -17,7 +17,7 @@ if(!empty($active_sites)) {
 	foreach ($active_sites as $active_site) {?>
 		<li>
 		<?php if( $active_site == 'email' ) : ?>
-		<a target="_blank" href="mailto:<?php echo is_email( get_theme_mod( $active_site ) ); ?>">
+		<a target="_blank" href="mailto:<?php echo antispambot( is_email( get_theme_mod( $active_site ) ) ); ?>">
 		<?php else : ?>
 		<a target="_blank" href="<?php echo esc_url(get_theme_mod( $active_site )); ?>">
 	<?php endif; ?>
