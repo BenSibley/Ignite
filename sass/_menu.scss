@@ -339,6 +339,9 @@
         }
       }
     }
+    &.clear {
+      clear: left;
+    }
   }
   /* because .menu-primary-items is a 'ul' this needs to be declared separately */
   .menu-unset {

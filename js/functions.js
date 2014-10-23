@@ -65,47 +65,52 @@ jQuery(document).ready(function($){
     /* see if social media icons can fit and display if they can */
     function showSocialIcons() {
 
-        // set menu variable to primary or unset
-        if($('#menu-primary-items').length){
-            var menu = $('#menu-primary-items');
-        } else {
-            var menu = $('.menu-unset ul');
-        }
+        if( $(window).width() > 899 ) {
 
-        // get width of the menu
-        var menuWidth = menu.width();
+            // set menu variable to primary or unset
+            if ($('#menu-primary-items').length) {
+                var menu = $('#menu-primary-items');
+            } else {
+                var menu = $('.menu-unset ul');
+            }
 
-        // get widths of site header
-        var siteHeaderWidth = $('#site-header').width();
+            // get width of the menu
+            var menuWidth = menu.width();
 
-        // get width of the site title/logo container
-        var titleInfoWidth = $('#title-info').width();
+            // get widths of site header
+            var siteHeaderWidth = $('#site-header').width();
 
-        // get the social icons
-        var socialIcons = $('#menu-primary').find('.social-media-icons');
+            // get width of the site title/logo container
+            var titleInfoWidth = $('#title-info').width();
 
-        // if site description is hidden, 0
-        if( $('#site-description').css('display') == 'none' ){
-            var siteDescriptionWidth = 0;
-        }
-        // else get the width
-        else {
-            var siteDescriptionWidth = $('#site-description').width();
-        }
+            // get the social icons
+            var socialIcons = $('#menu-primary').find('.social-media-icons');
 
-        // remove visibility classes, so this works on resize
-        $(socialIcons).removeClass('visible visible-top');
+            // if site description is hidden, 0
+            if ($('#site-description').css('display') == 'none') {
+                var siteDescriptionWidth = 0;
+            }
+            // else get the width
+            else {
+                var siteDescriptionWidth = $('#site-description').width();
+            }
 
-        // multiply # of icons by 68 b/c each is 68px wide
-        var socialIconsWidth = $('#menu-primary').find('.social-media-icons li').length * 26;
+            // remove visibility classes, so this works on resize
+            $(socialIcons).removeClass('visible visible-top');
 
-        /* If site-header has space for social icons + 48 margin + 48 extra margin, show them */
-        if ( (siteHeaderWidth - menuWidth - titleInfoWidth - siteDescriptionWidth) > socialIconsWidth + 96) {
-            $(socialIcons).addClass('visible');
-        }
-        /* if the menu is on the next line, display the social icons */
-        if( menu.offset().top > $('#title-info').offset().top ){
-            $(socialIcons).addClass('visible-top');
+            // multiply # of icons by 68 b/c each is 68px wide
+            var socialIconsWidth = $('#menu-primary').find('.social-media-icons li').length * 26;
+
+            /* If site-header has space for social icons + 48 margin + 48 extra margin, show them */
+            if ((siteHeaderWidth - menuWidth - titleInfoWidth - siteDescriptionWidth) > socialIconsWidth + 96) {
+                $(socialIcons).addClass('visible');
+                $(menu).removeClass('clear');
+            }
+            /* If site-header does not have space for everything */
+            if ((siteHeaderWidth - menuWidth - titleInfoWidth - siteDescriptionWidth) < socialIconsWidth + 96) {
+                $(socialIcons).addClass('visible-top');
+                $(menu).addClass('clear');
+            }
         }
     }
     showSocialIcons();

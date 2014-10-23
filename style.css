@@ -700,6 +700,10 @@ a img {
   .menu-unset ul .current_page_ancestor > a:after {
     color: white !important;
   }
+  #menu-primary-items.clear,
+  .menu-unset ul.clear {
+    clear: left;
+  }
 
   /* because .menu-primary-items is a 'ul' this needs to be declared separately */
   .menu-unset:after {
