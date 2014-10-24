@@ -379,13 +379,17 @@
   // styling for parent menu icons if enabled
   .parent-icons .menu-item-has-children {
 
+    > a {
+      padding: 0 $baseline-height 0 $baseline-height / 2;
+    }
     > a:after {
       content: '\25BE';
       font-family: 'Arial', 'sans-serif';
       color: $gray;
       margin-left: 4px;
-      position: relative;
+      position: absolute;
       top: -1px;
+      margin-bottom: 10px;
     }
     ul .menu-item-has-children > a:after {
       content: '\25B8';

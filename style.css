@@ -738,13 +738,17 @@ a img {
     left: 100%;
   }
 
+  .parent-icons .menu-item-has-children > a {
+    padding: 0 1.5em 0 0.75em;
+  }
   .parent-icons .menu-item-has-children > a:after {
     content: '\25BE';
     font-family: 'Arial', 'sans-serif';
     color: #373b41;
     margin-left: 4px;
-    position: relative;
+    position: absolute;
     top: -1px;
+    margin-bottom: 10px;
   }
   .parent-icons .menu-item-has-children ul .menu-item-has-children > a:after {
     content: '\25B8';
