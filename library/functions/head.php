@@ -12,7 +12,7 @@
 
 /* Adds common theme items to <head>. */
 add_action( 'wp_head', 'hybrid_meta_charset',  0 );
-add_action( 'wp_head', 'hybrid_doctitle',      0 );
+//add_action( 'wp_head', 'hybrid_doctitle',      0 );
 add_action( 'wp_head', 'hybrid_meta_viewport', 1 );
 add_action( 'wp_head', 'hybrid_meta_template', 1 );
 add_action( 'wp_head', 'hybrid_link_pingback', 3 );
@@ -54,9 +54,9 @@ function hybrid_meta_charset() {
  * @access public
  * @return void
  */
-function hybrid_doctitle() {
-	printf( "<title>%s</title>\n", wp_title( ':', false ) );
-}
+//function hybrid_doctitle() {
+//	printf( "<title>%s</title>\n", wp_title( ':', false ) );
+//}
 
 /**
  * Adds the meta viewport to the header.
