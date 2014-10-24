@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Ignite 1.38\n"
+"Project-Id-Version: Ignite 1.40\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2014-10-12 15:22:26+00:00\n"
+"POT-Creation-Date: 2014-10-24 14:12:15+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -166,23 +166,7 @@ msgstr ""
 msgid "Read More"
 msgstr ""
 
-#: functions.php:541 theme-options.php:13
-msgid "Ignite Dashboard"
-msgstr ""
-
-#: functions.php:550
-msgid "Customize"
-msgstr ""
-
-#: functions.php:560 theme-options.php:22
-msgid "Support"
-msgstr ""
-
-#: functions.php:570
-msgid "Ignite Plus"
-msgstr ""
-
-#: header.php:15
+#: header.php:16
 msgid "Skip to content"
 msgstr ""
 
@@ -470,6 +454,10 @@ msgstr ""
 msgid "Go"
 msgstr ""
 
+#: theme-options.php:13
+msgid "Ignite Dashboard"
+msgstr ""
+
 #: theme-options.php:15
 msgid "Customization"
 msgstr ""
@@ -482,6 +470,10 @@ msgstr ""
 
 #: theme-options.php:18
 msgid "Use Customizer"
+msgstr ""
+
+#: theme-options.php:22
+msgid "Support"
 msgstr ""
 
 #: theme-options.php:23
