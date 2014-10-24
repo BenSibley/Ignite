@@ -748,7 +748,6 @@ a img {
     margin-left: 4px;
     position: absolute;
     top: -1px;
-    margin-bottom: 10px;
   }
   .parent-icons .menu-item-has-children ul .menu-item-has-children > a:after {
     content: '\25B8';
