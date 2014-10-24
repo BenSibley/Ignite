@@ -747,7 +747,7 @@ a img {
     color: #373b41;
     margin-left: 4px;
     position: absolute;
-    top: -1px;
+    top: -2px;
   }
   .parent-icons .menu-item-has-children ul .menu-item-has-children > a:after {
     content: '\25B8';
