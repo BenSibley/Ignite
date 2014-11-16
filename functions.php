@@ -48,6 +48,14 @@ function ct_ignite_theme_setup() {
     load_theme_textdomain('ignite', get_template_directory() . '/languages');
 }
 
+function ct_ignite_remove_cleaner_gallery() {
+
+	if( class_exists( 'Jetpack' ) && ( Jetpack::is_module_active( 'carousel' ) || Jetpack::is_module_active( 'tiled-gallery' ) ) ) {
+		remove_theme_support( 'cleaner-gallery' );
+	}
+}
+add_action( 'after_setup_theme', 'ct_ignite_remove_cleaner_gallery', 11 );
+
 /* register primary sidebar */
 function ct_ignite_register_sidebar(){
     hybrid_register_sidebar( array(
