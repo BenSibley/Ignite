@@ -270,7 +270,7 @@ function ct_ignite_featured_image() {
         } else {
             echo "
                 <div class='featured-image' style=\"background-image: url('".$image."')\">
-                    <a href='" . get_the_permalink() ."'>" . get_the_title() . "</a>
+                    <a href='" . get_permalink() ."'>" . get_the_title() . "</a>
                 </div>
                 ";
         }
