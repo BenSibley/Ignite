@@ -40,6 +40,7 @@ function ct_ignite_theme_setup() {
 	{
 		include $filename;
 	}
+
     // adds theme options page
     require_once( trailingslashit( get_template_directory() ) . 'theme-options.php' );
 
