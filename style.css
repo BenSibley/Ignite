@@ -803,7 +803,8 @@ a img {
 }
 .main,
 .sidebar-primary-container,
-.site-footer {
+.site-footer,
+#disqus_thread {
   padding: 1.5em 3.703%;
 }
 
@@ -987,7 +988,8 @@ a img {
 @media all and (min-width: 37.5em) {
   .main,
   .sidebar-primary-container,
-  .site-footer {
+  .site-footer,
+  #disqus_thread {
     padding: 1.5em 7.407%;
   }
 
@@ -1000,7 +1002,8 @@ a img {
 @media all and (min-width: 50em) {
   .main,
   .sidebar-primary-container,
-  .site-footer {
+  .site-footer,
+  #disqus_thread {
     padding: 1.5em 11.11%;
   }
 
@@ -1026,7 +1029,7 @@ a img {
     margin: 0 3.703% 0 7.407%;
   }
 
-  .sidebar-primary-container, .site-footer {
+  .sidebar-primary-container, .site-footer, #disqus_thread {
     padding: 1.5em 7.407%;
   }
 
@@ -1955,4 +1958,10 @@ li.pingback {
 }
 #bbpress-forums .entry {
   padding: 1.5em;
+}
+
+/* Disqus styles */
+#disqus_thread {
+  background: #fff;
+  margin: -1.5em 0 1.5em;
 }

@@ -1,0 +1,7 @@
+/* Disqus styles */
+
+#disqus_thread {
+  background: #fff;
+  @extend %container-width;
+  margin: -$baseline-height 0 $baseline-height;
+}
