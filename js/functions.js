@@ -35,7 +35,7 @@ jQuery(document).ready(function($){
             $(window).unbind('scroll');
             // delayed so it isn't seen
             setTimeout(function() {
-                $('#menu-primary').removeAttr('style');
+                $('#menu-primary').css('height', 'auto');
             }, 400);
         } else {
             $('#site-header').addClass('toggled');
