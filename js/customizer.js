@@ -44,13 +44,10 @@ jQuery(document).ready(function($){
 
     wp.customize( 'logo_upload', function( value ) {
         value.bind( function( newval ) {
-
             // get the <a> holding the logo/site title
             var logoContainer = $('#customize-preview iframe').contents().find('#title-info').find('a');
-
             // get the name of the site from the <a>
             var siteTitle = logoContainer.attr('title');
-
             // if there is an image, add the image markup
             if( newval ) {
                 var logo = "<span class='screen-reader-text'>" + siteTitle + "</span><img id='logo' class='logo' src='" + newval + "' alt='" + siteTitle + "' />";
@@ -59,17 +56,50 @@ jQuery(document).ready(function($){
             else {
                 var logo = siteTitle;
             }
-
             // empty the content first
             logoContainer.empty();
-
             // replace with the new logo markup
             logoContainer.append(logo);
 
         } );
     } );
-
-
-
+    // Logo Position - up/down
+    wp.customize( 'logo_positioning_updown_setting', function( value ) {
+        value.bind( function( newval ) {
+            // get the logo from the DOM
+            var logo = $('#customize-preview iframe').contents().find('#logo');
+            // add new css
+            logo.css('bottom', newval + 'px');
+        } );
+    } );
+    // Logo Position - left/right
+    wp.customize( 'logo_positioning_leftright_setting', function( value ) {
+        value.bind( function( newval ) {
+            // get the logo from the DOM
+            var logo = $('#customize-preview iframe').contents().find('#logo');
+            // add new css
+            logo.css('left', newval + 'px');
+        } );
+    } );
+    // Logo Size - width
+    wp.customize( 'logo_size_width_setting', function( value ) {
+        value.bind( function( newval ) {
+            // get the logo from the DOM
+            var logo = $('#customize-preview iframe').contents().find('#logo');
+            // add new css
+            var newval = parseInt(newval) + 156;
+            logo.css('max-width', newval + 'px');
+        } );
+    } );
+    // Logo Size - height
+    wp.customize( 'logo_size_height_setting', function( value ) {
+        value.bind( function( newval ) {
+            // get the logo from the DOM
+            var logo = $('#customize-preview iframe').contents().find('#logo');
+            // add new css
+            var newval = parseInt(newval) + 59;
+            logo.css('max-height', newval + 'px');
+        } );
+    } );
 
 });
