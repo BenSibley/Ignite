@@ -108,6 +108,7 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
         'type'              => 'theme_mod',
         'capability'        => 'edit_theme_options',
         'sanitize_callback' => 'esc_url_raw',
+		'transport'         => 'postMessage'
     ) );
     // control
 	$wp_customize->add_control(
