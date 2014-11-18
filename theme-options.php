@@ -22,7 +22,7 @@ function ct_ignite_options_content(){
 	        <h3><?php _e('Support', 'ignite'); ?></h3>
             <p><?php _e("You can find the knowledgebase, changelog, support forum, and more in the Ignite Support Center", "ignite"); ?>.</p>
             <p>
-                <a target="_blank" class="button-primary" href="http://www.competethemes.com/documentation/ignite-support-center/"><?php _e('Visit Support Center', 'ignite'); ?></a>
+                <a target="_blank" class="button-primary" href="https://www.competethemes.com/documentation/ignite-support-center/"><?php _e('Visit Support Center', 'ignite'); ?></a>
             </p>
         </div>
         <div class="content content-premium-upgrade">
