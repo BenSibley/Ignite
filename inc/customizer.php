@@ -460,6 +460,24 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
             'hide'  => __('Hide', 'ignite')
         )
     ) );
+	// setting - further reading
+	$wp_customize->add_setting( 'ct_ignite_post_meta_further_reading_settings', array(
+		'default'           => 'show',
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'ct_ignite_sanitize_show_hide_setting',
+	) );
+	// control - further reading
+	$wp_customize->add_control( 'ct_ignite_post_meta_further_reading_settings', array(
+		'label'          => __( 'Show prev/next post links after posts?', 'ignite' ),
+		'section'        => 'ct-post-meta',
+		'settings'       => 'ct_ignite_post_meta_further_reading_settings',
+		'type'           => 'radio',
+		'choices'        => array(
+			'show'   => __('Show', 'ignite'),
+			'hide'  => __('Hide', 'ignite')
+		)
+	) );
 
     /***** Comments Display *****/
 
