@@ -40,7 +40,11 @@ if( is_single() ) { ?>
 			</article>
 		</div>
 		<div class='entry-meta-bottom'>
-			<?php get_template_part('content/further-reading'); ?>
+			<?php
+			if( get_theme_mod('ct_ignite_post_meta_further_reading_settings') != 'hide' ) {
+				get_template_part('content/further-reading');
+			}
+			?>
             <?php
             if(get_theme_mod('ct_ignite_author_meta_settings') != 'hide'){ ?>
                 <div class="author-meta">
