@@ -69,7 +69,12 @@ jQuery(document).ready(function($){
             // get the logo from the DOM
             var logo = $('#customize-preview iframe').contents().find('#logo');
             // add new css
-            logo.css('bottom', newval + 'px');
+            logo.css({
+                'bottom': newval + 'px',
+                'position': 'relative',
+                'right'   : 'auto',
+                'left'    : 'auto'
+            });
         } );
     } );
     // Logo Position - left/right
@@ -78,7 +83,11 @@ jQuery(document).ready(function($){
             // get the logo from the DOM
             var logo = $('#customize-preview iframe').contents().find('#logo');
             // add new css
-            logo.css('left', newval + 'px');
+            logo.css({
+                'left': newval + 'px',
+                'position': 'relative',
+                'right'   : 'auto'
+            });
         } );
     } );
     // Logo Size - width
