@@ -25,6 +25,13 @@ function ct_ignite_options_content(){
                 <a target="_blank" class="button-primary" href="https://www.competethemes.com/documentation/ignite-support-center/"><?php _e('Visit Support Center', 'ignite'); ?></a>
             </p>
         </div>
+        <div class="content content-resources">
+            <h3><?php _e('WordPress Resources', 'ignite'); ?></h3>
+            <p><?php _e("Save time and money searching for WordPress products by following our recommendations", "ignite"); ?>.</p>
+            <p>
+                <a target="_blank" class="button-primary" href="https://www.competethemes.com/wordpress-resources/"><?php _e('View Resources', 'ignite'); ?></a>
+            </p>
+        </div>
         <div class="content content-premium-upgrade">
             <h3><?php _e('Upgrade to Ignite Plus ($29)', 'ignite'); ?></h3>
             <p><?php _e('Ignite Plus is the premium version of Ignite. By upgrading to Ignite Plus, you get:', 'ignite'); ?></p>
