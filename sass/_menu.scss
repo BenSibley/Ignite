@@ -394,14 +394,6 @@
       content: '\25B8';
     }
   }
-}
-
-/* 900px */
-@media all and (min-width: 56.25em){
-
-  .site-header {
-    padding: 0 7.407%;
-  }
   .site-header .social-media-icons {
     display: inline-block;
     visibility: hidden;
@@ -433,6 +425,14 @@
     &.visible-top {
       visibility: visible;
     }
+  }
+}
+
+/* 900px */
+@media all and (min-width: 56.25em){
+
+  .site-header {
+    padding: 0 7.407%;
   }
 }
 
