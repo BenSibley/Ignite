@@ -1,0 +1,581 @@
+# Copyright (C) 2014 Compete Themes
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Ignite 1.41\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
+"POT-Creation-Date: 2014-11-18 15:06:18+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-12-22 18:48+0300\n"
+"Last-Translator: Дмитрий Sodiac <info@sodiac.ru>\n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.7.1\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: ru_RU\n"
+
+#: comments.php:11 comments.php:29 comments.php:49
+msgid "Be First to Comment"
+msgstr "﻿Ваш комментарий будет первым"
+
+#: comments.php:11 comments.php:29 comments.php:49
+#: content/comment-count.php:10 content/comment-count.php:19
+#: inc/deprecated.php:104 inc/deprecated.php:113
+msgid "One Comment"
+msgstr "1 комментарий"
+
+#: comments.php:11 comments.php:29 comments.php:49
+#: content/comment-count.php:10 content/comment-count.php:19
+#: inc/deprecated.php:104 inc/deprecated.php:113
+msgid "% Comments"
+msgstr "﻿% комментариев"
+
+#: comments.php:42
+msgid ""
+"Comments are closed, but <a href=\"%s\" title=\"Trackback URL for this post"
+"\">trackbacks</a> and pingbacks are open."
+msgstr ""
+"Дискуссия закрыта, но <a href=\"%s\" title=\"URL обратной ссылки\">обратные "
+"ссылки</a> и запросы ещё работают."
+
+#: comments.php:62 comments.php:68
+msgid "Comments are closed."
+msgstr "Обсуждение закрыто."
+
+#: content/category-links.php:12 inc/deprecated.php:67
+msgid "View all posts in %s"
+msgstr "﻿Просмотреть все статьи в %s"
+
+#: content/comment-count.php:10 inc/deprecated.php:104
+msgid "Comments closed"
+msgstr "Обсуждение закрыто"
+
+#: content/comment-count.php:19 inc/deprecated.php:113
+msgid "Leave a Comment"
+msgstr "﻿Оставить комментарий"
+
+#: content/further-reading.php:11 inc/deprecated.php:20
+msgid "The Previous Post"
+msgstr "Предыдущая статья"
+
+#: content/further-reading.php:16 inc/deprecated.php:25
+msgid "The Next Post"
+msgstr "Следующая статья"
+
+#: content/further-reading.php:22 inc/deprecated.php:31
+msgid "Previous Post"
+msgstr "Предыдущая статья"
+
+#: content/further-reading.php:27 content/further-reading.php:39
+#: inc/deprecated.php:36 inc/deprecated.php:48
+msgid "Return to Blog"
+msgstr "Вернуться к новостям"
+
+#: content/further-reading.php:28 inc/deprecated.php:37
+msgid "This is the oldest post"
+msgstr "Это первая статья"
+
+#: content/further-reading.php:34 inc/deprecated.php:43
+msgid "Next Post"
+msgstr "Следующая статья"
+
+#: content/further-reading.php:40 inc/deprecated.php:49
+msgid "This is the newest post"
+msgstr "Это последняя статья"
+
+#: content/tag-links.php:11 inc/deprecated.php:86
+msgid "View all posts tagged %s"
+msgstr "﻿Все новости с тэгом %s"
+
+#: content-404.php:3
+msgid "404: Page Not Found"
+msgstr "Извините! Страница не найдена!"
+
+#: content-404.php:8
+msgid ""
+"Looks like nothing was found on this url.  Double-check that the url is "
+"correct or try the search form below to find what you were looking for."
+msgstr ""
+"Похоже, что по этой ссылке ничего нет. Проверьте адрес или воспользуйтесь "
+"поиском по сайту."
+
+#: content-attachment.php:3 content.php:16 content.php:87
+msgid "Published"
+msgstr "﻿Опубликовано"
+
+#: content-attachment.php:19
+msgid "Previous Image"
+msgstr "﻿Предыдущее изображение"
+
+#: content-attachment.php:22
+msgid "Next Image"
+msgstr "﻿Следующее изображение"
+
+#: content-page.php:9 content.php:39
+msgid "Pages:"
+msgstr "Страницы:"
+
+#: footer.php:27
+msgid ""
+"<a target=\"_blank\" href=\"%s\">Ignite WordPress Theme</a> by Compete "
+"Themes."
+msgstr ""
+"<a target=\"_blank\" href=\"%s\">Ignite&mdash;тема для WordPress</a> "
+"разработка Compete Themes."
+
+#: functions.php:62
+msgid "Primary Sidebar"
+msgstr "Главная боковина"
+
+#: functions.php:64
+msgid "The main sidebar"
+msgstr "Основная боковина"
+
+#: functions.php:71
+msgid "Primary"
+msgstr "Главная"
+
+#: functions.php:93
+msgid "said:"
+msgstr "пишет:"
+
+#: functions.php:97
+msgid "Your comment is awaiting moderation."
+msgstr "Ваш комментарий ожидает одобрения."
+
+#: functions.php:105
+msgid "Reply"
+msgstr "﻿Ответить"
+
+#: functions.php:134 functions.php:135
+msgid "Your Name"
+msgstr "﻿Ваше имя"
+
+#: functions.php:141 functions.php:142
+msgid "Your Email"
+msgstr "Ваша почта"
+
+#: functions.php:148
+msgid "Your Website URL"
+msgstr "Ваш сайт"
+
+#: functions.php:149
+msgid "Your URL"
+msgstr "﻿Ваш URL"
+
+#: functions.php:161
+msgid "Your Comment"
+msgstr "﻿Ваш комментарий"
+
+#: functions.php:162
+msgid "Enter Your Comment"
+msgstr "﻿Напишите свой комментарий"
+
+#: functions.php:205 functions.php:215
+msgid "Read More"
+msgstr "Читать далее..."
+
+#: header.php:16
+msgid "Skip to content"
+msgstr "﻿Перейти к статье"
+
+#: inc/customizer.php:83
+msgid "Logo"
+msgstr "﻿Логотип"
+
+#: inc/customizer.php:84
+msgid "Upload, position, and resize your logo"
+msgstr "Загрузить, разместить и подогнать размер логотипа"
+
+#: inc/customizer.php:91
+msgid "Font"
+msgstr "﻿Шрифт"
+
+#: inc/customizer.php:92
+msgid "Choose a font family and font weight."
+msgstr "Выберите шрифт и его насыщенность."
+
+#: inc/customizer.php:100
+msgid "Logo Upload"
+msgstr "Загрузка логотипа"
+
+#: inc/customizer.php:117
+msgid "Upload custom logo."
+msgstr "Загрузите свой логотип."
+
+#: inc/customizer.php:128
+msgid "Logo Positioning"
+msgstr "Положение логотипа"
+
+#: inc/customizer.php:148
+msgid "Up/down"
+msgstr "﻿Вверх/вниз"
+
+#: inc/customizer.php:157
+msgid "Left/right"
+msgstr "﻿Влево/вправо"
+
+#: inc/customizer.php:168
+msgid "Logo Size"
+msgstr "Размер логотипа"
+
+#: inc/customizer.php:188
+msgid "Increase max-width"
+msgstr "﻿Увеличить макс. ширину"
+
+#: inc/customizer.php:197
+msgid "Increase max-height"
+msgstr "Увеличить макс. высоту"
+
+#: inc/customizer.php:214
+msgid "Social Media Icons"
+msgstr "Значки соц. сетей"
+
+#: inc/customizer.php:230
+msgid "address:"
+msgstr "﻿адрес:"
+
+#: inc/customizer.php:244
+msgid "url:"
+msgstr "﻿url:"
+
+#: inc/customizer.php:258
+msgid "Layout"
+msgstr "Раскладка"
+
+#: inc/customizer.php:271
+msgid "Pick Your Layout:"
+msgstr "﻿Выберите раскладку:"
+
+#: inc/customizer.php:276 inc/customizer.php:679
+msgid "Right sidebar"
+msgstr "Боковина справа"
+
+#: inc/customizer.php:277 inc/customizer.php:680
+msgid "Left sidebar"
+msgstr "Боковина слева"
+
+#: inc/customizer.php:285
+msgid "Font Family"
+msgstr "Шрифт"
+
+#: inc/customizer.php:288
+msgid "The default font is \"Lusitana\"."
+msgstr "﻿Шрифта по умолчанию \"Lusitana\"."
+
+#: inc/customizer.php:301
+msgid "Site Font Family"
+msgstr "Основной шрифт"
+
+#: inc/customizer.php:319
+msgid "Font Weight"
+msgstr "Насыщенность"
+
+#: inc/customizer.php:322
+msgid ""
+"If you've just changed fonts, please save and refresh the page to update "
+"available weights."
+msgstr ""
+"﻿Если вы изменили шрифт, сохраните и обновите страницу, чтобы увидеть "
+"доступную насыщенность."
+
+#: inc/customizer.php:335
+msgid "Site Font Weight"
+msgstr "﻿Толщина шрифта сайта"
+
+#: inc/customizer.php:344
+msgid "Background"
+msgstr "Фон"
+
+#: inc/customizer.php:358
+msgid "Background Color"
+msgstr "﻿Цвет фона"
+
+#: inc/customizer.php:369
+msgid "Post Meta"
+msgstr "О записи"
+
+#: inc/customizer.php:382
+msgid "Show date before posts?"
+msgstr "Показывать дату над статьёй?"
+
+#: inc/customizer.php:387 inc/customizer.php:405 inc/customizer.php:423
+#: inc/customizer.php:441 inc/customizer.php:459 inc/customizer.php:477
+#: inc/customizer.php:617 inc/customizer.php:635 inc/customizer.php:754
+msgid "Show"
+msgstr "Показать"
+
+#: inc/customizer.php:388 inc/customizer.php:406 inc/customizer.php:424
+#: inc/customizer.php:442 inc/customizer.php:460 inc/customizer.php:478
+#: inc/customizer.php:618 inc/customizer.php:636 inc/customizer.php:755
+msgid "Hide"
+msgstr "Скрыть"
+
+#: inc/customizer.php:400
+msgid "Show author before posts?"
+msgstr "Показывать автора над статьёй?"
+
+#: inc/customizer.php:418
+msgid "Show categories after posts?"
+msgstr "Показывать категорию под статьёй?"
+
+#: inc/customizer.php:436
+msgid "Show tags after posts?"
+msgstr "Показывать тэги под статьёй?"
+
+#: inc/customizer.php:454
+msgid "Show comment count after posts?"
+msgstr "Показывать число комментариев под статьёй?"
+
+#: inc/customizer.php:472
+msgid "Show prev/next post links after posts?"
+msgstr "Показывать ссылки Предыдущая/Следующая?"
+
+#: inc/customizer.php:486
+msgid "Comments"
+msgstr "﻿Комментарии"
+
+#: inc/customizer.php:500
+msgid "Show comments on:"
+msgstr "﻿Показывать отзывы к:"
+
+#: inc/customizer.php:505 inc/customizer.php:730
+msgid "Posts"
+msgstr "Статьям"
+
+#: inc/customizer.php:506 inc/customizer.php:731
+msgid "Pages"
+msgstr "Страницам"
+
+#: inc/customizer.php:507 inc/customizer.php:732
+msgid "Attachments"
+msgstr "Приложениям"
+
+#: inc/customizer.php:508 inc/customizer.php:733
+msgid "Do not show"
+msgstr "﻿Не показывать"
+
+#: inc/customizer.php:517
+msgid "Footer Text"
+msgstr "﻿Текст в подвале"
+
+#: inc/customizer.php:530
+msgid "Edit the text in your footer"
+msgstr "Напишите текст для подвала"
+
+#: inc/customizer.php:540
+msgid "Custom CSS"
+msgstr "Свой дизайн"
+
+#: inc/customizer.php:553
+msgid "Add Custom CSS Here:"
+msgstr "Укажите свои правила CSS:"
+
+#: inc/customizer.php:563
+msgid "Additional Options"
+msgstr "﻿Дополнительные настройки"
+
+#: inc/customizer.php:576
+msgid "Show full post on blog?"
+msgstr "Показывать в новостях статью целиком?"
+
+#: inc/customizer.php:581 inc/customizer.php:599 inc/customizer.php:771
+msgid "Yes"
+msgstr "Да"
+
+#: inc/customizer.php:582 inc/customizer.php:600 inc/customizer.php:772
+msgid "No"
+msgstr "﻿Нет"
+
+#: inc/customizer.php:594
+msgid "Show breadcrumbs?"
+msgstr "Показывать хлебные крошки?"
+
+#: inc/customizer.php:612
+msgid "Show post author info after posts?"
+msgstr "﻿Показывать автора в подписи?"
+
+#: inc/customizer.php:630
+msgid "Add icon to parent menu items?"
+msgstr "Добавить значок в родительский элемент меню?"
+
+#: inc/customizer.php:875
+msgid "Premium Upgrade Available!"
+msgstr "Доступны платные версии!"
+
+#: inc/user-profile.php:16
+msgid "Profile image"
+msgstr "Фото автора"
+
+#: inc/user-profile.php:23 inc/widgets/image_widget.php:101
+msgid "Upload Image"
+msgstr "Загрузить фото"
+
+#: inc/user-profile.php:24
+msgid ""
+"Upload an image here to use instead of your Gravatar. Perfectly square "
+"images will not be cropped."
+msgstr ""
+"Загрузите фото автора, чтобы использовать его вместо Gravatar. Обрежьте под "
+"квадрат."
+
+#: inc/widgets/image_widget.php:15
+msgid "This Ignite widget displays an image."
+msgstr "Этот виджет Ignite показывает фото."
+
+#: inc/widgets/image_widget.php:21
+msgid "Image"
+msgstr "﻿Изображение"
+
+#: inc/widgets/image_widget.php:73
+msgid "http://"
+msgstr "﻿http://"
+
+#: inc/widgets/image_widget.php:99
+msgid "Image URL:"
+msgstr "﻿Ссылка на изображение:"
+
+#: inc/widgets/image_widget.php:104
+msgid "Title:"
+msgstr "Название:"
+
+#: inc/widgets/image_widget.php:108
+msgid "Alternate text"
+msgstr "Описание"
+
+#: inc/widgets/image_widget.php:112
+msgid "Link (optional)"
+msgstr "﻿Ссылка (опционально)"
+
+#: search.php:11
+msgid "%d search results for"
+msgstr "Результаты поиска для '%d'"
+
+#: search.php:13
+msgid "No search results for "
+msgstr "Ничего не найдено"
+
+#: search.php:39
+msgid "Can't find what you're looking for?  Try refining your search:"
+msgstr "﻿Не можете найти? Попробуйте уточнить параметры поиска:"
+
+#: searchform.php:3 searchform.php:4
+msgid "Search for:"
+msgstr "Поиск:"
+
+#: searchform.php:4
+msgid "Search..."
+msgstr "﻿Поиск..."
+
+#: searchform.php:5
+msgid "Go"
+msgstr "Начать"
+
+#: theme-options.php:13
+msgid "Ignite Dashboard"
+msgstr "Панель настроек"
+
+#: theme-options.php:15
+msgid "Customization"
+msgstr "﻿Индивидуализация"
+
+#: theme-options.php:16
+msgid ""
+"Click the \"Customize\" link in your menu, or use the button below to get "
+"started customizing Ignite"
+msgstr ""
+"Нажмите меню \"Настроить\" или на кнопку внизу для настройки темы Ignite по "
+"своему вкусу"
+
+#: theme-options.php:18
+msgid "Use Customizer"
+msgstr "Открыть настройки"
+
+#: theme-options.php:22
+msgid "Support"
+msgstr "﻿Поддержка"
+
+#: theme-options.php:23
+msgid ""
+"You can find the knowledgebase, changelog, support forum, and more in the "
+"Ignite Support Center"
+msgstr ""
+"Вы можете найти базу знаний, форум и документацию на сайте Ignite Support "
+"Center"
+
+#: theme-options.php:25
+msgid "Visit Support Center"
+msgstr "﻿Центр поддержки"
+
+#: theme-options.php:29
+msgid "Upgrade to Ignite Plus ($29)"
+msgstr "Купить Ignite Plus (29 долларов)"
+
+#: theme-options.php:30
+msgid ""
+"Ignite Plus is the premium version of Ignite. By upgrading to Ignite Plus, "
+"you get:"
+msgstr ""
+"Ignite Plus &mdash; усовершенствованная версия Ignite. При переходе на неё "
+"Вы получите:"
+
+#: theme-options.php:32
+msgid "Custom colors"
+msgstr "﻿Настройка цветов"
+
+#: theme-options.php:33
+msgid "Background images & textures"
+msgstr "﻿Фоновые изображения и текстуры"
+
+#: theme-options.php:34
+msgid "New layouts"
+msgstr "﻿Новые макеты"
+
+#: theme-options.php:35
+msgid "and much more&#8230;"
+msgstr "и многое другое&#8230;"
+
+#: theme-options.php:38
+msgid "See Full Feature List"
+msgstr "﻿Смотреть полный список"
+
+#. Theme Name of the plugin/theme
+msgid "Ignite"
+msgstr "Ignite"
+
+#. Theme URI of the plugin/theme
+msgid "https://competethemes.com/ignite/"
+msgstr "https://competethemes.com/ignite/"
+
+#. Description of the plugin/theme
+msgid ""
+"Ignite is a responsive blog theme. It includes logo tools, social media "
+"icons, a left- or right-sidebar layout, five fonts, custom background "
+"colors, and many additional display options. There is also a premium upgrade "
+"for Ignite called Ignite Plus. See our fully-setup live demo at http://www."
+"competethemes.com/ignite-live-demo/"
+msgstr ""
+"Ignite - адаптивная тема для Wordpress. Она позволяет загружать свои "
+"логотипы, имеет значки соц. сетей, позволяет размещать боковины справа и "
+"слева, использовать пять шрифтов и т.д. Вы можете также купить более "
+"навороченную версию Ignite Plus. Посетите наш сайт http://www.competethemes."
+"com/ignite-live-demo/"
+
+#. Author of the plugin/theme
+msgid "Compete Themes"
+msgstr "Compete Themes"
+
+#. Author URI of the plugin/theme
+msgid "https://competethemes.com"
+msgstr "https://competethemes.com"
+
+#. Template Name of the plugin/theme
+msgid "Full-width"
+msgstr "﻿Полная ширина"
+
+#: content.php:23 content.php:26 content.php:94 content.php:97
+msgctxt "Published by whom?"
+msgid "by"
+msgstr "﻿автор"
