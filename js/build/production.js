@@ -233,6 +233,14 @@ jQuery(document).ready(function($){
     }
     $(document).on('click', reApplyClosedClass);
 
+    // adjust height to fit footer into viewport instead of keeping it just out of view
+    function adjustSiteHeight() {
+
+        var footerHeight = $('.site-footer').outerHeight();
+
+        $('body').css('height', 'calc(100% - ' + footerHeight + 'px)');
+    }
+    adjustSiteHeight();
 });
 
 // wait to see if a touch event is fired
