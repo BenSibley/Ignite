@@ -23,8 +23,8 @@
             }
             /* Otherwise, output the default text */
             else {
-                $site_url = 'http://www.competethemes.com/ignite/';
-                $footer_text = sprintf( __( '<a target="_blank" href="%s">Ignite WordPress Theme</a> by Compete Themes.', 'ignite' ), esc_url( $site_url ) );
+                $site_url = 'https://www.competethemes.com/ignite/?utm_source=Footer%20Link&utm_medium=Referral&utm_campaign=Ignite%20Footer%20Link';
+                $footer_text = sprintf( __( '<a target="_blank" href="%s">Free WordPress Blog Theme</a> by Compete Themes.', 'ignite' ), esc_url( $site_url ) );
                 echo $footer_text;
             }
             ?>
