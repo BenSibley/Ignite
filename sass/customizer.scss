@@ -3,32 +3,40 @@
 /* Customizer Styles */
 
 .upgrades-ad {
-  background: #43b3c4;
-  color: white;
-  transition: background 0.2s ease-in-out;
+  background: white;
+  padding: $baseline-height / 2 0;
+  text-align: center;
+  border-bottom: solid 1px #eee;
 
-  &:hover {
-    background: #3a9cab;
-
-    span {
-      margin-left: 4px;
-    }
-  }
   a {
-    display: block;
-    padding: $baseline-height / 3;
-    color: white;
+    display: inline-block;
+    padding: 9px 0;
+    color: #222;
+    border: solid 1px #222;
+    width: 270px;
+    transition: background 0.15s ease-in-out;
 
     &:link,
     &:visited,
     &:hover,
     &:active,
     &:focus  {
-      color: white;
+      color: #222;
+    }
+  }
+  &:hover {
+
+    span {
+      right: -3px;
+    }
+    a {
+      background: #f5f5f5;
+      border-color: #bbb;
     }
   }
   span {
-    margin-left: 0px;
-    transition: margin-left 0.2s ease-in-out;
+    position: relative;
+    right: 0;
+    transition: right 0.15s ease-in-out;
   }
 }
