@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Ignite 1.41\n"
+"Project-Id-Version: Ignite 1.42\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2014-11-18 15:06:18+00:00\n"
+"POT-Creation-Date: 2014-12-26 19:14:07+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,27 +13,27 @@ msgstr ""
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "X-Generator: grunt-wp-i18n 0.4.6\n"
 
-#: comments.php:11 comments.php:29 comments.php:49
+#: comments.php:11 comments.php:30 comments.php:51
 msgid "Be First to Comment"
 msgstr ""
 
-#: comments.php:11 comments.php:29 comments.php:49 content/comment-count.php:10
+#: comments.php:11 comments.php:30 comments.php:51 content/comment-count.php:10
 #: content/comment-count.php:19 inc/deprecated.php:104 inc/deprecated.php:113
 msgid "One Comment"
 msgstr ""
 
-#: comments.php:11 comments.php:29 comments.php:49 content/comment-count.php:10
+#: comments.php:11 comments.php:30 comments.php:51 content/comment-count.php:10
 #: content/comment-count.php:19 inc/deprecated.php:104 inc/deprecated.php:113
 msgid "% Comments"
 msgstr ""
 
-#: comments.php:42
+#: comments.php:43
 msgid ""
 "Comments are closed, but <a href=\"%s\" title=\"Trackback URL for this "
 "post\">trackbacks</a> and pingbacks are open."
 msgstr ""
 
-#: comments.php:62 comments.php:68
+#: comments.php:64 comments.php:71
 msgid "Comments are closed."
 msgstr ""
 
@@ -110,63 +110,63 @@ msgstr ""
 
 #: footer.php:27
 msgid ""
-"<a target=\"_blank\" href=\"%s\">Ignite WordPress Theme</a> by Compete "
+"<a target=\"_blank\" href=\"%s\">Free WordPress Blog Theme</a> by Compete "
 "Themes."
 msgstr ""
 
-#: functions.php:62
+#: functions.php:63
 msgid "Primary Sidebar"
 msgstr ""
 
-#: functions.php:64
+#: functions.php:65
 msgid "The main sidebar"
 msgstr ""
 
-#: functions.php:71
+#: functions.php:72
 msgid "Primary"
 msgstr ""
 
-#: functions.php:93
+#: functions.php:94
 msgid "said:"
 msgstr ""
 
-#: functions.php:97
+#: functions.php:98
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:105
+#: functions.php:106
 msgid "Reply"
 msgstr ""
 
-#: functions.php:134 functions.php:135
+#: functions.php:135 functions.php:136
 msgid "Your Name"
 msgstr ""
 
-#: functions.php:141 functions.php:142
+#: functions.php:142 functions.php:143
 msgid "Your Email"
 msgstr ""
 
-#: functions.php:148
+#: functions.php:149
 msgid "Your Website URL"
 msgstr ""
 
-#: functions.php:149
+#: functions.php:150
 msgid "Your URL"
 msgstr ""
 
-#: functions.php:161
+#: functions.php:162
 msgid "Your Comment"
 msgstr ""
 
-#: functions.php:162
+#: functions.php:163
 msgid "Enter Your Comment"
 msgstr ""
 
-#: functions.php:205 functions.php:215
+#: functions.php:206 functions.php:216
 msgid "Read More"
 msgstr ""
 
-#: header.php:16
+#: header.php:15
 msgid "Skip to content"
 msgstr ""
 
@@ -388,10 +388,6 @@ msgstr ""
 msgid "Add icon to parent menu items?"
 msgstr ""
 
-#: inc/customizer.php:875
-msgid "Premium Upgrade Available!"
-msgstr ""
-
 #: inc/user-profile.php:16
 msgid "Profile image"
 msgstr ""
@@ -491,32 +487,46 @@ msgid "Visit Support Center"
 msgstr ""
 
 #: theme-options.php:29
-msgid "Upgrade to Ignite Plus ($29)"
+msgid "WordPress Resources"
 msgstr ""
 
 #: theme-options.php:30
+msgid ""
+"Save time and money searching for WordPress products by following our "
+"recommendations"
+msgstr ""
+
+#: theme-options.php:32
+msgid "View Resources"
+msgstr ""
+
+#: theme-options.php:36
+msgid "Upgrade to Ignite Plus ($29)"
+msgstr ""
+
+#: theme-options.php:37
 msgid ""
 "Ignite Plus is the premium version of Ignite. By upgrading to Ignite Plus, "
 "you get:"
 msgstr ""
 
-#: theme-options.php:32
+#: theme-options.php:39
 msgid "Custom colors"
 msgstr ""
 
-#: theme-options.php:33
+#: theme-options.php:40
 msgid "Background images & textures"
 msgstr ""
 
-#: theme-options.php:34
+#: theme-options.php:41
 msgid "New layouts"
 msgstr ""
 
-#: theme-options.php:35
+#: theme-options.php:42
 msgid "and much more&#8230;"
 msgstr ""
 
-#: theme-options.php:38
+#: theme-options.php:45
 msgid "See Full Feature List"
 msgstr ""
 
