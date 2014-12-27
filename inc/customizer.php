@@ -874,12 +874,12 @@ function ct_ignite_customizer_ad_array() {
 
     // create array of ad text
     $ads_array = array(
-        'Have you seen Ignite Plus?' => 'https://www.competethemes.com/ignite-plus/?utm_source=customizer-ad&utm_medium=ignite&utm_content=have-you-seen-ignite-plus&utm_campaign=customizer-ads',
-        'Upgrade Ignite' => 'https://www.competethemes.com/ignite-plus/?utm_source=customizer-ad&utm_medium=ignite&utm_content=upgrade-ignite&utm_campaign=customizer-ads',
-        'View the Ignite Plus upgrade' => 'https://www.competethemes.com/ignite-plus/?utm_source=customizer-ad&utm_medium=ignite&utm_content=view-the-ignite-plus-upgrade&utm_campaign=customizer-ads',
-        'Check out Ignite Plus' => 'https://www.competethemes.com/ignite-plus/?utm_source=customizer-ad&utm_medium=ignite&utm_content=check-out-ignite-plus&utm_campaign=customizer-ads',
-        'Ignite Theme Upgrade' => 'https://www.competethemes.com/ignite-plus/?utm_source=customizer-ad&utm_medium=ignite&utm_content=ignite-theme-upgrade&utm_campaign=customizer-ads',
-        'Premium Upgrade for Ignite' => 'https://www.competethemes.com/ignite-plus/?utm_source=customizer-ad&utm_medium=ignite&utm_content=premium-upgrade-for-ignite&utm_campaign=customizer-ads'
+        __('Have you seen Ignite Plus?', 'ignite') => 'https://www.competethemes.com/ignite-plus/?utm_source=customizer-ad&utm_medium=ignite&utm_content=have-you-seen-ignite-plus&utm_campaign=customizer-ads',
+        __('Upgrade Ignite', 'ignite') => 'https://www.competethemes.com/ignite-plus/?utm_source=customizer-ad&utm_medium=ignite&utm_content=upgrade-ignite&utm_campaign=customizer-ads',
+        __('View the Ignite Plus upgrade', 'ignite') => 'https://www.competethemes.com/ignite-plus/?utm_source=customizer-ad&utm_medium=ignite&utm_content=view-the-ignite-plus-upgrade&utm_campaign=customizer-ads',
+        __('Check out Ignite Plus', 'ignite') => 'https://www.competethemes.com/ignite-plus/?utm_source=customizer-ad&utm_medium=ignite&utm_content=check-out-ignite-plus&utm_campaign=customizer-ads',
+        __('Ignite Theme Upgrade', 'ignite') => 'https://www.competethemes.com/ignite-plus/?utm_source=customizer-ad&utm_medium=ignite&utm_content=ignite-theme-upgrade&utm_campaign=customizer-ads',
+        __('Premium Upgrade for Ignite', 'ignite') => 'https://www.competethemes.com/ignite-plus/?utm_source=customizer-ad&utm_medium=ignite&utm_content=premium-upgrade-for-ignite&utm_campaign=customizer-ads'
     );
     return $ads_array;
 }
