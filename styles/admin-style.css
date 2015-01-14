@@ -57,12 +57,12 @@
   margin-top: 12px;
 }
 
-#widgets-left [id*=_ct_ignite_] .widget-top {
+.widgets-php #widgets-left [id*=_ct_ignite_] .widget-top {
   background: #43b3c4;
   color: #fff;
   position: relative;
 }
-#widgets-left [id*=_ct_ignite_] .widget-top:after {
+.widgets-php #widgets-left [id*=_ct_ignite_] .widget-top:after {
   content: '';
   position: absolute;
   background: url("../assets/images/logo.svg");
