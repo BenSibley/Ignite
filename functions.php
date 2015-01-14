@@ -344,7 +344,7 @@ function ct_ignite_post_class_update($classes){
         }
     }
 	// if 3.8 or lower
-	if( get_bloginfo('version') < 3.9 ) {
+	if( version_compare( get_bloginfo('version'), '3.9', '<') ) {
 
 		// add the has-post-thumbnail class
 		if( has_post_thumbnail() ) {
@@ -555,7 +555,7 @@ function ct_ignite_profile_image_output(){
 function ct_ignite_wp_backwards_compatibility() {
 
 	// not using this function, simply remove it so use of "has_image_size" doesn't break < 3.9
-	if( get_bloginfo('version') < 3.9 ) {
+	if( version_compare( get_bloginfo('version'), '3.9', '<') ) {
 		remove_filter( 'image_size_names_choose', 'hybrid_image_size_names_choose' );
 	}
 }
