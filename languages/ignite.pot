@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Ignite 1.43\n"
+"Project-Id-Version: Ignite 1.43.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2015-01-15 15:05:16+00:00\n"
+"POT-Creation-Date: 2015-01-15 18:36:40+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -525,7 +525,7 @@ msgid "View Resources"
 msgstr ""
 
 #: theme-options.php:36
-msgid "Upgrade to Ignite Plus ($29)"
+msgid "Upgrade to Ignite Plus"
 msgstr ""
 
 #: theme-options.php:37
