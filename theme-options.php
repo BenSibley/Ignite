@@ -33,7 +33,7 @@ function ct_ignite_options_content(){
             </p>
         </div>
         <div class="content content-premium-upgrade">
-            <h3><?php _e('Upgrade to Ignite Plus ($29)', 'ignite'); ?></h3>
+            <h3><?php _e('Upgrade to Ignite Plus', 'ignite'); ?></h3>
             <p><?php _e('Ignite Plus is the premium version of Ignite. By upgrading to Ignite Plus, you get:', 'ignite'); ?></p>
             <ul>
                 <li><?php _e('Custom colors', 'ignite'); ?></li>
