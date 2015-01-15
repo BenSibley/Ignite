@@ -1,14 +1,14 @@
-# Copyright (C) 2014 Compete Themes
+# Copyright (C) 2015 Compete Themes
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Ignite 1.42.1\n"
+"Project-Id-Version: Ignite 1.43\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2014-12-27 20:39:42+00:00\n"
+"POT-Creation-Date: 2015-01-15 15:05:16+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "X-Generator: grunt-wp-i18n 0.4.6\n"
@@ -559,7 +559,7 @@ msgid "Ignite"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "https://competethemes.com/ignite/"
+msgid "https://www.competethemes.com/ignite/"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -576,7 +576,7 @@ msgid "Compete Themes"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "https://competethemes.com"
+msgid "https://www.competethemes.com"
 msgstr ""
 
 #. Template Name of the plugin/theme
