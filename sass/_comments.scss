@@ -11,11 +11,11 @@
 }
 .comment-list {
   list-style: none;
-  margin: $baseline-height 0;
+  margin: $baseline-height * 2 0;
 
   ul {
     list-style: none;
-    margin: $baseline-height 0 $baseline-height $baseline-height;
+    margin: $baseline-height * 2 0 $baseline-height $baseline-height * 2;
 
     li:first-child:before {
       content: "\2192";
@@ -27,7 +27,7 @@
 }
 li.comment,
 li.pingback {
-  margin-bottom: $baseline-height * 2;
+  margin: $baseline-height * 2 0;
   position: relative;
 }
 .comment-content {
