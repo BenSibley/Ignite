@@ -107,7 +107,6 @@ function ct_ignite_customize_comments( $comment, $args, $depth ) {
             </div>
 
         </article>
-    </li>
     <?php
 }
 
