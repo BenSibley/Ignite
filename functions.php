@@ -47,6 +47,15 @@ function ct_ignite_theme_setup() {
 
     // load text domain
     load_theme_textdomain('ignite', get_template_directory() . '/languages');
+
+    // remove Hybrid Core filters adding partial microdata
+    remove_filter( 'the_author_posts_link',          'hybrid_the_author_posts_link',          5 );
+    remove_filter( 'get_comment_author_link',        'hybrid_get_comment_author_link',        5 );
+    remove_filter( 'get_comment_author_url_link',    'hybrid_get_comment_author_url_link',    5 );
+    remove_filter( 'comment_reply_link',             'hybrid_comment_reply_link_filter',      5 );
+    remove_filter( 'get_avatar',                     'hybrid_get_avatar',                     5 );
+    remove_filter( 'post_thumbnail_html',            'hybrid_post_thumbnail_html',            5 );
+    remove_filter( 'comments_popup_link_attributes', 'hybrid_comments_popup_link_attributes', 5 );
 }
 
 function ct_ignite_remove_cleaner_gallery() {
