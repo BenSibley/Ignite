@@ -8,12 +8,11 @@
             global $wp_query;
             $total_results = $wp_query->found_posts;
             if($total_results) {
-                printf(__('%d search results for','ignite'), $total_results);
+                printf( _n('%d search result for "%s"', '%d search results for "%s"', $total_results, 'ignite'), $total_results, $s );
             } else {
-                _e("No search results for ", 'ignite');
+                printf( __('No search results for "%s"', 'ignite'), $s );
             }
             ?>
-            <span>"<?php echo $s ?>"</span>
         </h1>
         <?php get_search_form(); ?>
     </div>
