@@ -3,6 +3,26 @@
 if ( post_password_required() || ( !have_comments() && !comments_open() && !pings_open() ) )
         return;
 
+// get user's comment display setting
+$comments_display = get_theme_mod('ct_ignite_comments_setting');
+
+/*
+ * Get the current post type
+ * Have to maintain options set as "posts, pages, attachments" or break users settings.
+ * Adding the 's' to make the post type match the Customizer setting.
+ */
+$post_type = get_post_type() . 's';
+
+// error prevention
+if( is_array( $comments_display ) ) {
+
+    // if the current post type is not included, don't display comments
+    if( ! in_array( $post_type, $comments_display ) ) {
+        return;
+    }
+}
+
+
 if ( comments_open() ) { ?>
 
     <section id="comments" class="comments">

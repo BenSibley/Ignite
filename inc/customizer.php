@@ -489,7 +489,7 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
     ) );
     // setting
     $wp_customize->add_setting( 'ct_ignite_comments_setting', array(
-        'default'           => array('post','page','attachments','none'),
+        'default'           => array('posts','pages','attachments','none'),
         'type'              => 'theme_mod',
         'capability'        => 'edit_theme_options',
         'sanitize_callback' => 'ct_ignite_sanitize_comments_setting',

@@ -17,41 +17,17 @@ if ( have_posts() ) :
         /* Post */
         elseif( is_singular( 'post' ) ) {
             get_template_part( 'content' );
-
-            // error prevention
-            if( is_array( $comments_display ) ) {
-
-                // check for posts as a selected option
-                if (in_array( 'posts', $comments_display ) ) {
-                    comments_template();
-                }
-            }
+            comments_template();
         }
         /* Page */
         elseif( is_page() ) {
             get_template_part( 'content', 'page' );
-
-            // error prevention
-            if( is_array( $comments_display ) ) {
-
-                // check for pages as a selected option
-                if (in_array( 'pages', $comments_display ) ) {
-                    comments_template();
-                }
-            }
+            comments_template();
         }
         /* Attachment */
         elseif( is_attachment() ) {
             get_template_part( 'content', 'attachment' );
-
-            // error prevention
-            if( is_array( $comments_display ) ) {
-
-                // check for attachments as a selected option
-                if (in_array( 'attachments', $comments_display ) ) {
-                    comments_template();
-                }
-            }
+            comments_template();
         }
         /* Archive */
         elseif( is_archive() ) {
