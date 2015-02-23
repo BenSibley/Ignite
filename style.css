@@ -824,7 +824,7 @@ a img {
   background-position: 50%;
   position: relative;
   height: 0;
-  padding-bottom: 63%;
+  padding-bottom: 56.5%;
   left: -9.5%;
   width: 119%;
   margin-bottom: 1.5em;
@@ -1017,6 +1017,7 @@ a img {
   .featured-image {
     left: -20%;
     width: 140%;
+    padding-bottom: 66.5%;
   }
 }
 /* 900px */
@@ -1043,6 +1044,7 @@ a img {
   .featured-image {
     left: -18%;
     width: 136%;
+    padding-bottom: 64.5%;
   }
 
   .loop-pagination {
@@ -1095,6 +1097,7 @@ a img {
   .featured-image {
     left: -16.67%;
     width: 133.33%;
+    padding-bottom: 63.5%;
   }
 }
 .sidebar-primary-container {
