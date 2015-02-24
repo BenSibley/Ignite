@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Ignite 1.44\n"
+"Project-Id-Version: Ignite 1.45\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2015-01-30 14:46:14+00:00\n"
+"POT-Creation-Date: 2015-02-24 16:13:01+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,27 +13,27 @@ msgstr ""
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "X-Generator: grunt-wp-i18n 0.4.6\n"
 
-#: comments.php:11 comments.php:30 comments.php:51
+#: comments.php:30 comments.php:49 comments.php:70
 msgid "Be First to Comment"
 msgstr ""
 
-#: comments.php:11 comments.php:30 comments.php:51 content/comment-count.php:10
+#: comments.php:30 comments.php:49 comments.php:70 content/comment-count.php:10
 #: content/comment-count.php:19 inc/deprecated.php:104 inc/deprecated.php:113
 msgid "One Comment"
 msgstr ""
 
-#: comments.php:11 comments.php:30 comments.php:51 content/comment-count.php:10
+#: comments.php:30 comments.php:49 comments.php:70 content/comment-count.php:10
 #: content/comment-count.php:19 inc/deprecated.php:104 inc/deprecated.php:113
 msgid "% Comments"
 msgstr ""
 
-#: comments.php:43
+#: comments.php:62
 msgid ""
 "Comments are closed, but <a href=\"%s\" title=\"Trackback URL for this "
 "post\">trackbacks</a> and pingbacks are open."
 msgstr ""
 
-#: comments.php:64 comments.php:71
+#: comments.php:83 comments.php:90
 msgid "Comments are closed."
 msgstr ""
 
@@ -455,14 +455,16 @@ msgid "Link (optional)"
 msgstr ""
 
 #: search.php:11
-msgid "%d search results for"
-msgstr ""
+msgid "%d search result for \"%s\""
+msgid_plural "%d search results for \"%s\""
+msgstr[0] ""
+msgstr[1] ""
 
 #: search.php:13
-msgid "No search results for "
+msgid "No search results for \"%s\""
 msgstr ""
 
-#: search.php:39
+#: search.php:38
 msgid "Can't find what you're looking for?  Try refining your search:"
 msgstr ""
 
