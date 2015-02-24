@@ -7,9 +7,8 @@ if ( post_password_required() || ( !have_comments() && !comments_open() && !ping
 $comments_display = get_theme_mod('ct_ignite_comments_setting');
 
 /*
- * Get the current post type
- * Have to maintain options set as "posts, pages, attachments" or break users settings.
- * Adding the 's' to make the post type match the Customizer setting.
+ * Get current post type
+ * Must maintain options as "postS, pageS, attachmentS", or existing users will need to reset their comment settings :/
  */
 $post_type = get_post_type() . 's';
 
