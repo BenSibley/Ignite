@@ -78,10 +78,12 @@ module.exports = function(grunt) {
         compress: {
             main: {
                 options: {
+                    mode: 'zip',
                     archive: '/Users/bensibley/Desktop/ignite.zip'
                 },
                 files: [
                     {
+                        expand: true,
                         src: ['**', '!node_modules/**','!sass/**', '!gruntfile.js', '!package.json', '!style-prefixed.css','!/.git/','!/.idea/','!/.sass-cache/','!**.DS_Store'],
                         filter: 'isFile'
                     }

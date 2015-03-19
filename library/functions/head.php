@@ -48,17 +48,6 @@ function hybrid_meta_charset() {
 }
 
 /**
- * Adds the title to the header.
- *
- * @since  2.0.0
- * @access public
- * @return void
- */
-//function hybrid_doctitle() {
-//	printf( "<title>%s</title>\n", wp_title( ':', false ) );
-//}
-
-/**
  * Adds the meta viewport to the header.
  *
  * @since  2.0.0
@@ -91,6 +80,9 @@ function hybrid_link_pingback() {
  * @return string
  */
 function hybrid_wp_title( $doctitle, $separator, $seplocation ) {
+
+	/* Custom separator for backwards compatibility. */
+	$separator = ':';
 
 	if ( is_front_page() )
 		$doctitle = get_bloginfo( 'name' ) . $separator . ' ' . get_bloginfo( 'description' );
