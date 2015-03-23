@@ -19,7 +19,7 @@ if( is_array( $comments_display ) ) {
     if( ! in_array( $post_type, $comments_display ) ) {
         return;
     }
-}
+} // if not an array, not set so display comments
 
 
 if ( comments_open() ) { ?>
