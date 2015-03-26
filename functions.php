@@ -319,16 +319,6 @@ function ct_ignite_category_count_add_span($links) {
     return $links;
 }
 
-// adds title to homepage
-add_filter( 'wp_title', 'ct_ignite_add_homepage_title' );
-function ct_ignite_add_homepage_title( $title )
-{
-    if( empty( $title ) && ( is_home() || is_front_page() ) ) {
-        return get_bloginfo( 'title' ) . ' | ' . get_bloginfo( 'description' );
-    }
-    return $title;
-}
-
 // calls pages for menu if menu not set
 function ct_ignite_wp_page_menu() {
     wp_page_menu(array("menu_class" => "menu-unset"));
