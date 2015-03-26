@@ -13,49 +13,48 @@ add_action( 'after_setup_theme', 'ct_ignite_theme_setup', 10 );
  *
  * @since 1.0
  */
+if( ! function_exists( 'ct_ignite_theme_setup' ) ) {
+    function ct_ignite_theme_setup() {
 
-function ct_ignite_theme_setup() {
-	
-    /* Get action/filter hook prefix. */
-	$prefix = hybrid_get_prefix();
-    
-	/* Theme-supported features go here. */
-    add_theme_support( 'hybrid-core-template-hierarchy' );
-    add_theme_support( 'loop-pagination' );
-    add_theme_support( 'cleaner-gallery' );
-    add_theme_support( 'breadcrumb-trail' );
+        /* Get action/filter hook prefix. */
+        $prefix = hybrid_get_prefix();
 
-    // from WordPress core not theme hybrid
-    add_theme_support( 'automatic-feed-links' );
-    add_theme_support( 'post-thumbnails' );
-    add_theme_support( 'title-tag' );
+        /* Theme-supported features go here. */
+        add_theme_support( 'hybrid-core-template-hierarchy' );
+        add_theme_support( 'loop-pagination' );
+        add_theme_support( 'cleaner-gallery' );
+        add_theme_support( 'breadcrumb-trail' );
 
-    // add inc folder files
-    foreach (glob(trailingslashit( get_template_directory() ) . 'inc/*.php') as $filename)
-    {
-        include $filename;
+        // from WordPress core not theme hybrid
+        add_theme_support( 'automatic-feed-links' );
+        add_theme_support( 'post-thumbnails' );
+        add_theme_support( 'title-tag' );
+
+        // add inc folder files
+        foreach ( glob( trailingslashit( get_template_directory() ) . 'inc/*.php' ) as $filename ) {
+            include $filename;
+        }
+
+        // add widget folder files
+        foreach ( glob( trailingslashit( get_template_directory() ) . 'inc/widgets/*.php' ) as $filename ) {
+            include $filename;
+        }
+
+        // adds theme options page
+        require_once( trailingslashit( get_template_directory() ) . 'theme-options.php' );
+
+        // load text domain
+        load_theme_textdomain( 'ignite', get_template_directory() . '/languages' );
+
+        // remove Hybrid Core filters adding partial microdata
+        remove_filter( 'the_author_posts_link', 'hybrid_the_author_posts_link', 5 );
+        remove_filter( 'get_comment_author_link', 'hybrid_get_comment_author_link', 5 );
+        remove_filter( 'get_comment_author_url_link', 'hybrid_get_comment_author_url_link', 5 );
+        remove_filter( 'comment_reply_link', 'hybrid_comment_reply_link_filter', 5 );
+        remove_filter( 'get_avatar', 'hybrid_get_avatar', 5 );
+        remove_filter( 'post_thumbnail_html', 'hybrid_post_thumbnail_html', 5 );
+        remove_filter( 'comments_popup_link_attributes', 'hybrid_comments_popup_link_attributes', 5 );
     }
-
-	// add widget folder files
-	foreach (glob(trailingslashit( get_template_directory() ) . 'inc/widgets/*.php') as $filename)
-	{
-		include $filename;
-	}
-
-    // adds theme options page
-    require_once( trailingslashit( get_template_directory() ) . 'theme-options.php' );
-
-    // load text domain
-    load_theme_textdomain('ignite', get_template_directory() . '/languages');
-
-    // remove Hybrid Core filters adding partial microdata
-    remove_filter( 'the_author_posts_link',          'hybrid_the_author_posts_link',          5 );
-    remove_filter( 'get_comment_author_link',        'hybrid_get_comment_author_link',        5 );
-    remove_filter( 'get_comment_author_url_link',    'hybrid_get_comment_author_url_link',    5 );
-    remove_filter( 'comment_reply_link',             'hybrid_comment_reply_link_filter',      5 );
-    remove_filter( 'get_avatar',                     'hybrid_get_avatar',                     5 );
-    remove_filter( 'post_thumbnail_html',            'hybrid_post_thumbnail_html',            5 );
-    remove_filter( 'comments_popup_link_attributes', 'hybrid_comments_popup_link_attributes', 5 );
 }
 
 function ct_ignite_remove_cleaner_gallery() {
@@ -83,152 +82,167 @@ function ct_ignite_register_menu() {
 add_action('init', 'ct_ignite_register_menu');
 
 /* added to customize the comments. Same as default except -> added use of gravatar images for comment authors */
-function ct_ignite_customize_comments( $comment, $args, $depth ) {
-    $GLOBALS['comment'] = $comment;
-    global $post;
- 
-    ?>
-    <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
+if( ! function_exists( 'ct_ignite_customize_comments' ) ) {
+    function ct_ignite_customize_comments( $comment, $args, $depth ) {
+        $GLOBALS['comment'] = $comment;
+        global $post;
+
+        ?>
+        <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
         <article id="comment-<?php comment_ID(); ?>" class="comment">
             <div class="comment-author">
                 <?php
                 // if is post author
-                if( $comment->user_id === $post->post_author ) {
+                if ( $comment->user_id === $post->post_author ) {
                     ct_ignite_profile_image_output();
                 } else {
                     echo get_avatar( get_comment_author_email(), 48 );
                 }
                 ?>
                 <span class="author-name"><?php comment_author_link(); ?></span>
-                <span> <?php _e('said:', 'ignite'); ?></span>
+                <span> <?php _e( 'said:', 'ignite' ); ?></span>
             </div>
             <div class="comment-content">
-                <?php if ($comment->comment_approved == '0') : ?>
-                    <em><?php _e('Your comment is awaiting moderation.', 'ignite') ?></em>
-                    <br />
+                <?php if ( $comment->comment_approved == '0' ) : ?>
+                    <em><?php _e( 'Your comment is awaiting moderation.', 'ignite' ) ?></em>
+                    <br/>
                 <?php endif; ?>
                 <?php comment_text(); ?>
             </div>
             <div class="comment-meta">
                 <div class="comment-date"><?php comment_date(); ?></div>
                 <?php edit_comment_link( 'edit' ); ?>
-                <?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply', 'ignite' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+                <?php comment_reply_link( array_merge( $args, array(
+                    'reply_text' => __( 'Reply', 'ignite' ),
+                    'depth'      => $depth,
+                    'max_depth'  => $args['max_depth']
+                ) ) ); ?>
             </div>
-
         </article>
     <?php
+    }
 }
 
 /* added HTML5 placeholders for each default field */
-function ct_ignite_update_fields($fields) {
+if( ! function_exists( 'ct_ignite_update_fields' ) ) {
+    function ct_ignite_update_fields( $fields ) {
 
-	// get commenter object
-    $commenter = wp_get_current_commenter();
+        // get commenter object
+        $commenter = wp_get_current_commenter();
 
-	// are name and email required?
-    $req = get_option( 'require_name_email' );
+        // are name and email required?
+        $req = get_option( 'require_name_email' );
 
-	// required or optional label to be added
-	if( $req == 1 ) {
-		$label = '*';
-	} else {
-		$label = ' (optional)';
-	}
+        // required or optional label to be added
+        if ( $req == 1 ) {
+            $label = '*';
+        } else {
+            $label = ' (optional)';
+        }
 
-	// adds aria required tag if required
-    $aria_req = ( $req ? " aria-required='true'" : '' );
+        // adds aria required tag if required
+        $aria_req = ( $req ? " aria-required='true'" : '' );
 
-    $fields['author'] =
-        '<p class="comment-form-author">
-            <label class="screen-reader-text">' . __('Your Name', 'ignite') . '</label>
-			<input placeholder="' . __('Your Name', 'ignite') . $label . '" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
-        '" size="30"' . $aria_req . ' />
-    	</p>';
-
-    $fields['email'] =
-        '<p class="comment-form-email">
-            <label class="screen-reader-text">' . __('Your Email', 'ignite') . '</label>
-    		<input placeholder="' . __('Your Email', 'ignite') . $label . '" id="email" name="email" type="email" value="' . esc_attr(  $commenter['comment_author_email'] ) .
-        '" size="30"' . $aria_req . ' />
-    	</p>';
-
-    $fields['url'] =
-        '<p class="comment-form-url">
-            <label class="screen-reader-text">' . __('Your Website URL', 'ignite') . '</label>
-			<input placeholder="' . __('Your URL', 'ignite') . ' (optional)" id="url" name="url" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) .
-        '" size="30" />
+        $fields['author'] =
+            '<p class="comment-form-author">
+                <label class="screen-reader-text">' . __( 'Your Name', 'ignite' ) . '</label>
+                <input placeholder="' . __( 'Your Name', 'ignite' ) . $label . '" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
+            '" size="30"' . $aria_req . ' />
             </p>';
 
-    return $fields;
+        $fields['email'] =
+            '<p class="comment-form-email">
+                <label class="screen-reader-text">' . __( 'Your Email', 'ignite' ) . '</label>
+                <input placeholder="' . __( 'Your Email', 'ignite' ) . $label . '" id="email" name="email" type="email" value="' . esc_attr( $commenter['comment_author_email'] ) .
+            '" size="30"' . $aria_req . ' />
+            </p>';
+
+        $fields['url'] =
+            '<p class="comment-form-url">
+                <label class="screen-reader-text">' . __( 'Your Website URL', 'ignite' ) . '</label>
+                <input placeholder="' . __( 'Your URL', 'ignite' ) . ' (optional)" id="url" name="url" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) .
+            '" size="30" />
+                </p>';
+
+        return $fields;
+    }
 }
 add_filter('comment_form_default_fields','ct_ignite_update_fields');
 
-function ct_ignite_update_comment_field($comment_field) {
-	
-	$comment_field = 
-		'<p class="comment-form-comment">
-            <label class="screen-reader-text">' . __('Your Comment', 'ignite') . '</label>
-			<textarea required placeholder="' . __('Enter Your Comment', 'ignite') . '&#8230;" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>
-		</p>';
-	
-	return $comment_field;
+if( ! function_exists( 'ct_ignite_update_comment_field' ) ) {
+    function ct_ignite_update_comment_field( $comment_field ) {
+
+        $comment_field =
+            '<p class="comment-form-comment">
+                <label class="screen-reader-text">' . __( 'Your Comment', 'ignite' ) . '</label>
+                <textarea required placeholder="' . __( 'Enter Your Comment', 'ignite' ) . '&#8230;" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>
+            </p>';
+
+        return $comment_field;
+    }
 }
 add_filter('comment_form_field_comment','ct_ignite_update_comment_field');
 
-
 // remove allowed tags text after comment form
-function ct_ignite_remove_comments_notes_after($defaults){
+if( ! function_exists( 'ct_ignite_remove_comments_notes_after' ) ) {
+    function ct_ignite_remove_comments_notes_after( $defaults ) {
 
-    $defaults['comment_notes_after']='';
-    return $defaults;
+        $defaults['comment_notes_after'] = '';
+
+        return $defaults;
+    }
 }
 
 add_action('comment_form_defaults', 'ct_ignite_remove_comments_notes_after');
 
 // excerpt handling
-function ct_ignite_excerpt() {
+if( ! function_exists( 'ct_ignite_excerpt' ) ) {
+    function ct_ignite_excerpt() {
 
-    // make post variable available
-	global $post;
+        // make post variable available
+        global $post;
 
-    // make 'read more' setting available
-    global $more;
+        // make 'read more' setting available
+        global $more;
 
-    // get the show full post setting
-    $setting = get_theme_mod('ct_ignite_show_full_post_setting');
+        // get the show full post setting
+        $setting = get_theme_mod( 'ct_ignite_show_full_post_setting' );
 
-    // check for the more tag
-    $ismore = strpos( $post->post_content, '<!--more-->');
+        // check for the more tag
+        $ismore = strpos( $post->post_content, '<!--more-->' );
 
-    // if show full post is on, show full post unless on search page
-    if(($setting == 'yes') && !is_search()){
+        // if show full post is on, show full post unless on search page
+        if ( ( $setting == 'yes' ) && ! is_search() ) {
 
-        // set read more value for all posts to 'off'
-        $more = -1;
+            // set read more value for all posts to 'off'
+            $more = - 1;
 
-        // output the full content
-        the_content();
-    }
-    // use the read more link if present
-    elseif($ismore) {
-        the_content( __('Read More', 'ignite') . " <span class='screen-reader-text'>" . get_the_title() . "</span>");
-    }
-    // otherwise the excerpt is automatic, so output it
-    else {
-        the_excerpt();
+            // output the full content
+            the_content();
+        } // use the read more link if present
+        elseif ( $ismore ) {
+            the_content( __( 'Read More', 'ignite' ) . " <span class='screen-reader-text'>" . get_the_title() . "</span>" );
+        } // otherwise the excerpt is automatic, so output it
+        else {
+            the_excerpt();
+        }
     }
 }
 
 // filter the link on excerpts
-function ct_ignite_excerpt_read_more_link($output) {
-    return $output . "<p><a class='more-link' href='". get_permalink() ."'>" . __('Read More', 'ignite') . " <span class='screen-reader-text'>" . get_the_title() . "</span></a></p>";
+if( ! function_exists( 'ct_ignite_excerpt_read_more_link' ) ) {
+    function ct_ignite_excerpt_read_more_link( $output ) {
+        return $output . "<p><a class='more-link' href='" . get_permalink() . "'>" . __( 'Read More', 'ignite' ) . " <span class='screen-reader-text'>" . get_the_title() . "</span></a></p>";
+    }
 }
 add_filter('the_excerpt', 'ct_ignite_excerpt_read_more_link');
 
 
 // switch [...] to ellipsis on automatic excerpt
-function ct_ignite_new_excerpt_more( $more ) {
-	return '&#8230;';
+if( ! function_exists( 'ct_ignite_new_excerpt_more' ) ) {
+    function ct_ignite_new_excerpt_more( $more ) {
+        return '&#8230;';
+    }
 }
 add_filter('excerpt_more', 'ct_ignite_new_excerpt_more');
 
@@ -246,10 +260,13 @@ function ct_ignite_custom_excerpt_length( $length ) {
 }
 add_filter( 'excerpt_length', 'ct_ignite_custom_excerpt_length', 999 );
 
-// turns of the automatic scrolling to the read more link 
-function ct_ignite_remove_more_link_scroll( $link ) {
-	$link = preg_replace( '|#more-[0-9]+|', '', $link );
-	return $link;
+// turns of the automatic scrolling to the read more link
+if( ! function_exists( 'ct_ignite_remove_more_link_scroll' ) ) {
+    function ct_ignite_remove_more_link_scroll( $link ) {
+        $link = preg_replace( '|#more-[0-9]+|', '', $link );
+
+        return $link;
+    }
 }
 
 add_filter( 'the_content_more_link', 'ct_ignite_remove_more_link_scroll' );
@@ -262,26 +279,28 @@ function ct_ignite_post_navigation() { ?>
 }
 
 // for displaying featured images including mobile versions and default versions
-function ct_ignite_featured_image() {
-	
-	global $post;
-	$has_image = false;
+if( ! function_exists( 'ct_ignite_featured_image' ) ) {
+    function ct_ignite_featured_image() {
 
-    if (has_post_thumbnail( $post->ID ) ) {
-		$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
-		$image = $image[0];
-		$has_image = true;
-	}  
-	if ($has_image == true) {
+        global $post;
+        $has_image = false;
 
-        if(is_singular()){
-            echo "<div class='featured-image' style=\"background-image: url('".$image."')\"></div>";
-        } else {
-            echo "
-                <div class='featured-image' style=\"background-image: url('".$image."')\">
-                    <a href='" . get_permalink() ."'>" . get_the_title() . "</a>
+        if ( has_post_thumbnail( $post->ID ) ) {
+            $image     = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
+            $image     = $image[0];
+            $has_image = true;
+        }
+        if ( $has_image == true ) {
+
+            if ( is_singular() ) {
+                echo "<div class='featured-image' style=\"background-image: url('" . $image . "')\"></div>";
+            } else {
+                echo "
+                <div class='featured-image' style=\"background-image: url('" . $image . "')\">
+                    <a href='" . get_permalink() . "'>" . get_the_title() . "</a>
                 </div>
                 ";
+            }
         }
     }
 }
