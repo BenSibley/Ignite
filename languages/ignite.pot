@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Ignite 1.45\n"
+"Project-Id-Version: Ignite 1.46\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2015-02-24 16:13:01+00:00\n"
+"POT-Creation-Date: 2015-03-26 15:22:04+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -114,15 +114,15 @@ msgid ""
 "Themes."
 msgstr ""
 
-#: functions.php:72
+#: functions.php:71
 msgid "Primary Sidebar"
 msgstr ""
 
-#: functions.php:74
+#: functions.php:73
 msgid "The main sidebar"
 msgstr ""
 
-#: functions.php:81
+#: functions.php:80
 msgid "Primary"
 msgstr ""
 
@@ -134,35 +134,35 @@ msgstr ""
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:115
+#: functions.php:116
 msgid "Reply"
 msgstr ""
 
-#: functions.php:143 functions.php:144
+#: functions.php:148 functions.php:149
 msgid "Your Name"
 msgstr ""
 
-#: functions.php:150 functions.php:151
+#: functions.php:155 functions.php:156
 msgid "Your Email"
 msgstr ""
 
-#: functions.php:157
+#: functions.php:162
 msgid "Your Website URL"
 msgstr ""
 
-#: functions.php:158
+#: functions.php:163
 msgid "Your URL"
 msgstr ""
 
-#: functions.php:170
+#: functions.php:177
 msgid "Your Comment"
 msgstr ""
 
-#: functions.php:171
+#: functions.php:178
 msgid "Enter Your Comment"
 msgstr ""
 
-#: functions.php:214 functions.php:224
+#: functions.php:224 functions.php:235
 msgid "Read More"
 msgstr ""
 
@@ -386,30 +386,6 @@ msgstr ""
 
 #: inc/customizer.php:630
 msgid "Add icon to parent menu items?"
-msgstr ""
-
-#: inc/customizer.php:877
-msgid "Have you seen Ignite Plus?"
-msgstr ""
-
-#: inc/customizer.php:878
-msgid "Upgrade Ignite"
-msgstr ""
-
-#: inc/customizer.php:879
-msgid "View the Ignite Plus upgrade"
-msgstr ""
-
-#: inc/customizer.php:880
-msgid "Check out Ignite Plus"
-msgstr ""
-
-#: inc/customizer.php:881
-msgid "Ignite Theme Upgrade"
-msgstr ""
-
-#: inc/customizer.php:882
-msgid "Premium Upgrade for Ignite"
 msgstr ""
 
 #: inc/user-profile.php:16
