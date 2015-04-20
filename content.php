@@ -13,7 +13,7 @@ if( is_single() ) { ?>
 	            <?php
 	            // Don't display if hidden by Post Meta section
 	            if( $date_display != 'hide' ) {
-		            echo __( 'Published', 'ignite' ) . " " . date_i18n( get_option( 'date_format' ), strtotime( get_the_date( 'n/j/Y' ) ) );
+		            echo __( 'Published', 'ignite' ) . " " . date_i18n( get_option( 'date_format' ), strtotime( get_the_date() ) );
 	            }
 	            // output author name/link if not set to "Hide" in Post Meta section
 	            if( $author_display != 'hide' ) {
@@ -84,7 +84,7 @@ if( is_single() ) { ?>
 			    <?php
 			    // Don't display if hidden by Post Meta section
 			    if( $date_display != 'hide' ) {
-				    echo __( 'Published', 'ignite' ) . " " . date_i18n( get_option( 'date_format' ), strtotime( get_the_date( 'n/j/Y' ) ) );
+				    echo __( 'Published', 'ignite' ) . " " . date_i18n( get_option( 'date_format' ), strtotime( get_the_date() ) );
 			    }
 			    // output author name/link if not set to "Hide" in Post Meta section
 			    if( $author_display != 'hide' ) {
