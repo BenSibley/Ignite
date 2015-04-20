@@ -23,13 +23,13 @@ if(!empty($active_sites)) {
 	<?php endif; ?>
 
 		<?php if( $active_site ==  "flickr" || $active_site ==  "dribbble" || $active_site ==  "instagram" || $active_site ==  "soundcloud" || $active_site ==  "spotify" || $active_site ==  "vine" || $active_site ==  "yahoo" || $active_site ==  "codepen" || $active_site ==  "delicious" || $active_site ==  "stumbleupon" || $active_site ==  "deviantart" || $active_site ==  "digg" || $active_site ==  "hacker-news" || $active_site == "vk" || $active_site == 'weibo' || $active_site == 'tencent-weibo') { ?>
-			<i class="fa fa-<?php echo esc_attr($active_site); ?>"></i>
+			<i class="fa fa-<?php echo esc_attr($active_site); ?>" title="<?php printf( __('%s icon', 'founder'), $active_site ); ?>"></i>
 		<?php } elseif( $active_site == 'email' ) { ?>
-			<i class="fa fa-envelope"></i>
+			<i class="fa fa-envelope" title="<?php printf( __('%s icon', 'founder'), $active_site ); ?>"></i>
 		<?php } elseif( $active_site == 'academia' ) { ?>
-			<i class="fa fa-graduation-cap"></i>
+			<i class="fa fa-graduation-cap" title="<?php printf( __('%s icon', 'founder'), $active_site ); ?>"></i>
 		<?php } else { ?>
-			<i class="fa fa-<?php echo esc_attr($active_site); ?>-square"></i>
+			<i class="fa fa-<?php echo esc_attr($active_site); ?>-square" title="<?php printf( __('%s icon', 'founder'), $active_site ); ?>"></i>
 		<?php } ?>
 		</a>
 		</li><?php
