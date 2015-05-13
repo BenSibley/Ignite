@@ -1579,32 +1579,6 @@ li.pingback {
   top: 0;
 }
 
-.singular-page {
-  /* because of breadcrumbs */
-}
-.singular-page .entry {
-  padding-top: 1.5em;
-}
-.singular-page .featured-image {
-  margin-top: -1.5em;
-}
-
-/* 700px */
-@media all and (min-width: 43.75em) {
-  .singular-page .entry-title {
-    font-size: 2.625em;
-    line-height: 1.14;
-  }
-}
-/* 800px */
-@media all and (min-width: 50em) {
-  .singular-page .entry {
-    padding-top: 3em;
-  }
-  .singular-page .featured-image {
-    margin-top: -3em;
-  }
-}
 .breadcrumbs {
   text-transform: uppercase;
   color: #7c7d7f;
