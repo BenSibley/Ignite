@@ -40,3 +40,18 @@
     transition: right 0.15s ease-in-out;
   }
 }
+#accordion-section-ignite_colors,
+#accordion-section-ignite_header_image,
+#accordion-section-ignite_navigation_styles {
+
+  .accordion-section-title,
+  .accordion-section-title:hover {
+    background-image: url('../assets/images/gray-lines.png');
+    background-size: 100%;
+
+    &:after {
+      content: '\f023';
+      font-family: 'FontAwesome';
+    }
+  }
+}

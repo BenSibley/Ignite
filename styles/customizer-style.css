@@ -34,3 +34,23 @@
   -webkit-transition: right 0.15s ease-in-out;
   transition: right 0.15s ease-in-out;
 }
+
+#accordion-section-ignite_colors .accordion-section-title,
+#accordion-section-ignite_colors .accordion-section-title:hover,
+#accordion-section-ignite_header_image .accordion-section-title,
+#accordion-section-ignite_header_image .accordion-section-title:hover,
+#accordion-section-ignite_navigation_styles .accordion-section-title,
+#accordion-section-ignite_navigation_styles .accordion-section-title:hover {
+  background-image: url("../assets/images/gray-lines.png");
+  -webkit-background-size: 100%;
+  background-size: 100%;
+}
+#accordion-section-ignite_colors .accordion-section-title:after,
+#accordion-section-ignite_colors .accordion-section-title:hover:after,
+#accordion-section-ignite_header_image .accordion-section-title:after,
+#accordion-section-ignite_header_image .accordion-section-title:hover:after,
+#accordion-section-ignite_navigation_styles .accordion-section-title:after,
+#accordion-section-ignite_navigation_styles .accordion-section-title:hover:after {
+  content: '\f023';
+  font-family: 'FontAwesome';
+}
