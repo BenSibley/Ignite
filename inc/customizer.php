@@ -72,6 +72,30 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
         <?php }
     }
 
+	// create ad controls
+	class ignite_description_color_control extends WP_Customize_Control {
+
+		public function render_content() {
+			$link = 'https://www.competethemes.com/ignite-plus/';
+			echo "<p>" . sprintf( __('Activate <a target="_blank" href="%s">Ignite Plus</a> to change your colors.', 'ignite'), $link ) . "</p>";
+		}
+	}
+	class ignite_description_header_image_control extends WP_Customize_Control {
+
+		public function render_content() {
+			$link = 'https://www.competethemes.com/ignite-plus/';
+			echo "<p>" . sprintf( __('Activate <a target="_blank" href="%s">Ignite Plus</a> to add a header image.', 'ignite'), $link ) . "</p>";
+		}
+	}
+	class ignite_description_navigation_style_control extends WP_Customize_Control {
+
+		public function render_content() {
+			$link = 'https://www.competethemes.com/ignite-plus/';
+			echo "<p>" . sprintf( __('Activate <a target="_blank" href="%s">Ignite Plus</a> to change your menu style.', 'ignite'), $link ) . "</p>";
+		}
+	}
+
+
     /***** Add Panels *****/
 
 	if( method_exists( 'WP_Customize_Manager', 'add_panel' ) ) {
@@ -652,6 +676,54 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
             'type' => 'number',
         )
     ) );
+
+	/*
+	 * PRO only sections
+	 */
+
+	/***** Colors *****/
+
+	// section
+	$wp_customize->add_section( 'ignite_colors', array(
+		'title'      => __( 'Colors', 'ignite' ),
+		'priority'   => 35,
+		'capability' => 'edit_theme_options'
+	) );
+	// setting
+	$wp_customize->add_setting( 'colors_ad', array(
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'absint',
+	) );
+	// control
+	$wp_customize->add_control( new ignite_description_color_control(
+		$wp_customize, 'colors_ad', array(
+			'section'        => 'ignite_colors',
+			'settings'       => 'colors_ad'
+		)
+	) );
+
+	/***** Header Image *****/
+
+	// section
+	$wp_customize->add_section( 'ignite_header_image', array(
+		'title'      => __( 'Header Image', 'ignite' ),
+		'priority'   => 34,
+		'capability' => 'edit_theme_options'
+	) );
+	// setting
+	$wp_customize->add_setting( 'header_image_ad', array(
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'absint',
+	) );
+	// control
+	$wp_customize->add_control( new ignite_description_header_image_control(
+		$wp_customize, 'header_image_ad', array(
+			'section'        => 'ignite_header_image',
+			'settings'       => 'header_image_ad'
+		)
+	) );
 }
 
 /***** Custom Sanitization Functions *****/
