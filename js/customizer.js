@@ -111,4 +111,10 @@ jQuery(document).ready(function($){
         } );
     } );
 
+    // move control descriptions for certain sections (advertisements) below the control
+    // section (Layouts) find description and append to parent li
+    $('#customize-control-ct_ignite_sidebar_layout').find('.customize-control-description').appendTo( '#customize-control-ct_ignite_sidebar_layout' ).css('margin-top', '12px');
+    $('#customize-control-ct_ignite_font_family_settings').find('.customize-control-description').appendTo( '#customize-control-ct_ignite_font_family_settings' ).css('margin-top', '12px');
+    $('#customize-control-ct_ignite_background_color').find('.customize-control-description').appendTo( '#customize-control-ct_ignite_background_color').css('margin-top', '12px');
+
 });
