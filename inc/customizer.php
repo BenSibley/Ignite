@@ -724,6 +724,28 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 			'settings'       => 'header_image_ad'
 		)
 	) );
+
+	/***** Navigation Style *****/
+
+	// section
+	$wp_customize->add_section( 'ignite_navigation_style', array(
+		'title'      => __( 'Navigation Style', 'ignite' ),
+		'priority'   => 90,
+		'capability' => 'edit_theme_options'
+	) );
+	// setting
+	$wp_customize->add_setting( 'navigation_style_ad', array(
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'absint',
+	) );
+	// control
+	$wp_customize->add_control( new ignite_description_navigation_style_control(
+		$wp_customize, 'navigation_style_ad', array(
+			'section'        => 'ignite_navigation_style',
+			'settings'       => 'navigation_style_ad'
+		)
+	) );
 }
 
 /***** Custom Sanitization Functions *****/
