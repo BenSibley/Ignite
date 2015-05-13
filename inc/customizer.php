@@ -969,7 +969,7 @@ function ct_ignite_customize_preview_js() {
 
     ?>
 	<script>
-		jQuery('#customize-info').append('<div class="upgrades-ad"><a href="https://www.competethemes.com/ignite-plus/" target="_blank">View the Ignite Plus Upgrade <span>&rarr;</span></a></div>');
+		jQuery('#customize-info').prepend('<div class="upgrades-ad"><a href="https://www.competethemes.com/ignite-plus/" target="_blank">View the Ignite Plus Upgrade <span>&rarr;</span></a></div>');
 	</script>
 <?php }
 add_action('customize_controls_print_footer_scripts', 'ct_ignite_customize_preview_js');

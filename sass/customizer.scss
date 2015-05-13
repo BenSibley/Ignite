@@ -3,35 +3,31 @@
 /* Customizer Styles */
 
 .upgrades-ad {
-  background: white;
-  padding: $baseline-height / 2 0;
+
   text-align: center;
   border-bottom: solid 1px #eee;
 
   a {
-    display: inline-block;
+    display: block;
     padding: 9px 0;
-    color: #222;
-    border: solid 1px #222;
-    width: 270px;
-    transition: background 0.15s ease-in-out;
+    color: white;
+    background: #43b3c4;
 
     &:link,
     &:visited,
     &:hover,
     &:active,
     &:focus  {
-      color: #222;
+      color: white;
     }
-  }
-  &:hover {
+    &:hover,
+    &:active,
+    &:focus {
+      background: #3ea5b3;
 
-    span {
-      right: -3px;
-    }
-    a {
-      background: #f5f5f5;
-      border-color: #bbb;
+      span {
+        right: -3px;
+      }
     }
   }
   span {
