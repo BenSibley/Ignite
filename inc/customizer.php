@@ -84,7 +84,7 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 
 		public function render_content() {
 			$link = 'https://www.competethemes.com/ignite-plus/';
-			echo "<p>" . sprintf( __('Activate <a target="_blank" href="%s">Ignite Plus</a> to add a header image.', 'ignite'), $link ) . "</p>";
+			echo "<p>" . sprintf( __('Activate <a target="_blank" href="%s">Ignite Plus</a> for advanced header image functionality.', 'ignite'), $link ) . "</p>";
 		}
 	}
 	class ignite_description_navigation_style_control extends WP_Customize_Control {
