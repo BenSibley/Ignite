@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Ignite 1.48\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2015-05-14 12:13:44+00:00\n"
+"POT-Creation-Date: 2015-05-19 12:14:38+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -183,8 +183,8 @@ msgstr ""
 
 #: inc/customizer.php:87
 msgid ""
-"Activate <a target=\"_blank\" href=\"%s\">Ignite Plus</a> to add a header "
-"image."
+"Activate <a target=\"_blank\" href=\"%s\">Ignite Plus</a> for advanced "
+"header image functionality."
 msgstr ""
 
 #: inc/customizer.php:94
