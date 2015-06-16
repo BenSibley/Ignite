@@ -153,6 +153,7 @@ li li {
 /* Markup styles */
 pre {
   word-wrap: break-word;
+  white-space: pre-wrap;
   background: #e8eaee;
   padding: 0.75em;
 }
