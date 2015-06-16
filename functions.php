@@ -202,23 +202,21 @@ if( ! function_exists( 'ct_ignite_excerpt' ) ) {
         // make post variable available
         global $post;
 
-        // make 'read more' setting available
-        global $more;
-
         // get the show full post setting
         $setting = get_theme_mod( 'ct_ignite_show_full_post_setting' );
 
         // check for the more tag
         $ismore = strpos( $post->post_content, '<!--more-->' );
 
-        // if show full post is on, show full post unless on search page
+        // if show full post is on and not on a search results page
         if ( ( $setting == 'yes' ) && ! is_search() ) {
 
-            // set read more value for all posts to 'off'
-            $more = - 1;
-
-            // output the full content
-            the_content();
+			// use the read more link if present
+	        if ( $ismore ) {
+		        the_content( __( 'Read More', 'ignite' ) . " <span class='screen-reader-text'>" . get_the_title() . "</span>" );
+	        } else {
+		        the_content();
+	        }
         } // use the read more link if present
         elseif ( $ismore ) {
             the_content( __( 'Read More', 'ignite' ) . " <span class='screen-reader-text'>" . get_the_title() . "</span>" );
