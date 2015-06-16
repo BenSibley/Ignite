@@ -111,7 +111,7 @@ if( ! function_exists( 'ct_ignite_customize_comments' ) ) {
             </div>
             <div class="comment-meta">
                 <div class="comment-date"><?php comment_date(); ?></div>
-                <?php edit_comment_link( 'edit' ); ?>
+                <?php edit_comment_link( __('Edit', 'ignite') ); ?>
                 <?php comment_reply_link( array_merge( $args, array(
                     'reply_text' => __( 'Reply', 'ignite' ),
                     'depth'      => $depth,
@@ -234,7 +234,6 @@ if( ! function_exists( 'ct_ignite_excerpt_read_more_link' ) ) {
     }
 }
 add_filter('the_excerpt', 'ct_ignite_excerpt_read_more_link');
-
 
 // switch [...] to ellipsis on automatic excerpt
 if( ! function_exists( 'ct_ignite_new_excerpt_more' ) ) {
