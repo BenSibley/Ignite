@@ -18,7 +18,7 @@
         value.bind( function( to ) {
             var tagline = $('#site-description');
             if( tagline.length == 0 ) {
-                $('#title-container').append('<p id="site-description"></p>');
+                $('#menu-primary').prepend('<p id="site-description"></p>');
             }
             tagline.text( to );
         } );
