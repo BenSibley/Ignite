@@ -586,12 +586,24 @@ endif;
 
 function ct_ignite_delete_settings_notice() {
 
-//	if ( isset( $_GET['ignite_status'] ) ) {
+	if ( get_option( 'ct_ignite_dismiss_avatar_notice' ) != true ) {
 		?>
 		<div id="ignite-avatar-notice" class="update-nag notice is-dismissible">
 			<p><?php _e( 'Custom avatars are being removed from Ignite. Please follow these instructions before the next update', 'ignite' ); ?>.</p>
 		</div>
 	<?php
-//	}
+	}
 }
 add_action( 'admin_notices', 'ct_ignite_delete_settings_notice' );
+
+function ct_ignite_dismiss_avatar_notice() {
+
+	// get the dismissed value
+	$dismissed =  $_POST['dismissed'];
+
+	if( $dismissed == true ) {
+		update_option('ct_ignite_dismiss_avatar_notice', true);
+	}
+	die();
+}
+add_action( 'wp_ajax_dismiss_ignite_avatar_notice', 'ct_ignite_dismiss_avatar_notice' );
