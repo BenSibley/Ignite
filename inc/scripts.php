@@ -34,6 +34,9 @@ add_action('wp_enqueue_scripts', 'ct_ignite_load_scripts_styles' );
  */
 function ct_ignite_enqueue_admin_styles($hook){
 
+	// temporarily enqueue until notice no longer necessary
+	wp_enqueue_script('ignite-admin-js', get_template_directory_uri() . '/js/build/admin.min.js', array('jquery'), '', true);
+
 	if ( 'appearance_page_ignite-options' == $hook || 'widgets.php' == $hook ) {
 		wp_enqueue_style('admin-style', get_template_directory_uri() . '/styles/admin-style.min.css');
 	}

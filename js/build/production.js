@@ -1,3 +1,8 @@
+jQuery(document).ready(function($) {
+
+
+
+});
 /*global jQuery */
 /*jshint browser:true */
 /*!
