@@ -587,9 +587,11 @@ endif;
 function ct_ignite_delete_settings_notice() {
 
 	if ( get_option( 'ct_ignite_dismiss_avatar_notice' ) != true ) {
+
+		$url = 'https://www.competethemes.com/ignite-avatar-redirect/';
 		?>
 		<div id="ignite-avatar-notice" class="update-nag notice is-dismissible">
-			<p><?php _e( 'Custom avatars are being removed from Ignite. Please follow these instructions before the next update', 'ignite' ); ?>.</p>
+			<p><?php printf( __( 'Custom avatars are being removed from Ignite. Please <a target="_blank" href="%s">follow these instructions</a> before the next update', 'ignite' ), esc_url($url) ); ?>.</p>
 		</div>
 	<?php
 	}
