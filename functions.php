@@ -583,3 +583,15 @@ if ( ! function_exists( '_wp_render_title_tag' ) ) :
     }
     add_action( 'wp_head', 'ct_ignite_add_title_tag' );
 endif;
+
+function ct_ignite_delete_settings_notice() {
+
+//	if ( isset( $_GET['ignite_status'] ) ) {
+		?>
+		<div id="ignite-avatar-notice" class="update-nag notice is-dismissible">
+			<p><?php _e( 'Custom avatars are being removed from Ignite. Please follow these instructions before the next update', 'ignite' ); ?>.</p>
+		</div>
+	<?php
+//	}
+}
+add_action( 'admin_notices', 'ct_ignite_delete_settings_notice' );
