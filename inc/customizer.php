@@ -8,8 +8,8 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 	/***** Add PostMessage Support *****/
 
 	// Add postMessage support for site title and description.
-	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
-	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
+	$wp_customize->get_setting( 'blogname' )->transport        = 'postMessage';
+	$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
 
     /***** Add Custom Controls *****/
 
