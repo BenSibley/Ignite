@@ -56,9 +56,9 @@ li.pingback {
   img {
     width: $baseline-height * 2;
     height: auto;
-    @include border-radius(50%);
+    border-radius: 50%;
     float: left;
-    margin-right: $baseline-height * 0.5;
+    margin: 0 $baseline-height * 0.5 0 0;
   }
   .author-name {
     font-weight: 700;
@@ -76,14 +76,6 @@ li.pingback {
         color: $orange-dark;
       }
     }
-  }
-  .author-profile-image {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    float: left;
-    margin-right: $baseline-height * 0.5;
-    overflow: hidden;
   }
 }
 .comment-meta {

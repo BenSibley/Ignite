@@ -70,23 +70,14 @@
   img {
     border-radius: 50%;
     float: left;
-    margin-right: $baseline-height;
+    margin: 0 $baseline-height 0 0;
+    width: 72px;
+    height: 72px;
+    overflow: hidden;
   }
   p {
     margin-top: $baseline-height / 2;
     margin-left: $baseline-height * 4;
-  }
-}
-.author-profile-image {
-  width: 72px;
-  height: 72px;
-  border-radius: 50%;
-  float: left;
-  margin-right: $baseline-height;
-  overflow: hidden;
-
-  img {
-    border-radius: 0;
   }
 }
 .entry-categories {

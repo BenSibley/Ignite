@@ -1291,23 +1291,14 @@ a img {
 .author-meta img {
   border-radius: 50%;
   float: left;
-  margin-right: 1.5em;
+  margin: 0 1.5em 0 0;
+  width: 72px;
+  height: 72px;
+  overflow: hidden;
 }
 .author-meta p {
   margin-top: 0.75em;
   margin-left: 6em;
-}
-
-.author-profile-image {
-  width: 72px;
-  height: 72px;
-  border-radius: 50%;
-  float: left;
-  margin-right: 1.5em;
-  overflow: hidden;
-}
-.author-profile-image img {
-  border-radius: 0;
 }
 
 /* 700px */
@@ -1390,7 +1381,7 @@ li.pingback {
   height: auto;
   border-radius: 50%;
   float: left;
-  margin-right: 0.75em;
+  margin: 0 0.75em 0 0;
 }
 .comment-author .author-name {
   font-weight: 700;
@@ -1404,14 +1395,6 @@ li.pingback {
 }
 .comment-author .author-name a:hover, .comment-author .author-name a:active {
   color: #a87227;
-}
-.comment-author .author-profile-image {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  float: left;
-  margin-right: 0.75em;
-  overflow: hidden;
 }
 
 .comment-meta {
