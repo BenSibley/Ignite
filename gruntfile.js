@@ -5,14 +5,10 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
 
         concat: {
-            dist: {
-                src: [
-                    'js/*.js',
-                    '!js/profile-uploader.js',
-                    '!js/multiple-select.js',
-                    '!js/customizer.js'
-                ],
-                dest: 'js/build/production.js'
+            basic_and_extras: {
+                files: {
+                    'js/build/production.js': ['js/fitvids.js', 'js/placeholders.js', 'js/functions.js']
+                }
             }
         },
         uglify: {
