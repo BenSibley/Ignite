@@ -1,6 +1,6 @@
 jQuery(document).ready(function($) {
 
-    $('#ignite-avatar-notice').find('.notice-dismiss').bind('click', function(){
+    $('#ignite-avatar-notice').on('click', '.notice-dismiss', function(){
 
         // set up data object
         var data = {
