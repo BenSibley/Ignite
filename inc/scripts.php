@@ -34,21 +34,8 @@ add_action('wp_enqueue_scripts', 'ct_ignite_load_scripts_styles' );
  */
 function ct_ignite_enqueue_admin_styles($hook){
 
-	// temporarily enqueue until notice no longer necessary
-	wp_enqueue_script('ignite-admin-js', get_template_directory_uri() . '/js/build/admin.min.js', array('jquery'), '', true);
-
 	if ( 'appearance_page_ignite-options' == $hook || 'widgets.php' == $hook ) {
 		wp_enqueue_style('admin-style', get_template_directory_uri() . '/styles/admin-style.min.css');
-	}
-
-	// if is user profile page
-	if('profile.php' == $hook || 'user-edit.php' == $hook || 'widgets.php' == $hook ){
-
-		// Enqueues all scripts, styles, settings, and templates necessary to use all media JavaScript APIs.
-		wp_enqueue_media();
-
-		// enqueue the JS needed to utilize media uploader on profile image upload
-		wp_enqueue_script('ct-profile-uploader', get_template_directory_uri() . '/js/build/profile-uploader.min.js');
 	}
 }
 add_action('admin_enqueue_scripts',	'ct_ignite_enqueue_admin_styles' );
