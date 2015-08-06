@@ -45,9 +45,6 @@ add_action('admin_enqueue_scripts',	'ct_ignite_enqueue_admin_styles' );
  */
 function ct_ignite_enqueue_customizer_scripts(){
 
-	// stylesheet for Comments display select option
-	wp_enqueue_script('multiple-select', get_template_directory_uri() . '/js/build/multiple-select.min.js',array('jquery'),'',true);
-
 	// JS for hiding/showing Customizer options
 	wp_enqueue_script('customizer-js', get_template_directory_uri() . '/js/build/customizer.min.js',array('jquery'),'',true);
 
