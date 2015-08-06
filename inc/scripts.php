@@ -48,9 +48,6 @@ function ct_ignite_enqueue_customizer_scripts(){
 	// stylesheet for Comments display select option
 	wp_enqueue_script('multiple-select', get_template_directory_uri() . '/js/build/multiple-select.min.js',array('jquery'),'',true);
 
-	// JS for Comments display select option
-	wp_enqueue_style('multiple-select-styles', get_template_directory_uri() . '/styles/multiple-select.css');
-
 	// JS for hiding/showing Customizer options
 	wp_enqueue_script('customizer-js', get_template_directory_uri() . '/js/build/customizer.min.js',array('jquery'),'',true);
 
