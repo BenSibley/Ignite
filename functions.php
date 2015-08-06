@@ -92,12 +92,7 @@ if( ! function_exists( 'ct_ignite_customize_comments' ) ) {
         <article id="comment-<?php comment_ID(); ?>" class="comment">
             <div class="comment-author">
                 <?php
-                // if is post author
-                if ( $comment->user_id === $post->post_author ) {
-                    ct_ignite_profile_image_output();
-                } else {
                     echo get_avatar( get_comment_author_email(), 48 );
-                }
                 ?>
                 <span class="author-name"><?php comment_author_link(); ?></span>
                 <span> <?php _e( 'said:', 'ignite' ); ?></span>
@@ -441,31 +436,6 @@ function ct_ignite_show_avatars_check($classes){
 }
 add_action('comment_class', 'ct_ignite_show_avatars_check');
 
-// retrieves the attachment ID from the file URL
-function ct_ignite_get_image_id($url) {
-
-    // Split the $url into two parts with the wp-content directory as the separator
-    $parsed_url  = explode( parse_url( WP_CONTENT_URL, PHP_URL_PATH ), $url );
-
-    // Get the host of the current site and the host of the $url, ignoring www
-    $this_host = str_ireplace( 'www.', '', parse_url( home_url(), PHP_URL_HOST ) );
-    $file_host = str_ireplace( 'www.', '', parse_url( $url, PHP_URL_HOST ) );
-
-    // Return nothing if there aren't any $url parts or if the current host and $url host do not match
-    if ( ! isset( $parsed_url[1] ) || empty( $parsed_url[1] ) || ( $this_host != $file_host ) ) {
-        return;
-    }
-
-    // Now we're going to quickly search the DB for any attachment GUID with a partial path match
-    // Example: /uploads/2013/05/test-image.jpg
-    global $wpdb;
-
-    $attachment = $wpdb->get_col( $wpdb->prepare( "SELECT ID FROM {$wpdb->prefix}posts WHERE guid RLIKE %s;", $parsed_url[1] ) );
-
-    // Returns null if no attachment is found
-    return $attachment[0];
-}
-
 // implement fonts based on customizer selection
 function ct_ignite_change_font(){
 
@@ -542,29 +512,6 @@ function ct_ignite_background_css(){
 
 }
 add_action('wp_enqueue_scripts','ct_ignite_background_css');
-
-// outputs the user's uploaded profile picture with Gravatar fallback
-function ct_ignite_profile_image_output(){
-
-    // if post author has profile image set
-    if(get_the_author_meta('user_profile_image')) {
-
-        echo "<div class='author-profile-image'>";
-
-        // get the id based on the image's URL
-        $image_id = ct_ignite_get_image_id(get_the_author_meta('user_profile_image'));
-
-        // retrieve the thumbnail size of profile image
-        $image_thumb = wp_get_attachment_image($image_id, 'thumbnail');
-
-        // display the image
-        echo $image_thumb;
-
-        echo "</div>";
-    } else {
-        echo get_avatar( get_the_author_meta( 'ID' ), 72 );
-    }
-}
 
 function ct_ignite_wp_backwards_compatibility() {
 

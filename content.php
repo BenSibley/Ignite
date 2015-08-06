@@ -48,7 +48,7 @@ if( is_single() ) { ?>
             <?php
             if(get_theme_mod('ct_ignite_author_meta_settings') != 'hide'){ ?>
                 <div class="author-meta">
-                    <?php ct_ignite_profile_image_output(); ?>
+                    <?php echo get_avatar( get_the_author_meta( 'ID' ), 72, '', get_the_author() ); ?>
                     <div class="name-container">
                         <h4>
                             <?php
