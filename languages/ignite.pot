@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Ignite 1.48.1\n"
+"Project-Id-Version: Ignite 1.50\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2015-06-18 18:24:24+00:00\n"
+"POT-Creation-Date: 2015-08-07 18:58:20+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -131,55 +131,48 @@ msgstr ""
 msgid "Primary"
 msgstr ""
 
-#: functions.php:103
+#: functions.php:98
 msgid "said:"
 msgstr ""
 
-#: functions.php:107
+#: functions.php:102
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:114
+#: functions.php:109
 msgid "Edit"
 msgstr ""
 
-#: functions.php:116
+#: functions.php:111
 msgid "Reply"
 msgstr ""
 
-#: functions.php:148 functions.php:149
+#: functions.php:143 functions.php:144
 msgid "Your Name"
 msgstr ""
 
-#: functions.php:155 functions.php:156
+#: functions.php:150 functions.php:151
 msgid "Your Email"
 msgstr ""
 
-#: functions.php:162
+#: functions.php:157
 msgid "Your Website URL"
 msgstr ""
 
-#: functions.php:163
+#: functions.php:158
 msgid "Your URL"
 msgstr ""
 
-#: functions.php:177
+#: functions.php:172
 msgid "Your Comment"
 msgstr ""
 
-#: functions.php:178
+#: functions.php:173
 msgid "Enter Your Comment"
 msgstr ""
 
-#: functions.php:216 functions.php:222 functions.php:233
+#: functions.php:211 functions.php:217 functions.php:228
 msgid "Read More"
-msgstr ""
-
-#: functions.php:598
-msgid ""
-"Custom avatars are being removed from Ignite in v1.50. Please <a "
-"target=\"_blank\" href=\"%s\">follow these instructions</a> before the next "
-"update"
 msgstr ""
 
 #: header.php:13
@@ -450,20 +443,6 @@ msgstr ""
 msgid "Navigation Style"
 msgstr ""
 
-#: inc/user-profile.php:16
-msgid "Profile image"
-msgstr ""
-
-#: inc/user-profile.php:23 inc/widgets/image_widget.php:101
-msgid "Upload Image"
-msgstr ""
-
-#: inc/user-profile.php:24
-msgid ""
-"Upload an image here to use instead of your Gravatar. Perfectly square "
-"images will not be cropped."
-msgstr ""
-
 #: inc/widgets/image_widget.php:15
 msgid "This Ignite widget displays an image."
 msgstr ""
@@ -478,6 +457,10 @@ msgstr ""
 
 #: inc/widgets/image_widget.php:99
 msgid "Image URL:"
+msgstr ""
+
+#: inc/widgets/image_widget.php:101
+msgid "Upload Image"
 msgstr ""
 
 #: inc/widgets/image_widget.php:104
