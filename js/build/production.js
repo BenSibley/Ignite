@@ -542,8 +542,12 @@
 }(this));
 jQuery(document).ready(function($){
 
-    $(".entry-content").fitVids();
-    $(".excerpt-content").fitVids();
+    $(".entry-content").fitVids({
+        customSelector: 'iframe[src*="dailymotion.com"], iframe[src*="slideshare.net"], iframe[src*="animoto.com"], iframe[src*="blip.tv"], iframe[src*="funnyordie.com"], iframe[src*="hulu.com"], iframe[src*="ted.com"], iframe[src*="wordpress.tv"]'
+    });
+    $(".excerpt-content").fitVids({
+        customSelector: 'iframe[src*="dailymotion.com"], iframe[src*="slideshare.net"], iframe[src*="animoto.com"], iframe[src*="blip.tv"], iframe[src*="funnyordie.com"], iframe[src*="hulu.com"], iframe[src*="ted.com"], iframe[src*="wordpress.tv"]'
+    });
 
 
     // in case user has logo increasing the height of the site-header
