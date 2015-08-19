@@ -1,6 +1,6 @@
 <?php
 /**
- * Adds Recent Comments widget.
+ * Adds Image widget.
  */
 class ct_ignite_Image extends WP_Widget {
 
@@ -16,7 +16,7 @@ class ct_ignite_Image extends WP_Widget {
 		);
 
 		/* Create the widget. */
-		$this->WP_Widget(
+		parent::__construct(
 			'ct_ignite_image', // Base ID
 			__('Image','ignite'), // Name
 			$widget_options
