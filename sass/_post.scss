@@ -12,6 +12,9 @@
 .entry-content {
   margin-top: $baseline-height;
 
+  iframe {
+    max-width: 100%;
+  }
   &:after {
     @include clearfix;
   }

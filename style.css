@@ -1236,6 +1236,9 @@ a img {
 .entry-content {
   margin-top: 1.5em;
 }
+.entry-content iframe {
+  max-width: 100%;
+}
 .entry-content:after {
   content: ".";
   display: block;
