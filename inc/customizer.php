@@ -934,7 +934,7 @@ if ( !function_exists( 'ct_ignite_customizer_social_media_array' ) ) {
             'email'
         );
 
-        return $social_sites;
+        return apply_filters( 'ct_ignite_customizer_social_media_array_filter', $social_sites );
     }
 }
 
