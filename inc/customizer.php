@@ -896,12 +896,46 @@ function ct_ignite_sanitize_yes_no_setting($input){
 /***** Helper Functions *****/
 
 // create social media site array
-function ct_ignite_customizer_social_media_array() {
+if ( !function_exists( 'ct_ignite_customizer_social_media_array' ) ) {
+    function ct_ignite_customizer_social_media_array() {
 
-	// store social site names in array
-	$social_sites = array('twitter', 'facebook', 'google-plus', 'flickr', 'pinterest', 'youtube', 'vimeo', 'tumblr', 'dribbble', 'rss', 'linkedin', 'instagram', 'reddit', 'soundcloud', 'spotify', 'vine','yahoo', 'behance', 'codepen', 'delicious', 'stumbleupon', 'deviantart', 'digg', 'git', 'hacker-news', 'steam', 'vk', 'academia', 'weibo', 'tencent-weibo', 'email');
-	
-	return $social_sites;
+        // store social site names in array
+        $social_sites = array(
+            'twitter',
+            'facebook',
+            'google-plus',
+            'flickr',
+            'pinterest',
+            'youtube',
+            'vimeo',
+            'tumblr',
+            'dribbble',
+            'rss',
+            'linkedin',
+            'instagram',
+            'reddit',
+            'soundcloud',
+            'spotify',
+            'vine',
+            'yahoo',
+            'behance',
+            'codepen',
+            'delicious',
+            'stumbleupon',
+            'deviantart',
+            'digg',
+            'git',
+            'hacker-news',
+            'steam',
+            'vk',
+            'academia',
+            'weibo',
+            'tencent-weibo',
+            'email'
+        );
+
+        return $social_sites;
+    }
 }
 
 // get the available font weights based on the the font family selection
