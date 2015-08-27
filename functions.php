@@ -59,7 +59,9 @@ if( ! function_exists( 'ct_ignite_theme_setup' ) ) {
 
 function ct_ignite_remove_cleaner_gallery() {
 
-	if( class_exists( 'Jetpack' ) && ( Jetpack::is_module_active( 'carousel' ) || Jetpack::is_module_active( 'tiled-gallery' ) ) ) {
+	if(
+        ( class_exists( 'Jetpack' ) && ( Jetpack::is_module_active( 'carousel' ) || Jetpack::is_module_active( 'tiled-gallery' ) ) )
+        || class_exists( 'CarouselWithoutJetpack' ) ) {
 		remove_theme_support( 'cleaner-gallery' );
 	}
 }
