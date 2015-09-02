@@ -548,3 +548,47 @@ if ( ! function_exists( '_wp_render_title_tag' ) ) :
     }
     add_action( 'wp_head', 'ct_ignite_add_title_tag' );
 endif;
+
+
+// create social media site array
+if ( !function_exists( 'ct_ignite_customizer_social_media_array' ) ) {
+    function ct_ignite_customizer_social_media_array() {
+
+        // store social site names in array
+        $social_sites = array(
+            'twitter',
+            'facebook',
+            'google-plus',
+            'flickr',
+            'pinterest',
+            'youtube',
+            'vimeo',
+            'tumblr',
+            'dribbble',
+            'rss',
+            'linkedin',
+            'instagram',
+            'reddit',
+            'soundcloud',
+            'spotify',
+            'vine',
+            'yahoo',
+            'behance',
+            'codepen',
+            'delicious',
+            'stumbleupon',
+            'deviantart',
+            'digg',
+            'git',
+            'hacker-news',
+            'steam',
+            'vk',
+            'academia',
+            'weibo',
+            'tencent-weibo',
+            'email'
+        );
+
+        return apply_filters( 'ct_ignite_customizer_social_media_array_filter', $social_sites );
+    }
+}
