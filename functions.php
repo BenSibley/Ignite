@@ -431,6 +431,7 @@ function ct_ignite_custom_css_output(){
 
     /* output custom css */
     if($custom_css) {
+        $custom_css = wp_filter_nohtml_kses( $custom_css );
         wp_add_inline_style('style', $custom_css);
     }
 }
