@@ -830,7 +830,7 @@ a img {
   width: 119%;
   margin-bottom: 1.5em;
 }
-.featured-image a {
+.featured-image > a {
   position: absolute;
   top: 0;
   right: 0;
