@@ -49,6 +49,10 @@
   font-family: 'FontAwesome';
 }
 
+#accordion-section-colors {
+  display: none !important;
+}
+
 /**
  * @author zhixin wen <wenzhixin2010@gmail.com>
  */
