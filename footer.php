@@ -19,13 +19,13 @@
 
             /* If it's not empty, output their text */
             if( ! empty($user_footer_text) ) {
-                echo $user_footer_text;
+                echo wp_kses_post( $user_footer_text );
             }
             /* Otherwise, output the default text */
             else {
-                $site_url = 'https://www.competethemes.com/ignite/?utm_source=Footer%20Link&utm_medium=Referral&utm_campaign=Ignite%20Footer%20Link';
+                $site_url = 'https://www.competethemes.com/ignite/';
                 $footer_text = sprintf( __( '<a target="_blank" href="%s">Free WordPress Blog Theme</a> by Compete Themes.', 'ignite' ), esc_url( $site_url ) );
-                echo $footer_text;
+                echo wp_kses_post( $footer_text );
             }
             ?>
         </span>
