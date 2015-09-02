@@ -22,13 +22,20 @@ if( ! function_exists( 'ct_ignite_theme_setup' ) ) {
         /* Theme-supported features go here. */
         add_theme_support( 'hybrid-core-template-hierarchy' );
         add_theme_support( 'loop-pagination' );
-        add_theme_support( 'cleaner-gallery' );
         add_theme_support( 'breadcrumb-trail' );
 
         // from WordPress core not theme hybrid
         add_theme_support( 'automatic-feed-links' );
         add_theme_support( 'post-thumbnails' );
         add_theme_support( 'title-tag' );
+
+        /*
+		 * Switch default core markup for search form, comment form, and comments
+		 * to output valid HTML5.
+		 */
+        add_theme_support( 'html5', array(
+            'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
+        ) );
 
         // add inc folder files
         foreach ( glob( trailingslashit( get_template_directory() ) . 'inc/*.php' ) as $filename ) {
@@ -56,16 +63,6 @@ if( ! function_exists( 'ct_ignite_theme_setup' ) ) {
         remove_filter( 'comments_popup_link_attributes', 'hybrid_comments_popup_link_attributes', 5 );
     }
 }
-
-function ct_ignite_remove_cleaner_gallery() {
-
-	if(
-        ( class_exists( 'Jetpack' ) && ( Jetpack::is_module_active( 'carousel' ) || Jetpack::is_module_active( 'tiled-gallery' ) ) )
-        || class_exists( 'CarouselWithoutJetpack' ) ) {
-		remove_theme_support( 'cleaner-gallery' );
-	}
-}
-add_action( 'after_setup_theme', 'ct_ignite_remove_cleaner_gallery', 11 );
 
 /* register primary sidebar */
 function ct_ignite_register_sidebar(){
