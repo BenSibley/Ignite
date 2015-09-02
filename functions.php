@@ -303,10 +303,10 @@ if( ! function_exists( 'ct_ignite_featured_image' ) ) {
         if ( $has_image == true ) {
 
             if ( is_singular() ) {
-                echo "<div class='featured-image' style=\"background-image: url('" . $image . "')\"></div>";
+                echo "<div class='featured-image' style=\"background-image: url('" . esc_url( $image ) . "')\"></div>";
             } else {
                 echo "
-                <div class='featured-image' style=\"background-image: url('" . $image . "')\">
+                <div class='featured-image' style=\"background-image: url('" . esc_url( $image ) . "')\">
                     <a href='" . get_permalink() . "'>" . get_the_title() . "</a>
                 </div>
                 ";
