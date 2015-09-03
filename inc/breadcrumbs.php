@@ -73,6 +73,21 @@ function ct_ignite_breadcrumbs() {
 	// Attachment
 	elseif ( is_singular( 'attachment' ) ) {
 
+		// Get the parent post ID
+		$parent_id = $post->post_parent;
+
+		// Get the parent post title
+		$parent_title = get_the_title( $parent_id );
+
+		// Get the parent post permalink
+		$parent_permalink = get_permalink( $parent_id );
+
+		// Add markup
+		$html .= '<span class="item-parent"><a class="bread-parent" href="' . esc_url( $parent_permalink ) . '" title="' . esc_attr( $parent_title ) . '">' . esc_attr( $parent_title ) . '</a></span>';
+		$html .= '<span class="separator"> ' . esc_attr( $separator ) . ' </span>';
+
+		// Add name of attachment
+		$html .= '<span class="item-current item-' . $post->ID . '"><span title="' . get_the_title() . '"> ' . get_the_title() . '</span></span>';
 	}
 	// Custom Post Types
 	elseif ( is_singular() ) {
