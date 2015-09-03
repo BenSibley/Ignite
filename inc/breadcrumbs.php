@@ -92,14 +92,36 @@ function ct_ignite_breadcrumbs() {
 	// Custom Post Types
 	elseif ( is_singular() ) {
 
+		// Get the post type
+		$post_type = get_post_type();
+
+		// Get the post object
+		$post_type_object = get_post_type_object($post_type);
+
+		// Get the post type archive
+		$post_type_archive = get_post_type_archive_link($post_type);
+
+		// Add taxonomy link and separator
+		$html .= '<span class="item-cat item-custom-post-type-' . esc_attr( $post_type ) . '"><a class="bread-cat bread-custom-post-type-' . esc_attr( $post_type ) . '" href="' . esc_url( $post_type_archive ) . '" title="' . esc_attr( $post_type_object->labels->name ) . '">' . esc_attr( $post_type_object->labels->name ) . '</a></span>';
+		$html .= '<span class="separator"> ' . esc_attr( $separator ) . ' </span>';
+
+		// Add name of Post
+		$html .= '<span class="item-current item-' . $post->ID . '"><span class="bread-current bread-' . $post->ID . '" title="' . $post->post_title . '">' . $post->post_title . '</span></span>';
 	}
 	// Category
 	elseif ( is_category() ) {
-		$html .= '<span class="item-current item-cat"><span class="bread-current bread-cat">' . esc_attr( single_cat_title('', false) ) . '</span></span>';
+
+		// Add category markup
+		$html .= '<span class="item-current item-cat"><span class="bread-current bread-cat" title="' . $post->ID . '">' . esc_attr( single_cat_title('', false) ) . '</span></span>';
 	}
 	// Tag
 	elseif ( is_tag() ) {
 
+		// Get tag object
+		$tag = get_queried_object();
+
+		// Add tag markup
+		$html .= '<span class="item-current item-tag-' . $tag->slug . '"><span class="bread-current bread-tag-' . $tag->slug . '">' . $tag->name . '</span></span>';
 	}
 	// Author
 	elseif ( is_author() ) {
