@@ -112,20 +112,19 @@ function ct_ignite_breadcrumbs() {
 	elseif ( is_category() ) {
 
 		// Add category markup
-		$html .= '<span class="item-current item-cat"><span class="bread-current bread-cat" title="' . $post->ID . '">' . esc_attr( single_cat_title('', false) ) . '</span></span>';
+		$html .= '<span class="item-current item-cat"><span class="bread-current bread-cat" title="' . $post->ID . '">' . single_cat_title('', false) . '</span></span>';
 	}
 	// Tag
 	elseif ( is_tag() ) {
 
-		// Get tag object
-		$tag = get_queried_object();
-
 		// Add tag markup
-		$html .= '<span class="item-current item-tag-' . $tag->slug . '"><span class="bread-current bread-tag-' . $tag->slug . '">' . $tag->name . '</span></span>';
+		$html .= '<span class="item-current item-tag"><span class="bread-current bread-tag">' . single_tag_title('', false) . '</span></span>';
 	}
 	// Author
 	elseif ( is_author() ) {
 
+		// Add author markup
+		$html .= '<span class="item-current item-author"><span class="bread-current bread-author">' . get_queried_object()->display_name . '</span></span>';
 	}
 	// Day
 	elseif ( is_day() ) {
