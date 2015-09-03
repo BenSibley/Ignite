@@ -47,11 +47,28 @@ function ct_ignite_breadcrumbs() {
 		}
 
 		// add name of Post
-		$html .= '<span class="item-current item-' . absint( $post->ID ) . '"><span class="bread-current bread-' . absint( $post->ID ) . '" title="' . esc_attr( get_the_title() ) . '">' . esc_attr( get_the_title() ) . '</span></span>';
+		$html .= '<span class="item-current item-' . $post->ID . '"><span class="bread-current bread-' . $post->ID . '" title="' . get_the_title() . '">' . get_the_title() . '</span></span>';
 	}
 	// Page
 	elseif ( is_singular( 'page' ) ) {
 
+		// if page has a parent page
+		if ( $post->post_parent ) {
+
+			// Get all parents
+			$parents = get_post_ancestors( $post->ID );
+
+			// Sort parents into the right order
+			$parents = array_reverse( $parents );
+
+			// Add each parent to markup
+			foreach ( $parents as $parent ) {
+				$html .= '<span class="item-parent item-parent-' . esc_attr( $parent ) . '"><a class="bread-parent bread-parent-' . esc_attr( $parent ) . '" href="' . get_permalink( $parent ) . '" title="' . get_the_title( $parent ) . '">' . get_the_title( $parent ) . '</a></span>';
+				$html .= '<span class="separator separator-' . esc_attr( $parent ) . '"> ' . esc_attr( $separator ) . ' </span>';
+			}
+		}
+		// Current page
+		$html .= '<span class="item-current item-' . $post->ID . '"><span title="' . get_the_title() . '"> ' . get_the_title() . '</span></span>';
 	}
 	// Attachment
 	elseif ( is_singular( 'attachment' ) ) {
@@ -160,7 +177,7 @@ function ct_ignite_breadcrumbs() {
 //
 //			// Current page
 //			echo '<span class="item-current item-' . $post->ID . '"><span title="' . get_the_title() . '"> ' . get_the_title() . '</span></span>';
-//
+
 //		} else {
 //
 //			// Just display current page if not parents
