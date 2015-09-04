@@ -2,28 +2,38 @@
 
 // Breadcrumbs
 if ( !function_exists( 'ct_ignite_breadcrumbs' ) ) {
-	function ct_ignite_breadcrumbs() {
+	function ct_ignite_breadcrumbs( $args = array() ) {
 
 		// Do not display on the homepage
 		if ( is_front_page() ) {
 			return;
 		}
 
-		// Settings
-		$separator           = '&gt;';
-		$breadcrumbs_id      = 'breadcrumbs';
-		$breadcrumbs_classes = 'breadcrumb-trail breadcrumbs';
-		$home_title          = 'Home';
+		// Set default arguments
+		$defaults = array(
+			'separator_icon'      => '&gt;',
+			'breadcrumbs_id'      => 'breadcrumbs',
+			'breadcrumbs_classes' => 'breadcrumb-trail breadcrumbs',
+			'home_title'          => 'Home'
+		);
 
-		// Get the post information
+		// Parse any arguments added
+		$args = apply_filters( 'ct_ignite_breadcrumbs_args', wp_parse_args( $args, $defaults ) );
+
+		// Set variable for adding separator markup
+		$separator = '<span class="separator"> ' . esc_attr( $args['separator_icon'] ) . ' </span>';
+
+		// Get global post object
 		global $post;
 
+		/***** Begin Markup *****/
+
 		// Open the breadcrumbs
-		$html = '<div id="' . absint($breadcrumbs_id) . '" class="' . esc_attr($breadcrumbs_classes) . '">';
+		$html = '<div id="' . esc_attr( $args['breadcrumbs_id'] ) . '" class="' . esc_attr( $args['breadcrumbs_classes']) . '">';
 
 		// Add Homepage link & separator (always present)
-		$html .= '<span class="item-home"><a class="bread-link bread-home" href="' . get_home_url() . '" title="' . esc_attr( $home_title ) . '">' . esc_attr( $home_title ) . '</a></span>';
-		$html .= '<span class="separator separator-home"> ' . esc_attr( $separator ) . ' </span>';
+		$html .= '<span class="item-home"><a class="bread-link bread-home" href="' . get_home_url() . '" title="' . esc_attr( $args['home_title'] ) . '">' . esc_attr( $args['home_title'] ) . '</a></span>';
+		$html .= $separator;
 
 		// Post
 		if ( is_singular( 'post' ) ) {
@@ -46,7 +56,7 @@ if ( !function_exists( 'ct_ignite_breadcrumbs' ) ) {
 			// Loop through parent categories and add to breadcrumb trail
 			foreach ( $cat_parents as $parent ) {
 				$html .= '<span class="item-cat">' . wp_kses( $parent, wp_kses_allowed_html( 'a' ) ) . '</span>';
-				$html .= '<span class="separator"> ' . esc_attr( $separator ) . ' </span>';
+				$html .= $separator;
 			}
 
 			// add name of Post
@@ -66,7 +76,7 @@ if ( !function_exists( 'ct_ignite_breadcrumbs' ) ) {
 				// Add each parent to markup
 				foreach ( $parents as $parent ) {
 					$html .= '<span class="item-parent item-parent-' . esc_attr( $parent ) . '"><a class="bread-parent bread-parent-' . esc_attr( $parent ) . '" href="' . get_permalink( $parent ) . '" title="' . get_the_title( $parent ) . '">' . get_the_title( $parent ) . '</a></span>';
-					$html .= '<span class="separator separator-' . esc_attr( $parent ) . '"> ' . esc_attr( $separator ) . ' </span>';
+					$html .= $separator;
 				}
 			}
 			// Current page
@@ -85,7 +95,7 @@ if ( !function_exists( 'ct_ignite_breadcrumbs' ) ) {
 
 			// Add markup
 			$html .= '<span class="item-parent"><a class="bread-parent" href="' . esc_url( $parent_permalink ) . '" title="' . esc_attr( $parent_title ) . '">' . esc_attr( $parent_title ) . '</a></span>';
-			$html .= '<span class="separator"> ' . esc_attr( $separator ) . ' </span>';
+			$html .= $separator;
 
 			// Add name of attachment
 			$html .= '<span class="item-current item-' . $post->ID . '"><span title="' . get_the_title() . '"> ' . get_the_title() . '</span></span>';
@@ -103,7 +113,7 @@ if ( !function_exists( 'ct_ignite_breadcrumbs' ) ) {
 
 			// Add taxonomy link and separator
 			$html .= '<span class="item-cat item-custom-post-type-' . esc_attr( $post_type ) . '"><a class="bread-cat bread-custom-post-type-' . esc_attr( $post_type ) . '" href="' . esc_url( $post_type_archive ) . '" title="' . esc_attr( $post_type_object->labels->name ) . '">' . esc_attr( $post_type_object->labels->name ) . '</a></span>';
-			$html .= '<span class="separator"> ' . esc_attr( $separator ) . ' </span>';
+			$html .= $separator;
 
 			// Add name of Post
 			$html .= '<span class="item-current item-' . $post->ID . '"><span class="bread-current bread-' . $post->ID . '" title="' . $post->post_title . '">' . $post->post_title . '</span></span>';
