@@ -129,14 +129,20 @@ function ct_ignite_breadcrumbs() {
 	// Day
 	elseif ( is_day() ) {
 
+		// Add day markup
+		$html .= '<span class="item-current item-day"><span class="bread-current bread-day">' . get_the_date() . '</span></span>';
 	}
 	// Month
 	elseif ( is_month() ) {
 
+		// Add month markup
+		$html .= '<span class="item-current item-month"><span class="bread-current bread-month">' . get_the_date('F Y') . '</span></span>';
 	}
 	// Year
 	elseif ( is_year() ) {
 
+		// Add year markup
+		$html .= '<span class="item-current item-year"><span class="bread-current bread-year">' . get_the_date('Y') . '</span></span>';
 	}
 	// Search
 	elseif ( is_search() ) {
