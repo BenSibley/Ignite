@@ -19,10 +19,10 @@ if ( !function_exists( 'ct_ignite_breadcrumbs' ) ) {
 		global $post;
 
 		// Open the breadcrumbs
-		$html = '<div id="' . $breadcrumbs_id . '" class="' . $breadcrumbs_classes . '">';
+		$html = '<div id="' . absint($breadcrumbs_id) . '" class="' . esc_attr($breadcrumbs_classes) . '">';
 
 		// Add Homepage link & separator (always present)
-		$html .= '<span class="item-home"><a class="bread-link bread-home" href="' . esc_url( get_home_url() ) . '" title="' . esc_attr( $home_title ) . '">' . esc_attr( $home_title ) . '</a></span>';
+		$html .= '<span class="item-home"><a class="bread-link bread-home" href="' . get_home_url() . '" title="' . esc_attr( $home_title ) . '">' . esc_attr( $home_title ) . '</a></span>';
 		$html .= '<span class="separator separator-home"> ' . esc_attr( $separator ) . ' </span>';
 
 		// Post
@@ -144,7 +144,7 @@ if ( !function_exists( 'ct_ignite_breadcrumbs' ) ) {
 			$custom_tax_name = get_queried_object()->name;
 
 			// Add markup for taxonomy
-			$html .= '<span class="item-current item-archive"><span class="bread-current bread-archive">' . $custom_tax_name . '</span></span>';
+			$html .= '<span class="item-current item-archive"><span class="bread-current bread-archive">' . esc_attr($custom_tax_name) . '</span></span>';
 		} // Search
 		elseif ( is_search() ) {
 
