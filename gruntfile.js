@@ -119,6 +119,9 @@ module.exports = function(grunt) {
         shell: {
             zip: {
                 command: [
+                    // delete existing copies on Desktop (if they exist)
+                    'rm -R /Users/bensibley/Desktop/ignite || true',
+                    'rm -R /Users/bensibley/Desktop/ignite.zip || true',
                     // copy plugin folder to desktop without any project/meta files
                     'rsync -r /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite /Users/bensibley/Desktop/ <%= excludeFiles %>',
                     // open desktop
