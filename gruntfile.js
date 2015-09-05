@@ -114,6 +114,19 @@ module.exports = function(grunt) {
                 bootstrap: 'tests/php/phpunit.php',
                 colors: true
             }
+        },
+        excludeFiles: '--exclude "*.gitignore" --exclude ".sass-cache/" --exclude "*.DS_Store" --exclude ".git/" --exclude ".idea/" --exclude "gruntfile.js" --exclude "node_modules/" --exclude "package.json" --exclude "sass/"',
+        shell: {
+            zip: {
+                command: [
+                    // copy plugin folder to desktop without any project/meta files
+                    'rsync -r /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite /Users/bensibley/Desktop/ <%= excludeFiles %>',
+                    // open desktop
+                    'cd /Users/bensibley/Desktop/',
+                    // zip the chosen-pro folder on desktop
+                    'zip -r ignite.zip ignite'
+                ].join('&&')
+            }
         }
     });
 
@@ -128,8 +141,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-wp-i18n');
     grunt.loadNpmTasks('grunt-phpcs');
     grunt.loadNpmTasks('grunt-phpunit');
+    grunt.loadNpmTasks('grunt-shell');
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['concat', 'uglify', 'watch', 'sass', 'autoprefixer', 'cssmin', 'compress', 'makepot', 'phpcs', 'phpunit']);
+    grunt.registerTask('default', ['concat', 'uglify', 'watch', 'sass', 'autoprefixer', 'cssmin', 'compress', 'makepot', 'phpcs', 'phpunit', 'shell']);
 
 };
