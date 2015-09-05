@@ -120,6 +120,23 @@ if ( !function_exists( 'ct_ignite_breadcrumbs' ) ) {
 		} // Category
 		elseif ( is_category() ) {
 
+			// Get category object
+			$parent = get_queried_object()->category_parent;
+
+			// If there is a parent category...
+			if ( $parent !== 0 ) {
+
+				// Get the parent category object
+				$parent_category = get_category( $parent );
+
+				// Get the link to the parent category
+				$category_link = get_category_link($parent);
+
+				// Output the markup for the parent category item
+				$html .= '<span class="item-parent item-parent-' . esc_attr( $parent_category->slug ) . '"><a class="bread-parent bread-parent-' . esc_attr( $parent_category->slug ) . '" href="' . esc_url( $category_link ) . '" title="' . esc_attr( $parent_category->name ) . '">' . esc_attr( $parent_category->name ) . '</a></span>';
+				$html .= $separator;
+			}
+
 			// Add category markup
 			$html .= '<span class="item-current item-cat"><span class="bread-current bread-cat" title="' . $post->ID . '">' . single_cat_title( '', false ) . '</span></span>';
 		} // Tag
