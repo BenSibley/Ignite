@@ -5,10 +5,6 @@ if ( ! isset( $content_width ) ) {
     $content_width = 840;
 }
 
-/* Load the core theme framework. */
-//require_once( trailingslashit( get_template_directory() ) . 'library/hybrid.php' );
-//new Hybrid();
-
 /* Do theme setup on the 'after_setup_theme' hook. */
 add_action( 'after_setup_theme', 'ct_ignite_theme_setup', 10 );
 
@@ -20,14 +16,6 @@ add_action( 'after_setup_theme', 'ct_ignite_theme_setup', 10 );
  */
 if( ! function_exists( 'ct_ignite_theme_setup' ) ) {
     function ct_ignite_theme_setup() {
-
-        /* Get action/filter hook prefix. */
-//        $prefix = hybrid_get_prefix();
-
-        /* Theme-supported features go here. */
-//        add_theme_support( 'hybrid-core-template-hierarchy' );
-//        add_theme_support( 'loop-pagination' );
-//        add_theme_support( 'breadcrumb-trail' );
 
         // from WordPress core not theme hybrid
         add_theme_support( 'automatic-feed-links' );
@@ -57,15 +45,6 @@ if( ! function_exists( 'ct_ignite_theme_setup' ) ) {
 
         // load text domain
         load_theme_textdomain( 'ignite', get_template_directory() . '/languages' );
-
-        // remove Hybrid Core filters adding partial microdata
-//        remove_filter( 'the_author_posts_link', 'hybrid_the_author_posts_link', 5 );
-//        remove_filter( 'get_comment_author_link', 'hybrid_get_comment_author_link', 5 );
-//        remove_filter( 'get_comment_author_url_link', 'hybrid_get_comment_author_url_link', 5 );
-//        remove_filter( 'comment_reply_link', 'hybrid_comment_reply_link_filter', 5 );
-//        remove_filter( 'get_avatar', 'hybrid_get_avatar', 5 );
-//        remove_filter( 'post_thumbnail_html', 'hybrid_post_thumbnail_html', 5 );
-//        remove_filter( 'comments_popup_link_attributes', 'hybrid_comments_popup_link_attributes', 5 );
     }
 }
 
@@ -445,12 +424,6 @@ function ct_ignite_custom_css_output(){
 }
 add_action('wp_enqueue_scripts','ct_ignite_custom_css_output', 20);
 
-// fix for bug with Disqus saying comments are closed
-//if ( function_exists( 'dsq_options' ) ) {
-//    remove_filter( 'comments_template', 'dsq_comments_template' );
-//    add_filter( 'comments_template', 'dsq_comments_template', 99 ); // You can use any priority higher than '10'
-//}
-
 // add class if no avatars are being shown in the comments
 function ct_ignite_show_avatars_check($classes){
 
@@ -539,15 +512,6 @@ function ct_ignite_background_css(){
 
 }
 add_action('wp_enqueue_scripts','ct_ignite_background_css');
-
-//function ct_ignite_wp_backwards_compatibility() {
-//
-//	// not using this function, simply remove it so use of "has_image_size" doesn't break < 3.9
-//	if( version_compare( get_bloginfo('version'), '3.9', '<') ) {
-//		remove_filter( 'image_size_names_choose', 'hybrid_image_size_names_choose' );
-//	}
-//}
-//add_action('init', 'ct_ignite_wp_backwards_compatibility');
 
 if ( ! function_exists( '_wp_render_title_tag' ) ) :
     function ct_ignite_add_title_tag() {
