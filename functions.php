@@ -359,16 +359,10 @@ add_filter( 'body_class', 'ct_ignite_body_class' );
 
 function ct_ignite_post_class_update($classes){
 
-    $remove = array();
-    $remove[] = 'entry';
-
+    // add 'excerpt' class to posts when on archive pages
     if ( ! is_singular() ) {
         foreach ( $classes as $key => $class ) {
-
-            if ( in_array( $class, $remove ) ){
-                unset( $classes[ $key ] );
-                $classes[] = 'excerpt';
-            }
+            $classes[] = 'excerpt';
         }
     }
 	// if 3.8 or lower
