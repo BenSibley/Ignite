@@ -619,3 +619,27 @@ function ct_ignite_loop_pagination(){
 
     return $loop_pagination;
 }
+
+// Adds useful meta tags
+function ct_ignite_add_meta_elements() {
+
+    $meta_elements = '';
+
+    /* Charset */
+    $meta_elements .= sprintf( '<meta charset="%s" />' . "\n", get_bloginfo( 'charset' ) );
+
+    /* Viewport */
+    $meta_elements .= '<meta name="viewport" content="width=device-width, initial-scale=1" />' . "\n";
+
+    /* Theme name and current version */
+    $theme    = wp_get_theme( get_template() );
+    $template = sprintf( '<meta name="template" content="%s %s" />' . "\n", esc_attr( $theme->get( 'Name' ) ), esc_attr( $theme->get( 'Version' ) ) );
+    $meta_elements .= $template;
+
+    echo $meta_elements;
+}
+add_action( 'wp_head', 'ct_ignite_add_meta_elements', 1 );
+
+/* Move the WordPress generator to a better priority. */
+remove_action( 'wp_head', 'wp_generator' );
+add_action( 'wp_head', 'wp_generator', 1 );
