@@ -443,7 +443,7 @@ function ct_ignite_custom_css_output(){
         wp_add_inline_style('style', $custom_css);
     }
 }
-add_action('wp_enqueue_scripts','ct_ignite_custom_css_output');
+add_action('wp_enqueue_scripts','ct_ignite_custom_css_output', 20);
 
 // fix for bug with Disqus saying comments are closed
 //if ( function_exists( 'dsq_options' ) ) {
