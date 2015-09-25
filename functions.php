@@ -1,5 +1,10 @@
 <?php
 
+// set the content width
+if ( ! isset( $content_width ) ) {
+    $content_width = 840;
+}
+
 /* Load the core theme framework. */
 //require_once( trailingslashit( get_template_directory() ) . 'library/hybrid.php' );
 //new Hybrid();
