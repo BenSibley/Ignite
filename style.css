@@ -25,10 +25,6 @@ Ignite is distributed under the terms of the GNU GPL
   box-sizing: border-box;
 }
 
-html {
-  height: 100%;
-}
-
 body {
   height: 100%;
   font-size: 100%;
