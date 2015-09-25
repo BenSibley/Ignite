@@ -96,7 +96,7 @@
 
 // 404 & search results
 
-.error-404,
+.error404,
 .search {
 
   .entry {
@@ -157,7 +157,7 @@
 /* 800px */
 @media all and (min-width: 50em) {
 
-  .error-404 {
+  .error404 {
 
     .entry-header {
       padding-top: $baseline-height * 1.5;

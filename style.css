@@ -1614,11 +1614,11 @@ li.pingback {
     margin-top: 0;
   }
 }
-.error-404 .entry,
+.error404 .entry,
 .search .entry {
   margin-bottom: 0;
 }
-.error-404 .entry-header,
+.error404 .entry-header,
 .search .entry-header {
   padding-top: 1.5em;
 }
@@ -1664,7 +1664,7 @@ li.pingback {
 }
 /* 800px */
 @media all and (min-width: 50em) {
-  .error-404 .entry-header {
+  .error404 .entry-header {
     padding-top: 2.25em;
   }
 
