@@ -282,13 +282,6 @@ if( ! function_exists( 'ct_ignite_remove_more_link_scroll' ) ) {
 
 add_filter( 'the_content_more_link', 'ct_ignite_remove_more_link_scroll' );
 
-// Adds navigation through pages in the loop
-function ct_ignite_post_navigation() { ?>
-    <div class="loop-pagination-container">
-        <?php if ( current_theme_supports( 'loop-pagination' ) ) loop_pagination(); ?>
-    </div><?php
-}
-
 // for displaying featured images including mobile versions and default versions
 if( ! function_exists( 'ct_ignite_featured_image' ) ) {
     function ct_ignite_featured_image() {
@@ -602,4 +595,27 @@ if ( !function_exists( 'ct_ignite_customizer_social_media_array' ) ) {
 
         return apply_filters( 'ct_ignite_customizer_social_media_array_filter', $social_sites );
     }
+}
+
+function ct_ignite_loop_pagination(){
+
+    global $wp_query;
+
+    // If there's not more than one page, return nothing.
+    if ( 1 >= $wp_query->max_num_pages ) {
+        return;
+    }
+
+    /* Set up some default arguments for the paginate_links() function. */
+    $defaults = array(
+        'base'         => add_query_arg( 'paged', '%#%' ),
+        'format'       => '',
+        'mid_size'     => 1
+    );
+
+    $loop_pagination = '<div class="loop-pagination-container"><nav class="pagination loop-pagination">';
+    $loop_pagination .= paginate_links( $defaults );
+    $loop_pagination .= '</nav></div>';
+
+    return $loop_pagination;
 }
