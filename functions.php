@@ -337,10 +337,6 @@ function ct_ignite_wp_page_menu() {
 
 function ct_ignite_body_class( $classes ) {
 
-    if ( ! is_front_page() ) {
-        $classes[] = 'not-front';
-    }
-
     /* get layout chosen by user */
     $layout = get_theme_mod('ct_ignite_layout_settings');
 
