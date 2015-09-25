@@ -364,6 +364,8 @@ function ct_ignite_post_class_update($classes){
         foreach ( $classes as $key => $class ) {
             $classes[] = 'excerpt';
         }
+    } else {
+        $classes[] = 'entry';
     }
 	// if 3.8 or lower
 	if( version_compare( get_bloginfo('version'), '3.9', '<') ) {
