@@ -30,6 +30,12 @@ if( ! function_exists( 'ct_ignite_theme_setup' ) ) {
             'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
         ) );
 
+        // adds support for Jetpack infinite scroll feature
+        add_theme_support( 'infinite-scroll', array(
+            'container' => 'main',
+            'footer'    => 'overflow-container'
+        ) );
+
         // add inc folder files
         foreach ( glob( trailingslashit( get_template_directory() ) . 'inc/*.php' ) as $filename ) {
             include $filename;
@@ -589,6 +595,10 @@ function ct_ignite_switch_git_icon() {
 add_action('admin_init', 'ct_ignite_switch_git_icon');
 
 function ct_ignite_loop_pagination(){
+
+    // don't output if Jetpack infinite scroll is being used
+    if ( class_exists( 'Jetpack' ) && Jetpack::is_module_active( 'infinite-scroll' ) )
+        return;
 
     global $wp_query;
 
