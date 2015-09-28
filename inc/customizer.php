@@ -423,6 +423,7 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
         'type'              => 'theme_mod',
         'capability'        => 'edit_theme_options',
         'sanitize_callback' => 'sanitize_hex_color',
+        'transport'         => 'postMessage'
     ) );
 
 	$description_background = sprintf( __('Want background textures and images? <a target="_blank" href="%s">Check out Ignite Plus</a>', 'ignite'), $ignite_plus );

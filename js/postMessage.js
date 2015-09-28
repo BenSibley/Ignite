@@ -38,5 +38,19 @@
             }
         } );
     } );
+    // Background Color
+    wp.customize( 'ct_ignite_background_color_setting', function( value ) {
+        value.bind( function( to ) {
+
+            // all elements get default background
+            if ( to == '#eeede8' ) {
+                $('.overflow-container, .main, .sidebar-primary-container, .breadcrumb-trail').css('background', to);
+            }  // or all elements get no background except overflow-container
+            else {
+                $('.overflow-container').css('background', to);
+                $('.main, .sidebar-primary-container, .breadcrumb-trail').css('background', 'none');
+            }
+        });
+    } );
 
 } )( jQuery );

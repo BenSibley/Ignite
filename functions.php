@@ -517,7 +517,7 @@ function ct_ignite_background_css(){
     }
 
 }
-add_action('wp_enqueue_scripts','ct_ignite_background_css');
+add_action('wp_enqueue_scripts','ct_ignite_background_css', 20);
 
 if ( ! function_exists( '_wp_render_title_tag' ) ) :
     function ct_ignite_add_title_tag() {
