@@ -326,6 +326,7 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
         'type'              => 'theme_mod',
         'capability'        => 'edit_theme_options',
         'sanitize_callback' => 'ct_ignite_sanitize_layout_settings',
+        'transport'         => 'postMessage'
     ) );
 
 	$ignite_plus = 'https://www.competethemes.com/ignite-plus/';

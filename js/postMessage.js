@@ -4,6 +4,8 @@
      * Following functions are for utilizing the postMessage transport setting
      */
 
+    var body = $('body');
+
     // Site title
     wp.customize( 'blogname', function( value ) {
         value.bind( function( to ) {
@@ -21,6 +23,19 @@
                 $('#menu-primary').prepend('<p id="site-description"></p>');
             }
             tagline.text( to );
+        } );
+    } );
+    // Layout
+    wp.customize( 'ct_ignite_layout_settings', function( value ) {
+        value.bind( function( to ) {
+
+            // remove left-sidebar class to avoid adding both
+            body.removeClass('sidebar-left');
+
+            // add left-sidebar class (right doesn't have/need one)
+            if ( to == 'left' ) {
+                body.addClass( 'sidebar-left' );
+            }
         } );
     } );
 
