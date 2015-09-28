@@ -52,5 +52,15 @@
             }
         });
     } );
+    // Footer Text
+    wp.customize( 'ct_ignite_footer_text_setting', function( value ) {
+        value.bind( function( to ) {
+
+            if ( to == '' ) {
+                to = '<a target="_blank" href="https://www.competethemes.com/ignite/">Free WordPress Blog Theme</a> by Compete Themes.'
+            }
+            $('.design-credit').children('span').html(to);
+        });
+    } );
 
 } )( jQuery );
