@@ -24,7 +24,7 @@
             /* Otherwise, output the default text */
             else {
                 $site_url = 'https://www.competethemes.com/ignite/';
-                $footer_text = sprintf( __( '<a target="_blank" href="%s">Free WordPress Blog Theme</a> by Compete Themes.', 'ignite' ), esc_url( $site_url ) );
+                $footer_text = sprintf( __( '<a target="_blank" href="%s">Ignite WordPress Theme</a> by Compete Themes.', 'ignite' ), esc_url( $site_url ) );
                 echo wp_kses_post( $footer_text );
             }
             ?>
