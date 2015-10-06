@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="container">
+<div class="search-container">
 
     <div class="entry-header search-end top">
         <h1 class="entry-title">

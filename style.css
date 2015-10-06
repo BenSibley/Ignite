@@ -1584,7 +1584,8 @@ li.pingback {
 .breadcrumbs span {
   opacity: 0.7;
 }
-.breadcrumbs + div .excerpt, .breadcrumbs + div .entry {
+.breadcrumbs + div .excerpt, .breadcrumbs + div .entry,
+.breadcrumbs + div .search-container {
   margin-top: 0;
 }
 
@@ -1625,8 +1626,9 @@ li.pingback {
   margin-top: 1.5em;
 }
 
-.search .container {
+.search .search-container {
   background: white;
+  margin-top: 1.5em;
 }
 .search .search-end {
   padding: 1.5em 8% 2.25em;
@@ -1657,7 +1659,7 @@ li.pingback {
 }
 /* 800px */
 @media all and (min-width: 50em) {
-  .search .container {
+  .search .search-container {
     padding: 1.5em 0;
   }
   .search .search-end {
@@ -1669,6 +1671,9 @@ li.pingback {
 }
 /* 1100px */
 @media all and (min-width: 68.75em) {
+  .search .search-container {
+    margin-top: 3em;
+  }
   .search .search-end {
     padding: 1.5em 12.5% 2.25em;
   }

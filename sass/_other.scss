@@ -59,7 +59,8 @@
 
   + div {
 
-    .excerpt {
+    .excerpt,
+    .search-container {
       margin-top: 0;
     }
   }
@@ -115,8 +116,9 @@
 }
 .search {
 
-  .container {
+  .search-container {
     background: white;
+    margin-top: $baseline-height;
   }
   .search-end {
     padding: $baseline-height 8% $baseline-height * 1.5;
@@ -157,7 +159,7 @@
 
   .search {
 
-    .container {
+    .search-container {
       padding: $baseline-height 0;
     }
     .search-end {
@@ -174,6 +176,9 @@
 
   .search {
 
+    .search-container {
+      margin-top: $baseline-height * 2;
+    }
     .search-end {
       padding: $baseline-height 12.5% $baseline-height * 1.5;
     }
