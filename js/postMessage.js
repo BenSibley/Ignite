@@ -57,7 +57,7 @@
         value.bind( function( to ) {
 
             if ( to == '' ) {
-                to = '<a target="_blank" href="https://www.competethemes.com/ignite/">Free WordPress Blog Theme</a> by Compete Themes.'
+                to = '<a target="_blank" href="https://www.competethemes.com/ignite/">Ignite WordPress Theme</a> by Compete Themes.'
             }
             $('.design-credit').children('span').html(to);
         });
