@@ -94,9 +94,8 @@
   }
 }
 
-// 404 & search results
+// search results
 
-.error404,
 .search {
 
   .entry {
@@ -156,12 +155,6 @@
 /* 800px */
 @media all and (min-width: 50em) {
 
-  .error404 {
-
-    .entry-header {
-      padding-top: $baseline-height * 1.5;
-    }
-  }
   .search {
 
     .container {
