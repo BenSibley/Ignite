@@ -395,7 +395,7 @@ function ct_ignite_logo_positioning_css(){
         wp_add_inline_style('style', $css);
     }
 }
-add_action('wp_enqueue_scripts','ct_ignite_logo_positioning_css');
+add_action('wp_enqueue_scripts','ct_ignite_logo_positioning_css', 20);
 
 /* outputs the inline css to position the logo */
 function ct_ignite_logo_size_css(){
@@ -416,7 +416,7 @@ function ct_ignite_logo_size_css(){
         wp_add_inline_style('style', $css);
     }
 }
-add_action('wp_enqueue_scripts','ct_ignite_logo_size_css');
+add_action('wp_enqueue_scripts','ct_ignite_logo_size_css', 20);
 
 function ct_ignite_custom_css_output(){
 
@@ -497,7 +497,7 @@ function ct_ignite_change_font(){
         }
     }
 }
-add_action('wp_enqueue_scripts', 'ct_ignite_change_font');
+add_action('wp_enqueue_scripts', 'ct_ignite_change_font', 20);
 
 function ct_ignite_background_css(){
 
