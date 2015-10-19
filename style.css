@@ -1308,6 +1308,9 @@ a img {
     vertical-align: top;
     padding-right: 4%;
   }
+  .further-reading .prev {
+    float: left;
+  }
   .further-reading .next {
     text-align: right;
     padding: 0 0 0 4%;
