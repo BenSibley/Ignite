@@ -15,7 +15,7 @@ foreach($social_sites as $social_site) {
 if(!empty($active_sites)) {
 
 	// icons that should use a special square icon
-	$square_icons = array('linkedin', 'twitter', 'vimeo', 'youtube', 'pinterest', 'reddit', 'tumblr', 'steam', 'xing', 'github', 'google-plus', 'behance', 'facebook', 'rss');
+	$square_icons = array('linkedin', 'twitter', 'vimeo', 'youtube', 'pinterest', 'rss', 'reddit', 'tumblr', 'steam', 'xing', 'github', 'google-plus', 'behance', 'facebook', 'rss');
 
 	echo "<ul class='social-media-icons'>";
 
