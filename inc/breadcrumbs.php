@@ -182,6 +182,9 @@ if ( !function_exists( 'ct_ignite_breadcrumbs' ) ) {
 
 			// Add 404 markup
 			$html .= '<span>' . 'Error 404' . '</span>';
+		} // blog when not on homepage
+		elseif ( is_home() ) {
+			$html .= '<span>' . get_the_title( get_option('page_for_posts' ) ) . '</span>';
 		}
 
 		// Close breadcrumb container
