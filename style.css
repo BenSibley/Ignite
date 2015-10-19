@@ -1626,25 +1626,13 @@ li.pingback {
   margin-top: 1.5em;
 }
 
-.search .search-container {
-  background: white;
-  margin-top: 1.5em;
-}
 .search .search-end {
   padding: 1.5em 8% 2.25em;
+  background: white;
+  margin-bottom: 1.5em;
 }
 .search .search-end.top {
   padding-bottom: 3em;
-}
-.search .search-end.bottom {
-  padding-top: 0;
-}
-.search .excerpt, .search .entry {
-  margin-top: 0;
-  padding-top: 0;
-}
-.search .excerpt-content {
-  padding-bottom: 1.5em;
 }
 
 .search-no-results .search-end.top .search-form-container {
@@ -1676,6 +1664,7 @@ li.pingback {
   }
   .search .search-end {
     padding: 1.5em 12.5% 2.25em;
+    margin-bottom: 3em;
   }
 }
 /* Password-protected post */

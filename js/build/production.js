@@ -559,7 +559,6 @@ jQuery(document).ready(function($){
         if ( body.hasClass('search-results') ) {
             $('.search-end.bottom').detach().appendTo( main );
         }
-
     } );
 
     // in case user has logo increasing the height of the site-header
