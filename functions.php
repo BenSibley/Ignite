@@ -571,6 +571,7 @@ if ( !function_exists( 'ct_ignite_customizer_social_media_array' ) ) {
             'academia',
             'weibo',
             'tencent-weibo',
+            'paypal',
             'email'
         );
 
