@@ -14,14 +14,13 @@
   padding-top: 0;
 }
 .featured-image {
-  background-size: cover;
-  background-position: 50%;
   position: relative;
   height: 0;
   padding-bottom: 56.5%;
   left: -9.5%;
   width: 119%;
   margin-bottom: $baseline-height;
+  overflow: hidden;
 
   > a {
     position: absolute;
@@ -29,7 +28,15 @@
     right: 0;
     bottom: 0;
     left: 0;
-    opacity: 0;
+    font-size: 0;
+  }
+  > img,
+  > a > img {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    min-height: 100%; // stretch if it doesn't fill the area
   }
 }
 .excerpt-meta-top {

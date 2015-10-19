@@ -812,15 +812,13 @@ a img {
 }
 
 .featured-image {
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-position: 50%;
   position: relative;
   height: 0;
   padding-bottom: 56.5%;
   left: -9.5%;
   width: 119%;
   margin-bottom: 1.5em;
+  overflow: hidden;
 }
 .featured-image > a {
   position: absolute;
@@ -828,7 +826,17 @@ a img {
   right: 0;
   bottom: 0;
   left: 0;
-  opacity: 0;
+  font-size: 0;
+}
+.featured-image > img,
+.featured-image > a > img {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  min-height: 100%;
 }
 
 .excerpt-meta-top, .entry-meta-top {

@@ -276,25 +276,22 @@ add_filter( 'the_content_more_link', 'ct_ignite_remove_more_link_scroll' );
 if( ! function_exists( 'ct_ignite_featured_image' ) ) {
     function ct_ignite_featured_image() {
 
+        // get post object
         global $post;
-        $has_image = false;
+
+        // instantiate featured image var
+        $featured_image = '';
 
         if ( has_post_thumbnail( $post->ID ) ) {
-            $image     = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
-            $image     = $image[0];
-            $has_image = true;
-        }
-        if ( $has_image == true ) {
 
             if ( is_singular() ) {
-                echo "<div class='featured-image' style=\"background-image: url('" . esc_url( $image ) . "')\"></div>";
+                $featured_image = '<div class="featured-image">' . get_the_post_thumbnail() . '</div>';
             } else {
-                echo "
-                <div class='featured-image' style=\"background-image: url('" . esc_url( $image ) . "')\">
-                    <a href='" . get_permalink() . "'>" . get_the_title() . "</a>
-                </div>
-                ";
+                $featured_image = '<div class="featured-image"><a href="' . get_permalink() . '">' . get_the_title() . get_the_post_thumbnail() . '</a></div>';
             }
+        }
+        if( $featured_image ) {
+            echo $featured_image;
         }
     }
 }
