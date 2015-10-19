@@ -1,43 +1,67 @@
 <?php
+
 global $post;
 
-// gets the next & previous posts if they exist
-$previous_blog_post = get_adjacent_post(false,'',true);
-$next_blog_post = get_adjacent_post(false,'',false);
+// gets the previous post if it exists
+$previous_post = get_adjacent_post(false,'',true);
 
-if(get_the_title($previous_blog_post)) {
-	$previous_title = get_the_title($previous_blog_post);
-} else {
-	$previous_title = __("The Previous Post", 'ignite');
+// if there is a previous post
+if( $previous_post ) {
+	// text above the link
+	$previous_text = __('Previous Post', 'ignite');
+	// if there is a title use it, else call it "The Previous Post"
+	$previous_title = get_the_title( $previous_post ) ? get_the_title( $previous_post ) : __("The Previous Post", 'ignite');
+	// get the post link
+	$previous_link = get_permalink( $previous_post );
 }
-if(get_the_title($next_blog_post)) {
-	$next_title = get_the_title($next_blog_post);
-} else {
-	$next_title = __("The Next Post", 'ignite');
+// if there isn't a previous post
+else {
+	// text above the link
+	$previous_text = __('No Older Posts', 'ignite');
+	// set the title to return to the blog
+	$previous_title = __('Return to Blog', 'ignite');
+	// link to blog
+	if( get_option( 'show_on_front' ) == 'page' ) {
+		$previous_link = get_permalink( get_option('page_for_posts' ) );
+	} else  {
+		$previous_link = get_home_url();
+	}
 }
 
-echo "<nav class='further-reading'>";
-if($previous_blog_post) {
-	echo "<p class='prev'>
-        		<span>" . __('Previous Post', 'ignite') . "</span>
-        		<a href='".get_permalink($previous_blog_post)."'>".$previous_title."</a>
-	        </p>";
-} else {
-	echo "<p class='prev'>
-                <span>" . __('Return to Blog', 'ignite') . "</span>
-        		<a href='".esc_url(home_url())."'>" . __('This is the oldest post', 'ignite') . "</a>
-        	</p>";
-}
-if($next_blog_post) {
+// gets the next post if it exists
+$next_post = get_adjacent_post(false,'',false);
 
-	echo "<p class='next'>
-        		<span>" . __('Next Post', 'ignite') . "</span>
-        		<a href='".get_permalink($next_blog_post)."'>".$next_title."</a>
-	        </p>";
-} else {
-	echo "<p class='next'>
-                <span>" . __('Return to Blog', 'ignite') . "</span>
-        		<a href='".esc_url(home_url())."'>" . __('This is the newest post', 'ignite') . "</a>
-        	 </p>";
+// if there is a next post
+if( $next_post ) {
+	// text above the link
+	$next_text = __('Next Post', 'ignite');
+	// if there is a title use it, else call it "The next Post"
+	$next_title = get_the_title( $next_post ) ? get_the_title( $next_post ) : __("The Next Post", 'ignite');
+	// get the post link
+	$next_link = get_permalink( $next_post );
 }
-echo "</nav>";
+// if there isn't a next post
+else {
+	// text above the link
+	$next_text = __('No Newer Posts', 'ignite');
+	// set the title to return to the blog
+	$next_title = __('Return to Blog', 'ignite');
+	// link to blog
+	if( get_option( 'show_on_front' ) == 'page' ) {
+		$next_link = get_permalink( get_option('page_for_posts' ) );
+	} else  {
+		$next_link = get_home_url();
+	}
+}
+
+?>
+<nav class="further-reading">
+	<p class="prev">
+		<span><?php echo esc_html( $previous_text ); ?></span>
+		<a href="<?php echo esc_url( $previous_link ); ?>"><?php echo esc_html( $previous_title ); ?></a>
+	</p>
+	<p class="next">
+		<span><?php echo esc_html( $next_text ); ?></span>
+		<a href="<?php echo esc_url( $next_link ); ?>"><?php echo esc_html( $next_title ); ?></a>
+	</p>
+</nav>

@@ -104,7 +104,10 @@
     .next {
       text-align: right;
       padding: 0 0 0 4%;
-
+      float: right;
+    }
+    &:after {
+      @include clearfix;
     }
   }
 }
