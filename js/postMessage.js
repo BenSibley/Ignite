@@ -4,8 +4,10 @@
      * Following functions are for utilizing the postMessage transport setting
      */
 
+    var panel = $('html', window.parent.document);
     var body = $('body');
     var siteTitle = $('.site-title');
+    var inlineStyles = $('#style-inline-css');
 
     // Site title
     wp.customize( 'blogname', function( value ) {
@@ -62,6 +64,34 @@
             }
             $('.design-credit').children('span').html(to);
         });
+    } );
+
+    /***** Custom CSS *****/
+
+    // get current Custom CSS
+    var customCSS = panel.find('#customize-control-ct_ignite_custom_css_setting').find('textarea').val();
+
+    // get the CSS in the inline element
+    var allCSS = inlineStyles.text();
+
+    // remove the Custom CSS from the other CSS
+    allCSS = allCSS.replace(customCSS, '');
+
+    // update the CSS in the inline element w/o the custom css
+    inlineStyles.text(allCSS);
+
+    // add custom CSS to its own style element
+    body.append('<style id="style-inline-custom-css" type="text/css">' + customCSS + '</style>');
+
+    // Custom CSS
+    wp.customize( 'ct_ignite_custom_css_setting', function( value ) {
+        value.bind( function( to ) {
+            $('#style-inline-custom-css').remove();
+            if ( to != '' ) {
+                to = '<style id="style-inline-custom-css" type="text/css">' + to + '</style>';
+                body.append( to );
+            }
+        } );
     } );
 
 } )( jQuery );
