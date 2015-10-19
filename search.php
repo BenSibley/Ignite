@@ -5,6 +5,7 @@
         <?php
         global $wp_query;
         $total_results = $wp_query->found_posts;
+        $s = htmlentities($s);
         if($total_results) {
             printf( _n('%d search result for "%s"', '%d search results for "%s"', $total_results, 'ignite'), $total_results, $s );
         } else {
