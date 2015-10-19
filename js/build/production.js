@@ -564,7 +564,7 @@ jQuery(document).ready(function($){
     // in case user has logo increasing the height of the site-header
     function menuPositioning() {
 
-        if( $(window).width() < 800 ) {
+        if( window.innerWidth < 800 ) {
             var headerHeight = $('#site-header').outerHeight();
 
             // reposition menu slider and remove weird gap
@@ -622,7 +622,7 @@ jQuery(document).ready(function($){
     /* see if social media icons can fit and display if they can */
     function showSocialIcons() {
 
-        if( $(window).width() > 899 ) {
+        if( window.innerWidth > 899 ) {
 
             // set menu variable to primary or unset
             if ($('#menu-primary-items').length) {
@@ -677,7 +677,7 @@ jQuery(document).ready(function($){
         showSocialIcons();
         menuPositioning();
 
-        if( $(window).width() > 799 && $('#site-header').hasClass('toggled') ) {
+        if( window.innerWidth > 799 && $('#site-header').hasClass('toggled') ) {
             onTap();
         }
 
