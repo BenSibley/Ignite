@@ -99,8 +99,9 @@
     wp.customize( 'ct_ignite_font_family_settings', function( value ) {
         value.bind( function( to ) {
 
+            var selectors = "body, h1, h2, h3, h4, h5, h6, input:not([type='checkbox']):not([type='radio']):not([type='submit']):not([type='file']), input[type='submit'], textarea";
             // change font CSS
-            $('body, input, textarea').css('font-family', to);
+            $( selectors ).css('font-family', to);
 
             /* load new font */
 
