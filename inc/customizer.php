@@ -402,7 +402,8 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
         'default'           => 'regular',
         'type'              => 'theme_mod',
         'capability'        => 'edit_theme_options',
-        'sanitize_callback' => 'ct_ignite_sanitize_google_font_weight'
+        'sanitize_callback' => 'ct_ignite_sanitize_google_font_weight',
+        'transport'         => 'postMessage'
     ) );
     // control
     $wp_customize->add_control( 'ct_ignite_font_weight_settings', array(

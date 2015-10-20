@@ -8,6 +8,7 @@
     var body = $('body');
     var siteTitle = $('.site-title');
     var inlineStyles = $('#style-inline-css');
+    var fontSelectors = "body, h1, h2, h3, h4, h5, h6, input:not([type='checkbox']):not([type='radio']):not([type='submit']):not([type='file']), input[type='submit'], textarea";
 
     // Site title
     wp.customize( 'blogname', function( value ) {
@@ -99,9 +100,8 @@
     wp.customize( 'ct_ignite_font_family_settings', function( value ) {
         value.bind( function( to ) {
 
-            var selectors = "body, h1, h2, h3, h4, h5, h6, input:not([type='checkbox']):not([type='radio']):not([type='submit']):not([type='file']), input[type='submit'], textarea";
             // change font CSS
-            $( selectors ).css('font-family', to);
+            $( fontSelectors ).css('font-family', to);
 
             /* load new font */
 
@@ -125,6 +125,33 @@
                 }
             });
         });
+    } );
+
+    wp.customize( 'ct_ignite_font_weight_settings', function( value ) {
+        value.bind( function( to ) {
+
+            var fontStyle = 'normal';
+
+            // change "regular" to 400
+            if ( to == 'regular' ) to = '400';
+
+            // change "italic" to 400
+            else if ( to == 'italic' ) {
+                to = '400';
+                fontStyle = 'italic';
+            }
+            // if contains italic, but wasn't just "italic"
+            else if ( to.indexOf( 'italic' ) > -1 ) {
+                to = to.replace( 'italic', '' );
+                fontStyle = 'italic';
+            }
+
+            // change font weight
+            $( fontSelectors ).css({
+                'font-weight': to,
+                'font-style': fontStyle
+            });
+        } );
     } );
 
 } )( jQuery );
