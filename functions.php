@@ -492,6 +492,15 @@ add_action('wp_enqueue_scripts', 'ct_ignite_change_font', 20);
 // used to format GF request (ajax and non-ajax)
 function ct_ignite_format_font_request( $font ) {
 
+    // by default not an ajax call
+    $ajax = false;
+
+    // if is ajax request
+    if ( isset( $_POST['font'] ) ) {
+        $font = $_POST['font'];
+        $ajax = true;
+    }
+
     // get array of fonts and their weights
     $weights = ct_ignite_get_available_font_weights( $font );
 
@@ -524,7 +533,13 @@ function ct_ignite_format_font_request( $font ) {
 
         $fonts_url = esc_url_raw( $fonts_url );
     }
-    return $fonts_url;
+
+    if ( $ajax ) {
+        echo $fonts_url;
+        die();
+    } else {
+        return $fonts_url;
+    }
 }
 
 function ct_ignite_background_css(){
