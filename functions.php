@@ -442,41 +442,33 @@ add_action('comment_class', 'ct_ignite_show_avatars_check');
 // implement fonts based on customizer selection
 function ct_ignite_change_font(){
 
-    // get the current font
     $font = get_theme_mod('ct_ignite_font_family_settings');
-
-    // get the current font weight
     $font_weight = get_theme_mod('ct_ignite_font_weight_settings');
+    $font_style = 'normal';
 
-    // if it's the default do nothing, otherwise...
+    // if it's not the default or empty
     if ( $font != 'Lusitana' && !empty( $font ) ) {
 
-        // check if font style contains 'italic'
-        // can't check if true because answer could be '0'
-        if ( strpos( $font_weight, 'italic' ) !== false ){
-
-            // if weight is simply italic, set weight to 400
-            if( $font_weight == 'italic' ){
-                $font_weight_css = 400;
-            }
-            // otherwise, remove 'italic' from weight and use integer (ex. 600italic -> 600)
-            else {
-                $font_weight_css = str_replace($font_weight, 'italic', '');
-            }
-            // save style as 'italic'
+        // if weight is italic, set it to 400
+        if( $font_weight == 'italic' ){
+            $font_weight = 400;
             $font_style = 'italic';
         }
-        // if not italic, just use weight integer and set style as 'normal'
-        else {
-            $font_weight_css = $font_weight;
-            $font_style = 'normal';
+        // if weight is a different weight and italic, remove "italic"
+        elseif ( strpos( $font_weight, 'italic' ) !== false ) {
+            $font_weight = str_replace($font_weight, 'italic', '');
+            $font_style = 'italic';
+        }
+        // if weight is regular, change to 400
+        elseif ( $font_weight == 'regular' ) {
+            $font_weight = 400;
         }
 
         // css to be output
         $css = "
             body, h1, h2, h3, h4, h5, h6, input:not([type='checkbox']):not([type='radio']):not([type='submit']):not([type='file']), input[type='submit'], textarea {
                 font-family: $font;
-                font-weight: $font_weight_css;
+                font-weight: $font_weight;
                 font-style: $font_style;
             }
         ";
