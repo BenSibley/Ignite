@@ -933,66 +933,67 @@ function ct_ignite_sanitize_yes_no_setting($input){
 /***** Helper Functions *****/
 
 // get the available font weights based on the the font family selection
-function ct_ignite_get_available_font_weights(){
+function ct_ignite_get_available_font_weights( $current_font = '' ) {
 
-    // current font is the one saved in the db
-    $current_font = get_theme_mod('ct_ignite_font_family_settings');
-
-    if($current_font){
-        $selected_font = $current_font;
-    } else {
-        $selected_font = "Lusitana";
+    // if no font passed in, get it from Customizer db entry
+    if ( empty( $current_font ) ) {
+        $current_font = get_theme_mod( 'ct_ignite_font_family_settings' );
     }
-    if($selected_font == "Lusitana"){
+
+    // if nothing in db, set to lusitana
+    if ( empty( $current_font ) ) {
+        $current_font = 'Lusitana';
+    }
+
+    // instantiate font weights array
+    $font_weights = array();
+
+    if ( $current_font == "Lusitana" ) {
         $font_weights = array(
             'regular' => 'Regular',
-            '700' => 'Bold'
+            '700'     => 'Bold'
         );
-    }
-    elseif($selected_font == "Roboto"){
+    } elseif ( $current_font == "Roboto" ) {
         $font_weights = array(
-            '100' => 'Thin',
+            '100'       => 'Thin',
             '100italic' => 'Thin Italic',
-            '300' => 'Light',
+            '300'       => 'Light',
             '300italic' => 'Light Italic',
-            'regular' => 'Regular',
-            'italic' => 'Italic',
-            '500' => 'Medium',
+            'regular'   => 'Regular',
+            'italic'    => 'Italic',
+            '500'       => 'Medium',
             '500italic' => 'Medium Italic',
-            '700' => 'Bold',
+            '700'       => 'Bold',
             '700italic' => 'Bold Italic',
-            '900' => 'Ultra-Bold',
+            '900'       => 'Ultra-Bold',
             '900italic' => 'Ultra-Bold Italic',
         );
-    }
-    elseif($selected_font == "Lato"){
+    } elseif ( $current_font == "Lato" ) {
         $font_weights = array(
-            '100' => 'Thin',
+            '100'       => 'Thin',
             '100italic' => 'Thin Italic',
-            '300' => 'Light',
+            '300'       => 'Light',
             '300italic' => 'Light Italic',
-            'regular' => 'Regular',
-            'italic' => 'Italic',
-            '700' => 'Bold',
+            'regular'   => 'Regular',
+            'italic'    => 'Italic',
+            '700'       => 'Bold',
             '700italic' => 'Bold Italic',
-            '900' => 'Ultra-Bold',
+            '900'       => 'Ultra-Bold',
             '900italic' => 'Ultra-Bold Italic',
         );
-    }
-    elseif($selected_font == "Droid Serif"){
+    } elseif ( $current_font == "Droid Serif" ) {
         $font_weights = array(
-            'regular' => 'Regular',
-            'italic' => 'Italic',
-            '700' => 'Bold',
+            'regular'   => 'Regular',
+            'italic'    => 'Italic',
+            '700'       => 'Bold',
             '700italic' => 'Bold Italic',
         );
-    }
-    elseif($selected_font == "Roboto Slab"){
+    } elseif ( $current_font == "Roboto Slab" ) {
         $font_weights = array(
-            '100' => 'Thin',
-            '300' => 'Light',
+            '100'     => 'Thin',
+            '300'     => 'Light',
             'regular' => 'Regular',
-            '700' => 'Bold',
+            '700'     => 'Bold',
         );
     }
 

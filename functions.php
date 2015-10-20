@@ -445,17 +445,18 @@ function ct_ignite_change_font(){
     // get the current font
     $font = get_theme_mod('ct_ignite_font_family_settings');
 
+    // get the current font weight
+    $font_weight = get_theme_mod('ct_ignite_font_weight_settings');
+
     // if it's the default do nothing, otherwise...
-    if($font != "Lusitana" && !empty($font)){
+    if ( $font != 'Lusitana' && !empty( $font ) ) {
 
-        // get the current font weight
-        $font_weight = get_theme_mod('ct_ignite_font_weight_settings');
-
-        // check if font style is italic (needs double '==' b/c position may be '0')
-        if(strpos($font_weight, 'italic') !== false){
+        // check if font style contains 'italic'
+        // can't check if true because answer could be '0'
+        if ( strpos( $font_weight, 'italic' ) !== false ){
 
             // if weight is simply italic, set weight to 400
-            if($font_weight == 'italic'){
+            if( $font_weight == 'italic' ){
                 $font_weight_css = 400;
             }
             // otherwise, remove 'italic' from weight and use integer (ex. 600italic -> 600)
@@ -485,16 +486,54 @@ function ct_ignite_change_font(){
         // deregister the default call to Google Fonts
         wp_deregister_style('ct-ignite-google-fonts');
 
+        $fonts_url = ct_ignite_format_font_request( $font );
+
         // register the new font
-        wp_register_style( 'ct-ignite-google-fonts', '//fonts.googleapis.com/css?family=' . $font . ':' . $font_weight . '');
+        wp_register_style( 'ct-ignite-google-fonts', $fonts_url );
 
         // enqueue the new GF stylesheet on the front-end
-        if( !is_admin()){
-            wp_enqueue_style('ct-ignite-google-fonts');
-        }
+        wp_enqueue_style('ct-ignite-google-fonts');
     }
 }
 add_action('wp_enqueue_scripts', 'ct_ignite_change_font', 20);
+
+// used to format GF request (ajax and non-ajax)
+function ct_ignite_format_font_request( $font ) {
+
+    // get array of fonts and their weights
+    $weights = ct_ignite_get_available_font_weights( $font );
+
+    $fonts_url = '';
+
+    if ( is_array( $weights ) && !empty( $weights ) ) {
+
+        // convert to comma-delimited list
+        $weights = implode( ',', $weights );
+
+        // turn 'regular' into '400'
+        $weights = str_replace( 'regular', '400', $weights );
+
+        // replace any spaces with '+'
+        $font = str_replace( ' ', '+', $font );
+
+        // format the font/weight for the request
+        $font_request = $font . ':' . $weights;
+
+        // prepare query args
+        $font_args = array(
+            'family' => $font_request,
+            'subset' => urlencode( 'latin,latin-ext' )
+        );
+
+        // build request url
+        $fonts_url = add_query_arg( $font_args, '//fonts.googleapis.com/css' );
+
+        $fonts_url = apply_filters( 'ignite-font-filter', $fonts_url );
+
+        $fonts_url = esc_url_raw( $fonts_url );
+    }
+    return $fonts_url;
+}
 
 function ct_ignite_background_css(){
 
