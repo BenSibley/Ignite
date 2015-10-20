@@ -94,4 +94,36 @@
         } );
     } );
 
+    /***** Fonts *****/
+
+    wp.customize( 'ct_ignite_font_family_settings', function( value ) {
+        value.bind( function( to ) {
+
+            // change font CSS
+            $('body, input, textarea').css('font-family', to);
+
+            /* load new font */
+
+            // get from localization object
+            ajaxurl = ignite_ajax.ajaxurl;
+
+            // set up data object
+            var data = {
+                action: 'format_font_request',
+                font: to,
+                url: ajaxurl,
+                security: '<?php echo $ajax_nonce; ?>'
+            };
+
+            // post data received from PHP response
+            jQuery.post(ajaxurl, data, function(response) {
+
+                // if valid response
+                if( response ){
+                    $('<link rel="stylesheet" type="text/css" href="'+response+'" >').appendTo('head');
+                }
+            });
+        });
+    } );
+
 } )( jQuery );

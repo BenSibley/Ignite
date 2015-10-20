@@ -541,6 +541,8 @@ function ct_ignite_format_font_request( $font ) {
         return $fonts_url;
     }
 }
+add_action( 'wp_ajax_format_font_request', 'ct_ignite_format_font_request' );
+add_action( 'wp_ajax_nopriv_format_font_request', 'ct_ignite_format_font_request' );
 
 function ct_ignite_background_css(){
 

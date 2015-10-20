@@ -363,7 +363,8 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
         'default'           => 'Lusitana',
         'type'              => 'theme_mod',
         'capability'        => 'edit_theme_options',
-        'sanitize_callback' => 'ct_ignite_sanitize_google_font_family'
+        'sanitize_callback' => 'ct_ignite_sanitize_google_font_family',
+        'transport'         => 'postMessage'
     ) );
 
 	$description_font = sprintf( __('Want more fonts? <a target="_blank" href="%s">Check out Ignite Plus</a>', 'ignite'), $ignite_plus );
