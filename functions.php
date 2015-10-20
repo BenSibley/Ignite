@@ -468,8 +468,8 @@ function ct_ignite_change_font(){
         $css = "
             body, h1, h2, h3, h4, h5, h6, input:not([type='checkbox']):not([type='radio']):not([type='submit']):not([type='file']), input[type='submit'], textarea {
                 font-family: $font;
-                font-weight: $font_weight;
                 font-style: $font_style;
+                font-weight: $font_weight;
             }
         ";
         // output the css
