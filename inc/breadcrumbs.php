@@ -190,7 +190,7 @@ if ( !function_exists( 'ct_ignite_breadcrumbs' ) ) {
 		// Close breadcrumb container
 		$html .= '</div>';
 
-		apply_filters( 'ct_ignite_breadcrumbs_filter', $html );
+		$html = apply_filters( 'ct_ignite_breadcrumbs_filter', $html );
 
 		echo wp_kses_post( $html );
 	}
