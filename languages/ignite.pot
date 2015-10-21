@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Ignite 1.52\n"
+"Project-Id-Version: Ignite 1.53\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2015-10-06 12:32:23+00:00\n"
+"POT-Creation-Date: 2015-10-21 14:46:39+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -49,33 +49,33 @@ msgstr ""
 msgid "Leave a Comment"
 msgstr ""
 
-#: content/further-reading.php:11 inc/deprecated.php:20
-msgid "The Previous Post"
-msgstr ""
-
-#: content/further-reading.php:16 inc/deprecated.php:25
-msgid "The Next Post"
-msgstr ""
-
-#: content/further-reading.php:22 inc/deprecated.php:31
+#: content/further-reading.php:11 inc/deprecated.php:31
 msgid "Previous Post"
 msgstr ""
 
-#: content/further-reading.php:27 content/further-reading.php:39
+#: content/further-reading.php:13 inc/deprecated.php:20
+msgid "The Previous Post"
+msgstr ""
+
+#: content/further-reading.php:20
+msgid "No Older Posts"
+msgstr ""
+
+#: content/further-reading.php:22 content/further-reading.php:48
 #: inc/deprecated.php:36 inc/deprecated.php:48
 msgid "Return to Blog"
 msgstr ""
 
-#: content/further-reading.php:28 inc/deprecated.php:37
-msgid "This is the oldest post"
-msgstr ""
-
-#: content/further-reading.php:34 inc/deprecated.php:43
+#: content/further-reading.php:37 inc/deprecated.php:43
 msgid "Next Post"
 msgstr ""
 
-#: content/further-reading.php:40 inc/deprecated.php:49
-msgid "This is the newest post"
+#: content/further-reading.php:39 inc/deprecated.php:25
+msgid "The Next Post"
+msgstr ""
+
+#: content/further-reading.php:46
+msgid "No Newer Posts"
 msgstr ""
 
 #: content/social-icons.php:37
@@ -182,6 +182,10 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
+#: inc/breadcrumbs.php:184
+msgid "Error 404"
+msgstr ""
+
 #: inc/customizer.php:86
 msgid ""
 "Activate <a target=\"_blank\" href=\"%s\">Ignite Plus</a> to change your "
@@ -260,190 +264,198 @@ msgstr ""
 msgid "Email Address:"
 msgstr ""
 
-#: inc/customizer.php:319
+#: inc/customizer.php:321
 msgid "Layout"
 msgstr ""
 
-#: inc/customizer.php:334
+#: inc/customizer.php:336
 msgid ""
 "Want more layouts? <a target=\"_blank\" href=\"%s\">Check out Ignite "
 "Plus</a>"
 msgstr ""
 
-#: inc/customizer.php:338
+#: inc/customizer.php:340
 msgid "Pick Your Layout:"
 msgstr ""
 
-#: inc/customizer.php:344 inc/customizer.php:827
+#: inc/customizer.php:346 inc/customizer.php:832
 msgid "Right sidebar"
 msgstr ""
 
-#: inc/customizer.php:345 inc/customizer.php:828
+#: inc/customizer.php:347 inc/customizer.php:833
 msgid "Left sidebar"
 msgstr ""
 
-#: inc/customizer.php:353
+#: inc/customizer.php:355
 msgid "Font Family"
 msgstr ""
 
-#: inc/customizer.php:356
+#: inc/customizer.php:358
 msgid "The default font is \"Lusitana\"."
 msgstr ""
 
-#: inc/customizer.php:367
+#: inc/customizer.php:370
 msgid "Want more fonts? <a target=\"_blank\" href=\"%s\">Check out Ignite Plus</a>"
 msgstr ""
 
-#: inc/customizer.php:372
+#: inc/customizer.php:375
 msgid "Site Font Family"
 msgstr ""
 
-#: inc/customizer.php:391
+#: inc/customizer.php:394
 msgid "Font Weight"
 msgstr ""
 
-#: inc/customizer.php:394
+#: inc/customizer.php:397
 msgid ""
 "If you've just changed fonts, please save and refresh the page to update "
 "available weights."
 msgstr ""
 
-#: inc/customizer.php:407
+#: inc/customizer.php:411
 msgid "Site Font Weight"
 msgstr ""
 
-#: inc/customizer.php:416
+#: inc/customizer.php:420
 msgid "Background"
 msgstr ""
 
-#: inc/customizer.php:429
+#: inc/customizer.php:433
 msgid ""
 "Want background textures and images? <a target=\"_blank\" href=\"%s\">Check "
 "out Ignite Plus</a>"
 msgstr ""
 
-#: inc/customizer.php:434
+#: inc/customizer.php:438
 msgid "Background Color"
 msgstr ""
 
-#: inc/customizer.php:446
+#: inc/customizer.php:450
 msgid "Post Meta"
 msgstr ""
 
-#: inc/customizer.php:459
+#: inc/customizer.php:463
 msgid "Show date before posts?"
 msgstr ""
 
-#: inc/customizer.php:464 inc/customizer.php:482 inc/customizer.php:500
-#: inc/customizer.php:518 inc/customizer.php:536 inc/customizer.php:554
-#: inc/customizer.php:695 inc/customizer.php:713 inc/customizer.php:902
+#: inc/customizer.php:468 inc/customizer.php:486 inc/customizer.php:504
+#: inc/customizer.php:522 inc/customizer.php:540 inc/customizer.php:558
+#: inc/customizer.php:700 inc/customizer.php:718 inc/customizer.php:907
 msgid "Show"
 msgstr ""
 
-#: inc/customizer.php:465 inc/customizer.php:483 inc/customizer.php:501
-#: inc/customizer.php:519 inc/customizer.php:537 inc/customizer.php:555
-#: inc/customizer.php:696 inc/customizer.php:714 inc/customizer.php:903
+#: inc/customizer.php:469 inc/customizer.php:487 inc/customizer.php:505
+#: inc/customizer.php:523 inc/customizer.php:541 inc/customizer.php:559
+#: inc/customizer.php:701 inc/customizer.php:719 inc/customizer.php:908
 msgid "Hide"
 msgstr ""
 
-#: inc/customizer.php:477
+#: inc/customizer.php:481
 msgid "Show author before posts?"
 msgstr ""
 
-#: inc/customizer.php:495
+#: inc/customizer.php:499
 msgid "Show categories after posts?"
 msgstr ""
 
-#: inc/customizer.php:513
+#: inc/customizer.php:517
 msgid "Show tags after posts?"
 msgstr ""
 
-#: inc/customizer.php:531
+#: inc/customizer.php:535
 msgid "Show comment count after posts?"
 msgstr ""
 
-#: inc/customizer.php:549
+#: inc/customizer.php:553
 msgid "Show prev/next post links after posts?"
 msgstr ""
 
-#: inc/customizer.php:563
+#: inc/customizer.php:567
 msgid "Comments"
 msgstr ""
 
-#: inc/customizer.php:577
+#: inc/customizer.php:581
 msgid "Show comments on:"
 msgstr ""
 
-#: inc/customizer.php:582 inc/customizer.php:878
+#: inc/customizer.php:586 inc/customizer.php:883
 msgid "Posts"
 msgstr ""
 
-#: inc/customizer.php:583 inc/customizer.php:879
+#: inc/customizer.php:587 inc/customizer.php:884
 msgid "Pages"
 msgstr ""
 
-#: inc/customizer.php:584 inc/customizer.php:880
+#: inc/customizer.php:588 inc/customizer.php:885
 msgid "Attachments"
 msgstr ""
 
-#: inc/customizer.php:585 inc/customizer.php:881
+#: inc/customizer.php:589 inc/customizer.php:886
 msgid "Do not show"
 msgstr ""
 
-#: inc/customizer.php:594
+#: inc/customizer.php:598
 msgid "Footer Text"
 msgstr ""
 
-#: inc/customizer.php:608
+#: inc/customizer.php:612
 msgid "Edit the text in your footer"
 msgstr ""
 
-#: inc/customizer.php:618
+#: inc/customizer.php:622
 msgid "Custom CSS"
 msgstr ""
 
-#: inc/customizer.php:631
+#: inc/customizer.php:636
 msgid "Add Custom CSS Here:"
 msgstr ""
 
-#: inc/customizer.php:641
+#: inc/customizer.php:646
 msgid "Additional Options"
 msgstr ""
 
-#: inc/customizer.php:654
+#: inc/customizer.php:659
 msgid "Show full post on blog?"
 msgstr ""
 
-#: inc/customizer.php:659 inc/customizer.php:677 inc/customizer.php:919
+#: inc/customizer.php:664 inc/customizer.php:682 inc/customizer.php:924
 msgid "Yes"
 msgstr ""
 
-#: inc/customizer.php:660 inc/customizer.php:678 inc/customizer.php:920
+#: inc/customizer.php:665 inc/customizer.php:683 inc/customizer.php:925
 msgid "No"
 msgstr ""
 
-#: inc/customizer.php:672
+#: inc/customizer.php:677
 msgid "Show breadcrumbs?"
 msgstr ""
 
-#: inc/customizer.php:690
+#: inc/customizer.php:695
 msgid "Show post author info after posts?"
 msgstr ""
 
-#: inc/customizer.php:708
+#: inc/customizer.php:713
 msgid "Add icon to parent menu items?"
 msgstr ""
 
-#: inc/customizer.php:742
+#: inc/customizer.php:747
 msgid "Colors"
 msgstr ""
 
-#: inc/customizer.php:764
+#: inc/customizer.php:769
 msgid "Header Image"
 msgstr ""
 
-#: inc/customizer.php:786
+#: inc/customizer.php:791
 msgid "Navigation Style"
+msgstr ""
+
+#: inc/deprecated.php:37
+msgid "This is the oldest post"
+msgstr ""
+
+#: inc/deprecated.php:49
+msgid "This is the newest post"
 msgstr ""
 
 #: inc/widgets/image_widget.php:15
@@ -478,17 +490,17 @@ msgstr ""
 msgid "Link (optional)"
 msgstr ""
 
-#: search.php:11
+#: search.php:10
 msgid "%d search result for \"%s\""
 msgid_plural "%d search results for \"%s\""
 msgstr[0] ""
 msgstr[1] ""
 
-#: search.php:13
+#: search.php:12
 msgid "No search results for \"%s\""
 msgstr ""
 
-#: search.php:38
+#: search.php:37
 msgid "Can't find what you're looking for?  Try refining your search:"
 msgstr ""
 
