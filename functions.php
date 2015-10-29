@@ -133,21 +133,21 @@ if( ! function_exists( 'ct_ignite_update_fields' ) ) {
 
         $fields['author'] =
             '<p class="comment-form-author">
-                <label class="screen-reader-text">' . __( 'Your Name', 'ignite' ) . '</label>
+                <label for="author" class="screen-reader-text">' . __( 'Your Name', 'ignite' ) . '</label>
                 <input placeholder="' . __( 'Your Name', 'ignite' ) . $label . '" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
             '" size="30"' . $aria_req . ' />
             </p>';
 
         $fields['email'] =
             '<p class="comment-form-email">
-                <label class="screen-reader-text">' . __( 'Your Email', 'ignite' ) . '</label>
+                <label for="email" class="screen-reader-text">' . __( 'Your Email', 'ignite' ) . '</label>
                 <input placeholder="' . __( 'Your Email', 'ignite' ) . $label . '" id="email" name="email" type="email" value="' . esc_attr( $commenter['comment_author_email'] ) .
             '" size="30"' . $aria_req . ' />
             </p>';
 
         $fields['url'] =
             '<p class="comment-form-url">
-                <label class="screen-reader-text">' . __( 'Your Website URL', 'ignite' ) . '</label>
+                <label for="url" class="screen-reader-text">' . __( 'Your Website URL', 'ignite' ) . '</label>
                 <input placeholder="' . __( 'Your URL', 'ignite' ) . ' (optional)" id="url" name="url" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) .
             '" size="30" />
                 </p>';
@@ -162,7 +162,7 @@ if( ! function_exists( 'ct_ignite_update_comment_field' ) ) {
 
         $comment_field =
             '<p class="comment-form-comment">
-                <label class="screen-reader-text">' . __( 'Your Comment', 'ignite' ) . '</label>
+                <label for="comment" class="screen-reader-text">' . __( 'Your Comment', 'ignite' ) . '</label>
                 <textarea required placeholder="' . __( 'Enter Your Comment', 'ignite' ) . '&#8230;" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>
             </p>';
 
