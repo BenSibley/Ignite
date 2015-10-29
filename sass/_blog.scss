@@ -34,6 +34,21 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
+
+    &.no-object-fit {
+      min-width: 0;
+      min-height: 0;
+      max-width: 100%;
+      max-height: 100%;
+      height: auto;
+      width: auto;
+
+      // positioning
+      top: 50%;
+      right: 50%;
+      left: auto;
+      transform: translateX(50%) translateY(-50%);
+    }
   }
 }
 .excerpt-meta-top {

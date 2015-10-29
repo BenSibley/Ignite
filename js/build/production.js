@@ -553,11 +553,13 @@ jQuery(document).ready(function($){
     menuPositioning();
     showSocialIcons();
     adjustSiteHeight();
+    objectFitAdjustment();
 
     /* check to see if social icons can be displayed on resize */
     $(window).on('resize', function(){
         showSocialIcons();
         menuPositioning();
+        objectFitAdjustment();
 
         if( window.innerWidth > 799 && siteHeader.hasClass('toggled') ) {
             onTap();
@@ -578,7 +580,7 @@ jQuery(document).ready(function($){
 
     // Jetpack infinite scroll event that reloads posts.
     $( document.body ).on( 'post-load', function () {
-
+        objectFitAdjustment();
     } );
 
     // in case user has logo increasing the height of the site-header
@@ -711,13 +713,54 @@ jQuery(document).ready(function($){
         }
     }
 
-
     // adjust height to fit footer into viewport instead of keeping it just out of view
     function adjustSiteHeight() {
 
         var footerHeight = $('.site-footer').outerHeight();
 
         body.css('height', 'calc(100% - ' + footerHeight + 'px)');
+    }
+
+    // mimic cover positioning without using cover
+    function objectFitAdjustment() {
+
+        // if the object-fit property is not supported
+        if( !('object-fit' in document.body.style) ) {
+
+            $('.featured-image').each(function () {
+
+                var image = $(this).children('img').add( $(this).children('a').children('img') );
+
+                image.addClass('no-object-fit');
+
+                // if the image is not tall enough to fill the space
+                if ( image.outerHeight() < $(this).outerHeight()) {
+
+                    // is it also not wide enough?
+                    if ( image.outerWidth() < $(this).outerWidth()) {
+                        image.css({
+                            'min-width': '100%',
+                            'min-height': '100%',
+                            'max-width': 'none',
+                            'max-height': 'none'
+                        });
+                    } else {
+                        image.css({
+                            'height': '100%',
+                            'max-width': 'none'
+                        });
+                    }
+                }
+                // if the image is not wide enough to fill the space
+                else if ( image.outerWidth() < $(this).outerWidth()) {
+
+                    image.css({
+                        'width': '100%',
+                        'max-height': 'none'
+                    });
+                }
+            });
+        }
     }
 });
 
