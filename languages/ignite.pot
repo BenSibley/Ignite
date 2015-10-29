@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Ignite 1.53\n"
+"Project-Id-Version: Ignite 1.54\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2015-10-21 14:46:39+00:00\n"
+"POT-Creation-Date: 2015-10-29 14:46:46+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -500,7 +500,7 @@ msgstr[1] ""
 msgid "No search results for \"%s\""
 msgstr ""
 
-#: search.php:37
+#: search.php:41
 msgid "Can't find what you're looking for?  Try refining your search:"
 msgstr ""
 
