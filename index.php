@@ -2,9 +2,6 @@
 
 <?php
 
-// get user's comment display setting
-$comments_display = get_theme_mod('ct_ignite_comments_setting');
-
 // The loop
 if ( have_posts() ) :
     while (have_posts() ) :
