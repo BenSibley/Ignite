@@ -32,7 +32,7 @@ if( ! function_exists( 'ct_ignite_theme_setup' ) ) {
 
         // adds support for Jetpack infinite scroll feature
         add_theme_support( 'infinite-scroll', array(
-            'container' => 'loop-container',
+            'container' => 'main',
             'footer'    => 'overflow-container'
         ) );
 
@@ -360,14 +360,6 @@ function ct_ignite_post_class_update($classes){
     } else {
         $classes[] = 'entry';
     }
-	// if 3.8 or lower
-	if( version_compare( get_bloginfo('version'), '3.9', '<') ) {
-
-		// add the has-post-thumbnail class
-		if( has_post_thumbnail() ) {
-			$classes[] = 'has-post-thumbnail';
-		}
-	}
 
     return $classes;
 }

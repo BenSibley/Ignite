@@ -10,16 +10,13 @@
   margin: $baseline-height auto;
   padding: $baseline-height 8% $baseline-height * 1.5;
 }
-.excerpt.has-post-thumbnail {
-  padding-top: 0;
-}
 .featured-image {
   position: relative;
   height: 0;
   padding-bottom: 56.5%;
   left: -9.5%;
   width: 119%;
-  margin-bottom: $baseline-height;
+  margin: -$baseline-height 0 $baseline-height 0;
   overflow: hidden;
 
   > a {
@@ -175,7 +172,6 @@
       width: 20%;
     }
   }
-
 }
 
 /* 600px */
@@ -204,15 +200,12 @@
   }
   .excerpt {
     padding: $baseline-height * 1.5 14.333%;
-
-    &.has-post-thumbnail {
-      padding-top: 0;
-    }
   }
   .featured-image {
     left: -20%;
     width: 140%;
     padding-bottom: 66.5%;
+    margin-top: -$baseline-height * 1.5;
   }
 }
 
@@ -231,10 +224,6 @@
   }
   .excerpt {
     padding: $baseline-height * 1.5 13.333%;
-
-    &.has-post-thumbnail {
-      padding-top: 0;
-    }
   }
   .featured-image {
     left: -18%;
@@ -252,9 +241,6 @@
   .excerpt {
     padding-top: $baseline-height * 2;
   }
-  .excerpt.has-post-thumbnail {
-    padding-top: 0;
-  }
   .excerpt-title {
     font-size: 2.625em;
     line-height: 1.143;
@@ -268,6 +254,9 @@
   .excerpt-tags {
     margin-right: $baseline-height * 0.5;
   }
+  .featured-image {
+    margin-top: -$baseline-height * 2;
+  }
 }
 
 /* 1100px */
@@ -279,9 +268,6 @@
   .excerpt {
     margin: $baseline-height * 2 0;
     padding: $baseline-height * 2 12.5% $baseline-height * 1.5;
-  }
-  .excerpt.has-post-thumbnail {
-    padding-top: 0;
   }
   .featured-image {
     left: -16.67%;
