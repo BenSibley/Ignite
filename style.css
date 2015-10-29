@@ -65,6 +65,15 @@ body {
   transition: opacity 0.3s ease;
 }
 
+.loop-container:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
 p {
   margin: 1.5em 0;
 }

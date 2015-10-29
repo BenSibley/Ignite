@@ -40,6 +40,12 @@ body {
     @include transition(opacity 0.3s ease);
   }
 }
+.loop-container {
+
+  &:after {
+    @include clearfix;
+  }
+}
 p {
   margin: $baseline-height 0;
 }
