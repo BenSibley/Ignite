@@ -2,6 +2,25 @@ jQuery(document).ready(function($){
 
     var body = $('body');
     var main = $('#main');
+    var siteHeader = $('#site-header');
+    var menuPrimary = $('#menu-primary');
+    var menuPrimaryItems = $('#menu-primary-items');
+    var tagline = $('#site-description');
+    var menuUnset = $('.menu-unset');
+
+    menuPositioning();
+    showSocialIcons();
+    adjustSiteHeight();
+
+    /* check to see if social icons can be displayed on resize */
+    $(window).on('resize', function(){
+        showSocialIcons();
+        menuPositioning();
+
+        if( window.innerWidth > 799 && siteHeader.hasClass('toggled') ) {
+            onTap();
+        }
+    });
 
     $(".entry-content").fitVids({
         customSelector: 'iframe[src*="dailymotion.com"], iframe[src*="slideshare.net"], iframe[src*="animoto.com"], iframe[src*="blip.tv"], iframe[src*="funnyordie.com"], iframe[src*="hulu.com"], iframe[src*="ted.com"], iframe[src*="wordpress.tv"]'
@@ -9,6 +28,11 @@ jQuery(document).ready(function($){
     $(".excerpt-content").fitVids({
         customSelector: 'iframe[src*="dailymotion.com"], iframe[src*="slideshare.net"], iframe[src*="animoto.com"], iframe[src*="blip.tv"], iframe[src*="funnyordie.com"], iframe[src*="hulu.com"], iframe[src*="ted.com"], iframe[src*="wordpress.tv"]'
     });
+
+    // open primary menu
+    $('#toggle-navigation').bind('click', onTap);
+
+    $(document).on('click', reApplyClosedClass);
 
     // Jetpack infinite scroll event that reloads posts.
     $( document.body ).on( 'post-load', function () {
@@ -19,50 +43,47 @@ jQuery(document).ready(function($){
     function menuPositioning() {
 
         if( window.innerWidth < 800 ) {
-            var headerHeight = $('#site-header').outerHeight();
+            var headerHeight = siteHeader.outerHeight();
 
             // reposition menu slider and remove weird gap
-            $('#menu-primary').css('top', headerHeight - 4 )
+            menuPrimary.css('top', headerHeight - 4 )
         } else {
             // if < 800 and then resized > 800, remove added style
-            $('#menu-primary').removeAttr('style');
+            menuPrimary.removeAttr('style');
         }
     }
-    menuPositioning();
-
-    // no longer using tappy library here b/c doesn't work when loaded asynchronously
-    $('#toggle-navigation').bind('click', onTap);
 
     function onTap() {
         // do work
-        var menuWidth = $('#menu-primary').width();
+        var menuWidth = menuPrimary.width();
         var newMenuHeight = $('#overflow-container').height();
 
-        if ($('#site-header').hasClass('toggled')) {
-            $('#site-header').removeClass('toggled');
-            $('#main').css('transform', 'translateX(' + 0 + 'px)');
+        if ( siteHeader.hasClass('toggled') ) {
+            siteHeader.removeClass('toggled');
+            main.css('transform', 'translateX(' + 0 + 'px)');
             $('.breadcrumbs').css('transform', 'translateX(' + 0 + 'px)');
             $('#sidebar-primary-container').css('transform', 'translateX(' + 0 + 'px)');
             $(window).unbind('scroll');
             // delayed so it isn't seen
             setTimeout(function() {
-                $('#menu-primary').css('height', 'auto');
+                menuPrimary.css('height', 'auto');
             }, 400);
         } else {
-            $('#site-header').addClass('toggled');
-            $('#menu-primary').css('height', newMenuHeight);
-            $('#main').css('transform', 'translateX(' + menuWidth + 'px)');
+            siteHeader.addClass('toggled');
+            menuPrimary.css('height', newMenuHeight);
+            main.css('transform', 'translateX(' + menuWidth + 'px)');
             $('.breadcrumbs').css('transform', 'translateX(' + menuWidth + 'px)');
             $('#sidebar-primary-container').css('transform', 'translateX(' + menuWidth + 'px)');
             $(window).scroll(onScroll);
         }
     }
+
     function onScroll() {
 
-        if($('#menu-primary-items').length){
-            var menuItemsBottom = $('#menu-primary-items').offset().top + $('#menu-primary-items').height();
+        if(menuPrimaryItems.length){
+            var menuItemsBottom = menuPrimaryItems.offset().top + menuPrimaryItems.height();
         } else {
-            var menuItemsBottom = $('.menu-unset').offset().top + $('.menu-unset').height();
+            var menuItemsBottom = menuUnset.offset().top + menuUnset.height();
         }
 
         // keep updating var on scroll
@@ -79,8 +100,8 @@ jQuery(document).ready(function($){
         if( window.innerWidth > 899 ) {
 
             // set menu variable to primary or unset
-            if ($('#menu-primary-items').length) {
-                var menu = $('#menu-primary-items');
+            if (menuPrimaryItems.length) {
+                var menu = menuPrimaryItems;
             } else {
                 var menu = $('.menu-unset ul');
             }
@@ -89,28 +110,28 @@ jQuery(document).ready(function($){
             var menuWidth = menu.width();
 
             // get widths of site header
-            var siteHeaderWidth = $('#site-header').width();
+            var siteHeaderWidth = siteHeader.width();
 
             // get width of the site title/logo container
             var titleInfoWidth = $('#title-info').width();
 
             // get the social icons
-            var socialIcons = $('#menu-primary').find('.social-media-icons');
+            var socialIcons = menuPrimary.find('.social-media-icons');
 
             // if site description is hidden, 0
-            if ($('#site-description').css('display') == 'none') {
+            if (tagline.css('display') == 'none') {
                 var siteDescriptionWidth = 0;
             }
             // else get the width
             else {
-                var siteDescriptionWidth = $('#site-description').width();
+                var siteDescriptionWidth = tagline.width();
             }
 
             // remove visibility classes, so this works on resize
             $(socialIcons).removeClass('visible visible-top');
 
             // multiply # of icons by 68 b/c each is 68px wide
-            var socialIconsWidth = $('#menu-primary').find('.social-media-icons li').length * 26;
+            var socialIconsWidth = menuPrimary.find('.social-media-icons li').length * 26;
 
             /* If site-header has space for social icons + 48 margin + 48 extra margin, show them */
             if ((siteHeaderWidth - menuWidth - titleInfoWidth - siteDescriptionWidth) > socialIconsWidth + 96) {
@@ -124,18 +145,6 @@ jQuery(document).ready(function($){
             }
         }
     }
-    showSocialIcons();
-
-    /* check to see if social icons can be displayed on resize */
-    $(window).on('resize', function(){
-        showSocialIcons();
-        menuPositioning();
-
-        if( window.innerWidth > 799 && $('#site-header').hasClass('toggled') ) {
-            onTap();
-        }
-
-    });
 
     /* allow keyboard access/visibility for dropdown menu items */
     $('.menu-item a, .page_item a').focus(function(){
@@ -159,16 +168,15 @@ jQuery(document).ready(function($){
             container.addClass('closed');
         }
     }
-    $(document).on('click', reApplyClosedClass);
+
 
     // adjust height to fit footer into viewport instead of keeping it just out of view
     function adjustSiteHeight() {
 
         var footerHeight = $('.site-footer').outerHeight();
 
-        $('body').css('height', 'calc(100% - ' + footerHeight + 'px)');
+        body.css('height', 'calc(100% - ' + footerHeight + 'px)');
     }
-    adjustSiteHeight();
 });
 
 // wait to see if a touch event is fired
