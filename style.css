@@ -328,6 +328,11 @@ a img {
     /* none for no scaling */
   }
 }
+.infinite-loader,
+#infinite-handle {
+  clear: both;
+}
+
 .site-header {
   background: white;
   min-height: 72px;
