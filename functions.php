@@ -32,7 +32,7 @@ if( ! function_exists( 'ct_ignite_theme_setup' ) ) {
 
         // adds support for Jetpack infinite scroll feature
         add_theme_support( 'infinite-scroll', array(
-            'container' => 'main',
+            'container' => 'loop-container',
             'footer'    => 'overflow-container'
         ) );
 
