@@ -30,10 +30,10 @@
   > img,
   > a > img {
     position: absolute;
-    top: 50%;
     left: 0;
-    transform: translateY(-50%);
-    min-height: 100%; // stretch if it doesn't fill the area
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
   }
 }
 .excerpt-meta-top {
