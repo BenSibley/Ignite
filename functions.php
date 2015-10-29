@@ -285,9 +285,9 @@ if( ! function_exists( 'ct_ignite_featured_image' ) ) {
         if ( has_post_thumbnail( $post->ID ) ) {
 
             if ( is_singular() ) {
-                $featured_image = '<div class="featured-image">' . get_the_post_thumbnail() . '</div>';
+                $featured_image = '<div class="featured-image">' . get_the_post_thumbnail( $post->ID, 'full' ) . '</div>';
             } else {
-                $featured_image = '<div class="featured-image"><a href="' . get_permalink() . '">' . get_the_title() . get_the_post_thumbnail() . '</a></div>';
+                $featured_image = '<div class="featured-image"><a href="' . get_permalink() . '">' . get_the_title() . get_the_post_thumbnail( $post->ID, 'full' ) . '</a></div>';
             }
         }
         if( $featured_image ) {
