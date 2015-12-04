@@ -10,7 +10,11 @@
 
 <footer class="site-footer" role="contentinfo">
     <h3><a href="<?php echo esc_url(home_url()); ?>"><?php bloginfo('title'); ?></a></h3>
-    <span><?php bloginfo('description'); ?></span>
+    <?php
+    if ( get_bloginfo('description') ) {
+        echo '<span class="tagline">' . get_bloginfo("description") . '</span>';
+    }
+    ?>
     <div class="design-credit">
         <span>
             <?php
