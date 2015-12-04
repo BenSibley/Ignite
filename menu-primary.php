@@ -4,7 +4,7 @@
 
 	<?php
 		if ( get_bloginfo('description') ) {
-			echo '<p id="site-description">' . get_bloginfo("description") . '</p>';
+			echo '<p id="site-description" class="tagline">' . get_bloginfo("description") . '</p>';
 		}
 	?>
 

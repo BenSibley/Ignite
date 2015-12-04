@@ -8,7 +8,7 @@
 
 </div> <!-- .overflow-container -->
 
-<footer class="site-footer" role="contentinfo">
+<footer id="site-footer" class="site-footer" role="contentinfo">
     <h3><a href="<?php echo esc_url(home_url()); ?>"><?php bloginfo('title'); ?></a></h3>
     <?php
     if ( get_bloginfo('description') ) {

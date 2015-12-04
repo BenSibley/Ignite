@@ -22,9 +22,14 @@
     // Tagline
     wp.customize( 'blogdescription', function( value ) {
         value.bind( function( to ) {
-            var tagline = $('#site-description');
+            var tagline = $('.tagline');
             if( tagline.length == 0 ) {
-                $('#menu-primary').prepend('<p id="site-description"></p>');
+                $('#menu-primary').prepend('<p id="site-description" class="tagline"></p>');
+                if ( $('#menu-secondary').length > 0 ) {
+                    $('#menu-secondary').after('<span class="tagline"></span>');
+                } else {
+                    $('#site-footer').children('h3').after('<span class="tagline"></span>');
+                }
             }
             tagline.text( to );
         } );
