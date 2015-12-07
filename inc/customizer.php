@@ -729,11 +729,25 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
     // control - excerpt length
     $wp_customize->add_control( new ct_ignite_number_input_control(
         $wp_customize, 'ct_ignite_excerpt_length_settings', array(
-            'label' => 'Word count in automatic excerpts',
-            'section' => 'ct-additional-options',
+            'label'    => 'Word count in automatic excerpts',
+            'section'  => 'ct-additional-options',
             'settings' => 'ct_ignite_excerpt_length_settings',
-            'type' => 'number',
+            'type'     => 'number',
         )
+    ) );
+    // Read More text - setting
+    $wp_customize->add_setting( 'ct_ignite_read_more_text', array(
+        'default'           => __('Read More', 'ignite'),
+        'type'              => 'theme_mod',
+        'capability'        => 'edit_theme_options',
+        'sanitize_callback' => 'ct_ignite_sanitize_text'
+    ) );
+    // Read More text - control
+    $wp_customize->add_control( 'ct_ignite_read_more_text', array(
+        'label'          => __( 'Read More button text', 'ignite' ),
+        'section'        => 'ct-additional-options',
+        'settings'       => 'ct_ignite_read_more_text',
+        'type'           => 'text'
     ) );
 
 	/*
@@ -930,6 +944,10 @@ function ct_ignite_sanitize_yes_no_setting($input){
     } else {
         return '';
     }
+}
+
+function ct_ignite_sanitize_text( $input ) {
+    return wp_kses_post( force_balance_tags( $input ) );
 }
 
 /***** Helper Functions *****/
