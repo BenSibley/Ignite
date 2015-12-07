@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Ignite 1.54\n"
+"Project-Id-Version: Ignite 1.55\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2015-10-29 14:46:46+00:00\n"
+"POT-Creation-Date: 2015-12-07 15:36:26+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -79,11 +79,7 @@ msgid "No Newer Posts"
 msgstr ""
 
 #: content/social-icons.php:37
-msgid "email icon"
-msgstr ""
-
-#: content/social-icons.php:43
-msgid "%s icon"
+msgid "email"
 msgstr ""
 
 #: content/tag-links.php:11 inc/deprecated.php:86
@@ -116,7 +112,7 @@ msgstr ""
 msgid "Pages:"
 msgstr ""
 
-#: footer.php:27
+#: footer.php:31
 msgid ""
 "<a target=\"_blank\" href=\"%s\">Ignite WordPress Theme</a> by Compete "
 "Themes."
@@ -174,7 +170,7 @@ msgstr ""
 msgid "Enter Your Comment"
 msgstr ""
 
-#: functions.php:204 functions.php:210 functions.php:221
+#: functions.php:685 inc/customizer.php:740
 msgid "Read More"
 msgstr ""
 
@@ -278,11 +274,11 @@ msgstr ""
 msgid "Pick Your Layout:"
 msgstr ""
 
-#: inc/customizer.php:346 inc/customizer.php:832
+#: inc/customizer.php:346 inc/customizer.php:846
 msgid "Right sidebar"
 msgstr ""
 
-#: inc/customizer.php:347 inc/customizer.php:833
+#: inc/customizer.php:347 inc/customizer.php:847
 msgid "Left sidebar"
 msgstr ""
 
@@ -340,13 +336,13 @@ msgstr ""
 
 #: inc/customizer.php:468 inc/customizer.php:486 inc/customizer.php:504
 #: inc/customizer.php:522 inc/customizer.php:540 inc/customizer.php:558
-#: inc/customizer.php:700 inc/customizer.php:718 inc/customizer.php:907
+#: inc/customizer.php:700 inc/customizer.php:718 inc/customizer.php:921
 msgid "Show"
 msgstr ""
 
 #: inc/customizer.php:469 inc/customizer.php:487 inc/customizer.php:505
 #: inc/customizer.php:523 inc/customizer.php:541 inc/customizer.php:559
-#: inc/customizer.php:701 inc/customizer.php:719 inc/customizer.php:908
+#: inc/customizer.php:701 inc/customizer.php:719 inc/customizer.php:922
 msgid "Hide"
 msgstr ""
 
@@ -378,19 +374,19 @@ msgstr ""
 msgid "Show comments on:"
 msgstr ""
 
-#: inc/customizer.php:586 inc/customizer.php:883
+#: inc/customizer.php:586 inc/customizer.php:897
 msgid "Posts"
 msgstr ""
 
-#: inc/customizer.php:587 inc/customizer.php:884
+#: inc/customizer.php:587 inc/customizer.php:898
 msgid "Pages"
 msgstr ""
 
-#: inc/customizer.php:588 inc/customizer.php:885
+#: inc/customizer.php:588 inc/customizer.php:899
 msgid "Attachments"
 msgstr ""
 
-#: inc/customizer.php:589 inc/customizer.php:886
+#: inc/customizer.php:589 inc/customizer.php:900
 msgid "Do not show"
 msgstr ""
 
@@ -418,11 +414,11 @@ msgstr ""
 msgid "Show full post on blog?"
 msgstr ""
 
-#: inc/customizer.php:664 inc/customizer.php:682 inc/customizer.php:924
+#: inc/customizer.php:664 inc/customizer.php:682 inc/customizer.php:938
 msgid "Yes"
 msgstr ""
 
-#: inc/customizer.php:665 inc/customizer.php:683 inc/customizer.php:925
+#: inc/customizer.php:665 inc/customizer.php:683 inc/customizer.php:939
 msgid "No"
 msgstr ""
 
@@ -438,15 +434,23 @@ msgstr ""
 msgid "Add icon to parent menu items?"
 msgstr ""
 
+#: inc/customizer.php:732
+msgid "Word count in automatic excerpts"
+msgstr ""
+
 #: inc/customizer.php:747
+msgid "Read More button text"
+msgstr ""
+
+#: inc/customizer.php:761
 msgid "Colors"
 msgstr ""
 
-#: inc/customizer.php:769
+#: inc/customizer.php:783
 msgid "Header Image"
 msgstr ""
 
-#: inc/customizer.php:791
+#: inc/customizer.php:805
 msgid "Navigation Style"
 msgstr ""
 
