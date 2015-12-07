@@ -196,18 +196,20 @@ if( ! function_exists( 'ct_ignite_excerpt' ) ) {
         // check for the more tag
         $ismore = strpos( $post->post_content, '<!--more-->' );
 
+        $read_more_text = ct_ignite_read_more_text();
+
         // if show full post is on and not on a search results page
         if ( ( $setting == 'yes' ) && ! is_search() ) {
 
 			// use the read more link if present
 	        if ( $ismore ) {
-		        the_content( __( 'Read More', 'ignite' ) . " <span class='screen-reader-text'>" . get_the_title() . "</span>" );
+		        the_content( wp_kses_post( $read_more_text ) . " <span class='screen-reader-text'>" . get_the_title() . "</span>" );
 	        } else {
 		        the_content();
 	        }
         } // use the read more link if present
         elseif ( $ismore ) {
-            the_content( __( 'Read More', 'ignite' ) . " <span class='screen-reader-text'>" . get_the_title() . "</span>" );
+            the_content( wp_kses_post( $read_more_text ) . " <span class='screen-reader-text'>" . get_the_title() . "</span>" );
         } // otherwise the excerpt is automatic, so output it
         else {
             the_excerpt();
@@ -218,7 +220,10 @@ if( ! function_exists( 'ct_ignite_excerpt' ) ) {
 // filter the link on excerpts
 if( ! function_exists( 'ct_ignite_excerpt_read_more_link' ) ) {
     function ct_ignite_excerpt_read_more_link( $output ) {
-        return $output . "<p><a class='more-link' href='" . get_permalink() . "'>" . __( 'Read More', 'ignite' ) . " <span class='screen-reader-text'>" . get_the_title() . "</span></a></p>";
+
+        $read_more_text = ct_ignite_read_more_text();
+
+        return $output . "<p><a class='more-link' href='" . get_permalink() . "'>" . wp_kses_post( $read_more_text ) . " <span class='screen-reader-text'>" . get_the_title() . "</span></a></p>";
     }
 }
 add_filter('the_excerpt', 'ct_ignite_excerpt_read_more_link');
@@ -669,3 +674,15 @@ add_action( 'wp_head', 'ct_ignite_add_meta_elements', 1 );
 /* Move the WordPress generator to a better priority. */
 remove_action( 'wp_head', 'wp_generator' );
 add_action( 'wp_head', 'wp_generator', 1 );
+
+function ct_ignite_read_more_text(){
+
+    // get user Read More link text
+    $read_more_text = get_theme_mod( 'ct_ignite_read_more_text' );
+
+    // use i18n'ed text if empty
+    if ( empty( $read_more_text ) )
+        $read_more_text = __( 'Read More', 'ignite' );
+
+    return $read_more_text;
+}
