@@ -16,7 +16,7 @@ function ct_ignite_load_scripts_styles() {
 	wp_enqueue_style('font-awesome', get_template_directory_uri() . '/assets/font-awesome/css/font-awesome.min.css');
 
 	// Stylesheet
-	wp_enqueue_style('style', get_stylesheet_uri() );
+	wp_enqueue_style('ct-ignite-style', get_stylesheet_uri() );
 
 	// enqueue comment-reply script only on posts & pages with comments open ( included in WP core )
 	if( is_singular() && comments_open() && get_option('thread_comments') ) {
@@ -31,7 +31,7 @@ add_action('wp_enqueue_scripts', 'ct_ignite_load_scripts_styles' );
 function ct_ignite_enqueue_admin_styles($hook){
 
 	if ( 'appearance_page_ignite-options' == $hook || 'widgets.php' == $hook ) {
-		wp_enqueue_style('admin-style', get_template_directory_uri() . '/styles/admin-style.min.css');
+		wp_enqueue_style('ct-ignite-admin-style', get_template_directory_uri() . '/styles/admin-style.min.css');
 	}
 
 	// if is widgets page
@@ -41,7 +41,7 @@ function ct_ignite_enqueue_admin_styles($hook){
 		wp_enqueue_media();
 
 		// enqueue the JS needed to utilize media uploader on profile image upload
-		wp_enqueue_script('ct-profile-uploader', get_template_directory_uri() . '/js/build/profile-uploader.min.js');
+		wp_enqueue_script('ct-ignite-profile-uploader', get_template_directory_uri() . '/js/build/profile-uploader.min.js');
 	}
 }
 add_action('admin_enqueue_scripts',	'ct_ignite_enqueue_admin_styles' );
@@ -52,10 +52,10 @@ add_action('admin_enqueue_scripts',	'ct_ignite_enqueue_admin_styles' );
 function ct_ignite_enqueue_customizer_scripts(){
 
 	// JS for hiding/showing Customizer options
-	wp_enqueue_script('customizer-js', get_template_directory_uri() . '/js/build/customizer.min.js',array('jquery'),'',true);
+	wp_enqueue_script('ct-ignite-customizer-js', get_template_directory_uri() . '/js/build/customizer.min.js',array('jquery'),'',true);
 
 	// CSS for styling upgrade ad
-	wp_enqueue_style('customizer-styles', get_template_directory_uri() . '/styles/customizer-style.min.css');
+	wp_enqueue_style('ct-ignit-customizer-styles', get_template_directory_uri() . '/styles/customizer-style.min.css');
 }
 add_action('customize_controls_enqueue_scripts','ct_ignite_enqueue_customizer_scripts');
 
