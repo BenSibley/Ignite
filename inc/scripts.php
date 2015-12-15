@@ -5,13 +5,12 @@
  */
 function ct_ignite_load_scripts_styles() {
 
+	// Register first to allow deregistration by fonts functionality
 	wp_register_style( 'ct-ignite-google-fonts', '//fonts.googleapis.com/css?family=Lusitana:400,700');
+	wp_enqueue_style('ct-ignite-google-fonts');
 
 	// main JS file
 	wp_enqueue_script('ct-ignite-production', get_template_directory_uri() . '/js/build/production.min.js#ct_ignite_asyncload', array('jquery'),'', true);
-
-	// Google Fonts
-	wp_enqueue_style('ct-ignite-google-fonts');
 
 	// Font Awesome
 	wp_enqueue_style('font-awesome', get_template_directory_uri() . '/assets/font-awesome/css/font-awesome.min.css');
