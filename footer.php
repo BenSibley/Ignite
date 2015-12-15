@@ -18,19 +18,11 @@
     <div class="design-credit">
         <span>
             <?php
-            /* Get the user's footer text input */
-            $user_footer_text = get_theme_mod('ct_ignite_footer_text_setting');
-
-            /* If it's not empty, output their text */
-            if( ! empty($user_footer_text) ) {
-                echo wp_kses_post( $user_footer_text );
+            $footer_text = get_theme_mod('ct_ignite_footer_text_setting');
+            if( empty( $footer_text ) ) {
+                $footer_text = sprintf( __( '<a target="_blank" href="%s">Ignite WordPress Theme</a> by Compete Themes.', 'ignite' ), 'https://www.competethemes.com/ignite/' );
             }
-            /* Otherwise, output the default text */
-            else {
-                $site_url = 'https://www.competethemes.com/ignite/';
-                $footer_text = sprintf( __( '<a target="_blank" href="%s">Ignite WordPress Theme</a> by Compete Themes.', 'ignite' ), esc_url( $site_url ) );
-                echo wp_kses_post( $footer_text );
-            }
+            echo wp_kses_post( $footer_text );
             ?>
         </span>
     </div>
