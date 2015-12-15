@@ -13,20 +13,6 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 
     /***** Add Custom Controls *****/
 
-    // create textarea control
-    class ct_ignite_Textarea_Control extends WP_Customize_Control {
-        public $type = 'textarea';
-
-        public function render_content() {
-            ?>
-            <label>
-                <span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
-                <textarea rows="8" style="width:100%;" <?php $this->link(); ?>><?php echo esc_textarea( $this->value() ); ?></textarea>
-            </label>
-        <?php
-        }
-    }
-
     // create multi-checkbox/select control
     class ct_ignite_Multi_Checkbox_Control extends WP_Customize_Control {
         public $type = 'multi-checkbox';
@@ -523,12 +509,10 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
         'transport'         => 'postMessage'
     ) );
     // control
-    $wp_customize->add_control( new ct_ignite_Textarea_Control(
-        $wp_customize, 'ct_ignite_footer_text_setting', array(
-            'label'          => __( 'Edit the text in your footer', 'ignite' ),
-            'section'        => 'ct-footer-text',
-            'settings'       => 'ct_ignite_footer_text_setting'
-        )
+    $wp_customize->add_control( 'ct_ignite_footer_text_setting', array(
+        'label'          => __( 'Edit the text in your footer', 'ignite' ),
+        'section'        => 'ct-footer-text',
+        'settings'       => 'ct_ignite_footer_text_setting'
     ) );
 
     /***** Custom CSS *****/
@@ -544,12 +528,10 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
         'transport'         => 'postMessage'
     ) );
     // control
-    $wp_customize->add_control( new ct_ignite_Textarea_Control(
-        $wp_customize, 'ct_ignite_custom_css_setting', array(
-            'label'          => __( 'Add Custom CSS Here:', 'ignite' ),
-            'section'        => 'ct-custom-css',
-            'settings'       => 'ct_ignite_custom_css_setting'
-        )
+    $wp_customize->add_control( 'ct_ignite_custom_css_setting', array(
+        'label'          => __( 'Add Custom CSS Here:', 'ignite' ),
+        'section'        => 'ct-custom-css',
+        'settings'       => 'ct_ignite_custom_css_setting'
     ) );
 
     /***** Additional Options *****/
