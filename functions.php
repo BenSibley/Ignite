@@ -386,7 +386,7 @@ function ct_ignite_logo_positioning_css(){
                 right: auto;
                 top: auto;
         }";
-        wp_add_inline_style('style', $css);
+        wp_add_inline_style('ct-ignite-style', $css);
     }
 }
 add_action('wp_enqueue_scripts','ct_ignite_logo_positioning_css', 20);
@@ -407,7 +407,7 @@ function ct_ignite_logo_size_css(){
                 max-width: " . $max_width . "px;
                 max-height: " . $max_height . "px;
         }";
-        wp_add_inline_style('style', $css);
+        wp_add_inline_style('ct-ignite-style', $css);
     }
 }
 add_action('wp_enqueue_scripts','ct_ignite_logo_size_css', 20);
@@ -419,7 +419,7 @@ function ct_ignite_custom_css_output(){
     /* output custom css */
     if($custom_css) {
         $custom_css = wp_filter_nohtml_kses( $custom_css );
-        wp_add_inline_style('style', $custom_css);
+        wp_add_inline_style('ct-ignite-style', $custom_css);
     }
 }
 add_action('wp_enqueue_scripts','ct_ignite_custom_css_output', 20);
@@ -470,7 +470,7 @@ function ct_ignite_change_font(){
             }
         ";
         // output the css
-        wp_add_inline_style('style', $css);
+        wp_add_inline_style('ct-ignite-style', $css);
 
         // deregister the default call to Google Fonts
         wp_deregister_style('ct-ignite-google-fonts');
@@ -555,7 +555,7 @@ function ct_ignite_background_css(){
                 background: none;
             }
         ";
-        wp_add_inline_style('style', $background_color_css);
+        wp_add_inline_style('ct-ignite-style', $background_color_css);
     }
 
 }

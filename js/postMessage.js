@@ -7,7 +7,7 @@
     var panel = $('html', window.parent.document);
     var body = $('body');
     var siteTitle = $('.site-title');
-    var inlineStyles = $('#style-inline-css');
+    var inlineStyles = $('#ct-ignite-style-inline-css');
     var fontSelectors = "body, h1, h2, h3, h4, h5, h6, input:not([type='checkbox']):not([type='radio']):not([type='submit']):not([type='file']), input[type='submit'], textarea";
 
     // Site title
