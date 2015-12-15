@@ -13,20 +13,6 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 
     /***** Add Custom Controls *****/
 
-    // create url input control
-    class ct_ignite_url_input_control extends WP_Customize_Control {
-        public $type = 'url';
-
-        public function render_content() {
-            ?>
-            <label>
-                <span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
-                <input type="url" <?php $this->link(); ?> value="<?php echo esc_url_raw( $this->value() ); ?>" />
-            </label>
-        <?php
-        }
-    }
-
     // create textarea control
     class ct_ignite_Textarea_Control extends WP_Customize_Control {
         public $type = 'textarea';
@@ -268,12 +254,11 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
                 'sanitize_callback' => 'esc_url_raw'
             ) );
 
-            $wp_customize->add_control( new ct_ignite_url_input_control(
-                $wp_customize, $social_site, array(
-                    'label'   => $label,
-                    'section' => 'ct_ignite_social_settings',
-                    'priority'=> $priority
-                )
+            $wp_customize->add_control( $social_site, array(
+                'label'   => $label,
+                'section' => 'ct_ignite_social_settings',
+                'type'    => 'url',
+                'priority'=> $priority
             ) );
         }
         $priority = $priority + 5;
