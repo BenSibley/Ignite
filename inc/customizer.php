@@ -109,7 +109,6 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 		// Logo panel
 		$wp_customize->add_panel( 'ct_ignite_logo_panel', array(
 			'priority'    => 30,
-			'capability'  => 'edit_theme_options',
 			'title'       => __( 'Logo', 'ignite' ),
 			'description' => __( 'Upload, position, and resize your logo', 'ignite' )
 		) );
@@ -117,7 +116,6 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 		// Font panel
 		$wp_customize->add_panel( 'ct_ignite_font_panel', array(
 			'priority'    => 50,
-			'capability'  => 'edit_theme_options',
 			'title'       => __( 'Font', 'ignite' ),
 			'description' => __( 'Choose a font family and font weight.', 'ignite' )
 		) );
@@ -129,14 +127,10 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 	$wp_customize->add_section( 'ct-ignite-upload', array(
         'title'      => __( 'Logo Upload', 'ignite' ),
         'priority'   => 30,
-        'capability' => 'edit_theme_options',
         'panel'      => 'ct_ignite_logo_panel'
     ) );
 	// setting
 	$wp_customize->add_setting( 'logo_upload', array(
-        'default'           => '',
-        'type'              => 'theme_mod',
-        'capability'        => 'edit_theme_options',
         'sanitize_callback' => 'esc_url_raw',
 		'transport'         => 'postMessage'
     ) );
@@ -146,7 +140,7 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 			$wp_customize, 'logo_image', array(
                 'label'    => __( 'Upload custom logo.', 'ignite' ),
                 'section'  => 'ct-ignite-upload',
-                'settings' => 'logo_upload',
+                'settings' => 'logo_upload'
 			)
 		)
 	);
@@ -157,18 +151,17 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
     $wp_customize->add_section( 'ct-logo-positioning', array(
         'title'      => __( 'Logo Positioning', 'ignite' ),
         'priority'   => 31,
-        'capability' => 'edit_theme_options',
         'panel'      => 'ct_ignite_logo_panel'
     ) );
     // setting - logo positioning top/bottom
     $wp_customize->add_setting( 'logo_positioning_updown_setting', array(
-        'default' => 0,
+        'default'           => 0,
         'sanitize_callback' => 'ct_ignite_sanitize_integer',
-	    'transport'         => 'postMessage'
+        'transport'         => 'postMessage'
     ) );
     // setting - logo positioning left/right
     $wp_customize->add_setting( 'logo_positioning_leftright_setting', array(
-        'default' => 0,
+        'default'           => 0,
         'sanitize_callback' => 'ct_ignite_sanitize_integer',
         'transport'         => 'postMessage'
     ) );
@@ -178,7 +171,7 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
             'label' => __('Up/down', 'ignite'),
             'section' => 'ct-logo-positioning',
             'settings' => 'logo_positioning_updown_setting',
-            'type' => 'number',
+            'type' => 'number'
         )
     ) );
     // control - logo positioning left/right
@@ -187,7 +180,7 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
             'label' => __('Left/right', 'ignite'),
             'section' => 'ct-logo-positioning',
             'settings' => 'logo_positioning_leftright_setting',
-            'type' => 'number',
+            'type' => 'number'
         )
     ) );
 
@@ -197,7 +190,6 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
     $wp_customize->add_section( 'ct-logo-size', array(
         'title'      => __( 'Logo Size', 'ignite' ),
         'priority'   => 32,
-        'capability' => 'edit_theme_options',
         'panel'      => 'ct_ignite_logo_panel'
     ) );
     // setting - logo increase/decrease width
@@ -218,7 +210,7 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
             'label' => __('Increase max-width', 'ignite'),
             'section' => 'ct-logo-size',
             'settings' => 'logo_size_width_setting',
-            'type' => 'number',
+            'type' => 'number'
         )
     ) );
     // control - logo increase/decrease height
@@ -227,7 +219,7 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
             'label' => __('Increase max-height', 'ignite'),
             'section' => 'ct-logo-size',
             'settings' => 'logo_size_height_setting',
-            'type' => 'number',
+            'type' => 'number'
         )
     ) );
 
@@ -251,9 +243,7 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 
         if( $social_site == 'email' ) {
 
-            $wp_customize->add_setting( "$social_site", array(
-                'type'              => 'theme_mod',
-                'capability'        => 'edit_theme_options',
+            $wp_customize->add_setting( $social_site, array(
                 'sanitize_callback' => 'ct_ignite_sanitize_email'
             ) );
 
@@ -296,9 +286,7 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
                 $label = 'PayPal';
             }
 
-            $wp_customize->add_setting( "$social_site", array(
-                'type'              => 'theme_mod',
-                'capability'        => 'edit_theme_options',
+            $wp_customize->add_setting( $social_site, array(
                 'sanitize_callback' => 'esc_url_raw'
             ) );
 
@@ -306,11 +294,10 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
                 $wp_customize, $social_site, array(
                     'label'   => $label,
                     'section' => 'ct_ignite_social_settings',
-                    'priority'=> $priority,
+                    'priority'=> $priority
                 )
             ) );
         }
-        // increment the priority for next site
         $priority = $priority + 5;
     }
 
@@ -319,14 +306,11 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
     // section
     $wp_customize->add_section( 'ct-layout', array(
         'title'      => __( 'Layout', 'ignite' ),
-        'priority'   => 40,
-        'capability' => 'edit_theme_options'
+        'priority'   => 40
     ) );
     // setting
     $wp_customize->add_setting( 'ct_ignite_layout_settings', array(
         'default'           => 'right',
-        'type'              => 'theme_mod',
-        'capability'        => 'edit_theme_options',
         'sanitize_callback' => 'ct_ignite_sanitize_layout_settings',
         'transport'         => 'postMessage'
     ) );
