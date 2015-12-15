@@ -1,7 +1,5 @@
 <?php
 
-// takes user input from the customizer and outputs linked social media icons
-
 $social_sites = ct_ignite_customizer_social_media_array();
 
 // any inputs that aren't empty are stored in $active_sites array
@@ -34,7 +32,7 @@ if(!empty($active_sites)) {
 			?>
 			<li>
 				<a class="email" target="_blank" href="mailto:<?php echo antispambot( is_email( get_theme_mod( $active_site ) ) ); ?>">
-					<i class="fa fa-envelope" title="<?php esc_attr( _e( 'email', 'ignite' ) ); ?>"></i>
+					<i class="fa fa-envelope" title="<?php esc_attr_e( 'email', 'ignite' ); ?>"></i>
 				</a>
 			</li>
 		<?php } else { ?>
