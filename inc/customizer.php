@@ -511,6 +511,7 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
     // control
     $wp_customize->add_control( 'ct_ignite_footer_text_setting', array(
         'label'          => __( 'Edit the text in your footer', 'ignite' ),
+        'type'           => 'textarea',
         'section'        => 'ct-footer-text',
         'settings'       => 'ct_ignite_footer_text_setting'
     ) );
@@ -530,6 +531,7 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
     // control
     $wp_customize->add_control( 'ct_ignite_custom_css_setting', array(
         'label'          => __( 'Add Custom CSS Here:', 'ignite' ),
+        'type'           => 'textarea',
         'section'        => 'ct-custom-css',
         'settings'       => 'ct_ignite_custom_css_setting'
     ) );
