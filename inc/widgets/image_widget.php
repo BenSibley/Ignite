@@ -68,32 +68,16 @@ class ct_ignite_Image extends WP_Widget {
 	public function form( $instance ) {
 
 		/* Image */
-		if ( isset( $instance['image'] ) ) {
-			$image = $instance['image'];
-		} else {
-			$image = 'http://';
-		}
+		$image = isset( $instance['image'] ) ? $instance['image'] : 'http://';
 
 		/* Title */
-		if ( isset( $instance['title'] ) ) {
-			$title = $instance['title'];
-		} else {
-			$title = '';
-		}
+		$title = isset( $instance['title'] ) ? $instance['title'] : '';
 
 		/* Alt text */
-		if ( isset( $instance['alt-text'] ) ) {
-			$alt_text = $instance['alt-text'];
-		} else {
-			$alt_text = '';
-		}
+		$alt_text = isset( $instance['alt-text'] ) ? $instance['alt-text'] : '';
 
 		/* Link */
-		if ( isset( $instance['link'] ) ) {
-			$link = $instance['link'];
-		} else {
-			$link = '';
-		}
+		$link = isset( $instance['link'] ) ? $instance['link'] : '';
 
 		?>
 		<p>

@@ -707,11 +707,7 @@ function ct_ignite_sanitize_layout_settings( $input ) {
 		'left'  => __( 'Left sidebar', 'ignite' ),
 	);
 
-	if ( array_key_exists( $input, $valid ) ) {
-		return $input;
-	} else {
-		return '';
-	}
+	return array_key_exists( $input, $valid ) ? $input : '';
 }
 
 // Sanitize font family
@@ -725,11 +721,7 @@ function ct_ignite_sanitize_google_font_family( $input ) {
 		'Roboto Slab' => 'Roboto Slab'
 	);
 
-	if ( array_key_exists( $input, $valid ) ) {
-		return $input;
-	} else {
-		return '';
-	}
+	return array_key_exists( $input, $valid ) ? $input : '';
 }
 
 // sanitize font weight
@@ -740,11 +732,7 @@ function ct_ignite_sanitize_google_font_weight( $input ) {
 
 	$valid = $font_weights;
 
-	if ( array_key_exists( $input, $valid ) ) {
-		return $input;
-	} else {
-		return '';
-	}
+	return array_key_exists( $input, $valid ) ? $input : '';
 }
 
 /*
@@ -762,13 +750,7 @@ function ct_ignite_sanitize_comments_setting( $input ) {
 
 	// loop through array
 	foreach ( $input as $selection ) {
-
-		// if it's in the valid data, return it
-		if ( array_key_exists( $selection, $valid ) ) {
-			return $input;
-		} else {
-			return '';
-		}
+		return array_key_exists( $selection, $valid ) ? $input : '';
 	}
 }
 
@@ -782,11 +764,7 @@ function ct_ignite_sanitize_show_hide_setting( $input ) {
 		'hide' => __( 'Hide', 'ignite' )
 	);
 
-	if ( array_key_exists( $input, $valid ) ) {
-		return $input;
-	} else {
-		return '';
-	}
+	return array_key_exists( $input, $valid ) ? $input : '';
 }
 
 /*
@@ -799,11 +777,7 @@ function ct_ignite_sanitize_yes_no_setting( $input ) {
 		'no'  => __( 'No', 'ignite' )
 	);
 
-	if ( array_key_exists( $input, $valid ) ) {
-		return $input;
-	} else {
-		return '';
-	}
+	return array_key_exists( $input, $valid ) ? $input : '';
 }
 
 function ct_ignite_sanitize_text( $input ) {
