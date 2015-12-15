@@ -70,28 +70,28 @@ class ct_ignite_Image extends WP_Widget {
 		if ( isset( $instance[ 'image' ] ) ) {
 			$image = $instance[ 'image' ];
 		} else {
-			$image = __( 'http://', 'ignite' );
+			$image = 'http://';
 		}
 
 		/* Title */
 		if ( isset( $instance[ 'title' ] ) ) {
 			$title = $instance[ 'title' ];
 		} else {
-			$title = __( '', 'ignite' );
+			$title = '';
 		}
 
 		/* Alt text */
 		if ( isset( $instance[ 'alt-text' ] ) ) {
 			$alt_text = $instance[ 'alt-text' ];
 		} else {
-			$alt_text = __( '', 'ignite' );
+			$alt_text = '';
 		}
 
 		/* Link */
 		if ( isset( $instance[ 'link' ] ) ) {
 			$link = $instance[ 'link' ];
 		} else {
-			$link = __( '', 'ignite' );
+			$link = '';
 		}
 
 		?>
