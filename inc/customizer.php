@@ -335,20 +335,17 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
     $wp_customize->add_section( 'ct-font-family', array(
         'title'       => __( 'Font Family', 'ignite' ),
         'priority'    => 55,
-        'capability'  => 'edit_theme_options',
         'description' => __('The default font is "Lusitana".', 'ignite'),
         'panel'       => 'ct_ignite_font_panel'
     ) );
     // setting
     $wp_customize->add_setting( 'ct_ignite_font_family_settings', array(
         'default'           => 'Lusitana',
-        'type'              => 'theme_mod',
-        'capability'        => 'edit_theme_options',
         'sanitize_callback' => 'ct_ignite_sanitize_google_font_family',
         'transport'         => 'postMessage'
     ) );
 
-	$description_font = sprintf( __('Want more fonts? <a target="_blank" href="%s">Check out Ignite Plus</a>', 'ignite'), $ignite_plus );
+	$description_font = sprintf( __('Want more fonts? <a target="_blank" href="%s">Check out Ignite Plus</a>', 'ignite'), 'https://www.competethemes.com/ignite-plus/' );
 
     // control
     $wp_customize->add_control( 'ct_ignite_font_family_settings', array(
@@ -374,15 +371,12 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
     $wp_customize->add_section( 'ct-font-weight', array(
         'title'       => __( 'Font Weight', 'ignite' ),
         'priority'    => 56,
-        'capability'  => 'edit_theme_options',
-        'description' => __("If you've just changed fonts, please save and refresh the page to update available weights.", "ignite"),
+        'description' => __("If you've just changed fonts, please save and refresh the page to update available weights.", 'ignite'),
         'panel'       => 'ct_ignite_font_panel'
     ) );
     // setting
     $wp_customize->add_setting( 'ct_ignite_font_weight_settings', array(
         'default'           => 'regular',
-        'type'              => 'theme_mod',
-        'capability'        => 'edit_theme_options',
         'sanitize_callback' => 'ct_ignite_sanitize_google_font_weight',
         'transport'         => 'postMessage'
     ) );
@@ -399,19 +393,16 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
     // section
     $wp_customize->add_section( 'ct-background', array(
         'title'      => __( 'Background', 'ignite' ),
-        'priority'   => 60,
-        'capability' => 'edit_theme_options'
+        'priority'   => 60
     ) );
     // setting
     $wp_customize->add_setting( 'ct_ignite_background_color_setting', array(
         'default'           => '#eeede8',
-        'type'              => 'theme_mod',
-        'capability'        => 'edit_theme_options',
         'sanitize_callback' => 'sanitize_hex_color',
         'transport'         => 'postMessage'
     ) );
 
-	$description_background = sprintf( __('Want background textures and images? <a target="_blank" href="%s">Check out Ignite Plus</a>', 'ignite'), $ignite_plus );
+	$description_background = sprintf( __('Want background textures and images? <a target="_blank" href="%s">Check out Ignite Plus</a>', 'ignite'), 'https://www.competethemes.com/ignite-plus/' );
 
     // control
     $wp_customize->add_control( new WP_Customize_Color_Control(
@@ -420,7 +411,7 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 		    'description' => $description_background,
             'section'     => 'ct-background',
             'settings'    => 'ct_ignite_background_color_setting',
-            'priority'    => 10,
+            'priority'    => 10
         )
     ) );
 
@@ -429,15 +420,12 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
     // section
     $wp_customize->add_section( 'ct-post-meta', array(
         'title'      => __( 'Post Meta', 'ignite' ),
-        'priority'   => 70,
-        'capability' => 'edit_theme_options'
+        'priority'   => 70
     ) );
 	// setting - date
 	$wp_customize->add_setting( 'ct_ignite_post_meta_date_settings', array(
 		'default'           => 'show',
-		'type'              => 'theme_mod',
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'ct_ignite_sanitize_show_hide_setting',
+		'sanitize_callback' => 'ct_ignite_sanitize_show_hide_setting'
 	) );
 	// control - date
 	$wp_customize->add_control( 'ct_ignite_post_meta_date_settings', array(
@@ -453,9 +441,7 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 	// setting - author
 	$wp_customize->add_setting( 'ct_ignite_post_meta_author_settings', array(
 		'default'           => 'show',
-		'type'              => 'theme_mod',
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'ct_ignite_sanitize_show_hide_setting',
+		'sanitize_callback' => 'ct_ignite_sanitize_show_hide_setting'
 	) );
 	// control - author
 	$wp_customize->add_control( 'ct_ignite_post_meta_author_settings', array(
@@ -471,9 +457,7 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
     // setting - category
     $wp_customize->add_setting( 'ct_ignite_post_meta_categories_settings', array(
         'default'           => 'show',
-        'type'              => 'theme_mod',
-        'capability'        => 'edit_theme_options',
-        'sanitize_callback' => 'ct_ignite_sanitize_show_hide_setting',
+        'sanitize_callback' => 'ct_ignite_sanitize_show_hide_setting'
     ) );
     // control - category
     $wp_customize->add_control( 'ct_ignite_post_meta_categories_settings', array(
@@ -489,9 +473,7 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
     // setting - tags
     $wp_customize->add_setting( 'ct_ignite_post_meta_tags_settings', array(
         'default'           => 'show',
-        'type'              => 'theme_mod',
-        'capability'        => 'edit_theme_options',
-        'sanitize_callback' => 'ct_ignite_sanitize_show_hide_setting',
+        'sanitize_callback' => 'ct_ignite_sanitize_show_hide_setting'
     ) );
     // control - tags
     $wp_customize->add_control( 'ct_ignite_post_meta_tags_settings', array(
@@ -507,9 +489,7 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
     // setting - comments
     $wp_customize->add_setting( 'ct_ignite_post_meta_comments_settings', array(
         'default'           => 'hide',
-        'type'              => 'theme_mod',
-        'capability'        => 'edit_theme_options',
-        'sanitize_callback' => 'ct_ignite_sanitize_show_hide_setting',
+        'sanitize_callback' => 'ct_ignite_sanitize_show_hide_setting'
     ) );
     // control - comments
     $wp_customize->add_control( 'ct_ignite_post_meta_comments_settings', array(
@@ -525,9 +505,7 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 	// setting - further reading
 	$wp_customize->add_setting( 'ct_ignite_post_meta_further_reading_settings', array(
 		'default'           => 'show',
-		'type'              => 'theme_mod',
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'ct_ignite_sanitize_show_hide_setting',
+		'sanitize_callback' => 'ct_ignite_sanitize_show_hide_setting'
 	) );
 	// control - further reading
 	$wp_customize->add_control( 'ct_ignite_post_meta_further_reading_settings', array(
@@ -546,15 +524,12 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
     // section
     $wp_customize->add_section( 'ct_ignite_comment_display', array(
         'title'      => __( 'Comments', 'ignite' ),
-        'priority'   => 75,
-        'capability' => 'edit_theme_options'
+        'priority'   => 75
     ) );
     // setting
     $wp_customize->add_setting( 'ct_ignite_comments_setting', array(
         'default'           => array('posts','pages','attachments','none'),
-        'type'              => 'theme_mod',
-        'capability'        => 'edit_theme_options',
-        'sanitize_callback' => 'ct_ignite_sanitize_comments_setting',
+        'sanitize_callback' => 'ct_ignite_sanitize_comments_setting'
     ) );
     // control
     $wp_customize->add_control( new ct_ignite_Multi_Checkbox_Control(
@@ -577,13 +552,10 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
     // section
     $wp_customize->add_section( 'ct-footer-text', array(
         'title'      => __( 'Footer Text', 'ignite' ),
-        'priority'   => 80,
-        'capability' => 'edit_theme_options'
+        'priority'   => 80
     ) );
     // setting
     $wp_customize->add_setting( 'ct_ignite_footer_text_setting', array(
-        'type'              => 'theme_mod',
-        'capability'        => 'edit_theme_options',
         'sanitize_callback' => 'wp_kses_post',
         'transport'         => 'postMessage'
     ) );
@@ -592,7 +564,7 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
         $wp_customize, 'ct_ignite_footer_text_setting', array(
             'label'          => __( 'Edit the text in your footer', 'ignite' ),
             'section'        => 'ct-footer-text',
-            'settings'       => 'ct_ignite_footer_text_setting',
+            'settings'       => 'ct_ignite_footer_text_setting'
         )
     ) );
 
@@ -601,13 +573,10 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
     // section
     $wp_customize->add_section( 'ct-custom-css', array(
         'title'      => __( 'Custom CSS', 'ignite' ),
-        'priority'   => 85,
-        'capability' => 'edit_theme_options'
+        'priority'   => 85
     ) );
     // setting
     $wp_customize->add_setting( 'ct_ignite_custom_css_setting', array(
-        'type'              => 'theme_mod',
-        'capability'        => 'edit_theme_options',
         'sanitize_callback' => 'wp_filter_nohtml_kses',
         'transport'         => 'postMessage'
     ) );
@@ -616,7 +585,7 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
         $wp_customize, 'ct_ignite_custom_css_setting', array(
             'label'          => __( 'Add Custom CSS Here:', 'ignite' ),
             'section'        => 'ct-custom-css',
-            'settings'       => 'ct_ignite_custom_css_setting',
+            'settings'       => 'ct_ignite_custom_css_setting'
         )
     ) );
 
@@ -625,14 +594,11 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
     // section
     $wp_customize->add_section( 'ct-additional-options', array(
         'title'      => __( 'Additional Options', 'ignite' ),
-        'priority'   => 90,
-        'capability' => 'edit_theme_options'
+        'priority'   => 90
     ) );
     // setting - show full post
     $wp_customize->add_setting( 'ct_ignite_show_full_post_setting', array(
         'default'           => 'no',
-        'type'              => 'theme_mod',
-        'capability'        => 'edit_theme_options',
         'sanitize_callback' => 'ct_ignite_sanitize_yes_no_setting',
     ) );
     // control - show full post
@@ -649,9 +615,7 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
     // setting - show/hide breadcrumbs
     $wp_customize->add_setting( 'ct_ignite_show_breadcrumbs_setting', array(
         'default'           => 'yes',
-        'type'              => 'theme_mod',
-        'capability'        => 'edit_theme_options',
-        'sanitize_callback' => 'ct_ignite_sanitize_yes_no_setting',
+        'sanitize_callback' => 'ct_ignite_sanitize_yes_no_setting'
     ) );
     // control - show/hide breadcrumbs
     $wp_customize->add_control( 'ct_ignite_show_breadcrumbs_setting', array(
@@ -667,9 +631,7 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
     // setting - show/hide author meta
     $wp_customize->add_setting( 'ct_ignite_author_meta_settings', array(
         'default'           => 'show',
-        'type'              => 'theme_mod',
-        'capability'        => 'edit_theme_options',
-        'sanitize_callback' => 'ct_ignite_sanitize_show_hide_setting',
+        'sanitize_callback' => 'ct_ignite_sanitize_show_hide_setting'
     ) );
     // control - show/hide author meta
     $wp_customize->add_control( 'ct_ignite_show_author_meta', array(
@@ -685,9 +647,7 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 	// setting - parent menu icon
 	$wp_customize->add_setting( 'ct_ignite_parent_menu_icon_settings', array(
 		'default'           => 'hide',
-		'type'              => 'theme_mod',
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'ct_ignite_sanitize_show_hide_setting',
+		'sanitize_callback' => 'ct_ignite_sanitize_show_hide_setting'
 	) );
 	// control - parent menu icon
 	$wp_customize->add_control( 'ct_ignite_parent_menu_icon_settings', array(
@@ -703,8 +663,6 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
     // setting - excerpt length
     $wp_customize->add_setting( 'ct_ignite_excerpt_length_settings', array(
         'default'           => 30,
-        'type'              => 'theme_mod',
-        'capability'        => 'edit_theme_options',
         'sanitize_callback' => 'absint'
     ) );
     // control - excerpt length
@@ -719,8 +677,6 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
     // Read More text - setting
     $wp_customize->add_setting( 'ct_ignite_read_more_text', array(
         'default'           => __('Read More', 'ignite'),
-        'type'              => 'theme_mod',
-        'capability'        => 'edit_theme_options',
         'sanitize_callback' => 'ct_ignite_sanitize_text'
     ) );
     // Read More text - control
@@ -740,14 +696,11 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 	// section
 	$wp_customize->add_section( 'ignite_colors', array(
 		'title'      => __( 'Colors', 'ignite' ),
-		'priority'   => 35,
-		'capability' => 'edit_theme_options'
+		'priority'   => 35
 	) );
 	// setting
 	$wp_customize->add_setting( 'colors_ad', array(
-		'type'              => 'theme_mod',
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'absint',
+		'sanitize_callback' => 'absint'
 	) );
 	// control
 	$wp_customize->add_control( new ignite_description_color_control(
@@ -762,14 +715,11 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 	// section
 	$wp_customize->add_section( 'ignite_header_image', array(
 		'title'      => __( 'Header Image', 'ignite' ),
-		'priority'   => 34,
-		'capability' => 'edit_theme_options'
+		'priority'   => 34
 	) );
 	// setting
 	$wp_customize->add_setting( 'header_image_ad', array(
-		'type'              => 'theme_mod',
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'absint',
+		'sanitize_callback' => 'absint'
 	) );
 	// control
 	$wp_customize->add_control( new ignite_description_header_image_control(
@@ -784,14 +734,11 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 	// section
 	$wp_customize->add_section( 'ignite_navigation_style', array(
 		'title'      => __( 'Navigation Style', 'ignite' ),
-		'priority'   => 90,
-		'capability' => 'edit_theme_options'
+		'priority'   => 90
 	) );
 	// setting
 	$wp_customize->add_setting( 'navigation_style_ad', array(
-		'type'              => 'theme_mod',
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'absint',
+		'sanitize_callback' => 'absint'
 	) );
 	// control
 	$wp_customize->add_control( new ignite_description_navigation_style_control(
@@ -1002,7 +949,6 @@ function ct_ignite_get_available_font_weights( $current_font = '' ) {
 }
 
 function ct_ignite_customize_preview_js() {
-
     ?>
 	<script>
 		jQuery('#customize-info').prepend('<div class="upgrades-ad"><a href="https://www.competethemes.com/ignite-plus/" target="_blank">View the Ignite Plus Upgrade <span>&rarr;</span></a></div>');
