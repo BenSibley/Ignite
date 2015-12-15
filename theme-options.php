@@ -2,7 +2,7 @@
 
 /* create theme options page */
 function ct_ignite_register_theme_page(){
-add_theme_page( 'Ignite Dashboard', 'Ignite Dashboard', 'edit_theme_options', 'ignite-options', 'ct_ignite_options_content', 'ct_ignite_options_content');
+add_theme_page( __( 'Ignite Dashboard', 'ignite' ), __( 'Ignite Dashboard', 'ignite' ), 'edit_theme_options', 'ignite-options', 'ct_ignite_options_content', 'ct_ignite_options_content');
 }
 add_action( 'admin_menu', 'ct_ignite_register_theme_page' );
 
