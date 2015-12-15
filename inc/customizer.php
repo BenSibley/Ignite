@@ -36,28 +36,12 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
         <?php }
     }
 
-	// create ad controls
-	class ignite_description_color_control extends WP_Customize_Control {
+    class ignite_description_control extends WP_Customize_Control {
 
-		public function render_content() {
-			$link = 'https://www.competethemes.com/ignite-plus/';
-			echo "<p>" . sprintf( __('Activate <a target="_blank" href="%s">Ignite Plus</a> to change your colors.', 'ignite'), $link ) . "</p>";
-		}
-	}
-	class ignite_description_header_image_control extends WP_Customize_Control {
-
-		public function render_content() {
-			$link = 'https://www.competethemes.com/ignite-plus/';
-			echo "<p>" . sprintf( __('Activate <a target="_blank" href="%s">Ignite Plus</a> for advanced header image functionality.', 'ignite'), $link ) . "</p>";
-		}
-	}
-	class ignite_description_navigation_style_control extends WP_Customize_Control {
-
-		public function render_content() {
-			$link = 'https://www.competethemes.com/ignite-plus/';
-			echo "<p>" . sprintf( __('Activate <a target="_blank" href="%s">Ignite Plus</a> to change your menu style.', 'ignite'), $link ) . "</p>";
-		}
-	}
+        public function render_content() {
+            echo $this->description;
+        }
+    }
 
 
     /***** Add Panels *****/
@@ -647,13 +631,14 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 	$wp_customize->add_setting( 'colors_ad', array(
 		'sanitize_callback' => 'absint'
 	) );
-	// control
-	$wp_customize->add_control( new ignite_description_color_control(
-		$wp_customize, 'colors_ad', array(
-			'section'        => 'ignite_colors',
-			'settings'       => 'colors_ad'
-		)
-	) );
+    // control
+    $wp_customize->add_control( new ignite_description_control(
+        $wp_customize, 'colors_ad', array(
+            'description' => sprintf( __( 'Activate <a target="_blank" href="%s">Ignite Plus</a> to change your colors.', 'ignite' ), 'https://www.competethemes.com/ignite-plus/' ),
+            'section'     => 'ignite_colors',
+            'settings'    => 'colors_ad'
+        )
+    ) );
 
 	/***** Header Image *****/
 
@@ -667,12 +652,13 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 		'sanitize_callback' => 'absint'
 	) );
 	// control
-	$wp_customize->add_control( new ignite_description_header_image_control(
-		$wp_customize, 'header_image_ad', array(
-			'section'        => 'ignite_header_image',
-			'settings'       => 'header_image_ad'
-		)
-	) );
+    $wp_customize->add_control( new ignite_description_control(
+        $wp_customize, 'header_image_ad', array(
+            'description' => sprintf( __( 'Activate <a target="_blank" href="%s">Ignite Plus</a> for advanced header image functionality.', 'ignite' ), 'https://www.competethemes.com/ignite-plus/' ),
+            'section'     => 'ignite_header_image',
+            'settings'    => 'header_image_ad'
+        )
+    ) );
 
 	/***** Navigation Style *****/
 
@@ -686,12 +672,13 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 		'sanitize_callback' => 'absint'
 	) );
 	// control
-	$wp_customize->add_control( new ignite_description_navigation_style_control(
-		$wp_customize, 'navigation_style_ad', array(
-			'section'        => 'ignite_navigation_style',
-			'settings'       => 'navigation_style_ad'
-		)
-	) );
+	$wp_customize->add_control( new ignite_description_control(
+        $wp_customize, 'navigation_style_ad', array(
+            'description' => sprintf( __( 'Activate <a target="_blank" href="%s">Ignite Plus</a> to change your menu style.', 'ignite' ), 'https://www.competethemes.com/ignite-plus/' ),
+            'section'     => 'ignite_navigation_style',
+            'settings'    => 'navigation_style_ad'
+        )
+    ) );
 }
 
 /***** Custom Sanitization Functions *****/
