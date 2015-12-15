@@ -13,20 +13,6 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 
     /***** Add Custom Controls *****/
 
-    // create number input control
-    class ct_ignite_number_input_control extends WP_Customize_Control {
-        public $type = 'number';
-
-        public function render_content() {
-            ?>
-            <label>
-                <span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
-                <input type="number" <?php $this->link(); ?> value="<?php echo $this->value(); ?>" />
-            </label>
-        <?php
-        }
-    }
-
     // create url input control
     class ct_ignite_url_input_control extends WP_Customize_Control {
         public $type = 'url';
@@ -166,22 +152,18 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
         'transport'         => 'postMessage'
     ) );
     // control - logo positioning top/bottom
-    $wp_customize->add_control( new ct_ignite_number_input_control(
-        $wp_customize, 'logo_positioning_updown_setting', array(
-            'label' => __('Up/down', 'ignite'),
-            'section' => 'ct-logo-positioning',
-            'settings' => 'logo_positioning_updown_setting',
-            'type' => 'number'
-        )
+    $wp_customize->add_control( 'logo_positioning_updown_setting', array(
+        'label'    => __( 'Up/down', 'ignite' ),
+        'section'  => 'ct-logo-positioning',
+        'settings' => 'logo_positioning_updown_setting',
+        'type'     => 'number'
     ) );
     // control - logo positioning left/right
-    $wp_customize->add_control( new ct_ignite_number_input_control(
-        $wp_customize, 'logo_positioning_leftright_setting', array(
-            'label' => __('Left/right', 'ignite'),
-            'section' => 'ct-logo-positioning',
-            'settings' => 'logo_positioning_leftright_setting',
-            'type' => 'number'
-        )
+    $wp_customize->add_control( 'logo_positioning_leftright_setting', array(
+        'label' => __('Left/right', 'ignite'),
+        'section' => 'ct-logo-positioning',
+        'settings' => 'logo_positioning_leftright_setting',
+        'type' => 'number'
     ) );
 
     /***** Logo Size *****/
@@ -205,22 +187,18 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
         'transport'         => 'postMessage'
     ) );
     // control - logo increase/decrease width
-    $wp_customize->add_control( new ct_ignite_number_input_control(
-        $wp_customize, 'logo_size_width_setting', array(
-            'label' => __('Increase max-width', 'ignite'),
-            'section' => 'ct-logo-size',
-            'settings' => 'logo_size_width_setting',
-            'type' => 'number'
-        )
+    $wp_customize->add_control( 'logo_size_width_setting', array(
+        'label' => __('Increase max-width', 'ignite'),
+        'section' => 'ct-logo-size',
+        'settings' => 'logo_size_width_setting',
+        'type' => 'number'
     ) );
     // control - logo increase/decrease height
-    $wp_customize->add_control( new ct_ignite_number_input_control(
-        $wp_customize, 'logo_size_height_setting', array(
-            'label' => __('Increase max-height', 'ignite'),
-            'section' => 'ct-logo-size',
-            'settings' => 'logo_size_height_setting',
-            'type' => 'number'
-        )
+    $wp_customize->add_control( 'logo_size_height_setting', array(
+        'label' => __('Increase max-height', 'ignite'),
+        'section' => 'ct-logo-size',
+        'settings' => 'logo_size_height_setting',
+        'type' => 'number'
     ) );
 
     /***** Social Media Icons *****/
@@ -666,13 +644,11 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
         'sanitize_callback' => 'absint'
     ) );
     // control - excerpt length
-    $wp_customize->add_control( new ct_ignite_number_input_control(
-        $wp_customize, 'ct_ignite_excerpt_length_settings', array(
-            'label'    => __('Word count in automatic excerpts', 'ignite'),
-            'section'  => 'ct-additional-options',
-            'settings' => 'ct_ignite_excerpt_length_settings',
-            'type'     => 'number'
-        )
+    $wp_customize->add_control( 'ct_ignite_excerpt_length_settings', array(
+        'label'    => __('Word count in automatic excerpts', 'ignite'),
+        'section'  => 'ct-additional-options',
+        'settings' => 'ct_ignite_excerpt_length_settings',
+        'type'     => 'number'
     ) );
     // Read More text - setting
     $wp_customize->add_setting( 'ct_ignite_read_more_text', array(
