@@ -624,33 +624,6 @@ if ( !function_exists( 'ct_ignite_customizer_social_media_array' ) ) {
     }
 }
 
-function ct_ignite_loop_pagination(){
-
-    // don't output if Jetpack infinite scroll is being used
-    if ( class_exists( 'Jetpack' ) && Jetpack::is_module_active( 'infinite-scroll' ) )
-        return;
-
-    global $wp_query;
-
-    // If there's not more than one page, return nothing.
-    if ( 1 >= $wp_query->max_num_pages ) {
-        return;
-    }
-
-    /* Set up some default arguments for the paginate_links() function. */
-    $defaults = array(
-        'base'         => add_query_arg( 'paged', '%#%' ),
-        'format'       => '',
-        'mid_size'     => 1
-    );
-
-    $loop_pagination = '<div class="loop-pagination-container"><nav class="pagination loop-pagination">';
-    $loop_pagination .= paginate_links( $defaults );
-    $loop_pagination .= '</nav></div>';
-
-    return $loop_pagination;
-}
-
 // Adds useful meta tags
 function ct_ignite_add_meta_elements() {
 

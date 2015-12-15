@@ -987,18 +987,18 @@ a img {
   margin-right: 0.625em;
 }
 
-.loop-pagination {
+.pagination {
   background: white;
   padding: 0.75em;
   border-top: solid 2px #e6a117;
   text-align: center;
   margin-bottom: 1.5em;
 }
-.loop-pagination span,
-.loop-pagination a {
+.pagination span,
+.pagination a {
   margin: 0 0.375em;
 }
-.loop-pagination a {
+.pagination a {
   text-decoration: none;
 }
 
@@ -1017,8 +1017,8 @@ a img {
     padding: 1.5em 7.407%;
   }
 
-  .loop-pagination span,
-  .loop-pagination a {
+  .pagination span,
+  .pagination a {
     margin: 0 0.75em;
   }
 }
@@ -1066,7 +1066,7 @@ a img {
     padding-bottom: 64.5%;
   }
 
-  .loop-pagination {
+  .pagination {
     margin-bottom: 3em;
   }
 }

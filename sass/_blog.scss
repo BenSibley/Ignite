@@ -162,7 +162,7 @@
   margin-right: 0.625em;
 }
 
-.loop-pagination {
+.pagination {
   background: white;
   padding: $baseline-height * 0.5;
   border-top: solid 2px $orange;
@@ -196,7 +196,7 @@
   %container-width {
     padding: $baseline-height 7.407%;
   }
-  .loop-pagination {
+  .pagination {
 
     span,
     a {
@@ -245,7 +245,7 @@
     width: 136%;
     padding-bottom: 64.5%;
   }
-  .loop-pagination {
+  .pagination {
     margin-bottom: $baseline-height * 2;
   }
 }

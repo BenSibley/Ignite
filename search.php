@@ -30,7 +30,7 @@
 
 </div>
 
-<?php echo ct_ignite_loop_pagination(); ?>
+<?php echo the_posts_pagination(); ?>
 
 <?php
 // only display bottom search bar if there are search results

@@ -14,10 +14,10 @@
 // include loop pagination except for on bbPress Forum root
 if( function_exists( 'is_bbpress' ) ) {
     if( ! ( is_bbpress() && is_archive() ) ) {
-        echo ct_ignite_loop_pagination();
+        echo the_posts_pagination();
     }
 } else {
-    echo ct_ignite_loop_pagination();
+    echo the_posts_pagination();
 }
 
 get_footer();
