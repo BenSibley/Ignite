@@ -75,7 +75,7 @@ if ( !function_exists( 'ct_ignite_breadcrumbs' ) ) {
 
 				// Add each parent to markup
 				foreach ( $parents as $parent ) {
-					$html .= '<span class="item-parent item-parent-' . esc_attr( $parent ) . '"><a class="bread-parent bread-parent-' . esc_attr( $parent ) . '" href="' . get_permalink( $parent ) . '" title="' . get_the_title( $parent ) . '">' . get_the_title( $parent ) . '</a></span>';
+					$html .= '<span class="item-parent item-parent-' . esc_attr( $parent ) . '"><a class="bread-parent bread-parent-' . esc_attr( $parent ) . '" href="' . esc_url( get_permalink( $parent ) ) . '" title="' . get_the_title( $parent ) . '">' . get_the_title( $parent ) . '</a></span>';
 					$html .= $separator;
 				}
 			}
@@ -91,7 +91,7 @@ if ( !function_exists( 'ct_ignite_breadcrumbs' ) ) {
 			$parent_title = get_the_title( $parent_id );
 
 			// Get the parent post permalink
-			$parent_permalink = get_permalink( $parent_id );
+			$parent_permalink = esc_url( get_permalink( $parent_id ) );
 
 			// Add markup
 			$html .= '<span class="item-parent"><a class="bread-parent" href="' . esc_url( $parent_permalink ) . '" title="' . esc_attr( $parent_title ) . '">' . esc_attr( $parent_title ) . '</a></span>';
