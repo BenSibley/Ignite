@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Adds Image widget.
  */
@@ -18,7 +19,7 @@ class ct_ignite_Image extends WP_Widget {
 		/* Create the widget. */
 		parent::__construct(
 			'ct_ignite_image', // Base ID
-			__('Image','ignite'), // Name
+			__( 'Image', 'ignite' ), // Name
 			$widget_options
 		);
 	}
@@ -28,31 +29,31 @@ class ct_ignite_Image extends WP_Widget {
 	 *
 	 * @see WP_Widget::widget()
 	 *
-	 * @param array $args     Widget arguments.
+	 * @param array $args Widget arguments.
 	 * @param array $instance Saved values from database.
 	 */
 	public function widget( $args, $instance ) {
 
 		/* the sidebar's $before_widget wrapper. */
-		$html =  $args['before_widget'];
+		$html = $args['before_widget'];
 
 		/* If there is a link, link image */
-		if ($instance['link']) {
+		if ( $instance['link'] ) {
 			$html .= "<a href='" . $instance['link'] . "'>";
 		}
 
 		/* If an image was uploaded by the user, display it. */
-		if ($instance['image']) {
-			$html .= "<img title='" . $instance['title'] . "' alt='" . $instance['alt-text'] . "' src='". $instance['image'] ."' />";
+		if ( $instance['image'] ) {
+			$html .= "<img title='" . $instance['title'] . "' alt='" . $instance['alt-text'] . "' src='" . $instance['image'] . "' />";
 		}
 
 		/* If there is a link, close it */
-		if ($instance['link']) {
+		if ( $instance['link'] ) {
 			$html .= "</a>";
 		}
 
 		/* close the widget </section> */
-		$html .=  $args['after_widget'];
+		$html .= $args['after_widget'];
 
 		echo $html;
 	}
@@ -67,53 +68,63 @@ class ct_ignite_Image extends WP_Widget {
 	public function form( $instance ) {
 
 		/* Image */
-		if ( isset( $instance[ 'image' ] ) ) {
-			$image = $instance[ 'image' ];
+		if ( isset( $instance['image'] ) ) {
+			$image = $instance['image'];
 		} else {
 			$image = 'http://';
 		}
 
 		/* Title */
-		if ( isset( $instance[ 'title' ] ) ) {
-			$title = $instance[ 'title' ];
+		if ( isset( $instance['title'] ) ) {
+			$title = $instance['title'];
 		} else {
 			$title = '';
 		}
 
 		/* Alt text */
-		if ( isset( $instance[ 'alt-text' ] ) ) {
-			$alt_text = $instance[ 'alt-text' ];
+		if ( isset( $instance['alt-text'] ) ) {
+			$alt_text = $instance['alt-text'];
 		} else {
 			$alt_text = '';
 		}
 
 		/* Link */
-		if ( isset( $instance[ 'link' ] ) ) {
-			$link = $instance[ 'link' ];
+		if ( isset( $instance['link'] ) ) {
+			$link = $instance['link'];
 		} else {
 			$link = '';
 		}
 
 		?>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'image' ); ?>"><?php _e( 'Image URL:','ignite' ); ?></label>
-			<input class="widefat" id="<?php echo $this->get_field_id( 'image' ); ?>" name="<?php echo $this->get_field_name( 'image' ); ?>" type="text" value="<?php echo esc_url( $image ); ?>">
+			<label for="<?php echo $this->get_field_id( 'image' ); ?>"><?php _e( 'Image URL:', 'ignite' ); ?></label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'image' ); ?>"
+			       name="<?php echo $this->get_field_name( 'image' ); ?>" type="text"
+			       value="<?php echo esc_url( $image ); ?>">
 			<input type='button' class="image-upload button-primary" value="<?php _e( 'Upload Image', 'ignite' ); ?>"/>
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:','ignite' ); ?></label>
-			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
+			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'ignite' ); ?></label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>"
+			       name="<?php echo $this->get_field_name( 'title' ); ?>" type="text"
+			       value="<?php echo esc_attr( $title ); ?>">
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'alt-text' ); ?>"><?php _e( 'Alternate text','ignite' ); ?></label>
-			<input class="widefat" id="<?php echo $this->get_field_id( 'alt-text' ); ?>" name="<?php echo $this->get_field_name( 'alt-text' ); ?>" type="text" value="<?php echo esc_attr( $alt_text ); ?>">
+			<label
+				for="<?php echo $this->get_field_id( 'alt-text' ); ?>"><?php _e( 'Alternate text', 'ignite' ); ?></label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'alt-text' ); ?>"
+			       name="<?php echo $this->get_field_name( 'alt-text' ); ?>" type="text"
+			       value="<?php echo esc_attr( $alt_text ); ?>">
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'link' ); ?>"><?php _e( 'Link (optional)','ignite' ); ?></label>
-			<input class="widefat" id="<?php echo $this->get_field_id( 'link' ); ?>" name="<?php echo $this->get_field_name( 'link' ); ?>" type="text" value="<?php echo esc_url( $link ); ?>">
+			<label
+				for="<?php echo $this->get_field_id( 'link' ); ?>"><?php _e( 'Link (optional)', 'ignite' ); ?></label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'link' ); ?>"
+			       name="<?php echo $this->get_field_name( 'link' ); ?>" type="text"
+			       value="<?php echo esc_url( $link ); ?>">
 		</p>
 
-	<?php
+		<?php
 	}
 
 	/**
@@ -151,4 +162,5 @@ class ct_ignite_Image extends WP_Widget {
 function register_ct_ignite_image_widget() {
 	register_widget( 'ct_ignite_image' );
 }
+
 add_action( 'widgets_init', 'register_ct_ignite_image_widget' );

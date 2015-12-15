@@ -1,7 +1,7 @@
 <?php
 
 // Breadcrumbs
-if ( !function_exists( 'ct_ignite_breadcrumbs' ) ) {
+if ( ! function_exists( 'ct_ignite_breadcrumbs' ) ) {
 	function ct_ignite_breadcrumbs( $args = array() ) {
 
 		// Do not display on the homepage
@@ -29,7 +29,7 @@ if ( !function_exists( 'ct_ignite_breadcrumbs' ) ) {
 		/***** Begin Markup *****/
 
 		// Open the breadcrumbs
-		$html = '<div id="' . esc_attr( $args['breadcrumbs_id'] ) . '" class="' . esc_attr( $args['breadcrumbs_classes']) . '">';
+		$html = '<div id="' . esc_attr( $args['breadcrumbs_id'] ) . '" class="' . esc_attr( $args['breadcrumbs_classes'] ) . '">';
 
 		// Add Homepage link & separator (always present)
 		$html .= '<span class="item-home"><a class="bread-link bread-home" href="' . get_home_url() . '" title="' . esc_attr( $args['home_title'] ) . '">' . esc_attr( $args['home_title'] ) . '</a></span>';
@@ -130,7 +130,7 @@ if ( !function_exists( 'ct_ignite_breadcrumbs' ) ) {
 				$parent_category = get_category( $parent );
 
 				// Get the link to the parent category
-				$category_link = get_category_link($parent);
+				$category_link = get_category_link( $parent );
 
 				// Output the markup for the parent category item
 				$html .= '<span class="item-parent item-parent-' . esc_attr( $parent_category->slug ) . '"><a class="bread-parent bread-parent-' . esc_attr( $parent_category->slug ) . '" href="' . esc_url( $category_link ) . '" title="' . esc_attr( $parent_category->name ) . '">' . esc_attr( $parent_category->name ) . '</a></span>';
@@ -171,7 +171,7 @@ if ( !function_exists( 'ct_ignite_breadcrumbs' ) ) {
 			$custom_tax_name = get_queried_object()->name;
 
 			// Add markup for taxonomy
-			$html .= '<span class="item-current item-archive"><span class="bread-current bread-archive">' . esc_attr($custom_tax_name) . '</span></span>';
+			$html .= '<span class="item-current item-archive"><span class="bread-current bread-archive">' . esc_attr( $custom_tax_name ) . '</span></span>';
 		} // Search
 		elseif ( is_search() ) {
 
@@ -181,10 +181,10 @@ if ( !function_exists( 'ct_ignite_breadcrumbs' ) ) {
 		elseif ( is_404() ) {
 
 			// Add 404 markup
-			$html .= '<span>' . __('Error 404', 'ignite') . '</span>';
+			$html .= '<span>' . __( 'Error 404', 'ignite' ) . '</span>';
 		} // blog when not on homepage
 		elseif ( is_home() ) {
-			$html .= '<span>' . get_the_title( get_option('page_for_posts' ) ) . '</span>';
+			$html .= '<span>' . get_the_title( get_option( 'page_for_posts' ) ) . '</span>';
 		}
 
 		// Close breadcrumb container
