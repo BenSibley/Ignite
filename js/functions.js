@@ -6,12 +6,23 @@ jQuery(document).ready(function($){
     var menuPrimary = $('#menu-primary');
     var menuPrimaryItems = $('#menu-primary-items');
     var tagline = $('#site-description');
+    var socialIcons = menuPrimary.find('.social-media-icons');
     var menuUnset = $('.menu-unset');
+    var menuLinks = $('.menu-item a, .page_item a');
+    var sidebarPrimaryContainer = $('#sidebar-primary-container');
+    var breadcrumbs = $('.breadcrumbs');
 
     menuPositioning();
     showSocialIcons();
     adjustSiteHeight();
     objectFitAdjustment();
+
+    $(".entry-content").fitVids({
+        customSelector: 'iframe[src*="dailymotion.com"], iframe[src*="slideshare.net"], iframe[src*="animoto.com"], iframe[src*="blip.tv"], iframe[src*="funnyordie.com"], iframe[src*="hulu.com"], iframe[src*="ted.com"], iframe[src*="wordpress.tv"]'
+    });
+    $(".excerpt-content").fitVids({
+        customSelector: 'iframe[src*="dailymotion.com"], iframe[src*="slideshare.net"], iframe[src*="animoto.com"], iframe[src*="blip.tv"], iframe[src*="funnyordie.com"], iframe[src*="hulu.com"], iframe[src*="ted.com"], iframe[src*="wordpress.tv"]'
+    });
 
     /* check to see if social icons can be displayed on resize */
     $(window).on('resize', function(){
@@ -24,11 +35,14 @@ jQuery(document).ready(function($){
         }
     });
 
-    $(".entry-content").fitVids({
-        customSelector: 'iframe[src*="dailymotion.com"], iframe[src*="slideshare.net"], iframe[src*="animoto.com"], iframe[src*="blip.tv"], iframe[src*="funnyordie.com"], iframe[src*="hulu.com"], iframe[src*="ted.com"], iframe[src*="wordpress.tv"]'
+    /* allow keyboard access/visibility for dropdown menu items */
+    menuLinks.focus(function(){
+        $(this).parent('li').addClass('focused');
+        $(this).parents('ul').addClass('focused');
     });
-    $(".excerpt-content").fitVids({
-        customSelector: 'iframe[src*="dailymotion.com"], iframe[src*="slideshare.net"], iframe[src*="animoto.com"], iframe[src*="blip.tv"], iframe[src*="funnyordie.com"], iframe[src*="hulu.com"], iframe[src*="ted.com"], iframe[src*="wordpress.tv"]'
+    menuLinks.focusout(function(){
+        $(this).parent('li').removeClass('focused');
+        $(this).parents('ul').removeClass('focused');
     });
 
     // open primary menu
@@ -56,17 +70,17 @@ jQuery(document).ready(function($){
     }
 
     function onTap() {
-        // do work
+
         var menuWidth = menuPrimary.width();
         var newMenuHeight = $('#overflow-container').height();
 
         if ( siteHeader.hasClass('toggled') ) {
             siteHeader.removeClass('toggled');
             main.css('transform', 'translateX(' + 0 + 'px)');
-            $('.breadcrumbs').css('transform', 'translateX(' + 0 + 'px)');
-            $('#sidebar-primary-container').css('transform', 'translateX(' + 0 + 'px)');
+            breadcrumbs.css('transform', 'translateX(' + 0 + 'px)');
+            sidebarPrimaryContainer.css('transform', 'translateX(' + 0 + 'px)');
             $(window).unbind('scroll');
-            // delayed so it isn't seen
+
             setTimeout(function() {
                 menuPrimary.css('height', 'auto');
             }, 400);
@@ -74,8 +88,8 @@ jQuery(document).ready(function($){
             siteHeader.addClass('toggled');
             menuPrimary.css('height', newMenuHeight);
             main.css('transform', 'translateX(' + menuWidth + 'px)');
-            $('.breadcrumbs').css('transform', 'translateX(' + menuWidth + 'px)');
-            $('#sidebar-primary-container').css('transform', 'translateX(' + menuWidth + 'px)');
+            breadcrumbs.css('transform', 'translateX(' + menuWidth + 'px)');
+            sidebarPrimaryContainer.css('transform', 'translateX(' + menuWidth + 'px)');
             $(window).scroll(onScroll);
         }
     }
@@ -117,9 +131,6 @@ jQuery(document).ready(function($){
             // get width of the site title/logo container
             var titleInfoWidth = $('#title-info').width();
 
-            // get the social icons
-            var socialIcons = menuPrimary.find('.social-media-icons');
-
             // if site description is hidden, 0
             if (tagline.css('display') == 'none') {
                 var siteDescriptionWidth = 0;
@@ -130,33 +141,24 @@ jQuery(document).ready(function($){
             }
 
             // remove visibility classes, so this works on resize
-            $(socialIcons).removeClass('visible visible-top');
+            socialIcons.removeClass('visible visible-top');
 
             // multiply # of icons by 68 b/c each is 68px wide
             var socialIconsWidth = menuPrimary.find('.social-media-icons li').length * 26;
 
             /* If site-header has space for social icons + 48 margin + 48 extra margin, show them */
             if ((siteHeaderWidth - menuWidth - titleInfoWidth - siteDescriptionWidth) > socialIconsWidth + 96) {
-                $(socialIcons).addClass('visible');
-                $(menu).removeClass('clear');
+                socialIcons.addClass('visible');
+                menu.removeClass('clear');
             }
             /* If site-header does not have space for everything */
             if ((siteHeaderWidth - menuWidth - titleInfoWidth - siteDescriptionWidth) < socialIconsWidth + 96) {
-                $(socialIcons).addClass('visible-top');
-                $(menu).addClass('clear');
+                socialIcons.addClass('visible-top');
+                menu.addClass('clear');
             }
         }
     }
 
-    /* allow keyboard access/visibility for dropdown menu items */
-    $('.menu-item a, .page_item a').focus(function(){
-        $(this).parent('li').addClass('focused');
-        $(this).parents('ul').addClass('focused');
-    });
-    $('.menu-item a, .page_item a').focusout(function(){
-        $(this).parent('li').removeClass('focused');
-        $(this).parents('ul').removeClass('focused');
-    });
 
     // reapply closed class for touch device usage
     // doesn't have any impact unless 'touchstart' fired
