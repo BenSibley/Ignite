@@ -198,7 +198,6 @@ if ( ! function_exists( 'ct_ignite_new_excerpt_more' ) ) {
 }
 add_filter( 'excerpt_more', 'ct_ignite_new_excerpt_more' );
 
-// change the length of the excerpts
 function ct_ignite_custom_excerpt_length( $length ) {
 
 	$new_excerpt_length = get_theme_mod( 'ct_ignite_excerpt_length_settings' );
@@ -214,25 +213,18 @@ function ct_ignite_custom_excerpt_length( $length ) {
 
 add_filter( 'excerpt_length', 'ct_ignite_custom_excerpt_length', 999 );
 
-// turns of the automatic scrolling to the read more link
 if ( ! function_exists( 'ct_ignite_remove_more_link_scroll' ) ) {
 	function ct_ignite_remove_more_link_scroll( $link ) {
 		$link = preg_replace( '|#more-[0-9]+|', '', $link );
-
 		return $link;
 	}
 }
-
 add_filter( 'the_content_more_link', 'ct_ignite_remove_more_link_scroll' );
 
-// for displaying featured images including mobile versions and default versions
 if ( ! function_exists( 'ct_ignite_featured_image' ) ) {
 	function ct_ignite_featured_image() {
 
-		// get post object
 		global $post;
-
-		// instantiate featured image var
 		$featured_image = '';
 
 		if ( has_post_thumbnail( $post->ID ) ) {
@@ -249,24 +241,22 @@ if ( ! function_exists( 'ct_ignite_featured_image' ) ) {
 	}
 }
 
-// functions to allow styling of post count in widgets
-add_filter( 'get_archives_link', 'ct_ignite_archive_count_add_span' );
 function ct_ignite_archive_count_add_span( $links ) {
 	$links = str_replace( '</a>&nbsp;(', '</a><span>', $links );
 	$links = str_replace( ')', '</span>', $links );
 
 	return $links;
 }
+add_filter( 'get_archives_link', 'ct_ignite_archive_count_add_span' );
 
-add_filter( 'wp_list_categories', 'ct_ignite_category_count_add_span' );
 function ct_ignite_category_count_add_span( $links ) {
 	$links = str_replace( '</a> (', '</a> <span>', $links );
 	$links = str_replace( ')', '</span>', $links );
 
 	return $links;
 }
+add_filter( 'wp_list_categories', 'ct_ignite_category_count_add_span' );
 
-// calls pages for menu if menu not set
 function ct_ignite_wp_page_menu() {
 	wp_page_menu( array( "menu_class" => "menu-unset" ) );
 }
@@ -274,19 +264,14 @@ function ct_ignite_wp_page_menu() {
 function ct_ignite_body_class( $classes ) {
 
 	global $post;
-
-	/* get layout chosen by user */
 	$layout = get_theme_mod( 'ct_ignite_layout_settings' );
 
-	/* if sidebar left layout */
 	if ( $layout == 'left' ) {
 		$classes[] = 'sidebar-left';
 	}
-
 	if ( get_theme_mod( 'ct_ignite_parent_menu_icon_settings' ) == 'show' ) {
 		$classes[] = 'parent-icons';
 	}
-
 	// add all historic singular classes
 	if ( is_singular() ) {
 		$classes[] = 'singular';
@@ -304,7 +289,6 @@ function ct_ignite_body_class( $classes ) {
 
 	return $classes;
 }
-
 add_filter( 'body_class', 'ct_ignite_body_class' );
 
 function ct_ignite_post_class_update( $classes ) {
@@ -319,10 +303,8 @@ function ct_ignite_post_class_update( $classes ) {
 
 	return $classes;
 }
-
 add_filter( 'post_class', 'ct_ignite_post_class_update' );
 
-/* outputs the inline css to position the logo */
 function ct_ignite_logo_positioning_css() {
 
 	$updown    = get_theme_mod( 'logo_positioning_updown_setting' );
@@ -341,10 +323,8 @@ function ct_ignite_logo_positioning_css() {
 		wp_add_inline_style( 'ct-ignite-style', $css );
 	}
 }
-
 add_action( 'wp_enqueue_scripts', 'ct_ignite_logo_positioning_css', 20 );
 
-/* outputs the inline css to position the logo */
 function ct_ignite_logo_size_css() {
 
 	$width  = get_theme_mod( 'logo_size_width_setting' );
@@ -363,14 +343,12 @@ function ct_ignite_logo_size_css() {
 		wp_add_inline_style( 'ct-ignite-style', $css );
 	}
 }
-
 add_action( 'wp_enqueue_scripts', 'ct_ignite_logo_size_css', 20 );
 
 function ct_ignite_custom_css_output() {
 
 	$custom_css = get_theme_mod( 'ct_ignite_custom_css_setting' );
 
-	/* output custom css */
 	if ( $custom_css ) {
 		$custom_css = wp_filter_nohtml_kses( $custom_css );
 		wp_add_inline_style( 'ct-ignite-style', $custom_css );
@@ -384,14 +362,12 @@ function ct_ignite_show_avatars_check( $classes ) {
 }
 add_action( 'comment_class', 'ct_ignite_show_avatars_check' );
 
-// implement fonts based on customizer selection
 function ct_ignite_change_font() {
 
 	$font        = get_theme_mod( 'ct_ignite_font_family_settings' );
 	$font_weight = get_theme_mod( 'ct_ignite_font_weight_settings' );
 	$font_style  = 'normal';
 
-	// if it's not the default or empty
 	if ( $font != 'Lusitana' && ! empty( $font ) ) {
 
 		if ( $font_weight == 'italic' ) {
@@ -404,7 +380,6 @@ function ct_ignite_change_font() {
 			$font_weight = 400;
 		}
 
-		// css to be output
 		$css = "
             body, h1, h2, h3, h4, h5, h6, input:not([type='checkbox']):not([type='radio']):not([type='submit']):not([type='file']), input[type='submit'], textarea {
                 font-family: $font;
@@ -412,66 +387,43 @@ function ct_ignite_change_font() {
                 font-weight: $font_weight;
             }
         ";
-		// output the css
+
 		wp_add_inline_style( 'ct-ignite-style', $css );
 
-		// deregister the default call to Google Fonts
 		wp_deregister_style( 'ct-ignite-google-fonts' );
 
 		$fonts_url = ct_ignite_format_font_request( $font );
 
-		// register the new font
 		wp_register_style( 'ct-ignite-google-fonts', $fonts_url );
-
-		// enqueue the new GF stylesheet on the front-end
 		wp_enqueue_style( 'ct-ignite-google-fonts' );
 	}
 }
-
 add_action( 'wp_enqueue_scripts', 'ct_ignite_change_font', 20 );
 
-// used to format GF request (ajax and non-ajax)
 function ct_ignite_format_font_request( $font ) {
 
-	// by default not an ajax call
-	$ajax = false;
+	$ajax      = false;
+	$weights   = ct_ignite_get_available_font_weights( $font );
+	$fonts_url = '';
 
-	// if is ajax request
 	if ( isset( $_POST['font'] ) ) {
 		$font = $_POST['font'];
 		$ajax = true;
 	}
 
-	// get array of fonts and their weights
-	$weights = ct_ignite_get_available_font_weights( $font );
-
-	$fonts_url = '';
-
 	if ( is_array( $weights ) && ! empty( $weights ) ) {
 
-		// convert to comma-delimited list
-		$weights = implode( ',', $weights );
-
-		// turn 'regular' into '400'
-		$weights = str_replace( 'regular', '400', $weights );
-
-		// replace any spaces with '+'
-		$font = str_replace( ' ', '+', $font );
-
-		// format the font/weight for the request
+		$weights      = implode( ',', $weights );
+		$weights      = str_replace( 'regular', '400', $weights );
+		$font         = str_replace( ' ', '+', $font );
 		$font_request = $font . ':' . $weights;
-
-		// prepare query args
-		$font_args = array(
+		$font_args    = array(
 			'family' => $font_request,
 			'subset' => urlencode( 'latin,latin-ext' )
 		);
 
-		// build request url
 		$fonts_url = add_query_arg( $font_args, '//fonts.googleapis.com/css' );
-
 		$fonts_url = apply_filters( 'ignite-font-filter', $fonts_url );
-
 		$fonts_url = esc_url_raw( $fonts_url );
 	}
 
@@ -482,7 +434,6 @@ function ct_ignite_format_font_request( $font ) {
 		return $fonts_url;
 	}
 }
-
 add_action( 'wp_ajax_format_font_request', 'ct_ignite_format_font_request' );
 add_action( 'wp_ajax_nopriv_format_font_request', 'ct_ignite_format_font_request' );
 
@@ -502,9 +453,7 @@ function ct_ignite_background_css() {
         ";
 		wp_add_inline_style( 'ct-ignite-style', $background_color_css );
 	}
-
 }
-
 add_action( 'wp_enqueue_scripts', 'ct_ignite_background_css', 20 );
 
 if ( ! function_exists( '_wp_render_title_tag' ) ) :
@@ -513,16 +462,12 @@ if ( ! function_exists( '_wp_render_title_tag' ) ) :
 		<title><?php wp_title( ' | ' ); ?></title>
 		<?php
 	}
-
 	add_action( 'wp_head', 'ct_ignite_add_title_tag' );
 endif;
 
-
-// create social media site array
 if ( ! function_exists( 'ct_ignite_customizer_social_media_array' ) ) {
 	function ct_ignite_customizer_social_media_array() {
 
-		// store social site names in array
 		$social_sites = array(
 			'twitter',
 			'facebook',
@@ -571,25 +516,19 @@ if ( ! function_exists( 'ct_ignite_customizer_social_media_array' ) ) {
 	}
 }
 
-// Adds useful meta tags
 function ct_ignite_add_meta_elements() {
 
 	$meta_elements = '';
 
-	/* Charset */
 	$meta_elements .= sprintf( '<meta charset="%s" />' . "\n", get_bloginfo( 'charset' ) );
-
-	/* Viewport */
 	$meta_elements .= '<meta name="viewport" content="width=device-width, initial-scale=1" />' . "\n";
 
-	/* Theme name and current version */
 	$theme    = wp_get_theme( get_template() );
 	$template = sprintf( '<meta name="template" content="%s %s" />' . "\n", esc_attr( $theme->get( 'Name' ) ), esc_attr( $theme->get( 'Version' ) ) );
 	$meta_elements .= $template;
 
 	echo $meta_elements;
 }
-
 add_action( 'wp_head', 'ct_ignite_add_meta_elements', 1 );
 
 /* Move the WordPress generator to a better priority. */
