@@ -146,36 +146,47 @@ if ( ! function_exists( 'ct_ignite_excerpt' ) ) {
 	function ct_ignite_excerpt() {
 
 		global $post;
-		$setting        = get_theme_mod( 'ct_ignite_show_full_post_setting' );
 		$ismore         = strpos( $post->post_content, '<!--more-->' );
-		$read_more_text = ct_ignite_read_more_text();
+		$show_full_post = get_theme_mod( 'ct_ignite_show_full_post_setting' );
+		$read_more_text = get_theme_mod( 'ct_ignite_read_more_text' );
 
-		if ( ( $setting == 'yes' ) && ! is_search() ) {
+		if ( ( $show_full_post == 'yes' ) && ! is_search() ) {
 			if ( $ismore ) {
-				the_content( wp_kses_post( $read_more_text ) . " <span class='screen-reader-text'>" . get_the_title() . "</span>" );
+				// Has to be written this way because i18n text CANNOT be stored in a variable
+				if ( ! empty( $read_more_text ) ) {
+					the_content( $read_more_text . " <span class='screen-reader-text'>" . get_the_title() . "</span>" );
+				} else {
+					the_content( __( 'Read More', 'ignite' ) . " <span class='screen-reader-text'>" . get_the_title() . "</span>" );
+				}
 			} else {
 				the_content();
 			}
 		} elseif ( $ismore ) {
-			the_content( wp_kses_post( $read_more_text ) . " <span class='screen-reader-text'>" . get_the_title() . "</span>" );
+			if ( ! empty( $read_more_text ) ) {
+				the_content( $read_more_text . " <span class='screen-reader-text'>" . get_the_title() . "</span>" );
+			} else {
+				the_content( __( 'Read More', 'ignite' ) . " <span class='screen-reader-text'>" . get_the_title() . "</span>" );
+			}
 		} else {
 			the_excerpt();
 		}
 	}
 }
 
-// filter the link on excerpts
 if ( ! function_exists( 'ct_ignite_excerpt_read_more_link' ) ) {
 	function ct_ignite_excerpt_read_more_link( $output ) {
 
-		$read_more_text = ct_ignite_read_more_text();
+		$read_more_text = get_theme_mod( 'ct_ignite_read_more_text' );
 
-		return $output . "<p><a class='more-link' href='" . esc_url( get_permalink() ) . "'>" . wp_kses_post( $read_more_text ) . " <span class='screen-reader-text'>" . get_the_title() . "</span></a></p>";
+		if ( ! empty( $read_more_text ) ) {
+			return $output . "<p><a class='more-link' href='" . esc_url( get_permalink() ) . "'>" . $read_more_text . " <span class='screen-reader-text'>" . get_the_title() . "</span></a></p>";
+		} else {
+			return $output . "<p><a class='more-link' href='" . esc_url( get_permalink() ) . "'>" . __( 'Read More', 'ignite' ) . " <span class='screen-reader-text'>" . get_the_title() . "</span></a></p>";
+		}
 	}
 }
 add_filter( 'the_excerpt', 'ct_ignite_excerpt_read_more_link' );
 
-// switch [...] to ellipsis on automatic excerpt
 if ( ! function_exists( 'ct_ignite_new_excerpt_more' ) ) {
 	function ct_ignite_new_excerpt_more( $more ) {
 
@@ -584,19 +595,6 @@ add_action( 'wp_head', 'ct_ignite_add_meta_elements', 1 );
 /* Move the WordPress generator to a better priority. */
 remove_action( 'wp_head', 'wp_generator' );
 add_action( 'wp_head', 'wp_generator', 1 );
-
-function ct_ignite_read_more_text() {
-
-	// get user Read More link text
-	$read_more_text = get_theme_mod( 'ct_ignite_read_more_text' );
-
-	// use i18n'ed text if empty
-	if ( empty( $read_more_text ) ) {
-		$read_more_text = __( 'Read More', 'ignite' );
-	}
-
-	return $read_more_text;
-}
 
 function ct_ignite_get_content_template() {
 
