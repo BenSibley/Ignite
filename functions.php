@@ -1,31 +1,15 @@
 <?php
 
-// set the content width
 if ( ! isset( $content_width ) ) {
 	$content_width = 840;
 }
 
-/* Do theme setup on the 'after_setup_theme' hook. */
-add_action( 'after_setup_theme', 'ct_ignite_theme_setup', 10 );
-
-/**
- * Theme setup function.  This function adds support for theme features and defines the default theme
- * actions and filters.
- *
- * @since 1.0
- */
 if ( ! function_exists( 'ct_ignite_theme_setup' ) ) {
 	function ct_ignite_theme_setup() {
 
-		// from WordPress core not theme hybrid
 		add_theme_support( 'automatic-feed-links' );
 		add_theme_support( 'post-thumbnails' );
 		add_theme_support( 'title-tag' );
-
-		/*
-		 * Switch default core markup for search form, comment form, and comments
-		 * to output valid HTML5.
-		 */
 		add_theme_support( 'html5', array(
 			'search-form',
 			'comment-form',
@@ -33,32 +17,24 @@ if ( ! function_exists( 'ct_ignite_theme_setup' ) ) {
 			'gallery',
 			'caption'
 		) );
-
-		// adds support for Jetpack infinite scroll feature
 		add_theme_support( 'infinite-scroll', array(
 			'container' => 'loop-container',
 			'footer'    => 'overflow-container'
 		) );
 
-		// add inc folder files
+		require_once( trailingslashit( get_template_directory() ) . 'theme-options.php' );
 		foreach ( glob( trailingslashit( get_template_directory() ) . 'inc/*.php' ) as $filename ) {
 			include $filename;
 		}
-
-		// add widget folder files
 		foreach ( glob( trailingslashit( get_template_directory() ) . 'inc/widgets/*.php' ) as $filename ) {
 			include $filename;
 		}
 
-		// adds theme options page
-		require_once( trailingslashit( get_template_directory() ) . 'theme-options.php' );
-
-		// load text domain
 		load_theme_textdomain( 'ignite', get_template_directory() . '/languages' );
 	}
 }
+add_action( 'after_setup_theme', 'ct_ignite_theme_setup', 10 );
 
-/* register primary sidebar */
 function ct_ignite_register_sidebar() {
 	register_sidebar( array(
 		'name'          => __( 'Primary Sidebar', 'ignite' ),
@@ -70,22 +46,17 @@ function ct_ignite_register_sidebar() {
 		'after_title'   => '</h2>'
 	) );
 }
-
 add_action( 'widgets_init', 'ct_ignite_register_sidebar' );
 
-// register primary menu
 function ct_ignite_register_menu() {
 	register_nav_menu( 'primary', __( 'Primary', 'ignite' ) );
 }
-
 add_action( 'init', 'ct_ignite_register_menu' );
 
-/* added to customize the comments. Same as default except -> added use of gravatar images for comment authors */
 if ( ! function_exists( 'ct_ignite_customize_comments' ) ) {
 	function ct_ignite_customize_comments( $comment, $args, $depth ) {
 		$GLOBALS['comment'] = $comment;
 		global $post;
-
 		?>
 		<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
 		<article id="comment-<?php comment_ID(); ?>" class="comment">
@@ -117,12 +88,11 @@ if ( ! function_exists( 'ct_ignite_customize_comments' ) ) {
 	}
 }
 
-/* added HTML5 placeholders for each default field */
 if ( ! function_exists( 'ct_ignite_update_fields' ) ) {
 	function ct_ignite_update_fields( $fields ) {
 
 		$commenter = wp_get_current_commenter();
-		$req = get_option( 'require_name_email' );
+		$req       = get_option( 'require_name_email' );
 		$label     = $req ? '*' : ' ' . __( '(optional)', 'ignite' );
 		$aria_req  = $req ? "aria-required='true'" : '';
 
@@ -132,14 +102,12 @@ if ( ! function_exists( 'ct_ignite_update_fields' ) ) {
                 <input placeholder="' . __( 'Your Name', 'ignite' ) . $label . '" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
 			'" size="30" ' . $aria_req . ' />
             </p>';
-
 		$fields['email'] =
 			'<p class="comment-form-email">
                 <label for="email" class="screen-reader-text">' . __( 'Your Email', 'ignite' ) . '</label>
                 <input placeholder="' . __( 'Your Email', 'ignite' ) . $label . '" id="email" name="email" type="email" value="' . esc_attr( $commenter['comment_author_email'] ) .
 			'" size="30" ' . $aria_req . ' />
             </p>';
-
 		$fields['url'] =
 			'<p class="comment-form-url">
                 <label for="url" class="screen-reader-text">' . __( 'Your Website URL', 'ignite' ) . '</label>
@@ -166,47 +134,31 @@ if ( ! function_exists( 'ct_ignite_update_comment_field' ) ) {
 }
 add_filter( 'comment_form_field_comment', 'ct_ignite_update_comment_field' );
 
-// remove allowed tags text after comment form
 if ( ! function_exists( 'ct_ignite_remove_comments_notes_after' ) ) {
 	function ct_ignite_remove_comments_notes_after( $defaults ) {
-
 		$defaults['comment_notes_after'] = '';
-
 		return $defaults;
 	}
 }
-
 add_action( 'comment_form_defaults', 'ct_ignite_remove_comments_notes_after' );
 
-// excerpt handling
 if ( ! function_exists( 'ct_ignite_excerpt' ) ) {
 	function ct_ignite_excerpt() {
 
-		// make post variable available
 		global $post;
-
-		// get the show full post setting
-		$setting = get_theme_mod( 'ct_ignite_show_full_post_setting' );
-
-		// check for the more tag
-		$ismore = strpos( $post->post_content, '<!--more-->' );
-
+		$setting        = get_theme_mod( 'ct_ignite_show_full_post_setting' );
+		$ismore         = strpos( $post->post_content, '<!--more-->' );
 		$read_more_text = ct_ignite_read_more_text();
 
-		// if show full post is on and not on a search results page
 		if ( ( $setting == 'yes' ) && ! is_search() ) {
-
-			// use the read more link if present
 			if ( $ismore ) {
 				the_content( wp_kses_post( $read_more_text ) . " <span class='screen-reader-text'>" . get_the_title() . "</span>" );
 			} else {
 				the_content();
 			}
-		} // use the read more link if present
-		elseif ( $ismore ) {
+		} elseif ( $ismore ) {
 			the_content( wp_kses_post( $read_more_text ) . " <span class='screen-reader-text'>" . get_the_title() . "</span>" );
-		} // otherwise the excerpt is automatic, so output it
-		else {
+		} else {
 			the_excerpt();
 		}
 	}
