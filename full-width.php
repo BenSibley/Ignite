@@ -3,7 +3,6 @@
  * Template Name: Full-width
  */
 
-// get user's comment display setting
 $comments_display = get_theme_mod( 'ct_ignite_comments_setting' );
 
 get_header(); ?>
@@ -14,11 +13,7 @@ get_header(); ?>
 		while ( have_posts() ) :
 			the_post();
 			get_template_part( 'content', 'page' );
-
-			// error prevention
 			if ( is_array( $comments_display ) ) {
-
-				// check for pages as a selected option
 				if ( in_array( 'pages', $comments_display ) ) {
 					comments_template();
 				}

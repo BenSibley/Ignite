@@ -1,21 +1,16 @@
 <?php
 
-/*
- * Front-end scripts
- */
+/***** Front-end *****/
 function ct_ignite_load_scripts_styles() {
 
 	// Register first to allow deregistration by fonts functionality
 	wp_register_style( 'ct-ignite-google-fonts', '//fonts.googleapis.com/css?family=Lusitana:400,700' );
 	wp_enqueue_style( 'ct-ignite-google-fonts' );
 
-	// main JS file
 	wp_enqueue_script( 'ct-ignite-production', get_template_directory_uri() . '/js/build/production.min.js#ct_ignite_asyncload', array( 'jquery' ), '', true );
 
-	// Font Awesome
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/font-awesome/css/font-awesome.min.css' );
 
-	// Stylesheet
 	wp_enqueue_style( 'ct-ignite-style', get_stylesheet_uri() );
 
 	// enqueue comment-reply script only on posts & pages with comments open ( included in WP core )
@@ -23,58 +18,37 @@ function ct_ignite_load_scripts_styles() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-
 add_action( 'wp_enqueue_scripts', 'ct_ignite_load_scripts_styles' );
 
-/*
- * Back-end scripts
- */
+/***** Back-end *****/
 function ct_ignite_enqueue_admin_styles( $hook ) {
 
-	if ( 'appearance_page_ignite-options' == $hook || 'widgets.php' == $hook ) {
+	if ( $hook == 'appearance_page_ignite-options' || $hook == 'widgets.php' ) {
 		wp_enqueue_style( 'ct-ignite-admin-style', get_template_directory_uri() . '/styles/admin-style.min.css' );
 	}
-
-	// if is widgets page
-	if ( 'widgets.php' == $hook ) {
-
+	if ( $hook == 'widgets.php' ) {
 		// Enqueues all scripts, styles, settings, and templates necessary to use all media JavaScript APIs.
 		wp_enqueue_media();
 
-		// enqueue the JS needed to utilize media uploader on profile image upload
 		wp_enqueue_script( 'ct-ignite-profile-uploader', get_template_directory_uri() . '/js/build/profile-uploader.min.js' );
 	}
 }
-
 add_action( 'admin_enqueue_scripts', 'ct_ignite_enqueue_admin_styles' );
 
-/*
- * Customizer scripts
- */
+/***** Customizer *****/
 function ct_ignite_enqueue_customizer_scripts() {
-
-	// JS for hiding/showing Customizer options
 	wp_enqueue_script( 'ct-ignite-customizer-js', get_template_directory_uri() . '/js/build/customizer.min.js', array( 'jquery' ), '', true );
-
-	// CSS for styling upgrade ad
 	wp_enqueue_style( 'ct-ignit-customizer-styles', get_template_directory_uri() . '/styles/customizer-style.min.css' );
 }
-
 add_action( 'customize_controls_enqueue_scripts', 'ct_ignite_enqueue_customizer_scripts' );
 
-/*
- * Script for live updating with customizer options. Has to be loaded separately on customize_preview_init hook
- * transport => postMessage
- */
+/***** Customizer - PostMessage *****/
 function ct_ignite_enqueue_customizer_post_message_scripts() {
-
-	// JS for live updating with customizer input
 	wp_enqueue_script( 'ct-ignite-customizer-post-message-js', get_template_directory_uri() . '/js/build/postMessage.min.js', array( 'jquery' ), '', true );
 	wp_localize_script( 'ct-ignite-customizer-post-message-js', 'ignite_ajax',
 		array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
 
 }
-
 add_action( 'customize_preview_init', 'ct_ignite_enqueue_customizer_post_message_scripts' );
 
 // load scripts asynchronously
@@ -88,5 +62,4 @@ function ct_ignite_add_async_script( $url ) {
 	// if async parameter present, add async attribute
 	return str_replace( '#ct_ignite_asyncload', '', $url ) . "' async='async";
 }
-
 add_filter( 'clean_url', 'ct_ignite_add_async_script', 11, 1 );

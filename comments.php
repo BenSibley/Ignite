@@ -4,24 +4,15 @@ if ( post_password_required() || ( ! have_comments() && ! comments_open() && ! p
 	return;
 }
 
-// get user's comment display setting
+// Get post type & add an "s" to match setting in Customizer
+$post_type        = get_post_type() . 's';
 $comments_display = get_theme_mod( 'ct_ignite_comments_setting' );
 
-/*
- * Get current post type
- * Must maintain options as "postS, pageS, attachmentS", or existing users will need to reset their comment settings :/
- */
-$post_type = get_post_type() . 's';
-
-// error prevention
 if ( is_array( $comments_display ) ) {
-
-	// if the current post type is not included, don't display comments
 	if ( ! in_array( $post_type, $comments_display ) ) {
 		return;
 	}
-} // if not an array, not set so display comments
-
+}
 
 if ( comments_open() ) { ?>
 
@@ -34,7 +25,6 @@ if ( comments_open() ) { ?>
 		<ol class="comment-list">
 			<?php wp_list_comments( array( 'callback' => 'ct_ignite_customize_comments', 'max_depth' => '7' ) ); ?>
 		</ol>
-		<!-- .comment-list -->
 		<?php
 		if ( ( get_option( 'page_comments' ) == 1 ) && ( get_comment_pages_count() > 1 ) ) { ?>
 			<nav class="comment-pagination">
@@ -44,7 +34,7 @@ if ( comments_open() ) { ?>
 			</nav>
 		<?php } ?>
 		<?php comment_form(); ?>
-	</section><!-- #comments -->
+	</section>
 	<?php
 } elseif ( ! comments_open() && have_comments() && pings_open() ) { ?>
 	<section id="comments" class="comments">
@@ -56,7 +46,6 @@ if ( comments_open() ) { ?>
 		<ol class="comment-list">
 			<?php wp_list_comments( array( 'callback' => 'ct_ignite_customize_comments', 'max_depth' => '3' ) ); ?>
 		</ol>
-		<!-- .comment-list -->
 		<?php
 		if ( ( get_option( 'page_comments' ) == 1 ) && ( get_comment_pages_count() > 1 ) ) { ?>
 			<nav class="comment-pagination">
@@ -67,8 +56,8 @@ if ( comments_open() ) { ?>
 		<?php } ?>
 		<p class="comments-closed pings-open">
 			<?php printf( __( 'Comments are closed, but <a href="%s" title="Trackback URL for this post">trackbacks</a> and pingbacks are open.', 'ignite' ), esc_url( get_trackback_url() ) ); ?>
-		</p><!-- .comments-closed .pings-open -->
-	</section><!-- #comments -->
+		</p>
+	</section>
 	<?php
 } elseif ( ! comments_open() && have_comments() ) { ?>
 	<section id="comments" class="comments">
@@ -80,7 +69,6 @@ if ( comments_open() ) { ?>
 		<ol class="comment-list">
 			<?php wp_list_comments( array( 'callback' => 'ct_ignite_customize_comments', 'max_depth' => '3' ) ); ?>
 		</ol>
-		<!-- .comment-list -->
 		<?php
 		if ( ( get_option( 'page_comments' ) == 1 ) && ( get_comment_pages_count() > 1 ) ) { ?>
 			<nav class="comment-pagination">
@@ -91,13 +79,11 @@ if ( comments_open() ) { ?>
 		<?php } ?>
 		<p class="comments-closed">
 			<?php _e( 'Comments are closed.', 'ignite' ); ?>
-		</p><!-- .comments-closed -->
-	</section><!-- #comments -->
+		</p>
+	</section>
 	<?php
 } else { ?>
-
 	<p class="comments-closed">
 		<?php _e( 'Comments are closed.', 'ignite' ); ?>
-	</p><!-- .comments-closed -->
-
+	</p>
 <?php } ?>

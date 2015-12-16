@@ -1,10 +1,10 @@
-</div> <!-- .main -->
+</div><!-- .main -->
 <?php
 if ( ! is_page_template( 'full-width.php' ) ) {
 	get_sidebar( 'primary' );
 }
 ?>
-</div> <!-- .overflow-container -->
+</div><!-- .overflow-container -->
 
 <footer id="site-footer" class="site-footer" role="contentinfo">
 	<h3>
