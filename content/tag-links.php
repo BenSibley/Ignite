@@ -1,6 +1,8 @@
 <?php
 
-// Outputs the tags the post used with their names hyperlinked to their permalink
+if ( get_theme_mod( 'ct_ignite_post_meta_tags_settings' ) == 'hide' ) {
+	return;
+}
 
 $tags      = get_the_tags( $post->ID );
 $separator = ' ';

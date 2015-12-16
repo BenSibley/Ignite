@@ -1,7 +1,8 @@
 <?php
 
-// Outputs the categories the post was included in with their names hyperlinked to their permalink
-// separator removed so links site tightly against each other
+if ( get_theme_mod( 'ct_ignite_post_meta_categories_settings' ) == 'hide' ) {
+	return;
+}
 
 $categories = get_the_category( $post->ID );
 $separator  = ' ';

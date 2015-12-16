@@ -1,8 +1,9 @@
 <?php
 
-/* comment count link in excerpts */
+if ( get_theme_mod( 'ct_ignite_post_meta_comments_settings' ) != 'show' ) {
+	return;
+}
 
-// if comments aren't open and there aren't any comments
 if ( ! comments_open() && get_comments_number() < 1 ) {
 	?>
 	<p>
@@ -10,7 +11,6 @@ if ( ! comments_open() && get_comments_number() < 1 ) {
 		<?php comments_number( __( 'Comments closed', 'ignite' ), __( 'One Comment', 'ignite' ), __( '% Comments', 'ignite' ) ); ?>
 	</p>
 	<?php
-	// otherwise link to the comments and display the count
 } else {
 	?>
 	<p>

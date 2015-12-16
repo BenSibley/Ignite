@@ -1,5 +1,9 @@
 <?php
 
+if ( get_theme_mod( 'ct_ignite_post_meta_further_reading_settings' ) == 'hide' ) {
+	return;
+}
+
 global $post;
 
 // gets the previous post if it exists
