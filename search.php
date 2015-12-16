@@ -24,9 +24,7 @@
 	endif;
 	?>
 </div>
-<?php echo the_posts_pagination(); ?>
-
-<?php
+<?php the_posts_pagination();
 // only display bottom search bar if there are search results
 $total_results = $wp_query->found_posts;
 if ( $total_results ) {
