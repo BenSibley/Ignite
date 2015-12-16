@@ -227,16 +227,10 @@ add_filter( 'the_excerpt', 'ct_ignite_excerpt_read_more_link' );
 if ( ! function_exists( 'ct_ignite_new_excerpt_more' ) ) {
 	function ct_ignite_new_excerpt_more( $more ) {
 
-		// get user set excerpt length
 		$new_excerpt_length = get_theme_mod( 'ct_ignite_excerpt_length_settings' );
+		$excerpt_more       = ( $new_excerpt_length === 0 ) ? '' : '&#8230';
 
-		// if set to 0, return nothing
-		if ( $new_excerpt_length === 0 ) {
-			return '';
-		} // else add the ellipsis
-		else {
-			return '&#8230;';
-		}
+		return $excerpt_more;
 	}
 }
 add_filter( 'excerpt_more', 'ct_ignite_new_excerpt_more' );
@@ -246,11 +240,9 @@ function ct_ignite_custom_excerpt_length( $length ) {
 
 	$new_excerpt_length = get_theme_mod( 'ct_ignite_excerpt_length_settings' );
 
-	// if there is a new length set and it's not 15, change it
 	if ( ! empty( $new_excerpt_length ) && $new_excerpt_length != 30 ) {
 		return $new_excerpt_length;
-	} // return 0 if user explicitly sets it to 0
-	elseif ( $new_excerpt_length === 0 ) {
+	} elseif ( $new_excerpt_length === 0 ) {
 		return 0;
 	} else {
 		return 30;
@@ -354,7 +346,6 @@ add_filter( 'body_class', 'ct_ignite_body_class' );
 
 function ct_ignite_post_class_update( $classes ) {
 
-	// add 'excerpt' class to posts when on archive pages
 	if ( ! is_singular() ) {
 		foreach ( $classes as $key => $class ) {
 			$classes[] = 'excerpt';
@@ -422,21 +413,12 @@ function ct_ignite_custom_css_output() {
 		wp_add_inline_style( 'ct-ignite-style', $custom_css );
 	}
 }
-
 add_action( 'wp_enqueue_scripts', 'ct_ignite_custom_css_output', 20 );
 
-// add class if no avatars are being shown in the comments
 function ct_ignite_show_avatars_check( $classes ) {
-
-	if ( get_option( 'show_avatars' ) ) {
-		$classes[] = 'avatars';
-	} else {
-		$classes[] = 'no-avatars';
-	}
-
+	$classes[] = get_option( 'show_avatars' ) ? 'avatars' : 'no-avatars';
 	return $classes;
 }
-
 add_action( 'comment_class', 'ct_ignite_show_avatars_check' );
 
 // implement fonts based on customizer selection
@@ -449,16 +431,13 @@ function ct_ignite_change_font() {
 	// if it's not the default or empty
 	if ( $font != 'Lusitana' && ! empty( $font ) ) {
 
-		// if weight is italic, set it to 400
 		if ( $font_weight == 'italic' ) {
 			$font_weight = 400;
 			$font_style  = 'italic';
-		} // if weight is a different weight and italic, remove "italic"
-		elseif ( strpos( $font_weight, 'italic' ) !== false ) {
+		} elseif ( strpos( $font_weight, 'italic' ) !== false ) {
 			$font_weight = str_replace( $font_weight, 'italic', '' );
 			$font_style  = 'italic';
-		} // if weight is regular, change to 400
-		elseif ( $font_weight == 'regular' ) {
+		} elseif ( $font_weight == 'regular' ) {
 			$font_weight = 400;
 		}
 
