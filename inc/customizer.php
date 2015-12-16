@@ -1,18 +1,15 @@
 <?php
 
-/* Add customizer panels, sections, settings, and controls */
 add_action( 'customize_register', 'ct_ignite_add_customizer_content' );
-
 function ct_ignite_add_customizer_content( $wp_customize ) {
 
 	/***** Add PostMessage Support *****/
 
-	// Add postMessage support for site title and description.
 	$wp_customize->get_setting( 'blogname' )->transport        = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
 
 	/***** Add Custom Controls *****/
-	// create multi-checkbox/select control
+
 	class ct_ignite_Multi_Checkbox_Control extends WP_Customize_Control {
 		public $type = 'multi-checkbox';
 
@@ -700,7 +697,6 @@ function ct_ignite_sanitize_email( $input ) {
 	return sanitize_email( $input );
 }
 
-// sanitize layout selection
 function ct_ignite_sanitize_layout_settings( $input ) {
 	$valid = array(
 		'right' => __( 'Right sidebar', 'ignite' ),
@@ -710,7 +706,6 @@ function ct_ignite_sanitize_layout_settings( $input ) {
 	return array_key_exists( $input, $valid ) ? $input : '';
 }
 
-// Sanitize font family
 function ct_ignite_sanitize_google_font_family( $input ) {
 
 	$valid = array(
@@ -724,23 +719,16 @@ function ct_ignite_sanitize_google_font_family( $input ) {
 	return array_key_exists( $input, $valid ) ? $input : '';
 }
 
-// sanitize font weight
 function ct_ignite_sanitize_google_font_weight( $input ) {
 
-	// get the available weights
 	$font_weights = ct_ignite_get_available_font_weights();
-
-	$valid = $font_weights;
+	$valid        = $font_weights;
 
 	return array_key_exists( $input, $valid ) ? $input : '';
 }
 
-/*
- * Sanitize Comment display multi-check
- */
 function ct_ignite_sanitize_comments_setting( $input ) {
 
-	// valid data
 	$valid = array(
 		'posts'       => __( 'Posts', 'ignite' ),
 		'pages'       => __( 'Pages', 'ignite' ),
@@ -748,7 +736,6 @@ function ct_ignite_sanitize_comments_setting( $input ) {
 		'none'        => __( 'Do not show', 'ignite' )
 	);
 
-	// loop through array
 	foreach ( $input as $selection ) {
 		return array_key_exists( $selection, $valid ) ? $input : '';
 	}
@@ -786,20 +773,15 @@ function ct_ignite_sanitize_text( $input ) {
 
 /***** Helper Functions *****/
 
-// get the available font weights based on the the font family selection
 function ct_ignite_get_available_font_weights( $current_font = '' ) {
 
-	// if no font passed in, get it from Customizer db entry
 	if ( empty( $current_font ) ) {
 		$current_font = get_theme_mod( 'ct_ignite_font_family_settings' );
 	}
-
-	// if nothing in db, set to lusitana
 	if ( empty( $current_font ) ) {
 		$current_font = 'Lusitana';
 	}
 
-	// instantiate font weights array
 	$font_weights = array();
 
 	if ( $current_font == "Lusitana" ) {
@@ -857,7 +839,7 @@ function ct_ignite_get_available_font_weights( $current_font = '' ) {
 function ct_ignite_customize_preview_js() {
 	?>
 	<script>
-		jQuery('#customize-info').prepend('<div class="upgrades-ad"><a href="https://www.competethemes.com/ignite-plus/" target="_blank">View the Ignite Plus Upgrade <span>&rarr;</span></a></div>');
+		jQuery('#customize-info').prepend('<div class="upgrades-ad"><a href="https://www.competethemes.com/ignite-plus/" target="_blank"><?php _e('View the Ignite Plus Upgrade', 'ignite'); ?> <span>&rarr;</span></a></div>');
 	</script>
 <?php }
 

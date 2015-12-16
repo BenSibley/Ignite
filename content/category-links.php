@@ -7,6 +7,7 @@ if ( get_theme_mod( 'ct_ignite_post_meta_categories_settings' ) == 'hide' ) {
 $categories = get_the_category( $post->ID );
 $separator  = ' ';
 $output     = '';
+
 if ( $categories ) {
 	echo "<p><i class='fa fa-folder-open'></i>";
 	foreach ( $categories as $category ) {
