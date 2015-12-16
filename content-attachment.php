@@ -10,8 +10,7 @@
 		<article>
 			<?php
 			$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
-			$image = $image[0];
-			echo "<img src='$image' />";
+			echo "<img src='$image[0]' />";
 			?>
 		</article>
 		<nav class='further-reading'>

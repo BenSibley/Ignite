@@ -1,15 +1,17 @@
 </div> <!-- .main -->
-
-<?php if ( ! is_page_template( 'full-width.php' ) ) : ?>
-	<div id="sidebar-primary-container" class="sidebar-primary-container">
-		<?php get_sidebar( 'primary' ); ?>
-	</div>
-<?php endif; ?>
-
+<?php
+if ( ! is_page_template( 'full-width.php' ) ) {
+	get_sidebar( 'primary' );
+}
+?>
 </div> <!-- .overflow-container -->
 
 <footer id="site-footer" class="site-footer" role="contentinfo">
-	<h3><a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'title' ); ?></a></h3>
+	<h3>
+		<a href="<?php echo esc_url( home_url() ); ?>">
+			<?php bloginfo( 'title' ); ?>
+		</a>
+	</h3>
 	<?php
 	if ( get_bloginfo( 'description' ) ) {
 		echo '<span class="tagline">' . get_bloginfo( "description" ) . '</span>';
@@ -27,7 +29,6 @@
         </span>
 	</div>
 </footer>
-
 <?php wp_footer(); ?>
 </body>
 </html>

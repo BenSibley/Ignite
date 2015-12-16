@@ -9,6 +9,10 @@ if ( ! function_exists( 'ct_ignite_breadcrumbs' ) ) {
 			return;
 		}
 
+		if ( get_theme_mod( 'ct_ignite_show_breadcrumbs_setting' ) == 'no' ) {
+			return;
+		}
+
 		// Set default arguments
 		$defaults = array(
 			'separator_icon'      => '&gt;',

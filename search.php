@@ -1,35 +1,29 @@
 <?php get_header(); ?>
-
-	<div class="entry-header search-end top">
-		<h1 class="entry-title">
-			<?php
-			global $wp_query;
-			$total_results = $wp_query->found_posts;
-			$s             = htmlentities( $s );
-			if ( $total_results ) {
-				printf( _n( '%d search result for "%s"', '%d search results for "%s"', $total_results, 'ignite' ), $total_results, $s );
-			} else {
-				printf( __( 'No search results for "%s"', 'ignite' ), $s );
-			}
-			?>
-		</h1>
-		<?php get_search_form(); ?>
-	</div>
-
-	<div id="loop-container" class="loop-container">
-
+<div class="entry-header search-end top">
+	<h1 class="entry-title">
 		<?php
-		// The loop
-		if ( have_posts() ) :
-			while ( have_posts() ) :
-				the_post();
-				get_template_part( 'content' );
-			endwhile;
-		endif;
+		global $wp_query;
+		$total_results = $wp_query->found_posts;
+		$s             = htmlentities( $s );
+		if ( $total_results ) {
+			printf( _n( '%d search result for "%s"', '%d search results for "%s"', $total_results, 'ignite' ), $total_results, $s );
+		} else {
+			printf( __( 'No search results for "%s"', 'ignite' ), $s );
+		}
 		?>
-
-	</div>
-
+	</h1>
+	<?php get_search_form(); ?>
+</div>
+<div id="loop-container" class="loop-container">
+	<?php
+	if ( have_posts() ) :
+		while ( have_posts() ) :
+			the_post();
+			get_template_part( 'content' );
+		endwhile;
+	endif;
+	?>
+</div>
 <?php echo the_posts_pagination(); ?>
 
 <?php
@@ -43,5 +37,4 @@ if ( $total_results ) {
 	</div>
 	<?php
 }
-?>
-<?php get_footer(); ?>
+get_footer();
