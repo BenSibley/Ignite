@@ -4,6 +4,8 @@ if ( get_theme_mod( 'ct_ignite_post_meta_comments_settings' ) != 'show' ) {
 	return;
 }
 
+echo "<div class='excerpt-comments'>";
+
 if ( ! comments_open() && get_comments_number() < 1 ) {
 	?>
 	<p>
@@ -21,3 +23,5 @@ if ( ! comments_open() && get_comments_number() < 1 ) {
 	</p>
 	<?php
 }
+
+echo "</div>";
