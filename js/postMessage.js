@@ -3,6 +3,7 @@
     var panel = $('html', window.parent.document);
     var body = $('body');
     var siteTitle = $('.site-title');
+    var siteTitleLink = siteTitle.children('a');
     var inlineStyles = $('#ct-ignite-style-inline-css');
     var fontSelectors = "body, h1, h2, h3, h4, h5, h6, input:not([type='checkbox']):not([type='radio']):not([type='submit']):not([type='file']), input[type='submit'], textarea";
 
@@ -31,16 +32,15 @@
     } );
     wp.customize( 'logo_upload', function( value ) {
         value.bind( function( to ) {
-            var logoContainer = $('#customize-preview iframe').contents().find('#title-info').find('a');
-            var siteTitle     = logoContainer.attr('title');
-            var logo          = siteTitle;
+            var siteTitleText = siteTitleLink.attr('title');
+            var logo          = siteTitleText;
 
             if( to ) {
-                logo = "<span class='screen-reader-text'>" + siteTitle + "</span><img id='logo' class='logo' src='" + to + "' alt='" + siteTitle + "' />";
+                logo = "<span class='screen-reader-text'>" + siteTitleText + "</span><img id='logo' class='logo' src='" + to + "' alt='" + siteTitleText + "' />";
             }
 
-            logoContainer.empty();
-            logoContainer.append(logo);
+            siteTitleLink.empty();
+            siteTitleLink.append(logo);
         } );
     } );
     // Logo Position - up/down
