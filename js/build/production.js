@@ -650,17 +650,19 @@ jQuery(document).ready(function ($) {
 
         if (window.innerWidth > 899) {
 
-            var menu                 = '';
             var siteDescriptionWidth = 0;
-            var menuWidth            = menu.width();
+            var menuWidth            = 0;
             var siteHeaderWidth      = siteHeader.width();
             var titleInfoWidth       = $('#title-info').width();
+            var menu                 = '';
 
             if ( menuPrimaryItems.length ) {
                 menu = menuPrimaryItems;
             } else {
                 menu = $('.menu-unset ul');
             }
+            menuWidth = menu.width();
+
             if ( tagline.css('display') != 'none' ) {
                 siteDescriptionWidth = tagline.width();
             }
