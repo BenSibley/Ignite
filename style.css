@@ -1665,10 +1665,6 @@ li.pingback {
   padding-bottom: 3em;
 }
 
-.search-no-results .search-end.top .search-form-container {
-  display: none;
-}
-
 /* 500px */
 @media all and (min-width: 31.25em) {
   .search-form input[type="submit"] {
