@@ -4,6 +4,7 @@
     var body = $('body');
     var siteTitle = $('.site-title');
     var siteTitleLink = siteTitle.children('a');
+    var logo = $('#logo');
     var inlineStyles = $('#ct-ignite-style-inline-css');
     var fontSelectors = "body, h1, h2, h3, h4, h5, h6, input:not([type='checkbox']):not([type='radio']):not([type='submit']):not([type='file']), input[type='submit'], textarea";
 
@@ -46,8 +47,6 @@
     // Logo Position - up/down
     wp.customize( 'logo_positioning_updown_setting', function( value ) {
         value.bind( function( to ) {
-            var logo = $('#customize-preview iframe').contents().find('#logo');
-
             logo.css({
                 'bottom': to + 'px',
                 'position': 'relative',
@@ -59,8 +58,6 @@
     // Logo Position - left/right
     wp.customize( 'logo_positioning_leftright_setting', function( value ) {
         value.bind( function( to ) {
-            var logo = $('#customize-preview iframe').contents().find('#logo');
-
             logo.css({
                 'left': to + 'px',
                 'position': 'relative',
@@ -71,8 +68,6 @@
     // Logo Size - width
     wp.customize( 'logo_size_width_setting', function( value ) {
         value.bind( function( to ) {
-            var logo = $('#customize-preview iframe').contents().find('#logo');
-
             var newVal = parseInt(to) + 156;
             logo.css('max-width', newVal + 'px');
         } );
@@ -80,8 +75,6 @@
     // Logo Size - height
     wp.customize( 'logo_size_height_setting', function( value ) {
         value.bind( function( to ) {
-            var logo = $('#customize-preview iframe').contents().find('#logo');
-
             var newVal = parseInt(to) + 59;
             logo.css('max-height', newVal + 'px');
         } );
