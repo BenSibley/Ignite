@@ -1,9 +1,5 @@
 jQuery(document).ready(function($){
 
-    ctHideNoneText();
-
-    $('.ms-drop.bottom').find('li').bind('click', ctHideNoneText);
-
     $('#comment-display-control').multipleSelect({
         selectAll: false
     });
@@ -15,6 +11,10 @@ jQuery(document).ready(function($){
             $(this).hide();
         }
     });
+
+    ctHideNoneText();
+
+    $('.ms-drop.bottom').find('li').bind('click', ctHideNoneText);
 
     // Don't show the do not show text
     function ctHideNoneText() {
