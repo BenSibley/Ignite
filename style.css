@@ -1615,7 +1615,8 @@ li.pingback {
   opacity: 0.7;
 }
 .breadcrumbs + div .excerpt, .breadcrumbs + div .entry,
-.breadcrumbs + div .search-container {
+.breadcrumbs + div .search-container,
+.breadcrumbs + div .search-end.top {
   margin-top: 0;
 }
 
@@ -1663,6 +1664,7 @@ li.pingback {
 }
 .search .search-end.top {
   padding-bottom: 3em;
+  margin-top: 1.5em;
 }
 
 /* 500px */
@@ -1691,6 +1693,9 @@ li.pingback {
   .search .search-end {
     padding: 3em 12.5% 2.25em;
     margin-bottom: 3em;
+  }
+  .search .search-end.top {
+    margin-top: 3em;
   }
 }
 /* Password-protected post */

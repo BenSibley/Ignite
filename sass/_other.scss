@@ -60,7 +60,8 @@
   + div {
 
     .excerpt,
-    .search-container {
+    .search-container,
+    .search-end.top {
       margin-top: 0;
     }
   }
@@ -123,6 +124,7 @@
   }
   .search-end.top {
     padding-bottom: $baseline-height * 2;
+    margin-top: $baseline-height;
   }
 }
 
@@ -164,6 +166,10 @@
     .search-end {
       padding: $baseline-height * 2 12.5% $baseline-height * 1.5;
       margin-bottom: $baseline-height * 2;
+
+      &.top {
+        margin-top: $baseline-height * 2;
+      }
     }
   }
 }
