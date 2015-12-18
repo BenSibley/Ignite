@@ -191,7 +191,7 @@ if ( ! function_exists( 'ct_ignite_new_excerpt_more' ) ) {
 	function ct_ignite_new_excerpt_more( $more ) {
 
 		$new_excerpt_length = get_theme_mod( 'ct_ignite_excerpt_length_settings' );
-		$excerpt_more       = ( $new_excerpt_length === 0 ) ? '' : '&#8230';
+		$excerpt_more       = ( $new_excerpt_length === 0 ) ? '' : '&#8230;';
 
 		return $excerpt_more;
 	}
