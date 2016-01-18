@@ -320,6 +320,7 @@ function ct_ignite_logo_positioning_css() {
                 right: auto;
                 top: auto;
         }";
+		$css = ct_ignite_sanitize_css( $css );
 		wp_add_inline_style( 'ct-ignite-style', $css );
 	}
 }
@@ -340,6 +341,7 @@ function ct_ignite_logo_size_css() {
                 max-width: " . $max_width . "px;
                 max-height: " . $max_height . "px;
         }";
+		$css = ct_ignite_sanitize_css( $css );
 		wp_add_inline_style( 'ct-ignite-style', $css );
 	}
 }
@@ -387,6 +389,8 @@ function ct_ignite_change_font() {
                 font-weight: $font_weight;
             }
         ";
+
+		$css = ct_ignite_sanitize_css( $css );
 
 		wp_add_inline_style( 'ct-ignite-style', $css );
 
@@ -451,6 +455,9 @@ function ct_ignite_background_css() {
                 background: none;
             }
         ";
+
+		$background_color_css = ct_ignite_sanitize_css( $background_color_css );
+
 		wp_add_inline_style( 'ct-ignite-style', $background_color_css );
 	}
 }
