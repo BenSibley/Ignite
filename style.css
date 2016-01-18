@@ -1002,6 +1002,10 @@ a img {
   text-decoration: none;
 }
 
+.infinite-scroll .pagination {
+  display: none;
+}
+
 /* 500px */
 @media all and (min-width: 31.25em) {
   .excerpt-meta-top:after, .entry-meta-top:after {

@@ -177,6 +177,9 @@
     text-decoration: none;
   }
 }
+.infinite-scroll .pagination {
+  display: none;
+}
 
 /* 500px */
 @media all and (min-width: 31.25em) {
