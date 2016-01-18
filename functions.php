@@ -350,7 +350,7 @@ function ct_ignite_custom_css_output() {
 	$custom_css = get_theme_mod( 'ct_ignite_custom_css_setting' );
 
 	if ( $custom_css ) {
-		$custom_css = wp_filter_nohtml_kses( $custom_css );
+		$custom_css = ct_ignite_sanitize_css( $custom_css );
 		wp_add_inline_style( 'ct-ignite-style', $custom_css );
 	}
 }
