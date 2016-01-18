@@ -3,6 +3,7 @@
     var panel = $('html', window.parent.document);
     var body = $('body');
     var siteTitle = $('.site-title');
+    var siteTitleFooter = $('#site-footer').children('h3');
     var siteTitleLink = siteTitle.children('a');
     var logo = $('#logo');
     var inlineStyles = $('#ct-ignite-style-inline-css');
@@ -14,6 +15,7 @@
             if( siteTitle.find('img').length == 0 ) {
                 siteTitle.children('a').text( to );
             }
+            siteTitleFooter.children('a').text( to );
         } );
     } );
     // Tagline
