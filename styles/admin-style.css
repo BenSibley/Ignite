@@ -3,51 +3,44 @@
 #ignite-dashboard-wrap h2 {
   margin-bottom: 24px;
 }
-
-.content {
+#ignite-dashboard-wrap .content {
   margin-top: 12px;
   padding: 12px 24px 24px;
   border: solid 1px #e5e5e5;
   background: white;
 }
-.content .button-primary {
+#ignite-dashboard-wrap .content .button-primary {
   margin: 12px 0;
 }
-.content ul {
+#ignite-dashboard-wrap .content ul {
   list-style: disc;
   margin-left: 36px;
 }
 
 /* 600px */
 @media all and (min-width: 37.5em) {
-  .content {
+  #ignite-dashboard-wrap .content {
     width: 39%;
     float: left;
   }
-  .content p {
+  #ignite-dashboard-wrap .content p {
     min-height: 57px;
   }
-
-  .content-customization,
-  .content-resources {
+  #ignite-dashboard-wrap .content-customization,
+  #ignite-dashboard-wrap .content-resources {
     margin-right: 2%;
   }
 }
 /* 1100px */
 @media all and (min-width: 68.75em) {
-  .content {
+  #ignite-dashboard-wrap .content {
     width: 27%;
   }
-  .content:nth-child(3n + 2) {
-    clear: left;
-  }
-
-  .content-customization,
-  .content-support {
+  #ignite-dashboard-wrap .content-customization,
+  #ignite-dashboard-wrap .content-support {
     margin-right: 1%;
   }
-
-  .content-resources {
+  #ignite-dashboard-wrap .content-resources {
     margin-right: 0;
   }
 }

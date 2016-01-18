@@ -2,57 +2,62 @@
 
 /* styles for theme options page */
 
-#ignite-dashboard-wrap h2 {
-  margin-bottom: 24px;
-}
-.content {
-  margin-top: 12px;
-  padding: 12px 24px 24px;
-  border: solid 1px #e5e5e5;
-  background: white;
+#ignite-dashboard-wrap {
 
-  .button-primary {
-    margin: 12px 0;
+  h2 {
+    margin-bottom: 24px;
   }
-  ul {
-    list-style: disc;
-    margin-left: 36px;
+  .content {
+    margin-top: 12px;
+    padding: 12px 24px 24px;
+    border: solid 1px #e5e5e5;
+    background: white;
+
+    .button-primary {
+      margin: 12px 0;
+    }
+    ul {
+      list-style: disc;
+      margin-left: 36px;
+    }
   }
 }
 
 /* 600px */
 @media all and (min-width: 37.5em) {
 
-  .content {
-    width: 39%;
-    float: left;
+  #ignite-dashboard-wrap {
 
-    p {
-      min-height: 57px;
+    .content {
+      width: 39%;
+      float: left;
+
+      p {
+        min-height: 57px;
+      }
     }
-  }
-  .content-customization,
-  .content-resources {
-    margin-right: 2%;
+    .content-customization,
+    .content-resources {
+      margin-right: 2%;
+    }
   }
 }
 
 /* 1100px */
 @media all and (min-width: 68.75em) {
 
-  .content {
-    width: 27%;
+  #ignite-dashboard-wrap {
 
-    &:nth-child(3n + 2) {
-      clear: left;
+    .content {
+      width: 27%;
     }
-  }
-  .content-customization,
-  .content-support {
-    margin-right: 1%;
-  }
-  .content-resources {
-    margin-right: 0;
+    .content-customization,
+    .content-support {
+      margin-right: 1%;
+    }
+    .content-resources {
+      margin-right: 0;
+    }
   }
 }
 
