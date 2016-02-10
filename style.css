@@ -1865,10 +1865,9 @@ li.pingback {
 
 ATTENTION:
 
-CSS edits made here won't have any effect. Ignite doesn't load the style.css file because
-it loads a minified version of the stylesheet instead (style.min.css) to make your site faster.
+Please do not edit this. Your changes will be overwritten when you update Ignite.
 
-If you want to make CSS edits to your site, use the "Custom CSS" section in the Customizer.
+If you want to make CSS edits, use the "Custom CSS" section in the Customizer instead (Appearance > Customize).
 
 If you want more information about customizing Ignite with CSS, check out this guide: https://www.competethemes.com/help/custom-css-ignite/
 
