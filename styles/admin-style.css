@@ -26,8 +26,12 @@
   #ignite-dashboard-wrap .content p {
     min-height: 57px;
   }
+  #ignite-dashboard-wrap .content-review p {
+    min-height: 75px;
+  }
   #ignite-dashboard-wrap .content-customization,
-  #ignite-dashboard-wrap .content-resources {
+  #ignite-dashboard-wrap .content-resources,
+  #ignite-dashboard-wrap .content-review {
     margin-right: 2%;
   }
 }
@@ -37,7 +41,8 @@
     width: 27%;
   }
   #ignite-dashboard-wrap .content-customization,
-  #ignite-dashboard-wrap .content-support {
+  #ignite-dashboard-wrap .content-support,
+  #ignite-dashboard-wrap .content-review {
     margin-right: 1%;
   }
   #ignite-dashboard-wrap .content-resources {

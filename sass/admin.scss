@@ -36,8 +36,15 @@
         min-height: 57px;
       }
     }
+    .content-review {
+
+      p {
+        min-height: 75px;
+      }
+    }
     .content-customization,
-    .content-resources {
+    .content-resources,
+    .content-review {
       margin-right: 2%;
     }
   }
@@ -52,7 +59,8 @@
       width: 27%;
     }
     .content-customization,
-    .content-support {
+    .content-support,
+    .content-review {
       margin-right: 1%;
     }
     .content-resources {

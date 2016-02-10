@@ -44,6 +44,11 @@ function ct_ignite_options_content() {
 				   href="https://www.competethemes.com/wordpress-resources/"><?php _e( 'View Resources', 'ignite' ); ?></a>
 			</p>
 		</div>
+		<div class="content content-review">
+			<h3><?php _e( 'Leave a Review', 'ignite' ); ?></h3>
+			<p><?php _e( 'Help others find Ignite by leaving a review on wordpress.org.', 'ignite' ); ?></p>
+			<a target="_blank" class="button-primary" href="https://wordpress.org/support/view/theme-reviews/ignite"><?php _e( 'Leave a Review', 'ignite' ); ?></a>
+		</div>
 		<div class="content content-premium-upgrade">
 			<h3><?php _e( 'Upgrade to Ignite Plus', 'ignite' ); ?></h3>
 			<p><?php _e( 'Ignite Plus is the premium version of Ignite. By upgrading to Ignite Plus, you get:', 'ignite' ); ?></p>
