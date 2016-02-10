@@ -171,7 +171,7 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 			) );
 
 			$wp_customize->add_control( $social_site, array(
-				'label'    => __( "Email Address:", 'ignite' ),
+				'label'    => __( "Email Address", 'ignite' ),
 				'section'  => 'ct_ignite_social_settings',
 				'priority' => $priority,
 			) );
