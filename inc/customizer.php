@@ -207,6 +207,8 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 				$label = 'Tencent Weibo';
 			} elseif ( $social_site == 'paypal' ) {
 				$label = 'PayPal';
+			} elseif ( $social_site == 'email-form' ) {
+				$label = 'Contact Form';
 			}
 
 			if ( $social_site == 'skype' ) {

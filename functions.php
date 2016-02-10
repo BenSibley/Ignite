@@ -516,7 +516,8 @@ if ( ! function_exists( 'ct_ignite_customizer_social_media_array' ) ) {
 			'weibo',
 			'tencent-weibo',
 			'paypal',
-			'email'
+			'email',
+			'email-form'
 		);
 
 		return apply_filters( 'ct_ignite_customizer_social_media_array_filter', $social_sites );

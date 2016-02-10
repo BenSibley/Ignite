@@ -40,6 +40,9 @@ if ( ! empty( $active_sites ) ) {
 			if ( $active_site == 'academia' ) {
 				$class = 'fa fa-graduate-cap';
 			}
+			if ( $active_site == 'email-form' ) {
+				$class = 'fa fa-envelope-o';
+			}
 
 			if ( $active_site == 'email' ) { ?>
 				<li>
