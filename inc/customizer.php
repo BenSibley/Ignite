@@ -209,9 +209,16 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 				$label = 'PayPal';
 			}
 
-			$wp_customize->add_setting( $social_site, array(
-				'sanitize_callback' => 'esc_url_raw'
-			) );
+			if ( $social_site == 'skype' ) {
+				$wp_customize->add_setting( $social_site, array(
+					'sanitize_callback' => 'ct_ignite_sanitize_skype'
+				) );
+			} else {
+				$wp_customize->add_setting( $social_site, array(
+					'sanitize_callback' => 'esc_url_raw'
+				) );
+			}
+
 
 			$wp_customize->add_control( $social_site, array(
 				'label'    => $label,
@@ -697,6 +704,10 @@ function ct_ignite_sanitize_yes_no_setting( $input ) {
 
 function ct_ignite_sanitize_text( $input ) {
 	return wp_kses_post( force_balance_tags( $input ) );
+}
+
+function ct_ignite_sanitize_skype( $input ) {
+	return esc_url_raw( $input, array( 'http', 'https', 'skype' ) );
 }
 
 /***** Helper Functions *****/
