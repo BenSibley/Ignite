@@ -33,14 +33,6 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 		<?php }
 	}
 
-	class ignite_description_control extends WP_Customize_Control {
-
-		public function render_content() {
-			echo $this->description;
-		}
-	}
-
-
 	/***** Add Panels *****/
 
 	if ( method_exists( 'WP_Customize_Manager', 'add_panel' ) ) {
@@ -611,70 +603,6 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 		'section'  => 'ct-additional-options',
 		'settings' => 'ct_ignite_read_more_text',
 		'type'     => 'text'
-	) );
-
-	/*
-	 * PRO only sections
-	 */
-
-	/***** Colors *****/
-
-	// section
-	$wp_customize->add_section( 'ignite_colors', array(
-		'title'    => __( 'Colors', 'ignite' ),
-		'priority' => 35
-	) );
-	// setting
-	$wp_customize->add_setting( 'colors_ad', array(
-		'sanitize_callback' => 'absint'
-	) );
-	// control
-	$wp_customize->add_control( new ignite_description_control(
-		$wp_customize, 'colors_ad', array(
-			'description' => sprintf( __( 'Activate <a target="_blank" href="%s">Ignite Plus</a> to change your colors.', 'ignite' ), 'https://www.competethemes.com/ignite-plus/' ),
-			'section'     => 'ignite_colors',
-			'settings'    => 'colors_ad'
-		)
-	) );
-
-	/***** Header Image *****/
-
-	// section
-	$wp_customize->add_section( 'ignite_header_image', array(
-		'title'    => __( 'Header Image', 'ignite' ),
-		'priority' => 34
-	) );
-	// setting
-	$wp_customize->add_setting( 'header_image_ad', array(
-		'sanitize_callback' => 'absint'
-	) );
-	// control
-	$wp_customize->add_control( new ignite_description_control(
-		$wp_customize, 'header_image_ad', array(
-			'description' => sprintf( __( 'Activate <a target="_blank" href="%s">Ignite Plus</a> for advanced header image functionality.', 'ignite' ), 'https://www.competethemes.com/ignite-plus/' ),
-			'section'     => 'ignite_header_image',
-			'settings'    => 'header_image_ad'
-		)
-	) );
-
-	/***** Navigation Style *****/
-
-	// section
-	$wp_customize->add_section( 'ignite_navigation_style', array(
-		'title'    => __( 'Navigation Style', 'ignite' ),
-		'priority' => 90
-	) );
-	// setting
-	$wp_customize->add_setting( 'navigation_style_ad', array(
-		'sanitize_callback' => 'absint'
-	) );
-	// control
-	$wp_customize->add_control( new ignite_description_control(
-		$wp_customize, 'navigation_style_ad', array(
-			'description' => sprintf( __( 'Activate <a target="_blank" href="%s">Ignite Plus</a> to change your menu style.', 'ignite' ), 'https://www.competethemes.com/ignite-plus/' ),
-			'section'     => 'ignite_navigation_style',
-			'settings'    => 'navigation_style_ad'
-		)
 	) );
 }
 
