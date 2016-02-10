@@ -94,7 +94,27 @@ module.exports = function(grunt) {
                     domainPath: '/languages',
                     exclude: ['library/.*/.*'],
                     potFilename: 'ignite.pot',
-                    type: 'wp-theme'
+                    type: 'wp-theme',
+                    processPot: function( pot ) {
+                        var translation,
+                            excluded_meta = [
+                                'Theme Name of the plugin/theme',
+                                'Theme URI of the plugin/theme',
+                                'Author of the plugin/theme',
+                                'Author URI of the plugin/theme'
+                            ];
+
+                        for ( translation in pot.translations[''] ) {
+                            if ( 'undefined' !== typeof pot.translations[''][ translation ].comments.extracted ) {
+                                if ( excluded_meta.indexOf( pot.translations[''][ translation ].comments.extracted ) >= 0 ) {
+                                    console.log( 'Excluded meta: ' + pot.translations[''][ translation ].comments.extracted );
+                                    delete pot.translations[''][ translation ];
+                                }
+                            }
+                        }
+
+                        return pot;
+                    }
                 }
             }
         },
