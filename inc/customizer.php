@@ -245,7 +245,7 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 		'sanitize_callback' => 'ct_ignite_sanitize_layout_settings',
 		'transport'         => 'postMessage'
 	) );
-	$description_layout = sprintf( __( 'Want more layouts? <a target="_blank" href="%s">Check out Ignite Plus</a>', 'ignite' ), 'https://www.competethemes.com/ignite-plus/' );
+	$description_layout = sprintf( __( 'Want more layouts? <a target="_blank" href="%s">Check out Ignite Plus</a>.', 'ignite' ), 'https://www.competethemes.com/ignite-plus/' );
 
 	// control
 	$wp_customize->add_control( 'ct_ignite_sidebar_layout', array(
