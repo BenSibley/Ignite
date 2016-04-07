@@ -1879,6 +1879,14 @@ li.pingback {
   margin: -1.5em 0 1.5em;
 }
 
+.singular-attachment .attachment-container img {
+  display: block;
+}
+.singular-attachment .attachment-caption {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
 /*
 
 ATTENTION:

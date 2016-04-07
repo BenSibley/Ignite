@@ -9,9 +9,16 @@
 	<div class="entry-content">
 		<article>
 			<?php
-			$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
-			echo "<img src='$image[0]' />";
+			$image = wp_get_attachment_image($post->ID, 'full');
+			$image_meta = wp_prepare_attachment_for_js($post->ID);
 			?>
+			<div class="attachment-container">
+				<?php echo $image; ?>
+				<span class="attachment-caption">
+					<?php echo $image_meta['caption']; ?>
+				</span>
+			</div>
+			<?php echo wpautop( $image_meta['description'] ); ?>
 		</article>
 		<nav class='further-reading'>
 			<p class='prev'>
