@@ -49,20 +49,23 @@ if ( ! empty( $active_sites ) ) {
 					<a class="email" target="_blank"
 					   href="mailto:<?php echo antispambot( is_email( get_theme_mod( $active_site ) ) ); ?>">
 						<i class="fa fa-envelope" title="<?php esc_attr_e( 'email', 'ignite' ); ?>"></i>
+						<span class="screen-reader-text"><?php esc_attr_e('email', 'ignite'); ?></span>
 					</a>
 				</li>
 			<?php } elseif ( $active_site == 'skype' ) { ?>
 				<li>
 					<a class="<?php echo esc_attr( $active_site ); ?>" target="_blank"
 					   href="<?php echo esc_url( get_theme_mod( $active_site ), array( 'http', 'https', 'skype' ) ); ?>">
-						<i class="<?php echo esc_attr( $class ); ?>" title="<?php esc_attr( $active_site ); ?>"></i>
+						<i class="<?php echo esc_attr( $class ); ?>" title="<?php echo esc_attr( $active_site ); ?>"></i>
+						<span class="screen-reader-text"><?php echo esc_attr( $active_site );  ?></span>
 					</a>
 				</li>
 			<?php } else { ?>
 				<li>
 					<a class="<?php echo esc_attr( $active_site ); ?>" target="_blank"
 					   href="<?php echo esc_url( get_theme_mod( $active_site ) ); ?>">
-						<i class="<?php echo esc_attr( $class ); ?>" title="<?php esc_attr( $active_site ); ?>"></i>
+						<i class="<?php echo esc_attr( $class ); ?>" title="<?php echo esc_attr( $active_site ); ?>"></i>
+						<span class="screen-reader-text"><?php echo esc_attr( $active_site );  ?></span>
 					</a>
 				</li>
 				<?php
