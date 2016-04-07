@@ -50,6 +50,15 @@
       transform: translateX(50%) translateY(-50%);
     }
   }
+  .ccfic {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    padding: 4px 8%;
+    font-size: 13px;
+  }
 }
 .excerpt-meta-top {
   margin-bottom: $baseline-height * 0.5;
@@ -224,6 +233,10 @@
     width: 140%;
     padding-bottom: 66.5%;
     margin-top: -$baseline-height * 1.5;
+
+    .ccfic {
+      padding: 4px 14.333%;
+    }
   }
 }
 
@@ -247,6 +260,10 @@
     left: -18%;
     width: 136%;
     padding-bottom: 64.5%;
+
+    .ccfic {
+      padding: 4px 13.333%;
+    }
   }
   .pagination {
     margin-bottom: $baseline-height * 2;
@@ -291,5 +308,9 @@
     left: -16.67%;
     width: 133.33%;
     padding-bottom: 63.5%;
+
+    .ccfic {
+      padding: 4px 12.5%;
+    }
   }
 }

@@ -861,6 +861,15 @@ a img {
   -ms-transform: translateX(50%) translateY(-50%);
   transform: translateX(50%) translateY(-50%);
 }
+.featured-image .ccfic {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 4px 8%;
+  font-size: 13px;
+}
 
 .excerpt-meta-top, .entry-meta-top {
   margin-bottom: 0.75em;
@@ -1045,6 +1054,9 @@ a img {
     padding-bottom: 66.5%;
     margin-top: -2.25em;
   }
+  .featured-image .ccfic {
+    padding: 4px 14.333%;
+  }
 }
 /* 900px */
 @media all and (min-width: 56.25em) {
@@ -1068,6 +1080,9 @@ a img {
     left: -18%;
     width: 136%;
     padding-bottom: 64.5%;
+  }
+  .featured-image .ccfic {
+    padding: 4px 13.333%;
   }
 
   .pagination {
@@ -1117,6 +1132,9 @@ a img {
     left: -16.67%;
     width: 133.33%;
     padding-bottom: 63.5%;
+  }
+  .featured-image .ccfic {
+    padding: 4px 12.5%;
   }
 }
 .sidebar-primary-container {
