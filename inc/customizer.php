@@ -215,19 +215,24 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 				$wp_customize->add_setting( $social_site, array(
 					'sanitize_callback' => 'ct_ignite_sanitize_skype'
 				) );
+				$wp_customize->add_control( $social_site, array(
+					'label'       => $label,
+					'description' => sprintf( __( 'Accepts Skype link protocol (<a href="%s" target="_blank">learn more</a>)', 'ignite' ), 'https://www.competethemes.com/blog/skype-links-wordpress/' ),
+					'section'     => 'ct_ignite_social_settings',
+					'type'        => 'url',
+					'priority'    => $priority
+				) );
 			} else {
 				$wp_customize->add_setting( $social_site, array(
 					'sanitize_callback' => 'esc_url_raw'
 				) );
+				$wp_customize->add_control( $social_site, array(
+					'label'    => $label,
+					'section'  => 'ct_ignite_social_settings',
+					'type'     => 'url',
+					'priority' => $priority
+				) );
 			}
-
-
-			$wp_customize->add_control( $social_site, array(
-				'label'    => $label,
-				'section'  => 'ct_ignite_social_settings',
-				'type'     => 'url',
-				'priority' => $priority
-			) );
 		}
 		$priority = $priority + 5;
 	}
