@@ -250,12 +250,11 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 		'sanitize_callback' => 'ct_ignite_sanitize_layout_settings',
 		'transport'         => 'postMessage'
 	) );
-	$description_layout = sprintf( __( 'Want more layouts? <a target="_blank" href="%s">Check out Ignite Plus</a>.', 'ignite' ), 'https://www.competethemes.com/ignite-plus/' );
 
 	// control
 	$wp_customize->add_control( 'ct_ignite_sidebar_layout', array(
 		'label'       => __( 'Pick Your Layout:', 'ignite' ),
-		'description' => $description_layout,
+		'description' => sprintf( __( 'Want more layouts? <a target="_blank" href="%s">Check out Ignite Plus</a>.', 'ignite' ), 'https://www.competethemes.com/ignite-plus/' ),
 		'section'     => 'ct-layout',
 		'settings'    => 'ct_ignite_layout_settings',
 		'type'        => 'radio',
@@ -281,13 +280,11 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 		'transport'         => 'postMessage'
 	) );
 
-	$description_font = sprintf( __( 'Want more fonts? <a target="_blank" href="%s">Check out Ignite Plus</a>', 'ignite' ), 'https://www.competethemes.com/ignite-plus/' );
-
 	// control
 	$wp_customize->add_control( 'ct_ignite_font_family_settings', array(
 		'type'        => 'select',
 		'label'       => __( 'Site Font Family', 'ignite' ),
-		'description' => $description_font,
+		'description' => sprintf( __( 'Want more fonts? <a target="_blank" href="%s">Check out Ignite Plus</a>', 'ignite' ), 'https://www.competethemes.com/ignite-plus/' ),
 		'section'     => 'ct-font-family',
 		'choices'     => array(
 			'Lusitana'    => 'Lusitana',
@@ -338,13 +335,11 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 		'transport'         => 'postMessage'
 	) );
 
-	$description_background = sprintf( __( 'Want background textures and images? <a target="_blank" href="%s">Check out Ignite Plus</a>', 'ignite' ), 'https://www.competethemes.com/ignite-plus/' );
-
 	// control
 	$wp_customize->add_control( new WP_Customize_Color_Control(
 		$wp_customize, 'ct_ignite_background_color', array(
 			'label'       => __( 'Background Color', 'ignite' ),
-			'description' => $description_background,
+			'description' => sprintf( __( 'Want background textures and images? <a target="_blank" href="%s">Check out Ignite Plus</a>', 'ignite' ), 'https://www.competethemes.com/ignite-plus/' ),
 			'section'     => 'ct-background',
 			'settings'    => 'ct_ignite_background_color_setting',
 			'priority'    => 10
