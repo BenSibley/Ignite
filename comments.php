@@ -18,9 +18,9 @@ if ( comments_open() ) { ?>
 
 	<section id="comments" class="comments">
 		<div class="comments-number">
-			<h3>
+			<h2>
 				<?php comments_number( __( 'Be First to Comment', 'ignite' ), __( 'One Comment', 'ignite' ), __( '% Comments', 'ignite' ) ); ?>
-			</h3>
+			</h2>
 		</div>
 		<ol class="comment-list">
 			<?php wp_list_comments( array( 'callback' => 'ct_ignite_customize_comments', 'max_depth' => '7' ) ); ?>

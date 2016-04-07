@@ -8,6 +8,11 @@
 .comments-number {
   border-top: solid 2px $gray-light;
   padding-top: $baseline-height - 0.125;
+
+  h2 {
+    font-size: 1.625em; /* 26px / 16px */
+    line-height: 1.85;
+  }
 }
 .comment-list {
   list-style: none;

@@ -1381,6 +1381,11 @@ a img {
   border-top: solid 2px #D9DCDF;
   padding-top: 1.375em;
 }
+.comments-number h2 {
+  font-size: 1.625em;
+  /* 26px / 16px */
+  line-height: 1.85;
+}
 
 .comment-list {
   list-style: none;
@@ -1516,6 +1521,11 @@ li.pingback {
   padding-bottom: 0;
   overflow: hidden;
   text-align: center;
+}
+.site-footer h1 {
+  font-size: 1.625em;
+  /* 26px / 16px */
+  line-height: 1.85;
 }
 .site-footer a {
   color: #7C7D7F;

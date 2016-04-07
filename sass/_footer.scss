@@ -8,6 +8,10 @@
   overflow: hidden;
   text-align: center;
 
+  h1 {
+    font-size: 1.625em; /* 26px / 16px */
+    line-height: 1.85;
+  }
   a {
     color: $gray-medium;
     text-decoration: none;

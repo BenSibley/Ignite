@@ -7,11 +7,11 @@ if ( ! is_page_template( 'full-width.php' ) ) {
 </div><!-- .overflow-container -->
 
 <footer id="site-footer" class="site-footer" role="contentinfo">
-	<h3>
+	<h1>
 		<a href="<?php echo esc_url( home_url() ); ?>">
 			<?php bloginfo( 'title' ); ?>
 		</a>
-	</h3>
+	</h1>
 	<?php
 	if ( get_bloginfo( 'description' ) ) {
 		echo '<span class="tagline">' . get_bloginfo( "description" ) . '</span>';
