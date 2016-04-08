@@ -1,4 +1,12 @@
-<?php get_header(); ?>
+<?php get_header();
+
+if ( is_home() ) {
+	echo '<h1 class="screen-reader-text">' . get_bloginfo("name") . ' ' . __('Posts', 'ignite') . '</h1>';
+} elseif ( is_archive() ) {
+	echo '<h1 class="screen-reader-text">' . get_the_archive_title() . '</h1>';
+}
+
+?>
 	<div id="loop-container" class="loop-container">
 		<?php
 		if ( have_posts() ) :
