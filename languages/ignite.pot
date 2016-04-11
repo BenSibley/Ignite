@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Ignite 1.58\n"
+"Project-Id-Version: Ignite 1.59\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2016-02-11 14:36:15+00:00\n"
+"POT-Creation-Date: 2016-04-11 12:38:02+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -82,7 +82,7 @@ msgstr ""
 msgid "No Newer Posts"
 msgstr ""
 
-#: content/social-icons.php:51
+#: content/social-icons.php:51 content/social-icons.php:52
 msgid "email"
 msgstr ""
 
@@ -100,11 +100,11 @@ msgid ""
 "correct or try the search form below to find what you were looking for."
 msgstr ""
 
-#: content-attachment.php:18
+#: content-attachment.php:25
 msgid "Previous Image"
 msgstr ""
 
-#: content-attachment.php:21
+#: content-attachment.php:28
 msgid "Next Image"
 msgstr ""
 
@@ -246,70 +246,76 @@ msgstr ""
 msgid "Email Address"
 msgstr ""
 
-#: inc/customizer.php:239
+#: inc/customizer.php:220
+msgid ""
+"Accepts Skype link protocol (<a href=\"%s\" target=\"_blank\">learn "
+"more</a>)"
+msgstr ""
+
+#: inc/customizer.php:244
 msgid "Layout"
 msgstr ""
 
-#: inc/customizer.php:248
+#: inc/customizer.php:256
+msgid "Pick Your Layout:"
+msgstr ""
+
+#: inc/customizer.php:257
 msgid ""
 "Want more layouts? <a target=\"_blank\" href=\"%s\">Check out Ignite "
 "Plus</a>."
 msgstr ""
 
-#: inc/customizer.php:252
-msgid "Pick Your Layout:"
-msgstr ""
-
-#: inc/customizer.php:258 inc/customizer.php:639
+#: inc/customizer.php:262 inc/customizer.php:639
 msgid "Right sidebar"
 msgstr ""
 
-#: inc/customizer.php:259 inc/customizer.php:640
+#: inc/customizer.php:263 inc/customizer.php:640
 msgid "Left sidebar"
 msgstr ""
 
-#: inc/customizer.php:267
+#: inc/customizer.php:271
 msgid "Font Family"
 msgstr ""
 
-#: inc/customizer.php:269
+#: inc/customizer.php:273
 msgid "The default font is \"Lusitana\"."
 msgstr ""
 
-#: inc/customizer.php:279
-msgid "Want more fonts? <a target=\"_blank\" href=\"%s\">Check out Ignite Plus</a>"
-msgstr ""
-
-#: inc/customizer.php:284
+#: inc/customizer.php:286
 msgid "Site Font Family"
 msgstr ""
 
-#: inc/customizer.php:303
-msgid "Font Weight"
+#: inc/customizer.php:287
+msgid "Want more fonts? <a target=\"_blank\" href=\"%s\">Check out Ignite Plus</a>"
 msgstr ""
 
 #: inc/customizer.php:305
+msgid "Font Weight"
+msgstr ""
+
+#: inc/customizer.php:307
 msgid ""
 "If you've just changed fonts, please save and refresh the page to update "
 "available weights."
 msgstr ""
 
-#: inc/customizer.php:317
+#: inc/customizer.php:319
 msgid "Site Font Weight"
 msgstr ""
 
-#: inc/customizer.php:326
+#: inc/customizer.php:328
 msgid "Background"
-msgstr ""
-
-#: inc/customizer.php:336
-msgid ""
-"Want background textures and images? <a target=\"_blank\" href=\"%s\">Check "
-"out Ignite Plus</a>"
 msgstr ""
 
 #: inc/customizer.php:341
 msgid "Background Color"
+msgstr ""
+
+#: inc/customizer.php:342
+msgid ""
+"Want background textures and images? <a target=\"_blank\" href=\"%s\">Check "
+"out Ignite Plus</a>"
 msgstr ""
 
 #: inc/customizer.php:353
@@ -360,7 +366,7 @@ msgstr ""
 msgid "Show comments on:"
 msgstr ""
 
-#: inc/customizer.php:473 inc/customizer.php:670
+#: inc/customizer.php:473 inc/customizer.php:670 index.php:4
 msgid "Posts"
 msgstr ""
 
@@ -466,6 +472,14 @@ msgstr ""
 
 #: inc/widgets/image_widget.php:64
 msgid "Link (optional)"
+msgstr ""
+
+#: index.php:26 index.php:32
+msgid "Previous"
+msgstr ""
+
+#: index.php:27 index.php:33
+msgid "Next"
 msgstr ""
 
 #: search.php:9
