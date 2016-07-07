@@ -7,7 +7,7 @@ if ( $image ) {
 	if ( empty( $image_alt ) ) {
 		$image_alt = esc_attr( get_bloginfo( 'name' ) );
 	}
-	$logo = "<span class='screen-reader-text'>" . get_bloginfo( 'name' ) . "</span><img class='logo' src='" . esc_url( get_theme_mod( 'logo_upload' ) ) . "' alt='" . $image_alt . "' />";
+	$logo = "<span class='screen-reader-text'>" . get_bloginfo( 'name' ) . "</span><img id='logo' class='logo' src='" . esc_url( get_theme_mod( 'logo_upload' ) ) . "' alt='" . $image_alt . "' />";
 } else {
 	$logo = get_bloginfo( 'name' );
 }
