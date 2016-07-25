@@ -1670,7 +1670,8 @@ li.pingback {
     padding: 3em 7.407% 0;
     /* remove margin top on sidebar (and main which didn't have any anyway)*/
   }
-  .breadcrumbs ~ div {
+  .breadcrumbs ~ div,
+  .breadcrumbs ~ aside {
     margin-top: 0;
   }
 }

@@ -90,7 +90,8 @@
     padding: $baseline-height * 2 7.407% 0;
 
     /* remove margin top on sidebar (and main which didn't have any anyway)*/
-    ~ div {
+    ~ div,
+    ~ aside {
       margin-top: 0;
     }
   }
