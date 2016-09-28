@@ -1,8 +1,13 @@
 <?php
 
-if ( ! isset( $content_width ) ) {
-	$content_width = 840;
+if ( ! function_exists( ( 'ct_ignite_set_content_width' ) ) ) {
+	function ct_ignite_set_content_width() {
+		if ( ! isset( $content_width ) ) {
+			$content_width = 840;
+		}
+	}
 }
+add_action( 'after_setup_theme', 'ct_ignite_set_content_width', 0 );
 
 if ( ! function_exists( 'ct_ignite_theme_setup' ) ) {
 	function ct_ignite_theme_setup() {
