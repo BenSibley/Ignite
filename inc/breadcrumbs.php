@@ -42,7 +42,7 @@ if ( ! function_exists( 'ct_ignite_breadcrumbs' ) ) {
 				$html .= '<span class="item-cat">' . wp_kses( $parent, wp_kses_allowed_html( 'a' ) ) . '</span>';
 				$html .= $separator;
 			}
-			$html .= '<span class="item-current item-' . $post->ID . '"><span class="bread-current bread-' . $post->ID . '" title="' . get_the_title() . '">' . get_the_title() . '</span></span>';
+			$html .= '<span class="item-current item-' . $post->ID . '"><span class="bread-current bread-' . $post->ID . '" title="' . esc_attr( get_the_title() ) . '">' . esc_html( get_the_title() ) . '</span></span>';
 		} elseif ( is_singular( 'page' ) ) {
 
 			if ( $post->post_parent ) {
@@ -50,11 +50,11 @@ if ( ! function_exists( 'ct_ignite_breadcrumbs' ) ) {
 				$parents = array_reverse( $parents );
 
 				foreach ( $parents as $parent ) {
-					$html .= '<span class="item-parent item-parent-' . esc_attr( $parent ) . '"><a class="bread-parent bread-parent-' . esc_attr( $parent ) . '" href="' . esc_url( get_permalink( $parent ) ) . '" title="' . get_the_title( $parent ) . '">' . get_the_title( $parent ) . '</a></span>';
+					$html .= '<span class="item-parent item-parent-' . esc_attr( $parent ) . '"><a class="bread-parent bread-parent-' . esc_attr( $parent ) . '" href="' . esc_url( get_permalink( $parent ) ) . '" title="' . esc_attr( get_the_title( $parent ) ) . '">' . esc_html( get_the_title( $parent ) ) . '</a></span>';
 					$html .= $separator;
 				}
 			}
-			$html .= '<span class="item-current item-' . $post->ID . '"><span title="' . get_the_title() . '"> ' . get_the_title() . '</span></span>';
+			$html .= '<span class="item-current item-' . $post->ID . '"><span title="' . esc_attr( get_the_title() ) . '"> ' . esc_html( get_the_title() ) . '</span></span>';
 		} elseif ( is_singular( 'attachment' ) ) {
 
 			$parent_id        = $post->post_parent;
@@ -63,7 +63,7 @@ if ( ! function_exists( 'ct_ignite_breadcrumbs' ) ) {
 
 			$html .= '<span class="item-parent"><a class="bread-parent" href="' . esc_url( $parent_permalink ) . '" title="' . esc_attr( $parent_title ) . '">' . esc_html( $parent_title ) . '</a></span>';
 			$html .= $separator;
-			$html .= '<span class="item-current item-' . $post->ID . '"><span title="' . get_the_title() . '"> ' . get_the_title() . '</span></span>';
+			$html .= '<span class="item-current item-' . $post->ID . '"><span title="' . esc_attr( get_the_title() ) . '"> ' . esc_html( get_the_title() ) . '</span></span>';
 		} elseif ( is_singular() ) {
 
 			$post_type         = get_post_type();
@@ -104,7 +104,7 @@ if ( ! function_exists( 'ct_ignite_breadcrumbs' ) ) {
 		} elseif ( is_404() ) {
 			$html .= '<span>' . __( 'Error 404', 'ignite' ) . '</span>';
 		} elseif ( is_home() ) {
-			$html .= '<span>' . get_the_title( get_option( 'page_for_posts' ) ) . '</span>';
+			$html .= '<span>' . esc_html( get_the_title( get_option( 'page_for_posts' ) ) ) . '</span>';
 		}
 
 		$html .= '</div>';

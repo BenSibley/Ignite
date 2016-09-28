@@ -1,9 +1,9 @@
 <?php get_header();
 
 if ( is_home() ) {
-	echo '<h1 class="screen-reader-text">' . get_bloginfo("name") . ' ' . __('Posts', 'ignite') . '</h1>';
+	echo '<h1 class="screen-reader-text">' . esc_html( get_bloginfo("name") ) . ' ' . __('Posts', 'ignite') . '</h1>';
 } elseif ( is_archive() ) {
-	echo '<h1 class="screen-reader-text">' . get_the_archive_title() . '</h1>';
+	echo '<h1 class="screen-reader-text">' . esc_html( get_the_archive_title() ) . '</h1>';
 }
 
 ?>

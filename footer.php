@@ -14,7 +14,7 @@ if ( ! is_page_template( 'full-width.php' ) ) {
 	</h1>
 	<?php
 	if ( get_bloginfo( 'description' ) ) {
-		echo '<span class="tagline">' . get_bloginfo( "description" ) . '</span>';
+		echo '<span class="tagline">' . esc_html( get_bloginfo( "description" ) ) . '</span>';
 	}
 	?>
 	<div class="design-credit">

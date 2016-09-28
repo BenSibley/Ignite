@@ -10,7 +10,7 @@ class ct_ignite_Image extends WP_Widget {
 		);
 		parent::__construct(
 			'ct_ignite_image',
-			__( 'Image', 'ignite' ),
+			esc_html( __( 'Image', 'ignite' ),
 			$widget_options
 		);
 	}

@@ -42,9 +42,9 @@ add_action( 'after_setup_theme', 'ct_ignite_theme_setup', 10 );
 
 function ct_ignite_register_sidebar() {
 	register_sidebar( array(
-		'name'          => __( 'Primary Sidebar', 'ignite' ),
+		'name'          => esc_html__( 'Primary Sidebar', 'ignite' ),
 		'id'            => 'primary',
-		'description'   => __( 'The main sidebar', 'ignite' ),
+		'description'   => esc_html__( 'The main sidebar', 'ignite' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -159,18 +159,18 @@ if ( ! function_exists( 'ct_ignite_excerpt' ) ) {
 			if ( $ismore ) {
 				// Has to be written this way because i18n text CANNOT be stored in a variable
 				if ( ! empty( $read_more_text ) ) {
-					the_content( $read_more_text . " <span class='screen-reader-text'>" . get_the_title() . "</span>" );
+					the_content( esc_html( $read_more_text ) . " <span class='screen-reader-text'>" . esc_html( get_the_title() ) . "</span>" );
 				} else {
-					the_content( __( 'Read More', 'ignite' ) . " <span class='screen-reader-text'>" . get_the_title() . "</span>" );
+					the_content( __( 'Read More', 'ignite' ) . " <span class='screen-reader-text'>" . esc_html( get_the_title() ) . "</span>" );
 				}
 			} else {
 				the_content();
 			}
 		} elseif ( $ismore ) {
 			if ( ! empty( $read_more_text ) ) {
-				the_content( $read_more_text . " <span class='screen-reader-text'>" . get_the_title() . "</span>" );
+				the_content( esc_html( $read_more_text ) . " <span class='screen-reader-text'>" . esc_html( get_the_title() ) . "</span>" );
 			} else {
-				the_content( __( 'Read More', 'ignite' ) . " <span class='screen-reader-text'>" . get_the_title() . "</span>" );
+				the_content( __( 'Read More', 'ignite' ) . " <span class='screen-reader-text'>" . esc_html( get_the_title() ) . "</span>" );
 			}
 		} else {
 			the_excerpt();
@@ -184,9 +184,9 @@ if ( ! function_exists( 'ct_ignite_excerpt_read_more_link' ) ) {
 		$read_more_text = get_theme_mod( 'ct_ignite_read_more_text' );
 
 		if ( ! empty( $read_more_text ) ) {
-			return $output . "<p><a class='more-link' href='" . esc_url( get_permalink() ) . "'>" . $read_more_text . " <span class='screen-reader-text'>" . get_the_title() . "</span></a></p>";
+			return $output . "<p><a class='more-link' href='" . esc_url( get_permalink() ) . "'>" . esc_html( $read_more_text ) . " <span class='screen-reader-text'>" . esc_html( get_the_title() ) . "</span></a></p>";
 		} else {
-			return $output . "<p><a class='more-link' href='" . esc_url( get_permalink() ) . "'>" . __( 'Read More', 'ignite' ) . " <span class='screen-reader-text'>" . get_the_title() . "</span></a></p>";
+			return $output . "<p><a class='more-link' href='" . esc_url( get_permalink() ) . "'>" . __( 'Read More', 'ignite' ) . " <span class='screen-reader-text'>" . esc_html( get_the_title() ) . "</span></a></p>";
 		}
 	}
 }
@@ -237,7 +237,7 @@ if ( ! function_exists( 'ct_ignite_featured_image' ) ) {
 			if ( is_singular() ) {
 				$featured_image = '<div class="featured-image">' . get_the_post_thumbnail( $post->ID, 'full' ) . '</div>';
 			} else {
-				$featured_image = '<div class="featured-image"><a href="' . esc_url( get_permalink() ) . '">' . get_the_title() . get_the_post_thumbnail( $post->ID, 'full' ) . '</a></div>';
+				$featured_image = '<div class="featured-image"><a href="' . esc_url( get_permalink() ) . '">' . esc_html( get_the_title() ) . get_the_post_thumbnail( $post->ID, 'full' ) . '</a></div>';
 			}
 		}
 		if ( $featured_image ) {

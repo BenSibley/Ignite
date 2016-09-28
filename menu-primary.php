@@ -2,7 +2,7 @@
 <div class="menu-container menu-primary" id="menu-primary" role="navigation">
 	<?php
 	if ( get_bloginfo( 'description' ) ) {
-		echo '<p id="site-description" class="tagline">' . get_bloginfo( "description" ) . '</p>';
+		echo '<p id="site-description" class="tagline">' . esc_html( get_bloginfo( "description" ) ) . '</p>';
 	}
 	wp_nav_menu( array(
 		'theme_location' => 'primary',

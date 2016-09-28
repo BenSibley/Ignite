@@ -9,7 +9,7 @@ if ( get_theme_mod( 'ct_ignite_author_meta_settings' ) == 'hide' ) {
 		<h4>
 			<?php
 			if ( get_the_author_meta( 'user_url' ) ) {
-				echo "<a href='" . get_the_author_meta( 'user_url' ) . "'>" . get_the_author() . "</a>";
+				echo "<a href='" . esc_url( get_the_author_meta( 'user_url' ) ) . "'>" . esc_html( get_the_author() ) . "</a>";
 			} else {
 				the_author();
 			}
@@ -17,6 +17,6 @@ if ( get_theme_mod( 'ct_ignite_author_meta_settings' ) == 'hide' ) {
 		</h4>
 	</div>
 	<p>
-		<?php echo get_the_author_meta( 'description' ); ?>
+		<?php echo esc_html( get_the_author_meta( 'description' ) ); ?>
 	</p>
 </div>
