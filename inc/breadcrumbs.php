@@ -18,7 +18,7 @@ if ( ! function_exists( 'ct_ignite_breadcrumbs' ) ) {
 			'home_title'          => 'Home'
 		);
 		$args      = apply_filters( 'ct_ignite_breadcrumbs_args', wp_parse_args( $args, $defaults ) );
-		$separator = '<span class="separator"> ' . esc_attr( $args['separator_icon'] ) . ' </span>';
+		$separator = '<span class="separator"> ' . esc_html( $args['separator_icon'] ) . ' </span>';
 
 		/***** Begin Markup *****/
 
@@ -26,7 +26,7 @@ if ( ! function_exists( 'ct_ignite_breadcrumbs' ) ) {
 		$html = '<div id="' . esc_attr( $args['breadcrumbs_id'] ) . '" class="' . esc_attr( $args['breadcrumbs_classes'] ) . '">';
 
 		// Add Homepage link & separator (always present)
-		$html .= '<span class="item-home"><a class="bread-link bread-home" href="' . get_home_url() . '" title="' . esc_attr( $args['home_title'] ) . '">' . esc_attr( $args['home_title'] ) . '</a></span>';
+		$html .= '<span class="item-home"><a class="bread-link bread-home" href="' . get_home_url() . '" title="' . esc_attr( $args['home_title'] ) . '">' . esc_html( $args['home_title'] ) . '</a></span>';
 		$html .= $separator;
 
 		// Post
@@ -61,7 +61,7 @@ if ( ! function_exists( 'ct_ignite_breadcrumbs' ) ) {
 			$parent_title     = get_the_title( $parent_id );
 			$parent_permalink = esc_url( get_permalink( $parent_id ) );
 
-			$html .= '<span class="item-parent"><a class="bread-parent" href="' . esc_url( $parent_permalink ) . '" title="' . esc_attr( $parent_title ) . '">' . esc_attr( $parent_title ) . '</a></span>';
+			$html .= '<span class="item-parent"><a class="bread-parent" href="' . esc_url( $parent_permalink ) . '" title="' . esc_attr( $parent_title ) . '">' . esc_html( $parent_title ) . '</a></span>';
 			$html .= $separator;
 			$html .= '<span class="item-current item-' . $post->ID . '"><span title="' . get_the_title() . '"> ' . get_the_title() . '</span></span>';
 		} elseif ( is_singular() ) {
@@ -70,7 +70,7 @@ if ( ! function_exists( 'ct_ignite_breadcrumbs' ) ) {
 			$post_type_object  = get_post_type_object( $post_type );
 			$post_type_archive = get_post_type_archive_link( $post_type );
 
-			$html .= '<span class="item-cat item-custom-post-type-' . esc_attr( $post_type ) . '"><a class="bread-cat bread-custom-post-type-' . esc_attr( $post_type ) . '" href="' . esc_url( $post_type_archive ) . '" title="' . esc_attr( $post_type_object->labels->name ) . '">' . esc_attr( $post_type_object->labels->name ) . '</a></span>';
+			$html .= '<span class="item-cat item-custom-post-type-' . esc_attr( $post_type ) . '"><a class="bread-cat bread-custom-post-type-' . esc_attr( $post_type ) . '" href="' . esc_url( $post_type_archive ) . '" title="' . esc_attr( $post_type_object->labels->name ) . '">' . esc_html( $post_type_object->labels->name ) . '</a></span>';
 			$html .= $separator;
 			$html .= '<span class="item-current item-' . $post->ID . '"><span class="bread-current bread-' . $post->ID . '" title="' . $post->post_title . '">' . $post->post_title . '</span></span>';
 		} elseif ( is_category() ) {
@@ -82,7 +82,7 @@ if ( ! function_exists( 'ct_ignite_breadcrumbs' ) ) {
 				$parent_category = get_category( $parent );
 				$category_link   = get_category_link( $parent );
 
-				$html .= '<span class="item-parent item-parent-' . esc_attr( $parent_category->slug ) . '"><a class="bread-parent bread-parent-' . esc_attr( $parent_category->slug ) . '" href="' . esc_url( $category_link ) . '" title="' . esc_attr( $parent_category->name ) . '">' . esc_attr( $parent_category->name ) . '</a></span>';
+				$html .= '<span class="item-parent item-parent-' . esc_attr( $parent_category->slug ) . '"><a class="bread-parent bread-parent-' . esc_attr( $parent_category->slug ) . '" href="' . esc_url( $category_link ) . '" title="' . esc_attr( $parent_category->name ) . '">' . esc_html( $parent_category->name ) . '</a></span>';
 				$html .= $separator;
 			}
 			$html .= '<span class="item-current item-cat"><span class="bread-current bread-cat" title="' . $post->ID . '">' . single_cat_title( '', false ) . '</span></span>';
@@ -98,7 +98,7 @@ if ( ! function_exists( 'ct_ignite_breadcrumbs' ) ) {
 			$html .= '<span class="item-current item-year"><span class="bread-current bread-year">' . get_the_date( 'Y' ) . '</span></span>';
 		} elseif ( is_archive() ) {
 			$custom_tax_name = get_queried_object()->name;
-			$html .= '<span class="item-current item-archive"><span class="bread-current bread-archive">' . esc_attr( $custom_tax_name ) . '</span></span>';
+			$html .= '<span class="item-current item-archive"><span class="bread-current bread-archive">' . esc_html( $custom_tax_name ) . '</span></span>';
 		} elseif ( is_search() ) {
 			$html .= '<span class="item-current item-search"><span class="bread-current bread-search">Search results for: ' . get_search_query() . '</span></span>';
 		} elseif ( is_404() ) {

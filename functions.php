@@ -99,13 +99,13 @@ if ( ! function_exists( 'ct_ignite_update_fields' ) ) {
 		$fields['author'] =
 			'<p class="comment-form-author">
                 <label for="author" class="screen-reader-text">' . __( 'Your Name', 'ignite' ) . '</label>
-                <input placeholder="' . esc_attr__( 'Your Name', 'ignite' ) . $label . '" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
+                <input placeholder="' . esc_attr__( 'Your Name', 'ignite' ) . esc_attr( $label ) . '" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
 			'" size="30" ' . $aria_req . ' />
             </p>';
 		$fields['email'] =
 			'<p class="comment-form-email">
                 <label for="email" class="screen-reader-text">' . __( 'Your Email', 'ignite' ) . '</label>
-                <input placeholder="' . esc_attr__( 'Your Email', 'ignite' ) . $label . '" id="email" name="email" type="email" value="' . esc_attr( $commenter['comment_author_email'] ) .
+                <input placeholder="' . esc_attr__( 'Your Email', 'ignite' ) . esc_attr( $label ) . '" id="email" name="email" type="email" value="' . esc_attr( $commenter['comment_author_email'] ) .
 			'" size="30" ' . $aria_req . ' />
             </p>';
 		$fields['url'] =
@@ -528,7 +528,7 @@ function ct_ignite_add_meta_elements() {
 
 	$meta_elements = '';
 
-	$meta_elements .= sprintf( '<meta charset="%s" />' . "\n", get_bloginfo( 'charset' ) );
+	$meta_elements .= sprintf( '<meta charset="%s" />' . "\n", esc_attr( get_bloginfo( 'charset' ) ) );
 	$meta_elements .= '<meta name="viewport" content="width=device-width, initial-scale=1" />' . "\n";
 
 	$theme    = wp_get_theme( get_template() );
