@@ -468,15 +468,6 @@ function ct_ignite_background_css() {
 }
 add_action( 'wp_enqueue_scripts', 'ct_ignite_background_css', 20 );
 
-if ( ! function_exists( '_wp_render_title_tag' ) ) :
-	function ct_ignite_add_title_tag() {
-		?>
-		<title><?php wp_title( ' | ' ); ?></title>
-		<?php
-	}
-	add_action( 'wp_head', 'ct_ignite_add_title_tag' );
-endif;
-
 if ( ! function_exists( 'ct_ignite_customizer_social_media_array' ) ) {
 	function ct_ignite_customizer_social_media_array() {
 
