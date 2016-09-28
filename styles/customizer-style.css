@@ -26,7 +26,7 @@
   position: relative;
   right: 0;
   -webkit-transition: right 0.15s ease-in-out;
-  transition: right 0.15s ease-in-out;
+          transition: right 0.15s ease-in-out;
 }
 
 #accordion-section-colors {
@@ -116,13 +116,11 @@
 
 .ms-drop.bottom {
   top: 100%;
-  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
 }
 
 .ms-drop.top {
   bottom: 100%;
-  -webkit-box-shadow: 0 -2px 3px rgba(0, 0, 0, 0.15);
   box-shadow: 0 -2px 3px rgba(0, 0, 0, 0.15);
 }
 
@@ -148,20 +146,14 @@
   font-size: 1em;
   border: 1px solid #aaa;
   border-radius: 0;
-  -webkit-box-shadow: none;
   box-shadow: none;
   background: #fff url("multiple-select.png") no-repeat 100% -22px;
-  background: url("multiple-select.png") no-repeat 100% -22px, -webkit-gradient(linear, left bottom, left top, color-stop(0.85, white), color-stop(0.99, #eeeeee));
-  background: url("multiple-select.png") no-repeat 100% -22px, -webkit-linear-gradient(center bottom, white 85%, #eeeeee 99%);
-  background: url("multiple-select.png") no-repeat 100% -22px, -webkit-gradient(linear, left top, left bottom, color-stop(85%, #ffffff), color-stop(99%, #eeeeee));
   background: url("multiple-select.png") no-repeat 100% -22px, -webkit-linear-gradient(top, #ffffff 85%, #eeeeee 99%);
-  background: url("multiple-select.png") no-repeat 100% -22px, linear-gradient(top, #ffffff 85%, #eeeeee 99%);
+  background: url("multiple-select.png") no-repeat 100% -22px, linear-gradient(to bottom, #ffffff 85%, #eeeeee 99%);
 }
 
 .ms-search, .ms-search input {
-  -webkit-box-sizing: border-box;
   -khtml-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
 }

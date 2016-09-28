@@ -20,8 +20,6 @@ Ignite is distributed under the terms of the GNU GPL
 /*===== Basic Styles =====*/
 /* apply a natural box layout model to all elements */
 *, *:before, *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -412,7 +410,7 @@ a img {
 
 .menu-primary {
   -webkit-transform: translateZ(0);
-  transform: translateZ(0);
+          transform: translateZ(0);
   background: #373B41;
   width: 100%;
   min-height: 75em;
@@ -425,10 +423,9 @@ a img {
   text-align: center;
   z-index: 0;
   -webkit-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
+          transform: translateX(-100%);
   -webkit-transition: -webkit-transform 0.3s ease;
-  transition: transform 0.3s ease;
+          transition: transform 0.3s ease;
 }
 .menu-primary p {
   color: #e6a117;
@@ -498,8 +495,7 @@ a img {
 
 .site-header.toggled .menu-primary {
   -webkit-transform: translateX(0);
-  -ms-transform: translateX(0);
-  transform: translateX(0);
+          transform: translateX(0);
 }
 .site-header.toggled ~ div .main:after {
   bottom: 0;
@@ -553,8 +549,7 @@ a img {
     text-align: left;
     background: none;
     -webkit-transform: none;
-    -ms-transform: none;
-    transform: none;
+            transform: none;
   }
   .menu-primary p {
     display: none;
@@ -586,7 +581,7 @@ a img {
     letter-spacing: 0.1em;
     background: white;
     -webkit-transition: background 0.2s ease;
-    transition: background 0.2s ease;
+            transition: background 0.2s ease;
   }
   .menu-primary-items a:link, .menu-primary-items a:visited,
   .menu-unset ul a:link,
@@ -622,11 +617,10 @@ a img {
     z-index: 3;
     min-width: 100%;
     -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
+            backface-visibility: hidden;
     /* remove slight wiggle caused by opacity change */
     -webkit-transition: opacity 0.2s ease;
-    transition: opacity 0.2s ease;
-    -webkit-box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.2);
+            transition: opacity 0.2s ease;
     box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.2);
   }
   .menu-primary-items ul li,
@@ -844,7 +838,8 @@ a img {
   left: 0;
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .featured-image > img.no-object-fit,
 .featured-image > a > img.no-object-fit {
@@ -858,8 +853,7 @@ a img {
   right: 50%;
   left: auto;
   -webkit-transform: translateX(50%) translateY(-50%);
-  -ms-transform: translateX(50%) translateY(-50%);
-  transform: translateX(50%) translateY(-50%);
+          transform: translateX(50%) translateY(-50%);
 }
 .featured-image .ccfic {
   position: absolute;
@@ -928,7 +922,7 @@ a img {
   padding: 0 16.5px;
   margin: 1.125em 0;
   -webkit-transition: background 0.2s ease;
-  transition: background 0.2s ease;
+          transition: background 0.2s ease;
   clear: both;
 }
 .more-link:link, .more-link:visited {
