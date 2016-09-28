@@ -3,8 +3,14 @@
 /***** Front-end *****/
 function ct_ignite_load_scripts_styles() {
 
+	$font_args = array(
+		'family' => urlencode( 'Lusitana:400,700' ),
+		'subset' => urlencode( 'latin,latin-ext' )
+	);
+	$fonts_url = add_query_arg( $font_args, '//fonts.googleapis.com/css' );
+
 	// Register first to allow deregistration by fonts functionality
-	wp_register_style( 'ct-ignite-google-fonts', '//fonts.googleapis.com/css?family=Lusitana:400,700' );
+	wp_register_style( 'ct-ignite-google-fonts', $fonts_url );
 	wp_enqueue_style( 'ct-ignite-google-fonts' );
 
 	wp_enqueue_script( 'ct-ignite-production', get_template_directory_uri() . '/js/build/production.min.js#ct_ignite_asyncload', array( 'jquery' ), '', true );
