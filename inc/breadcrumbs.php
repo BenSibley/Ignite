@@ -15,7 +15,7 @@ if ( ! function_exists( 'ct_ignite_breadcrumbs' ) ) {
 			'separator_icon'      => '&gt;',
 			'breadcrumbs_id'      => 'breadcrumbs',
 			'breadcrumbs_classes' => 'breadcrumb-trail breadcrumbs',
-			'home_title'          => 'Home'
+			'home_title'          => esc_html__( 'Home', 'ignite' )
 		);
 		$args      = apply_filters( 'ct_ignite_breadcrumbs_args', wp_parse_args( $args, $defaults ) );
 		$separator = '<span class="separator"> ' . esc_html( $args['separator_icon'] ) . ' </span>';
