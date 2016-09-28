@@ -33,6 +33,23 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 		<?php }
 	}
 
+	/***** Ignite Pro Control *****/
+
+	class ct_ignite_plus_ad extends WP_Customize_Control {
+		public function render_content() {
+			$link = 'https://www.competethemes.com/ignite-plus/';
+			echo "<p class='bold'>" . sprintf( __('<a target="_blank" href="%s">Ignite Plus</a> makes advanced customization simple - and fun too.', 'ignite'), $link) . "</p>";
+			echo "<ul>
+					<li>" . __('Custom Colors', 'ignite') . "</li>
+					<li>" . __('7 New Layouts', 'ignite') . "</li>
+					<li>" . __('Header Image', 'ignite') . "</li>
+					<li>" . __('+ 9 more features', 'ignite') . "</li>
+				  </ul>";
+			echo "<p>" . __('Download the Ignite Plus to get started now.', 'ignite') . "</p>";
+			echo "<p class='button-wrapper'><a target=\"_blank\" class='ignite-plus-button' href='" . $link . "'>" . __('Get Ignite Plus', 'ignite') . "</a></p>";
+		}
+	}
+
 	/***** Add Panels *****/
 
 	if ( method_exists( 'WP_Customize_Manager', 'add_panel' ) ) {
@@ -51,6 +68,25 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 			'description' => __( 'Choose a font family and font weight.', 'ignite' )
 		) );
 	}
+
+	/***** Ignite Pro Section *****/
+	
+	// section
+	$wp_customize->add_section( 'ct_ignite_plus', array(
+		'title'    => __( 'Ignite Plus', 'ignite' ),
+		'priority' => 1
+	) );
+	// Upload - setting
+	$wp_customize->add_setting( 'ignite_plus', array(
+		'sanitize_callback' => 'absint'
+	) );
+	// Upload - control
+	$wp_customize->add_control( new ct_ignite_plus_ad(
+		$wp_customize, 'ignite_plus', array(
+			'section'  => 'ct_ignite_plus',
+			'settings' => 'ignite_plus'
+		)
+	) );
 
 	/***** Logo Upload *****/
 
@@ -776,15 +812,6 @@ function ct_ignite_get_available_font_weights( $current_font = '' ) {
 
 	return $font_weights;
 }
-
-function ct_ignite_customize_preview_js() {
-	?>
-	<script>
-		jQuery('#customize-info').prepend('<div class="upgrades-ad"><a href="https://www.competethemes.com/ignite-plus/" target="_blank"><?php _e('View the Ignite Plus Upgrade', 'ignite'); ?> <span>&rarr;</span></a></div>');
-	</script>
-<?php }
-
-add_action( 'customize_controls_print_footer_scripts', 'ct_ignite_customize_preview_js' );
 
 function ct_ignite_sanitize_css( $css ) {
 	$css = wp_kses( $css, array( '\'', '\"' ) );

@@ -1,45 +1,58 @@
 @import "variables";
 
-/* Customizer Styles */
+// Ignite Plus section
+#accordion-section-ct_ignite_plus {
 
-.upgrades-ad {
-
-  text-align: center;
-  border-bottom: solid 1px #eee;
-
-  a {
-    display: block;
-    padding: 9px 0;
-    color: white;
+  .accordion-section-title {
+    color: #fff;
     background: #43b3c4;
 
-    &:link,
-    &:visited,
-    &:hover,
-    &:active,
-    &:focus  {
-      color: white;
+    &:after {
+      color: #fff;
     }
+
     &:hover,
     &:active,
     &:focus {
-      background: #3ea5b3;
+      background: #3EA7B8 !important;
+      color: #fff !important;
 
-      span {
-        right: -3px;
+      &:after {
+        color: #fff !important;
       }
     }
   }
-  span {
-    position: relative;
-    right: 0;
-    transition: right 0.15s ease-in-out;
-  }
 }
+#customize-control-ignite_plus {
 
-// hide Color section since 4.3
-#accordion-section-colors {
-  display: none !important;
+  ul {
+    list-style: disc;
+    padding-left: 15px;
+  }
+  .bold {
+    font-weight: 600;
+  }
+  .button-wrapper {
+    text-align: center;
+  }
+  .ignite-plus-button {
+    display: inline-block;
+    font-size: 14px;
+    padding: 12px 24px;
+    background: #F4923A;
+    color: #fff;
+    border-radius: 3px;
+    border-left: solid 2px #CC8437;
+    border-right: solid 2px #CC8437;
+    border-bottom: solid 4px #CC8437;
+    text-decoration: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background: #ff9233;
+    }
+  }
 }
 
 /**

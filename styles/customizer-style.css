@@ -2,35 +2,45 @@
 /* Theme Colors */
 /* Social Media Brand Colors */
 /*===== Mixins =====*/
-/* Customizer Styles */
-.upgrades-ad {
-  text-align: center;
-  border-bottom: solid 1px #eee;
-}
-.upgrades-ad a {
-  display: block;
-  padding: 9px 0;
-  color: white;
+#accordion-section-ct_ignite_plus .accordion-section-title {
+  color: #fff;
   background: #43b3c4;
 }
-.upgrades-ad a:link, .upgrades-ad a:visited, .upgrades-ad a:hover, .upgrades-ad a:active, .upgrades-ad a:focus {
-  color: white;
+#accordion-section-ct_ignite_plus .accordion-section-title:after {
+  color: #fff;
 }
-.upgrades-ad a:hover, .upgrades-ad a:active, .upgrades-ad a:focus {
-  background: #3ea5b3;
+#accordion-section-ct_ignite_plus .accordion-section-title:hover, #accordion-section-ct_ignite_plus .accordion-section-title:active, #accordion-section-ct_ignite_plus .accordion-section-title:focus {
+  background: #3EA7B8 !important;
+  color: #fff !important;
 }
-.upgrades-ad a:hover span, .upgrades-ad a:active span, .upgrades-ad a:focus span {
-  right: -3px;
-}
-.upgrades-ad span {
-  position: relative;
-  right: 0;
-  -webkit-transition: right 0.15s ease-in-out;
-          transition: right 0.15s ease-in-out;
+#accordion-section-ct_ignite_plus .accordion-section-title:hover:after, #accordion-section-ct_ignite_plus .accordion-section-title:active:after, #accordion-section-ct_ignite_plus .accordion-section-title:focus:after {
+  color: #fff !important;
 }
 
-#accordion-section-colors {
-  display: none !important;
+#customize-control-ignite_plus ul {
+  list-style: disc;
+  padding-left: 15px;
+}
+#customize-control-ignite_plus .bold {
+  font-weight: 600;
+}
+#customize-control-ignite_plus .button-wrapper {
+  text-align: center;
+}
+#customize-control-ignite_plus .ignite-plus-button {
+  display: inline-block;
+  font-size: 14px;
+  padding: 12px 24px;
+  background: #F4923A;
+  color: #fff;
+  border-radius: 3px;
+  border-left: solid 2px #CC8437;
+  border-right: solid 2px #CC8437;
+  border-bottom: solid 4px #CC8437;
+  text-decoration: none;
+}
+#customize-control-ignite_plus .ignite-plus-button:hover, #customize-control-ignite_plus .ignite-plus-button:active, #customize-control-ignite_plus .ignite-plus-button:focus {
+  background: #ff9233;
 }
 
 /**
