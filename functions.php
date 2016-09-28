@@ -1,5 +1,13 @@
 <?php
 
+require_once( trailingslashit( get_template_directory() ) . 'theme-options.php' );
+foreach ( glob( trailingslashit( get_template_directory() ) . 'inc/*.php' ) as $filename ) {
+	include $filename;
+}
+foreach ( glob( trailingslashit( get_template_directory() ) . 'inc/widgets/*.php' ) as $filename ) {
+	include $filename;
+}
+
 if ( ! function_exists( ( 'ct_ignite_set_content_width' ) ) ) {
 	function ct_ignite_set_content_width() {
 		if ( ! isset( $content_width ) ) {
@@ -26,14 +34,6 @@ if ( ! function_exists( 'ct_ignite_theme_setup' ) ) {
 			'container' => 'loop-container',
 			'footer'    => 'overflow-container'
 		) );
-
-		require_once( trailingslashit( get_template_directory() ) . 'theme-options.php' );
-		foreach ( glob( trailingslashit( get_template_directory() ) . 'inc/*.php' ) as $filename ) {
-			include $filename;
-		}
-		foreach ( glob( trailingslashit( get_template_directory() ) . 'inc/widgets/*.php' ) as $filename ) {
-			include $filename;
-		}
 
 		load_theme_textdomain( 'ignite', get_template_directory() . '/languages' );
 	}
