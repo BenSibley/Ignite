@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Ignite 1.59\n"
+"Project-Id-Version: Ignite 1.62\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2016-04-11 12:38:02+00:00\n"
+"POT-Creation-Date: 2016-09-29 12:27:32+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -118,63 +118,63 @@ msgid ""
 "Themes."
 msgstr ""
 
-#: functions.php:40
+#: functions.php:46
 msgid "Primary Sidebar"
 msgstr ""
 
-#: functions.php:42
+#: functions.php:48
 msgid "The main sidebar"
 msgstr ""
 
-#: functions.php:52
+#: functions.php:60
 msgid "Primary"
 msgstr ""
 
-#: functions.php:68
+#: functions.php:77
 msgid "said:"
 msgstr ""
 
-#: functions.php:72
+#: functions.php:81
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:79
+#: functions.php:88
 msgid "Edit"
 msgstr ""
 
-#: functions.php:81
+#: functions.php:90
 msgid "Reply"
 msgstr ""
 
-#: functions.php:96 functions.php:114
+#: functions.php:105 functions.php:123
 msgid "(optional)"
 msgstr ""
 
-#: functions.php:101 functions.php:102
+#: functions.php:110 functions.php:111
 msgid "Your Name"
 msgstr ""
 
-#: functions.php:107 functions.php:108
+#: functions.php:116 functions.php:117
 msgid "Your Email"
 msgstr ""
 
-#: functions.php:113
+#: functions.php:122
 msgid "Your Website URL"
 msgstr ""
 
-#: functions.php:114
+#: functions.php:123
 msgid "Your URL"
 msgstr ""
 
-#: functions.php:128
+#: functions.php:137
 msgid "Your Comment"
 msgstr ""
 
-#: functions.php:129
+#: functions.php:138
 msgid "Enter Your Comment"
 msgstr ""
 
-#: functions.php:159 functions.php:168 functions.php:184 inc/customizer.php:606
+#: functions.php:168 functions.php:177 functions.php:193 inc/customizer.php:642
 msgid "Read More"
 msgstr ""
 
@@ -182,260 +182,294 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
+#: inc/breadcrumbs.php:18
+msgid "Home"
+msgstr ""
+
 #: inc/breadcrumbs.php:105
 msgid "Error 404"
 msgstr ""
 
+#: inc/customizer.php:41
+msgid ""
+"<a target=\"_blank\" href=\"%s\">Ignite Plus</a> makes advanced "
+"customization simple - and fun too."
+msgstr ""
+
 #: inc/customizer.php:43
-msgid "Logo"
+msgid "Custom Colors"
 msgstr ""
 
 #: inc/customizer.php:44
+msgid "7 New Layouts"
+msgstr ""
+
+#: inc/customizer.php:45
+msgid "Header Image"
+msgstr ""
+
+#: inc/customizer.php:46
+msgid "+ 9 more features"
+msgstr ""
+
+#: inc/customizer.php:48
+msgid "Download the Ignite Plus to get started now."
+msgstr ""
+
+#: inc/customizer.php:49
+msgid "Get Ignite Plus"
+msgstr ""
+
+#: inc/customizer.php:60
+msgid "Logo"
+msgstr ""
+
+#: inc/customizer.php:61
 msgid "Upload, position, and resize your logo"
 msgstr ""
 
-#: inc/customizer.php:50
+#: inc/customizer.php:67
 msgid "Font"
 msgstr ""
 
-#: inc/customizer.php:51
+#: inc/customizer.php:68
 msgid "Choose a font family and font weight."
 msgstr ""
 
-#: inc/customizer.php:59
+#: inc/customizer.php:76
+msgid "Ignite Plus"
+msgstr ""
+
+#: inc/customizer.php:95
 msgid "Logo Upload"
 msgstr ""
 
-#: inc/customizer.php:72
+#: inc/customizer.php:108
 msgid "Upload custom logo."
 msgstr ""
 
-#: inc/customizer.php:83
+#: inc/customizer.php:119
 msgid "Logo Positioning"
 msgstr ""
 
-#: inc/customizer.php:101
+#: inc/customizer.php:137
 msgid "Up/down"
 msgstr ""
 
-#: inc/customizer.php:108
+#: inc/customizer.php:144
 msgid "Left/right"
 msgstr ""
 
-#: inc/customizer.php:118
+#: inc/customizer.php:154
 msgid "Logo Size"
 msgstr ""
 
-#: inc/customizer.php:136
+#: inc/customizer.php:172
 msgid "Increase max-width"
 msgstr ""
 
-#: inc/customizer.php:143
+#: inc/customizer.php:179
 msgid "Increase max-height"
 msgstr ""
 
-#: inc/customizer.php:159
+#: inc/customizer.php:195
 msgid "Social Media Icons"
 msgstr ""
 
-#: inc/customizer.php:161
+#: inc/customizer.php:197
 msgid "Add the URL for each of your social profiles."
 msgstr ""
 
-#: inc/customizer.php:174
+#: inc/customizer.php:210
 msgid "Email Address"
 msgstr ""
 
-#: inc/customizer.php:220
+#: inc/customizer.php:256
 msgid ""
 "Accepts Skype link protocol (<a href=\"%s\" target=\"_blank\">learn "
 "more</a>)"
 msgstr ""
 
-#: inc/customizer.php:244
+#: inc/customizer.php:280
 msgid "Layout"
 msgstr ""
 
-#: inc/customizer.php:256
+#: inc/customizer.php:292
 msgid "Pick Your Layout:"
 msgstr ""
 
-#: inc/customizer.php:257
+#: inc/customizer.php:293
 msgid ""
 "Want more layouts? <a target=\"_blank\" href=\"%s\">Check out Ignite "
 "Plus</a>."
 msgstr ""
 
-#: inc/customizer.php:262 inc/customizer.php:639
+#: inc/customizer.php:298 inc/customizer.php:675
 msgid "Right sidebar"
 msgstr ""
 
-#: inc/customizer.php:263 inc/customizer.php:640
+#: inc/customizer.php:299 inc/customizer.php:676
 msgid "Left sidebar"
 msgstr ""
 
-#: inc/customizer.php:271
+#: inc/customizer.php:307
 msgid "Font Family"
 msgstr ""
 
-#: inc/customizer.php:273
+#: inc/customizer.php:309
 msgid "The default font is \"Lusitana\"."
 msgstr ""
 
-#: inc/customizer.php:286
+#: inc/customizer.php:322
 msgid "Site Font Family"
 msgstr ""
 
-#: inc/customizer.php:287
+#: inc/customizer.php:323
 msgid "Want more fonts? <a target=\"_blank\" href=\"%s\">Check out Ignite Plus</a>"
 msgstr ""
 
-#: inc/customizer.php:305
+#: inc/customizer.php:341
 msgid "Font Weight"
 msgstr ""
 
-#: inc/customizer.php:307
+#: inc/customizer.php:343
 msgid ""
 "If you've just changed fonts, please save and refresh the page to update "
 "available weights."
 msgstr ""
 
-#: inc/customizer.php:319
+#: inc/customizer.php:355
 msgid "Site Font Weight"
 msgstr ""
 
-#: inc/customizer.php:328
+#: inc/customizer.php:364
 msgid "Background"
 msgstr ""
 
-#: inc/customizer.php:341
+#: inc/customizer.php:377
 msgid "Background Color"
 msgstr ""
 
-#: inc/customizer.php:342
+#: inc/customizer.php:378
 msgid ""
 "Want background textures and images? <a target=\"_blank\" href=\"%s\">Check "
 "out Ignite Plus</a>"
 msgstr ""
 
-#: inc/customizer.php:353
+#: inc/customizer.php:389
 msgid "Post Meta"
 msgstr ""
 
-#: inc/customizer.php:363
+#: inc/customizer.php:399
 msgid "Show date before posts?"
 msgstr ""
 
-#: inc/customizer.php:368 inc/customizer.php:384 inc/customizer.php:400
-#: inc/customizer.php:416 inc/customizer.php:432 inc/customizer.php:448
-#: inc/customizer.php:572 inc/customizer.php:588 inc/customizer.php:687
+#: inc/customizer.php:404 inc/customizer.php:420 inc/customizer.php:436
+#: inc/customizer.php:452 inc/customizer.php:468 inc/customizer.php:484
+#: inc/customizer.php:608 inc/customizer.php:624 inc/customizer.php:723
 msgid "Show"
 msgstr ""
 
-#: inc/customizer.php:369 inc/customizer.php:385 inc/customizer.php:401
-#: inc/customizer.php:417 inc/customizer.php:433 inc/customizer.php:449
-#: inc/customizer.php:573 inc/customizer.php:589 inc/customizer.php:688
+#: inc/customizer.php:405 inc/customizer.php:421 inc/customizer.php:437
+#: inc/customizer.php:453 inc/customizer.php:469 inc/customizer.php:485
+#: inc/customizer.php:609 inc/customizer.php:625 inc/customizer.php:724
 msgid "Hide"
 msgstr ""
 
-#: inc/customizer.php:379
+#: inc/customizer.php:415
 msgid "Show author before posts?"
 msgstr ""
 
-#: inc/customizer.php:395
+#: inc/customizer.php:431
 msgid "Show categories after posts?"
 msgstr ""
 
-#: inc/customizer.php:411
+#: inc/customizer.php:447
 msgid "Show tags after posts?"
 msgstr ""
 
-#: inc/customizer.php:427
+#: inc/customizer.php:463
 msgid "Show comment count after posts?"
 msgstr ""
 
-#: inc/customizer.php:443
+#: inc/customizer.php:479
 msgid "Show prev/next post links after posts?"
 msgstr ""
 
-#: inc/customizer.php:457
+#: inc/customizer.php:493
 msgid "Comments"
 msgstr ""
 
-#: inc/customizer.php:468
+#: inc/customizer.php:504
 msgid "Show comments on:"
 msgstr ""
 
-#: inc/customizer.php:473 inc/customizer.php:670 index.php:4
+#: inc/customizer.php:509 inc/customizer.php:706 index.php:4
 msgid "Posts"
 msgstr ""
 
-#: inc/customizer.php:474 inc/customizer.php:671
+#: inc/customizer.php:510 inc/customizer.php:707
 msgid "Pages"
 msgstr ""
 
-#: inc/customizer.php:475 inc/customizer.php:672
+#: inc/customizer.php:511 inc/customizer.php:708
 msgid "Attachments"
 msgstr ""
 
-#: inc/customizer.php:476 inc/customizer.php:673
+#: inc/customizer.php:512 inc/customizer.php:709
 msgid "Do not show"
 msgstr ""
 
-#: inc/customizer.php:485
+#: inc/customizer.php:521
 msgid "Footer Text"
 msgstr ""
 
-#: inc/customizer.php:495
+#: inc/customizer.php:531
 msgid "Edit the text in your footer"
 msgstr ""
 
-#: inc/customizer.php:505
+#: inc/customizer.php:541
 msgid "Custom CSS"
 msgstr ""
 
-#: inc/customizer.php:515
+#: inc/customizer.php:551
 msgid "Add Custom CSS Here:"
 msgstr ""
 
-#: inc/customizer.php:525
+#: inc/customizer.php:561
 msgid "Additional Options"
 msgstr ""
 
-#: inc/customizer.php:535
+#: inc/customizer.php:571
 msgid "Show full post on blog?"
 msgstr ""
 
-#: inc/customizer.php:540 inc/customizer.php:556 inc/customizer.php:700
+#: inc/customizer.php:576 inc/customizer.php:592 inc/customizer.php:736
 msgid "Yes"
 msgstr ""
 
-#: inc/customizer.php:541 inc/customizer.php:557 inc/customizer.php:701
+#: inc/customizer.php:577 inc/customizer.php:593 inc/customizer.php:737
 msgid "No"
 msgstr ""
 
-#: inc/customizer.php:551
+#: inc/customizer.php:587
 msgid "Show breadcrumbs?"
 msgstr ""
 
-#: inc/customizer.php:567
+#: inc/customizer.php:603
 msgid "Show post author info after posts?"
 msgstr ""
 
-#: inc/customizer.php:583
+#: inc/customizer.php:619
 msgid "Add icon to parent menu items?"
 msgstr ""
 
-#: inc/customizer.php:599
+#: inc/customizer.php:635
 msgid "Word count in automatic excerpts"
 msgstr ""
 
-#: inc/customizer.php:611
+#: inc/customizer.php:647
 msgid "Read More button text"
-msgstr ""
-
-#: inc/customizer.php:783
-msgid "View the Ignite Plus Upgrade"
 msgstr ""
 
 #: inc/deprecated.php:37
