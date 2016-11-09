@@ -107,6 +107,9 @@
   .entry-header {
     padding-top: $baseline-height;
   }
+  .sticky-status {
+    display: none;
+  }
 }
 .search-form {
   margin-top: $baseline-height;

@@ -1675,6 +1675,9 @@ li.pingback {
 .search .entry-header {
   padding-top: 1.5em;
 }
+.search .sticky-status {
+  display: none;
+}
 
 .search-form {
   margin-top: 1.5em;
