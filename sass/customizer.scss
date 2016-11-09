@@ -24,6 +24,10 @@
   }
 }
 #customize-control-ignite_plus {
+  background: white;
+  border: solid 1px $gray-light;
+  padding: 6px 24px;
+  box-sizing: border-box;
 
   ul {
     list-style: disc;
@@ -39,6 +43,7 @@
     display: inline-block;
     font-size: 14px;
     padding: 12px 24px;
+    margin: 12px auto;
     background: #F4923A;
     color: #fff;
     border-radius: 3px;
