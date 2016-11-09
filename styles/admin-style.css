@@ -16,6 +16,12 @@
   list-style: disc;
   margin-left: 36px;
 }
+#ignite-dashboard-wrap .welcome {
+  margin-top: 12px;
+  padding: 12px 24px 24px;
+  border: solid 1px #e5e5e5;
+  background: #E0FBFF;
+}
 
 /* 600px */
 @media all and (min-width: 37.5em) {

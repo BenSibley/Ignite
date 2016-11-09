@@ -14,9 +14,17 @@ function ct_ignite_options_content() {
 		),
 		admin_url( 'customize.php' )
 	);
+	$support_url = 'https://www.competethemes.com/documentation/ignite-support-center/';
 	?>
 	<div id="ignite-dashboard-wrap" class="wrap">
 		<h2><?php _e( 'Ignite Dashboard', 'ignite' ); ?></h2>
+		<div class="welcome">
+			<h3><?php _e( 'Thanks for Choosing Ignite!', 'ignite' ); ?></h3>
+			<p>
+				<?php printf( __( 'If you need help getting started, there are detailed tutorials in the <a href="%s">Ignite Support Center</a>.', 'ignite' ), $support_url ); ?>
+				<?php printf( __( 'Otherwise, you can dive right in with the <a href="%s">Customizer</a>.', 'ignite' ), esc_url($customizer_url) ); ?>
+			</p>
+		</div>
 		<div class="content content-customization">
 			<h3><?php _e( 'Customization', 'ignite' ); ?></h3>
 			<p><?php _e( 'Click the "Customize" link in your menu, or use the button below to get started customizing Ignite', 'ignite' ); ?>
