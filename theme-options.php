@@ -21,7 +21,7 @@ function ct_ignite_options_content() {
 		<div class="welcome">
 			<h3><?php _e( 'Thanks for Choosing Ignite!', 'ignite' ); ?></h3>
 			<p>
-				<?php printf( __( 'If you need help getting started, there are detailed tutorials in the <a href="%s">Ignite Support Center</a>.', 'ignite' ), $support_url ); ?>
+				<?php printf( __( 'If you need help getting started, there are detailed tutorials in the <a target="_blank" href="%s">Ignite Support Center</a>.', 'ignite' ), $support_url ); ?>
 				<?php printf( __( 'Otherwise, you can dive right in with the <a href="%s">Customizer</a>.', 'ignite' ), esc_url($customizer_url) ); ?>
 			</p>
 		</div>

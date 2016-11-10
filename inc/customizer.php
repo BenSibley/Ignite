@@ -37,6 +37,7 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 
 	class ct_ignite_plus_ad extends WP_Customize_Control {
 		public function render_content() {
+			$link = 'https://www.competethemes.com/ignite-plus/';
 			echo "<p class='bold'>" . sprintf( __('<a target="_blank" href="%s">Ignite Plus</a> makes advanced customization simple - and fun too!', 'ignite'), $link) . "</p>";
 			echo "<ul>
 					<li>" . __('Custom Colors', 'ignite') . "</li>
@@ -45,7 +46,7 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 					<li>" . __('+ 7 more features', 'ignite') . "</li>
 				  </ul>";
 			echo "<p>" . __('View our gallery of screenshots and videos now to see if Ignite Plus is right for your site.', 'ignite') . "</p>";
-			echo "<p class='button-wrapper'><a target=\"_blank\" class='ignite-plus-button' href=' https://www.competethemes.com/ignite-plus/'>" . __('View Ignite Plus', 'ignite') . "</a></p>";
+			echo "<p class='button-wrapper'><a target=\"_blank\" class='ignite-plus-button' href='" . $link . "'>" . __('View Ignite Plus', 'ignite') . "</a></p>";
 		}
 	}
 
