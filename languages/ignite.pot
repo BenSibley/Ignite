@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Ignite 1.62\n"
+"Project-Id-Version: Ignite 1.63\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2016-09-29 12:27:32+00:00\n"
+"POT-Creation-Date: 2016-11-10 12:26:58+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -193,7 +193,7 @@ msgstr ""
 #: inc/customizer.php:41
 msgid ""
 "<a target=\"_blank\" href=\"%s\">Ignite Plus</a> makes advanced "
-"customization simple - and fun too."
+"customization simple - and fun too!"
 msgstr ""
 
 #: inc/customizer.php:43
@@ -201,23 +201,25 @@ msgid "Custom Colors"
 msgstr ""
 
 #: inc/customizer.php:44
-msgid "7 New Layouts"
+msgid "6 new layouts"
 msgstr ""
 
 #: inc/customizer.php:45
-msgid "Header Image"
+msgid "Flexible header image"
 msgstr ""
 
 #: inc/customizer.php:46
-msgid "+ 9 more features"
+msgid "+ 7 more features"
 msgstr ""
 
 #: inc/customizer.php:48
-msgid "Download the Ignite Plus to get started now."
+msgid ""
+"View our gallery of screenshots and videos now to see if Ignite Plus is "
+"right for your site."
 msgstr ""
 
 #: inc/customizer.php:49
-msgid "Get Ignite Plus"
+msgid "View Ignite Plus"
 msgstr ""
 
 #: inc/customizer.php:60
@@ -517,8 +519,8 @@ msgid "Next"
 msgstr ""
 
 #: search.php:9
-msgid "%d search result for \"%s\""
-msgid_plural "%d search results for \"%s\""
+msgid "%1$d search result for \"%2$s\""
+msgid_plural "%1$d search results for \"%2$s\""
 msgstr[0] ""
 msgstr[1] ""
 
@@ -542,94 +544,109 @@ msgstr ""
 msgid "Go"
 msgstr ""
 
-#: theme-options.php:4 theme-options.php:19
+#: theme-options.php:4 theme-options.php:20
 msgid "Ignite Dashboard"
 msgstr ""
 
-#: theme-options.php:21
+#: theme-options.php:22
+msgid "Thanks for Choosing Ignite!"
+msgstr ""
+
+#: theme-options.php:24
+msgid ""
+"If you need help getting started, there are detailed tutorials in the <a "
+"target=\"_blank\" href=\"%s\">Ignite Support Center</a>."
+msgstr ""
+
+#: theme-options.php:25
+msgid "Otherwise, you can dive right in with the <a href=\"%s\">Customizer</a>."
+msgstr ""
+
+#: theme-options.php:29
 msgid "Customization"
 msgstr ""
 
-#: theme-options.php:22
+#: theme-options.php:30
 msgid ""
 "Click the \"Customize\" link in your menu, or use the button below to get "
 "started customizing Ignite"
 msgstr ""
 
-#: theme-options.php:26
+#: theme-options.php:34
 msgid "Use Customizer"
 msgstr ""
 
-#: theme-options.php:30
+#: theme-options.php:38
 msgid "Support"
 msgstr ""
 
-#: theme-options.php:31
+#: theme-options.php:39
 msgid ""
 "You can find the knowledgebase, changelog, support forum, and more in the "
 "Ignite Support Center"
 msgstr ""
 
-#: theme-options.php:35
+#: theme-options.php:43
 msgid "Visit Support Center"
 msgstr ""
 
-#: theme-options.php:39
+#: theme-options.php:47
 msgid "WordPress Resources"
 msgstr ""
 
-#: theme-options.php:40
+#: theme-options.php:48
 msgid ""
 "Save time and money searching for WordPress products by following our "
 "recommendations"
 msgstr ""
 
-#: theme-options.php:44
+#: theme-options.php:52
 msgid "View Resources"
 msgstr ""
 
-#: theme-options.php:48 theme-options.php:50
+#: theme-options.php:56 theme-options.php:58
 msgid "Leave a Review"
 msgstr ""
 
-#: theme-options.php:49
+#: theme-options.php:57
 msgid "Help others find Ignite by leaving a review on wordpress.org."
 msgstr ""
 
-#: theme-options.php:53
+#: theme-options.php:61
 msgid "Upgrade to Ignite Plus"
 msgstr ""
 
-#: theme-options.php:54
+#: theme-options.php:62
 msgid ""
 "Ignite Plus is the premium version of Ignite. By upgrading to Ignite Plus, "
 "you get:"
 msgstr ""
 
-#: theme-options.php:56
+#: theme-options.php:64
 msgid "Custom colors"
 msgstr ""
 
-#: theme-options.php:57
+#: theme-options.php:65
 msgid "Background images & textures"
 msgstr ""
 
-#: theme-options.php:58
+#: theme-options.php:66
 msgid "New layouts"
 msgstr ""
 
-#: theme-options.php:59
+#: theme-options.php:67
 msgid "and much more&#8230;"
 msgstr ""
 
-#: theme-options.php:63
+#: theme-options.php:71
 msgid "See Full Feature List"
 msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"Ignite is a responsive blog theme. It includes logo tools, social media "
-"icons, a left- or right-sidebar layout, five fonts, custom background "
+"Ignite is a clean and responsive blog theme. Its modern design is great for "
+"both business and personal blogs. Features include: custom logo, social "
+"media icons, left- or right-sidebar layout, five fonts, custom background "
 "colors, and many additional display options. There is also a premium "
 "upgrade for Ignite called Ignite Plus. See our fully-setup live demo at "
 "https://www.competethemes.com/ignite-live-demo/"
