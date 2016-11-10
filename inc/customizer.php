@@ -38,7 +38,7 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 	class ct_ignite_plus_ad extends WP_Customize_Control {
 		public function render_content() {
 			$link = 'https://www.competethemes.com/ignite-plus/';
-			echo "<p class='bold'>" . sprintf( __('<a target="_blank" href="%s">Ignite Plus</a> is the plugin that makes advanced customization simple - and fun too!', 'ignite'), $link) . "</p>";
+			echo "<p class='bold'>" . sprintf( __('<a target="_blank" href="%s">Ignite Plus</a> makes advanced customization simple - and fun too!', 'ignite'), $link) . "</p>";
 			echo "<ul>
 					<li>" . __('Custom Colors', 'ignite') . "</li>
 					<li>" . __('6 new layouts', 'ignite') . "</li>
