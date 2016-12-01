@@ -539,6 +539,7 @@ if ( ! function_exists( 'ct_ignite_customizer_social_media_array' ) ) {
 			'steam',
 			'vk',
 			'academia',
+			'snapchat',
 			'bandcamp',
 			'etsy',
 			'quora',
