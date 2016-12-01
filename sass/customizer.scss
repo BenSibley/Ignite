@@ -5,7 +5,8 @@
 
   .accordion-section-title {
     color: #fff;
-    background: #43b3c4;
+    background: #05B0E7;
+    transition: background 0.2s;
 
     &:after {
       color: #fff;
@@ -14,7 +15,7 @@
     &:hover,
     &:active,
     &:focus {
-      background: #3EA7B8 !important;
+      background: #3A96B5 !important;
       color: #fff !important;
 
       &:after {
@@ -33,29 +34,43 @@
     list-style: disc;
     padding-left: 15px;
   }
+  img {
+    position: relative;
+    max-width: none;
+    width: 273px;
+    top: -6px;
+    left: -24px;
+    border-bottom: solid 1px $gray-light;
+  }
   .bold {
     font-weight: 600;
+    font-size: 16px;
   }
   .button-wrapper {
     text-align: center;
   }
   .ignite-plus-button {
     display: inline-block;
-    font-size: 14px;
-    padding: 12px 24px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 15px 24px;
     margin: 12px auto;
-    background: #F4923A;
+    background: #FF931E;
     color: #fff;
-    border-radius: 3px;
-    border-left: solid 2px #CC8437;
-    border-right: solid 2px #CC8437;
-    border-bottom: solid 4px #CC8437;
     text-decoration: none;
+    transition: background 0.2s;
+
+    &:before {
+      content: '\f06e';
+      font-family: 'FontAwesome';
+      margin-right: 6px;
+    }
 
     &:hover,
     &:active,
     &:focus {
-      background: #ff9233;
+      background: #FF8A23;
     }
   }
 }

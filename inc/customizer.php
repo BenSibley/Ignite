@@ -38,14 +38,15 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 	class ct_ignite_plus_ad extends WP_Customize_Control {
 		public function render_content() {
 			$link = 'https://www.competethemes.com/ignite-plus/';
+			echo "<a href='" . $link . "' target='_blank'><img src='" . get_template_directory_uri() . "/assets/images/ignite-plus.png' srcset='" . get_template_directory_uri() . "/assets/images/ignite-plus-2x.png 2x' /></a>";
 			echo "<p class='bold'>" . sprintf( __('<a target="_blank" href="%s">Ignite Plus</a> makes advanced customization simple - and fun too!', 'ignite'), $link) . "</p>";
+			echo "<p>" . __('Ignite Plus adds the following features:', 'ignite') . "</p>";
 			echo "<ul>
-					<li>" . __('Custom Colors', 'ignite') . "</li>
 					<li>" . __('6 new layouts', 'ignite') . "</li>
-					<li>" . __('Flexible header image', 'ignite') . "</li>
-					<li>" . __('+ 7 more features', 'ignite') . "</li>
+					<li>" . __('Custom colors', 'ignite') . "</li>
+					<li>" . __('New fonts', 'ignite') . "</li>
+					<li>" . __('+ 11 more features', 'ignite') . "</li>
 				  </ul>";
-			echo "<p>" . __('View our gallery of screenshots and videos now to see if Ignite Plus is right for your site.', 'ignite') . "</p>";
 			echo "<p class='button-wrapper'><a target=\"_blank\" class='ignite-plus-button' href='" . $link . "'>" . __('View Ignite Plus', 'ignite') . "</a></p>";
 		}
 	}
@@ -194,7 +195,7 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 	$wp_customize->add_section( 'ct_ignite_social_settings', array(
 		'title'       => __( 'Social Media Icons', 'ignite' ),
 		'priority'    => 35,
-		'description' => __( 'Add the URL for each of your social profiles.', 'ignite' )
+		'description' => __( 'Add the URL for each of your social plusfiles.', 'ignite' )
 	) );
 
 	// create a setting and control for each social site
@@ -253,7 +254,7 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 				) );
 				$wp_customize->add_control( $social_site, array(
 					'label'       => $label,
-					'description' => sprintf( __( 'Accepts Skype link protocol (<a href="%s" target="_blank">learn more</a>)', 'ignite' ), 'https://www.competethemes.com/blog/skype-links-wordpress/' ),
+					'description' => sprintf( __( 'Accepts Skype link plustocol (<a href="%s" target="_blank">learn more</a>)', 'ignite' ), 'https://www.competethemes.com/blog/skype-links-wordpress/' ),
 					'section'     => 'ct_ignite_social_settings',
 					'type'        => 'url',
 					'priority'    => $priority
