@@ -1228,6 +1228,10 @@ a img {
   padding-right: 0.75em;
 }
 
+.widget_categories select {
+  margin-bottom: 1.5em;
+}
+
 .widget_ct_ignite_image {
   background: none;
   border: none;

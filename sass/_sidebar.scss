@@ -104,7 +104,12 @@
     }
   }
 }
+.widget_categories {
 
+  select {
+    margin-bottom: $baseline-height;
+  }
+}
 .widget_ct_ignite_image {
   background: none;
   border: none;
