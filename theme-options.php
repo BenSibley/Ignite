@@ -18,58 +18,28 @@ function ct_ignite_options_content() {
 	?>
 	<div id="ignite-dashboard-wrap" class="wrap">
 		<h2><?php _e( 'Ignite Dashboard', 'ignite' ); ?></h2>
-		<div class="welcome">
-			<h3><?php _e( 'Thanks for Choosing Ignite!', 'ignite' ); ?></h3>
-			<p>
-				<?php printf( __( 'If you need help getting started, there are detailed tutorials in the <a target="_blank" href="%s">Ignite Support Center</a>.', 'ignite' ), $support_url ); ?>
-				<?php printf( __( 'Otherwise, you can dive right in with the <a href="%s">Customizer</a>.', 'ignite' ), esc_url($customizer_url) ); ?>
-			</p>
-		</div>
-		<div class="content content-customization">
-			<h3><?php _e( 'Customization', 'ignite' ); ?></h3>
-			<p><?php _e( 'Click the "Customize" link in your menu, or use the button below to get started customizing Ignite', 'ignite' ); ?>
-				.</p>
-			<p>
-				<a class="button-primary"
-				   href="<?php echo esc_url( $customizer_url ); ?>"><?php _e( 'Use Customizer', 'ignite' ) ?></a>
-			</p>
-		</div>
-		<div class="content content-support">
-			<h3><?php _e( 'Support', 'ignite' ); ?></h3>
-			<p><?php _e( "You can find the knowledgebase, changelog, support forum, and more in the Ignite Support Center", "ignite" ); ?>
-				.</p>
-			<p>
-				<a target="_blank" class="button-primary"
-				   href="https://www.competethemes.com/documentation/ignite-support-center/"><?php _e( 'Visit Support Center', 'ignite' ); ?></a>
-			</p>
-		</div>
-		<div class="content content-resources">
-			<h3><?php _e( 'WordPress Resources', 'ignite' ); ?></h3>
-			<p><?php _e( "Save time and money searching for WordPress products by following our recommendations", "ignite" ); ?>
-				.</p>
-			<p>
-				<a target="_blank" class="button-primary"
-				   href="https://www.competethemes.com/wordpress-resources/"><?php _e( 'View Resources', 'ignite' ); ?></a>
-			</p>
-		</div>
-		<div class="content content-review">
-			<h3><?php _e( 'Leave a Review', 'ignite' ); ?></h3>
-			<p><?php _e( 'Help others find Ignite by leaving a review on wordpress.org.', 'ignite' ); ?></p>
-			<a target="_blank" class="button-primary" href="https://wordpress.org/support/view/theme-reviews/ignite"><?php _e( 'Leave a Review', 'ignite' ); ?></a>
-		</div>
-		<div class="content content-premium-upgrade">
-			<h3><?php _e( 'Upgrade to Ignite Plus', 'ignite' ); ?></h3>
-			<p><?php _e( 'Ignite Plus is the premium version of Ignite. By upgrading to Ignite Plus, you get:', 'ignite' ); ?></p>
-			<ul>
-				<li><?php _e( 'Custom colors', 'ignite' ); ?></li>
-				<li><?php _e( 'Background images & textures', 'ignite' ); ?></li>
-				<li><?php _e( 'New layouts', 'ignite' ); ?></li>
-				<li><?php _e( 'and much more&#8230;', 'ignite' ); ?></li>
-			</ul>
-			<p>
-				<a target="_blank" class="button-primary"
-				   href="https://www.competethemes.com/ignite-plus/"><?php _e( 'See Full Feature List', 'ignite' ); ?></a>
-			</p>
+		<div class="content-boxes">
+			<div class="content content-support">
+				<h3><?php _e( 'Get Started', 'ignite' ); ?></h3>
+				<p><?php _e( "Not sure where to start? The <strong>Ignite Getting Started Guide</strong> will take you step-by-step through every feature in Ignite.", "ignite" ); ?></p>
+				<p>
+					<a target="_blank" class="button-primary"
+					   href="https://www.competethemes.com/help/getting-started-ignite/"><?php _e( 'View Guide', 'ignite' ); ?></a>
+				</p>
+			</div>
+			<div class="content content-premium-upgrade">
+				<h3><?php _e( 'Ignite Plus', 'ignite' ); ?></h3>
+				<p><?php _e( 'Download the Ignite Plus and unlock new layouts, custom colors, header images, and more', 'ignite' ); ?>...</p>
+				<p>
+					<a target="_blank" class="button-primary"
+					   href="https://www.competethemes.com/ignite-plus/"><?php _e( 'See Full Feature List', 'ignite' ); ?></a>
+				</p>
+			</div>
+			<div class="content content-review">
+				<h3><?php _e( 'Leave a Review', 'ignite' ); ?></h3>
+				<p><?php _e( 'Help others find Ignite by leaving a review on wordpress.org.', 'ignite' ); ?></p>
+				<a target="_blank" class="button-primary" href="https://wordpress.org/support/view/theme-reviews/ignite"><?php _e( 'Leave a Review', 'ignite' ); ?></a>
+			</div>
 		</div>
 	</div>
 <?php } ?>

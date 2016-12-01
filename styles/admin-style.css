@@ -4,55 +4,49 @@
   margin-bottom: 24px;
 }
 #ignite-dashboard-wrap .content {
+  box-sizing: border-box;
   margin-top: 12px;
   padding: 12px 24px 24px;
   border: solid 1px #e5e5e5;
   background: white;
 }
-#ignite-dashboard-wrap .content .button-primary {
+#ignite-dashboard-wrap .content .button-primary,
+#ignite-dashboard-wrap .content #delete {
   margin: 12px 0;
 }
 #ignite-dashboard-wrap .content ul {
   list-style: disc;
   margin-left: 36px;
 }
-#ignite-dashboard-wrap .welcome {
-  margin-top: 12px;
-  padding: 12px 24px 24px;
-  border: solid 1px #e5e5e5;
-  background: #E0FBFF;
-}
 
 /* 600px */
 @media all and (min-width: 37.5em) {
   #ignite-dashboard-wrap .content {
-    width: 39%;
+    width: 49%;
     float: left;
+    margin-right: 2%;
+    min-height: 250px;
+  }
+  #ignite-dashboard-wrap .content:nth-child(2n) {
+    margin-right: 0;
   }
   #ignite-dashboard-wrap .content p {
     min-height: 57px;
-  }
-  #ignite-dashboard-wrap .content-review p {
-    min-height: 75px;
-  }
-  #ignite-dashboard-wrap .content-customization,
-  #ignite-dashboard-wrap .content-resources,
-  #ignite-dashboard-wrap .content-review {
-    margin-right: 2%;
   }
 }
 /* 1100px */
 @media all and (min-width: 68.75em) {
   #ignite-dashboard-wrap .content {
-    width: 27%;
+    width: 32%;
   }
-  #ignite-dashboard-wrap .content-customization,
-  #ignite-dashboard-wrap .content-support,
-  #ignite-dashboard-wrap .content-review {
-    margin-right: 1%;
+  #ignite-dashboard-wrap .content:nth-child(2n) {
+    margin-right: 2%;
   }
-  #ignite-dashboard-wrap .content-resources {
+  #ignite-dashboard-wrap .content:nth-child(3n) {
     margin-right: 0;
+  }
+  #ignite-dashboard-wrap .content:nth-child(4n) {
+    clear: left;
   }
 }
 /* styles for widgets page */
