@@ -124,6 +124,9 @@
       padding: 0;
     }
   }
+  .parent-icons .widget_nav_menu .menu-item-has-children > a:after {
+    display: none;
+  }
 }
 
 /* 900px */

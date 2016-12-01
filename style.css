@@ -1242,6 +1242,10 @@ a img {
   .sidebar-primary-container .widget_ct_ignite_image {
     padding: 0;
   }
+
+  .parent-icons .widget_nav_menu .menu-item-has-children > a:after {
+    display: none;
+  }
 }
 /* 900px */
 @media all and (min-width: 56.25em) {
