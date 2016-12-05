@@ -38,7 +38,7 @@ function ct_ignite_options_content() {
 			<div class="content content-review">
 				<h3><?php _e( 'Leave a Review', 'ignite' ); ?></h3>
 				<p><?php _e( 'Help others find Ignite by leaving a review on wordpress.org.', 'ignite' ); ?></p>
-				<a target="_blank" class="button-primary" href="https://wordpress.org/support/view/theme-reviews/ignite"><?php _e( 'Leave a Review', 'ignite' ); ?></a>
+				<a target="_blank" class="button-primary" href="https://wordpress.org/support/theme/ignite/reviews/"><?php _e( 'Leave a Review', 'ignite' ); ?></a>
 			</div>
 		</div>
 	</div>
