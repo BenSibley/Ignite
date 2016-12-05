@@ -643,10 +643,28 @@ function ct_ignite_welcome_redirect() {
 
 	$welcome_url = add_query_arg(
 		array(
-			'page' => 'ignite-options'
+			'page'          => 'ignite-options',
+			'ignite_status' => 'activated'
 		),
 		admin_url( 'themes.php' )
 	);
-	wp_redirect( esc_url( $welcome_url ) );
+	wp_safe_redirect( esc_url_raw( $welcome_url ) );
 }
 add_action( 'after_switch_theme', 'ct_ignite_welcome_redirect' );
+
+if ( ! function_exists( ( 'ct_ignite_settings_notice' ) ) ) {
+	function ct_ignite_settings_notice() {
+
+		if ( isset( $_GET['ignite_status'] ) ) {
+
+			if ( $_GET['ignite_status'] == 'activated' ) {
+				?>
+				<div class="updated">
+					<p><?php _e( 'Ignite successfully activated!', 'ignite' ); ?></p>
+				</div>
+				<?php
+			}
+		}
+	}
+}
+add_action( 'admin_notices', 'ct_ignite_settings_notice' );
