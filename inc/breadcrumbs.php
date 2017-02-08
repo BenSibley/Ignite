@@ -31,8 +31,8 @@ if ( ! function_exists( 'ct_ignite_breadcrumbs' ) ) {
 
 		// Post
 		if ( is_singular( 'post' ) ) {
-
-			$category = get_the_category();
+			
+			$category = get_the_category( $post->ID );
 			$category_values = array_values( $category );
 			$last_category = end( $category_values );
 			$cat_parents = rtrim( get_category_parents( $last_category->term_id, true, ',' ), ',' );
@@ -66,7 +66,7 @@ if ( ! function_exists( 'ct_ignite_breadcrumbs' ) ) {
 			$html .= '<span class="item-current item-' . $post->ID . '"><span title="' . esc_attr( get_the_title() ) . '"> ' . esc_html( get_the_title() ) . '</span></span>';
 		} elseif ( is_singular() ) {
 
-			$post_type         = get_post_type();
+			$post_type         = get_post_type( $post->ID );
 			$post_type_object  = get_post_type_object( $post_type );
 			$post_type_archive = get_post_type_archive_link( $post_type );
 
