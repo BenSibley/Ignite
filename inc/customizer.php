@@ -232,6 +232,8 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 				$label = 'DeviantArt';
 			} elseif ( $social_site == 'hacker-news' ) {
 				$label = 'Hacker News';
+			} elseif ( $social_site == 'google-wallet' ) {
+				$label = 'Google Wallet';
 			} elseif ( $social_site == 'whatsapp' ) {
 				$label = 'WhatsApp';
 			} elseif ( $social_site == 'qq' ) {
