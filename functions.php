@@ -663,7 +663,7 @@ if ( ! function_exists( ( 'ct_ignite_settings_notice' ) ) ) {
 			if ( $_GET['ignite_status'] == 'activated' ) {
 				?>
 				<div class="updated">
-					<p><?php _e( 'Ignite successfully activated!', 'ignite' ); ?></p>
+					<p><?php printf( __( '%s successfully activated!', 'ignite' ), wp_get_theme( get_template() ) ); ?></p>
 				</div>
 				<?php
 			}

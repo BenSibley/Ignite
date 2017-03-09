@@ -39,15 +39,15 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 		public function render_content() {
 			$link = 'https://www.competethemes.com/ignite-plus/';
 			echo "<a href='" . $link . "' target='_blank'><img src='" . get_template_directory_uri() . "/assets/images/ignite-plus.png' srcset='" . get_template_directory_uri() . "/assets/images/ignite-plus-2x.png 2x' /></a>";
-			echo "<p class='bold'>" . sprintf( __('<a target="_blank" href="%s">Ignite Plus</a> makes advanced customization simple - and fun too!', 'ignite'), $link) . "</p>";
-			echo "<p>" . __('Ignite Plus adds the following features:', 'ignite') . "</p>";
+			echo "<p class='bold'>" . sprintf( __('<a target="_blank" href="%1$s">%2$s Plus</a> makes advanced customization simple - and fun too!', 'ignite'), $link, wp_get_theme( get_template() ) ) . "</p>";
+			echo "<p>" . sprintf( __('%s Plus adds the following features:', 'ignite'), wp_get_theme( get_template() ) ) . "</p>";
 			echo "<ul>
 					<li>" . __('6 new layouts', 'ignite') . "</li>
 					<li>" . __('Custom colors', 'ignite') . "</li>
 					<li>" . __('New fonts', 'ignite') . "</li>
 					<li>" . __('+ 11 more features', 'ignite') . "</li>
 				  </ul>";
-			echo "<p class='button-wrapper'><a target=\"_blank\" class='ignite-plus-button' href='" . $link . "'>" . __('View Ignite Plus', 'ignite') . "</a></p>";
+			echo "<p class='button-wrapper'><a target=\"_blank\" class='ignite-plus-button' href='" . $link . "'>" . sprintf( __('View %s Plus', 'ignite'), wp_get_theme( get_template() ) ) . "</a></p>";
 		}
 	}
 
@@ -74,7 +74,7 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 	
 	// section
 	$wp_customize->add_section( 'ct_ignite_plus', array(
-		'title'    => __( 'Ignite Plus', 'ignite' ),
+		'title'    => sprintf( __( '%s Plus', 'ignite' ), wp_get_theme( get_template() ) ),
 		'priority' => 1
 	) );
 	// Upload - setting
@@ -293,7 +293,7 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 	// control
 	$wp_customize->add_control( 'ct_ignite_sidebar_layout', array(
 		'label'       => __( 'Pick Your Layout:', 'ignite' ),
-		'description' => sprintf( __( 'Want more layouts? <a target="_blank" href="%s">Check out Ignite Plus</a>.', 'ignite' ), 'https://www.competethemes.com/ignite-plus/' ),
+		'description' => sprintf( __( 'Want more layouts? <a target="_blank" href="%1$s">Check out %2$s Plus</a>.', 'ignite' ), 'https://www.competethemes.com/ignite-plus/', wp_get_theme( get_template() ) ),
 		'section'     => 'ct-layout',
 		'settings'    => 'ct_ignite_layout_settings',
 		'type'        => 'radio',
@@ -323,7 +323,7 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 	$wp_customize->add_control( 'ct_ignite_font_family_settings', array(
 		'type'        => 'select',
 		'label'       => __( 'Site Font Family', 'ignite' ),
-		'description' => sprintf( __( 'Want more fonts? <a target="_blank" href="%s">Check out Ignite Plus</a>', 'ignite' ), 'https://www.competethemes.com/ignite-plus/' ),
+		'description' => sprintf( __( 'Want more fonts? <a target="_blank" href="%1$s">Check out %2$s Plus</a>', 'ignite' ), 'https://www.competethemes.com/ignite-plus/', wp_get_theme( get_template() ) ),
 		'section'     => 'ct-font-family',
 		'choices'     => array(
 			'Lusitana'    => 'Lusitana',
@@ -378,7 +378,7 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 	$wp_customize->add_control( new WP_Customize_Color_Control(
 		$wp_customize, 'ct_ignite_background_color', array(
 			'label'       => __( 'Background Color', 'ignite' ),
-			'description' => sprintf( __( 'Want background textures and images? <a target="_blank" href="%s">Check out Ignite Plus</a>', 'ignite' ), 'https://www.competethemes.com/ignite-plus/' ),
+			'description' => sprintf( __( 'Want background textures and images? <a target="_blank" href="%1$s">Check out %2$s Plus</a>', 'ignite' ), 'https://www.competethemes.com/ignite-plus/', wp_get_theme( get_template() ) ),
 			'section'     => 'ct-background',
 			'settings'    => 'ct_ignite_background_color_setting',
 			'priority'    => 10
