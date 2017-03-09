@@ -64,7 +64,7 @@ function ct_ignite_category_display() {
 	if ( $categories ) {
 		echo "<p><i class='fa fa-folder-open'></i>";
 		foreach ( $categories as $category ) {
-			$output .= '<a href="' . get_category_link( $category->term_id ) . '" title="' . esc_attr( sprintf( __( "View all posts in %s", 'ignite' ), $category->name ) ) . '">' . $category->cat_name . '</a>' . $separator;
+			$output .= '<a href="' . get_category_link( $category->term_id ) . '" title="' . esc_attr( sprintf( _x( 'View all posts in %s', 'View all posts in category', 'ignite' ), $category->name ) ) . '">' . $category->cat_name . '</a>' . $separator;
 		}
 		echo trim( $output, $separator );
 		echo "</p>";
@@ -101,7 +101,7 @@ function ct_ignite_post_meta_comments() {
 		?>
 		<p>
 			<i class="fa fa-comment"></i>
-			<?php comments_number( __( 'Comments closed', 'ignite' ), __( 'One Comment', 'ignite' ), __( '% Comments', 'ignite' ) ); ?>
+			<?php comments_number( __( 'Comments closed', 'ignite' ), __( 'One Comment', 'ignite' ), _x( '% Comments', 'noun: 5 comments', 'ignite' ) ); ?>
 		</p>
 		<?php
 		// otherwise link to the comments and display the count
@@ -110,7 +110,7 @@ function ct_ignite_post_meta_comments() {
 		<p>
 			<i class="fa fa-comment"></i>
 			<a href="<?php comments_link(); ?>">
-				<?php comments_number( __( 'Leave a Comment', 'ignite' ), __( 'One Comment', 'ignite' ), __( '% Comments', 'ignite' ) ); ?>
+				<?php comments_number( __( 'Leave a Comment', 'ignite' ), __( 'One Comment', 'ignite' ), _x( '% Comments', 'noun: 5 comments', 'ignite' ) ); ?>
 			</a>
 		</p>
 		<?php

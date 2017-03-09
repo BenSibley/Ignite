@@ -74,7 +74,7 @@ if ( ! function_exists( 'ct_ignite_customize_comments' ) ) {
 				echo get_avatar( get_comment_author_email(), 48 );
 				?>
 				<span class="author-name"><?php comment_author_link(); ?></span>
-				<span> <?php _e( 'said:', 'ignite' ); ?></span>
+				<span> <?php _ex( 'said:', 'COMMENTER said:', 'ignite' ); ?></span>
 			</div>
 			<div class="comment-content">
 				<?php if ( $comment->comment_approved == '0' ) : ?>
@@ -85,9 +85,9 @@ if ( ! function_exists( 'ct_ignite_customize_comments' ) ) {
 			</div>
 			<div class="comment-meta">
 				<div class="comment-date"><?php comment_date(); ?></div>
-				<?php edit_comment_link( __( 'Edit', 'ignite' ) ); ?>
+				<?php edit_comment_link( _x( 'Edit', 'Edit this comment', 'ignite' ) ); ?>
 				<?php comment_reply_link( array_merge( $args, array(
-					'reply_text' => __( 'Reply', 'ignite' ),
+					'reply_text' => _x( 'Reply', 'Reply to this comment', 'ignite' ),
 					'depth'      => $depth,
 					'max_depth'  => $args['max_depth']
 				) ) ); ?>

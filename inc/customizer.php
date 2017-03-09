@@ -493,7 +493,7 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 
 	// section
 	$wp_customize->add_section( 'ct_ignite_comment_display', array(
-		'title'    => __( 'Comments', 'ignite' ),
+		'title'    => _x( 'Comments', 'noun', 'ignite' ),
 		'priority' => 75
 	) );
 	// setting
