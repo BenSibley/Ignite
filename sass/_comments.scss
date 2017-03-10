@@ -104,7 +104,7 @@ li.pingback {
 }
 .bypostauthor {
 
-  .comment-author {
+  > article .comment-author {
 
     img {
       border: solid 2px $orange;

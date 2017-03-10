@@ -1477,10 +1477,10 @@ li.pingback {
   color: #373B41;
 }
 
-.bypostauthor .comment-author img {
+.bypostauthor > article .comment-author img {
   border: solid 2px #e6a117;
 }
-.bypostauthor .comment-author .author-profile-image-comment img {
+.bypostauthor > article .comment-author .author-profile-image-comment img {
   border: none;
 }
 
