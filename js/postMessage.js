@@ -35,7 +35,7 @@
     } );
     wp.customize( 'logo_upload', function( value ) {
         value.bind( function( to ) {
-            var siteTitleText = siteTitleLink.attr('title');
+            var siteTitleText = panel.find('#customize-control-blogname').find('input').val();
             var logo          = siteTitleText;
 
             if( to ) {
