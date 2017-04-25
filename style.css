@@ -1762,7 +1762,7 @@ li.pingback {
     margin: 0 7.407% 0 3.703%;
   }
   .sidebar-left .sidebar-primary-container {
-    float: none;
+    float: left;
     margin-left: 7.407%;
   }
 }
