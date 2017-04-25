@@ -535,6 +535,7 @@ if ( ! function_exists( 'ct_ignite_customizer_social_media_array' ) ) {
 			'digg',
 			'github',
 			'hacker-news',
+			'twitch',
 			'amazon',
 			'google-wallet',
 			'yelp',
