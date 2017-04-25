@@ -1,0 +1,620 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Ignite 1.65\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
+"POT-Creation-Date: 2017-03-13 17:36:52+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2017-04-17 20:19+0000\n"
+"Last-Translator: Jorge Campo <jcampodelgado@gmail.com>\n"
+"Language-Team: Spanish (Spain)\n"
+"X-Generator: Loco - https://localise.biz/\n"
+"Language: es-ES\n"
+"Plural-Forms: nplurals=2; plural=n != 1"
+
+#: functions.php:46
+msgid "Primary Sidebar"
+msgstr ""
+
+#: functions.php:48
+msgid "The main sidebar"
+msgstr ""
+
+#: functions.php:60
+msgid "Primary"
+msgstr ""
+
+#: inc/breadcrumbs.php:105
+msgid "Error 404"
+msgstr ""
+
+#: inc/customizer.php:42
+msgid ""
+"<a target=\"_blank\" href=\"%1$s\">%2$s Plus</a> makes advanced "
+"customization simple - and fun too!"
+msgstr ""
+
+#: inc/customizer.php:43
+msgid "%s Plus adds the following features:"
+msgstr ""
+
+#: inc/customizer.php:45
+msgid "6 new layouts"
+msgstr ""
+
+#: inc/customizer.php:46
+msgid "Custom colors"
+msgstr ""
+
+#: inc/customizer.php:47
+msgid "New fonts"
+msgstr ""
+
+#: inc/customizer.php:48
+msgid "+ 11 more features"
+msgstr ""
+
+#: inc/customizer.php:50
+msgid "View %s Plus"
+msgstr ""
+
+#: inc/customizer.php:61
+msgid "Logo"
+msgstr ""
+
+#: inc/customizer.php:62
+msgid "Upload, position, and resize your logo"
+msgstr ""
+
+#: inc/customizer.php:68
+msgid "Font"
+msgstr ""
+
+#: inc/customizer.php:69
+msgid "Choose a font family and font weight."
+msgstr ""
+
+#: inc/customizer.php:77 theme-options.php:31
+msgid "%s Plus"
+msgstr ""
+
+#: inc/customizer.php:96
+msgid "Logo Upload"
+msgstr ""
+
+#: inc/customizer.php:109
+msgid "Upload custom logo."
+msgstr ""
+
+#: inc/customizer.php:120
+msgid "Logo Positioning"
+msgstr ""
+
+#: inc/customizer.php:138
+msgid "Up/down"
+msgstr ""
+
+#: inc/customizer.php:145
+msgid "Left/right"
+msgstr ""
+
+#: inc/customizer.php:155
+msgid "Logo Size"
+msgstr ""
+
+#: inc/customizer.php:173
+msgid "Increase max-width"
+msgstr ""
+
+#: inc/customizer.php:180
+msgid "Increase max-height"
+msgstr ""
+
+#: inc/customizer.php:196
+msgid "Social Media Icons"
+msgstr ""
+
+#: inc/customizer.php:198
+msgid "Add the URL for each of your social plusfiles."
+msgstr ""
+
+#: inc/customizer.php:211
+msgid "Email Address"
+msgstr ""
+
+#: inc/customizer.php:259
+msgid ""
+"Accepts Skype link plustocol (<a href=\"%s\" target=\"_blank\">learn more</a>"
+")"
+msgstr ""
+
+#: inc/customizer.php:283
+msgid "Layout"
+msgstr ""
+
+#: inc/customizer.php:295
+msgid "Pick Your Layout:"
+msgstr ""
+
+#: inc/customizer.php:296
+msgid ""
+"Want more layouts? <a target=\"_blank\" href=\"%1$s\">Check out %2$s Plus</a>"
+"."
+msgstr ""
+
+#: inc/customizer.php:301 inc/customizer.php:691
+msgid "Right sidebar"
+msgstr ""
+
+#: inc/customizer.php:302 inc/customizer.php:692
+msgid "Left sidebar"
+msgstr ""
+
+#: inc/customizer.php:310
+msgid "Font Family"
+msgstr ""
+
+#: inc/customizer.php:312
+msgid "The default font is \"Lusitana\"."
+msgstr ""
+
+#: inc/customizer.php:325
+msgid "Site Font Family"
+msgstr ""
+
+#: inc/customizer.php:326
+msgid ""
+"Want more fonts? <a target=\"_blank\" href=\"%1$s\">Check out %2$s Plus</a>"
+msgstr ""
+
+#: inc/customizer.php:344
+msgid "Font Weight"
+msgstr ""
+
+#: inc/customizer.php:346
+msgid ""
+"If you've just changed fonts, please save and refresh the page to update "
+"available weights."
+msgstr ""
+
+#: inc/customizer.php:358
+msgid "Site Font Weight"
+msgstr ""
+
+#: inc/customizer.php:367
+msgid "Background"
+msgstr ""
+
+#: inc/customizer.php:380
+msgid "Background Color"
+msgstr ""
+
+#: inc/customizer.php:381
+msgid ""
+"Want background textures and images? <a target=\"_blank\" href=\"%1$s\">"
+"Check out %2$s Plus</a>"
+msgstr ""
+
+#: inc/customizer.php:392
+msgid "Post Meta"
+msgstr ""
+
+#: inc/customizer.php:402
+msgid "Show date before posts?"
+msgstr ""
+
+#: inc/customizer.php:407 inc/customizer.php:423 inc/customizer.php:439 
+#: inc/customizer.php:455 inc/customizer.php:471 inc/customizer.php:487 
+#: inc/customizer.php:624 inc/customizer.php:640 inc/customizer.php:739
+msgid "Show"
+msgstr ""
+
+#: inc/customizer.php:408 inc/customizer.php:424 inc/customizer.php:440 
+#: inc/customizer.php:456 inc/customizer.php:472 inc/customizer.php:488 
+#: inc/customizer.php:625 inc/customizer.php:641 inc/customizer.php:740
+msgid "Hide"
+msgstr ""
+
+#: inc/customizer.php:418
+msgid "Show author before posts?"
+msgstr ""
+
+#: inc/customizer.php:434
+msgid "Show categories after posts?"
+msgstr ""
+
+#: inc/customizer.php:450
+msgid "Show tags after posts?"
+msgstr ""
+
+#: inc/customizer.php:466
+msgid "Show comment count after posts?"
+msgstr ""
+
+#: inc/customizer.php:482
+msgid "Show prev/next post links after posts?"
+msgstr ""
+
+#: inc/customizer.php:507
+msgid "Show comments on:"
+msgstr ""
+
+#: inc/customizer.php:512 inc/customizer.php:722 index.php:4
+msgid "Posts"
+msgstr "Artículos"
+
+#: inc/customizer.php:513 inc/customizer.php:723
+msgid "Pages"
+msgstr "Páginas"
+
+#: inc/customizer.php:514 inc/customizer.php:724
+msgid "Attachments"
+msgstr "Adjuntos"
+
+#: inc/customizer.php:515 inc/customizer.php:725
+msgid "Do not show"
+msgstr "No mostrar"
+
+#: inc/customizer.php:524
+msgid "Footer Text"
+msgstr ""
+
+#: inc/customizer.php:534
+msgid "Edit the text in your footer"
+msgstr ""
+
+#: inc/customizer.php:556
+msgid "Custom CSS"
+msgstr ""
+
+#: inc/customizer.php:566
+msgid "Add Custom CSS Here:"
+msgstr ""
+
+#: inc/customizer.php:577
+msgid "Additional Options"
+msgstr ""
+
+#: inc/customizer.php:587
+msgid "Show full post on blog?"
+msgstr ""
+
+#: inc/customizer.php:592 inc/customizer.php:608 inc/customizer.php:752
+msgid "Yes"
+msgstr ""
+
+#: inc/customizer.php:593 inc/customizer.php:609 inc/customizer.php:753
+msgid "No"
+msgstr ""
+
+#: inc/customizer.php:603
+msgid "Show breadcrumbs?"
+msgstr ""
+
+#: inc/customizer.php:619
+msgid "Show post author info after posts?"
+msgstr ""
+
+#: inc/customizer.php:635
+msgid "Add icon to parent menu items?"
+msgstr ""
+
+#: inc/customizer.php:651
+msgid "Word count in automatic excerpts"
+msgstr ""
+
+#: inc/customizer.php:663
+msgid "Read More button text"
+msgstr "Leer Más boton de texto"
+
+#: inc/deprecated.php:37
+msgid "This is the oldest post"
+msgstr "Este es el comentario más antiguo"
+
+#: inc/deprecated.php:49
+msgid "This is the newest post"
+msgstr "Este es el comentario más nuevo"
+
+#: inc/widgets/image_widget.php:9
+msgid "This % widget displays an image."
+msgstr "Este % widget muestra una imagen"
+
+#: inc/widgets/image_widget.php:13
+msgid "Image"
+msgstr "Imagen"
+
+#: inc/widgets/image_widget.php:43
+msgid "Image URL:"
+msgstr "URL de la imagen:"
+
+#: inc/widgets/image_widget.php:47
+msgid "Upload Image"
+msgstr "Subir imagen"
+
+#: inc/widgets/image_widget.php:50
+msgid "Title:"
+msgstr "Título:"
+
+#: inc/widgets/image_widget.php:57
+msgid "Alternate text"
+msgstr ""
+
+#: inc/widgets/image_widget.php:64
+msgid "Link (optional)"
+msgstr ""
+
+#: index.php:26 index.php:32
+msgid "Previous"
+msgstr ""
+
+#: index.php:27 index.php:33
+msgid "Next"
+msgstr ""
+
+#: theme-options.php:4 theme-options.php:20
+msgid "%s Dashboard"
+msgstr ""
+
+#: theme-options.php:23
+msgid "Get Started"
+msgstr ""
+
+#: theme-options.php:24
+msgid ""
+"Not sure where to start? The <strong>%1$s Getting Started Guide</strong> "
+"will take you step-by-step through every feature in %1$s."
+msgstr ""
+
+#: theme-options.php:27
+msgid "View Guide"
+msgstr ""
+
+#: theme-options.php:32
+msgid ""
+"Download %s Plus and unlock new layouts, custom colors, header images, and "
+"more"
+msgstr ""
+
+#: theme-options.php:35
+msgid "See Full Feature List"
+msgstr ""
+
+#: theme-options.php:39 theme-options.php:41
+msgid "Leave a Review"
+msgstr ""
+
+#: theme-options.php:40
+msgid "Help others find %s by leaving a review on wordpress.org."
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Ignite is a clean and responsive blog theme. Its modern design is great for "
+"both business and personal blogs. Features include: custom logo, social "
+"media icons, left- or right-sidebar layout, five fonts, custom background "
+"colors, and many additional display options. There is also a premium upgrade "
+"for Ignite called Ignite Plus. Preview on desktop, tablets, and mobile with "
+"our interactive live demo: https://www.competethemes.com/demos/?theme=ignite"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Full-width"
+msgstr ""
+
+#: comments.php:22 comments.php:43 comments.php:66 
+#: content/comment-count.php:13 content/comment-count.php:21 
+#: inc/deprecated.php:104 inc/deprecated.php:113
+msgctxt "noun: 5 comments"
+msgid "% Comments"
+msgstr "% Comentarios"
+
+#: content/category-links.php:15 inc/deprecated.php:67
+msgctxt "View all posts in category"
+msgid "View all posts in %s"
+msgstr ""
+
+#: content/social-icons.php:51 content/social-icons.php:52
+msgctxt "noun"
+msgid "email"
+msgstr ""
+
+#: inc/customizer.php:496
+msgctxt "noun"
+msgid "Comments"
+msgstr "Comentarios"
+
+#: functions.php:77
+msgctxt "COMMENTER said:"
+msgid "said:"
+msgstr ""
+
+#: functions.php:88
+msgctxt "Edit this comment"
+msgid "Edit"
+msgstr ""
+
+#: functions.php:90
+msgctxt "Reply to this comment"
+msgid "Reply"
+msgstr ""
+
+#: comments.php:22 comments.php:43 comments.php:66
+msgid "Be First to Comment"
+msgstr "Sé el primero en comentar"
+
+#: comments.php:22 comments.php:43 comments.php:66 
+#: content/comment-count.php:13 content/comment-count.php:21 
+#: inc/deprecated.php:104 inc/deprecated.php:113
+msgid "One Comment"
+msgstr "Un comentario"
+
+#: comments.php:58
+msgid ""
+"Comments are closed, but <a href=\"%s\" title=\"Trackback URL for this "
+"post\">trackbacks</a> and pingbacks are open."
+msgstr ""
+"Los comentarios están cerrados, pero <a href=\"%s\" title=\"Trackback URL "
+"for this post\">trackbacks</a> y pingbacks están abiertos."
+
+#: comments.php:81 comments.php:88
+msgid "Comments are closed."
+msgstr ""
+"Los comentarios están cerrados.\n"
+
+#: content/comment-count.php:13 inc/deprecated.php:104
+msgid "Comments closed"
+msgstr "Comentarios cerrados"
+
+#: content/comment-count.php:21 inc/deprecated.php:113
+msgid "Leave a Comment"
+msgstr "Deja una comentario"
+
+#: content/further-reading.php:11 inc/deprecated.php:31
+msgid "Previous Post"
+msgstr "Anterior artículo"
+
+#: content/further-reading.php:12 inc/deprecated.php:20
+msgid "The Previous Post"
+msgstr "El artículo anterior"
+
+#: content/further-reading.php:15
+msgid "No Older Posts"
+msgstr "No hay artículos más antiguos"
+
+#: content/further-reading.php:16 content/further-reading.php:32 
+#: inc/deprecated.php:36 inc/deprecated.php:48
+msgid "Return to Blog"
+msgstr "Volver al blog"
+
+#: content/further-reading.php:27 inc/deprecated.php:43
+msgid "Next Post"
+msgstr "Siguiente artículo"
+
+#: content/further-reading.php:28 inc/deprecated.php:25
+msgid "The Next Post"
+msgstr "El siguiente artículo"
+
+#: content/further-reading.php:31
+msgid "No Newer Posts"
+msgstr "No hay nuevos artículos"
+
+#: content/tag-links.php:14 inc/deprecated.php:86
+msgid "View all posts tagged %s"
+msgstr "Ver todos los artículos etiquetados %s"
+
+#: content-404.php:3
+msgid "404: Page Not Found"
+msgstr "404: Página no encontrada"
+
+#: content-404.php:8
+msgid ""
+"Looks like nothing was found on this url.  Double-check that the url is "
+"correct or try the search form below to find what you were looking for."
+msgstr ""
+"Parece que no hay contenido en esta url. Compruebe que la url es correcta o "
+"intente la búsqueda con el formulario inferior."
+
+#: content-attachment.php:25
+msgid "Previous Image"
+msgstr "Imagen anterior"
+
+#: content-attachment.php:28
+msgid "Next Image"
+msgstr "Siguiente imagen"
+
+#: content-page.php:10 content.php:13
+msgid "Pages:"
+msgstr "Páginas:"
+
+#: footer.php:25
+msgid ""
+"<a target=\"_blank\" href=\"%1$s\">%2$s WordPress Theme</a> by Compete "
+"Themes."
+msgstr ""
+"<a target=\"_blank\" href=\"%1$s\">%2$s WordPress Theme</a> by Compete "
+"Themes."
+
+#: functions.php:81
+msgid "Your comment is awaiting moderation."
+msgstr "Su comentario está esperando aprobación"
+
+#: functions.php:105 functions.php:123
+msgid "(optional)"
+msgstr "(opcional)"
+
+#: functions.php:110 functions.php:111
+msgid "Your Name"
+msgstr "Su nombre"
+
+#: functions.php:116 functions.php:117
+msgid "Your Email"
+msgstr "Su Email"
+
+#: functions.php:122
+msgid "Your Website URL"
+msgstr "La URL de su página web"
+
+#: functions.php:123
+msgid "Your URL"
+msgstr "Su URL"
+
+#: functions.php:137
+msgid "Your Comment"
+msgstr "Su comentario"
+
+#: functions.php:138
+msgid "Enter Your Comment"
+msgstr "Introduzca su comentario"
+
+#: functions.php:169 inc/customizer.php:658
+msgid "Read More"
+msgstr "Leer más"
+
+#: functions.php:661
+msgid "%s successfully activated!"
+msgstr "%s ¡activado con éxito!"
+
+#: header.php:7
+msgid "Skip to content"
+msgstr "Ir al contenido"
+
+#: inc/breadcrumbs.php:18
+msgid "Home"
+msgstr "Inicio"
+
+#: search.php:9
+msgid "%1$d search result for \"%2$s\""
+msgid_plural "%1$d search results for \"%2$s\""
+msgstr[0] "%1$d resultado de la búsqueda para \"%2$s\""
+msgstr[1] "%1$d resultados de la búsqueda para \"%2$s\""
+
+#: search.php:11
+msgid "No search results for \"%s\""
+msgstr "No hay resultados para \"%s\""
+
+#: search.php:33
+msgid "Can't find what you're looking for?  Try refining your search:"
+msgstr "¿No puede encontrar lo que busca? Trate de refinar su búsqueda:"
+
+#: searchform.php:3 searchform.php:5
+msgid "Search for:"
+msgstr "Buscar por:"
+
+#: searchform.php:4
+msgid "Search..."
+msgstr "Buscar..."
+
+#: searchform.php:6
+msgid "Go"
+msgstr "Buscar"
+
+#: content/entry-meta-top.php:10 content-attachment.php:3
+msgctxt "Published DATE"
+msgid "Published"
+msgstr "Publicado el"
+
+#: content/entry-meta-top.php:16 content/entry-meta-top.php:19
+msgctxt "Published by whom?"
+msgid "by"
+msgstr "por"
