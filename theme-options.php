@@ -40,6 +40,11 @@ function ct_ignite_options_content() {
 				<p><?php printf( __( 'Help others find %s by leaving a review on wordpress.org.', 'ignite' ), wp_get_theme( get_template() ) ); ?></p>
 				<a target="_blank" class="button-primary" href="https://wordpress.org/support/theme/ignite/reviews/"><?php _e( 'Leave a Review', 'ignite' ); ?></a>
 			</div>
+			<div class="content content-presspad">
+				<h3><?php _e( 'Turn Ignite into a Mobile App', 'ignite' ); ?></h3>
+				<p><?php printf( __( '%s can be converted into a mobile app and listed on the App Store with the help of PressPad News. Read our tutorial to learn more.', 'ignite' ), wp_get_theme( get_template() ) ); ?></p>
+				<a target="_blank" class="button-primary" href="https://www.competethemes.com/help/convert-mobile-app-ignite/"><?php _e( 'Read Tutorial', 'ignite' ); ?></a>
+			</div>
 		</div>
 	</div>
 <?php } ?>
