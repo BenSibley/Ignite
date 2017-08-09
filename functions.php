@@ -34,7 +34,8 @@ if ( ! function_exists( 'ct_ignite_theme_setup' ) ) {
 			'container' => 'loop-container',
 			'footer'    => 'overflow-container'
 		) );
-
+		add_theme_support( 'woocommerce' );
+		
 		load_theme_textdomain( 'ignite', get_template_directory() . '/languages' );
 	}
 }
@@ -132,6 +133,13 @@ add_filter( 'comment_form_default_fields', 'ct_ignite_update_fields' );
 if ( ! function_exists( 'ct_ignite_update_comment_field' ) ) {
 	function ct_ignite_update_comment_field( $comment_field ) {
 
+		// don't filter the WooCommerce review form
+		if ( function_exists( 'is_woocommerce' ) ) {
+			if ( is_woocommerce() ) {
+				return $comment_field;
+			}
+		}
+		
 		$comment_field =
 			'<p class="comment-form-comment">
                 <label for="comment" class="screen-reader-text">' . __( 'Your Comment', 'ignite' ) . '</label>

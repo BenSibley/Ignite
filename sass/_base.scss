@@ -191,7 +191,13 @@ img,
 
 /* Form styles */
 
-input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="file"]):not([type="image"]),
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
 textarea {
   padding: 0.8em;
   width: 100%;
@@ -225,10 +231,11 @@ input[type="submit"] {
   @include border-radius(0);
   @include transition(background 0.2s ease);
   -webkit-appearance: none;
-}
-input[type="submit"]:hover {
-  cursor: pointer;
-  background: $orange-dark;
+
+  &:hover {
+    cursor: pointer;
+    background: $orange-dark;
+  }
 }
 input[type="search"] {
   margin-right: $baseline-height;

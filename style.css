@@ -236,7 +236,13 @@ img,
 }
 
 /* Form styles */
-input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="file"]):not([type="image"]),
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
 textarea {
   padding: 0.8em;
   width: 100%;
@@ -276,7 +282,6 @@ input[type="submit"] {
   transition: background 0.2s ease;
   -webkit-appearance: none;
 }
-
 input[type="submit"]:hover {
   cursor: pointer;
   background: #A87227;
@@ -1903,13 +1908,213 @@ li.pingback {
   line-height: 1.5;
 }
 
+.woocommerce .product .quantity .qty {
+  width: 50px !important;
+  font-size: 16px !important;
+  padding: 7px 6px 8px 12px !important;
+}
+.woocommerce .product .single_add_to_cart_button {
+  line-height: 1.5;
+  padding: 11px 24px;
+}
+.woocommerce .product .comment-form-comment label {
+  display: block;
+}
+.woocommerce .woocommerce-product-gallery__wrapper {
+  margin: 0;
+}
+.woocommerce .product_meta a {
+  text-decoration: underline;
+}
+.woocommerce .woocommerce-review-link {
+  text-decoration: underline;
+}
+.woocommerce .woocommerce-Reviews-title,
+.woocommerce .related h2,
+.woocommerce .upsells h2,
+.woocommerce .comment-reply-title {
+  margin-bottom: 24px;
+  font-size: 21px;
+  line-height: 24px;
+  font-weight: 800;
+}
+.woocommerce .star-rating {
+  color: #e6a117;
+}
+.woocommerce .comment-reply-title {
+  display: block;
+}
+
+.woocommerce.archive .loop-container {
+  background: #fff;
+  padding: 1.5em 8% 2.25em;
+}
+.woocommerce.archive .page-title {
+  font-weight: 800;
+  font-size: 1.625em;
+  line-height: 1.385;
+}
+
+.woocommerce-cart th, .woocommerce-cart td,
+.woocommerce-checkout th,
+.woocommerce-checkout td,
+.woocommerce-page th,
+.woocommerce-page td {
+  border: none;
+}
+.woocommerce-cart h2,
+.woocommerce-cart h3,
+.woocommerce-checkout h2,
+.woocommerce-checkout h3,
+.woocommerce-page h2,
+.woocommerce-page h3 {
+  margin-bottom: 24px;
+  font-size: 21px;
+  line-height: 24px;
+  font-weight: 800;
+}
+
+.woocommerce-cart .quantity input {
+  width: 50px !important;
+  font-size: 14px !important;
+  padding: 8px 4px !important;
+}
+.woocommerce-cart .coupon input {
+  max-width: none !important;
+  width: 49% !important;
+}
+.woocommerce-cart .coupon input[type="text"] {
+  font-size: 14px !important;
+  padding: 7px 12px 8px !important;
+}
+.woocommerce-cart table.shop_table td.product-name {
+  padding: 24px 12px;
+}
+.woocommerce-cart table.shop_table .actions {
+  padding: 12px;
+}
+
+.woocommerce-checkout input {
+  max-width: none;
+}
+.woocommerce-checkout .required {
+  text-decoration: none;
+}
+.woocommerce-checkout #customer_details {
+  margin-bottom: 24px;
+}
+
+.woocommerce-account .woocommerce {
+  position: relative;
+  border: solid 1px #D9DCDF;
+  border-radius: 6px;
+  min-height: 260px;
+}
+.woocommerce-account .woocommerce-MyAccount-navigation {
+  background: #D9DCDF;
+  padding: 1.5em;
+}
+.woocommerce-account .woocommerce-MyAccount-navigation ul {
+  list-style: none;
+  margin: 0;
+}
+.woocommerce-account .woocommerce-MyAccount-navigation li {
+  margin-bottom: 12px;
+}
+.woocommerce-account .woocommerce-MyAccount-navigation li.is-active a {
+  text-decoration: underline;
+}
+.woocommerce-account .woocommerce-MyAccount-navigation li a {
+  font-size: 12px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 800;
+  color: #000;
+}
+.woocommerce-account .woocommerce-MyAccount-navigation li a:hover, .woocommerce-account .woocommerce-MyAccount-navigation li a:active, .woocommerce-account .woocommerce-MyAccount-navigation li a:focus {
+  text-decoration: underline;
+}
+.woocommerce-account .woocommerce-MyAccount-content {
+  padding: 1.5em;
+}
+.woocommerce-account .woocommerce-MyAccount-content > p:first-child {
+  margin-top: 0;
+}
+.woocommerce-account .woocommerce-MyAccount-content fieldset {
+  margin: 1.5em 0;
+}
+.woocommerce-account .woocommerce-message {
+  z-index: 9;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+  top: -26px;
+}
+
+.woocommerce form .form-row .required {
+  text-decoration: none;
+}
+
+@media all and (min-width: 769px) {
+  .woocommerce #content div.product div.images, .woocommerce div.product div.images, .woocommerce-page #content div.product div.images, .woocommerce-page div.product div.images {
+    width: 40%;
+  }
+
+  .woocommerce #content div.product div.summary, .woocommerce div.product div.summary, .woocommerce-page #content div.product div.summary, .woocommerce-page div.product div.summary {
+    width: 56%;
+  }
+
+  .woocommerce-account .woocommerce-MyAccount-navigation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+}
+@media all and (min-width: 50em) {
+  .woocommerce .entry,
+  .woocommerce-cart .entry,
+  .woocommerce-checkout .entry,
+  .woocommerce-page .entry {
+    padding: 1.5em 8% 2.25em;
+  }
+}
+/* 900px */
+@media all and (min-width: 56.25em) {
+  .woocommerce-cart .main,
+  .woocommerce-checkout .main,
+  .woocommerce-account .main {
+    float: none;
+    margin: 0 auto;
+  }
+  .woocommerce-cart .breadcrumb-trail,
+  .woocommerce-checkout .breadcrumb-trail,
+  .woocommerce-account .breadcrumb-trail {
+    width: 55.55%;
+    margin: 0 auto;
+    padding: 3em 0 0;
+  }
+}
+@media all and (min-width: 1000px) {
+  .woocommerce .entry-title,
+  .woocommerce-account .entry-title {
+    font-size: 1.625em;
+    line-height: 1.385;
+  }
+}
+@media all and (min-width: 68.75em) {
+  .woocommerce-cart .breadcrumb-trail,
+  .woocommerce-checkout .breadcrumb-trail,
+  .woocommerce-account .breadcrumb-trail {
+    width: 59.253%;
+  }
+}
 /*
 
 ATTENTION:
 
 Please do not edit this. Your changes will be overwritten when you update Ignite.
 
-If you want to make CSS edits, use the "Custom CSS" section in the Customizer instead (Appearance > Customize).
+If you want to make CSS edits, use the "Additional CSS" section in the Customizer instead (Appearance > Customize).
 
 If you want more information about customizing Ignite with CSS, check out this guide: https://www.competethemes.com/help/custom-css-ignite/
 
