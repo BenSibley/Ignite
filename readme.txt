@@ -1,15 +1,15 @@
 === Ignite ===
 Contributors: bensibley
-Tags: blog, education, entertainment, two-columns, right-sidebar, left-sidebar, custom-background, custom-menu, featured-images, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
+Tags: two-columns, right-sidebar, left-sidebar, custom-background, custom-logo, custom-menu, featured-images, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, blog, education, news
 Requires at least: 4.5
 Tested up to: 4.8
 Stable tag: 1.67
 
-Ignite is a clean and responsive blog theme.
+Ignite is a clean, free, and responsive blog theme.
 
 == Description ==
 
-Ignite is a clean and responsive blog theme. Its modern design is great for both business and personal blogs. Features include: custom logo, social media icons, left- or right-sidebar layout, five fonts, custom background colors, and many additional display options. There is also a premium upgrade for Ignite called Ignite Plus. Preview on desktop, tablets, and mobile with our interactive live demo: https://www.competethemes.com/demos/?theme=ignite
+Ignite is a clean, free, and responsive blog theme. Its modern design is great for both business and personal websites. Ignite has a simple and minimalist design that looks equally great on laptops, tablets, and mobile devices. Features include: custom logo, social media icons, left- and right-sidebar layouts, five fonts, custom background colors, and many additional display options. Use it to blog about the news, food, music, fashion, or your travels. Ignite is now WooCommerce compatible, so you can even setup an eCommerce store. There is also a premium upgrade for Ignite called Ignite Plus.
 
 **Live Demo**
 
