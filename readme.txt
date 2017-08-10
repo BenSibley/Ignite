@@ -28,7 +28,6 @@ Ignite comes with the following features:
 * Custom excerpt length
 * Turn comment display on/off by post type (Posts, Pages, and Attachments)
 * Custom footer text
-* Custom CSS
 
 **Ignite Plus**
 
