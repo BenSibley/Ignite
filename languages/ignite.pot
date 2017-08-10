@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Ignite 1.66\n"
+"Project-Id-Version: Ignite 1.68\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2017-04-26 15:18:31+00:00\n"
+"POT-Creation-Date: 2017-08-10 16:09:07+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -28,7 +28,7 @@ msgid ""
 "post\">trackbacks</a> and pingbacks are open."
 msgstr ""
 
-#: comments.php:81 comments.php:88
+#: comments.php:81 comments.php:97
 msgid "Comments are closed."
 msgstr ""
 
@@ -101,55 +101,66 @@ msgid ""
 "Themes."
 msgstr ""
 
-#: functions.php:46
+#: functions.php:15
+msgid ""
+"Hey! Sorry to interrupt, but you've been using Ignite for a little while "
+"now. If you're happy with this theme, could you take a minute to leave a "
+"review? <i>You won't see this notice again after closing it.</i>"
+msgstr ""
+
+#: functions.php:55
 msgid "Primary Sidebar"
 msgstr ""
 
-#: functions.php:48
+#: functions.php:57
 msgid "The main sidebar"
 msgstr ""
 
-#: functions.php:60
+#: functions.php:69
 msgid "Primary"
 msgstr ""
 
-#: functions.php:81
+#: functions.php:90
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:105 functions.php:123
+#: functions.php:114 functions.php:132
 msgid "(optional)"
 msgstr ""
 
-#: functions.php:110 functions.php:111
+#: functions.php:119 functions.php:120
 msgid "Your Name"
 msgstr ""
 
-#: functions.php:116 functions.php:117
+#: functions.php:125 functions.php:126
 msgid "Your Email"
 msgstr ""
 
-#: functions.php:122
+#: functions.php:131
 msgid "Your Website URL"
 msgstr ""
 
-#: functions.php:123
+#: functions.php:132
 msgid "Your URL"
 msgstr ""
 
-#: functions.php:137
+#: functions.php:153
 msgid "Your Comment"
 msgstr ""
 
-#: functions.php:138
+#: functions.php:154
 msgid "Enter Your Comment"
 msgstr ""
 
-#: functions.php:169 inc/customizer.php:658
+#: functions.php:185 inc/customizer.php:658
 msgid "Read More"
 msgstr ""
 
-#: functions.php:662
+#: functions.php:249
+msgid "Continue Reading"
+msgstr ""
+
+#: functions.php:690
 msgid "%s successfully activated!"
 msgstr ""
 
@@ -451,6 +462,10 @@ msgstr ""
 msgid "This is the newest post"
 msgstr ""
 
+#: inc/review.php:113
+msgid "Click here to leave your review"
+msgstr ""
+
 #: inc/widgets/image_widget.php:9
 msgid "This %s widget displays an image."
 msgstr ""
@@ -549,15 +564,32 @@ msgstr ""
 msgid "Help others find %s by leaving a review on wordpress.org."
 msgstr ""
 
+#: theme-options.php:44
+msgid "Turn Ignite into a Mobile App"
+msgstr ""
+
+#: theme-options.php:45
+msgid ""
+"%s can be converted into a mobile app and listed on the App Store with the "
+"help of PressPad News. Read our tutorial to learn more."
+msgstr ""
+
+#: theme-options.php:46
+msgid "Read Tutorial"
+msgstr ""
+
 #. Description of the plugin/theme
 msgid ""
-"Ignite is a clean and responsive blog theme. Its modern design is great for "
-"both business and personal blogs. Features include: custom logo, social "
-"media icons, left- or right-sidebar layout, five fonts, custom background "
-"colors, and many additional display options. There is also a premium "
-"upgrade for Ignite called Ignite Plus. Preview on desktop, tablets, and "
-"mobile with our interactive live demo: "
-"https://www.competethemes.com/demos/?theme=ignite"
+"Ignite is a clean, free, and responsive blog theme. Its modern design is "
+"great for both business and personal websites. Ignite has a simple and "
+"minimalist design that looks equally great on laptops, tablets, and mobile "
+"devices. Features include: custom logo, social media icons, left- and "
+"right-sidebar layouts, five fonts, custom background colors, and many "
+"additional display options. Use it to blog about the news, food, music, "
+"fashion, or your travels. Ignite is now WooCommerce compatible, so you can "
+"even setup an eCommerce store. There is also a premium upgrade for Ignite "
+"called Ignite Plus. Preview Ignite now on desktop, tablets, and phones with "
+"the interactive live demo: https://www.competethemes.com/demos/?theme=ignite"
 msgstr ""
 
 #. Template Name of the plugin/theme
@@ -595,17 +627,17 @@ msgctxt "noun"
 msgid "Comments"
 msgstr ""
 
-#: functions.php:77
+#: functions.php:86
 msgctxt "COMMENTER said:"
 msgid "said:"
 msgstr ""
 
-#: functions.php:88
+#: functions.php:97
 msgctxt "Edit this comment"
 msgid "Edit"
 msgstr ""
 
-#: functions.php:90
+#: functions.php:99
 msgctxt "Reply to this comment"
 msgid "Reply"
 msgstr ""
