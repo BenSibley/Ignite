@@ -17,9 +17,9 @@ View a fully-setup live demo of Ignite here: [Live demo](https://www.competethem
 
 **Features**
 
-Startup Blog comes with the following features:
+Ignite comes with the following features:
 
- * Custom logo
+* Custom logo
 * Social media icons
 * Right and Left sidebar layouts
 * 5 Fonts
@@ -34,15 +34,15 @@ Startup Blog comes with the following features:
 
 Ignite also has a premium plugin upgrade called [Ignite Plus](https://www.competethemes.com/ignite-plus/) that includes the following features:
 
-    * Custom colors
-    * Additional layouts
-    * Flexible header image
-    * Featured videos
-    * Google fonts
-    * Background images
-    * Background textures
-    * Navigation styles
-    * Premium widgets
-    * More widget areas
-    * Post author social icons
-    * Footer menu
+* Custom colors
+* Additional layouts
+* Flexible header image
+* Featured videos
+* Google fonts
+* Background images
+* Background textures
+* Navigation styles
+* Premium widgets
+* More widget areas
+* Post author social icons
+* Footer menu
