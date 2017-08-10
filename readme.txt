@@ -3,7 +3,7 @@ Contributors: bensibley
 Tags: two-columns, right-sidebar, left-sidebar, custom-background, custom-logo, custom-menu, featured-images, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, blog, education, news
 Requires at least: 4.5
 Tested up to: 4.8
-Stable tag: 1.67
+Stable tag: 1.68
 
 Ignite is a clean, free, and responsive blog theme.
 
