@@ -100,7 +100,7 @@ if ( ! function_exists( 'ct_ignite_breadcrumbs' ) ) {
 			$custom_tax_name = get_queried_object()->name;
 			$html .= '<span class="item-current item-archive"><span class="bread-current bread-archive">' . esc_html( $custom_tax_name ) . '</span></span>';
 		} elseif ( is_search() ) {
-			$html .= '<span class="item-current item-search"><span class="bread-current bread-search">Search results for: ' . get_search_query() . '</span></span>';
+			$html .= '<span class="item-current item-search"><span class="bread-current bread-search">'. esc_html( __("Search results for:", "ignite") ) . ' ' . get_search_query() . '</span></span>';
 		} elseif ( is_404() ) {
 			$html .= '<span>' . __( 'Error 404', 'ignite' ) . '</span>';
 		} elseif ( is_home() ) {
