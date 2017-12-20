@@ -42,7 +42,7 @@ function ct_ignite_options_content() {
 			</div>
 			<div class="content content-presspad">
 				<h3><?php _e( 'Turn Ignite into a Mobile App', 'ignite' ); ?></h3>
-				<p><?php printf( __( '%s can be converted into a mobile app and listed on the App Store with the help of PressPad News. Read our tutorial to learn more.', 'ignite' ), wp_get_theme( get_template() ) ); ?></p>
+				<p><?php printf( __( '%s can be converted into a mobile app and listed on the App Store and Google Play Store with the help of PressPad News. Read our tutorial to learn more.', 'ignite' ), wp_get_theme( get_template() ) ); ?></p>
 				<a target="_blank" class="button-primary" href="https://www.competethemes.com/help/convert-mobile-app-ignite/"><?php _e( 'Read Tutorial', 'ignite' ); ?></a>
 			</div>
 		</div>
