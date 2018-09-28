@@ -242,7 +242,9 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 				$label = __('StumbleUpon', 'ignite');
 			} elseif ( $social_site == 'deviantart' ) {
 				$label = __('DeviantArt', 'ignite');
-			} elseif ( $social_site == 'hacker-news' ) {
+			} elseif ( $social_site == 'stack-overflow' ) {
+				$label = __('Stack Overflow', 'ignite');
+			}  elseif ( $social_site == 'hacker-news' ) {
 				$label = __('Hacker News', 'ignite');
 			} elseif ( $social_site == 'google-wallet' ) {
 				$label = __('Google Wallet', 'ignite');
