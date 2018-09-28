@@ -83,7 +83,7 @@ if ( ! function_exists( 'ct_ignite_customize_comments' ) ) {
 				echo get_avatar( get_comment_author_email(), 48 );
 				?>
 				<span class="author-name"><?php comment_author_link(); ?></span>
-				<span> <?php esc_html_ex( 'said:', 'COMMENTER said:', 'ignite' ); ?></span>
+				<span> <?php echo esc_html_x( 'said:', 'COMMENTER said:', 'ignite' ); ?></span>
 			</div>
 			<div class="comment-content">
 				<?php if ( $comment->comment_approved == '0' ) : ?>
@@ -128,7 +128,7 @@ if ( ! function_exists( 'ct_ignite_update_fields' ) ) {
             </p>';
 		$fields['url'] =
 			'<p class="comment-form-url">
-                <label for="url" class="screen-reader-text">' . v__( 'Your Website URL', 'ignite' ) . '</label>
+                <label for="url" class="screen-reader-text">' . esc_html__( 'Your Website URL', 'ignite' ) . '</label>
                 <input placeholder="' . esc_attr__( 'Your URL', 'ignite' ) . ' ' . esc_attr__( '(optional)', 'ignite' ) . '" id="url" name="url" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) .
 			'" size="30" />
                 </p>';
