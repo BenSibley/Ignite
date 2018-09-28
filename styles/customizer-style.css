@@ -2,6 +2,12 @@
 /* Theme Colors */
 /* Social Media Brand Colors */
 /*===== Mixins =====*/
+#sub-accordion-section-ct_ignite_social_settings #customize-control-email-form {
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  border-bottom: solid 1px #d5d5d5;
+}
+
 #accordion-section-ct_ignite_plus .accordion-section-title {
   color: #fff;
   background: #05B0E7;
