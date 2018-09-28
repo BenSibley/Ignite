@@ -1,7 +1,7 @@
 <?php get_header();
 
 if ( is_home() ) {
-	echo '<h1 class="screen-reader-text">' . esc_html( get_bloginfo("name") ) . ' ' . __('Posts', 'ignite') . '</h1>';
+	echo '<h1 class="screen-reader-text">' . esc_html( get_bloginfo("name") ) . ' ' . esc_html__('Posts', 'ignite') . '</h1>';
 } elseif ( is_archive() ) {
 	echo '<h1 class="screen-reader-text">' . esc_html( get_the_archive_title() ) . '</h1>';
 }
@@ -23,14 +23,14 @@ if ( is_home() ) {
 if ( function_exists( 'is_bbpress' ) ) {
 	if ( ! ( is_bbpress() && is_archive() ) ) {
 		the_posts_pagination( array(
-			'prev_text' => __( 'Previous', 'ignite' ),
-			'next_text' => __( 'Next', 'ignite' )
+			'prev_text' => esc_html__( 'Previous', 'ignite' ),
+			'next_text' => esc_html__( 'Next', 'ignite' )
 		) );
 	}
 } else {
 	the_posts_pagination( array(
-		'prev_text' => __( 'Previous', 'ignite' ),
-		'next_text' => __( 'Next', 'ignite' )
+		'prev_text' => esc_html__( 'Previous', 'ignite' ),
+		'next_text' => esc_html__( 'Next', 'ignite' )
 	) );
 }
 

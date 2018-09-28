@@ -83,20 +83,20 @@ if ( ! function_exists( 'ct_ignite_customize_comments' ) ) {
 				echo get_avatar( get_comment_author_email(), 48 );
 				?>
 				<span class="author-name"><?php comment_author_link(); ?></span>
-				<span> <?php _ex( 'said:', 'COMMENTER said:', 'ignite' ); ?></span>
+				<span> <?php esc_html_ex( 'said:', 'COMMENTER said:', 'ignite' ); ?></span>
 			</div>
 			<div class="comment-content">
 				<?php if ( $comment->comment_approved == '0' ) : ?>
-					<em><?php _e( 'Your comment is awaiting moderation.', 'ignite' ) ?></em>
+					<em><?php esc_html_e( 'Your comment is awaiting moderation.', 'ignite' ) ?></em>
 					<br/>
 				<?php endif; ?>
 				<?php comment_text(); ?>
 			</div>
 			<div class="comment-meta">
 				<div class="comment-date"><?php comment_date(); ?></div>
-				<?php edit_comment_link( _x( 'Edit', 'Edit this comment', 'ignite' ) ); ?>
+				<?php edit_comment_link( esc_html_x( 'Edit', 'Edit this comment', 'ignite' ) ); ?>
 				<?php comment_reply_link( array_merge( $args, array(
-					'reply_text' => _x( 'Reply', 'Reply to this comment', 'ignite' ),
+					'reply_text' => esc_html_x( 'Reply', 'Reply to this comment', 'ignite' ),
 					'depth'      => $depth,
 					'max_depth'  => $args['max_depth']
 				) ) ); ?>
@@ -111,24 +111,24 @@ if ( ! function_exists( 'ct_ignite_update_fields' ) ) {
 
 		$commenter = wp_get_current_commenter();
 		$req       = get_option( 'require_name_email' );
-		$label     = $req ? '*' : ' ' . __( '(optional)', 'ignite' );
+		$label     = $req ? '*' : ' ' . esc_html__( '(optional)', 'ignite' );
 		$aria_req  = $req ? "aria-required='true'" : '';
 
 		$fields['author'] =
 			'<p class="comment-form-author">
-                <label for="author" class="screen-reader-text">' . __( 'Your Name', 'ignite' ) . '</label>
+                <label for="author" class="screen-reader-text">' . esc_html__( 'Your Name', 'ignite' ) . '</label>
                 <input placeholder="' . esc_attr__( 'Your Name', 'ignite' ) . esc_attr( $label ) . '" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
 			'" size="30" ' . $aria_req . ' />
             </p>';
 		$fields['email'] =
 			'<p class="comment-form-email">
-                <label for="email" class="screen-reader-text">' . __( 'Your Email', 'ignite' ) . '</label>
+                <label for="email" class="screen-reader-text">' . esc_html__( 'Your Email', 'ignite' ) . '</label>
                 <input placeholder="' . esc_attr__( 'Your Email', 'ignite' ) . esc_attr( $label ) . '" id="email" name="email" type="email" value="' . esc_attr( $commenter['comment_author_email'] ) .
 			'" size="30" ' . $aria_req . ' />
             </p>';
 		$fields['url'] =
 			'<p class="comment-form-url">
-                <label for="url" class="screen-reader-text">' . __( 'Your Website URL', 'ignite' ) . '</label>
+                <label for="url" class="screen-reader-text">' . v__( 'Your Website URL', 'ignite' ) . '</label>
                 <input placeholder="' . esc_attr__( 'Your URL', 'ignite' ) . ' ' . esc_attr__( '(optional)', 'ignite' ) . '" id="url" name="url" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) .
 			'" size="30" />
                 </p>';
@@ -150,7 +150,7 @@ if ( ! function_exists( 'ct_ignite_update_comment_field' ) ) {
 		
 		$comment_field =
 			'<p class="comment-form-comment">
-                <label for="comment" class="screen-reader-text">' . __( 'Your Comment', 'ignite' ) . '</label>
+                <label for="comment" class="screen-reader-text">' . esc_html__( 'Your Comment', 'ignite' ) . '</label>
                 <textarea required placeholder="' . esc_attr__( 'Enter Your Comment', 'ignite' ) . '&#8230;" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>
             </p>';
 
@@ -182,7 +182,7 @@ if ( ! function_exists( 'ct_ignite_filter_read_more_link' ) ) {
 		}
 		// Because i18n text cannot be stored in a variable
 		if ( empty( $read_more_text ) ) {
-			$output .= '<div class="more-link-wrapper"><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . __( 'Read More', 'ignite' ) . '<span class="screen-reader-text">' . esc_html( get_the_title() ) . '</span></a></div>';
+			$output .= '<div class="more-link-wrapper"><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . esc_html__( 'Read More', 'ignite' ) . '<span class="screen-reader-text">' . esc_html( get_the_title() ) . '</span></a></div>';
 		} else {
 			$output .= '<div class="more-link-wrapper"><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . esc_html( $read_more_text ) . '<span class="screen-reader-text">' . esc_html( get_the_title() ) . '</span></a></div>';
 		}
@@ -246,7 +246,7 @@ add_filter( 'the_content_more_link', 'ct_ignite_remove_more_link_scroll' );
 function ct_ignite_update_yoast_og_description( $ogdesc ) {
 	$read_more_text = get_theme_mod( 'read_more_text' );
 	if ( empty( $read_more_text ) ) {
-		$read_more_text = __( 'Continue Reading', 'ignite' );
+		$read_more_text = esc_html__( 'Continue Reading', 'ignite' );
 	}
 	$ogdesc = substr( $ogdesc, 0, strpos( $ogdesc, $read_more_text ) );
 
@@ -687,7 +687,7 @@ if ( ! function_exists( ( 'ct_ignite_settings_notice' ) ) ) {
 			if ( $_GET['ignite_status'] == 'activated' ) {
 				?>
 				<div class="updated">
-					<p><?php printf( __( '%s successfully activated!', 'ignite' ), wp_get_theme( get_template() ) ); ?></p>
+					<p><?php printf( esc_html__( '%s successfully activated!', 'ignite' ), wp_get_theme( get_template() ) ); ?></p>
 				</div>
 				<?php
 			}

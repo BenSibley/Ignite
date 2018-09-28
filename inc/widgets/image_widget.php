@@ -6,7 +6,7 @@ class ct_ignite_Image extends WP_Widget {
 
 		$widget_options = array(
 			'classname'   => 'widget_ct_ignite_image',
-			'description' => sprintf( __( 'This %s widget displays an image.', 'ignite' ), wp_get_theme( get_template() ) )
+			'description' => sprintf( esc_html__( 'This %s widget displays an image.', 'ignite' ), wp_get_theme( get_template() ) )
 		);
 		parent::__construct(
 			'ct_ignite_image',
@@ -40,30 +40,30 @@ class ct_ignite_Image extends WP_Widget {
 		$link     = isset( $instance['link'] ) ? $instance['link'] : '';
 		?>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'image' ); ?>"><?php _e( 'Image URL:', 'ignite' ); ?></label>
-			<input class="widefat" id="<?php echo $this->get_field_id( 'image' ); ?>"
-			       name="<?php echo $this->get_field_name( 'image' ); ?>" type="text"
+			<label for="<?php echo esc_attr( $this->get_field_id( 'image' ) ); ?>"><?php esc_html_e( 'Image URL:', 'ignite' ); ?></label>
+			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'image' ) ) ; ?>"
+			       name="<?php echo esc_attr( $this->get_field_name( 'image' ) ); ?>" type="text"
 			       value="<?php echo esc_url( $image ); ?>">
-			<input type='button' class="image-upload button-primary" value="<?php _e( 'Upload Image', 'ignite' ); ?>"/>
+			<input type='button' class="image-upload button-primary" value="<?php esc_html_e( 'Upload Image', 'ignite' ); ?>"/>
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'ignite' ); ?></label>
-			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>"
-			       name="<?php echo $this->get_field_name( 'title' ); ?>" type="text"
+			<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Title:', 'ignite' ); ?></label>
+			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"
+			       name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text"
 			       value="<?php echo esc_attr( $title ); ?>">
 		</p>
 		<p>
 			<label
-				for="<?php echo $this->get_field_id( 'alt-text' ); ?>"><?php _e( 'Alternate text', 'ignite' ); ?></label>
-			<input class="widefat" id="<?php echo $this->get_field_id( 'alt-text' ); ?>"
-			       name="<?php echo $this->get_field_name( 'alt-text' ); ?>" type="text"
+				for="<?php echo esc_attr( $this->get_field_id( 'alt-text' ) ); ?>"><?php esc_html_e( 'Alternate text', 'ignite' ); ?></label>
+			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'alt-text' ) ); ?>"
+			       name="<?php echo esc_attr( $this->get_field_name( 'alt-text' ) ); ?>" type="text"
 			       value="<?php echo esc_attr( $alt_text ); ?>">
 		</p>
 		<p>
 			<label
-				for="<?php echo $this->get_field_id( 'link' ); ?>"><?php _e( 'Link (optional)', 'ignite' ); ?></label>
-			<input class="widefat" id="<?php echo $this->get_field_id( 'link' ); ?>"
-			       name="<?php echo $this->get_field_name( 'link' ); ?>" type="text"
+				for="<?php echo esc_attr( $this->get_field_id( 'link' ) ); ?>"><?php esc_html_e( 'Link (optional)', 'ignite' ); ?></label>
+			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'link' ) ); ?>"
+			       name="<?php echo esc_attr( $this->get_field_name( 'link' ) ); ?>" type="text"
 			       value="<?php echo esc_url( $link ); ?>">
 		</p>
 

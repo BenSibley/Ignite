@@ -8,12 +8,12 @@ global $post;
 $previous_post = get_adjacent_post( false, '', true );
 
 if ( $previous_post ) {
-	$previous_text = __( 'Previous Post', 'ignite' );
-	$previous_title = get_the_title( $previous_post ) ? get_the_title( $previous_post ) : __( "The Previous Post", 'ignite' );
+	$previous_text = esc_html__( 'Previous Post', 'ignite' );
+	$previous_title = get_the_title( $previous_post ) ? get_the_title( $previous_post ) : esc_html__( "The Previous Post", 'ignite' );
 	$previous_link = get_permalink( $previous_post );
 } else {
-	$previous_text = __( 'No Older Posts', 'ignite' );
-	$previous_title = __( 'Return to Blog', 'ignite' );
+	$previous_text = esc_html__( 'No Older Posts', 'ignite' );
+	$previous_title = esc_html__( 'Return to Blog', 'ignite' );
 	if ( get_option( 'show_on_front' ) == 'page' ) {
 		$previous_link = get_permalink( get_option( 'page_for_posts' ) );
 	} else {
@@ -24,12 +24,12 @@ if ( $previous_post ) {
 $next_post = get_adjacent_post( false, '', false );
 
 if ( $next_post ) {
-	$next_text  = __( 'Next Post', 'ignite' );
-	$next_title = get_the_title( $next_post ) ? get_the_title( $next_post ) : __( "The Next Post", 'ignite' );
+	$next_text  = esc_html__( 'Next Post', 'ignite' );
+	$next_title = get_the_title( $next_post ) ? get_the_title( $next_post ) : esc_html__( "The Next Post", 'ignite' );
 	$next_link  = get_permalink( $next_post );
 } else {
-	$next_text = __( 'No Newer Posts', 'ignite' );
-	$next_title = __( 'Return to Blog', 'ignite' );
+	$next_text = esc_html__( 'No Newer Posts', 'ignite' );
+	$next_title = esc_html__( 'Return to Blog', 'ignite' );
 	if ( get_option( 'show_on_front' ) == 'page' ) {
 		$next_link = get_permalink( get_option( 'page_for_posts' ) );
 	} else {

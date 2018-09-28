@@ -40,14 +40,14 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 			$link = 'https://www.competethemes.com/ignite-plus/';
 			echo "<a href='" . $link . "' target='_blank'><img src='" . get_template_directory_uri() . "/assets/images/ignite-plus.gif' /></a>";
 			echo "<p class='bold'>" . sprintf( __('<a target="_blank" href="%1$s">%2$s Plus</a> makes advanced customization simple - and fun too!', 'ignite'), $link, wp_get_theme( get_template() ) ) . "</p>";
-			echo "<p>" . sprintf( __('%s Plus adds the following features:', 'ignite'), wp_get_theme( get_template() ) ) . "</p>";
+			echo "<p>" . sprintf( esc_html__('%s Plus adds the following features:', 'ignite'), wp_get_theme( get_template() ) ) . "</p>";
 			echo "<ul>
-					<li>" . __('6 new layouts', 'ignite') . "</li>
-					<li>" . __('Custom colors', 'ignite') . "</li>
-					<li>" . __('New fonts', 'ignite') . "</li>
-					<li>" . __('+ 11 more features', 'ignite') . "</li>
+					<li>" . esc_html__('6 new layouts', 'ignite') . "</li>
+					<li>" . esc_html__('Custom colors', 'ignite') . "</li>
+					<li>" . esc_html__('New fonts', 'ignite') . "</li>
+					<li>" . esc_html__('+ 11 more features', 'ignite') . "</li>
 				  </ul>";
-			echo "<p class='button-wrapper'><a target=\"_blank\" class='ignite-plus-button' href='" . $link . "'>" . sprintf( __('View %s Plus', 'ignite'), wp_get_theme( get_template() ) ) . "</a></p>";
+			echo "<p class='button-wrapper'><a target=\"_blank\" class='ignite-plus-button' href='" . $link . "'>" . sprintf( esc_html__('View %s Plus', 'ignite'), wp_get_theme( get_template() ) ) . "</a></p>";
 		}
 	}
 

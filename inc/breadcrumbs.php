@@ -102,7 +102,7 @@ if ( ! function_exists( 'ct_ignite_breadcrumbs' ) ) {
 		} elseif ( is_search() ) {
 			$html .= '<span class="item-current item-search"><span class="bread-current bread-search">'. esc_html( __("Search results for:", "ignite") ) . ' ' . get_search_query() . '</span></span>';
 		} elseif ( is_404() ) {
-			$html .= '<span>' . __( 'Error 404', 'ignite' ) . '</span>';
+			$html .= '<span>' . esc_html__( 'Error 404', 'ignite' ) . '</span>';
 		} elseif ( is_home() ) {
 			$html .= '<span>' . esc_html( get_the_title( get_option( 'page_for_posts' ) ) ) . '</span>';
 		}

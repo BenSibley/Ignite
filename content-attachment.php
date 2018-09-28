@@ -1,6 +1,6 @@
 <div class='entry'>
 	<div class='entry-meta-top'>
-		<?php _ex( 'Published', 'Published DATE', 'ignite' ); ?>
+		<?php esc_html_ex( 'Published', 'Published DATE', 'ignite' ); ?>
 		<?php the_date(); ?>
 	</div>
 	<div class='entry-header'>
@@ -22,10 +22,10 @@
 		</article>
 		<nav class='further-reading'>
 			<p class='prev'>
-				<span><?php previous_image_link( false, __( 'Previous Image', 'ignite' ) ); ?></span>
+				<span><?php previous_image_link( false, esc_html__( 'Previous Image', 'ignite' ) ); ?></span>
 			</p>
 			<p class='next'>
-				<span><?php next_image_link( false, __( 'Next Image', 'ignite' ) ); ?></span>
+				<span><?php next_image_link( false, esc_html__( 'Next Image', 'ignite' ) ); ?></span>
 			</p>
 		</nav>
 	</div>
