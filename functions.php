@@ -687,3 +687,15 @@ if ( ! function_exists( ( 'ct_ignite_settings_notice' ) ) ) {
 	}
 }
 add_action( 'admin_notices', 'ct_ignite_settings_notice' );
+
+//----------------------------------------------------------------------------------
+// Output the markup for the optional scroll-to-top arrow 
+//----------------------------------------------------------------------------------
+function ct_ignite_scroll_to_top_arrow() {
+	$setting = get_theme_mod('scroll_to_top');
+	
+	if ( $setting == 'yes' ) {
+		echo '<button id="scroll-to-top" class="scroll-to-top"><span class="screen-reader-text">'. __('Scroll to the top', 'ignite') .'</span><i class="fa fa-arrow-up"></i></button>';
+	}
+}
+add_action( 'ct_ignite_body_bottom', 'ct_ignite_scroll_to_top_arrow');

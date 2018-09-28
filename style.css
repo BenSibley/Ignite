@@ -229,7 +229,7 @@ img,
 }
 
 .wp-caption-text {
-  margin: 0 0 1.84502em;
+  margin: 0 0 1.8450184502em;
   font-size: 0.813em;
   line-height: 1.85;
   color: #7C7D7F;
@@ -1162,12 +1162,12 @@ a img {
   border-top: solid 3px #e6a117;
   font-size: 0.813em;
   line-height: 1.85;
-  margin: 1.84502em 0;
+  margin: 1.8450184502em 0;
   padding: 1.615em 8% 0.923em;
 }
 .widget ul {
   list-style: none;
-  margin: 1em 0 1.84502em;
+  margin: 1em 0 1.8450184502em;
 }
 .widget ul li {
   padding: 0.846em 0.5em 0.923em 0;
@@ -1213,7 +1213,7 @@ a img {
   letter-spacing: 0.08em;
   font-size: 1em;
   line-height: 1.85;
-  margin-bottom: 1.84502em;
+  margin-bottom: 1.8450184502em;
 }
 
 /* widget-specific styling */
@@ -1556,6 +1556,37 @@ li.pingback {
   position: relative;
   left: -4%;
   width: 108%;
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: -45px;
+  right: 0;
+  z-index: 9;
+  background: #303338;
+  border: none;
+  color: #fff;
+  padding: 12px 0;
+  width: 60px;
+  -webkit-transition: background 0.2s, -webkit-transform 0.3s;
+          transition: background 0.2s, transform 0.3s;
+}
+.scroll-to-top.visible {
+  -webkit-transform: translateY(-45px);
+          transform: translateY(-45px);
+}
+.scroll-to-top:hover {
+  cursor: pointer;
+  background: #373B41;
+}
+.scroll-to-top:hover i {
+  -webkit-transform: translateY(-4px);
+          transform: translateY(-4px);
+}
+.scroll-to-top i {
+  font-size: 21px;
+  -webkit-transition: -webkit-transform 0.2s;
+          transition: transform 0.2s;
 }
 
 /* 600px */

@@ -38,6 +38,34 @@
   left: -4%;
   width: 108%;
 }
+.scroll-to-top {
+  position: fixed;
+  bottom: -45px;
+  right: 0;
+  z-index: 9;
+  background: $gray-dark;
+  border: none;
+  color: #fff;
+  padding: 12px 0;
+  width: 60px;
+  transition: background 0.2s, transform 0.3s;
+
+  &.visible {
+    transform: translateY(-45px);
+  }
+  &:hover {
+    cursor: pointer;
+    background: $gray;
+
+    i {
+      transform: translateY(-4px);
+    }
+  }
+  i {
+    font-size: 21px;
+    transition: transform 0.2s;
+  }
+}
 
 /* 600px */
 @media all and (min-width: 37.5em) {

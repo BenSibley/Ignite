@@ -29,6 +29,7 @@ if ( ! is_page_template( 'full-width.php' ) ) {
         </span>
 	</div>
 </footer>
+<?php do_action( 'ct_ignite_body_bottom' ); ?>
 <?php wp_footer(); ?>
 </body>
 </html>
