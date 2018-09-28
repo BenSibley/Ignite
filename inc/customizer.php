@@ -240,7 +240,9 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 				$label = 'QQ';
 			} elseif ( $social_site == 'vk' ) {
 				$label = 'VK';
-			} elseif ( $social_site == 'wechat' ) {
+			} elseif ( $social_site == 'ok-ru' ) {
+				$label = 'OK.ru';
+			}  elseif ( $social_site == 'wechat' ) {
 				$label = 'WeChat';
 			} elseif ( $social_site == 'tencent-weibo' ) {
 				$label = 'Tencent Weibo';

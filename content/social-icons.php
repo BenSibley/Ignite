@@ -42,6 +42,8 @@ if ( ! empty( $active_sites ) ) {
 			}
 			if ( $active_site == 'email-form' ) {
 				$class = 'fa fa-envelope-o';
+			} elseif ( $active_site == 'ok-ru' ) {
+				$class = 'fa fa-odnoklassniki';
 			}
 
 			if ( $active_site == 'email' ) { ?>
