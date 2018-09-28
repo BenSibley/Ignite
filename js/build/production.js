@@ -581,17 +581,17 @@ jQuery(document).ready(function ($) {
     });
 
     // allow keyboard access/visibility for dropdown menu items
-    menuLinks.focus(function () {
+    menuLinks.on('focus', function () {
         $(this).parent('li').addClass('focused');
         $(this).parents('ul').addClass('focused');
     });
-    menuLinks.focusout(function () {
+    menuLinks.on('focusout', function () {
         $(this).parent('li').removeClass('focused');
         $(this).parents('ul').removeClass('focused');
     });
 
     // open primary menu
-    $('#toggle-navigation').bind('click', openPrimaryMenu);
+    $('#toggle-navigation').on('click', openPrimaryMenu);
 
     // Jetpack infinite scroll event that reloads posts.
     $(document.body).on('post-load', function () {
@@ -618,7 +618,7 @@ jQuery(document).ready(function ($) {
             main.css('transform', 'translateX(' + 0 + 'px)');
             breadcrumbs.css('transform', 'translateX(' + 0 + 'px)');
             sidebarPrimaryContainer.css('transform', 'translateX(' + 0 + 'px)');
-            $(window).unbind('scroll');
+            $(window).off('scroll');
 
             setTimeout(function () {
                 menuPrimary.css('height', 'auto');
@@ -629,7 +629,7 @@ jQuery(document).ready(function ($) {
             main.css('transform', 'translateX(' + menuWidth + 'px)');
             breadcrumbs.css('transform', 'translateX(' + menuWidth + 'px)');
             sidebarPrimaryContainer.css('transform', 'translateX(' + menuWidth + 'px)');
-            $(window).scroll(closeMenuOnScroll);
+            $(window).on('scroll',closeMenuOnScroll);
         }
     }
 
@@ -645,7 +645,7 @@ jQuery(document).ready(function ($) {
         }
 
         if (topDistance > menuItemsBottom) {
-            $(window).unbind('scroll');
+            $(window).off('scroll');
             openPrimaryMenu();
         }
     }
