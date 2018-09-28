@@ -548,6 +548,7 @@ if ( ! function_exists( 'ct_ignite_customizer_social_media_array' ) ) {
 			'instagram',
 			'reddit',
 			'soundcloud',
+			'mixcloud',
 			'spotify',
 			'vine',
 			'yahoo',
