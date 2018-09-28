@@ -615,23 +615,14 @@ if ( ! function_exists( 'ct_ignite_get_content_template' ) ) {
 
 		// Blog
 		if ( is_home() ) {
-			get_template_part( 'content' );
-		} // Post
-		elseif ( is_singular( 'post' ) ) {
-			get_template_part( 'content' );
+			get_template_part( 'content', get_post_type() );
+		} // Post/Page
+		elseif ( is_singular() ) {
+			get_template_part( 'content', get_post_type() );
 			comments_template();
-		} // Page
-		elseif ( is_page() ) {
-			get_template_part( 'content', 'page' );
-			comments_template();
-		} // Attachment
-		elseif ( is_attachment() ) {
-			get_template_part( 'content', 'attachment' );
-			comments_template();
-		} // Archive
+		}  // Archive
 		elseif ( is_archive() ) {
 
-			// check if bbPress is active
 			if ( function_exists( 'is_bbpress' ) ) {
 
 				// bbPress forum list
@@ -650,7 +641,7 @@ if ( ! function_exists( 'ct_ignite_get_content_template' ) ) {
 			get_template_part( 'content/bbpress' );
 		} // Custom Post Type
 		else {
-			get_template_part( 'content' );
+			get_template_part( 'content', get_post_type() );
 		}
 	}
 }
