@@ -42,7 +42,12 @@ if ( ! function_exists( 'ct_ignite_theme_setup' ) ) {
 			'container' => 'loop-container',
 			'footer'    => 'overflow-container'
 		) );
+		// Add WooCommerce support
 		add_theme_support( 'woocommerce' );
+		// Support WooCommerce image gallery features 
+		add_theme_support( 'wc-product-gallery-zoom' ); 
+		add_theme_support( 'wc-product-gallery-lightbox' ); 
+		add_theme_support( 'wc-product-gallery-slider' );
 		
 		load_theme_textdomain( 'ignite', get_template_directory() . '/languages' );
 	}
