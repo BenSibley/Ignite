@@ -11,7 +11,6 @@ foreach ( $social_sites as $social_site ) {
 if ( ! empty( $active_sites ) ) {
 
 	$square_icons = array(
-		'linkedin',
 		'twitter',
 		'vimeo',
 		'youtube',
@@ -33,17 +32,22 @@ if ( ! empty( $active_sites ) ) {
 		foreach ( $active_sites as $active_site ) {
 
 			if ( in_array( $active_site, $square_icons ) ) {
-				$class = 'fa fa-' . $active_site . '-square';
+				$class = 'fab fa-' . $active_site . '-square';
 			} else {
-				$class = 'fa fa-' . $active_site;
+				$class = 'fab fa-' . $active_site;
 			}
 			if ( $active_site == 'academia' ) {
-				$class = 'fa fa-graduate-cap';
-			}
-			if ( $active_site == 'email-form' ) {
-				$class = 'fa fa-envelope-o';
+				$class = 'fas fa-graduation-cap';
+			} elseif ( $active_site == 'rss' ) {
+				$class = 'fas fa-rss';
+			} elseif ( $active_site == 'email-form' ) {
+				$class = 'far fa-envelope';
+			} elseif ( $active_site == 'podcast' ) {
+				$class = 'fas fa-podcast';
 			} elseif ( $active_site == 'ok-ru' ) {
-				$class = 'fa fa-odnoklassniki';
+				$class = 'fab fa-odnoklassniki';
+			} elseif ( $active_site == 'wechat' ) {
+				$class = 'fab fa-weixin';
 			}
 
 			if ( $active_site == 'email' ) { ?>
