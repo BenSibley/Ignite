@@ -1,6 +1,6 @@
 <div class='entry'>
 	<div class='entry-meta-top'>
-		<?php esc_html_ex( 'Published', 'Published DATE', 'ignite' ); ?>
+		<?php echo esc_html_x( 'Published', 'Published DATE', 'ignite' ); ?>
 		<?php the_date(); ?>
 	</div>
 	<div class='entry-header'>
