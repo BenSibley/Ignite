@@ -144,7 +144,7 @@ module.exports = function(grunt) {
                     'rm -R /Users/bensibley/Documents/compete-themes/dist/ignite || true',
                     'rm -R /Users/bensibley/Documents/compete-themes/dist/ignite.zip || true',
                     // copy folder without any project/meta files
-                    'rsync -r /Applications/MAMP/htdocs/wordpress/wp-content/themes/ignite /Users/bensibley/Documents/compete-themes/dist/ <%= excludeFiles %>',
+                    'rsync -r "/Users/bensibley/Local Sites/ignite/app/public/wp-content/themes/ignite" /Users/bensibley/Documents/compete-themes/dist/ <%= excludeFiles %>',
                     // open dist folder
                     'cd /Users/bensibley/Documents/compete-themes/dist/',
                     // zip the ignite folder
