@@ -10,7 +10,7 @@ $output     = '';
 
 if ( $categories ) {
 	echo "<div class='entry-categories'>";
-		echo "<p><i class='fa fa-folder-open'></i>";
+		echo "<p><i class='fas fa-folder-open'></i>";
 			foreach ( $categories as $category ) {
 				$output .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" title="' . esc_attr( sprintf( esc_html_x( 'View all posts in %s', 'View all posts in category', 'ignite' ), $category->name ) ) . '">' . esc_html( $category->cat_name ) . '</a>' . $separator;
 			}

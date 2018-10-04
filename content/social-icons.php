@@ -56,7 +56,7 @@ if ( ! empty( $active_sites ) ) {
 				<li>
 					<a class="email" target="_blank"
 					   href="mailto:<?php echo antispambot( is_email( get_theme_mod( $active_site ) ) ); ?>">
-						<i class="fa fa-envelope" title="<?php echo esc_attr_x( 'email', 'noun', 'ignite' ); ?>"></i>
+						<i class="fas fa-envelope" title="<?php echo esc_attr_x( 'email', 'noun', 'ignite' ); ?>"></i>
 						<span class="screen-reader-text"><?php echo esc_html_x('email', 'noun', 'ignite'); ?></span>
 					</a>
 				</li>

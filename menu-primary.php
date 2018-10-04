@@ -1,4 +1,4 @@
-<button id="toggle-navigation" class="toggle-navigation"><i class="fa fa-bars"></i></button>
+<button id="toggle-navigation" class="toggle-navigation"><i class="fas fa-bars"></i></button>
 <div class="menu-container menu-primary" id="menu-primary" role="navigation">
 	<?php
 	if ( get_bloginfo( 'description' ) ) {
