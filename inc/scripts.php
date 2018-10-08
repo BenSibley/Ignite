@@ -15,7 +15,7 @@ function ct_ignite_load_scripts_styles() {
 
 	wp_enqueue_script( 'ct-ignite-production', get_template_directory_uri() . '/js/build/production.min.js#ct_ignite_asyncload', array( 'jquery' ), '', true );
 
-	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/font-awesome/css/all.min.css' );
+	wp_enqueue_style( 'ct-ignite-font-awesome', get_template_directory_uri() . '/assets/font-awesome/css/all.min.css' );
 
 	wp_enqueue_style( 'ct-ignite-style', get_stylesheet_uri() );
 
