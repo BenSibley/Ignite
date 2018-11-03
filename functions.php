@@ -695,7 +695,13 @@ if ( ! function_exists( ( 'ct_ignite_settings_notice' ) ) ) {
 
 		if ( isset( $_GET['ignite_status'] ) ) {
 
-			if ( $_GET['ignite_status'] == 'activated' ) {
+			if ( $_GET['ignite_status'] == 'deleted' ) {
+				?>
+				<div class="updated">
+					<p><?php esc_html_e( 'Customizer settings deleted.', 'ignite' ); ?></p>
+				</div>
+				<?php
+			} else if ( $_GET['ignite_status'] == 'activated' ) {
 				?>
 				<div class="updated">
 					<p><?php printf( esc_html__( '%s successfully activated!', 'ignite' ), wp_get_theme( get_template() ) ); ?></p>
@@ -718,3 +724,69 @@ function ct_ignite_scroll_to_top_arrow() {
 	}
 }
 add_action( 'ct_ignite_body_bottom', 'ct_ignite_scroll_to_top_arrow');
+
+if ( ! function_exists( 'ct_ignite_reset_customizer_options' ) ) {
+	function ct_ignite_reset_customizer_options() {
+
+		if ( empty( $_POST['ignite_reset_customizer'] ) || 'ignite_reset_customizer_settings' !== $_POST['ignite_reset_customizer'] ) {
+			return;
+		}
+
+		if ( ! wp_verify_nonce( $_POST['ignite_reset_customizer_nonce'], 'ignite_reset_customizer_nonce' ) ) {
+			return;
+		}
+
+		if ( ! current_user_can( 'edit_theme_options' ) ) {
+			return;
+		}
+
+		$mods_array = array(
+			'logo_upload',
+			'logo_positioning_updown_setting',
+			'logo_positioning_leftright_setting',
+			'logo_size_width_setting',
+			'logo_size_height_setting',
+			'ct_ignite_layout_settings',
+			'ct_ignite_font_family_settings',
+			'ct_ignite_font_weight_settings',
+			'ct_ignite_background_color_setting',
+			'ct_ignite_post_meta_date_settings',
+			'ct_ignite_post_meta_author_settings',
+			'ct_ignite_post_meta_categories_settings',
+			'ct_ignite_post_meta_tags_settings',
+			'ct_ignite_post_meta_comments_settings',
+			'ct_ignite_post_meta_further_reading_settings',
+			'ct_ignite_comments_setting',
+			'ct_ignite_footer_text_setting',
+			'ct_ignite_custom_css_setting',
+			'scroll_to_top',
+			'ct_ignite_show_full_post_setting',
+			'ct_ignite_show_breadcrumbs_setting',
+			'ct_ignite_author_meta_settings',
+			'ct_ignite_parent_menu_icon_settings',
+			'ct_ignite_excerpt_length_settings',
+			'ct_ignite_read_more_text'
+		);
+
+		$social_sites = ct_ignite_customizer_social_media_array();
+
+		// add social site settings to mods array
+		foreach ( $social_sites as $social_site ) {
+			$mods_array[] = $social_site;
+		}
+
+		$mods_array = apply_filters( 'ct_ignite_mods_to_remove', $mods_array );
+
+		foreach ( $mods_array as $theme_mod ) {
+			remove_theme_mod( $theme_mod );
+		}
+
+		$redirect = admin_url( 'themes.php?page=ignite-options' );
+		$redirect = add_query_arg( 'ignite_status', 'deleted', $redirect );
+
+		// safely redirect
+		wp_safe_redirect( $redirect );
+		exit;
+	}
+}
+add_action( 'admin_init', 'ct_ignite_reset_customizer_options' );
