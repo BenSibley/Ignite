@@ -569,6 +569,7 @@ if ( ! function_exists( 'ct_ignite_customizer_social_media_array' ) ) {
 			'google-plus',
 			'google-wallet',
 			'hacker-news',
+			'medium',
 			'meetup',
 			'mixcloud',
 			'ok-ru',
