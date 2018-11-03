@@ -56,19 +56,9 @@
 }
 
 .widgets-php #widgets-left [id*=_ct_ignite_] .widget-top {
-  background: #43b3c4;
+  background: #05B0E7;
   color: #fff;
   position: relative;
-}
-.widgets-php #widgets-left [id*=_ct_ignite_] .widget-top:after {
-  content: '';
-  position: absolute;
-  background: url("../assets/images/logo.svg");
-  right: 2px;
-  top: 0;
-  width: 42px;
-  height: 42px;
-  opacity: 0.7;
 }
 .widgets-php #widgets-left [id*=_ct_ignite_] .widget-top h3 {
   color: white;
