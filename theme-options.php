@@ -20,13 +20,6 @@ function ct_ignite_options_content() {
 		<h2><?php printf( esc_html__( '%s Dashboard', 'ignite' ), wp_get_theme() ); ?></h2>
 		<?php do_action( 'theme_options_before' ); ?>
 		<div class="main">
-			<?php if ( function_exists( 'ct_ignite_plus_init' ) ) : ?>
-			<div class="thanks-upgrading" style="background-image: url(<?php echo trailingslashit(get_template_directory_uri()) . 'assets/images/bg-texture.png'; ?>)">
-				<h3>Thanks for upgrading!</h3>
-				<p>You can find the new features in the Customizer</p>
-			</div>
-			<?php endif; ?>
-			<?php if ( !function_exists( 'ct_ignite_plus_init' ) ) : ?>
 			<div class="getting-started">
 				<h3>Get Started with Ignite</h3>
 				<p>Follow this step-by-step guide to customize your website with Ignite:</p>
@@ -183,7 +176,6 @@ function ct_ignite_options_content() {
 				<p>Start customizing with Ignite Plus today</p>
 				<a href="<?php echo $plus_url; ?>" target="_blank">View Ignite Plus</a>
 			</div>
-			<?php endif; ?>
 		</div>
 		<div class="sidebar">
 			<div class="dashboard-widget">
