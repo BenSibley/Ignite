@@ -573,6 +573,7 @@ if ( ! function_exists( 'ct_ignite_customizer_social_media_array' ) ) {
 			'meetup',
 			'mixcloud',
 			'ok-ru',
+			'patreon',
 			'paypal',
 			'podcast',
 			'qq',
