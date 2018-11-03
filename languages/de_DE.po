@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Ignite 1.52\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
 "POT-Creation-Date: 2018-10-01 13:06:52+00:00\n"
-"PO-Revision-Date: 2018-10-08 08:56-0400\n"
+"PO-Revision-Date: 2018-10-08 11:14-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de\n"
@@ -54,7 +54,7 @@ msgstr "Der vorherige Beitrag"
 
 #: content/further-reading.php:15
 msgid "No Older Posts"
-msgstr ""
+msgstr "Keine älteren Beiträge"
 
 #: content/further-reading.php:16 content/further-reading.php:32
 #: inc/deprecated.php:36 inc/deprecated.php:48
