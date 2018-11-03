@@ -33,24 +33,6 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 		<?php }
 	}
 
-	/***** Ignite Plus Control *****/
-
-	class ct_ignite_plus_ad extends WP_Customize_Control {
-		public function render_content() {
-			$link = 'https://www.competethemes.com/ignite-plus/';
-			echo "<a href='" . $link . "' target='_blank'><img src='" . get_template_directory_uri() . "/assets/images/ignite-plus.gif' /></a>";
-			echo "<p class='bold'>" . sprintf( __('<a target="_blank" href="%1$s">%2$s Plus</a> makes advanced customization simple - and fun too!', 'ignite'), $link, wp_get_theme( get_template() ) ) . "</p>";
-			echo "<p>" . sprintf( esc_html__('%s Plus adds the following features:', 'ignite'), wp_get_theme( get_template() ) ) . "</p>";
-			echo "<ul>
-					<li>" . esc_html__('6 new layouts', 'ignite') . "</li>
-					<li>" . esc_html__('Custom colors', 'ignite') . "</li>
-					<li>" . esc_html__('New fonts', 'ignite') . "</li>
-					<li>" . esc_html__('+ 11 more features', 'ignite') . "</li>
-				  </ul>";
-			echo "<p class='button-wrapper'><a target=\"_blank\" class='ignite-plus-button' href='" . $link . "'>" . sprintf( esc_html__('View %s Plus', 'ignite'), wp_get_theme( get_template() ) ) . "</a></p>";
-		}
-	}
-
 	/***** Add Panels *****/
 
 	if ( method_exists( 'WP_Customize_Manager', 'add_panel' ) ) {
@@ -69,25 +51,6 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 			'description' => __( 'Choose a font family and font weight.', 'ignite' )
 		) );
 	}
-
-	/***** Ignite Plus Section *****/
-	
-	// section
-	$wp_customize->add_section( 'ct_ignite_plus', array(
-		'title'    => sprintf( __( '%s Plus', 'ignite' ), wp_get_theme( get_template() ) ),
-		'priority' => 1
-	) );
-	// Upload - setting
-	$wp_customize->add_setting( 'ignite_plus', array(
-		'sanitize_callback' => 'absint'
-	) );
-	// Upload - control
-	$wp_customize->add_control( new ct_ignite_plus_ad(
-		$wp_customize, 'ignite_plus', array(
-			'section'  => 'ct_ignite_plus',
-			'settings' => 'ignite_plus'
-		)
-	) );
 
 	/***** Logo Upload *****/
 
@@ -883,3 +846,10 @@ function ct_ignite_sanitize_phone( $input ) {
 		return '';
 	}
 }
+
+function ct_ignite_customize_preview_js() {
+	$url = 'https://www.competethemes.com/ignite-plus/?utm_source=wp-dashboard&utm_medium=Customizer&utm_campaign=Ignite%20Plus%20-%20Customizer';
+	$content = "<script>jQuery('#customize-info').prepend('<div class=\"upgrades-ad\"><a href=\"". $url ."\" target=\"_blank\">Get New Layouts with Ignite Plus <span>&rarr;</span></a></div>')</script>";
+	echo apply_filters('ct_ignite_customizer_ad', $content);
+}
+add_action('customize_controls_print_footer_scripts', 'ct_ignite_customize_preview_js');

@@ -8,6 +8,20 @@
   border-bottom: solid 1px #d5d5d5;
 }
 
+.upgrades-ad a {
+  display: block;
+  padding: 12px 24px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  background: #05B0E7;
+  -webkit-transition: background 0.2s;
+          transition: background 0.2s;
+}
+.upgrades-ad a:hover {
+  background: #3FBEE8;
+}
+
 #accordion-section-ct_ignite_plus .accordion-section-title {
   color: #fff;
   background: #05B0E7;

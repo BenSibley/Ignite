@@ -8,6 +8,22 @@
     border-bottom: solid 1px #d5d5d5;
   }
 }
+.upgrades-ad {
+  
+  a {
+    display: block;
+    padding: 12px 24px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    background: #05B0E7;
+    transition: background 0.2s;
+
+    &:hover {
+      background: #3FBEE8;  
+    }
+  }
+}
 // Ignite Plus section
 #accordion-section-ct_ignite_plus {
 
