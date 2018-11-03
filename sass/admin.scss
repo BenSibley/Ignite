@@ -1,67 +1,235 @@
-/* Back-end styles */
 
-/* styles for theme options page */
+// New dashboard design styles
+
 
 #ignite-dashboard-wrap {
 
   h2 {
     margin-bottom: 24px;
   }
-  .content {
-    box-sizing: border-box;
-    margin-top: 12px;
-    padding: 12px 24px 24px;
-    border: solid 1px #e5e5e5;
-    background: white;
+}
+.ignite-dashboard-wrap {
 
-    .button-primary,
-    #delete {
-      margin: 12px 0;
+  h2 {
+    margin-bottom: 24px;
+  }
+  .main {
+    background: #fff;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.1);
+    margin-bottom: 24px;
+  }
+  .getting-started {
+    padding: 24px;
+  }
+  h3 {
+    font-size: 21px;
+    line-height: 1.143;
+    margin: 0;
+  }
+  p,
+  a {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  p {
+    margin: 24px 0;
+  } 
+  .plus {
+    background: #DFECF0;
+    padding: 24px;
+  }
+  .main {
+
+    h4 {
+      font-size: 21px;
+      line-height: 1.143;
+      margin: 0;
     }
-    ul {
-      list-style: disc;
-      margin-left: 36px;
+    a {
+      font-weight: 700;
+    }
+  }
+  .feature-list {
+    margin: 36px 0;
+
+    li {
+      margin: 24px 0;
+    }
+    img {
+      width: auto;
+      max-width: 100%;
+      height: auto;
+      margin: 0 24px 0 0;
+    }
+    p {
+      font-size: 14px;
+      line-height: 1.714;
+      margin: 18px 0;
+    }
+  }
+  .plus-ad {
+    padding: 24px;
+    background: #05B0E7;
+    color: #fff;
+    text-align: center;
+
+    h3 {
+      color: #fff;
+    }
+    p {
+      margin: 6px 0 24px;
+    }
+    a {
+      display: inline-block;
+      padding: 12px 24px;
+      text-decoration: none;
+      color: white;
+      background: #FF931E;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+
+      &:hover,
+      &:active,
+      &:focus {
+        background: #FFA33F; 
+        transform: translateY(-2px);
+        box-shadow: 0 1px 4px 0 rgba(0,0,0,0.1);
+      }
+    }
+  }
+  .sidebar {
+
+    h4 {
+      font-size: 16px;
+      line-height: 1.5;
+      margin: 0 0 24px 0;
+    }
+    .dashboard-widget {
+      padding: 24px;
+      margin-bottom: 24px;
+      background: #fff;
+      box-shadow: 0 0 4px 0 rgba(0,0,0,0.1);
+
+      ul {
+        margin-top: 24px;
+      }
+      li {
+        margin: 8px 0;
+      }
+      p,
+      a {
+        font-size: 14px;
+        line-height: 1.714;
+        margin: 18px 0;
+      }
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+  // Don't affect the admin notice that ignite was activated
+  .updated p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  .thanks-upgrading {
+    @extend .plus-ad;
+  }
+  .license-container {
+
+    ~ div {
+      margin-top: 24px;
     }
   }
 }
 
-/* 600px */
-@media all and (min-width: 37.5em) {
+@media all and (min-width: 600px) {
 
-  #ignite-dashboard-wrap {
+  .ignite-dashboard-wrap {
 
-    .content {
-      width: 49%;
+    .feature-list {
+
+      li {
+        display: flex;
+      }
+      .image {
+        flex-shrink: 0;
+      }
+      img {
+        width: 260px;
+        margin: 0 24px 0 0;
+      }
+    }
+  }
+}
+
+@media all and (min-width: 800px) {
+
+  .ignite-dashboard-wrap {
+
+    &:after {
+      content: ".";
+      display: block;
+      clear: both;
+      visibility: hidden;
+      line-height: 0;
+      height: 0;
+    }
+    .main {
       float: left;
-      margin-right: 2%;
-      min-height: 250px;
+      width: calc(70% - 24px);
+      margin-right: 24px;
+    }
+    .sidebar {
+      float: left;
+      width: 30%;
+    }
+    .getting-started {
+      padding: 24px 36px 36px 36px;
+    }
+    .plus {
+      padding: 24px 36px 24px 36px;
+    }
+    .plus-ad {
+      padding: 36px 36px 48px 36px;
 
-      &:nth-child(2n) {
-        margin-right: 0;
+      h3 {
+        font-size: 24px;
       }
       p {
-        min-height: 57px;
+        margin-bottom: 36px;
+      }
+    }
+    .feature-list {
+
+      li {
+        display: list-item;
+      }
+      img {
+        width: auto;
+        margin: 0 0 12px 0;
+      }
+    }
+    .thanks-upgrading {
+      
+      p {
+        margin-bottom: 0;
       }
     }
   }
 }
 
-/* 1100px */
-@media all and (min-width: 68.75em) {
+@media all and (min-width: 1100px) {
 
-  #ignite-dashboard-wrap {
+  .ignite-dashboard-wrap {
 
-    .content {
-      width: 32%;
+    .feature-list {
 
-      &:nth-child(2n) {
-        margin-right: 2%;
+      li {
+        display: flex;
       }
-      &:nth-child(3n) {
-        margin-right: 0;
-      }
-      &:nth-child(4n) {
-        clear: left;
+      img {
+        width: 260px;
+        margin: 0 24px 0 0;
       }
     }
   }
