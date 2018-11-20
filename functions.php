@@ -62,6 +62,34 @@ if ( ! function_exists( 'ct_ignite_theme_setup' ) ) {
 
 		// Gutenberg - add support for editor styles
 		add_theme_support('editor-styles');
+
+		// Gutenberg - modify the font sizes
+		add_theme_support( 'editor-font-sizes', array(
+			array(
+					'name' => __( 'small', 'ignite' ),
+					'shortName' => __( 'S', 'ignite' ),
+					'size' => 13,
+					'slug' => 'small'
+			),
+			array(
+					'name' => __( 'regular', 'ignite' ),
+					'shortName' => __( 'M', 'ignite' ),
+					'size' => 16,
+					'slug' => 'regular'
+			),
+			array(
+					'name' => __( 'large', 'ignite' ),
+					'shortName' => __( 'L', 'ignite' ),
+					'size' => 21,
+					'slug' => 'large'
+			),
+			array(
+					'name' => __( 'larger', 'ignite' ),
+					'shortName' => __( 'XL', 'ignite' ),
+					'size' => 36,
+					'slug' => 'larger'
+			)
+		) );
 		
 		load_theme_textdomain( 'ignite', get_template_directory() . '/languages' );
 	}
