@@ -81,14 +81,14 @@ a:visited, a:hover, a:active {
   color: #A87227;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, .editor-post-title textarea, h2, h3, h4, h5, h6 {
   font-family: "lusitana", serif;
   margin: 0;
   padding: 0;
   font-weight: 400;
 }
 
-h1 {
+h1, .editor-post-title textarea {
   font-size: 2.625em;
   /* 42px / 16px */
   line-height: 1.143;
@@ -342,8 +342,60 @@ a img {
   padding: 0 24px !important;
   font-size: 16px;
   line-height: 1.5;
-  -webkit-font-smoothing: subpixel-antialiased !important;
+  -webkit-font-smoothing: antialiased !important;
   background: #fff;
   font-family: "lusitana", serif;
-  max-width: 755px;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  background: #fff;
+  color: #373B41;
+}
+
+.wp-block {
+  max-width: 733px;
+}
+
+.editor-post-title textarea {
+  color: #373B41;
+  outline: none;
+  padding: 19px;
+  font-family: "lusitana", serif;
+  font-weight: 700;
+}
+
+.wp-block[data-align="wide"],
+.wp-block[data-align="full"] {
+  max-width: none;
+}
+
+.wp-block-quote {
+  border-color: #e6a117;
+}
+
+.wp-block-quote.is-large {
+  padding-left: 0;
+  border-left: none;
+}
+
+.wp-block-embed {
+  margin: 1.5em 0;
+}
+
+.has-small-font-size {
+  font-size: 12px;
+}
+
+.has-regular-font-size {
+  font-size: 16px;
+}
+
+.has-large-font-size {
+  font-size: 21px;
+}
+
+.has-extra-large-font-size {
+  font-size: 28px;
 }
