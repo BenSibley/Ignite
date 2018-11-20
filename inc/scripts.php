@@ -38,6 +38,16 @@ function ct_ignite_enqueue_admin_styles( $hook ) {
 
 		wp_enqueue_script( 'ct-ignite-profile-uploader', get_template_directory_uri() . '/js/build/profile-uploader.min.js' );
 	}
+	if ( $hook == 'post.php' || $hook == 'post-new.php' ) {
+
+		$font_args = array(
+			'family' => urlencode( 'Lusitana:400,700' ),
+			'subset' => urlencode( 'latin,latin-ext' )
+		);
+		$fonts_url = add_query_arg( $font_args, '//fonts.googleapis.com/css' );
+	
+		wp_enqueue_style( 'ct-ignite-google-fonts', $fonts_url );
+	}
 }
 add_action( 'admin_enqueue_scripts', 'ct_ignite_enqueue_admin_styles' );
 

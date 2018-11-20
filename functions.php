@@ -61,6 +61,16 @@ if ( ! function_exists( 'ct_ignite_theme_setup' ) ) {
 }
 add_action( 'after_setup_theme', 'ct_ignite_theme_setup', 10 );
 
+//-----------------------------------------------------------------------------
+// Load custom stylesheet for the post editor
+//-----------------------------------------------------------------------------
+if ( ! function_exists( 'ct_ignite_add_editor_styles' ) ) {
+	function ct_ignite_add_editor_styles() {
+		add_editor_style( 'styles/editor-style.css' );
+	}
+}
+add_action( 'admin_init', 'ct_ignite_add_editor_styles' );
+
 if ( ! function_exists( 'ct_ignite_register_sidebar' ) ) {
 	function ct_ignite_register_sidebar() {
 		register_sidebar( array(
