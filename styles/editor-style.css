@@ -1,0 +1,349 @@
+/*===== Variables =====*/
+/* Theme Colors */
+/* Social Media Brand Colors */
+/*===== Mixins =====*/
+/*===== Basic Styles =====*/
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "lusitana", serif;
+  line-height: 1.5;
+  background: #EEEDE8;
+  color: #373B41;
+  -webkit-font-smoothing: antialiased;
+  word-wrap: break-word;
+  -ms-word-wrap: break-word;
+}
+
+.overflow-container {
+  overflow: hidden;
+  height: auto;
+  min-height: 100%;
+}
+
+.main {
+  background: #EEEDE8;
+  margin: 0 auto;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  /* for when the menu is toggled open */
+}
+.main:after {
+  content: '';
+  position: absolute;
+  top: -12em;
+  /* to guarantee covering up breadcrumb trail if present*/
+  left: 0;
+  width: 100%;
+  background: #373B41;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.loop-container:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+p {
+  margin: 1.5em 0;
+}
+
+a {
+  color: #e6a117;
+  -webkit-transition: color 0.2s ease;
+  -moz-transition: color 0.2s ease;
+  -o-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+}
+a:link {
+  color: #e6a117;
+}
+a:visited, a:hover, a:active {
+  color: #A87227;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "lusitana", serif;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 2.625em;
+  /* 42px / 16px */
+  line-height: 1.143;
+}
+
+h2 {
+  font-size: 2.25em;
+  /* 36px / 16px */
+  line-height: 1.34;
+}
+
+h3 {
+  font-size: 1.625em;
+  /* 26px / 16px */
+  line-height: 1.85;
+}
+
+h4 {
+  font-size: 1.313em;
+  /* 21px / 16px */
+  line-height: 1.143;
+}
+
+h5 {
+  font-size: 1.125em;
+  /* 18px / 16px */
+  line-height: 1.34;
+}
+
+h6 {
+  font-size: 1em;
+}
+
+ul,
+ol {
+  font-size: 1em;
+  padding: 0;
+  margin: 1.5em;
+}
+ul ul, ul ol,
+ol ul,
+ol ol {
+  margin: 0 1.5em;
+}
+
+ul ul,
+ol ol,
+ul ol,
+ol ul,
+li li {
+  font-size: 1em;
+}
+
+/* Markup styles */
+pre {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  background: #E8EAEE;
+  padding: 0.75em;
+}
+
+code {
+  background: #E8EAEE;
+  padding: 0 0.375em;
+}
+
+blockquote {
+  margin: 1.5em 1.5em 1.5em 0;
+  padding-left: 1.5em;
+  border-left: solid 3px #e6a117;
+}
+blockquote cite {
+  display: block;
+  text-align: right;
+}
+
+hr {
+  margin: 0.69em 0;
+}
+
+/* Table styles */
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+}
+
+td {
+  padding: 0.5em 0.75em;
+  border: solid 1px black;
+}
+
+th {
+  padding: 0.5em 0.75em;
+  border: solid 1px black;
+}
+
+/* Images */
+.alignleft {
+  float: left;
+  margin: 0 1.5em 1.5em 0;
+}
+
+.alignright {
+  float: right;
+  margin: 0 0 1.5em 1.5em;
+}
+
+.aligncenter {
+  text-align: center;
+  margin: 1.5em auto;
+  display: block;
+}
+
+.alignnone {
+  margin: 1.5em;
+}
+
+img,
+.alignright,
+.alignleft,
+.aligncenter,
+.alignnone,
+.size-auto,
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
+  max-width: 100%;
+  height: auto;
+}
+
+.wp-caption-text {
+  margin: 0 0 1.8450184502em;
+  font-size: 0.813em;
+  line-height: 1.85;
+  color: #7C7D7F;
+}
+
+/* Form styles */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+textarea {
+  padding: 0.8em;
+  width: 100%;
+  max-width: 27.75em;
+  background: #EEEDE8;
+  color: #7C7D7F;
+  outline: solid 1px #D9DCDF;
+  border: none;
+  font-family: "lusitana", serif;
+  font-size: 0.813em;
+  line-height: 1.85;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-transition: background 0.2s ease;
+  -moz-transition: background 0.2s ease;
+  -o-transition: background 0.2s ease;
+  transition: background 0.2s ease;
+  -webkit-appearance: none;
+}
+
+textarea {
+  max-width: 41.625em;
+  overflow: auto;
+  /* to hide scrollbar in IE */
+}
+
+input[type="submit"] {
+  padding: 0.8em;
+  width: 100%;
+  color: white;
+  background: #e6a117;
+  outline: none;
+  border: none;
+  max-width: 13.875em;
+  font-family: "lusitana", serif;
+  font-size: 0.813em;
+  line-height: 1.85;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-transition: background 0.2s ease;
+  -moz-transition: background 0.2s ease;
+  -o-transition: background 0.2s ease;
+  transition: background 0.2s ease;
+  -webkit-appearance: none;
+}
+input[type="submit"]:hover {
+  cursor: pointer;
+  background: #A87227;
+}
+
+input[type="search"] {
+  margin-right: 1.5em;
+  padding-right: 0.375em;
+  /* so safari 'x' doesn't get cut off */
+}
+
+::-webkit-input-placeholder {
+  color: #7C7D7F;
+}
+
+:-moz-placeholder {
+  color: #7C7D7F;
+}
+
+::-moz-placeholder {
+  color: #7C7D7F;
+}
+
+:-ms-input-placeholder {
+  color: #7C7D7F;
+}
+
+/* sticky */
+.excerpt.sticky {
+  outline: solid 3px #e6a117;
+}
+
+/* ie image border fix */
+a img {
+  border: none;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) {
+  html {
+    -webkit-text-size-adjust: none;
+    /* none for no scaling */
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  html {
+    -webkit-text-size-adjust: none;
+    /* none for no scaling */
+  }
+}
+.infinite-loader,
+#infinite-handle {
+  clear: both;
+}
+
+.mce-content-body.wp-editor {
+  margin: 0 auto;
+  padding: 0 24px !important;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+  background: #fff;
+  font-family: "lusitana", serif;
+  max-width: 755px;
+}

@@ -1,0 +1,13 @@
+@import "variables";
+@import "base";
+
+.mce-content-body.wp-editor {
+  margin: 0 auto;
+  padding: 0 24px !important;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+  background: #fff;
+  font-family: $body-font-stack;
+  max-width: 755px;
+}
