@@ -1,14 +1,14 @@
-# Copyright (C) 2018 Compete Themes
+# Copyright (C) 2019 Compete Themes
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Ignite 1.72\n"
+"Project-Id-Version: Ignite 1.75\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2018-11-03 17:16:15+00:00\n"
+"POT-Creation-Date: 2019-02-26 15:53:33+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2019-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "X-Generator: grunt-wp-i18n 0.4.6\n"
@@ -91,7 +91,7 @@ msgstr ""
 msgid "Next Image"
 msgstr ""
 
-#: content-page.php:10 content.php:13
+#: content-page.php:10 content.php:14
 msgid "Pages:"
 msgstr ""
 
@@ -101,75 +101,111 @@ msgid ""
 "Themes."
 msgstr ""
 
-#: functions.php:22
+#: functions.php:23
 msgid ""
 "Hey! Sorry to interrupt, but you've been using Ignite for a little while "
 "now. If you're happy with this theme, could you take a minute to leave a "
 "review? <i>You won't see this notice again after closing it.</i>"
 msgstr ""
 
-#: functions.php:67 sidebar-primary.php:10
+#: functions.php:70
+msgid "small"
+msgstr ""
+
+#: functions.php:71
+msgid "S"
+msgstr ""
+
+#: functions.php:76
+msgid "regular"
+msgstr ""
+
+#: functions.php:77
+msgid "M"
+msgstr ""
+
+#: functions.php:82
+msgid "large"
+msgstr ""
+
+#: functions.php:83
+msgid "L"
+msgstr ""
+
+#: functions.php:88
+msgid "larger"
+msgstr ""
+
+#: functions.php:89
+msgid "XL"
+msgstr ""
+
+#: functions.php:113 sidebar-primary.php:10
 msgid "Primary Sidebar"
 msgstr ""
 
-#: functions.php:69
+#: functions.php:115
 msgid "The main sidebar"
 msgstr ""
 
-#: functions.php:81
+#: functions.php:127
 msgid "Primary"
 msgstr ""
 
-#: functions.php:102
+#: functions.php:148
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:126 functions.php:144
+#: functions.php:172 functions.php:190
 msgid "(optional)"
 msgstr ""
 
-#: functions.php:131 functions.php:132
+#: functions.php:177 functions.php:178
 msgid "Your Name"
 msgstr ""
 
-#: functions.php:137 functions.php:138
+#: functions.php:183 functions.php:184
 msgid "Your Email"
 msgstr ""
 
-#: functions.php:143
+#: functions.php:189
 msgid "Your Website URL"
 msgstr ""
 
-#: functions.php:144
+#: functions.php:190
 msgid "Your URL"
 msgstr ""
 
-#: functions.php:165
+#: functions.php:211
 msgid "Your Comment"
 msgstr ""
 
-#: functions.php:166
+#: functions.php:212
 msgid "Enter Your Comment"
 msgstr ""
 
-#: functions.php:197 inc/customizer.php:661
+#: functions.php:243 inc/customizer.php:637
 msgid "Read More"
 msgstr ""
 
-#: functions.php:261
+#: functions.php:307
 msgid "Continue Reading"
 msgstr ""
 
-#: functions.php:701
+#: functions.php:748
 msgid "Customizer settings deleted."
 msgstr ""
 
-#: functions.php:707
+#: functions.php:754
 msgid "%s successfully activated!"
 msgstr ""
 
-#: functions.php:723
+#: functions.php:770
 msgid "Scroll to the top"
+msgstr ""
+
+#: functions.php:856
+msgid "Last updated on"
 msgstr ""
 
 #: header.php:7
@@ -344,11 +380,11 @@ msgid ""
 "Plus</a>."
 msgstr ""
 
-#: inc/customizer.php:280 inc/customizer.php:694
+#: inc/customizer.php:280 inc/customizer.php:702
 msgid "Right sidebar"
 msgstr ""
 
-#: inc/customizer.php:281 inc/customizer.php:695
+#: inc/customizer.php:281 inc/customizer.php:703
 msgid "Left sidebar"
 msgstr ""
 
@@ -406,13 +442,13 @@ msgstr ""
 
 #: inc/customizer.php:386 inc/customizer.php:402 inc/customizer.php:418
 #: inc/customizer.php:434 inc/customizer.php:450 inc/customizer.php:466
-#: inc/customizer.php:627 inc/customizer.php:643 inc/customizer.php:742
+#: inc/customizer.php:603 inc/customizer.php:619 inc/customizer.php:750
 msgid "Show"
 msgstr ""
 
 #: inc/customizer.php:387 inc/customizer.php:403 inc/customizer.php:419
 #: inc/customizer.php:435 inc/customizer.php:451 inc/customizer.php:467
-#: inc/customizer.php:628 inc/customizer.php:644 inc/customizer.php:743
+#: inc/customizer.php:604 inc/customizer.php:620 inc/customizer.php:751
 msgid "Hide"
 msgstr ""
 
@@ -440,19 +476,19 @@ msgstr ""
 msgid "Show comments on:"
 msgstr ""
 
-#: inc/customizer.php:491 inc/customizer.php:725 index.php:4
+#: inc/customizer.php:491 inc/customizer.php:733 index.php:4
 msgid "Posts"
 msgstr ""
 
-#: inc/customizer.php:492 inc/customizer.php:726
+#: inc/customizer.php:492 inc/customizer.php:734
 msgid "Pages"
 msgstr ""
 
-#: inc/customizer.php:493 inc/customizer.php:727
+#: inc/customizer.php:493 inc/customizer.php:735
 msgid "Attachments"
 msgstr ""
 
-#: inc/customizer.php:494 inc/customizer.php:728
+#: inc/customizer.php:494 inc/customizer.php:736
 msgid "Do not show"
 msgstr ""
 
@@ -473,49 +509,49 @@ msgid "Add Custom CSS Here:"
 msgstr ""
 
 #: inc/customizer.php:556
-msgid "Scroll-to-Top Arrow"
-msgstr ""
-
-#: inc/customizer.php:566
-msgid "Display Scroll-to-top arrow?"
-msgstr ""
-
-#: inc/customizer.php:571 inc/customizer.php:595 inc/customizer.php:611
-#: inc/customizer.php:755
-msgid "Yes"
-msgstr ""
-
-#: inc/customizer.php:572 inc/customizer.php:596 inc/customizer.php:612
-#: inc/customizer.php:756
-msgid "No"
-msgstr ""
-
-#: inc/customizer.php:580
 msgid "Additional Options"
 msgstr ""
 
-#: inc/customizer.php:590
+#: inc/customizer.php:566
 msgid "Show full post on blog?"
 msgstr ""
 
-#: inc/customizer.php:606
+#: inc/customizer.php:571 inc/customizer.php:587 inc/customizer.php:659
+#: inc/customizer.php:675 inc/customizer.php:763
+msgid "Yes"
+msgstr ""
+
+#: inc/customizer.php:572 inc/customizer.php:588 inc/customizer.php:660
+#: inc/customizer.php:676 inc/customizer.php:764
+msgid "No"
+msgstr ""
+
+#: inc/customizer.php:582
 msgid "Show breadcrumbs?"
 msgstr ""
 
-#: inc/customizer.php:622
+#: inc/customizer.php:598
 msgid "Show post author info after posts?"
 msgstr ""
 
-#: inc/customizer.php:638
+#: inc/customizer.php:614
 msgid "Add icon to parent menu items?"
 msgstr ""
 
-#: inc/customizer.php:654
+#: inc/customizer.php:630
 msgid "Word count in automatic excerpts"
 msgstr ""
 
-#: inc/customizer.php:666
+#: inc/customizer.php:642
 msgid "Read More button text"
+msgstr ""
+
+#: inc/customizer.php:654
+msgid "Display Scroll-to-top arrow?"
+msgstr ""
+
+#: inc/customizer.php:670
+msgid "Display the date each post was last updated?"
 msgstr ""
 
 #: inc/deprecated.php:37
@@ -524,6 +560,22 @@ msgstr ""
 
 #: inc/deprecated.php:49
 msgid "This is the newest post"
+msgstr ""
+
+#: inc/last-updated-meta-box.php:12
+msgid "Last Updated Date"
+msgstr ""
+
+#: inc/last-updated-meta-box.php:29
+msgid "Use Customizer setting"
+msgstr ""
+
+#: inc/last-updated-meta-box.php:32
+msgid "Show the date"
+msgstr ""
+
+#: inc/last-updated-meta-box.php:36
+msgid "Don't show the date"
 msgstr ""
 
 #: inc/review.php:113
@@ -606,8 +658,9 @@ msgid ""
 "additional display options. Use it to blog about the news, food, music, "
 "fashion, or your travels. Ignite is now WooCommerce compatible, so you can "
 "even setup an eCommerce store. There is also a premium upgrade for Ignite "
-"called Ignite Plus. Preview Ignite now on desktop, tablets, and phones with "
-"the interactive live demo: https://www.competethemes.com/demos/?theme=ignite"
+"called Ignite Plus. Ignite is also fully compatible with the new Gutenberg "
+"post editor. Preview Ignite now on desktop, tablets, and phones with the "
+"interactive live demo: https://www.competethemes.com/demos/?theme=ignite"
 msgstr ""
 
 #. Template Name of the plugin/theme
@@ -645,17 +698,17 @@ msgctxt "noun"
 msgid "Comments"
 msgstr ""
 
-#: functions.php:98
+#: functions.php:144
 msgctxt "COMMENTER said:"
 msgid "said:"
 msgstr ""
 
-#: functions.php:109
+#: functions.php:155
 msgctxt "Edit this comment"
 msgid "Edit"
 msgstr ""
 
-#: functions.php:111
+#: functions.php:157
 msgctxt "Reply to this comment"
 msgid "Reply"
 msgstr ""
