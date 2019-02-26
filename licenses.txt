@@ -1,4 +1,4 @@
-Ignite WordPress Theme, Copyright 2017 Compete Themes
+Ignite WordPress Theme, Copyright 2019 Compete Themes
 Ignite is distributed under the terms of the GNU GPL
 
 License: GNU General Public License v2 or later
