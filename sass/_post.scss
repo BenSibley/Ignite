@@ -89,6 +89,9 @@
 .entry-tags {
   @extend .excerpt-tags;
 }
+.last-updated {
+  font-style: italic;
+}
 
 // New Gutenberg blocks
 .wp-block-image.alignfull,

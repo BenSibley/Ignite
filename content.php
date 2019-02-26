@@ -8,6 +8,7 @@ if ( is_single() ) { ?>
 		</div>
 		<div class="entry-content">
 			<article>
+				<?php ct_ignite_output_last_updated_date(); ?>
 				<?php the_content(); ?>
 				<?php wp_link_pages( array(
 					'before' => '<p class="singular-pagination">' . esc_html__( 'Pages:', 'ignite' ),
