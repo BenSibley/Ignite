@@ -812,7 +812,8 @@ if ( ! function_exists( 'ct_ignite_reset_customizer_options' ) ) {
 			'ct_ignite_author_meta_settings',
 			'ct_ignite_parent_menu_icon_settings',
 			'ct_ignite_excerpt_length_settings',
-			'ct_ignite_read_more_text'
+			'ct_ignite_read_more_text',
+			'last_updated'
 		);
 
 		$social_sites = ct_ignite_customizer_social_media_array();
