@@ -7,6 +7,7 @@ require_once( trailingslashit( get_template_directory() ) . 'theme-options.php' 
 require_once( trailingslashit( get_template_directory() ) . 'inc/breadcrumbs.php' );
 require_once( trailingslashit( get_template_directory() ) . 'inc/customizer.php' );
 require_once( trailingslashit( get_template_directory() ) . 'inc/deprecated.php' );
+require_once( trailingslashit( get_template_directory() ) . 'inc/last-updated-meta-box.php' );
 require_once( trailingslashit( get_template_directory() ) . 'inc/review.php' );
 require_once( trailingslashit( get_template_directory() ) . 'inc/scripts.php' );
 require_once( trailingslashit( get_template_directory() ) . 'inc/widgets/image_widget.php' );
