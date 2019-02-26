@@ -24,7 +24,7 @@ if ( ! is_page_template( 'full-width.php' ) ) {
             if ( empty( $footer_text ) ) {
 	            $footer_text = sprintf( __( '<a target="_blank" href="%1$s">%2$s WordPress Theme</a> by Compete Themes.', 'ignite' ), 'https://www.competethemes.com/ignite/', wp_get_theme( get_template() ) );
             }
-            echo wp_kses_post( $footer_text );
+            echo do_shortcode( wp_kses_post( $footer_text ) );
             ?>
         </span>
 	</div>
