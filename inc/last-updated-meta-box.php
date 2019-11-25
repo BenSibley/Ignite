@@ -25,7 +25,7 @@ function ct_ignite_last_updated_callback( $post ) {
 
   ?>
 	<p>
-		<select name="ignite-last-updated" id="ignite-last-updated" class="widefat">
+		<select name="ignite-last-updated" id="ignite-last-updated" style="box-sizing: border-box; width: 100%;">
 			<option value="default"><?php esc_html_e( 'Use Customizer setting', 'ignite' ); ?></option>
 			<option value="yes" <?php if ( $display == 'yes' ) {
 				echo 'selected';
