@@ -7,13 +7,6 @@ add_action( 'admin_menu', 'ct_ignite_register_theme_page' );
 
 function ct_ignite_options_content() {
 
-	$customizer_url = add_query_arg(
-		array(
-			'url'    => get_home_url(),
-			'return' => add_query_arg( 'page', 'ignite-options', admin_url( 'themes.php' ) )
-		),
-		admin_url( 'customize.php' )
-	);
 	$plus_url = 'https://www.competethemes.com/ignite-plus/?utm_source=wp-dashboard&utm_medium=Dashboard&utm_campaign=Ignite%20Plus%20-%20Dashboard';
 	?>
 	<div id="ignite-dashboard-wrap" class="wrap ignite-dashboard-wrap">
