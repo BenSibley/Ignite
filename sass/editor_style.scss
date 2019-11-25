@@ -120,13 +120,32 @@ table {
   border-collapse: collapse;
   margin: $baseline-height 0;
 }
-td {
-  padding: 0.5em 0.75em;
-  border: solid 1px black;
-}
+td,
 th {
-  padding: 0.5em 0.75em;
-  border: solid 1px black;
+  padding: $baseline-height / 2;
+  border: solid 1px $gray-dark;
+}
+.wp-block-table {
+  margin: 0;
+
+  thead,
+  tfoot {
+    background: $off-white;
+  }
+  td,
+  th {
+    border-color: $gray-light;
+  }
+}
+.wp-block-table.is-style-stripes {
+
+  thead {
+    background: none;
+  }
+  td,
+  th {
+    border-color: $gray-light;
+  }
 }
 
 /* Images */
