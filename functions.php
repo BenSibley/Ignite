@@ -599,6 +599,7 @@ if ( ! function_exists( 'ct_ignite_customizer_social_media_array' ) ) {
 			'email-form',
 			'academia',
 			'amazon',
+			'artstation',
 			'bandcamp',
 			'behance',
 			'bitbucket',

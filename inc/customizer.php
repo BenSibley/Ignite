@@ -225,6 +225,8 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 				$label = __('Tencent Weibo', 'ignite');
 			} elseif ( $social_site == 'paypal' ) {
 				$label = __('PayPal', 'ignite');
+			} elseif ( $social_site == 'artstation' ) {
+				$label = __('ArtStation', 'ignite');
 			} elseif ( $social_site == 'email-form' ) {
 				$label = __('Contact Form', 'ignite');
 			}
@@ -235,7 +237,7 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 				) );
 				$wp_customize->add_control( $social_site, array(
 					'label'       => $label,
-					'description' => sprintf( __( 'Accepts Skype link plustocol (<a href="%s" target="_blank">learn more</a>)', 'ignite' ), 'https://www.competethemes.com/blog/skype-links-wordpress/' ),
+					'description' => sprintf( __( 'Accepts Skype link protocol (<a href="%s" target="_blank">learn more</a>)', 'ignite' ), 'https://www.competethemes.com/blog/skype-links-wordpress/' ),
 					'section'     => 'ct_ignite_social_settings',
 					'type'        => 'url',
 					'priority'    => $priority
