@@ -622,6 +622,7 @@ if ( ! function_exists( 'ct_ignite_customizer_social_media_array' ) ) {
 			'ok-ru',
 			'patreon',
 			'paypal',
+			'pocket',
 			'podcast',
 			'qq',
 			'quora',

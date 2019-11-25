@@ -48,6 +48,8 @@ if ( ! empty( $active_sites ) ) {
 				$class = 'fab fa-odnoklassniki';
 			} elseif ( $active_site == 'wechat' ) {
 				$class = 'fab fa-weixin';
+			} elseif ( $active_site == 'pocket' ) {
+				$class = 'fab fa-get-pocket';
 			} elseif ( $active_site == 'phone' ) {
 				$class = 'fas fa-phone';
 			}
