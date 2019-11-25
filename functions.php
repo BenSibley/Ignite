@@ -59,7 +59,6 @@ if ( ! function_exists( 'ct_ignite_theme_setup' ) ) {
 
 		// Gutenberg - wide & full images
 		add_theme_support( 'align-wide' );
-		add_theme_support( 'align-full' );
 
 		// Gutenberg - add support for editor styles
 		add_theme_support('editor-styles');
