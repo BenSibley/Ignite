@@ -4,6 +4,12 @@
 	<?php wp_head(); ?>
 </head>
 <body id="<?php print get_stylesheet(); ?>" <?php body_class(); ?>>
+	<?php 
+	if ( function_exists( 'wp_body_open' ) ) {
+				wp_body_open();
+		} else {
+				do_action( 'wp_body_open' );
+	} ?>
 	<a class="skip-content" href="#main"><?php esc_html_e( 'Skip to content', 'ignite' ); ?></a>
 	<?php
 	// Elementor `header` location
