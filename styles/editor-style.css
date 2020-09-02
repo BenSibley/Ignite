@@ -114,6 +114,10 @@ code {
   padding: 0 0.375em;
 }
 
+pre code {
+  padding: 0;
+}
+
 blockquote {
   margin: 1.5em 1.5em 1.5em 0;
   padding-left: 1.5em;
@@ -240,8 +244,8 @@ img figcaption,
   font-weight: 700;
 }
 
-.wp-block[data-align="wide"],
-.wp-block[data-align="full"] {
+.wp-block[data-align=wide],
+.wp-block[data-align=full] {
   max-width: none;
 }
 
@@ -273,3 +277,5 @@ img figcaption,
 .has-extra-large-font-size {
   font-size: 36px;
 }
+
+/*# sourceMappingURL=editor-style.css.map */
