@@ -5,7 +5,10 @@ if ( ! is_page_template( 'full-width.php' ) ) {
 }
 ?>
 </div><!-- .overflow-container -->
-
+<?php 
+// Elementor `footer` location
+if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_location( 'footer' ) ) :
+?>
 <footer id="site-footer" class="site-footer" role="contentinfo">
 	<h1>
 		<a href="<?php echo esc_url( home_url() ); ?>">
@@ -29,6 +32,7 @@ if ( ! is_page_template( 'full-width.php' ) ) {
         </span>
 	</div>
 </footer>
+<?php endif; ?>
 <?php do_action( 'ct_ignite_body_bottom' ); ?>
 <?php wp_footer(); ?>
 </body>
