@@ -191,9 +191,7 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 
 			$label = ucfirst( $social_site );
 
-			if ( $social_site == 'google-plus' ) {
-				$label = __('Google Plus', 'ignite');
-			} elseif ( $social_site == 'rss' ) {
+			if ( $social_site == 'rss' ) {
 				$label = __('RSS', 'ignite');
 			} elseif ( $social_site == 'soundcloud' ) {
 				$label = __('SoundCloud', 'ignite');

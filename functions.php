@@ -617,7 +617,6 @@ if ( ! function_exists( 'ct_ignite_customizer_social_media_array' ) ) {
 			'foursquare',
 			'github',
 			'goodreads',
-			'google-plus',
 			'google-wallet',
 			'hacker-news',
 			'medium',
