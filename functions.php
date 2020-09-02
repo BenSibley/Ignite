@@ -641,6 +641,7 @@ if ( ! function_exists( 'ct_ignite_customizer_social_media_array' ) ) {
 			'tencent-weibo',
 			'tumblr',
 			'twitch',
+			'untappd',
 			'vimeo',
 			'vine',
 			'vk',
