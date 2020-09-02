@@ -858,7 +858,7 @@ function ct_ignite_sanitize_phone( $input ) {
 function ct_ignite_customize_preview_js() {
 	if ( !(isset($_GET['mailoptin_optin_campaign_id']) || isset($_GET['mailoptin_email_campaign_id'])) ) {
 		$url = 'https://www.competethemes.com/ignite-plus/?utm_source=wp-dashboard&utm_medium=Customizer&utm_campaign=Ignite%20Plus%20-%20Customizer';
-		$content = "<script>jQuery('#customize-info').prepend('<div class=\"upgrades-ad\"><a href=\"". $url ."\" target=\"_blank\">Get New Layouts with Ignite Plus <span>&rarr;</span></a></div>')</script>";
+		$content = "<script>jQuery('#customize-info').prepend('<div class=\"upgrades-ad\"><a href=\"". $url ."\" target=\"_blank\">Customize Colors with Ignite Plus <span>&rarr;</span></a></div>')</script>";
 		echo apply_filters('ct_ignite_customizer_ad', $content);
 	}
 }
