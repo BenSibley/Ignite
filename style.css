@@ -205,6 +205,13 @@ th {
 .wp-block-table th {
   border-color: #D9DCDF;
 }
+.wp-block-table figcaption {
+  font-size: 12px;
+  line-height: 1.5;
+  margin: -18px 0 0 0;
+  color: #303338;
+  text-align: center;
+}
 
 .wp-block-table.is-style-stripes thead {
   background: none;

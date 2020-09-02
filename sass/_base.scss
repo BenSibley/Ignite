@@ -162,6 +162,13 @@ th {
   th {
     border-color: $gray-light;
   }
+  figcaption {
+    font-size: 12px;
+    line-height: 1.5;
+    margin: -18px 0 0 0;
+    color: $gray-dark;
+    text-align: center;
+  }
 }
 .wp-block-table.is-style-stripes {
 
