@@ -44,7 +44,7 @@ class ct_ignite_Image extends WP_Widget {
 			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'image' ) ) ; ?>"
 			       name="<?php echo esc_attr( $this->get_field_name( 'image' ) ); ?>" type="text"
 			       value="<?php echo esc_url( $image ); ?>">
-			<input type='button' class="image-upload button-primary" value="<?php esc_html_e( 'Upload Image', 'ignite' ); ?>"/>
+			<input type='button' class="image-upload button-primary" value="<?php esc_attr_e( 'Upload Image', 'ignite' ); ?>"/>
 		</p>
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Title:', 'ignite' ); ?></label>
