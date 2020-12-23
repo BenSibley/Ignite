@@ -25,7 +25,7 @@ if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_
             <?php
             $footer_text = get_theme_mod( 'ct_ignite_footer_text_setting' );
             if ( empty( $footer_text ) ) {
-	            $footer_text = sprintf( __( '<a target="_blank" href="%1$s">%2$s WordPress Theme</a> by Compete Themes.', 'ignite' ), 'https://www.competethemes.com/ignite/', wp_get_theme( get_template() ) );
+	            $footer_text = sprintf( __( '<a target="_blank" href="%1$s" rel="nofollow">%2$s WordPress Theme</a> by Compete Themes.', 'ignite' ), 'https://www.competethemes.com/ignite/', wp_get_theme( get_template() ) );
             }
             echo do_shortcode( wp_kses_post( $footer_text ) );
             ?>
