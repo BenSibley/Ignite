@@ -657,7 +657,10 @@ if ( ! function_exists( 'ct_ignite_customizer_social_media_array' ) ) {
 			'xing',
 			'yahoo',
 			'yelp',
-			'500px'
+			'500px',
+			'social_icon_custom_1',
+			'social_icon_custom_3',
+			'social_icon_custom_3'
 		);
 
 		return apply_filters( 'ct_ignite_customizer_social_media_array_filter', $social_sites );

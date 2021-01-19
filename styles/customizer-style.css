@@ -8,6 +8,13 @@
   margin-bottom: 24px;
   border-bottom: solid 1px #d5d5d5;
 }
+#sub-accordion-section-ct_ignite_social_settings #customize-control-social_icon_custom_1,
+#sub-accordion-section-ct_ignite_social_settings #customize-control-social_icon_custom_2,
+#sub-accordion-section-ct_ignite_social_settings #customize-control-social_icon_custom_3 {
+  padding-top: 18px;
+  margin-top: 18px;
+  border-top: solid 1px #d5d5d5;
+}
 
 .upgrades-ad a {
   display: block;

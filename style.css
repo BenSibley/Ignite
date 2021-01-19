@@ -563,6 +563,12 @@ a img {
 .social-media-icons li a:hover {
   color: #e6a117;
 }
+.social-media-icons li a.custom-icon img {
+  line-height: 0;
+  margin: 0;
+  width: 20px;
+  height: auto;
+}
 
 .site-header.toggled .menu-primary {
   -webkit-transform: translateX(0);

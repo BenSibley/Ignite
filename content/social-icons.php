@@ -78,6 +78,14 @@ if ( ! empty( $active_sites ) ) {
 						<span class="screen-reader-text"><?php echo esc_html( $active_site );  ?></span>
 					</a>
 				</li>
+			<?php } elseif ( $active_site == 'social_icon_custom_1' || $active_site == 'social_icon_custom_2' || $active_site == 'social_icon_custom_3' ) { ?>
+				<li>
+					<a class="custom-icon" target="_blank"
+					   href="<?php echo esc_url( get_theme_mod( $active_site ) ); ?>">
+					   <img class="icon" src="<?php echo get_theme_mod($active_site .'_image'); ?>" style="width: <?php echo get_theme_mod($active_site . '_size'); ?>px;" />
+						<span class="screen-reader-text"><?php echo esc_html( $active_site );  ?></span>
+					</a>
+				</li>
 			<?php } else { ?>
 				<li>
 					<a class="<?php echo esc_attr( $active_site ); ?>" target="_blank"

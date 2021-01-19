@@ -149,6 +149,15 @@
       &:hover {
         color: $orange;
       }
+      &.custom-icon {
+
+        img {
+          line-height: 0;
+          margin: 0;
+          width: 20px;
+          height: auto;
+        }
+      }
     }
   }
 }
