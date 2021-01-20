@@ -193,6 +193,8 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 
 			if ( $social_site == 'rss' ) {
 				$label = __('RSS', 'ignite');
+			} elseif ( $social_site == 'diaspora' ) {
+				$label = __('diaspora*', 'ignite');
 			} elseif ( $social_site == 'researchgate' ) {
 				$label = __('ResearchGate', 'ignite');
 			} elseif ( $social_site == 'soundcloud' ) {
