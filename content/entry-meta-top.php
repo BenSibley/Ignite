@@ -7,7 +7,7 @@ if ( ( $date_display != 'hide' ) || ( $author_display != 'hide' ) ) : ?>
 	<div class="entry-meta-top">
 		<?php
 		if ( $date_display != 'hide' ) {
-			echo esc_html_x( 'Published', 'Published DATE', 'ignite' ) . " " . date_i18n( get_option( 'date_format' ), strtotime( get_the_date( 'c' ) ) );
+			echo esc_html_x( 'Published', 'Published DATE', 'ignite' ) . " " . get_the_date();
 		}
 		if ( $author_display != 'hide' ) {
 
