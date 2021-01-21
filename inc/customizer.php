@@ -258,12 +258,12 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 		}
 		$priority = $priority + 5;
 	}
-	// Custom Icon 1
+	// Custom icon 1
 	$wp_customize->add_setting( 'social_icon_custom_1', array(
 		'sanitize_callback' => 'esc_url_raw'
 	) );
 	$wp_customize->add_control( 'social_icon_custom_1', array(
-		'label'    => __('Custom Icon 1 URL', 'ignite'),
+		'label'    => __('Custom icon 1 URL', 'ignite'),
 		'section'  => 'ct_ignite_social_settings',
 		'settings' => 'social_icon_custom_1',
 		'type'     => 'url',
@@ -283,18 +283,18 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 		'sanitize_callback' => 'absint'
 	) );
 	$wp_customize->add_control( 'social_icon_custom_1_size', array(
-		'label'    => __('Custom Icon 1 Size (px)', 'ignite'),
+		'label'    => __('Custom icon 1 size (px)', 'ignite'),
 		'section'  => 'ct_ignite_social_settings',
 		'settings' => 'social_icon_custom_1_size',
 		'type'     => 'number',
 		'priority' => $priority + 7
 	) );
-	// Custom Icon 2
+	// Custom icon 2
 	$wp_customize->add_setting( 'social_icon_custom_2', array(
 		'sanitize_callback' => 'esc_url_raw'
 	) );
 	$wp_customize->add_control( 'social_icon_custom_2', array(
-		'label'    => __('Custom Icon 2', 'ignite'),
+		'label'    => __('Custom icon 2 URL', 'ignite'),
 		'section'  => 'ct_ignite_social_settings',
 		'settings' => 'social_icon_custom_2',
 		'type'     => 'url',
@@ -304,7 +304,7 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 		'sanitize_callback' => 'esc_url_raw'
 	) );
 	$wp_customize->add_control(new WP_Customize_Image_Control( $wp_customize, 'social_icon_custom_2_image', array(
-		'label'    => __( 'Icon 2 image', 'ignite' ),
+		'label'    => __( 'Custom icon 2 image', 'ignite' ),
 		'section'  => 'ct_ignite_social_settings',
 		'settings' => 'social_icon_custom_2_image',
 		'priority' => $priority + 11
@@ -314,18 +314,18 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 		'sanitize_callback' => 'absint'
 	) );
 	$wp_customize->add_control( 'social_icon_custom_2_size', array(
-		'label'    => __('Custom Icon 2 Size (px)', 'ignite'),
+		'label'    => __('Custom icon 2 size (px)', 'ignite'),
 		'section'  => 'ct_ignite_social_settings',
 		'settings' => 'social_icon_custom_2_size',
 		'type'     => 'number',
 		'priority' => $priority + 12
 	) );
-	// Custom Icon 3
+	// Custom icon 3
 	$wp_customize->add_setting( 'social_icon_custom_3', array(
 		'sanitize_callback' => 'esc_url_raw'
 	) );
 	$wp_customize->add_control( 'social_icon_custom_3', array(
-		'label'    => __('Custom Icon 3', 'ignite'),
+		'label'    => __('Custom icon 3 URL', 'ignite'),
 		'section'  => 'ct_ignite_social_settings',
 		'settings' => 'social_icon_custom_3',
 		'type'     => 'url',
@@ -335,7 +335,7 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 		'sanitize_callback' => 'esc_url_raw'
 	) );
 	$wp_customize->add_control(new WP_Customize_Image_Control( $wp_customize, 'social_icon_custom_3_image', array(
-		'label'    => __( 'Icon 3 image', 'ignite' ),
+		'label'    => __( 'Custom icon 3 image', 'ignite' ),
 		'section'  => 'ct_ignite_social_settings',
 		'settings' => 'social_icon_custom_3_image',
 		'priority' => $priority + 16
@@ -345,7 +345,7 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 		'sanitize_callback' => 'absint'
 	) );
 	$wp_customize->add_control( 'social_icon_custom_3_size', array(
-		'label'    => __('Custom Icon 3 Size (px)', 'ignite'),
+		'label'    => __('Custom icon 3 size (px)', 'ignite'),
 		'section'  => 'ct_ignite_social_settings',
 		'settings' => 'social_icon_custom_3_size',
 		'type'     => 'number',
