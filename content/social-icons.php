@@ -82,7 +82,7 @@ if ( ! empty( $active_sites ) ) {
 				<li>
 					<a class="custom-icon" target="_blank"
 					   href="<?php echo esc_url( get_theme_mod( $active_site ) ); ?>">
-					   <img class="icon" src="<?php echo get_theme_mod($active_site .'_image'); ?>" style="width: <?php echo get_theme_mod($active_site . '_size'); ?>px;" />
+					   <img class="icon" src="<?php echo esc_url(get_theme_mod($active_site .'_image')); ?>" style="width: <?php echo absint(get_theme_mod($active_site . '_size')); ?>px;" />
 						<span class="screen-reader-text"><?php echo esc_html( $active_site );  ?></span>
 					</a>
 				</li>
