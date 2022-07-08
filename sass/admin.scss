@@ -126,6 +126,97 @@
       }
     }
   }
+  .ad {
+    padding: 24px;
+    margin-bottom: 24px;
+    background: #fff;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.05);
+    border-color: #5123A0;
+
+    img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      line-height: 0;
+      margin: 0;
+    }
+    .title {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 1.333;
+    }
+    .features,
+    .products {
+      padding-top: 12px;
+
+      ul {
+        margin: 12px 0 24px 12px;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+    }
+    .product {
+      font-weight: 700;
+    }
+    .button {
+      text-align: center;
+      padding: 0;
+      border: none;
+      
+      a {
+        display: block;
+        background-color: #FF9900;
+        border-radius: 3px;
+        padding: 11px;
+        color: #fff;
+        font-size: 18px;
+        line-height: 1.333;
+        font-weight: 700;
+        border: none;
+        text-decoration: none;
+        transition: color 0.2s, background-color 0.2s;
+
+        &:link,
+        &:visited {
+          color: #fff;
+        }
+        &:hover,
+        &:active,
+        &:focus {
+          color: #fff;
+          background-color: #FF9900;
+          text-decoration: none;
+        }
+      }
+    }
+    .logo-container {
+      line-height: 0;
+      height: 60px;
+    }
+    .features ul {
+      list-style: none;
+      margin-left: 0;
+
+      li {
+        margin-bottom: 4px;
+  
+        &:before {
+          content: '\2714';
+          margin-right: 6px;
+          color: #5123A0;
+        }
+      }
+    }
+    &.strive {
+
+      .logo-container {
+        height: 100px;
+      }
+      .features ul li:before {
+        color: #43C47C;
+      }
+    }
+  }
   // Don't affect the admin notice that ignite was activated
   .updated p {
     font-size: 13px;

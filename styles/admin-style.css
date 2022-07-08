@@ -1,3 +1,4 @@
+@charset "UTF-8";
 #ignite-dashboard-wrap h2 {
   margin-bottom: 24px;
 }
@@ -107,6 +108,87 @@
 }
 .ignite-dashboard-wrap .sidebar .dashboard-widget img {
   max-width: 100%;
+}
+.ignite-dashboard-wrap .ad {
+  padding: 24px;
+  margin-bottom: 24px;
+  background: #fff;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.05);
+  border-color: #5123A0;
+}
+.ignite-dashboard-wrap .ad img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  line-height: 0;
+  margin: 0;
+}
+.ignite-dashboard-wrap .ad .title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.333;
+}
+.ignite-dashboard-wrap .ad .features,
+.ignite-dashboard-wrap .ad .products {
+  padding-top: 12px;
+}
+.ignite-dashboard-wrap .ad .features ul,
+.ignite-dashboard-wrap .ad .products ul {
+  margin: 12px 0 24px 12px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.ignite-dashboard-wrap .ad .product {
+  font-weight: 700;
+}
+.ignite-dashboard-wrap .ad .button {
+  text-align: center;
+  padding: 0;
+  border: none;
+}
+.ignite-dashboard-wrap .ad .button a {
+  display: block;
+  background-color: #FF9900;
+  border-radius: 3px;
+  padding: 11px;
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.333;
+  font-weight: 700;
+  border: none;
+  text-decoration: none;
+  -webkit-transition: color 0.2s, background-color 0.2s;
+          transition: color 0.2s, background-color 0.2s;
+}
+.ignite-dashboard-wrap .ad .button a:link, .ignite-dashboard-wrap .ad .button a:visited {
+  color: #fff;
+}
+.ignite-dashboard-wrap .ad .button a:hover, .ignite-dashboard-wrap .ad .button a:active, .ignite-dashboard-wrap .ad .button a:focus {
+  color: #fff;
+  background-color: #FF9900;
+  text-decoration: none;
+}
+.ignite-dashboard-wrap .ad .logo-container {
+  line-height: 0;
+  height: 60px;
+}
+.ignite-dashboard-wrap .ad .features ul {
+  list-style: none;
+  margin-left: 0;
+}
+.ignite-dashboard-wrap .ad .features ul li {
+  margin-bottom: 4px;
+}
+.ignite-dashboard-wrap .ad .features ul li:before {
+  content: "✔";
+  margin-right: 6px;
+  color: #5123A0;
+}
+.ignite-dashboard-wrap .ad.strive .logo-container {
+  height: 100px;
+}
+.ignite-dashboard-wrap .ad.strive .features ul li:before {
+  color: #43C47C;
 }
 .ignite-dashboard-wrap .updated p {
   font-size: 13px;

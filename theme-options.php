@@ -1,23 +1,23 @@
 <?php
 
-function ct_ignite_register_theme_page() {
-	add_theme_page( 
-		sprintf( esc_html__( '%s Dashboard', 'ignite' ), wp_get_theme() ), 
-		sprintf( esc_html__( '%s Dashboard', 'ignite' ), wp_get_theme() ), 
-		'edit_theme_options', 
-		'ignite-options', 
-		'ct_ignite_options_content'
-	);
+function ct_ignite_register_theme_page()
+{
+    add_theme_page(
+        sprintf(esc_html__('%s Dashboard', 'ignite'), wp_get_theme()),
+        sprintf(esc_html__('%s Dashboard', 'ignite'), wp_get_theme()),
+        'edit_theme_options',
+        'ignite-options',
+        'ct_ignite_options_content'
+    );
 }
-add_action( 'admin_menu', 'ct_ignite_register_theme_page' );
+add_action('admin_menu', 'ct_ignite_register_theme_page');
 
-function ct_ignite_options_content() {
-
-	$plus_url = 'https://www.competethemes.com/ignite-plus/?utm_source=wp-dashboard&utm_medium=Dashboard&utm_campaign=Ignite%20Plus%20-%20Dashboard';
-	?>
+function ct_ignite_options_content()
+{
+    $plus_url = 'https://www.competethemes.com/ignite-plus/?utm_source=wp-dashboard&utm_medium=Dashboard&utm_campaign=Ignite%20Plus%20-%20Dashboard'; ?>
 	<div id="ignite-dashboard-wrap" class="wrap ignite-dashboard-wrap">
-		<h2><?php printf( esc_html__( '%s Dashboard', 'ignite' ), wp_get_theme() ); ?></h2>
-		<?php do_action( 'theme_options_before' ); ?>
+		<h2><?php printf(esc_html__('%s Dashboard', 'ignite'), wp_get_theme()); ?></h2>
+		<?php do_action('theme_options_before'); ?>
 		<div class="main">
 			<div class="getting-started">
 				<h3>Get Started with Ignite</h3>
@@ -189,6 +189,42 @@ function ct_ignite_options_content() {
 					<li><a href="<?php echo $plus_url; ?>" target="_blank">Ignite Plus</a></li>
 				</ul>
 			</div>
+			<div class="ad iawp">
+				<div class="logo-container">
+					<img width="308px" height="46px" src="<?php echo trailingslashit(get_template_directory_uri()) . 'assets/images/iawp.svg'; ?>" alt="Independent Analytics logo" />
+				</div>
+				<div class="features">
+					<div class="title">Free WordPress Analytics Plugin</div>
+					<ul>
+						<li>Beautiful analytics dashboard</li>
+						<li>Views & traffic sources</li>
+						<li>Easy setup</li>
+						<li>GDPR compliant</li>
+						<li>Google Analytics alternative</li>
+					</ul>
+				</div>
+				<div class="button">
+					<a href="https://independentwp.com" target="_blank" data-product-name="Independent Analytics">Learn More</a>
+				</div>
+			</div>
+			<div class="ad strive">
+				<div class="logo-container">
+					<img width="308px" height="62px" src="<?php echo trailingslashit(get_template_directory_uri()) . 'assets/images/strive.svg'; ?>" alt="Strive logo" />
+				</div>
+				<div class="features">
+					<div class="title">Content Calendar for WordPress</div>
+					<ul>
+						<li>Plan your posts visually</li>
+						<li>Track progress with post statuses</li>
+						<li>Create custom post checklists</li>
+						<li>Republish posts with revisions</li>
+						<li>Monitor content using the Pipeline</li>
+					</ul>
+				</div>
+				<div class="button">
+					<a href="https://strivecalendar.com/?utm_source=competethemes&utm_medium=sidebar&utm_campaign=competethemes_sidebar_widget" target="_blank" data-product-name="Strive">Learn More</a>
+				</div>
+			</div>
 			<div class="dashboard-widget">
 				<h4>User Reviews</h4>
 				<img src="<?php echo trailingslashit(get_template_directory_uri()) . 'assets/images/reviews.png'; ?>" />
@@ -200,12 +236,13 @@ function ct_ignite_options_content() {
 				<form method="post">
 					<input type="hidden" name="ignite_reset_customizer" value="ignite_reset_customizer_settings"/>
 					<p>
-						<?php wp_nonce_field( 'ignite_reset_customizer_nonce', 'ignite_reset_customizer_nonce' ); ?>
-						<?php submit_button( 'Reset Customizer Settings', 'delete', 'delete', false ); ?>
+						<?php wp_nonce_field('ignite_reset_customizer_nonce', 'ignite_reset_customizer_nonce'); ?>
+						<?php submit_button('Reset Customizer Settings', 'delete', 'delete', false); ?>
 					</p>
 				</form>
 			</div>
 		</div>
-		<?php do_action( 'theme_options_after' ); ?>
+		<?php do_action('theme_options_after'); ?>
 	</div>
-<?php }
+<?php
+}
