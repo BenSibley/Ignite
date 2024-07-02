@@ -10,7 +10,6 @@ foreach ($social_sites as $social_site) {
 
 if (! empty($active_sites)) {
     $square_icons = array(
-        'twitter',
         'vimeo',
         'youtube',
         'pinterest',
@@ -50,6 +49,8 @@ if (! empty($active_sites)) {
             $class = 'fab fa-get-pocket';
         } elseif ($active_site == 'phone') {
             $class = 'fas fa-phone';
+        } elseif ($active_site == 'twitter') {
+            $class = 'fab fa-square-x-twitter';
         }
 
         if ($active_site == 'email') { ?>
