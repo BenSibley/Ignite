@@ -19,14 +19,19 @@ function ct_ignite_register_recommended_plugins()
         'id'      => 'ct-ignite',
         'plugins' => array(
             array(
-                'name' => 'Independent Analytics',
-                'slug' => 'independent-analytics',
+                'name'        => 'Independent Analytics',
+                'slug'        => 'independent-analytics',
+                'description' => __('Simple, privacy-friendly visitor stats right in your WordPress dashboard. A Google Analytics alternative.', 'ignite'),
+            ),
+            array(
+                'name'        => 'Resolver',
+                'slug'        => 'resolver-ai-chatbot',
+                'description' => __('An AI chatbot that answers your visitors\' questions using your site\'s content.', 'ignite'),
             ),
         ),
-        'message' => __('The makers of the Ignite theme now recommend installing Independent Analytics, their new plugin for visitor tracking.', 'ignite'),
     ));
 }
-add_action('admin_init', 'ct_ignite_register_recommended_plugins');
+add_action('init', 'ct_ignite_register_recommended_plugins');
 
 if (! function_exists(('ct_ignite_set_content_width'))) {
     function ct_ignite_set_content_width()
