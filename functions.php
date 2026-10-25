@@ -10,43 +10,23 @@ require_once(trailingslashit(get_template_directory()) . 'inc/deprecated.php');
 require_once(trailingslashit(get_template_directory()) . 'inc/last-updated-meta-box.php');
 require_once(trailingslashit(get_template_directory()) . 'inc/scripts.php');
 require_once(trailingslashit(get_template_directory()) . 'inc/widgets/image_widget.php');
-// TGMP
-require_once(trailingslashit(get_template_directory()) . 'tgm/class-tgm-plugin-activation.php');
+// Recommended plugins notice
+require_once(trailingslashit(get_template_directory()) . 'inc/class-ct-recommended-plugins.php');
 
-function ct_ignite_register_required_plugins()
+function ct_ignite_register_recommended_plugins()
 {
-    $plugins = array(
-
-        array(
-            'name'      => 'Independent Analytics',
-            'slug'      => 'independent-analytics',
-            'required'  => false,
-        ),
-    );
-    
-    $config = array(
-        'id'           => 'ct-ignite',
-        'default_path' => '',
-        'menu'         => 'tgmpa-install-plugins',
-        'has_notices'  => true,
-        'dismissable'  => true,
-        'dismiss_msg'  => '',
-        'is_automatic' => false,
-        'message'      => '',
-        'strings'      => array(
-            'page_title'                      => __('Install Recommended Plugins', 'ignite'),
-            'menu_title'                      => __('Recommended Plugins', 'ignite'),
-            'notice_can_install_recommended'     => _n_noop(
-                'The makers of the Ignite theme now recommend installing Independent Analytics, their new plugin for visitor tracking: %1$s.',
-                'The makers of the Ignite theme now recommend installing Independent Analytics, their new plugin for visitor tracking: %1$s.',
-                'ignite'
+    new CT_Recommended_Plugins(array(
+        'id'      => 'ct-ignite',
+        'plugins' => array(
+            array(
+                'name' => 'Independent Analytics',
+                'slug' => 'independent-analytics',
             ),
-        )
-    );
-
-    tgmpa($plugins, $config);
+        ),
+        'message' => __('The makers of the Ignite theme now recommend installing Independent Analytics, their new plugin for visitor tracking.', 'ignite'),
+    ));
 }
-add_action('tgmpa_register', 'ct_ignite_register_required_plugins');
+add_action('admin_init', 'ct_ignite_register_recommended_plugins');
 
 if (! function_exists(('ct_ignite_set_content_width'))) {
     function ct_ignite_set_content_width()
