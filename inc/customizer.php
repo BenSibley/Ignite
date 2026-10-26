@@ -231,6 +231,8 @@ function ct_ignite_add_customizer_content( $wp_customize ) {
 				$label = __('ArtStation', 'ignite');
 			} elseif ( $social_site == 'twitter' ) {
 				$label = __('X (Twitter)', 'ignite');
+			} elseif ( $social_site == 'tiktok' ) {
+				$label = __('TikTok', 'ignite');
 			} elseif ( $social_site == 'email-form' ) {
 				$label = __('Contact Form', 'ignite');
 			}
