@@ -21,12 +21,14 @@ function ct_ignite_register_recommended_plugins()
             array(
                 'name'        => 'Independent Analytics',
                 'slug'        => 'independent-analytics',
-                'description' => __('Simple, privacy-friendly visitor stats right in your WordPress dashboard. A Google Analytics alternative.', 'ignite'),
+                'description' => __('a simple, privacy-friendly alternative to Google Analytics.', 'ignite'),
+                'url'         => 'https://independentwp.com',
             ),
             array(
                 'name'        => 'Resolver',
                 'slug'        => 'resolver-ai-chatbot',
-                'description' => __('An AI chatbot that answers your visitors\' questions using your site\'s content.', 'ignite'),
+                'description' => __('an AI-powered chatbot that trains on your website\'s content in seconds and answers visitor questions intelligently.', 'ignite'),
+                'url'         => 'https://resolverchatbot.com',
             ),
         ),
     ));

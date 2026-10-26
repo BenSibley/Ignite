@@ -21,19 +21,21 @@
  *             array(
  *                 'name'        => 'Independent Analytics',
  *                 'slug'        => 'independent-analytics',
- *                 'description' => __('Plugin description.', 'theme-slug'),
+ *                 // Follows "Name: " in the notice, so it starts lowercase
+ *                 'description' => __('a short description.', 'theme-slug'),
+ *                 'url'         => 'https://independentwp.com', // optional "Learn More" link
  *             ),
  *         ),
  *     ));
  *
- * @version 1.1.0
+ * @version 1.2.0
  * @license GPL-2.0-or-later
  */
 
 if (! class_exists('CT_Recommended_Plugins')) {
     class CT_Recommended_Plugins
     {
-        const VERSION   = '1.1.0';
+        const VERSION   = '1.2.0';
         const PAGE_SLUG = 'ct-recommended-plugins';
 
         // Plugins TGMPA recommended. Users who dismissed its notice already passed on these.
@@ -89,7 +91,7 @@ if (! class_exists('CT_Recommended_Plugins')) {
                         <?php foreach ($this->plugins as $plugin) : ?>
                             <tr>
                                 <td><strong><?php echo esc_html($plugin['name']); ?></strong></td>
-                                <td><?php echo esc_html($plugin['description']); ?></td>
+                                <td><?php echo esc_html(ucfirst($plugin['description'])); ?></td>
                                 <td><?php echo $this->get_action($plugin); // phpcs:ignore WordPress.Security.EscapeOutput -- escaped in get_action() ?></td>
                             </tr>
                         <?php endforeach; ?>
@@ -112,19 +114,27 @@ if (! class_exists('CT_Recommended_Plugins')) {
                 return;
             }
 
-            $buttons = array();
+            $rows = '';
             foreach ($plugins as $plugin) {
-                $buttons[] = $this->get_action($plugin);
+                $links = array($this->get_link($plugin));
+                if (! empty($plugin['url'])) {
+                    $links[] = '<a class="ct-learn-more" href="' . esc_url($plugin['url']) . '" target="_blank" rel="noopener">' . esc_html__('Learn More', 'ignite') . '</a>';
+                }
+                $icon = $this->get_icon_url($plugin['slug']);
+                $rows .= '<div class="ct-recommended-plugin">';
+                if ($icon) {
+                    $rows .= '<img src="' . esc_url($icon) . '" alt="" width="64" height="64">';
+                }
+                $rows .= '<div><p><strong>' . esc_html($plugin['name']) . ':</strong> ' . esc_html($plugin['description']) . '</p><p>' . implode('', $links) . '</p></div></div>';
             }
-            $page_link = '<a href="' . esc_url(admin_url('themes.php?page=' . self::PAGE_SLUG)) . '">' . esc_html__('See all recommended plugins', 'ignite') . '</a>';
 
             printf(
-                '<div class="notice notice-info is-dismissible ct-recommended-plugins" data-action="%1$s" data-nonce="%2$s"><p>%3$s</p><p>%4$s</p></div>',
+                '<div class="notice notice-info is-dismissible ct-recommended-plugins" data-action="%1$s" data-nonce="%2$s"><p><strong>%3$s</strong></p>%4$s</div>',
                 esc_attr($this->ajax_action()),
                 esc_attr(wp_create_nonce($this->ajax_action())),
                 /* translators: %s: theme name */
                 esc_html(sprintf(__('The makers of the %s theme recommend these free plugins:', 'ignite'), $this->theme_name())),
-                implode(' ', $buttons) . ' ' . $page_link
+                $rows
             );
             $this->print_script();
         }
@@ -166,45 +176,74 @@ if (! class_exists('CT_Recommended_Plugins')) {
             if ($file) {
                 return is_plugin_active($file) ? 'active' : 'activate';
             }
-            return $this->is_on_wporg($slug) ? 'install' : 'unavailable';
+            return $this->get_wporg_info($slug) ? 'install' : 'unavailable';
         }
 
-        // Returns the button (or status text) for a plugin
+        // Returns the button (or status text) for a plugin on the Recommended Plugins page
         private function get_action($plugin)
         {
-            switch ($this->get_status($plugin['slug'])) {
-                case 'active':
-                    return '<span class="button button-disabled">' . esc_html__('Active', 'ignite') . '</span>';
-                case 'unavailable':
-                    return '<span class="button button-disabled">' . esc_html__('Coming soon', 'ignite') . '</span>';
-                case 'activate':
-                    if (! current_user_can('activate_plugins')) {
-                        return '';
-                    }
-                    $file  = $this->get_plugin_file($plugin['slug']);
-                    $url   = wp_nonce_url(self_admin_url('plugins.php?action=activate&plugin=' . rawurlencode($file)), 'activate-plugin_' . $file);
-                    /* translators: %s: plugin name */
-                    $label = sprintf(__('Activate %s', 'ignite'), $plugin['name']);
-                    break;
-                default:
-                    if (! current_user_can('install_plugins')) {
-                        return '';
-                    }
-                    $url   = wp_nonce_url(self_admin_url('update.php?action=install-plugin&plugin=' . rawurlencode($plugin['slug'])), 'install-plugin_' . $plugin['slug']);
-                    /* translators: %s: plugin name */
-                    $label = sprintf(__('Install %s', 'ignite'), $plugin['name']);
+            $status = $this->get_status($plugin['slug']);
+            if ($status === 'active') {
+                return '<span class="button button-disabled">' . esc_html__('Active', 'ignite') . '</span>';
             }
+            if ($status === 'unavailable') {
+                return '<span class="button button-disabled">' . esc_html__('Coming soon', 'ignite') . '</span>';
+            }
+
+            $url = $this->get_action_url($plugin, $status);
+            if (! $url) {
+                return '';
+            }
+            $label = $status === 'activate'
+                /* translators: %s: plugin name */
+                ? sprintf(__('Activate %s', 'ignite'), $plugin['name'])
+                /* translators: %s: plugin name */
+                : sprintf(__('Install %s', 'ignite'), $plugin['name']);
 
             return '<a class="button button-primary" href="' . esc_url($url) . '">' . esc_html($label) . '</a>';
         }
 
-        // Asks WordPress.org whether a plugin exists, caching the answer for a day (an hour if the request failed)
-        private function is_on_wporg($slug)
+        // Returns the "Install Now" or "Activate Now" button for a plugin in the notice
+        private function get_link($plugin)
         {
-            $key    = 'ct_rp_wporg_' . md5($slug);
+            $status = $this->get_status($plugin['slug']);
+            $url    = $this->get_action_url($plugin, $status);
+            if (! $url) {
+                return '';
+            }
+            $label = $status === 'activate' ? __('Activate Now', 'ignite') : __('Install Now', 'ignite');
+
+            return '<a class="button button-primary" href="' . esc_url($url) . '">' . esc_html($label) . '</a>';
+        }
+
+        // Core's nonced install or activate URL, or false if the user can't do that
+        private function get_action_url($plugin, $status)
+        {
+            if ($status === 'activate' && current_user_can('activate_plugins')) {
+                $file = $this->get_plugin_file($plugin['slug']);
+                return wp_nonce_url(self_admin_url('plugins.php?action=activate&plugin=' . rawurlencode($file)), 'activate-plugin_' . $file);
+            }
+            if ($status === 'install' && current_user_can('install_plugins')) {
+                return wp_nonce_url(self_admin_url('update.php?action=install-plugin&plugin=' . rawurlencode($plugin['slug'])), 'install-plugin_' . $plugin['slug']);
+            }
+            return false;
+        }
+
+        // The plugin's WordPress.org icon URL, or an empty string if it has none
+        private function get_icon_url($slug)
+        {
+            $info = $this->get_wporg_info($slug);
+            return $info ? $info['icon'] : '';
+        }
+
+        // Asks WordPress.org whether a plugin exists and for its icon, caching the answer for a day
+        // (an hour if the request failed). Returns array('icon' => url) or false if it isn't on WordPress.org.
+        private function get_wporg_info($slug)
+        {
+            $key    = 'ct_rp_info_' . md5($slug);
             $cached = get_transient($key);
             if ($cached !== false) {
-                return $cached === 'yes';
+                return is_array($cached) ? $cached : false;
             }
 
             if (! function_exists('plugins_api')) {
@@ -212,7 +251,7 @@ if (! class_exists('CT_Recommended_Plugins')) {
             }
             $info = plugins_api('plugin_information', array(
                 'slug'   => $slug,
-                'fields' => array('sections' => false, 'short_description' => false),
+                'fields' => array('sections' => false, 'short_description' => false, 'icons' => true),
             ));
 
             if (is_wp_error($info)) {
@@ -221,8 +260,17 @@ if (! class_exists('CT_Recommended_Plugins')) {
                 set_transient($key, 'no', $not_found ? DAY_IN_SECONDS : HOUR_IN_SECONDS);
                 return false;
             }
-            set_transient($key, 'yes', DAY_IN_SECONDS);
-            return true;
+
+            $icons = isset($info->icons) ? (array) $info->icons : array();
+            $data  = array('icon' => '');
+            foreach (array('svg', '2x', '1x') as $size) {
+                if (! empty($icons[$size])) {
+                    $data['icon'] = $icons[$size];
+                    break;
+                }
+            }
+            set_transient($key, $data, DAY_IN_SECONDS);
+            return $data;
         }
 
         // Finds an installed plugin's main file (e.g. "independent-analytics/iawp.php") from its folder slug
@@ -252,10 +300,38 @@ if (! class_exists('CT_Recommended_Plugins')) {
             return $dismissed;
         }
 
-        // Saves the dismissal when the notice's close button is clicked
+        // Styles each plugin's box, and saves the dismissal when the notice's close button is clicked
         private function print_script()
         {
             ?>
+            <style>
+                .ct-recommended-plugins .ct-recommended-plugin {
+                    margin: 0 0 12px;
+                    padding: 4px 12px;
+                    background: #f6f7f7;
+                    border-radius: 4px;
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                }
+                .ct-recommended-plugins .ct-recommended-plugin img {
+                    flex-shrink: 0;
+                    border-radius: 4px;
+                }
+                .ct-recommended-plugins .ct-recommended-plugin .button {
+                    min-height: 2px;
+                    line-height: 1.3;
+                    padding: 8px 12px;
+                    margin-inline-end: 8px;
+                }
+                .ct-recommended-plugins .ct-recommended-plugin .ct-learn-more {
+                    text-decoration: none;
+                }
+                .ct-recommended-plugins .ct-recommended-plugin .ct-learn-more:hover,
+                .ct-recommended-plugins .ct-recommended-plugin .ct-learn-more:focus {
+                    text-decoration: underline;
+                }
+            </style>
             <script>
                 jQuery(function ($) {
                     $(document).on('click', '.ct-recommended-plugins .notice-dismiss', function () {
