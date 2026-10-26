@@ -23,23 +23,25 @@
  *                 'slug'        => 'independent-analytics',
  *                 // Follows "Name: " in the notice, so it starts lowercase
  *                 'description' => __('a short description.', 'theme-slug'),
- *                 'url'         => 'https://independentwp.com', // optional "Learn More" link
  *             ),
  *         ),
  *     ));
  *
- * @version 1.2.0
+ * @version 1.3.0
  * @license GPL-2.0-or-later
  */
 
 if (! class_exists('CT_Recommended_Plugins')) {
     class CT_Recommended_Plugins
     {
-        const VERSION   = '1.2.0';
+        const VERSION   = '1.3.0';
         const PAGE_SLUG = 'ct-recommended-plugins';
 
         // Plugins TGMPA recommended. Users who dismissed its notice already passed on these.
         private static $legacy_slugs = array('independent-analytics');
+
+        // Plugins that get a "New" label over their icon in the notice
+        private static $new_slugs = array('resolver-ai-chatbot');
 
         private $id;
         private $plugins;
@@ -53,8 +55,17 @@ if (! class_exists('CT_Recommended_Plugins')) {
                 return;
             }
             add_action('admin_menu', array($this, 'add_page'));
+            add_action('admin_enqueue_scripts', array($this, 'enqueue_scripts'));
             add_action('admin_notices', array($this, 'render_notice'));
             add_action('wp_ajax_' . $this->ajax_action(), array($this, 'dismiss'));
+        }
+
+        // Thickbox powers core's plugin details window that "More Details" opens
+        public function enqueue_scripts()
+        {
+            if ($this->get_notice_plugins()) {
+                add_thickbox();
+            }
         }
 
         public function add_page()
@@ -117,19 +128,25 @@ if (! class_exists('CT_Recommended_Plugins')) {
             $rows = '';
             foreach ($plugins as $plugin) {
                 $links = array($this->get_link($plugin));
-                if (! empty($plugin['url'])) {
-                    $links[] = '<a class="ct-learn-more" href="' . esc_url($plugin['url']) . '" target="_blank" rel="noopener">' . esc_html__('Learn More', 'ignite') . '</a>';
+                // Core's plugin details window needs plugin-install.php, so only users who can install get it
+                if (current_user_can('install_plugins')) {
+                    $details_url = self_admin_url('plugin-install.php?tab=plugin-information&plugin=' . rawurlencode($plugin['slug']) . '&TB_iframe=true&width=772&height=600');
+                    $links[]     = '<a class="ct-more-details thickbox open-plugin-details-modal" href="' . esc_url($details_url) . '">' . esc_html__('More Details', 'ignite') . '</a>';
                 }
                 $icon = $this->get_icon_url($plugin['slug']);
-                $rows .= '<div class="ct-recommended-plugin">';
+                $rows .= '<div class="ct-recommended-plugin ct-recommended-plugin-' . esc_attr($plugin['slug']) . '">';
                 if ($icon) {
-                    $rows .= '<img src="' . esc_url($icon) . '" alt="" width="64" height="64">';
+                    $rows .= '<span class="ct-recommended-plugin-icon"><img src="' . esc_url($icon) . '" alt="" width="64" height="64">';
+                    if (in_array($plugin['slug'], self::$new_slugs, true)) {
+                        $rows .= '<span class="ct-recommended-plugin-new">' . esc_html__('New', 'ignite') . '</span>';
+                    }
+                    $rows .= '</span>';
                 }
                 $rows .= '<div><p><strong>' . esc_html($plugin['name']) . ':</strong> ' . esc_html($plugin['description']) . '</p><p>' . implode('', $links) . '</p></div></div>';
             }
 
             printf(
-                '<div class="notice notice-info is-dismissible ct-recommended-plugins" data-action="%1$s" data-nonce="%2$s"><p><strong>%3$s</strong></p>%4$s</div>',
+                '<div class="notice notice-info is-dismissible ct-recommended-plugins" data-action="%1$s" data-nonce="%2$s"><p><strong>%3$s</strong></p><div class="ct-recommended-plugins-list">%4$s</div></div>',
                 esc_attr($this->ajax_action()),
                 esc_attr(wp_create_nonce($this->ajax_action())),
                 /* translators: %s: theme name */
@@ -314,9 +331,40 @@ if (! class_exists('CT_Recommended_Plugins')) {
                     align-items: center;
                     gap: 12px;
                 }
-                .ct-recommended-plugins .ct-recommended-plugin img {
+                @media (min-width: 1300px) {
+                    .ct-recommended-plugins .ct-recommended-plugins-list {
+                        display: flex;
+                        gap: 12px;
+                    }
+                    .ct-recommended-plugins .ct-recommended-plugin {
+                        flex: 1 1 0;
+                        min-width: 0;
+                    }
+                }
+                .ct-recommended-plugins .ct-recommended-plugin-icon {
+                    position: relative;
                     flex-shrink: 0;
+                }
+                .ct-recommended-plugins .ct-recommended-plugin img {
+                    display: block;
                     border-radius: 4px;
+                }
+                .ct-recommended-plugins .ct-recommended-plugin-new {
+                    position: absolute;
+                    top: -8px;
+                    left: -8px;
+                    padding: 2px 6px;
+                    background: #d63638;
+                    color: #fff;
+                    font-size: 10px;
+                    font-weight: 600;
+                    line-height: 1.4;
+                    text-transform: uppercase;
+                    border-radius: 3px;
+                }
+                /* Resolver's icon has a white background that blends into the box without a border */
+                .ct-recommended-plugins .ct-recommended-plugin-resolver-ai-chatbot img {
+                    border: 1px solid #dcdcde;
                 }
                 .ct-recommended-plugins .ct-recommended-plugin .button {
                     min-height: 2px;
@@ -324,11 +372,11 @@ if (! class_exists('CT_Recommended_Plugins')) {
                     padding: 8px 12px;
                     margin-inline-end: 8px;
                 }
-                .ct-recommended-plugins .ct-recommended-plugin .ct-learn-more {
+                .ct-recommended-plugins .ct-recommended-plugin .ct-more-details {
                     text-decoration: none;
                 }
-                .ct-recommended-plugins .ct-recommended-plugin .ct-learn-more:hover,
-                .ct-recommended-plugins .ct-recommended-plugin .ct-learn-more:focus {
+                .ct-recommended-plugins .ct-recommended-plugin .ct-more-details:hover,
+                .ct-recommended-plugins .ct-recommended-plugin .ct-more-details:focus {
                     text-decoration: underline;
                 }
             </style>
