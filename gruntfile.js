@@ -32,7 +32,7 @@ module.exports = function(grunt) {
             },
             css: {
                 files: ['sass/*.scss'],
-                tasks: ['sass', 'autoprefixer', 'cssmin'],
+                tasks: ['sass', 'postcss', 'cssmin'],
                 options: {
                     livereload: true,
                     spawn: false
@@ -40,6 +40,13 @@ module.exports = function(grunt) {
             }
         },
         sass: {
+            options: {
+                implementation: require('sass'),
+                outputStyle: 'expanded',
+                sourceMap: true,
+                // the partials still use @import and slash division, which Dart Sass 1.x warns about
+                silenceDeprecations: ['import', 'slash-div', 'global-builtin']
+            },
             dist: {
                 files: {
                     'style.css': 'sass/style.scss',
@@ -49,11 +56,15 @@ module.exports = function(grunt) {
                 }
             }
         },
-        autoprefixer: {
+        postcss: {
+            options: {
+                processors: [
+                    require('autoprefixer')({
+                        overrideBrowserslist: ['last 1 version', '> 1%', 'ie 8']
+                    })
+                ]
+            },
             dist: {
-                options: {
-                    browsers: ['last 1 version', '> 1%', 'ie 8']
-                },
                 files: {
                     'style.css': 'style.css',
                     'styles/customizer-style.css': 'styles/customizer-style.css',
@@ -115,24 +126,6 @@ module.exports = function(grunt) {
                 }
             }
         },
-        phpcs: {
-            application: {
-                dir: ['*.php']
-            },
-            options: {
-                tabWidth: 4
-            }
-        },
-        phpunit: {
-            classes: {
-                dir: 'tests/php/'
-            },
-            options: {
-                bin: 'vendor/bin/phpunit',
-                bootstrap: 'tests/php/phpunit.php',
-                colors: true
-            }
-        },
         excludeFiles: '--exclude "*.gitignore" --exclude ".sass-cache/" --exclude "*.DS_Store" --exclude ".git/" --exclude ".idea/" --exclude "gruntfile.js" --exclude "node_modules/" --exclude "package.json" --exclude "sass/" --exclude "style.css.map" --exclude "styles/admin-style.css.map" --exclude "styles/customizer-style.css.map" --exclude "styles/editor-style.css.map"',
         shell: {
             zip: {
@@ -141,7 +134,7 @@ module.exports = function(grunt) {
                     'rm -R "/Users/bensibley/Dropbox/Compete Themes/Distribution/ignite" || true',
                     'rm -R "/Users/bensibley/Dropbox/Compete Themes/Distribution/ignite.zip" || true',
                     // copy folder without any project/meta files
-                    'rsync -r "/Users/bensibley/Sites/Compete Themes/ignite/wp-content/themes/ignite" "/Users/bensibley/Dropbox/Compete Themes/Distribution/" <%= excludeFiles %>',
+                    'rsync -r "/Users/bensibley/Dropbox/Compete Themes/Development/ignite" "/Users/bensibley/Dropbox/Compete Themes/Distribution/" <%= excludeFiles %>',
                     // open dist folder
                     'cd "/Users/bensibley/Dropbox/Compete Themes/Distribution/"',
                     // zip the ignite folder
@@ -155,16 +148,14 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-sass');
-    grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-sass');
+    grunt.loadNpmTasks('@lodder/grunt-postcss');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-compress');
     grunt.loadNpmTasks('grunt-wp-i18n');
-    grunt.loadNpmTasks('grunt-phpcs');
-    grunt.loadNpmTasks('grunt-phpunit');
     grunt.loadNpmTasks('grunt-shell');
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['concat', 'uglify', 'watch', 'sass', 'autoprefixer', 'cssmin', 'compress', 'makepot', 'phpcs', 'phpunit', 'shell']);
+    grunt.registerTask('default', ['concat', 'uglify', 'watch', 'sass', 'postcss', 'cssmin', 'compress', 'makepot', 'shell']);
 
 };

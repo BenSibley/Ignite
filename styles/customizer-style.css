@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*===== Variables =====*/
 /* Theme Colors */
 /* Social Media Brand Colors */
@@ -23,8 +22,7 @@
   color: white;
   text-decoration: none;
   background: #05B0E7;
-  -webkit-transition: background 0.2s;
-          transition: background 0.2s;
+  transition: background 0.2s;
 }
 .upgrades-ad a:hover {
   background: #3FBEE8;
@@ -33,8 +31,7 @@
 #accordion-section-ct_ignite_plus .accordion-section-title {
   color: #fff;
   background: #05B0E7;
-  -webkit-transition: background 0.2s;
-          transition: background 0.2s;
+  transition: background 0.2s;
 }
 #accordion-section-ct_ignite_plus .accordion-section-title:after {
   color: #fff;
@@ -82,11 +79,10 @@
   background: #FF931E;
   color: #fff;
   text-decoration: none;
-  -webkit-transition: background 0.2s;
-          transition: background 0.2s;
+  transition: background 0.2s;
 }
 #customize-control-ignite_plus .ignite-plus-button:before {
-  content: "";
+  content: "\f06e";
   font-family: "FontAwesome";
   margin-right: 6px;
 }
@@ -209,7 +205,6 @@
   border-radius: 0;
   box-shadow: none;
   background: #fff url("multiple-select.png") no-repeat 100% -22px;
-  background: url("multiple-select.png") no-repeat 100% -22px, -webkit-linear-gradient(top, #ffffff 85%, #eeeeee 99%);
   background: url("multiple-select.png") no-repeat 100% -22px, linear-gradient(to bottom, #ffffff 85%, #eeeeee 99%);
 }
 
