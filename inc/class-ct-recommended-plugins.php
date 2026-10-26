@@ -61,9 +61,9 @@ if (! class_exists('CT_Recommended_Plugins')) {
         }
 
         // Thickbox powers core's plugin details window that "More Details" opens
-        public function enqueue_scripts()
+        public function enqueue_scripts($hook_suffix)
         {
-            if ($this->get_notice_plugins()) {
+            if ($hook_suffix === 'appearance_page_' . self::PAGE_SLUG || $this->get_notice_plugins()) {
                 add_thickbox();
             }
         }
@@ -82,7 +82,8 @@ if (! class_exists('CT_Recommended_Plugins')) {
         public function render_page()
         {
             ?>
-            <div class="wrap">
+            <?php $this->print_styles(); ?>
+            <div class="wrap ct-recommended-plugins-page">
                 <h1><?php esc_html_e('Recommended Plugins', 'ignite'); ?></h1>
                 <p>
                     <?php
@@ -100,10 +101,20 @@ if (! class_exists('CT_Recommended_Plugins')) {
                     </thead>
                     <tbody>
                         <?php foreach ($this->plugins as $plugin) : ?>
-                            <tr>
-                                <td><strong><?php echo esc_html($plugin['name']); ?></strong></td>
+                            <tr class="ct-recommended-plugin-<?php echo esc_attr($plugin['slug']); ?>">
+                                <td>
+                                    <div class="ct-recommended-plugins-page-name">
+                                        <?php echo $this->get_icon_html($plugin); // phpcs:ignore WordPress.Security.EscapeOutput -- escaped in get_icon_html() ?>
+                                        <strong><?php echo esc_html($plugin['name']); ?></strong>
+                                    </div>
+                                </td>
                                 <td><?php echo esc_html(ucfirst($plugin['description'])); ?></td>
-                                <td><?php echo $this->get_action($plugin); // phpcs:ignore WordPress.Security.EscapeOutput -- escaped in get_action() ?></td>
+                                <td class="ct-recommended-plugins-page-actions">
+                                    <?php
+                                    // phpcs:ignore WordPress.Security.EscapeOutput -- escaped in get_action() and get_details_link()
+                                    echo $this->get_action($plugin) . ($this->get_status($plugin['slug']) !== 'unavailable' ? $this->get_details_link($plugin) : '');
+                                    ?>
+                                </td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>
@@ -127,22 +138,9 @@ if (! class_exists('CT_Recommended_Plugins')) {
 
             $rows = '';
             foreach ($plugins as $plugin) {
-                $links = array($this->get_link($plugin));
-                // Core's plugin details window needs plugin-install.php, so only users who can install get it
-                if (current_user_can('install_plugins')) {
-                    $details_url = self_admin_url('plugin-install.php?tab=plugin-information&plugin=' . rawurlencode($plugin['slug']) . '&TB_iframe=true&width=772&height=600');
-                    $links[]     = '<a class="ct-more-details thickbox open-plugin-details-modal" href="' . esc_url($details_url) . '">' . esc_html__('More Details', 'ignite') . '</a>';
-                }
-                $icon = $this->get_icon_url($plugin['slug']);
                 $rows .= '<div class="ct-recommended-plugin ct-recommended-plugin-' . esc_attr($plugin['slug']) . '">';
-                if ($icon) {
-                    $rows .= '<span class="ct-recommended-plugin-icon"><img src="' . esc_url($icon) . '" alt="" width="64" height="64">';
-                    if (in_array($plugin['slug'], self::$new_slugs, true)) {
-                        $rows .= '<span class="ct-recommended-plugin-new">' . esc_html__('New', 'ignite') . '</span>';
-                    }
-                    $rows .= '</span>';
-                }
-                $rows .= '<div><p><strong>' . esc_html($plugin['name']) . ':</strong> ' . esc_html($plugin['description']) . '</p><p>' . implode('', $links) . '</p></div></div>';
+                $rows .= $this->get_icon_html($plugin);
+                $rows .= '<div><p><strong>' . esc_html($plugin['name']) . ':</strong> ' . esc_html($plugin['description']) . '</p><p>' . $this->get_link($plugin) . $this->get_details_link($plugin) . '</p></div></div>';
             }
 
             printf(
@@ -153,7 +151,32 @@ if (! class_exists('CT_Recommended_Plugins')) {
                 esc_html(sprintf(__('The makers of the %s theme recommend these free plugins:', 'ignite'), $this->theme_name())),
                 $rows
             );
+            $this->print_styles();
             $this->print_script();
+        }
+
+        // The plugin's icon, with a "New" label for plugins in $new_slugs, or an empty string if it has no icon
+        private function get_icon_html($plugin)
+        {
+            $icon = $this->get_icon_url($plugin['slug']);
+            if (! $icon) {
+                return '';
+            }
+            $html = '<span class="ct-recommended-plugin-icon"><img src="' . esc_url($icon) . '" alt="" width="64" height="64">';
+            if (in_array($plugin['slug'], self::$new_slugs, true)) {
+                $html .= '<span class="ct-recommended-plugin-new">' . esc_html__('New', 'ignite') . '</span>';
+            }
+            return $html . '</span>';
+        }
+
+        // Link that opens core's plugin details window. It needs plugin-install.php, so only users who can install get it.
+        private function get_details_link($plugin)
+        {
+            if (! current_user_can('install_plugins')) {
+                return '';
+            }
+            $url = self_admin_url('plugin-install.php?tab=plugin-information&plugin=' . rawurlencode($plugin['slug']) . '&TB_iframe=true&width=772&height=600');
+            return '<a class="ct-more-details thickbox open-plugin-details-modal" href="' . esc_url($url) . '">' . esc_html__('More Details', 'ignite') . '</a>';
         }
 
         public function dismiss()
@@ -317,8 +340,8 @@ if (! class_exists('CT_Recommended_Plugins')) {
             return $dismissed;
         }
 
-        // Styles each plugin's box, and saves the dismissal when the notice's close button is clicked
-        private function print_script()
+        // Styles for the notice and the Recommended Plugins page
+        private function print_styles()
         {
             ?>
             <style>
@@ -341,15 +364,15 @@ if (! class_exists('CT_Recommended_Plugins')) {
                         min-width: 0;
                     }
                 }
-                .ct-recommended-plugins .ct-recommended-plugin-icon {
+                .ct-recommended-plugin-icon {
                     position: relative;
                     flex-shrink: 0;
                 }
-                .ct-recommended-plugins .ct-recommended-plugin img {
+                .ct-recommended-plugin-icon img {
                     display: block;
                     border-radius: 4px;
                 }
-                .ct-recommended-plugins .ct-recommended-plugin-new {
+                .ct-recommended-plugin-new {
                     position: absolute;
                     top: -8px;
                     left: -8px;
@@ -363,7 +386,7 @@ if (! class_exists('CT_Recommended_Plugins')) {
                     border-radius: 3px;
                 }
                 /* Resolver's icon has a white background that blends into the box without a border */
-                .ct-recommended-plugins .ct-recommended-plugin-resolver-ai-chatbot img {
+                .ct-recommended-plugin-resolver-ai-chatbot .ct-recommended-plugin-icon img {
                     border: 1px solid #dcdcde;
                 }
                 .ct-recommended-plugins .ct-recommended-plugin .button {
@@ -372,14 +395,36 @@ if (! class_exists('CT_Recommended_Plugins')) {
                     padding: 8px 12px;
                     margin-inline-end: 8px;
                 }
-                .ct-recommended-plugins .ct-recommended-plugin .ct-more-details {
+                .ct-more-details {
                     text-decoration: none;
                 }
-                .ct-recommended-plugins .ct-recommended-plugin .ct-more-details:hover,
-                .ct-recommended-plugins .ct-recommended-plugin .ct-more-details:focus {
+                .ct-more-details:hover,
+                .ct-more-details:focus {
                     text-decoration: underline;
                 }
+                .ct-recommended-plugins-page td {
+                    vertical-align: middle;
+                }
+                .ct-recommended-plugins-page-name {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                }
+                .ct-recommended-plugins-page-actions {
+                    white-space: nowrap;
+                }
+                .ct-recommended-plugins-page-actions .button {
+                    margin-inline-end: 8px;
+                    vertical-align: middle;
+                }
             </style>
+            <?php
+        }
+
+        // Saves the dismissal when the notice's close button is clicked
+        private function print_script()
+        {
+            ?>
             <script>
                 jQuery(function ($) {
                     $(document).on('click', '.ct-recommended-plugins .notice-dismiss', function () {
