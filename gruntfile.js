@@ -126,7 +126,7 @@ module.exports = function(grunt) {
                 }
             }
         },
-        excludeFiles: '--exclude "*.gitignore" --exclude ".sass-cache/" --exclude "*.DS_Store" --exclude ".git/" --exclude ".idea/" --exclude "gruntfile.js" --exclude "node_modules/" --exclude "package.json" --exclude "sass/" --exclude "style.css.map" --exclude "styles/admin-style.css.map" --exclude "styles/customizer-style.css.map" --exclude "styles/editor-style.css.map"',
+        excludeFiles: '--exclude "*.gitignore" --exclude ".sass-cache/" --exclude "*.DS_Store" --exclude ".git/" --exclude ".idea/" --exclude "gruntfile.js" --exclude "node_modules/" --exclude "package.json" --exclude "package-lock.json" --exclude "sass/" --exclude "style.css.map" --exclude "styles/admin-style.css.map" --exclude "styles/customizer-style.css.map" --exclude "styles/editor-style.css.map"',
         shell: {
             zip: {
                 command: [
