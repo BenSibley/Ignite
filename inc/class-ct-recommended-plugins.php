@@ -10,8 +10,9 @@
  * as "Coming soon" on the page, so a plugin can be listed before it goes live.
  *
  * This file is copied into each theme by _shared/sync.sh, which swaps the
- * 'ignite' placeholder for the theme's text domain. Edit the master copy
- * in _shared/recommended-plugins, not the copies inside the themes.
+ * 'ignite' placeholder for the theme's text domain and copies the plugin
+ * icons from _shared/recommended-plugins/icons into the theme. Edit the master
+ * copies in _shared/recommended-plugins, not the copies inside the themes.
  *
  * Usage (instantiate on init: late enough for translations, early enough for admin_menu):
  *
@@ -27,15 +28,18 @@
  *         ),
  *     ));
  *
- * @version 1.3.0
+ * @version 1.4.0
  * @license GPL-2.0-or-later
  */
 
 if (! class_exists('CT_Recommended_Plugins')) {
     class CT_Recommended_Plugins
     {
-        const VERSION   = '1.3.0';
+        const VERSION   = '1.4.0';
         const PAGE_SLUG = 'ct-recommended-plugins';
+
+        // Where sync.sh puts the plugin icons inside each theme, named <slug>.svg
+        const ICON_DIR = 'assets/images/recommended-plugins';
 
         // Plugins TGMPA recommended. Users who dismissed its notice already passed on these.
         private static $legacy_slugs = array('independent-analytics');
@@ -216,7 +220,7 @@ if (! class_exists('CT_Recommended_Plugins')) {
             if ($file) {
                 return is_plugin_active($file) ? 'active' : 'activate';
             }
-            return $this->get_wporg_info($slug) ? 'install' : 'unavailable';
+            return $this->is_on_wporg($slug) ? 'install' : 'unavailable';
         }
 
         // Returns the button (or status text) for a plugin on the Recommended Plugins page
@@ -269,21 +273,23 @@ if (! class_exists('CT_Recommended_Plugins')) {
             return false;
         }
 
-        // The plugin's WordPress.org icon URL, or an empty string if it has none
+        // URL of the plugin's icon bundled with the theme (copied in by sync.sh), or an empty string if there isn't one
         private function get_icon_url($slug)
         {
-            $info = $this->get_wporg_info($slug);
-            return $info ? $info['icon'] : '';
+            $path = self::ICON_DIR . '/' . $slug . '.svg';
+            if (! file_exists(trailingslashit(get_template_directory()) . $path)) {
+                return '';
+            }
+            return trailingslashit(get_template_directory_uri()) . $path;
         }
 
-        // Asks WordPress.org whether a plugin exists and for its icon, caching the answer for a day
-        // (an hour if the request failed). Returns array('icon' => url) or false if it isn't on WordPress.org.
-        private function get_wporg_info($slug)
+        // Asks WordPress.org whether a plugin exists, caching the answer for a day (an hour if the request failed)
+        private function is_on_wporg($slug)
         {
-            $key    = 'ct_rp_info_' . md5($slug);
+            $key    = 'ct_rp_available_' . md5($slug);
             $cached = get_transient($key);
             if ($cached !== false) {
-                return is_array($cached) ? $cached : false;
+                return $cached === 'yes';
             }
 
             if (! function_exists('plugins_api')) {
@@ -291,7 +297,7 @@ if (! class_exists('CT_Recommended_Plugins')) {
             }
             $info = plugins_api('plugin_information', array(
                 'slug'   => $slug,
-                'fields' => array('sections' => false, 'short_description' => false, 'icons' => true),
+                'fields' => array('sections' => false, 'short_description' => false),
             ));
 
             if (is_wp_error($info)) {
@@ -300,17 +306,8 @@ if (! class_exists('CT_Recommended_Plugins')) {
                 set_transient($key, 'no', $not_found ? DAY_IN_SECONDS : HOUR_IN_SECONDS);
                 return false;
             }
-
-            $icons = isset($info->icons) ? (array) $info->icons : array();
-            $data  = array('icon' => '');
-            foreach (array('svg', '2x', '1x') as $size) {
-                if (! empty($icons[$size])) {
-                    $data['icon'] = $icons[$size];
-                    break;
-                }
-            }
-            set_transient($key, $data, DAY_IN_SECONDS);
-            return $data;
+            set_transient($key, 'yes', DAY_IN_SECONDS);
+            return true;
         }
 
         // Finds an installed plugin's main file (e.g. "independent-analytics/iawp.php") from its folder slug
