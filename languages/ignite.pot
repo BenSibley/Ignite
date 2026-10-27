@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Ignite 1.84\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/ignite\n"
-"POT-Creation-Date: 2026-10-26 17:07:32+00:00\n"
+"POT-Creation-Date: 2026-10-27 12:36:24+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -102,15 +102,13 @@ msgid ""
 msgstr ""
 
 #: functions.php:24
-msgid ""
-"Simple, privacy-friendly visitor stats right in your WordPress dashboard. A "
-"Google Analytics alternative."
+msgid "a simple, privacy-friendly alternative to Google Analytics."
 msgstr ""
 
 #: functions.php:29
 msgid ""
-"An AI chatbot that answers your visitors' questions using your site's "
-"content."
+"an AI-powered chatbot that trains on your website's content and answers "
+"visitor questions intelligently."
 msgstr ""
 
 #: functions.php:79
@@ -189,7 +187,7 @@ msgstr ""
 msgid "Enter Your Comment"
 msgstr ""
 
-#: functions.php:260 inc/customizer.php:736
+#: functions.php:260 inc/customizer.php:738
 msgid "Read More"
 msgstr ""
 
@@ -197,15 +195,15 @@ msgstr ""
 msgid "Continue Reading"
 msgstr ""
 
-#: functions.php:760
+#: functions.php:762
 msgid "Customizer settings deleted."
 msgstr ""
 
-#: functions.php:777
+#: functions.php:779
 msgid "Scroll to the top"
 msgstr ""
 
-#: functions.php:863
+#: functions.php:865
 msgid "Last updated on"
 msgstr ""
 
@@ -225,50 +223,62 @@ msgstr ""
 msgid "Error 404"
 msgstr ""
 
-#: inc/class-ct-recommended-plugins.php:61
-#: inc/class-ct-recommended-plugins.php:62
-#: inc/class-ct-recommended-plugins.php:73
+#: inc/class-ct-recommended-plugins.php:78
+#: inc/class-ct-recommended-plugins.php:79
+#: inc/class-ct-recommended-plugins.php:91
 msgid "Recommended Plugins"
 msgstr ""
 
-#: inc/class-ct-recommended-plugins.php:77
+#: inc/class-ct-recommended-plugins.php:95
 #. translators: %s: theme name
 msgid "Free plugins from the makers of the %s theme."
 msgstr ""
 
-#: inc/class-ct-recommended-plugins.php:83
+#: inc/class-ct-recommended-plugins.php:101
 msgid "Plugin"
 msgstr ""
 
-#: inc/class-ct-recommended-plugins.php:84
+#: inc/class-ct-recommended-plugins.php:102
 msgid "Description"
 msgstr ""
 
-#: inc/class-ct-recommended-plugins.php:119
-msgid "See all recommended plugins"
-msgstr ""
-
-#: inc/class-ct-recommended-plugins.php:126
+#: inc/class-ct-recommended-plugins.php:155
 #. translators: %s: theme name
 msgid "The makers of the %s theme recommend these free plugins:"
 msgstr ""
 
-#: inc/class-ct-recommended-plugins.php:177
+#: inc/class-ct-recommended-plugins.php:171
+msgid "New"
+msgstr ""
+
+#: inc/class-ct-recommended-plugins.php:183
+msgid "More Details"
+msgstr ""
+
+#: inc/class-ct-recommended-plugins.php:231
 msgid "Active"
 msgstr ""
 
-#: inc/class-ct-recommended-plugins.php:179
+#: inc/class-ct-recommended-plugins.php:234
 msgid "Coming soon"
 msgstr ""
 
-#: inc/class-ct-recommended-plugins.php:187
+#: inc/class-ct-recommended-plugins.php:243
 #. translators: %s: plugin name
 msgid "Activate %s"
 msgstr ""
 
-#: inc/class-ct-recommended-plugins.php:195
+#: inc/class-ct-recommended-plugins.php:245
 #. translators: %s: plugin name
 msgid "Install %s"
+msgstr ""
+
+#: inc/class-ct-recommended-plugins.php:258
+msgid "Activate Now"
+msgstr ""
+
+#: inc/class-ct-recommended-plugins.php:258
+msgid "Install Now"
 msgstr ""
 
 #: inc/customizer.php:43
@@ -416,236 +426,240 @@ msgid "X (Twitter)"
 msgstr ""
 
 #: inc/customizer.php:235
+msgid "TikTok"
+msgstr ""
+
+#: inc/customizer.php:237
 msgid "Contact Form"
 msgstr ""
 
-#: inc/customizer.php:244
+#: inc/customizer.php:246
 msgid ""
 "Accepts Skype link protocol (<a href=\"%s\" target=\"_blank\">learn "
 "more</a>)"
 msgstr ""
 
-#: inc/customizer.php:268
+#: inc/customizer.php:270
 msgid "Custom icon 1 URL"
 msgstr ""
 
-#: inc/customizer.php:278
+#: inc/customizer.php:280
 msgid "Custom icon 1 image"
 msgstr ""
 
-#: inc/customizer.php:288
+#: inc/customizer.php:290
 msgid "Custom icon 1 size (px)"
 msgstr ""
 
-#: inc/customizer.php:299
+#: inc/customizer.php:301
 msgid "Custom icon 2 URL"
 msgstr ""
 
-#: inc/customizer.php:309
+#: inc/customizer.php:311
 msgid "Custom icon 2 image"
 msgstr ""
 
-#: inc/customizer.php:319
+#: inc/customizer.php:321
 msgid "Custom icon 2 size (px)"
 msgstr ""
 
-#: inc/customizer.php:330
+#: inc/customizer.php:332
 msgid "Custom icon 3 URL"
 msgstr ""
 
-#: inc/customizer.php:340
+#: inc/customizer.php:342
 msgid "Custom icon 3 image"
 msgstr ""
 
-#: inc/customizer.php:350
+#: inc/customizer.php:352
 msgid "Custom icon 3 size (px)"
 msgstr ""
 
-#: inc/customizer.php:361
+#: inc/customizer.php:363
 msgid "Layout"
 msgstr ""
 
-#: inc/customizer.php:373
+#: inc/customizer.php:375
 msgid "Pick Your Layout:"
 msgstr ""
 
-#: inc/customizer.php:374
+#: inc/customizer.php:376
 msgid ""
 "Want more layouts? <a target=\"_blank\" href=\"%1$s\">Check out %2$s "
 "Plus</a>."
 msgstr ""
 
-#: inc/customizer.php:379 inc/customizer.php:801
+#: inc/customizer.php:381 inc/customizer.php:803
 msgid "Right sidebar"
 msgstr ""
 
-#: inc/customizer.php:380 inc/customizer.php:802
+#: inc/customizer.php:382 inc/customizer.php:804
 msgid "Left sidebar"
 msgstr ""
 
-#: inc/customizer.php:388
+#: inc/customizer.php:390
 msgid "Font Family"
 msgstr ""
 
-#: inc/customizer.php:390
+#: inc/customizer.php:392
 msgid "The default font is \"Lusitana\"."
 msgstr ""
 
-#: inc/customizer.php:403
+#: inc/customizer.php:405
 msgid "Site Font Family"
 msgstr ""
 
-#: inc/customizer.php:404
+#: inc/customizer.php:406
 msgid "Want more fonts? <a target=\"_blank\" href=\"%1$s\">Check out %2$s Plus</a>"
 msgstr ""
 
-#: inc/customizer.php:422
+#: inc/customizer.php:424
 msgid "Font Weight"
 msgstr ""
 
-#: inc/customizer.php:424
+#: inc/customizer.php:426
 msgid ""
 "If you've just changed fonts, please save and refresh the page to update "
 "available weights."
 msgstr ""
 
-#: inc/customizer.php:436
+#: inc/customizer.php:438
 msgid "Site Font Weight"
 msgstr ""
 
-#: inc/customizer.php:445
+#: inc/customizer.php:447
 msgid "Background"
 msgstr ""
 
-#: inc/customizer.php:458
+#: inc/customizer.php:460
 msgid "Background Color"
 msgstr ""
 
-#: inc/customizer.php:459
+#: inc/customizer.php:461
 msgid ""
 "Want background textures and images? <a target=\"_blank\" "
 "href=\"%1$s\">Check out %2$s Plus</a>"
 msgstr ""
 
-#: inc/customizer.php:470
+#: inc/customizer.php:472
 msgid "Post Meta"
 msgstr ""
 
-#: inc/customizer.php:480
+#: inc/customizer.php:482
 msgid "Show date before posts?"
 msgstr ""
 
-#: inc/customizer.php:485 inc/customizer.php:501 inc/customizer.php:517
-#: inc/customizer.php:533 inc/customizer.php:549 inc/customizer.php:565
-#: inc/customizer.php:702 inc/customizer.php:718 inc/customizer.php:849
+#: inc/customizer.php:487 inc/customizer.php:503 inc/customizer.php:519
+#: inc/customizer.php:535 inc/customizer.php:551 inc/customizer.php:567
+#: inc/customizer.php:704 inc/customizer.php:720 inc/customizer.php:851
 msgid "Show"
 msgstr ""
 
-#: inc/customizer.php:486 inc/customizer.php:502 inc/customizer.php:518
-#: inc/customizer.php:534 inc/customizer.php:550 inc/customizer.php:566
-#: inc/customizer.php:703 inc/customizer.php:719 inc/customizer.php:850
+#: inc/customizer.php:488 inc/customizer.php:504 inc/customizer.php:520
+#: inc/customizer.php:536 inc/customizer.php:552 inc/customizer.php:568
+#: inc/customizer.php:705 inc/customizer.php:721 inc/customizer.php:852
 msgid "Hide"
 msgstr ""
 
-#: inc/customizer.php:496
+#: inc/customizer.php:498
 msgid "Show author before posts?"
 msgstr ""
 
-#: inc/customizer.php:512
+#: inc/customizer.php:514
 msgid "Show categories after posts?"
 msgstr ""
 
-#: inc/customizer.php:528
+#: inc/customizer.php:530
 msgid "Show tags after posts?"
 msgstr ""
 
-#: inc/customizer.php:544
+#: inc/customizer.php:546
 msgid "Show comment count after posts?"
 msgstr ""
 
-#: inc/customizer.php:560
+#: inc/customizer.php:562
 msgid "Show prev/next post links after posts?"
 msgstr ""
 
-#: inc/customizer.php:585
+#: inc/customizer.php:587
 msgid "Show comments on:"
 msgstr ""
 
-#: inc/customizer.php:590 inc/customizer.php:832 index.php:4
+#: inc/customizer.php:592 inc/customizer.php:834 index.php:4
 msgid "Posts"
 msgstr ""
 
-#: inc/customizer.php:591 inc/customizer.php:833
+#: inc/customizer.php:593 inc/customizer.php:835
 msgid "Pages"
 msgstr ""
 
-#: inc/customizer.php:592 inc/customizer.php:834
+#: inc/customizer.php:594 inc/customizer.php:836
 msgid "Attachments"
 msgstr ""
 
-#: inc/customizer.php:593 inc/customizer.php:835
+#: inc/customizer.php:595 inc/customizer.php:837
 msgid "Do not show"
 msgstr ""
 
-#: inc/customizer.php:602
+#: inc/customizer.php:604
 msgid "Footer Text"
 msgstr ""
 
-#: inc/customizer.php:612
+#: inc/customizer.php:614
 msgid "Edit the text in your footer"
 msgstr ""
 
-#: inc/customizer.php:634
+#: inc/customizer.php:636
 msgid "Custom CSS"
 msgstr ""
 
-#: inc/customizer.php:644
+#: inc/customizer.php:646
 msgid "Add Custom CSS Here:"
 msgstr ""
 
-#: inc/customizer.php:655
+#: inc/customizer.php:657
 msgid "Additional Options"
 msgstr ""
 
-#: inc/customizer.php:665
+#: inc/customizer.php:667
 msgid "Show full post on blog?"
 msgstr ""
 
-#: inc/customizer.php:670 inc/customizer.php:686 inc/customizer.php:758
-#: inc/customizer.php:774 inc/customizer.php:862
+#: inc/customizer.php:672 inc/customizer.php:688 inc/customizer.php:760
+#: inc/customizer.php:776 inc/customizer.php:864
 msgid "Yes"
 msgstr ""
 
-#: inc/customizer.php:671 inc/customizer.php:687 inc/customizer.php:759
-#: inc/customizer.php:775 inc/customizer.php:863
+#: inc/customizer.php:673 inc/customizer.php:689 inc/customizer.php:761
+#: inc/customizer.php:777 inc/customizer.php:865
 msgid "No"
 msgstr ""
 
-#: inc/customizer.php:681
+#: inc/customizer.php:683
 msgid "Show breadcrumbs?"
 msgstr ""
 
-#: inc/customizer.php:697
+#: inc/customizer.php:699
 msgid "Show post author info after posts?"
 msgstr ""
 
-#: inc/customizer.php:713
+#: inc/customizer.php:715
 msgid "Add icon to parent menu items?"
 msgstr ""
 
-#: inc/customizer.php:729
+#: inc/customizer.php:731
 msgid "Word count in automatic excerpts"
 msgstr ""
 
-#: inc/customizer.php:741
+#: inc/customizer.php:743
 msgid "Read More button text"
 msgstr ""
 
-#: inc/customizer.php:753
+#: inc/customizer.php:755
 msgid "Display Scroll-to-top arrow?"
 msgstr ""
 
-#: inc/customizer.php:769
+#: inc/customizer.php:771
 msgid "Display the date each post was last updated?"
 msgstr ""
 
@@ -784,7 +798,7 @@ msgctxt "noun"
 msgid "email"
 msgstr ""
 
-#: inc/customizer.php:574
+#: inc/customizer.php:576
 msgctxt "noun"
 msgid "Comments"
 msgstr ""
